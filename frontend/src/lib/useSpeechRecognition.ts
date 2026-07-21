@@ -22,7 +22,8 @@ export function useSpeechRecognition({
   useEffect(() => {
     const SR =
       typeof window !== "undefined" &&
-      ((window as any).SpeechRecognition || (window as any).webkitSpeechRecognition)
+      ((window as any).SpeechRecognition ||
+        (window as any).webkitSpeechRecognition)
     if (!SR) return
     setSupported(true)
 
@@ -39,7 +40,6 @@ export function useSpeechRecognition({
     }
 
     recognition.onend = () => {
-      // Auto-restart if still enabled
       if (enabledRef.current) {
         try {
           recognition.start()
@@ -62,6 +62,17 @@ export function useSpeechRecognition({
       } catch {}
     }
   }, [])
+
+  // Hard echo protection: immediately stop when enabled becomes false
+  useEffect(() => {
+    if (!enabled && recognitionRef.current) {
+      enabledRef.current = false
+      try {
+        recognitionRef.current.stop()
+      } catch {}
+      setListening(false)
+    }
+  }, [enabled])
 
   const start = useCallback(() => {
     if (!recognitionRef.current) return

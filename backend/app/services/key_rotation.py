@@ -2,21 +2,18 @@
 
 from __future__ import annotations
 
-import os
-
 import httpx
 
 
 class KeyRotationManager:
-    def __init__(self) -> None:
-        raw = os.getenv("OPENCODE_API_KEYS", "")
-        self._keys = [k.strip() for k in raw.split(",") if k.strip()]
+    def __init__(self, api_keys: list[str]) -> None:
+        self._keys = [k for k in api_keys if k.strip()]
         self._index = 0
 
     @property
     def current_key(self) -> str:
         if not self._keys:
-            raise RuntimeError("No API keys in OPENCODE_API_KEYS")
+            raise RuntimeError("No API keys provided")
         return self._keys[self._index]
 
     def rotate(self) -> str:
@@ -28,6 +25,8 @@ class KeyRotationManager:
         self, client: httpx.AsyncClient, url: str, payload: dict
     ) -> httpx.Response:
         """Try each key once. Return first successful response."""
+        if not self._keys:
+            raise RuntimeError("No API keys provided")
         last = None
         for _ in range(len(self._keys)):
             resp = await client.post(

@@ -7,10 +7,9 @@ import logging
 
 import httpx
 
-logger = logging.getLogger(__name__)
+from app.core.config import settings
 
-TTS_URL = "http://localhost:8880/v1/audio/speech"
-TTS_VOICE = "af_bella"
+logger = logging.getLogger(__name__)
 
 
 async def synthesize(text: str) -> str | None:
@@ -18,11 +17,11 @@ async def synthesize(text: str) -> str | None:
     try:
         async with httpx.AsyncClient(timeout=30.0) as client:
             resp = await client.post(
-                TTS_URL,
+                settings.tts_url,
                 json={
                     "model": "kokoro",
                     "input": text,
-                    "voice": TTS_VOICE,
+                    "voice": settings.tts_voice,
                     "response_format": "mp3",
                 },
             )

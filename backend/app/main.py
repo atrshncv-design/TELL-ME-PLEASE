@@ -9,6 +9,7 @@ import logging
 import httpx
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 
+from app.core.config import settings
 from app.services.context_window import ContextWindow
 from app.services.key_rotation import KeyRotationManager
 from app.services.prompt_router import resolve_prompt
@@ -19,11 +20,7 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Tell Me Please API")
 
-LLM_URL = "https://opencode.ai/zen/v1/chat/completions"
-LLM_MODEL = "deepseek-v4-flash-free"
-MAX_TURNS = 12
-SENTENCE_ENDERS = set(".!?")
-SESSION_TIMEOUT = 180  # 3 minutes
+key_manager = KeyRotationManager(settings.api_keys)
 
 
 @app.get("/")
@@ -36,11 +33,7 @@ def health_check():
     return {"status": "ok"}
 
 
-key_manager = KeyRotationManager()
-
-
 async def _tts_and_send(ws: WebSocket, text: str) -> None:
-    """Synthesize speech and send audio to client."""
     audio = await synthesize(text)
     if audio:
         try:
@@ -56,19 +49,19 @@ async def _stream_response(
     tts_tasks: list[asyncio.Task],
     system_prompt: str | None = None,
 ) -> str:
-    """Stream LLM response, buffer sentences, fire TTS. Returns full reply."""
     prompt = system_prompt or resolve_prompt(branch_id)
     payload = {
-        "model": LLM_MODEL,
+        "model": settings.llm_model,
         "messages": [{"role": "system", "content": prompt}] + messages,
         "stream": True,
     }
+    url = f"{settings.llm_api_base}/chat/completions"
 
     sentence_buf = ""
     full_reply = ""
 
     async with httpx.AsyncClient(timeout=60.0) as client:
-        resp = await key_manager.send(client, LLM_URL, payload)
+        resp = await key_manager.send(client, url, payload)
         async for line in resp.aiter_lines():
             if not line.startswith("data: ") or line == "data: [DONE]":
                 continue
@@ -82,7 +75,7 @@ async def _stream_response(
             sentence_buf += token
             full_reply += token
 
-            if sentence_buf and sentence_buf[-1] in SENTENCE_ENDERS:
+            if sentence_buf and sentence_buf[-1] in set(".!?"):
                 sent = sentence_buf.strip()
                 sentence_buf = ""
                 tts_tasks.append(
@@ -100,7 +93,7 @@ async def _stream_response(
 @app.websocket("/ws/chat")
 async def ws_chat(websocket: WebSocket):
     await websocket.accept()
-    ctx = ContextWindow(max_turns=MAX_TURNS)
+    ctx = ContextWindow(max_turns=settings.max_turns)
     branch_id = "7"
     tts_tasks: list[asyncio.Task] = []
     session_expired = False
@@ -115,7 +108,7 @@ async def ws_chat(websocket: WebSocket):
 
     async def _session_timer() -> None:
         nonlocal session_expired
-        await asyncio.sleep(SESSION_TIMEOUT)
+        await asyncio.sleep(settings.session_timeout)
         session_expired = True
         logger.info("Session timeout: branch=%s", branch_id)
 
@@ -148,7 +141,6 @@ async def ws_chat(websocket: WebSocket):
             ctx.add_assistant(full_reply)
             await websocket.send_json({"type": "done"})
 
-        # --- Session expired: final feedback ---
         logger.info("Final feedback: branch=%s", branch_id)
         final_prompt = resolve_prompt("final_feedback")
         ctx.add_user("[SESSION_END] Please say goodbye and give feedback.")

@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 
 export function useAudioPlayer({
   onPlaybackStart,
@@ -10,48 +10,71 @@ export function useAudioPlayer({
   onPlaybackEnd: () => void
 }) {
   const [playing, setPlaying] = useState(false)
-  const queueRef = useRef<string[]>([])
+  const ctxRef = useRef<AudioContext | null>(null)
+  const queueRef = useRef<ArrayBuffer[]>([])
   const playingRef = useRef(false)
+  const scheduledUntilRef = useRef(0)
+  const onStartRef = useRef(onPlaybackStart)
+  const onEndRef = useRef(onPlaybackEnd)
+  onStartRef.current = onPlaybackStart
+  onEndRef.current = onPlaybackEnd
 
-  const playNext = useCallback(() => {
+  useEffect(() => {
+    return () => {
+      ctxRef.current?.close()
+      ctxRef.current = null
+    }
+  }, [])
+
+  const getCtx = useCallback(() => {
+    if (!ctxRef.current || ctxRef.current.state === "closed") {
+      ctxRef.current = new AudioContext()
+    }
+    if (ctxRef.current.state === "suspended") {
+      ctxRef.current.resume()
+    }
+    return ctxRef.current
+  }, [])
+
+  const scheduleNext = useCallback(() => {
     if (queueRef.current.length === 0) {
       playingRef.current = false
       setPlaying(false)
-      onPlaybackEnd()
+      onEndRef.current()
       return
     }
 
     playingRef.current = true
     setPlaying(true)
-    onPlaybackStart()
+    onStartRef.current()
 
-    const b64 = queueRef.current.shift()!
-    const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0))
-    const blob = new Blob([bytes], { type: "audio/mpeg" })
-    const url = URL.createObjectURL(blob)
-    const audio = new Audio(url)
+    const ctx = getCtx()
+    const buf = queueRef.current.shift()!
+    const startAt = Math.max(ctx.currentTime, scheduledUntilRef.current)
 
-    audio.onended = () => {
-      URL.revokeObjectURL(url)
-      playNext()
-    }
-
-    audio.onerror = () => {
-      URL.revokeObjectURL(url)
-      playNext()
-    }
-
-    audio.play().catch(() => playNext())
-  }, [onPlaybackStart, onPlaybackEnd])
+    ctx.decodeAudioData(buf).then((decoded) => {
+      const source = ctx.createBufferSource()
+      source.buffer = decoded
+      source.connect(ctx.destination)
+      source.start(startAt)
+      scheduledUntilRef.current = startAt + decoded.duration
+      source.onended = () => scheduleNext()
+    }).catch(() => scheduleNext())
+  }, [getCtx])
 
   const enqueue = useCallback(
     (base64: string) => {
-      queueRef.current.push(base64)
+      const binary = atob(base64)
+      const bytes = new Uint8Array(binary.length)
+      for (let i = 0; i < binary.length; i++) {
+        bytes[i] = binary.charCodeAt(i)
+      }
+      queueRef.current.push(bytes.buffer)
       if (!playingRef.current) {
-        playNext()
+        scheduleNext()
       }
     },
-    [playNext]
+    [scheduleNext]
   )
 
   return { playing, enqueue }
