@@ -1,6 +1,6 @@
 # Project Implementation Plan (Plan.md)
 **Проект:** Интерактивная платформа «TELL ME PLEASE»
-**Статус:** Этап 3 завершён
+**Статус:** Этапы 4+5 завершены
 
 ## Инструкция для ИИ-агентов
 1. Перед началом работы сверьтесь с текущим этапом.
@@ -26,18 +26,18 @@
 ## Этап 3: Интеграция LLM и TTS (Streaming Pipeline)
 - [x] 3.1. `docker-compose.yml` для Kokoro-FastAPI (CPU, порт 8880).
 - [x] 3.2. Модуль `tts.py` — async POST-запрос к Kokoro, base64 mp3, голос af_bella.
-- [x] 3.3. Overlapping Execution: `asyncio.create_task` для TTS в фоне, LLM не блокируется.
+- [x] 3.3. Overlapping Execution: `asyncio.create_task` для TTS в фоне.
 - [x] 3.4. Отправка аудио клиенту: `{"type": "audio", "content": "<base64>"}`.
 
 ## Этап 4: Разработка Frontend (UI/UX)
-- [ ] 4.1. Верстка Layout: Главная, Выбор класса, Выбор раздела.
-- [ ] 4.2. Экран "AI Avatar Chat" с анимациями.
-- [ ] 4.3. WebSocket-клиент на фронтенде.
+- [x] 4.1. Верстка Layout: Главная (Welcome), Выбор класса (5-9), Выбор раздела.
+- [x] 4.2. Экран "AI Avatar Chat" с анимациями (Framer Motion).
+- [x] 4.3. WebSocket-клиент на фронтенде (хук useWebSocket).
 
 ## Этап 5: Голосовой ввод и вывод (Web API)
-- [ ] 5.1. Интеграция Web Speech API (STT) на клиенте.
-- [ ] 5.2. AudioWorklet для воспроизведения аудио-чанков.
-- [ ] 5.3. Защита от эха (mute микрофона при воспроизведении).
+- [x] 5.1. Интеграция Web Speech API (STT) на клиенте (хук useSpeechRecognition).
+- [x] 5.2. Очередь воспроизведения base64-аудио (хук useAudioPlayer).
+- [x] 5.3. Защита от эха: mute микрофона при воспроизведении аудио.
 
 ## Этап 6: Бизнес-логика сессии и Тестирование
 - [ ] 6.1. Таймер сессии 3 минуты.
