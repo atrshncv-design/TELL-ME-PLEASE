@@ -146,6 +146,8 @@ async def ws_chat(websocket: WebSocket):
 
         logger.info("Final feedback: branch=%s", branch_id)
         final_prompt = resolve_prompt("final_feedback")
+        if task_context:
+            final_prompt += f"\n\nTask context: {task_context}"
         ctx.add_user("[SESSION_END] Please say goodbye and give feedback.")
 
         full_reply = await _stream_response(
