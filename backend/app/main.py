@@ -95,6 +95,7 @@ async def ws_chat(websocket: WebSocket):
     await websocket.accept()
     ctx = ContextWindow(max_turns=settings.max_turns)
     branch_id = "7"
+    task_context = ""
     tts_tasks: list[asyncio.Task] = []
     session_expired = False
 
@@ -102,7 +103,8 @@ async def ws_chat(websocket: WebSocket):
         init = await websocket.receive_text()
         data = json.loads(init)
         branch_id = data.get("branch_id", "7")
-        logger.info("WS connected: branch=%s", branch_id)
+        task_context = data.get("task_context", "")
+        logger.info("WS connected: branch=%s, context=%s", branch_id, task_context[:50] if task_context else "none")
     except Exception:
         pass
 
@@ -131,7 +133,8 @@ async def ws_chat(websocket: WebSocket):
             ctx.add_user(user_text)
 
             full_reply = await _stream_response(
-                websocket, ctx.messages, branch_id, tts_tasks
+                websocket, ctx.messages, branch_id, tts_tasks,
+                system_prompt=resolve_prompt(branch_id) + (f"\n\nContext: {task_context}" if task_context else ""),
             )
 
             if tts_tasks:

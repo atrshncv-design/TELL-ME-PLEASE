@@ -1,0 +1,48 @@
+{
+  "id": "grammar_endings_quiz",
+  "title": "Окончания: викторина",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильную форму глагола из двух вариантов",
+  "groups": [
+    {
+      "name": "-s",
+      "items": [
+        {"question": "want", "options": ["wants", "wantes"], "answer": "wants"},
+        {"question": "open", "options": ["opens", "openes"], "answer": "opens"},
+        {"question": "visit", "options": ["visits", "visites"], "answer": "visits"},
+        {"question": "jump", "options": ["jumps", "jumpes"], "answer": "jumps"},
+        {"question": "dance", "options": ["dances", "dance"], "answer": "dances"}
+      ]
+    },
+    {
+      "name": "-es",
+      "items": [
+        {"question": "pass", "options": ["passes", "passs"], "answer": "passes"},
+        {"question": "watch", "options": ["watches", "watchs"], "answer": "watches"},
+        {"question": "fix", "options": ["fixes", "fixs"], "answer": "fixes"},
+        {"question": "miss", "options": ["misses", "misss"], "answer": "misses"},
+        {"question": "go", "options": ["goes", "gos"], "answer": "goes"}
+      ]
+    },
+    {
+      "name": "y → ies",
+      "items": [
+        {"question": "fly", "options": ["flies", "flys"], "answer": "flies"},
+        {"question": "copy", "options": ["copies", "copens"], "answer": "copies"},
+        {"question": "hurry", "options": ["hurries", "hurrys"], "answer": "hurries"},
+        {"question": "try", "options": ["tries", "trys"], "answer": "tries"}
+      ]
+    },
+    {
+      "name": "y + гласная = -s",
+      "items": [
+        {"question": "play", "options": ["plays", "plaies"], "answer": "plays"},
+        {"question": "enjoy", "options": ["enjoys", "enjoies"], "answer": "enjoys"},
+        {"question": "stay", "options": ["stays", "staies"], "answer": "stays"},
+        {"question": "buy", "options": ["buys", "buies"], "answer": "buys"},
+        {"question": "say", "options": ["says", "saies"], "answer": "says"}
+      ]
+    }
+  ]
+}

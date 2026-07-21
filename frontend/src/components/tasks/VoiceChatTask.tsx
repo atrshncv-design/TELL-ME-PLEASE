@@ -12,6 +12,7 @@ interface VoiceChatTaskProps {
   description: string
   sections?: { name: string; questions: string[] }[]
   dialogue?: { speaker: string; text: string }[]
+  taskContext?: string
   sessionSeconds?: number
 }
 
@@ -20,6 +21,7 @@ function VoiceChatInner({
   description,
   sections,
   dialogue,
+  taskContext,
   sessionSeconds = 180,
 }: VoiceChatTaskProps) {
   const params = useSearchParams()
@@ -81,7 +83,7 @@ function VoiceChatInner({
     [enqueue]
   )
 
-  const { connected, send } = useWebSocket({ branchId: grade, onMessage: handleWsMessage })
+  const { connected, send } = useWebSocket({ branchId: grade, onMessage: handleWsMessage, taskContext })
 
   const { listening, supported, start, stop } = useSpeechRecognition({
     enabled: !muted && !sessionEnded,

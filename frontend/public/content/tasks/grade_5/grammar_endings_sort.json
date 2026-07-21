@@ -1,0 +1,34 @@
+{
+  "id": "grammar_endings_sort",
+  "title": "Сортировка окончаний",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Распредели глаголы по трём столбикам: -s, -es, y→ies",
+  "columns": [
+    {"id": "s", "label": "-s", "rule": "Обычные глаголы"},
+    {"id": "es", "label": "-es", "rule": "Шипящие/свистящие и на -o"},
+    {"id": "ies", "label": "y → ies", "rule": "Перед y стоит согласная"}
+  ],
+  "items": [
+    {"verb": "like", "answer": "s"},
+    {"verb": "live", "answer": "s"},
+    {"verb": "learn", "answer": "s"},
+    {"verb": "need", "answer": "s"},
+    {"verb": "help", "answer": "s"},
+    {"verb": "work", "answer": "s"},
+    {"verb": "cook", "answer": "s"},
+    {"verb": "read", "answer": "s"},
+    {"verb": "talk", "answer": "s"},
+    {"verb": "listen", "answer": "s"},
+    {"verb": "pass", "answer": "es"},
+    {"verb": "wash", "answer": "es"},
+    {"verb": "watch", "answer": "es"},
+    {"verb": "go", "answer": "es"},
+    {"verb": "do", "answer": "es"},
+    {"verb": "study", "answer": "ies"},
+    {"verb": "carry", "answer": "ies"},
+    {"verb": "try", "answer": "ies"},
+    {"verb": "cry", "answer": "ies"},
+    {"verb": "tidy", "answer": "ies"}
+  ]
+}

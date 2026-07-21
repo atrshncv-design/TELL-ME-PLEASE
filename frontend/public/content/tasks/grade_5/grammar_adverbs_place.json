@@ -1,0 +1,22 @@
+{
+  "id": "grammar_adverbs_place",
+  "title": "Наречия: вставь в правильное место",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Реши: наречие между подлежащим и сказуемым, или в конец предложения?",
+  "available_adverbs": ["always", "usually", "often", "sometimes", "never", "every day", "in the morning", "in the afternoon", "in the evening", "at night", "on Saturdays", "after school"],
+  "items": [
+    {"sentence_base": "I wake up early", "answer_position": "middle", "adverb": "usually", "full": "I usually wake up early in the morning"},
+    {"sentence_base": "My dad works on the computer", "answer_position": "middle", "adverb": "often", "full": "My dad often works on the computer in the evening"},
+    {"sentence_base": "The postman delivers letters", "answer_position": "middle", "adverb": "sometimes", "full": "The postman sometimes delivers letters on Sunday"},
+    {"sentence_base": "The taxi driver drives a taxi", "answer_position": "middle", "adverb": "always", "full": "The taxi driver always drives a taxi at night"},
+    {"sentence_base": "My dog waits for the ambulance", "answer_position": "middle", "adverb": "never", "full": "My dog never waits for the ambulance"},
+    {"sentence_base": "My friend plays with me", "answer_position": "middle", "adverb": "often", "full": "My friend often plays with me after school"},
+    {"sentence_base": "I do my homework", "answer_position": "end", "adverb": "in the afternoon", "full": "I do my homework in the afternoon"},
+    {"sentence_base": "We have breakfast", "answer_position": "end", "adverb": "in the morning", "full": "We have breakfast in the morning"},
+    {"sentence_base": "My mum drinks coffee", "answer_position": "end", "adverb": "in the evening", "full": "My mum drinks coffee in the evening"},
+    {"sentence_base": "The postman delivers letters", "answer_position": "end", "adverb": "every day", "full": "The postman delivers letters every day"},
+    {"sentence_base": "The taxi driver makes a phone call", "answer_position": "end", "adverb": "at night", "full": "The taxi driver makes a phone call at night"},
+    {"sentence_base": "My brother works in the garden", "answer_position": "end", "adverb": "on Saturdays", "full": "My brother works in the garden on Saturdays"}
+  ]
+}

@@ -13,13 +13,16 @@ export type WsMessage =
 interface UseWebSocketOptions {
   branchId: string
   onMessage: (msg: WsMessage) => void
+  taskContext?: string
 }
 
-export function useWebSocket({ branchId, onMessage }: UseWebSocketOptions) {
+export function useWebSocket({ branchId, onMessage, taskContext }: UseWebSocketOptions) {
   const wsRef = useRef<WebSocket | null>(null)
   const [connected, setConnected] = useState(false)
   const onMessageRef = useRef(onMessage)
   onMessageRef.current = onMessage
+  const taskContextRef = useRef(taskContext)
+  taskContextRef.current = taskContext
 
   useEffect(() => {
     const proto = location.protocol === "https:" ? "wss" : "ws"
@@ -28,7 +31,11 @@ export function useWebSocket({ branchId, onMessage }: UseWebSocketOptions) {
 
     ws.onopen = () => {
       setConnected(true)
-      ws.send(JSON.stringify({ branch_id: branchId }))
+      const init: Record<string, string> = { branch_id: branchId }
+      if (taskContextRef.current) {
+        init.task_context = taskContextRef.current
+      }
+      ws.send(JSON.stringify(init))
     }
 
     ws.onmessage = (e) => {

@@ -1,0 +1,26 @@
+{
+  "id": "grammar_verb_forms_quiz",
+  "title": "Викторина: вставь форму глагола",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола в предложение",
+  "items": [
+    {"sentence": "I ___ early in the morning.", "answer": "wake up"},
+    {"sentence": "___ you go to school in the morning?", "answer": "Do"},
+    {"sentence": "In the evening, I ___ read a book in bed.", "answer": "don't"},
+    {"sentence": "What ___ you do in the morning?", "answer": "do"},
+    {"sentence": "The postman ___ a letter every day.", "answer": "delivers"},
+    {"sentence": "___ the taxi driver drive a taxi at night?", "answer": "Does"},
+    {"sentence": "I ___ drink coffee in the afternoon.", "answer": "don't"},
+    {"sentence": "Why ___ the postman wait for the ambulance?", "answer": "does"},
+    {"sentence": "In the afternoon, I ___ my homework.", "answer": "do"},
+    {"sentence": "___ you have lunch in the afternoon?", "answer": "Do"},
+    {"sentence": "The taxi driver ___ repair a car.", "answer": "doesn't"},
+    {"sentence": "When ___ the taxi driver make a phone call?", "answer": "does"},
+    {"sentence": "In the evening, I ___ dinner and watch a DVD.", "answer": "eat"},
+    {"sentence": "I ___ go jogging in the morning.", "answer": "don't"},
+    {"sentence": "Where ___ you have breakfast?", "answer": "do"},
+    {"sentence": "___ the postman deliver letters on Sunday?", "answer": "Does"},
+    {"sentence": "Why ___ you work in the garden in the evening?", "answer": "do"}
+  ]
+}

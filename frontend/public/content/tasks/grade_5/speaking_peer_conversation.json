@@ -1,0 +1,44 @@
+{
+  "id": "speaking_peer_conversation",
+  "title": "Поговори со сверстником",
+  "category": "speaking",
+  "type": "voice-chat",
+  "description": "Задавай вопросы сверстнику из англоговорящей страны о его дне и выходных",
+  "sections": [
+    {
+      "name": "Утро",
+      "questions": [
+        "What time do you wake up?",
+        "Do you get up quickly or slowly?",
+        "What do you do first in the morning?",
+        "Do you have breakfast at home or at school?"
+      ]
+    },
+    {
+      "name": "Школа и день",
+      "questions": [
+        "What time do you go to school?",
+        "How do you go to school?",
+        "What lessons do you like?",
+        "What do you do after school?"
+      ]
+    },
+    {
+      "name": "Вечер и свободное время",
+      "questions": [
+        "What do you usually do in the evening?",
+        "Do you do homework before or after dinner?",
+        "What games do you play at home?",
+        "Do you watch TV or videos in the evening?"
+      ]
+    },
+    {
+      "name": "Выходные",
+      "questions": [
+        "What do you do at the weekend?",
+        "Do you go to the park or visit your grandparents?",
+        "What time do you go to bed on Saturdays?"
+      ]
+    }
+  ]
+}

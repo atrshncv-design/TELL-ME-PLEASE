@@ -1,0 +1,25 @@
+{
+  "id": "grammar_roulette",
+  "title": "Рулетка: все части предложения",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола",
+  "items": [
+    {"sentence": "She ___ a new bike.", "verb": "want", "answer": "wants"},
+    {"sentence": "They ___ to play computer games.", "verb": "want", "answer": "want"},
+    {"sentence": "The rabbit ___ in the garden.", "verb": "jump", "answer": "jumps"},
+    {"sentence": "Rabbits ___ very fast.", "verb": "jump", "answer": "jump"},
+    {"sentence": "He ___ his room on Saturdays.", "verb": "tidy", "answer": "tidies"},
+    {"sentence": "Children ___ their desks at school.", "verb": "tidy", "answer": "tidy"},
+    {"sentence": "The dog ___ the ball in its mouth.", "verb": "carry", "answer": "carries"},
+    {"sentence": "Dogs ___ sticks and balls.", "verb": "carry", "answer": "carry"},
+    {"sentence": "My dad ___ the bike in the garage.", "verb": "fix", "answer": "fixes"},
+    {"sentence": "Dads often ___ things at home.", "verb": "fix", "answer": "fix"},
+    {"sentence": "The parrot ___ my words.", "verb": "copy", "answer": "copies"},
+    {"sentence": "Parrots ___ people's voices.", "verb": "copy", "answer": "copy"},
+    {"sentence": "We ___ at home on rainy days.", "verb": "stay", "answer": "stay"},
+    {"sentence": "My sister ___ at school after lessons.", "verb": "stay", "answer": "stays"},
+    {"sentence": "The monkey ___ with a ball.", "verb": "play", "answer": "plays"},
+    {"sentence": "Monkeys ___ in the zoo.", "verb": "play", "answer": "play"}
+  ]
+}
