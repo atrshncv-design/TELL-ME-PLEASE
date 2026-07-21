@@ -1,6 +1,6 @@
 # Project Implementation Plan (Plan.md)
 **Проект:** Интерактивная платформа «TELL ME PLEASE»
-**Статус:** Этап 2 завершён
+**Статус:** Этап 3 завершён
 
 ## Инструкция для ИИ-агентов
 1. Перед началом работы сверьтесь с текущим этапом.
@@ -24,10 +24,10 @@
 - [x] 2.6. Разработка **Sentence Buffer** (агрегация токенов в предложения по .! ?).
 
 ## Этап 3: Интеграция LLM и TTS (Streaming Pipeline)
-- [ ] 3.1. Подключение API OpenCode Zen (`stream=True`).
-- [ ] 3.2. Sentence Buffer → TTS → WebSocket audio.
-- [ ] 3.3. `docker-compose.yml` для Kokoro-FastAPI.
-- [ ] 3.4. Интеграция аудио-чанков через WebSocket.
+- [x] 3.1. `docker-compose.yml` для Kokoro-FastAPI (CPU, порт 8880).
+- [x] 3.2. Модуль `tts.py` — async POST-запрос к Kokoro, base64 mp3, голос af_bella.
+- [x] 3.3. Overlapping Execution: `asyncio.create_task` для TTS в фоне, LLM не блокируется.
+- [x] 3.4. Отправка аудио клиенту: `{"type": "audio", "content": "<base64>"}`.
 
 ## Этап 4: Разработка Frontend (UI/UX)
 - [ ] 4.1. Верстка Layout: Главная, Выбор класса, Выбор раздела.

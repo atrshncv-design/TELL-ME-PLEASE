@@ -1,4 +1,4 @@
-"""FastAPI app with WebSocket chat endpoint and sentence buffer."""
+"""FastAPI app with WebSocket chat, sentence buffer, and TTS streaming."""
 
 from __future__ import annotations
 
@@ -12,6 +12,7 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from app.services.context_window import ContextWindow
 from app.services.key_rotation import KeyRotationManager
 from app.services.prompt_router import resolve_prompt
+from app.services.tts import synthesize
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -37,11 +38,22 @@ def health_check():
 key_manager = KeyRotationManager()
 
 
+async def _tts_and_send(ws: WebSocket, text: str) -> None:
+    """Synthesize speech and send audio to client."""
+    audio = await synthesize(text)
+    if audio:
+        try:
+            await ws.send_json({"type": "audio", "content": audio})
+        except Exception:
+            pass
+
+
 @app.websocket("/ws/chat")
 async def ws_chat(websocket: WebSocket):
     await websocket.accept()
     ctx = ContextWindow(max_turns=MAX_TURNS)
     branch_id = "7"
+    tts_tasks: list[asyncio.Task] = []
 
     try:
         init = await websocket.receive_text()
@@ -87,20 +99,29 @@ async def ws_chat(websocket: WebSocket):
                     full_reply += token
 
                     if sentence_buf and sentence_buf[-1] in SENTENCE_ENDERS:
-                        await websocket.send_json({
-                            "type": "sentence",
-                            "content": sentence_buf.strip(),
-                        })
+                        sent = sentence_buf.strip()
                         sentence_buf = ""
+                        # Fire TTS in background — don't block LLM streaming
+                        tts_tasks.append(
+                            asyncio.create_task(_tts_and_send(websocket, sent))
+                        )
 
             if sentence_buf.strip():
-                await websocket.send_json({
-                    "type": "sentence",
-                    "content": sentence_buf.strip(),
-                })
+                tts_tasks.append(
+                    asyncio.create_task(
+                        _tts_and_send(websocket, sentence_buf.strip())
+                    )
+                )
+
+            # Wait for all TTS tasks before sending "done"
+            if tts_tasks:
+                await asyncio.gather(*tts_tasks, return_exceptions=True)
+                tts_tasks.clear()
 
             ctx.add_assistant(full_reply)
             await websocket.send_json({"type": "done"})
 
     except WebSocketDisconnect:
+        for t in tts_tasks:
+            t.cancel()
         logger.info("WS disconnected: branch=%s", branch_id)

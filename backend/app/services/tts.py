@@ -7,27 +7,28 @@ import logging
 
 import httpx
 
-from app.core.config import settings
-
 logger = logging.getLogger(__name__)
 
+TTS_URL = "http://localhost:8880/v1/audio/speech"
+TTS_VOICE = "af_bella"
 
-async def synthesize_speech(text: str) -> str | None:
-    """Send text to Kokoro and return base64-encoded audio, or None on failure."""
+
+async def synthesize(text: str) -> str | None:
+    """Send text to Kokoro, return base64-encoded mp3 or None on failure."""
     try:
         async with httpx.AsyncClient(timeout=30.0) as client:
             resp = await client.post(
-                settings.tts_url,
+                TTS_URL,
                 json={
                     "model": "kokoro",
                     "input": text,
-                    "voice": settings.tts_voice,
+                    "voice": TTS_VOICE,
                     "response_format": "mp3",
                 },
             )
             if resp.status_code == 200:
                 return base64.b64encode(resp.content).decode()
-            logger.warning("TTS returned %d: %s", resp.status_code, resp.text[:200])
+            logger.warning("TTS %d: %s", resp.status_code, resp.text[:200])
     except Exception:
         logger.exception("TTS request failed")
     return None
