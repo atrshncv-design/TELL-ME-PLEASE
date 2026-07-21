@@ -1,44 +1,31 @@
 # Project Status & State (Status.md)
 **Проект:** Интерактивная платформа «TELL ME PLEASE»
-**Последнее обновление:** ✅ Платформа полностью готова
+**Статус:** ✅ PRODUCTION READY / MVP COMPLETED
 
-## 1. Текущий этап
-**Фаза:** ✅ Все этапы завершены. Платформа готова к финальной проверке.
+## 1. Финальный статус
+Все этапы разработки завершены. Платформа готова к сборке продакшен-версии.
 
-## 2. Статус интеграций
-- **LLM:** Стриминговый клиент, stream=True, парсинг SSE.
-- **Key Rotation Manager:** Циклическая ротация по всем ключам при 429/403.
-- **Prompt Router:** branch_id → промпт из prompts_config.json.
-- **Context Window:** Скользящее окно 12 реплик.
-- **Sentence Buffer:** Агрегация токенов по знакам .! ?
-- **TTS (Kokoro-FastAPI):** Async POST, base64 mp3, голос af_bella.
-- **Overlapping Execution:** TTS в фоне через asyncio.create_task.
-- **WebSocket:** Протокол: token → sentence → audio → done → session_ended.
-- **Frontend UI/UX:** 4 экрана: Home → Class → Sections → Chat.
-- **WebSocket Client:** Хук useWebSocket — обработка всех типов сообщений.
-- **STT:** Хук useSpeechRecognition — нативный браузерный API.
-- **Audio Player:** Хук useAudioPlayer — очередь base64-чанков.
-- **Echo Protection:** Микрофон на паузе при воспроизведении аудио.
-- **Session Timer:** 180 сек на сервере (asyncio.sleep) и клиенте (setInterval).
-- **Final Feedback:** Автоматический прощальный промпт с анализом ошибок.
-- **Graceful Shutdown:** Финальное аудио → session_ended → экран завершения.
+## 2. Стек технологий
+- **Frontend**: Next.js 16 (App Router) + TailwindCSS + Framer Motion
+- **Backend**: Python 3.10+ + FastAPI + httpx + websockets
+- **LLM**: OpenCode Zen (`deepseek-v4-flash-free`), stream=True
+- **TTS**: Kokoro-FastAPI (Docker), голос af_bella
+- **STT**: Web Speech API (нативный браузерный API)
 
-## 3. Артефакты Этапа 6
-- `backend/app/main.py` — таймер сессии + финальный фидбек + session_ended
-- `backend/app/prompts_config.json` — добавлен final_feedback промпт
-- `frontend/src/app/chat/page.tsx` — таймер, экран завершения, обработка session_ended
+## 3. Реализованные функции
+- WebSocket-чат с AI-аватаром (`/ws/chat`)
+- Ротация API-ключей при ошибках 429/403
+- Хардкод-промпты для классов 5-9 (State Machine)
+- Скользящее окно контекста (12 реплик)
+- Sentence Buffer (агрегация токенов по .! ?)
+- Streaming TTS через Kokoro-FastAPI (asyncio.create_task)
+- Защита от эха (mute микрофона при воспроизведении)
+- Таймер сессии 3 минуты + Final Feedback
+- Graceful Shutdown с экраном завершения
 
-## 4. Артефакты Этапов 4+5
-- `frontend/src/app/page.tsx` — Главный экран
-- `frontend/src/app/class/page.tsx` — Выбор класса
-- `frontend/src/app/class/[grade]/sections/page.tsx` — Выбор раздела
-- `frontend/src/lib/useWebSocket.ts` — WebSocket client hook
-- `frontend/src/lib/useSpeechRecognition.ts` — Web Speech API hook
-- `frontend/src/lib/useAudioPlayer.ts` — Audio playback hook
-
-## 5. Артефакты Этапов 2+3
-- `backend/app/services/key_rotation.py` — ротация ключей
-- `backend/app/services/prompt_router.py` — State Machine
-- `backend/app/services/context_window.py` — скользящее окно
-- `backend/app/services/tts.py` — async TTS-клиент
-- `docker-compose.yml` — Kokoro-FastAPI
+## 4. Запуск
+```bash
+docker compose up -d                    # TTS
+cd backend && pip install -r requirements.txt && uvicorn app.main:app --reload
+cd frontend && npm install && npm run dev
+```

@@ -1,7 +1,7 @@
 "use client"
 
 import { Suspense, useCallback, useEffect, useRef, useState } from "react"
-import { useParams, useSearchParams, useRouter } from "next/navigation"
+import { useSearchParams, useRouter } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { useWebSocket, type WsMessage } from "@/lib/useWebSocket"
 import { useSpeechRecognition } from "@/lib/useSpeechRecognition"
