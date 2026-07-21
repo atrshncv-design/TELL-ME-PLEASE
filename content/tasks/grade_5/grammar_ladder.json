@@ -1,0 +1,39 @@
+{
+  "id": "grammar_ladder",
+  "title": "Лесенка: Up and Down",
+  "category": "grammar",
+  "type": "ladder",
+  "description": "Наступай на ступеньки, подсвечивая слова. Лесенка 1 — утро (снизу-вверх), Лесенка 2 — вечер (сверху-вниз)",
+  "ladders": [
+    {
+      "id": "morning",
+      "direction": "up",
+      "title": "Утро (снизу вверх)",
+      "steps": [
+        "I get up.",
+        "I get up early.",
+        "I get up at seven.",
+        "I get up at seven o'clock.",
+        "I get up at seven o'clock and go to school.",
+        "I get up at seven o'clock, go to school and have lunch.",
+        "I get up at seven o'clock, go to school, have lunch and do my homework.",
+        "I get up at seven o'clock, go to school, have lunch, do my homework and play in the evening."
+      ]
+    },
+    {
+      "id": "evening",
+      "direction": "down",
+      "title": "Вечер (сверху вниз)",
+      "steps": [
+        "In the evening, I eat dinner, watch TV, read a book and say good bye to my family before I go to bed.",
+        "In the evening, I eat dinner, watch TV, read a book and say good bye to my family.",
+        "In the evening, I eat dinner, watch TV, read a book.",
+        "In the evening, I eat dinner, watch TV.",
+        "In the evening, I eat dinner and watch TV.",
+        "In the evening, I eat dinner and go to bed.",
+        "In the evening, I go to bed and read a book.",
+        "I go to bed."
+      ]
+    }
+  ]
+}

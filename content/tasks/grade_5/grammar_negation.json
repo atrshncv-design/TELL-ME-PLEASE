@@ -1,0 +1,21 @@
+{
+  "id": "grammar_negation",
+  "title": "Отрицание",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильную отрицательную форму",
+  "items": [
+    {"sentence": "The lion ___ a big mane.", "options": ["has got", "hasn't got", "don't have", "haven't got"], "answer": "hasn't got"},
+    {"sentence": "The elephant ___ long trunks.", "options": ["has got", "have got", "don't has", "hasn't got"], "answer": "hasn't got"},
+    {"sentence": "A camel ___ in the mud and sand.", "options": ["walks", "don't walk", "doesn't walk", "not walk"], "answer": "doesn't walk"},
+    {"sentence": "The crocodile ___ dangerous.", "options": ["is", "isn't", "doesn't is", "don't be"], "answer": "isn't"},
+    {"sentence": "The rhino ___ a strong horn.", "options": ["has", "haven't got", "hasn't got", "no has"], "answer": "hasn't got"},
+    {"sentence": "The goose ___ on the farm.", "options": ["doesn't lives", "lives", "don't live", "doesn't live"], "answer": "doesn't live"},
+    {"sentence": "The cow ___ in the mud.", "options": ["doesn't stands", "doesn't stand", "isn't stand", "don't stand"], "answer": "doesn't stand"},
+    {"sentence": "My dog and cat ___ in our family.", "options": ["aren't", "don't are", "isn't be", "are"], "answer": "aren't"},
+    {"sentence": "The goldfish ___ alone in the bowl.", "options": ["don't swims", "doesn't swims", "doesn't swim", "don't swim"], "answer": "doesn't swim"},
+    {"sentence": "Crocodiles ___ in the river.", "options": ["hide", "don't hide", "doesn't hide", "no hide"], "answer": "don't hide"},
+    {"sentence": "Leopards ___ fast.", "options": ["do run", "don't run", "doesn't run", "don't runs"], "answer": "don't run"},
+    {"sentence": "My dog and cat ___ in our house.", "options": ["don't play", "don't plays", "doesn't play", "not play"], "answer": "don't play"}
+  ]
+}

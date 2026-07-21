@@ -1,0 +1,24 @@
+{
+  "id": "grammar_joke_quiz",
+  "title": "Шутка: V1/Vs",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Забавные предложения — выбери правильную форму",
+  "items": [
+    {"sentence": "My cat ___ cartoons.", "options": ["watch", "watches"], "answer": "watches"},
+    {"sentence": "The dog ___ my sandwich.", "options": ["want", "wants"], "answer": "wants"},
+    {"sentence": "The hamster ___ a tiny car.", "options": ["drive", "drives"], "answer": "drives"},
+    {"sentence": "Monkeys ___ football.", "options": ["play", "plays"], "answer": "play"},
+    {"sentence": "My school bag ___ on the floor.", "options": ["jump", "jumps"], "answer": "jumps"},
+    {"sentence": "His socks ___ like monsters.", "options": ["smell", "smells"], "answer": "smell"},
+    {"sentence": "The parrot ___ my teacher.", "options": ["copy", "copies"], "answer": "copies"},
+    {"sentence": "My diary ___ about homework.", "options": ["cry", "cries"], "answer": "cries"},
+    {"sentence": "The goldfish ___ us.", "options": ["watch", "watches"], "answer": "watches"},
+    {"sentence": "The toys ___ on the bed.", "options": ["dance", "dances"], "answer": "dance"},
+    {"sentence": "The sofa ___ a funny song.", "options": ["sing", "sings"], "answer": "sings"},
+    {"sentence": "My pencil ___ to school.", "options": ["go", "goes"], "answer": "goes"},
+    {"sentence": "The cow ___ about pizza.", "options": ["dream", "dreams"], "answer": "dreams"},
+    {"sentence": "The teacher ___ invisible chocolate.", "options": ["eat", "eats"], "answer": "eats"},
+    {"sentence": "The sandwich ___ away.", "options": ["run", "runs"], "answer": "runs"}
+  ]
+}

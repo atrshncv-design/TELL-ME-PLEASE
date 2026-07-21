@@ -1,0 +1,25 @@
+{
+  "id": "grammar_v1_vs_quiz",
+  "title": "V1 / Vs: выбери форму",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Сверху местоимение или подлежащее — выбери правильную форму",
+  "items": [
+    {"subject": "I", "options": ["eat", "eats"], "answer": "eat"},
+    {"subject": "You", "options": ["drink", "drinks"], "answer": "drink"},
+    {"subject": "She", "options": ["plays", "play"], "answer": "plays"},
+    {"subject": "They", "options": ["watch", "watches"], "answer": "watch"},
+    {"subject": "The dog", "options": ["sleeps", "sleep"], "answer": "sleeps"},
+    {"subject": "My mum", "options": ["cook", "cooks"], "answer": "cooks"},
+    {"subject": "We", "options": ["see", "sees"], "answer": "see"},
+    {"subject": "The bird", "options": ["fly", "flies"], "answer": "flies"},
+    {"subject": "Birds", "options": ["fly", "flies"], "answer": "fly"},
+    {"subject": "He", "options": ["go", "goes"], "answer": "goes"},
+    {"subject": "My friends", "options": ["go", "goes"], "answer": "go"},
+    {"subject": "The cat", "options": ["stay", "stays"], "answer": "stays"},
+    {"subject": "Cats", "options": ["run", "runs"], "answer": "run"},
+    {"subject": "It", "options": ["read", "reads"], "answer": "reads"},
+    {"subject": "The teachers", "options": ["tell", "tells"], "answer": "tell"},
+    {"subject": "The horse", "options": ["jump", "jumps"], "answer": "jumps"}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "grammar_wh_questions",
+  "title": "Специальные вопросы",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Рулетка: выбери вопросительное слово и вспомогательный глагол",
+  "question_words": ["What", "Where", "When", "How"],
+    "auxiliary": ["do", "does"],
+  "items": [
+    {"statement": "A lion hunts animals at night.", "hint": "Когда лев охотится?", "answer": "When does a lion hunt animals at night?"},
+    {"statement": "An elephant uses its trunk to drink water.", "hint": "Что слон использует?", "answer": "What does an elephant use to drink water?"},
+    {"statement": "Camels walk in the hot desert.", "hint": "Где верблюды гуляют?", "answer": "Where do camels walk?"},
+    {"statement": "The crocodile lives in the river.", "hint": "Где крокодил живёт?", "answer": "Where does the crocodile live?"},
+    {"statement": "Monkeys play in the cage.", "hint": "Где играют обезьянки?", "answer": "Where do monkeys play?"},
+    {"statement": "The giraffe uses its long neck to eat leaves.", "hint": "Что жираф использует?", "answer": "What does the giraffe use to eat leaves?"},
+    {"statement": "Rhinos run across the field.", "hint": "Где носороги бегают?", "answer": "Where do rhinos run?"},
+    {"statement": "A butterfly sits on a flower in summer.", "hint": "Когда бабочка сидит на цветке?", "answer": "When does a butterfly sit on a flower?"},
+    {"statement": "The spider makes a web in the corner.", "hint": "Что паук плетёт?", "answer": "What does the spider make in the corner?"},
+    {"statement": "Bees collect nectar from flowers.", "hint": "Что пчёлы собирают?", "answer": "What do bees collect from flowers?"},
+    {"statement": "Snakes hide under the rock.", "hint": "Где змеи прячутся?", "answer": "Where do snakes hide?"},
+    {"statement": "Penguins walk in the zoo every day.", "hint": "Как часто пингвины гуляют?", "answer": "How often do penguins walk in the zoo?"},
+    {"statement": "Zebras show their stripes every weekend.", "hint": "Когда зебры показывают полоски?", "answer": "When do zebras show their stripes?"}
+  ]
+}

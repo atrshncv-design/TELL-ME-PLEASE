@@ -1,0 +1,21 @@
+{
+  "grade": 5,
+  "exercises": [
+    {"file": "grammar_endings_sort.json", "title": "Сортировка окончаний", "category": "grammar", "type": "drag-and-drop"},
+    {"file": "grammar_endings_quiz.json", "title": "Окончания: викторина", "category": "grammar", "type": "quiz"},
+    {"file": "grammar_v1_vs_quiz.json", "title": "V1 / Vs: выбери форму", "category": "grammar", "type": "quiz"},
+    {"file": "grammar_roulette.json", "title": "Рулетка: все части предложения", "category": "grammar", "type": "fill-in"},
+    {"file": "grammar_joke_quiz.json", "title": "Шутка: V1/Vs", "category": "grammar", "type": "quiz"},
+    {"file": "grammar_negation.json", "title": "Отрицание", "category": "grammar", "type": "quiz"},
+    {"file": "grammar_yes_no_questions.json", "title": "Общие вопросы Do/Does", "category": "grammar", "type": "quiz"},
+    {"file": "grammar_wh_questions.json", "title": "Специальные вопросы", "category": "grammar", "type": "fill-in"},
+    {"file": "grammar_ladder.json", "title": "Лесенка: Up and Down", "category": "grammar", "type": "ladder"},
+    {"file": "grammar_verb_forms_quiz.json", "title": "Викторина: вставь форму глагола", "category": "grammar", "type": "fill-in"},
+    {"file": "grammar_adverbs_build.json", "title": "Наречия: построй предложения", "category": "grammar", "type": "build-sentence"},
+    {"file": "grammar_adverbs_place.json", "title": "Наречия: вставь в правильное место", "category": "grammar", "type": "drag-and-drop"},
+    {"file": "story_harry_potter_routine.json", "title": "Распорядок дня Гарри Поттера", "category": "vocabulary", "type": "fill-in"},
+    {"file": "story_harry_potter_interview.json", "title": "Интервью с Гарри Поттером", "category": "listening", "type": "role-play"},
+    {"file": "speaking_about_yourself.json", "title": "Расскажи о себе", "category": "speaking", "type": "fill-in-and-speak"},
+    {"file": "speaking_peer_conversation.json", "title": "Поговори со сверстником", "category": "speaking", "type": "voice-chat"}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "grammar_yes_no_questions",
+  "title": "Общие вопросы Do/Does",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильный вариант вопроса",
+  "items": [
+    {"statement": "You speak English.", "question": "Do you speak English?", "answer": "Do you speak English?"},
+    {"statement": "The elephant walks with heavy trunks.", "question": "Does the elephant walk with heavy trunks?", "answer": "Does the elephant walk with heavy trunks?"},
+    {"statement": "Camels eat crocodiles.", "question": "Do camels eat crocodiles?", "answer": "Do camels eat crocodiles?"},
+    {"statement": "The crocodile lives in the river.", "question": "Does the crocodile live in the river?", "answer": "Does the crocodile live in the river?"},
+    {"statement": "The leopard runs fast.", "question": "Does the leopard run fast?", "answer": "Does the leopard run fast?"},
+    {"statement": "The rhino walks slowly.", "question": "Does the rhino walk slowly?", "answer": "Does the rhino walk slowly?"},
+    {"statement": "The duck swims in the pond.", "question": "Does the duck swim in the pond?", "answer": "Does the duck swim in the pond?"},
+    {"statement": "The goose lives on the farm.", "question": "Does the goose live on the farm?", "answer": "Does the goose live on the farm?"},
+    {"statement": "The cows eat grass every day.", "question": "Do the cows eat grass every day?", "answer": "Do the cows eat grass every day?"},
+    {"statement": "Sheep and goats live together.", "question": "Do sheep and goats live together?", "answer": "Do sheep and goats live together?"},
+    {"statement": "Your dog plays with your cat.", "question": "Does your dog play with your cat?", "answer": "Does your dog play with your cat?"},
+    {"statement": "Your pets sleep in your bedroom.", "question": "Do your pets sleep in your bedroom?", "answer": "Do your pets sleep in your bedroom?"},
+    {"statement": "The goldfish swims alone.", "question": "Does the goldfish swim alone?", "answer": "Does the goldfish swim alone?"},
+    {"statement": "The tortoise walks on short legs.", "question": "Does the tortoise walk on short legs?", "answer": "Does the tortoise walk on short legs?"}
+  ]
+}

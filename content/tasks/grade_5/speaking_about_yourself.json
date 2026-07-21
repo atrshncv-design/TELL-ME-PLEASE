@@ -1,0 +1,41 @@
+{
+  "id": "speaking_about_yourself",
+  "title": "Расскажи Гарри Поттеру о себе",
+  "category": "speaking",
+  "type": "fill-in-and-speak",
+  "description": "Заполни пропуски и расскажи о своём дне",
+  "sections": [
+    {
+      "name": "Morning",
+      "prompts": [
+        "In the morning, I wake up at ___",
+        "I get up and ___",
+        "Then I have breakfast and ___",
+        "After breakfast I go to school and ___"
+      ]
+    },
+    {
+      "name": "School and day",
+      "prompts": [
+        "At school I usually ___",
+        "In the afternoon I come home and ___",
+        "After school I do my homework and ___"
+      ]
+    },
+    {
+      "name": "Evening",
+      "prompts": [
+        "In the evening I ___",
+        "I have dinner with ___",
+        "After dinner I ___"
+      ]
+    },
+    {
+      "name": "Night / weekend",
+      "prompts": [
+        "At night I go to bed at ___ and ___",
+        "At the weekend I ___"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "grammar_adverbs_build",
+  "title": "Наречия: построй предложения",
+  "category": "grammar",
+  "type": "build-sentence",
+  "description": "Составь как можно больше предложений, комбинируя наречие и время",
+  "adverbs": ["always", "often", "usually", "sometimes", "hardly ever", "never"],
+  "time_phrases": ["every day", "on Sundays", "in the evening", "at night", "after school", "at nine o'clock"],
+  "base_verb": "play games",
+  "subject": "I"
+}
