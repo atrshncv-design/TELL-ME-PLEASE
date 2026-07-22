@@ -73,19 +73,20 @@ function normalize(raw: Record<string, any>): TaskData {
         prefix = wordMatch ? wordMatch[0].trim() : ""
       }
       // For does-items: remove -s from verb and lowercase subject
+      // For do-items: also lowercase subject
       let body = statement.replace(/\.$/, "")
       if (prefix.includes("does")) {
         // Remove -s/-es from verb: "hunts" → "hunt", "lives" → "live"
         body = body.replace(/\b(\w+)(s|es)\b/, (match: string, verb: string, suffix: string) => {
           // Don't modify nouns (elephant, lion, etc.)
-          if (/^(elephant|lion|crocodile|goose|goldfish|tortoise|spider|butterfly|giraffe|rhino)$/i.test(verb)) {
+          if (/^(elephant|lion|crocodile|goose|goldfish|tortoise|spider|butterfly|giraffe|rhino|camels|penguins|zebras)$/i.test(verb)) {
             return match
           }
           return verb
         })
-        // Lowercase the subject after auxiliary
-        body = body.replace(/^([A-Z])/, (c: string) => c.toLowerCase())
       }
+      // Lowercase the subject after auxiliary for all wh-questions
+      body = body.replace(/^([A-Z])/, (c: string) => c.toLowerCase())
       return {
         sentence: `___ ${body}?`,
         answer: prefix,
