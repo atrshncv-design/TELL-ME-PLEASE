@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 interface FillItem {
   sentence: string
-  answer: string
+  answer: string | string[]
   hint?: string
 }
 
@@ -19,15 +19,28 @@ interface FillInTaskProps {
 export function FillInTask({ title, description, items, onComplete }: FillInTaskProps) {
   const [current, setCurrent] = useState(0)
   const [score, setScore] = useState(0)
-  const [input, setInput] = useState("")
+  const [inputs, setInputs] = useState<string[]>([""])
   const [showResult, setShowResult] = useState(false)
   const [isCorrect, setIsCorrect] = useState(false)
   const [finished, setFinished] = useState(false)
 
   const item = items[current]
+  const parts = item.sentence.split("___")
+  const answers = Array.isArray(item.answer) ? item.answer : [item.answer]
+  const blankCount = parts.length - 1
+
+  const updateInput = (index: number, value: string) => {
+    setInputs((prev) => {
+      const next = [...prev]
+      next[index] = value
+      return next
+    })
+  }
 
   const handleSubmit = () => {
-    const correct = input.trim().toLowerCase() === item.answer.toLowerCase()
+    const correct = answers.every(
+      (ans, i) => (inputs[i] ?? "").trim().toLowerCase() === ans.toLowerCase()
+    )
     setIsCorrect(correct)
     if (correct) setScore((s) => s + 1)
     setShowResult(true)
@@ -35,7 +48,7 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
     setTimeout(() => {
       if (current + 1 < items.length) {
         setCurrent((c) => c + 1)
-        setInput("")
+        setInputs(Array.from({ length: Math.max(blankCount, 1) }, () => ""))
         setShowResult(false)
       } else {
         setFinished(true)
@@ -56,8 +69,6 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
       </div>
     )
   }
-
-  const parts = item.sentence.split("___")
 
   return (
     <div className="flex flex-col gap-4 p-4 max-w-lg mx-auto">
@@ -83,26 +94,35 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
           className="text-center py-4"
         >
           <p className="text-lg text-slate-800">
-            {parts[0]}
-            <span className="inline-block min-w-[80px] border-b-2 border-indigo-400 mx-1 text-indigo-600 font-semibold">
-              {showResult ? item.answer : " ? "}
-            </span>
-            {parts[1] || ""}
+            {parts.map((part, i) => (
+              <span key={i}>
+                {part}
+                {i < blankCount && (
+                  <span className="inline-block min-w-[80px] border-b-2 border-indigo-400 mx-1 text-indigo-600 font-semibold">
+                    {showResult ? (answers[i] ?? "?") : " ? "}
+                  </span>
+                )}
+              </span>
+            ))}
           </p>
           {item.hint && <p className="text-xs text-slate-400 mt-2">{item.hint}</p>}
         </motion.div>
       </AnimatePresence>
 
       {!showResult ? (
-        <div className="flex gap-2">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
-            placeholder="Впиши ответ..."
-            className="flex-1 px-4 py-2 rounded-xl border-2 border-indigo-200 focus:border-indigo-500 outline-none text-center"
-          />
+        <div className="flex flex-col gap-2">
+          {answers.map((_, i) => (
+            <input
+              key={i}
+              type="text"
+              value={inputs[i] ?? ""}
+              onChange={(e) => updateInput(i, e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && i === blankCount - 1 && handleSubmit()}
+              placeholder={`Пропуск ${i + 1}...`}
+              className="flex-1 px-4 py-3 text-lg rounded-xl border-2 border-indigo-200 focus:border-indigo-500 outline-none text-center min-h-[52px]"
+              autoFocus={i === 0}
+            />
+          ))}
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={handleSubmit}
@@ -119,7 +139,9 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
             isCorrect ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
           }`}
         >
-          {isCorrect ? "Правильно! ✅" : `Неверно. Ответ: ${item.answer}`}
+          {isCorrect
+            ? "Правильно!"
+            : `Неверно. Ответ: ${answers.join(" / ")}`}
         </motion.div>
       )}
     </div>

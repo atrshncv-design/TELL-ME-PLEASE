@@ -39,3 +39,26 @@ class KeyRotationManager:
             last = resp
             self.rotate()
         return last
+
+    async def send_stream(
+        self, client: httpx.AsyncClient, url: str, payload: dict
+    ) -> httpx.Response:
+        """Try each key once. Return first successful streaming response."""
+        if not self._keys:
+            raise RuntimeError("No API keys provided")
+        last = None
+        for _ in range(len(self._keys)):
+            resp = await client.send(
+                client.build_request(
+                    "POST",
+                    url,
+                    headers={"Authorization": f"Bearer {self.current_key}"},
+                    json=payload,
+                ),
+                stream=True,
+            )
+            if resp.status_code not in (429, 403):
+                return resp
+            last = resp
+            self.rotate()
+        return last

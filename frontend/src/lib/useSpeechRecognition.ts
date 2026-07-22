@@ -13,7 +13,9 @@ export function useSpeechRecognition({
 }: UseSpeechRecognitionOptions) {
   const [listening, setListening] = useState(false)
   const [supported, setSupported] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const recognitionRef = useRef<any>(null)
+  const wasListeningRef = useRef(false)
   const onResultRef = useRef(onResult)
   onResultRef.current = onResult
   const enabledRef = useRef(enabled)
@@ -49,8 +51,15 @@ export function useSpeechRecognition({
       }
     }
 
-    recognition.onerror = () => {
+    recognition.onerror = (e: any) => {
       setListening(false)
+      if (e.error === "not-allowed") {
+        setError("Нет доступа к микрофону. Разрешите доступ в настройках браузера.")
+      } else if (e.error === "network") {
+        setError("Ошибка сети при распознавании речи.")
+      } else if (e.error !== "no-speech") {
+        setError(`Ошибка распознавания: ${e.error}`)
+      }
     }
 
     recognitionRef.current = recognition
@@ -66,6 +75,7 @@ export function useSpeechRecognition({
   // Hard echo protection: immediately stop when enabled becomes false
   useEffect(() => {
     if (!enabled && recognitionRef.current) {
+      wasListeningRef.current = true
       enabledRef.current = false
       try {
         recognitionRef.current.stop()
@@ -74,9 +84,22 @@ export function useSpeechRecognition({
     }
   }, [enabled])
 
+  // Auto-resume when enabled becomes true after being disabled (e.g., after TTS)
+  useEffect(() => {
+    if (enabled && wasListeningRef.current && recognitionRef.current) {
+      wasListeningRef.current = false
+      enabledRef.current = true
+      try {
+        recognitionRef.current.start()
+        setListening(true)
+      } catch {}
+    }
+  }, [enabled])
+
   const start = useCallback(() => {
     if (!recognitionRef.current) return
     enabledRef.current = true
+    setError(null)
     try {
       recognitionRef.current.start()
       setListening(true)
@@ -91,5 +114,5 @@ export function useSpeechRecognition({
     setListening(false)
   }, [])
 
-  return { listening, supported, start, stop }
+  return { listening, supported, error, start, stop }
 }

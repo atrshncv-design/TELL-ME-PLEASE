@@ -2,6 +2,7 @@
 
 import { Suspense, useCallback, useEffect, useRef, useState } from "react"
 import { useSearchParams } from "next/navigation"
+import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { useWebSocket, type WsMessage } from "@/lib/useWebSocket"
 import { useSpeechRecognition } from "@/lib/useSpeechRecognition"
@@ -13,6 +14,7 @@ interface VoiceChatTaskProps {
   sections?: { name: string; questions: string[] }[]
   dialogue?: { speaker: string; text: string }[]
   taskContext?: string
+  grade?: string
   sessionSeconds?: number
 }
 
@@ -22,10 +24,11 @@ function VoiceChatInner({
   sections,
   dialogue,
   taskContext,
+  grade: gradeProp,
   sessionSeconds = 180,
 }: VoiceChatTaskProps) {
   const params = useSearchParams()
-  const grade = params.get("grade") || "7"
+  const grade = gradeProp || params.get("grade") || "7"
 
   const [messages, setMessages] = useState<{ role: "user" | "ai"; text: string }[]>([])
   const [aiText, setAiText] = useState("")
@@ -84,9 +87,9 @@ function VoiceChatInner({
     [enqueue]
   )
 
-  const { connected, send } = useWebSocket({ branchId: grade, onMessage: handleWsMessage, taskContext })
+  const { connected, send, reconnect } = useWebSocket({ branchId: grade, onMessage: handleWsMessage, taskContext })
 
-  const { listening, supported, start, stop } = useSpeechRecognition({
+  const { listening, supported, error, start, stop } = useSpeechRecognition({
     enabled: !muted && !sessionEnded,
     onResult: (text) => {
       setMessages((p) => [...p, { role: "user", text }])
@@ -114,9 +117,24 @@ function VoiceChatInner({
     <div className="flex flex-col h-full">
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-2 border-b border-indigo-100 bg-white/80">
-        <div>
-          <div className="font-bold text-indigo-900 text-sm">{title}</div>
-          <div className="text-xs text-slate-500">{connected ? "онлайн" : "офлайн"}</div>
+        <div className="flex items-center gap-2">
+          <Link
+            href={`/class/${grade}/sections`}
+            className="flex items-center justify-center min-h-[44px] min-w-[44px] px-2 py-1 rounded-xl bg-indigo-100 text-indigo-700 font-semibold text-sm hover:bg-indigo-200 transition-colors"
+          >
+            ←
+          </Link>
+          <div>
+            <div className="font-bold text-indigo-900 text-sm">{title}</div>
+            <div className="text-xs text-slate-500 flex items-center gap-2">
+              {connected ? "онлайн" : "офлайн"}
+              {!connected && (
+                <button onClick={reconnect} className="text-indigo-600 underline hover:text-indigo-800">
+                  Переподключиться
+                </button>
+              )}
+            </div>
+          </div>
         </div>
         <div className="flex items-center gap-2">
           {hasPanel && (
@@ -155,13 +173,16 @@ function VoiceChatInner({
           </div>
 
           {/* Mic */}
-          <div className="flex items-center justify-center gap-3 px-4 py-3 border-t border-indigo-100">
+          <div className="flex flex-col items-center gap-2 px-4 py-3 border-t border-indigo-100">
             {supported && !sessionEnded ? (
               <motion.button whileTap={{ scale: 0.9 }} onClick={toggleMic} disabled={muted || !connected}
                 className={`w-14 h-14 rounded-full flex items-center justify-center text-xl shadow-lg transition-all ${listening ? "bg-red-500 text-white shadow-red-200 animate-pulse" : muted ? "bg-slate-200 text-slate-400" : "bg-indigo-600 text-white shadow-indigo-200"}`}>
                 {listening ? "⏹" : "🎤"}
               </motion.button>
             ) : null}
+            {error && (
+              <p className="text-xs text-red-500 text-center">{error}</p>
+            )}
             {playing && (
               <div className="flex items-center gap-1 text-xs text-indigo-600">
                 <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full animate-pulse" />Воспроизведение...

@@ -102,7 +102,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
               whileTap={{ scale: 0.95 }}
               onClick={() => handleSelect(opt)}
               disabled={showResult}
-              className={`rounded-xl px-4 py-3 font-medium text-slate-800 transition-all ${bg}`}
+              className={`rounded-xl px-4 py-4 min-h-[52px] font-semibold text-lg text-slate-800 transition-all ${bg}`}
             >
               {opt}
             </motion.button>

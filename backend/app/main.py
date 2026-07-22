@@ -8,6 +8,7 @@ import logging
 
 import httpx
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
 from app.services.context_window import ContextWindow
@@ -19,6 +20,14 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Tell Me Please API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 key_manager = KeyRotationManager(settings.api_keys)
 
@@ -61,7 +70,17 @@ async def _stream_response(
     full_reply = ""
 
     async with httpx.AsyncClient(timeout=60.0) as client:
-        resp = await key_manager.send(client, url, payload)
+        resp = await key_manager.send_stream(client, url, payload)
+        if resp.status_code != 200:
+            error_msg = f"LLM service error: {resp.status_code}"
+            try:
+                error_detail = resp.text[:200]
+                error_msg += f" - {error_detail}"
+            except Exception:
+                pass
+            logger.error(error_msg)
+            await ws.send_json({"type": "error", "content": "Сервис временно недоступен. Попробуйте позже."})
+            return ""
         async for line in resp.aiter_lines():
             if not line.startswith("data: ") or line == "data: [DONE]":
                 continue
@@ -107,6 +126,13 @@ async def ws_chat(websocket: WebSocket):
         logger.info("WS connected: branch=%s, context=%s", branch_id, task_context[:50] if task_context else "none")
     except Exception:
         pass
+
+    # Check if API keys are configured
+    if not settings.api_keys or not any(k.strip() for k in settings.api_keys):
+        logger.error("No LLM API keys configured")
+        await websocket.send_json({"type": "error", "content": "Сервис не настроен. Обратитесь к администратору."})
+        await websocket.close()
+        return
 
     async def _session_timer() -> None:
         nonlocal session_expired

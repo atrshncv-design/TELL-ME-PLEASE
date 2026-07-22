@@ -25,8 +25,8 @@ export function useWebSocket({ branchId, onMessage, taskContext }: UseWebSocketO
   taskContextRef.current = taskContext
 
   useEffect(() => {
-    const proto = location.protocol === "https:" ? "wss" : "ws"
-    const ws = new WebSocket(`${proto}://${location.host}/ws/chat`)
+    const wsUrl = process.env.NEXT_PUBLIC_WS_URL || "ws://localhost:8000/ws/chat"
+    const ws = new WebSocket(wsUrl)
     wsRef.current = ws
 
     ws.onopen = () => {
@@ -57,5 +57,33 @@ export function useWebSocket({ branchId, onMessage, taskContext }: UseWebSocketO
     wsRef.current?.send(JSON.stringify({ text }))
   }, [])
 
-  return { connected, send }
+  const reconnect = useCallback(() => {
+    if (wsRef.current) {
+      wsRef.current.close()
+      wsRef.current = null
+    }
+    const wsUrl = process.env.NEXT_PUBLIC_WS_URL || "ws://localhost:8000/ws/chat"
+    const ws = new WebSocket(wsUrl)
+    wsRef.current = ws
+
+    ws.onopen = () => {
+      setConnected(true)
+      const init: Record<string, string> = { branch_id: branchId }
+      if (taskContextRef.current) {
+        init.task_context = taskContextRef.current
+      }
+      ws.send(JSON.stringify(init))
+    }
+
+    ws.onmessage = (e) => {
+      try {
+        onMessageRef.current(JSON.parse(e.data))
+      } catch {}
+    }
+
+    ws.onclose = () => setConnected(false)
+    ws.onerror = () => setConnected(false)
+  }, [branchId])
+
+  return { connected, send, reconnect }
 }

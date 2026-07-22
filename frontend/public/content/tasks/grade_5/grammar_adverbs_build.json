@@ -5,15 +5,15 @@
   "type": "fill-in",
   "description": "Составь как можно больше предложений, комбинируя наречие и время",
   "items": [
-    {"sentence": "I ___ play games ___", "answer": "always every day"},
-    {"sentence": "I ___ play games ___", "answer": "often on Sundays"},
-    {"sentence": "I ___ play games ___", "answer": "usually in the evening"},
-    {"sentence": "I ___ play games ___", "answer": "sometimes at night"},
-    {"sentence": "I ___ play games ___", "answer": "hardly ever after school"},
-    {"sentence": "I ___ play games ___", "answer": "never at nine o'clock"},
-    {"sentence": "I ___ play games ___", "answer": "always in the evening"},
-    {"sentence": "I ___ play games ___", "answer": "often at night"},
-    {"sentence": "I ___ play games ___", "answer": "sometimes after school"},
-    {"sentence": "I ___ play games ___", "answer": "usually every day"}
+    {"sentence": "I ___ play games ___", "answer": ["always", "every day"]},
+    {"sentence": "I ___ play games ___", "answer": ["often", "on Sundays"]},
+    {"sentence": "I ___ play games ___", "answer": ["usually", "in the evening"]},
+    {"sentence": "I ___ play games ___", "answer": ["sometimes", "at night"]},
+    {"sentence": "I ___ play games ___", "answer": ["hardly ever", "after school"]},
+    {"sentence": "I ___ play games ___", "answer": ["never", "at nine o'clock"]},
+    {"sentence": "I ___ play games ___", "answer": ["always", "in the evening"]},
+    {"sentence": "I ___ play games ___", "answer": ["often", "at night"]},
+    {"sentence": "I ___ play games ___", "answer": ["sometimes", "after school"]},
+    {"sentence": "I ___ play games ___", "answer": ["usually", "every day"]}
   ]
 }
