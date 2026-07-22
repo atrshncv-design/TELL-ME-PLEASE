@@ -85,6 +85,8 @@ async def _stream_response(
             if not line.startswith("data: ") or line == "data: [DONE]":
                 continue
             chunk = json.loads(line[6:])
+            if not chunk.get("choices"):
+                continue
             delta = chunk["choices"][0].get("delta", {})
             token = delta.get("content", "")
             if not token:

@@ -82,6 +82,9 @@ function VoiceChatInner({
           sessionEndedRef.current = true
           setSessionEnded(true)
           break
+        case "error":
+          setMessages((p) => [...p, { role: "ai", text: `⚠️ ${msg.content}` }])
+          break
       }
     },
     [enqueue]
