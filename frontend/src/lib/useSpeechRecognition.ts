@@ -75,7 +75,8 @@ export function useSpeechRecognition({
   // Hard echo protection: immediately stop when enabled becomes false
   useEffect(() => {
     if (!enabled && recognitionRef.current) {
-      wasListeningRef.current = true
+      // Only auto-resume if we were actually listening (not if user manually stopped)
+      wasListeningRef.current = listening
       enabledRef.current = false
       try {
         recognitionRef.current.stop()

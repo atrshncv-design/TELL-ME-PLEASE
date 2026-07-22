@@ -37,35 +37,54 @@ function normalize(raw: Record<string, any>): TaskData {
     raw.items = raw.items.map((i: any) => ({
       sentence: i.sentence_base + " ___",
       answer: i.adverb,
-      hint: i.full,
     }))
     raw.type = "fill-in"
   }
 
-  // grammar_wh_questions: statement → sentence
+  // grammar_wh_questions: statement → sentence with ___ blank
   if (raw.items?.[0]?.statement && !raw.items[0].sentence) {
-    raw.items = raw.items.map((i: any) => ({
-      sentence: i.statement,
-      answer: i.answer,
-      hint: i.hint,
-    }))
+    raw.items = raw.items.map((i: any) => {
+      const answer = i.answer
+      const statement = i.statement
+      // Extract question prefix (e.g., "When does", "What do", "Where does")
+      const prefixMatch = answer.match(/^(What|Where|When|How|Why|Who|Which)\s+(do|does|did|can|could|will|would|is|are|was|were)\s/i)
+      let prefix = prefixMatch ? prefixMatch[0].trim() : ""
+      // If no match, try just the question word
+      if (!prefix) {
+        const wordMatch = answer.match(/^(What|Where|When|How|Why|Who|Which)\s/i)
+        prefix = wordMatch ? wordMatch[0].trim() : ""
+      }
+      // Build the sentence with blank at the start
+      const sentence = `___ ${statement.replace(/\.$/, "")}?`
+      return {
+        sentence,
+        answer: prefix,
+        hint: i.hint,
+      }
+    })
   }
 
   // grammar_yes_no_questions: statement/question → quiz with options
   if (raw.items?.[0]?.statement && raw.items[0].question && !raw.items[0].options) {
     raw.items = raw.items.map((i: any) => {
       const q = i.question
+      // Swap Do/Does
       const wrongAux = q.startsWith("Do ")
         ? q.replace(/^Do\b/, "Does")
         : q.replace(/^Does\b/, "Do")
-      const wrongVerb = q.includes(" live ")
-        ? q.replace(" live ", " lives ")
-        : q.includes(" walk ")
-          ? q.replace(" walk ", " walks ")
-          : q.replace(/(\w+)s\b/, "$1")
+      // Find the main verb (after subject) and add -s
+      const verbMatch = q.match(/\b(do|does)\s+\w+\s+(\w+)/i)
+      const mainVerb = verbMatch ? verbMatch[2] : ""
+      const wrongVerb = mainVerb
+        ? q.replace(new RegExp(`\\b${mainVerb}\\b`), mainVerb + "s")
+        : q
+      // Shuffle options so correct answer isn't always first
+      const opts = [q, wrongAux, wrongVerb].filter((v, idx, arr) => arr.indexOf(v) === idx && v !== q)
+      while (opts.length < 3) opts.push(q.split(" ").slice(0, -1).join(" ") + "?")
+      const shuffled = [q, ...opts].sort(() => Math.random() - 0.5)
       return {
         sentence: i.statement,
-        options: [q, wrongAux, wrongVerb, q + "?"],
+        options: shuffled.slice(0, 3),
         answer: q,
       }
     })

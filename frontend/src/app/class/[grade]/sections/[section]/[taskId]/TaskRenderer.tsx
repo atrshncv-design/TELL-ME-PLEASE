@@ -25,9 +25,10 @@ function serializeContext(task: TaskData): string {
   if (task.dialogue && task.dialogue.length > 0) {
     // Determine unique speakers
     const speakers = [...new Set(task.dialogue.map(d => d.speaker))]
-    // AI plays the first non-generic speaker, student plays the other
-    const aiRole = speakers[0] || "character"
-    const studentRole = speakers.length > 1 ? speakers[1] : "interviewer"
+    // AI plays the character (non-generic), student plays the interviewer
+    const genericSpeakers = ["interviewer", "host", "teacher", "journalist"]
+    const aiRole = speakers.find(s => !genericSpeakers.includes(s.toLowerCase())) || speakers[speakers.length - 1] || "character"
+    const studentRole = speakers.find(s => genericSpeakers.includes(s.toLowerCase())) || speakers[0] || "interviewer"
 
     parts.push(`ROLE-PLAY SCENARIO.
 You are playing the role of "${aiRole}" in this dialogue.
