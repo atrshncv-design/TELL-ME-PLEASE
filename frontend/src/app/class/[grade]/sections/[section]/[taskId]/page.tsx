@@ -39,10 +39,22 @@ function normalize(raw: Record<string, any>): TaskData {
     if (adverbs.length > 0) {
       raw.description = `${raw.description}\n\nНаречия: ${adverbs.join(", ")}`
     }
-    raw.items = raw.items.map((i: any) => ({
-      sentence: i.sentence_base + " ___",
-      answer: i.adverb,
-    }))
+    raw.items = raw.items.map((i: any) => {
+      let sentence: string
+      if (i.answer_position === "middle") {
+        // Put blank between subject and verb: "I wake up" → "I ___ wake up"
+        const words = i.sentence_base.split(/\s+/)
+        // Find where verb starts: after first word (subject)
+        sentence = `${words[0]} ___ ${words.slice(1).join(" ")}`
+      } else {
+        // End position: blank at the end
+        sentence = `${i.sentence_base} ___`
+      }
+      return {
+        sentence,
+        answer: i.adverb,
+      }
+    })
     raw.type = "fill-in"
   }
 
