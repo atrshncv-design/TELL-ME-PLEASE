@@ -1,29 +1,25 @@
-import fs from "fs/promises"
-import path from "path"
-import { notFound } from "next/navigation"
-import { TaskRenderer } from "./TaskRenderer"
-import type { TaskData } from "@/types/task"
-
-// IMPORTANT: This normalize function must be kept in sync with scripts/normalize.mjs
-// Any changes here must be mirrored there, and vice versa.
-function normalize(raw: Record<string, any>): TaskData {
+/**
+ * Normalizes raw JSON data to match component contracts.
+ * SINGLE SOURCE OF TRUTH — both page.tsx and verify-content.mjs import this.
+ */
+export function normalize(raw) {
   // grammar_endings_quiz: groups → flat items
   if (raw.groups && Array.isArray(raw.groups)) {
-    raw.items = raw.groups.flatMap((g: any) => g.items ?? [])
+    raw.items = raw.groups.flatMap((g) => g.items ?? [])
     delete raw.groups
   }
 
   // story_harry_potter_routine: story → items, text → sentence
   if (raw.story && Array.isArray(raw.story)) {
     raw.items = raw.story
-      .filter((s: any) => s.blank !== null && s.verb)
-      .map((s: any) => ({ sentence: s.text, answer: s.answer, hint: s.verb }))
+      .filter((s) => s.blank !== null && s.verb)
+      .map((s) => ({ sentence: s.text, answer: s.answer, hint: s.verb }))
     delete raw.story
   }
 
   // speaking_about_yourself: prompts → questions in sections
   if (raw.sections && Array.isArray(raw.sections)) {
-    raw.sections = raw.sections.map((s: any) => ({
+    raw.sections = raw.sections.map((s) => ({
       name: s.name,
       questions: s.questions ?? s.prompts ?? [],
     }))
@@ -35,7 +31,7 @@ function normalize(raw: Record<string, any>): TaskData {
     if (adverbs.length > 0) {
       raw.description = `${raw.description}\n\nНаречия: ${adverbs.join(", ")}`
     }
-    raw.items = raw.items.map((i: any) => ({
+    raw.items = raw.items.map((i) => ({
       sentence: i.full.replace(new RegExp(`\\b${i.adverb.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`), "___"),
       answer: i.adverb,
     }))
@@ -43,9 +39,8 @@ function normalize(raw: Record<string, any>): TaskData {
   }
 
   // grammar_wh_questions: statement → sentence with ___ blank
-  // Must check !raw.items[0].question to avoid intercepting yes_no items
   if (raw.items?.[0]?.statement && !raw.items[0].sentence && !raw.items[0].question) {
-    raw.items = raw.items.map((i: any) => {
+    raw.items = raw.items.map((i) => {
       const answer = i.answer
       const statement = i.statement
       const prefixMatch = answer.match(/^(What|Where|When|How\s+\w+|Why|Who|Which)\s+(do|does|did|can|could|will|would|is|are|was|were)\s/i)
@@ -56,14 +51,14 @@ function normalize(raw: Record<string, any>): TaskData {
       }
       let body = statement.replace(/\.$/, "")
       if (prefix.includes("does")) {
-        body = body.replace(/\b(\w+)(s|es)\b/, (match: string, verb: string, suffix: string) => {
+        body = body.replace(/\b(\w+)(s|es)\b/, (match, verb, suffix) => {
           if (/^(elephant|lion|crocodile|goose|goldfish|tortoise|spider|butterfly|giraffe|rhino|camels|penguins|zebras)$/i.test(verb)) {
             return match
           }
           return verb
         })
       }
-      body = body.replace(/^([A-Z])/, (c: string) => c.toLowerCase())
+      body = body.replace(/^([A-Z])/, (c) => c.toLowerCase())
       return {
         sentence: `___ ${body}?`,
         answer: prefix,
@@ -74,7 +69,7 @@ function normalize(raw: Record<string, any>): TaskData {
 
   // grammar_yes_no_questions: statement/question → quiz with options
   if (raw.items?.[0]?.statement && raw.items[0].question && !raw.items[0].options) {
-    raw.items = raw.items.map((i: any) => {
+    raw.items = raw.items.map((i) => {
       const q = i.question
       const s = i.statement
       const isDo = q.startsWith("Do ")
@@ -141,42 +136,5 @@ function normalize(raw: Record<string, any>): TaskData {
     raw.type = "quiz"
   }
 
-  return raw as TaskData
-}
-
-function validate(task: TaskData, taskId: string): boolean {
-  const required = ["id", "title", "type", "category"] as const
-  for (const field of required) {
-    if (!task[field]) {
-      console.error(`[TaskPage] Missing required field "${field}" in ${taskId}.json`)
-      return false
-    }
-  }
-  return true
-}
-
-async function loadTask(grade: string, taskId: string): Promise<TaskData | null> {
-  const filePath = path.join(process.cwd(), "public", "content", "tasks", `grade_${grade}`, `${taskId}.json`)
-  try {
-    const raw = await fs.readFile(filePath, "utf-8")
-    const task = normalize(JSON.parse(raw))
-    if (!validate(task, taskId)) {
-      return null
-    }
-    return task
-  } catch (err) {
-    console.error("[TaskPage] File not found:", filePath, err)
-    return null
-  }
-}
-
-export default async function TaskPage({ params }: { params: Promise<{ grade: string; section: string; taskId: string }> }) {
-  const { grade, taskId } = await params
-  const task = await loadTask(grade, taskId)
-
-  if (!task) {
-    notFound()
-  }
-
-  return <TaskRenderer task={task} grade={grade} />
+  return raw
 }
