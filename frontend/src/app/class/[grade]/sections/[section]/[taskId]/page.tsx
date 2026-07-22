@@ -46,18 +46,30 @@ function normalize(raw: Record<string, any>): TaskData {
     raw.items = raw.items.map((i: any) => {
       const answer = i.answer
       const statement = i.statement
-      // Extract question prefix (e.g., "When does", "What do", "Where does")
-      const prefixMatch = answer.match(/^(What|Where|When|How|Why|Who|Which)\s+(do|does|did|can|could|will|would|is|are|was|were)\s/i)
+      // Extract question prefix greedily (e.g., "When does", "What do", "How often do")
+      const prefixMatch = answer.match(/^(What|Where|When|How\s+\w+|Why|Who|Which)\s+(do|does|did|can|could|will|would|is|are|was|were)\s/i)
       let prefix = prefixMatch ? prefixMatch[0].trim() : ""
-      // If no match, try just the question word
+      // If no match with auxiliary, try just the question word
       if (!prefix) {
         const wordMatch = answer.match(/^(What|Where|When|How|Why|Who|Which)\s/i)
         prefix = wordMatch ? wordMatch[0].trim() : ""
       }
-      // Build the sentence with blank at the start
-      const sentence = `___ ${statement.replace(/\.$/, "")}?`
+      // For does-items: remove -s from verb and lowercase subject
+      let body = statement.replace(/\.$/, "")
+      if (prefix.includes("does")) {
+        // Remove -s/-es from verb: "hunts" → "hunt", "lives" → "live"
+        body = body.replace(/\b(\w+)(s|es)\b/, (match: string, verb: string, suffix: string) => {
+          // Don't modify nouns (elephant, lion, etc.)
+          if (/^(elephant|lion|crocodile|goose|goldfish|tortoise|spider|butterfly|giraffe|rhino)$/i.test(verb)) {
+            return match
+          }
+          return verb
+        })
+        // Lowercase the subject after auxiliary
+        body = body.replace(/^([A-Z])/, (c: string) => c.toLowerCase())
+      }
       return {
-        sentence,
+        sentence: `___ ${body}?`,
         answer: prefix,
         hint: i.hint,
       }
