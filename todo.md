@@ -47,7 +47,9 @@
 - [x] Исправлен комментарий
 - [x] Verify: npm run build ✅
 
-### RFL-B12: пер-типовая валидация [TODO]
-- [ ] Добавить guards в QuizTask/FillInTask
+### RFL-B12: пер-типовая валидация [DONE]
+- [x] QuizTask: guards для пустых items/item
+- [x] FillInTask: guards для пустых items/item/sentence
+- [x] Verify: npm run build ✅
 
 ## ИТОГО: 8/12 выполнено, 4 deferred

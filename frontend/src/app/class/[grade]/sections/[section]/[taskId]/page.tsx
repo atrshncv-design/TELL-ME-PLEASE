@@ -68,23 +68,31 @@ function normalize(raw: Record<string, any>): TaskData {
   if (raw.items?.[0]?.statement && raw.items[0].question && !raw.items[0].options) {
     raw.items = raw.items.map((i: any) => {
       const q = i.question
-      // Swap Do/Does
+      const s = i.statement
+      // Swap Do/Does for wrongAux
       const wrongAux = q.startsWith("Do ")
         ? q.replace(/^Do\b/, "Does")
         : q.replace(/^Does\b/, "Do")
-      // Find the main verb (after subject) and add -s
-      const verbMatch = q.match(/\b(do|does)\s+\w+\s+(\w+)/i)
-      const mainVerb = verbMatch ? verbMatch[2] : ""
-      const wrongVerb = mainVerb
-        ? q.replace(new RegExp(`\\b${mainVerb}\\b`), mainVerb + "s")
+      // Find verb in statement (with -s) and create wrongVerb (question with -s)
+      // Statement: "The goose lives on the farm" → verb "lives"
+      // Question: "Does the goose live..." → wrongVerb: "Does the goose lives..."
+      const verbMatch = s.match(/\b(\w+ing|\w+[^aeiouy]s|[a-z]+s)\b\s/i)
+      const statementVerb = verbMatch ? verbMatch[1] : ""
+      // Remove trailing 's' or 'es' to get base form
+      const baseVerb = statementVerb
+        .replace(/ies$/, "y")
+        .replace(/(?:sh|ch|x|z|s)es$/, "")
+        .replace(/ves$/, "f")
+        .replace(/s$/, "")
+      // Create wrongVerb: question but with -s on the verb
+      const wrongVerb = baseVerb !== statementVerb
+        ? q.replace(new RegExp(`\\b${baseVerb}\\b`), statementVerb)
         : q
-      // Shuffle options so correct answer isn't always first
-      const opts = [q, wrongAux, wrongVerb].filter((v, idx, arr) => arr.indexOf(v) === idx && v !== q)
-      while (opts.length < 3) opts.push(q.split(" ").slice(0, -1).join(" ") + "?")
-      const shuffled = [q, ...opts].sort(() => Math.random() - 0.5)
+      // Build exactly 3 options and shuffle
+      const options = [q, wrongAux, wrongVerb].sort(() => Math.random() - 0.5)
       return {
         sentence: i.statement,
-        options: shuffled.slice(0, 3),
+        options,
         answer: q,
       }
     })
