@@ -2,147 +2,8 @@ import fs from "fs/promises"
 import path from "path"
 import { notFound } from "next/navigation"
 import { TaskRenderer } from "./TaskRenderer"
+import { normalize } from "@/lib/normalize-task"
 import type { TaskData } from "@/types/task"
-
-// IMPORTANT: This normalize function must be kept in sync with scripts/normalize.mjs
-// Any changes here must be mirrored there, and vice versa.
-function normalize(raw: Record<string, any>): TaskData {
-  // grammar_endings_quiz: groups → flat items
-  if (raw.groups && Array.isArray(raw.groups)) {
-    raw.items = raw.groups.flatMap((g: any) => g.items ?? [])
-    delete raw.groups
-  }
-
-  // story_harry_potter_routine: story → items, text → sentence
-  if (raw.story && Array.isArray(raw.story)) {
-    raw.items = raw.story
-      .filter((s: any) => s.blank !== null && s.verb)
-      .map((s: any) => ({ sentence: s.text, answer: s.answer, hint: s.verb }))
-    delete raw.story
-  }
-
-  // speaking_about_yourself: prompts → questions in sections
-  if (raw.sections && Array.isArray(raw.sections)) {
-    raw.sections = raw.sections.map((s: any) => ({
-      name: s.name,
-      questions: s.questions ?? s.prompts ?? [],
-    }))
-  }
-
-  // grammar_adverbs_place: use full field to build sentence with blank
-  if (raw.items?.[0]?.sentence_base) {
-    const adverbs = raw.available_adverbs || []
-    if (adverbs.length > 0) {
-      raw.description = `${raw.description}\n\nНаречия: ${adverbs.join(", ")}`
-    }
-    raw.items = raw.items.map((i: any) => ({
-      sentence: i.full.replace(new RegExp(`\\b${i.adverb.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`), "___"),
-      answer: i.adverb,
-    }))
-    raw.type = "fill-in"
-  }
-
-  // grammar_wh_questions: statement → sentence with ___ blank
-  // Must check !raw.items[0].question to avoid intercepting yes_no items
-  if (raw.items?.[0]?.statement && !raw.items[0].sentence && !raw.items[0].question) {
-    raw.items = raw.items.map((i: any) => {
-      const answer = i.answer
-      const statement = i.statement
-      const prefixMatch = answer.match(/^(What|Where|When|How\s+\w+|Why|Who|Which)\s+(do|does|did|can|could|will|would|is|are|was|were)\s/i)
-      let prefix = prefixMatch ? prefixMatch[0].trim() : ""
-      if (!prefix) {
-        const wordMatch = answer.match(/^(What|Where|When|How|Why|Who|Which)\s/i)
-        prefix = wordMatch ? wordMatch[0].trim() : ""
-      }
-      let body = statement.replace(/\.$/, "")
-      if (prefix.includes("does")) {
-        body = body.replace(/\b(\w+)(s|es)\b/, (match: string, verb: string, suffix: string) => {
-          if (/^(elephant|lion|crocodile|goose|goldfish|tortoise|spider|butterfly|giraffe|rhino|camels|penguins|zebras)$/i.test(verb)) {
-            return match
-          }
-          return verb
-        })
-      }
-      body = body.replace(/^([A-Z])/, (c: string) => c.toLowerCase())
-      return {
-        sentence: `___ ${body}?`,
-        answer: prefix,
-        hint: i.hint,
-      }
-    })
-  }
-
-  // grammar_yes_no_questions: statement/question → quiz with options
-  if (raw.items?.[0]?.statement && raw.items[0].question && !raw.items[0].options) {
-    raw.items = raw.items.map((i: any) => {
-      const q = i.question
-      const s = i.statement
-      const isDo = q.startsWith("Do ")
-      const wrongAux = isDo
-        ? q.replace(/^Do\b/, "Does")
-        : q.replace(/^Does\b/, "Do")
-
-      // Find verb in statement
-      const sParts = s.replace(/\.$/, "").split(/\s+/)
-      const stopwords = /^(The|A|An|I|you|he|she|it|we|they|my|your|his|her|its|our|their|and|or|in|on|at|with|to|from)$/i
-      const commonVerbs = /^(eat|drink|play|watch|sleep|cook|see|fly|go|stay|run|read|tell|jump|walk|swim|live|work|wait|have|make|speak|sit|stand|give|take|come|like|love|want|need|use|open|close|start|stop|look|listen|ask|answer|help|try|finish)$/i
-      let verbStatement = ""
-      // First pass: find common verb
-      for (let w = 1; w < sParts.length; w++) {
-        if (stopwords.test(sParts[w])) continue
-        if (commonVerbs.test(sParts[w])) {
-          verbStatement = sParts[w]
-          break
-        }
-      }
-      // Second pass: if no common verb found, look for word ending in -s
-      if (!verbStatement) {
-        for (let w = 1; w < sParts.length; w++) {
-          if (stopwords.test(sParts[w])) continue
-          if (sParts[w].match(/s$/i)) {
-            verbStatement = sParts[w]
-            break
-          }
-        }
-      }
-
-      // Get base form
-      let verbBase = ""
-      if (verbStatement) {
-        verbBase = verbStatement
-          .replace(/(?:sh|ch|x|z|s)es$/, "")
-          .replace(/ies$/, "y")
-          .replace(/s$/, "")
-        if (verbBase === verbStatement && verbStatement.endsWith("ves")) {
-          verbBase = verbStatement.slice(0, -3) + "f"
-        }
-      }
-
-      // Create wrongVerb: if statement has -s, use it; otherwise add -s
-      let wrongVerb = q
-      if (verbBase) {
-        const sForm = verbBase.endsWith("y")
-          ? verbBase.slice(0, -1) + "ies"
-          : verbBase + "s"
-        // If verb already has -s in statement, use that form
-        // Otherwise, add -s to the base form
-        const formToUse = verbStatement.endsWith("s") ? verbStatement : sForm
-        wrongVerb = q.replace(new RegExp(`\\b${verbBase}\\b`), formToUse)
-      }
-
-      const unique = [...new Set([q, wrongAux, wrongVerb])]
-      const options = unique.sort(() => Math.random() - 0.5)
-      return {
-        sentence: i.statement,
-        options,
-        answer: q,
-      }
-    })
-    raw.type = "quiz"
-  }
-
-  return raw as TaskData
-}
 
 function validate(task: TaskData, taskId: string): boolean {
   const required = ["id", "title", "type", "category"] as const
@@ -159,7 +20,7 @@ async function loadTask(grade: string, taskId: string): Promise<TaskData | null>
   const filePath = path.join(process.cwd(), "public", "content", "tasks", `grade_${grade}`, `${taskId}.json`)
   try {
     const raw = await fs.readFile(filePath, "utf-8")
-    const task = normalize(JSON.parse(raw))
+    const task = normalize(JSON.parse(raw)) as TaskData
     if (!validate(task, taskId)) {
       return null
     }

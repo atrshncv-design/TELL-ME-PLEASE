@@ -1,11 +1,8 @@
 /**
  * Normalizes raw JSON data to match component contracts.
- * Handles field renames, structural flattening, and type coercion
- * for legacy JSON files that predate the unified schema.
- *
- * This is the SINGLE SOURCE OF TRUTH for task normalization.
- * Both page.tsx and scripts/verify-content.mjs must use this function.
+ * SINGLE SOURCE OF TRUTH — both page.tsx and scripts/verify-content.mjs use this.
  */
+
 export function normalize(raw: Record<string, any>): Record<string, any> {
   // grammar_endings_quiz: groups → flat items
   if (raw.groups && Array.isArray(raw.groups)) {
@@ -48,14 +45,12 @@ export function normalize(raw: Record<string, any>): Record<string, any> {
     raw.items = raw.items.map((i: any) => {
       const answer = i.answer
       const statement = i.statement
-      // Extract question prefix greedily (e.g., "When does", "What do", "How often do")
       const prefixMatch = answer.match(/^(What|Where|When|How\s+\w+|Why|Who|Which)\s+(do|does|did|can|could|will|would|is|are|was|were)\s/i)
       let prefix = prefixMatch ? prefixMatch[0].trim() : ""
       if (!prefix) {
         const wordMatch = answer.match(/^(What|Where|When|How|Why|Who|Which)\s/i)
         prefix = wordMatch ? wordMatch[0].trim() : ""
       }
-      // For does-items: remove -s from verb
       let body = statement.replace(/\.$/, "")
       if (prefix.includes("does")) {
         body = body.replace(/\b(\w+)(s|es)\b/, (match: string, verb: string, suffix: string) => {
@@ -65,7 +60,6 @@ export function normalize(raw: Record<string, any>): Record<string, any> {
           return verb
         })
       }
-      // Lowercase the subject after auxiliary for all wh-questions
       body = body.replace(/^([A-Z])/, (c: string) => c.toLowerCase())
       return {
         sentence: `___ ${body}?`,
@@ -81,37 +75,56 @@ export function normalize(raw: Record<string, any>): Record<string, any> {
       const q = i.question
       const s = i.statement
       const isDo = q.startsWith("Do ")
-      // Swap Do/Does for wrongAux
       const wrongAux = isDo
         ? q.replace(/^Do\b/, "Does")
         : q.replace(/^Does\b/, "Do")
 
-      // Find verb by diffing statement vs question
-      // Remove auxiliary and subject from both, what's left is the verb
-      const qNoAux = q.replace(/^(Do|Does)\s+/i, "").toLowerCase()
-      const sLower = s.replace(/\.$/, "").toLowerCase()
-      // Find the first word in question that differs from statement
-      const qWords = qNoAux.split(/\s+/)
-      const sWords = sLower.split(/\s+/)
-      let verbBase = ""
-      let verbS = ""
-      for (let w = 0; w < Math.min(qWords.length, sWords.length); w++) {
-        if (qWords[w] !== sWords[w]) {
-          // Found the verb difference
-          verbBase = qWords[w]
-          verbS = sWords[w]
+      // Find verb in statement
+      const sParts = s.replace(/\.$/, "").split(/\s+/)
+      const stopwords = /^(The|A|An|I|you|he|she|it|we|they|my|your|his|her|its|our|their|and|or|in|on|at|with|to|from)$/i
+      const commonVerbs = /^(eat|drink|play|watch|sleep|cook|see|fly|go|stay|run|read|tell|jump|walk|swim|live|work|wait|have|make|speak|sit|stand|give|take|come|like|love|want|need|use|open|close|start|stop|look|listen|ask|answer|help|try|finish)$/i
+      let verbStatement = ""
+      // First pass: find common verb
+      for (let w = 1; w < sParts.length; w++) {
+        if (stopwords.test(sParts[w])) continue
+        if (commonVerbs.test(sParts[w])) {
+          verbStatement = sParts[w]
           break
         }
       }
-
-      // Create wrongVerb: add -s to the base verb
-      let wrongVerb = q
-      if (verbBase && verbBase !== verbS) {
-        // Use the -s form from statement in the question
-        wrongVerb = q.replace(new RegExp(`\\b${verbBase}\\b`, "i"), verbS)
+      // Second pass: if no common verb found, look for word ending in -s
+      if (!verbStatement) {
+        for (let w = 1; w < sParts.length; w++) {
+          if (stopwords.test(sParts[w])) continue
+          if (sParts[w].match(/s$/i)) {
+            verbStatement = sParts[w]
+            break
+          }
+        }
       }
 
-      // Filter out duplicates, keep exactly 3
+      // Get base form
+      let verbBase = ""
+      if (verbStatement) {
+        verbBase = verbStatement
+          .replace(/(?:sh|ch|x|z|s)es$/, "")
+          .replace(/ies$/, "y")
+          .replace(/s$/, "")
+        if (verbBase === verbStatement && verbStatement.endsWith("ves")) {
+          verbBase = verbStatement.slice(0, -3) + "f"
+        }
+      }
+
+      // Create wrongVerb: if statement has -s, use it; otherwise add -s
+      let wrongVerb = q
+      if (verbBase) {
+        const sForm = verbBase.endsWith("y")
+          ? verbBase.slice(0, -1) + "ies"
+          : verbBase + "s"
+        const formToUse = verbStatement.endsWith("s") ? verbStatement : sForm
+        wrongVerb = q.replace(new RegExp(`\\b${verbBase}\\b`), formToUse)
+      }
+
       const unique = [...new Set([q, wrongAux, wrongVerb])]
       const options = unique.sort(() => Math.random() - 0.5)
       return {
