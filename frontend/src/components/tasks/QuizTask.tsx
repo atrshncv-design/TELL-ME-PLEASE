@@ -25,7 +25,23 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
   const [showResult, setShowResult] = useState(false)
   const [finished, setFinished] = useState(false)
 
+  if (!items || items.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center h-full gap-4 p-6">
+        <p className="text-slate-500">Нет данных для отображения</p>
+      </div>
+    )
+  }
+
   const item = items[current]
+  if (!item) {
+    return (
+      <div className="flex flex-col items-center justify-center h-full gap-4 p-6">
+        <p className="text-slate-500">Ошибка: задание пустое</p>
+      </div>
+    )
+  }
+
   const display = item.question || item.sentence || item.subject || ""
 
   const handleSelect = (option: string) => {
