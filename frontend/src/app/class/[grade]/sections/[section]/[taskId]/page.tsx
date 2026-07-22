@@ -34,6 +34,11 @@ function normalize(raw: Record<string, any>): TaskData {
 
   // grammar_adverbs_place: sentence_base → sentence, answer_position → answer
   if (raw.items?.[0]?.sentence_base) {
+    // Add word bank to description
+    const adverbs = raw.available_adverbs || []
+    if (adverbs.length > 0) {
+      raw.description = `${raw.description}\n\nНаречия: ${adverbs.join(", ")}`
+    }
     raw.items = raw.items.map((i: any) => ({
       sentence: i.sentence_base + " ___",
       answer: i.adverb,
