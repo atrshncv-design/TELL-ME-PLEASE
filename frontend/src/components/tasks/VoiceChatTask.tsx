@@ -135,7 +135,7 @@ function VoiceChatInner({
 
   if (sessionEnded && lastAudioPlayed) {
     return (
-      <div className="flex flex-col h-full items-center justify-center px-6 gap-4">
+      <div className="flex flex-col h-[100dvh] items-center justify-center px-6 gap-4">
         <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-5xl">🎉</motion.div>
         <h2 className="text-2xl font-bold text-indigo-900">Отлично!</h2>
         <p className="text-slate-600">Ты хорошо поговорил на английском!</p>
@@ -146,7 +146,12 @@ function VoiceChatInner({
   const hasPanel = (dialogue && dialogue.length > 0) || (sections && sections.length > 0)
 
   return (
-    <div className="flex flex-col h-full">
+    // 100dvh so the mic button stays visible when the mobile address bar
+    // shows/hides (100vh collapses under the bar on iOS). The TaskRenderer
+    // wrapper provides the gradient page background via min-h-screen; this
+    // screen manages its own height within that. max-w-lg keeps it mobile-width
+    // on desktop (consistent with other task components).
+    <div className="flex flex-col h-[100dvh] max-w-lg mx-auto">
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-2 border-b border-indigo-100 bg-white/80">
         <div className="flex items-center gap-2">
