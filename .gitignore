@@ -7,3 +7,4 @@ frontend/.next/
 frontend/.git/
 frontend/.env.local
 .mimocode/
+backend/data/

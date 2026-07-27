@@ -5,12 +5,16 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+from datetime import datetime, timezone
+from typing import Any, Dict, Optional
 
 import httpx
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, Field
 
 from app.core.config import settings
+from app.services.analytics import ALLOWED_EVENT_TYPES, record_event
 from app.services.context_window import ContextWindow
 from app.services.key_rotation import KeyRotationManager
 from app.services.prompt_router import resolve_prompt
@@ -39,6 +43,52 @@ def read_root():
 
 @app.get("/health")
 def health_check():
+    return {"status": "ok"}
+
+
+class EventIn(BaseModel):
+    """Anonymous funnel event from the frontend.
+
+    `device_session_id` is a random UUID stored in the browser's localStorage
+    (T16-fe) — it never identifies a logged-in user. All fields except
+    device_session_id and event_type are optional context for the future
+    teacher dashboard.
+    """
+
+    device_session_id: str = Field(..., min_length=8, max_length=64)
+    event_type: str
+    grade: Optional[int] = None
+    task_id: Optional[str] = None
+    section_id: Optional[str] = None
+    score: Optional[int] = None
+    user_agent: Optional[str] = None
+    extra: Optional[Dict[str, Any]] = None
+
+
+@app.post("/api/event")
+async def record_event_endpoint(ev: EventIn):
+    """Receive an anonymous funnel event and store it in SQLite.
+
+    Public-write for now (gated by admin auth in T17). The frontend hook is
+    fire-and-forget and must never block the UX. SQL injection is impossible:
+    record_event uses parameterized `?` placeholders only.
+    """
+    if ev.event_type not in ALLOWED_EVENT_TYPES:
+        raise HTTPException(
+            status_code=400, detail=f"Unknown event_type: {ev.event_type}"
+        )
+    ts = datetime.now(timezone.utc).isoformat()
+    record_event(
+        ts=ts,
+        device_session_id=ev.device_session_id,
+        event_type=ev.event_type,
+        grade=ev.grade,
+        task_id=ev.task_id,
+        section_id=ev.section_id,
+        score=ev.score,
+        user_agent=ev.user_agent,
+        extra=json.dumps(ev.extra) if ev.extra else None,
+    )
     return {"status": "ok"}
 
 
