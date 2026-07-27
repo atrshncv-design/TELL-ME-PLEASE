@@ -157,56 +157,92 @@ async def _stream_response(
     system_prompt: str | None = None,
 ) -> str:
     prompt = system_prompt or resolve_prompt(branch_id)
-    payload = {
-        "model": settings.llm_model,
-        "messages": [{"role": "system", "content": prompt}] + messages,
-        "stream": True,
-    }
+    base_messages = [{"role": "system", "content": prompt}] + messages
     url = f"{settings.llm_api_base}/chat/completions"
 
-    sentence_buf = ""
-    full_reply = ""
+    # MODEL-level fallback (T2). Free OpenCode Zen models are UNSTABLE: ~50%
+    # of calls return an EMPTY `content` (benchmark in T1/bd23c8e). We try each
+    # model in settings.get_models() order; if one returns empty content we
+    # retry with the next. This is SEPARATE from key rotation (which cycles
+    # API KEYS on 429/403 inside key_manager.send_stream).
+    #
+    # Retry policy: we only retry when the accumulated reply is TRULY empty
+    # (full_reply.strip() == ""). If model A emitted any tokens — even a single
+    # char — we accept it and do not retry, because those tokens were already
+    # streamed to the client and retrying would duplicate/confuse. If ALL
+    # models return empty we return "" and ws_chat handles the both-empty case
+    # in T3.
+    models = settings.get_models()
+    for model_idx, model in enumerate(models):
+        sentence_buf = ""
+        full_reply = ""
 
-    async with httpx.AsyncClient(timeout=60.0) as client:
-        resp = await key_manager.send_stream(client, url, payload)
-        if resp.status_code != 200:
-            error_msg = f"LLM service error: {resp.status_code}"
-            try:
-                error_detail = resp.text[:200]
-                error_msg += f" - {error_detail}"
-            except Exception:
-                pass
-            logger.error(error_msg)
-            await ws.send_json({"type": "error", "content": "Сервис временно недоступен. Попробуйте позже."})
-            return ""
-        async for line in resp.aiter_lines():
-            if not line.startswith("data: ") or line == "data: [DONE]":
-                continue
-            chunk = json.loads(line[6:])
-            if not chunk.get("choices"):
-                continue
-            delta = chunk["choices"][0].get("delta", {})
-            token = delta.get("content", "")
-            if not token:
-                continue
+        payload = {
+            "model": model,
+            "messages": base_messages,
+            "stream": True,
+        }
 
-            await ws.send_json({"type": "token", "content": token})
-            sentence_buf += token
-            full_reply += token
+        async with httpx.AsyncClient(timeout=60.0) as client:
+            resp = await key_manager.send_stream(client, url, payload)
+            if resp.status_code != 200:
+                # Non-200 (e.g. all keys 429/403): log + surface error, do NOT
+                # fall back to another model — this is a key/quota concern, not
+                # an empty-content concern.
+                error_msg = f"LLM service error: {resp.status_code}"
+                try:
+                    error_detail = resp.text[:200]
+                    error_msg += f" - {error_detail}"
+                except Exception:
+                    pass
+                logger.error(error_msg)
+                await ws.send_json({"type": "error", "content": "Сервис временно недоступен. Попробуйте позже."})
+                return ""
 
-            if sentence_buf and sentence_buf[-1] in set(".!?"):
-                sent = sentence_buf.strip()
-                sentence_buf = ""
-                tts_tasks.append(
-                    asyncio.create_task(_tts_and_send(ws, sent))
-                )
+            async for line in resp.aiter_lines():
+                if not line.startswith("data: ") or line == "data: [DONE]":
+                    continue
+                chunk = json.loads(line[6:])
+                if not chunk.get("choices"):
+                    continue
+                delta = chunk["choices"][0].get("delta", {})
+                token = delta.get("content", "")
+                if not token:
+                    continue
 
-    if sentence_buf.strip():
-        tts_tasks.append(
-            asyncio.create_task(_tts_and_send(ws, sentence_buf.strip()))
-        )
+                await ws.send_json({"type": "token", "content": token})
+                sentence_buf += token
+                full_reply += token
 
-    return full_reply
+                if sentence_buf and sentence_buf[-1] in set(".!?"):
+                    sent = sentence_buf.strip()
+                    sentence_buf = ""
+                    tts_tasks.append(
+                        asyncio.create_task(_tts_and_send(ws, sent))
+                    )
+
+        # Flush any trailing partial sentence for this model's attempt.
+        if sentence_buf.strip():
+            tts_tasks.append(
+                asyncio.create_task(_tts_and_send(ws, sentence_buf.strip()))
+            )
+
+        if full_reply.strip():
+            return full_reply
+
+        # Empty content from this model — retry with the next, if any.
+        if model_idx + 1 < len(models):
+            logger.warning(
+                "Model %s returned empty content, falling back to %s",
+                model,
+                models[model_idx + 1],
+            )
+            continue
+
+    # All models returned empty — caller (ws_chat) handles the both-empty case
+    # in T3. For T2 we return "" and let ws_chat proceed.
+    logger.warning("All models returned empty content: %s", models)
+    return ""
 
 
 @app.websocket("/ws/chat")
