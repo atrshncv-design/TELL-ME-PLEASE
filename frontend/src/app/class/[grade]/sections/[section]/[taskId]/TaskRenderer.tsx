@@ -7,6 +7,7 @@ import { LadderTask } from "@/components/tasks/LadderTask"
 import { VoiceChatTask } from "@/components/tasks/VoiceChatTask"
 import { BuildSentenceTask } from "@/components/tasks/BuildSentenceTask"
 import { TaskHeader } from "@/components/tasks/TaskHeader"
+import { useProgress } from "@/lib/useProgress"
 
 interface TaskData {
   id: string
@@ -61,16 +62,21 @@ const BG = "min-h-screen bg-gradient-to-br from-violet-100 via-sky-50 to-amber-5
 
 export function TaskRenderer({ task, grade }: { task: TaskData; grade: string }) {
   const backHref = `/class/${grade}/sections`
+  const { saveTask } = useProgress(grade)
+  // onComplete was previously dead — never passed by TaskRenderer. Now wired
+  // to the useProgress hook (no backend, decision Q8) so per-task score/total
+  // is persisted to localStorage and surfaced as badges on the section cards.
+  const onScored = (score: number, total: number) => saveTask(task.id, score, total)
 
   switch (task.type) {
     case "quiz":
-      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><QuizTask title={task.title} description={task.description} items={task.items || []} /></div>
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><QuizTask title={task.title} description={task.description} items={task.items || []} onComplete={onScored} /></div>
     case "drag-and-drop":
-      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><DragAndDropTask title={task.title} description={task.description} columns={task.columns || []} items={task.items || []} /></div>
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><DragAndDropTask title={task.title} description={task.description} columns={task.columns || []} items={task.items || []} onComplete={onScored} /></div>
     case "fill-in":
-      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><FillInTask title={task.title} description={task.description} items={task.items || []} /></div>
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><FillInTask title={task.title} description={task.description} items={task.items || []} onComplete={onScored} /></div>
     case "build-sentence":
-      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><BuildSentenceTask title={task.title} description={task.description} adverbs={task.adverbs || []} timePhrases={task.time_phrases || []} baseVerb={task.base_verb || ""} subject={task.subject || "I"} /></div>
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><BuildSentenceTask title={task.title} description={task.description} adverbs={task.adverbs || []} timePhrases={task.time_phrases || []} baseVerb={task.base_verb || ""} subject={task.subject || "I"} onComplete={onScored} /></div>
     case "ladder":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><LadderTask title={task.title} description={task.description} ladders={task.ladders || []} /></div>
     case "role-play":

@@ -10,7 +10,7 @@ interface BuildSentenceTaskProps {
   timePhrases: string[]
   baseVerb: string // "play games"
   subject: string // "I"
-  onComplete?: (score: number) => void
+  onComplete?: (score: number, total: number) => void
 }
 
 interface Round {
@@ -79,7 +79,7 @@ export function BuildSentenceTask({
         setShowResult(false)
       } else {
         setFinished(true)
-        onComplete?.(correct ? score + 1 : score)
+        onComplete?.(correct ? score + 1 : score, rounds.length)
       }
     }, 1400)
   }

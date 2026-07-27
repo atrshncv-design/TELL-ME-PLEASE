@@ -13,7 +13,7 @@ interface FillInTaskProps {
   title: string
   description: string
   items: FillItem[]
-  onComplete?: (score: number) => void
+  onComplete?: (score: number, total: number) => void
 }
 
 export function FillInTask({ title, description, items, onComplete }: FillInTaskProps) {
@@ -68,6 +68,7 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
         setShowResult(false)
       } else {
         setFinished(true)
+        onComplete?.(correct ? score + 1 : score, items.length)
       }
     }, 1500)
   }

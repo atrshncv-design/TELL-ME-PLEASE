@@ -15,7 +15,7 @@ interface QuizTaskProps {
   title: string
   description: string
   items: QuizItem[]
-  onComplete?: (score: number) => void
+  onComplete?: (score: number, total: number) => void
 }
 
 export function QuizTask({ title, description, items, onComplete }: QuizTaskProps) {
@@ -58,7 +58,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
         setShowResult(false)
       } else {
         setFinished(true)
-        onComplete?.(correct ? score + 1 : score)
+        onComplete?.(correct ? score + 1 : score, items.length)
       }
     }, 1200)
   }

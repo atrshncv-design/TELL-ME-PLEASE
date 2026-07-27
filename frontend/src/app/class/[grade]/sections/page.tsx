@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { useParams, useRouter } from "next/navigation"
 import { motion } from "framer-motion"
+import { useProgress } from "@/lib/useProgress"
 
 type Category = "grammar" | "vocabulary" | "listening" | "speaking"
 
@@ -95,6 +96,9 @@ export default function SectionsPage() {
   const [sections, setSections] = useState<Section[] | null>(null)
   const [error, setError] = useState(false)
 
+  // Per-grade client-side progress (localStorage, no backend — decision Q8).
+  const { progress, completedCount } = useProgress(grade)
+
   useEffect(() => {
     let cancelled = false
     setSections(null)
@@ -119,7 +123,13 @@ export default function SectionsPage() {
   return (
     <div className="flex flex-col items-center px-4 py-12 max-w-2xl mx-auto">
       <h1 className="text-3xl font-bold text-indigo-900 mb-2">{grade} класс</h1>
-      <p className="text-slate-500 mb-8">Выбери раздел</p>
+      <p className="text-slate-500 mb-2">Выбери раздел</p>
+      {sections && sections.length > 0 && (
+        <div className="text-sm text-indigo-600 mb-6">
+          Пройдено {completedCount} из{" "}
+          {sections.reduce((sum, s) => sum + s.tasks.length, 0)}
+        </div>
+      )}
 
       {error && (
         <div className="w-full text-center">
@@ -163,7 +173,12 @@ export default function SectionsPage() {
                   }
                   className="text-left px-3 py-2 rounded-xl bg-white border border-indigo-100 text-sm text-slate-700 hover:border-indigo-300 hover:shadow-md transition-all"
                 >
-                  {t.title}
+                  <span>{t.title}</span>
+                  {progress[t.id] && (
+                    <span className="ml-1 text-xs text-emerald-600 font-semibold">
+                      ✓ {progress[t.id].score}/{progress[t.id].total}
+                    </span>
+                  )}
                 </motion.button>
               ))}
             </div>

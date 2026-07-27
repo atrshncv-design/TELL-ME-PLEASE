@@ -19,7 +19,7 @@ interface DragAndDropTaskProps {
   description: string
   columns: Column[]
   items: DragItem[]
-  onComplete?: (score: number) => void
+  onComplete?: (score: number, total: number) => void
 }
 
 export function DragAndDropTask({
@@ -63,7 +63,7 @@ export function DragAndDropTask({
         if (item.answer === col.id) score++
       })
     })
-    onComplete?.(score)
+    onComplete?.(score, items.length)
   }
 
   return (
