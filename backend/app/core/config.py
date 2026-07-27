@@ -11,7 +11,7 @@ load_dotenv()
 
 class Settings:
     llm_api_base: str = os.getenv("LLM_API_BASE", "https://opencode.ai/zen/v1")
-    llm_model: str = os.getenv("LLM_MODEL", "deepseek-v4-flash-free")
+    llm_model: str = os.getenv("LLM_MODEL", "ling-3.0-flash-free")
     api_keys: list[str] = [
         k.strip()
         for k in os.getenv("LLM_API_KEYS", "").split(",")
