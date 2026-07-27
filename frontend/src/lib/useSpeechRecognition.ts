@@ -15,7 +15,13 @@ export function useSpeechRecognition({
   const [supported, setSupported] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const recognitionRef = useRef<any>(null)
-  const wasListeningRef = useRef(false)
+  // Mirrors whether recognition.start() has been called and not yet stopped.
+  // Guards against InvalidStateError on double-start.
+  const runningRef = useRef(false)
+  // User intent: true when the user actively wants to listen (called start()),
+  // false when they called stop(). Set synchronously, so it is more reliable
+  // than deriving state from the async `listening` value.
+  const userWantsListeningRef = useRef(false)
   const onResultRef = useRef(onResult)
   onResultRef.current = onResult
   const enabledRef = useRef(enabled)
@@ -42,16 +48,22 @@ export function useSpeechRecognition({
     }
 
     recognition.onend = () => {
-      if (enabledRef.current) {
+      runningRef.current = false
+      if (enabledRef.current && !runningRef.current) {
         try {
           recognition.start()
-        } catch {}
+          runningRef.current = true
+        } catch (e) {
+          // InvalidStateError if already running — log for debugging, don't crash
+          console.warn("[useSpeechRecognition] restart failed:", e)
+        }
       } else {
         setListening(false)
       }
     }
 
     recognition.onerror = (e: any) => {
+      runningRef.current = false
       setListening(false)
       if (e.error === "not-allowed") {
         setError("Нет доступа к микрофону. Разрешите доступ в настройках браузера.")
@@ -66,49 +78,64 @@ export function useSpeechRecognition({
 
     return () => {
       enabledRef.current = false
+      runningRef.current = false
       try {
         recognition.stop()
       } catch {}
     }
   }, [])
 
-  // Hard echo protection: immediately stop when enabled becomes false
+  // Handle enabled changes (TTS mute/unmute, session end).
+  // Single effect: when pausing, stop recognition but remember user intent;
+  // when resuming, restart ONLY if the user actively wanted to listen.
   useEffect(() => {
-    if (!enabled && recognitionRef.current) {
-      // Only auto-resume if we were actually listening (not if user manually stopped)
-      wasListeningRef.current = listening
-      enabledRef.current = false
-      try {
-        recognitionRef.current.stop()
-      } catch {}
+    if (!enabled) {
+      // Pausing (e.g., TTS started): stop recognition but remember user intent
+      if (runningRef.current && recognitionRef.current) {
+        try {
+          recognitionRef.current.stop()
+        } catch {}
+        runningRef.current = false
+      }
       setListening(false)
-    }
-  }, [enabled])
-
-  // Auto-resume when enabled becomes true after being disabled (e.g., after TTS)
-  useEffect(() => {
-    if (enabled && wasListeningRef.current && recognitionRef.current) {
-      wasListeningRef.current = false
-      enabledRef.current = true
-      try {
-        recognitionRef.current.start()
-        setListening(true)
-      } catch {}
+    } else {
+      // Resuming (e.g., TTS ended): restart ONLY if the user wanted to listen
+      if (
+        userWantsListeningRef.current &&
+        !runningRef.current &&
+        recognitionRef.current
+      ) {
+        try {
+          recognitionRef.current.start()
+          runningRef.current = true
+          setListening(true)
+        } catch (e) {
+          console.warn("[useSpeechRecognition] resume failed:", e)
+        }
+      }
     }
   }, [enabled])
 
   const start = useCallback(() => {
     if (!recognitionRef.current) return
+    if (runningRef.current) return // already running, no-op (prevents InvalidStateError)
     enabledRef.current = true
+    userWantsListeningRef.current = true
     setError(null)
     try {
       recognitionRef.current.start()
+      runningRef.current = true
       setListening(true)
-    } catch {}
+    } catch (e) {
+      console.warn("[useSpeechRecognition] start failed:", e)
+      setListening(false)
+    }
   }, [])
 
   const stop = useCallback(() => {
+    userWantsListeningRef.current = false
     enabledRef.current = false
+    runningRef.current = false
     try {
       recognitionRef.current?.stop()
     } catch {}
