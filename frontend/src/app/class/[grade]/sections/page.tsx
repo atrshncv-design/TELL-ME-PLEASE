@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { useParams, useRouter } from "next/navigation"
 import { motion } from "framer-motion"
 import { useProgress } from "@/lib/useProgress"
+import { useAnalytics } from "@/lib/useAnalytics"
 
 type Category = "grammar" | "vocabulary" | "listening" | "speaking"
 
@@ -59,11 +60,43 @@ const SECTION_META: Record<Category, SectionMeta> = {
   },
 }
 
+/**
+ * Category → accent colors. Per decision Q9 each section gets a distinct
+ * accent so students can visually orient (grammar=indigo, vocab=emerald,
+ * listening=amber, speaking=rose). `accent` colors the header title,
+ * `badge` is the card background/border, `ring` is the hover border.
+ * Unknown categories fall back to indigo.
+ */
+const SECTION_COLOR: Record<string, { accent: string; badge: string; ring: string }> = {
+  grammar: {
+    accent: "text-indigo-700",
+    badge: "bg-indigo-50 border-indigo-200",
+    ring: "hover:border-indigo-400",
+  },
+  vocabulary: {
+    accent: "text-emerald-700",
+    badge: "bg-emerald-50 border-emerald-200",
+    ring: "hover:border-emerald-400",
+  },
+  listening: {
+    accent: "text-amber-700",
+    badge: "bg-amber-50 border-amber-200",
+    ring: "hover:border-amber-400",
+  },
+  speaking: {
+    accent: "text-rose-700",
+    badge: "bg-rose-50 border-rose-200",
+    ring: "hover:border-rose-400",
+  },
+}
+const DEFAULT_COLOR = SECTION_COLOR.grammar
+
 /** Render order: skip categories that have no exercises. */
 const SECTION_ORDER: Category[] = ["grammar", "vocabulary", "listening", "speaking"]
 
 interface Section {
   meta: SectionMeta
+  category: Category
   tasks: { id: string; title: string }[]
 }
 
@@ -85,6 +118,7 @@ function groupExercises(exercises: Exercise[]): Section[] {
   }
   return SECTION_ORDER.map((cat) => ({
     meta: SECTION_META[cat],
+    category: cat,
     tasks: byCategory[cat],
   })).filter((s) => s.tasks.length > 0)
 }
@@ -98,6 +132,14 @@ export default function SectionsPage() {
 
   // Per-grade client-side progress (localStorage, no backend — decision Q8).
   const { progress, completedCount } = useProgress(grade)
+
+  // Analytics: fire section_selected on mount to signal "user is browsing
+  // sections for grade N" (the UI shows all sections at once, so the page
+  // view itself is the selection point).
+  const { track } = useAnalytics()
+  useEffect(() => {
+    track({ event_type: "section_selected", grade: Number(grade) })
+  }, [grade, track])
 
   useEffect(() => {
     let cancelled = false
@@ -146,7 +188,9 @@ export default function SectionsPage() {
       {!error && !sections && <p className="text-slate-500">Загрузка...</p>}
 
       {sections &&
-        sections.map((s, si) => (
+        sections.map((s, si) => {
+          const color = SECTION_COLOR[s.category] ?? DEFAULT_COLOR
+          return (
           <div key={s.meta.sectionId} className="w-full mb-6">
             <motion.div
               initial={{ x: -20, opacity: 0 }}
@@ -156,7 +200,7 @@ export default function SectionsPage() {
             >
               <span className="text-2xl">{s.meta.icon}</span>
               <div>
-                <div className="font-bold text-indigo-800">{s.meta.title}</div>
+                <div className={`font-bold ${color.accent}`}>{s.meta.title}</div>
                 <div className="text-xs text-slate-500">{s.meta.desc}</div>
               </div>
             </motion.div>
@@ -168,10 +212,16 @@ export default function SectionsPage() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: si * 0.1 + ti * 0.05 }}
-                  onClick={() =>
+                  onClick={() => {
+                    track({
+                      event_type: "task_started",
+                      grade: Number(grade),
+                      task_id: t.id,
+                      section_id: s.meta.sectionId,
+                    })
                     router.push(`/class/${grade}/sections/${s.meta.sectionId}/${t.id}`)
-                  }
-                  className="text-left px-3 py-2 rounded-xl bg-white border border-indigo-100 text-sm text-slate-700 hover:border-indigo-300 hover:shadow-md transition-all"
+                  }}
+                  className={`text-left px-3 py-2 rounded-xl border text-sm text-slate-700 hover:shadow-md transition-all ${color.badge} ${color.ring}`}
                 >
                   <span>{t.title}</span>
                   {progress[t.id] && (
@@ -183,7 +233,8 @@ export default function SectionsPage() {
               ))}
             </div>
           </div>
-        ))}
+          )
+        })}
     </div>
   )
 }

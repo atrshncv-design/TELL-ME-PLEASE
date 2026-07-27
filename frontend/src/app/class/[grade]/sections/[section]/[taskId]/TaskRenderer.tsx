@@ -8,6 +8,7 @@ import { VoiceChatTask } from "@/components/tasks/VoiceChatTask"
 import { BuildSentenceTask } from "@/components/tasks/BuildSentenceTask"
 import { TaskHeader } from "@/components/tasks/TaskHeader"
 import { useProgress } from "@/lib/useProgress"
+import { useAnalytics } from "@/lib/useAnalytics"
 
 interface TaskData {
   id: string
@@ -63,10 +64,15 @@ const BG = "min-h-screen bg-gradient-to-br from-violet-100 via-sky-50 to-amber-5
 export function TaskRenderer({ task, grade }: { task: TaskData; grade: string }) {
   const backHref = `/class/${grade}/sections`
   const { saveTask } = useProgress(grade)
+  const { track } = useAnalytics()
   // onComplete was previously dead — never passed by TaskRenderer. Now wired
   // to the useProgress hook (no backend, decision Q8) so per-task score/total
   // is persisted to localStorage and surfaced as badges on the section cards.
-  const onScored = (score: number, total: number) => saveTask(task.id, score, total)
+  // Also fires the task_completed analytics event (closes the funnel).
+  const onScored = (score: number, total: number) => {
+    saveTask(task.id, score, total)
+    track({ event_type: "task_completed", grade: Number(grade), task_id: task.id, score })
+  }
 
   switch (task.type) {
     case "quiz":
