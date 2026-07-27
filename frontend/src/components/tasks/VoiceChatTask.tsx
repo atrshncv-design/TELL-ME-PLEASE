@@ -190,12 +190,33 @@ function VoiceChatInner({
 
           {/* Input area — three branches: mic (Chrome/Edge), text fallback (Firefox), nothing (session ended) */}
           <div className="flex flex-col items-center gap-2 px-4 py-3 border-t border-indigo-100">
-            {supported && !sessionEnded ? (
-              <motion.button whileTap={{ scale: 0.9 }} onClick={toggleMic} disabled={muted || !connected}
-                className={`w-14 h-14 rounded-full flex items-center justify-center text-xl shadow-lg transition-all ${listening ? "bg-red-500 text-white shadow-red-200 animate-pulse" : muted ? "bg-slate-200 text-slate-400" : "bg-indigo-600 text-white shadow-indigo-200"}`}>
-                {listening ? "⏹" : "🎤"}
-              </motion.button>
-            ) : null}
+            {supported && !sessionEnded ? (() => {
+              // Priority order: offline > muted > listening > idle.
+              // Each state gets a distinct color + icon + native tooltip so the user
+              // understands WHY the mic isn't reacting when it's disabled.
+              const micState = !connected ? "offline" : muted ? "muted" : listening ? "listening" : "idle"
+              const micConfig = {
+                listening: { icon: "⏹", bg: "bg-red-500 text-white shadow-red-200 animate-pulse", title: "Идёт запись. Нажми, чтобы остановить." },
+                muted:     { icon: "🔇", bg: "bg-amber-200 text-amber-700", title: "ИИ говорит. Микрофон на паузе." },
+                offline:   { icon: "🎤", bg: "bg-slate-300 text-slate-500 opacity-60 cursor-not-allowed", title: "Нет связи с сервером. Проверь, что бэкенд запущен." },
+                idle:      { icon: "🎤", bg: "bg-indigo-600 text-white shadow-indigo-200 hover:bg-indigo-700", title: "Нажми, чтобы говорить." },
+              }[micState]
+              const statusLabel = !connected ? "офлайн" : muted ? "пауза (ИИ говорит)" : listening ? "слушаю..." : ""
+              return (
+                <>
+                  <motion.button
+                    whileTap={{ scale: 0.9 }}
+                    onClick={toggleMic}
+                    disabled={muted || !connected}
+                    title={micConfig.title}
+                    className={`w-14 h-14 rounded-full flex items-center justify-center text-xl shadow-lg transition-all ${micConfig.bg}`}
+                  >
+                    {micConfig.icon}
+                  </motion.button>
+                  <div className="text-xs text-slate-500 text-center min-h-[16px]">{statusLabel}</div>
+                </>
+              )
+            })() : null}
             {!supported && !sessionEnded ? (
               <>
                 <div className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 text-center">
