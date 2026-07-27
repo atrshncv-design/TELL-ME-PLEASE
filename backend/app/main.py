@@ -312,6 +312,19 @@ async def ws_chat(websocket: WebSocket):
                 system_prompt=resolve_prompt(branch_id, task_id) + (f"\n\nContext: {task_context}" if task_context else ""),
             )
 
+            if not full_reply.strip():
+                # All models returned empty content (T2 exhausted fallbacks).
+                # Don't send an empty 'done' (would look like a hang). Send a
+                # clear error so the frontend can show a retry option.
+                logger.warning("Empty LLM reply after all model fallbacks (branch=%s)", branch_id)
+                await websocket.send_json({
+                    "type": "error",
+                    "content": "Не получилось сгенерировать ответ. Попробуй сказать ещё раз."
+                })
+                # Do NOT add empty assistant turn to context. Skip done/tts for
+                # this turn — the user can retry on the next message.
+                continue  # back to the while not session_expired loop
+
             if tts_tasks:
                 await asyncio.gather(*tts_tasks, return_exceptions=True)
                 tts_tasks.clear()
@@ -334,7 +347,11 @@ async def ws_chat(websocket: WebSocket):
             await asyncio.gather(*tts_tasks, return_exceptions=True)
             tts_tasks.clear()
 
-        ctx.add_assistant(full_reply)
+        # Final feedback: the session is ending regardless, so still send
+        # session_ended. But DON'T pollute context with an empty assistant turn
+        # if final feedback came back empty (rare, but possible).
+        if full_reply.strip():
+            ctx.add_assistant(full_reply)
         await websocket.send_json({"type": "session_ended"})
 
     except WebSocketDisconnect:
