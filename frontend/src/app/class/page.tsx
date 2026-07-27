@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { motion } from "framer-motion"
+import { useAnalytics } from "@/lib/useAnalytics"
 
 const CANDIDATE_GRADES = [5, 6, 7, 8, 9]
 
@@ -16,6 +17,7 @@ const emojis: Record<number, string> = {
 
 export default function ClassPage() {
   const router = useRouter()
+  const { track } = useAnalytics()
   const [available, setAvailable] = useState<number[] | null>(null)
 
   useEffect(() => {
@@ -58,7 +60,10 @@ export default function ClassPage() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: i * 0.1 }}
-              onClick={() => router.push(`/class/${g}/sections`)}
+              onClick={() => {
+                track({ event_type: "grade_selected", grade: g })
+                router.push(`/class/${g}/sections`)
+              }}
               className="flex flex-col items-center gap-2 rounded-2xl bg-white p-6 shadow-md transition-all hover:shadow-lg hover:scale-105 active:scale-95 border border-indigo-100"
             >
               <span className="text-4xl">{emojis[g]}</span>

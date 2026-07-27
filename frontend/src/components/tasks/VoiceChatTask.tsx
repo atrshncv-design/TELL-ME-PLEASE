@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useWebSocket, type WsMessage } from "@/lib/useWebSocket"
 import { useSpeechRecognition } from "@/lib/useSpeechRecognition"
 import { useAudioPlayer } from "@/lib/useAudioPlayer"
+import { useAnalytics } from "@/lib/useAnalytics"
 
 interface VoiceChatTaskProps {
   title: string
@@ -30,6 +31,8 @@ function VoiceChatInner({
   const params = useSearchParams()
   const grade = gradeProp || params.get("grade") || "7"
 
+  const { track } = useAnalytics()
+
   const [messages, setMessages] = useState<{ role: "user" | "ai"; text: string }[]>([])
   const [aiText, setAiText] = useState("")
   const [muted, setMuted] = useState(false)
@@ -47,6 +50,19 @@ function VoiceChatInner({
       setTimeLeft((t) => (t <= 1 ? (clearInterval(iv), 0) : t - 1))
     }, 1000)
     return () => clearInterval(iv)
+  }, [sessionEnded])
+
+  // Funnel: fire once when a voice session begins (component mounts) and once
+  // when it ends (server signals session_ended -> the finale screen). grade is
+  // tracked so the future dashboard can break the funnel down by class.
+  useEffect(() => {
+    track({ event_type: "voice_session_started", grade: Number(grade) })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
+    if (sessionEnded) track({ event_type: "voice_session_ended", grade: Number(grade) })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sessionEnded])
 
   const formatTime = (s: number) => {
