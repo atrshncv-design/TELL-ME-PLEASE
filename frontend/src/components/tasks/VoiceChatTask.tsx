@@ -35,6 +35,7 @@ function VoiceChatInner({
   const [muted, setMuted] = useState(false)
   const [sessionEnded, setSessionEnded] = useState(false)
   const [timeLeft, setTimeLeft] = useState(sessionSeconds)
+  const [textInput, setTextInput] = useState("")
   const aiTextRef = useRef("")
   const sessionEndedRef = useRef(false)
   const [lastAudioPlayed, setLastAudioPlayed] = useState(false)
@@ -103,6 +104,18 @@ function VoiceChatInner({
   })
 
   const toggleMic = () => (listening ? stop() : start())
+
+  // Text-input fallback for browsers where Web Speech API is unavailable (e.g. Firefox).
+  // Mirrors the voice `onResult` path: append the user message, send over WS, clear any partial AI text.
+  const handleSendText = () => {
+    const text = textInput.trim()
+    if (!text || !connected || sessionEnded) return
+    setMessages((p) => [...p, { role: "user", text }])
+    send(text)
+    aiTextRef.current = ""
+    setAiText("")
+    setTextInput("")
+  }
 
   if (sessionEnded && lastAudioPlayed) {
     return (
@@ -175,13 +188,39 @@ function VoiceChatInner({
             )}
           </div>
 
-          {/* Mic */}
+          {/* Input area — three branches: mic (Chrome/Edge), text fallback (Firefox), nothing (session ended) */}
           <div className="flex flex-col items-center gap-2 px-4 py-3 border-t border-indigo-100">
             {supported && !sessionEnded ? (
               <motion.button whileTap={{ scale: 0.9 }} onClick={toggleMic} disabled={muted || !connected}
                 className={`w-14 h-14 rounded-full flex items-center justify-center text-xl shadow-lg transition-all ${listening ? "bg-red-500 text-white shadow-red-200 animate-pulse" : muted ? "bg-slate-200 text-slate-400" : "bg-indigo-600 text-white shadow-indigo-200"}`}>
                 {listening ? "⏹" : "🎤"}
               </motion.button>
+            ) : null}
+            {!supported && !sessionEnded ? (
+              <>
+                <div className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 text-center">
+                  🎤 Голосовая запись доступна в Chrome или Edge. Можно написать ответ текстом:
+                </div>
+                <div className="flex gap-2 w-full max-w-md">
+                  <input
+                    type="text"
+                    value={textInput}
+                    onChange={(e) => setTextInput(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handleSendText()}
+                    placeholder="Напиши ответ на английском..."
+                    disabled={!connected}
+                    className="flex-1 px-4 py-3 text-base rounded-xl border-2 border-indigo-200 focus:border-indigo-500 outline-none min-h-[48px] disabled:opacity-50"
+                  />
+                  <motion.button
+                    whileTap={{ scale: 0.95 }}
+                    onClick={handleSendText}
+                    disabled={!connected || !textInput.trim()}
+                    className="px-5 py-3 bg-indigo-600 text-white rounded-xl font-semibold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-indigo-700"
+                  >
+                    Отправить
+                  </motion.button>
+                </div>
+              </>
             ) : null}
             {error && (
               <p className="text-xs text-red-500 text-center">{error}</p>
