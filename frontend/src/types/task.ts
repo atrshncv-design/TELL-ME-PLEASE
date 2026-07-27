@@ -42,6 +42,13 @@ export interface Section {
   questions: string[];
 }
 
+export interface BuildSentenceData {
+  adverbs: string[];
+  timePhrases: string[];
+  baseVerb: string;
+  subject: string;
+}
+
 export interface TaskData {
   id: string;
   title: string;
@@ -53,4 +60,8 @@ export interface TaskData {
   ladders?: any[];
   dialogue?: DialogueLine[];
   sections?: Section[];
+  adverbs?: string[];
+  time_phrases?: string[];
+  base_verb?: string;
+  subject?: string;
 }

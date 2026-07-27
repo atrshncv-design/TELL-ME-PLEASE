@@ -5,6 +5,7 @@ import { DragAndDropTask } from "@/components/tasks/DragAndDropTask"
 import { FillInTask } from "@/components/tasks/FillInTask"
 import { LadderTask } from "@/components/tasks/LadderTask"
 import { VoiceChatTask } from "@/components/tasks/VoiceChatTask"
+import { BuildSentenceTask } from "@/components/tasks/BuildSentenceTask"
 import { TaskHeader } from "@/components/tasks/TaskHeader"
 
 interface TaskData {
@@ -18,6 +19,10 @@ interface TaskData {
   ladders?: any[]
   dialogue?: { speaker: string; text: string }[]
   sections?: { name: string; questions: string[] }[]
+  adverbs?: string[]
+  time_phrases?: string[]
+  base_verb?: string
+  subject?: string
 }
 
 function serializeContext(task: TaskData): string {
@@ -63,8 +68,9 @@ export function TaskRenderer({ task, grade }: { task: TaskData; grade: string })
     case "drag-and-drop":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><DragAndDropTask title={task.title} description={task.description} columns={task.columns || []} items={task.items || []} /></div>
     case "fill-in":
-    case "build-sentence":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><FillInTask title={task.title} description={task.description} items={task.items || []} /></div>
+    case "build-sentence":
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><BuildSentenceTask title={task.title} description={task.description} adverbs={task.adverbs || []} timePhrases={task.time_phrases || []} baseVerb={task.base_verb || ""} subject={task.subject || "I"} /></div>
     case "ladder":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><LadderTask title={task.title} description={task.description} ladders={task.ladders || []} /></div>
     case "role-play":
