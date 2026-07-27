@@ -20,7 +20,9 @@ class Settings:
     tts_url: str = os.getenv("TTS_URL", "http://localhost:8880/v1/audio/speech")
     tts_voice: str = os.getenv("TTS_VOICE", "af_bella")
     max_turns: int = 12
-    session_timeout: int = 180
+    # Session duration in seconds (PRD: 3-min voice chat). Read from env so it
+    # can be shortened for testing without editing code or .env.
+    session_timeout: int = int(os.getenv("SESSION_TIMEOUT", "180"))
     # HTTP Basic Auth password for /admin/* (decision Q13). Lives ONLY in the
     # local gitignored .env — never in code, never in the DB. Empty = admin
     # disabled (the require_admin dependency returns 503).
