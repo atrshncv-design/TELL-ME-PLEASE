@@ -7,7 +7,7 @@
 ## Кто ты и что тебе нужно сделать
 
 - Если ты **человек-разработчик** → читай [`DEPLOY.md`](./DEPLOY.md) (полная инструкция по локальному запуску).
-- Если ты **AI-агент в веб-версии z.ai** → читай [`PROMPT-for-web-agent.md`](./PROMPT-for-web-agent.md) (промпт для авто-развёртывания).
+- Если ты **AI-агент в веб-версии z.ai** → читай [`PROMPT-for-web-agent.md`](./PROMPT-for-web-agent.md) (промпт для авто-развёртывания фронтенда И бэкенда).
 - Если ты **хочешь понять проект** → читай [`# Product Requirements Document (PRD).md`](./#%20Product%20Requirements%20Document%20(PRD).md) и [`# Architecture Specification.md`](./#%20Architecture%20Specification.md).
 
 ## Что внутри
