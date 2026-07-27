@@ -73,6 +73,19 @@ def _get_connection() -> sqlite3.Connection:
     return _conn
 
 
+def count_events() -> int:
+    """Total number of stored events (for the admin status placeholder).
+
+    Read-only and parameter-free, so there is no injection surface. Used by
+    the authenticated `/admin/status` route to prove the Basic-Auth gate
+    works end-to-end. The real teacher dashboard (funnel charts, per-task
+    breakdowns) is a future phase.
+    """
+    conn = _get_connection()
+    with _lock:
+        return conn.execute("SELECT COUNT(*) FROM events").fetchone()[0]
+
+
 def record_event(
     *,
     ts: str,

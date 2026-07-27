@@ -5,16 +5,18 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import secrets
 from datetime import datetime, timezone
 from typing import Any, Dict, Optional
 
 import httpx
-from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
+from fastapi import Depends, FastAPI, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from pydantic import BaseModel, Field
 
 from app.core.config import settings
-from app.services.analytics import ALLOWED_EVENT_TYPES, record_event
+from app.services.analytics import ALLOWED_EVENT_TYPES, count_events, record_event
 from app.services.context_window import ContextWindow
 from app.services.key_rotation import KeyRotationManager
 from app.services.prompt_router import resolve_prompt
@@ -36,6 +38,40 @@ app.add_middleware(
 key_manager = KeyRotationManager(settings.api_keys)
 
 
+# --- Admin auth gate (decision Q13) -----------------------------------------
+# /admin/* is protected by HTTP Basic Auth. The password lives ONLY in the
+# local gitignored .env (settings.admin_password) — never in code, never in
+# the DB — so SQL injection against the auth layer is irrelevant: there is no
+# table to inject against. Username is fixed to `admin` (single admin).
+# `secrets.compare_digest` is timing-safe so credential guesses don't leak
+# info via response timing. Empty/missing ADMIN_PASSWORD disables admin and
+# the gate returns 503 (not 401) so a misconfigured prod can't be brute-forced.
+_basic = HTTPBasic(auto_error=True)
+
+
+def require_admin(
+    credentials: HTTPBasicCredentials = Depends(_basic),
+) -> bool:
+    if not settings.admin_password:
+        raise HTTPException(
+            status_code=503,
+            detail="Admin disabled (no ADMIN_PASSWORD set)",
+        )
+    is_user_ok = secrets.compare_digest(
+        credentials.username.encode(), b"admin"
+    )
+    is_pass_ok = secrets.compare_digest(
+        credentials.password.encode(), settings.admin_password.encode()
+    )
+    if not (is_user_ok and is_pass_ok):
+        raise HTTPException(
+            status_code=401,
+            detail="Unauthorized",
+            headers={"WWW-Authenticate": 'Basic realm="admin"'},
+        )
+    return True
+
+
 @app.get("/")
 def read_root():
     return {"message": "Tell Me Please API is running"}
@@ -44,6 +80,18 @@ def read_root():
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
+
+
+@app.get("/admin/status")
+def admin_status(_: bool = Depends(require_admin)):
+    """Placeholder for the future teacher dashboard.
+
+    Proves the Basic-Auth gate works end-to-end by returning a simple status
+    + total event count (read via the parameter-free count_events() helper).
+    The real dashboard (funnel charts, per-task breakdowns, reading events)
+    is a future phase; this route just establishes the authenticated surface.
+    """
+    return {"status": "admin", "event_count": count_events()}
 
 
 class EventIn(BaseModel):

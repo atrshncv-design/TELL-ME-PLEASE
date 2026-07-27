@@ -21,6 +21,10 @@ class Settings:
     tts_voice: str = os.getenv("TTS_VOICE", "af_bella")
     max_turns: int = 12
     session_timeout: int = 180
+    # HTTP Basic Auth password for /admin/* (decision Q13). Lives ONLY in the
+    # local gitignored .env — never in code, never in the DB. Empty = admin
+    # disabled (the require_admin dependency returns 503).
+    admin_password: str = os.getenv("ADMIN_PASSWORD", "")
 
 
 settings = Settings()
