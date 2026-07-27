@@ -117,6 +117,7 @@ async def ws_chat(websocket: WebSocket):
     ctx = ContextWindow(max_turns=settings.max_turns)
     branch_id = "7"
     task_context = ""
+    task_id = ""
     tts_tasks: list[asyncio.Task] = []
     session_expired = False
 
@@ -125,7 +126,19 @@ async def ws_chat(websocket: WebSocket):
         data = json.loads(init)
         branch_id = data.get("branch_id", "7")
         task_context = data.get("task_context", "")
-        logger.info("WS connected: branch=%s, context=%s", branch_id, task_context[:50] if task_context else "none")
+        # TODO(frontend): the WS init should also send `task_id` so the backend
+        # can lock the LLM into the correct role prompt (harry_potter_interview /
+        # peer_conversation / about_yourself). TaskRenderer.tsx renders
+        # <VoiceChatTask/> for a specific task and has access to task.id; pipe it
+        # down to useWebSocket.ts and add it to the init JSON. Until then,
+        # task_id stays empty and the backend gracefully falls back to grade_N.
+        task_id = data.get("task_id", "")
+        logger.info(
+            "WS connected: branch=%s, task_id=%s, context=%s",
+            branch_id,
+            task_id or "none",
+            task_context[:50] if task_context else "none",
+        )
     except Exception:
         pass
 
@@ -162,7 +175,7 @@ async def ws_chat(websocket: WebSocket):
 
             full_reply = await _stream_response(
                 websocket, ctx.messages, branch_id, tts_tasks,
-                system_prompt=resolve_prompt(branch_id) + (f"\n\nContext: {task_context}" if task_context else ""),
+                system_prompt=resolve_prompt(branch_id, task_id) + (f"\n\nContext: {task_context}" if task_context else ""),
             )
 
             if tts_tasks:
