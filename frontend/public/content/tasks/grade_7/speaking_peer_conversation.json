@@ -1,0 +1,29 @@
+{
+  "id": "speaking_peer_conversation",
+  "title": "Поговори со сверстником о привычках",
+  "category": "speaking",
+  "type": "voice-chat",
+  "description": "Задавай вопросы сверстнику из другой страны о его привычках и образе жизни (14 лет)",
+  "sections": [
+    {
+      "name": "Lifestyle and habits",
+      "questions": [
+        "What is your daily routine like on a school day?",
+        "What time do you usually get up and go to bed?",
+        "How do you usually go to school – by bus, by car or on foot?",
+        "What do you usually do after school?",
+        "What are your favourite hobbies?",
+        "How often do you do sports or exercise?",
+        "Do you prefer staying at home or going out with friends in your free time?",
+        "Do you spend a lot of time online or on social media?",
+        "Do you think you lead a healthy lifestyle? Why or why not?",
+        "What kind of food do you usually eat – healthy food or fast food?",
+        "How often do you eat fast food or drink fizzy drinks?",
+        "Do you play any sports or go to a sports centre?",
+        "What habits do teenagers in your country usually have?",
+        "Are there any bad habits that you can't stand?",
+        "What do teenagers in your country usually do at the weekend?"
+      ]
+    }
+  ]
+}

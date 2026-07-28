@@ -1,0 +1,27 @@
+{
+  "id": "grammar_v1_vs_quiz",
+  "title": "V1 / Vs: выбери форму",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Сверху местоимение или подлежащее — выбери правильную форму (лексика Lifestyles)",
+  "items": [
+    {"subject": "I", "options": ["play", "plays"], "answer": "play"},
+    {"subject": "You", "options": ["use", "uses"], "answer": "use"},
+    {"subject": "She", "options": ["watch", "watches"], "answer": "watches"},
+    {"subject": "They", "options": ["play", "plays"], "answer": "play"},
+    {"subject": "My sister", "options": ["listen", "listens"], "answer": "listens"},
+    {"subject": "My parents", "options": ["work", "works"], "answer": "work"},
+    {"subject": "We", "options": ["have", "has"], "answer": "have"},
+    {"subject": "My friend", "options": ["go", "goes"], "answer": "goes"},
+    {"subject": "Teenagers", "options": ["use", "uses"], "answer": "use"},
+    {"subject": "He", "options": ["do", "does"], "answer": "does"},
+    {"subject": "My classmates", "options": ["play", "plays"], "answer": "play"},
+    {"subject": "The teacher", "options": ["give", "gives"], "answer": "gives"},
+    {"subject": "My cousin", "options": ["play", "plays"], "answer": "plays"},
+    {"subject": "Students", "options": ["chat", "chats"], "answer": "chat"},
+    {"subject": "She", "options": ["study", "studies"], "answer": "studies"},
+    {"subject": "It", "options": ["arrive", "arrives"], "answer": "arrives"},
+    {"subject": "Our classmates", "options": ["study", "studies"], "answer": "study"},
+    {"subject": "My dad", "options": ["read", "reads"], "answer": "reads"}
+  ]
+}

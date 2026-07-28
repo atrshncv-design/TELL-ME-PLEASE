@@ -1,0 +1,29 @@
+{
+  "id": "grammar_yes_no_questions",
+  "title": "Общие вопросы Do/Does",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Поставь общий вопрос Do / Does к утверждению (лексика Lifestyles)",
+  "items": [
+    {"statement": "Your friend goes to the sports club after school.", "question": "Does your friend go to the sports club after school?", "answer": "Does your friend go to the sports club after school?"},
+    {"statement": "Teenagers use social media every day.", "question": "Do teenagers use social media every day?", "answer": "Do teenagers use social media every day?"},
+    {"statement": "Your sister watches TV in the evening.", "question": "Does your sister watch TV in the evening?", "answer": "Does your sister watch TV in the evening?"},
+    {"statement": "You have English lessons twice a week.", "question": "Do you have English lessons twice a week?", "answer": "Do you have English lessons twice a week?"},
+    {"statement": "Your teacher gives you tests on Fridays.", "question": "Does your teacher give you tests on Fridays?", "answer": "Does your teacher give you tests on Fridays?"},
+    {"statement": "Your parents work in a modern office.", "question": "Do your parents work in a modern office?", "answer": "Do your parents work in a modern office?"},
+    {"statement": "You do your homework in your bedroom.", "question": "Do you do your homework in your bedroom?", "answer": "Do you do your homework in your bedroom?"},
+    {"statement": "Your classmates play computer games at the weekend.", "question": "Do your classmates play computer games at the weekend?", "answer": "Do your classmates play computer games at the weekend?"},
+    {"statement": "Your cousin lives in a big city.", "question": "Does your cousin live in a big city?", "answer": "Does your cousin live in a big city?"},
+    {"statement": "You visit your grandparents every month.", "question": "Do you visit your grandparents every month?", "answer": "Do you visit your grandparents every month?"},
+    {"statement": "He studies for his exams in the library.", "question": "Does he study for his exams in the library?", "answer": "Does he study for his exams in the library?"},
+    {"statement": "They go to the cinema on Saturdays.", "question": "Do they go to the cinema on Saturdays?", "answer": "Do they go to the cinema on Saturdays?"},
+    {"statement": "Your brother plays the guitar very well.", "question": "Does your brother play the guitar very well?", "answer": "Does your brother play the guitar very well?"},
+    {"statement": "You read magazines about music.", "question": "Do you read magazines about music?", "answer": "Do you read magazines about music?"},
+    {"statement": "Your family has dinner together in the evening.", "question": "Does your family have dinner together in the evening?", "answer": "Does your family have dinner together in the evening?"},
+    {"statement": "Your mum cooks healthy meals.", "question": "Does your mum cook healthy meals?", "answer": "Does your mum cook healthy meals?"},
+    {"statement": "You lead a healthy lifestyle.", "question": "Do you lead a healthy lifestyle?", "answer": "Do you lead a healthy lifestyle?"},
+    {"statement": "Your friend goes jogging in the park in the morning.", "question": "Does your friend go jogging in the park in the morning?", "answer": "Does your friend go jogging in the park in the morning?"},
+    {"statement": "Your family goes to the countryside on Saturdays.", "question": "Does your family go to the countryside on Saturdays?", "answer": "Does your family go to the countryside on Saturdays?"},
+    {"statement": "Your best friend likes computer games.", "question": "Does your best friend like computer games?", "answer": "Does your best friend like computer games?"}
+  ]
+}

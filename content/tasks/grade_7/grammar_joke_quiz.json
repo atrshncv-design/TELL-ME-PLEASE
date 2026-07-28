@@ -1,0 +1,29 @@
+{
+  "id": "grammar_joke_quiz",
+  "title": "Шутка: V1/Vs",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Забавные предложения — выбери правильную форму первого глагола (лексика Lifestyles)",
+  "items": [
+    {"sentence": "My friend ___ basketball after school and forgets his school bag.", "options": ["play", "plays"], "answer": "plays"},
+    {"sentence": "My sister ___ to music in the evening and sings very loudly.", "options": ["listen", "listens"], "answer": "listens"},
+    {"sentence": "Teenagers ___ the Internet every day and lose their homework.", "options": ["use", "uses"], "answer": "use"},
+    {"sentence": "My mum ___ a tasty dinner and burns the vegetables.", "options": ["cook", "cooks"], "answer": "cooks"},
+    {"sentence": "We ___ to the cinema at the weekend and eat all the popcorn.", "options": ["go", "goes"], "answer": "go"},
+    {"sentence": "He ___ exercises in the morning and falls off the bed.", "options": ["do", "does"], "answer": "does"},
+    {"sentence": "My cousin ___ the guitar in a band and plays very badly.", "options": ["play", "plays"], "answer": "plays"},
+    {"sentence": "Students ___ online about homework and copy all the wrong answers.", "options": ["chat", "chats"], "answer": "chat"},
+    {"sentence": "She ___ very hard for tests and then forgets everything.", "options": ["study", "studies"], "answer": "studies"},
+    {"sentence": "My parents ___ in the city centre and miss the last bus.", "options": ["work", "works"], "answer": "work"},
+    {"sentence": "They ___ horror films at night and then can't sleep.", "options": ["watch", "watches"], "answer": "watch"},
+    {"sentence": "I ___ books before bedtime and fall asleep on page one.", "options": ["read", "reads"], "answer": "read"},
+    {"sentence": "My dad ___ fast food every day and complains about his stomach.", "options": ["eat", "eats"], "answer": "eats"},
+    {"sentence": "My classmates ___ computer games at the weekend and argue for hours.", "options": ["play", "plays"], "answer": "play"},
+    {"sentence": "My grandpa ___ the newspaper in the morning and hides behind it.", "options": ["read", "reads"], "answer": "reads"},
+    {"sentence": "We ___ our grandparents on Sundays and eat too many cakes.", "options": ["visit", "visits"], "answer": "visit"},
+    {"sentence": "The teacher ___ us tests every Friday and then laughs.", "options": ["give", "gives"], "answer": "gives"},
+    {"sentence": "My brother ___ to music on headphones and ignores everybody.", "options": ["listen", "listens"], "answer": "listens"},
+    {"sentence": "I ___ online with my friends and forget the time.", "options": ["chat", "chats"], "answer": "chat"},
+    {"sentence": "My friend ___ to the sports centre twice a week and never exercises.", "options": ["go", "goes"], "answer": "goes"}
+  ]
+}

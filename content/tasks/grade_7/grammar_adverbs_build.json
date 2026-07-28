@@ -1,0 +1,11 @@
+{
+  "id": "grammar_adverbs_build",
+  "title": "Наречия: построй предложения",
+  "category": "grammar",
+  "type": "build-sentence",
+  "description": "Составь как можно больше предложений, комбинируя наречие частоты и время (лексика Lifestyles)",
+  "adverbs": ["always", "usually", "often", "sometimes", "rarely", "never"],
+  "time_phrases": ["every day", "after school", "in the evening", "at the weekend", "at night", "on Sundays"],
+  "base_verb": "go jogging",
+  "subject": "I"
+}

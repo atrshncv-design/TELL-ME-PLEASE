@@ -1,0 +1,29 @@
+{
+  "id": "story_harry_potter_interview",
+  "title": "Интервью об образе жизни",
+  "category": "listening",
+  "type": "role-play",
+  "description": "Проиграй по ролям интервью об образе жизни: активный день, еда и выходные. Реплики появляются на экране по очереди.",
+  "dialogue": [
+    {"speaker": "interviewer", "text": "Hi! Do you have an active lifestyle?"},
+    {"speaker": "student", "text": "Yes, I do. I go jogging in the park in the morning."},
+    {"speaker": "interviewer", "text": "Do you go jogging every day?"},
+    {"speaker": "student", "text": "No, I don't. I jog three times a week and I play volleyball at the weekend."},
+    {"speaker": "interviewer", "text": "Where do you usually do sport at the weekend?"},
+    {"speaker": "student", "text": "I usually play volleyball at the sports centre with my friends."},
+    {"speaker": "interviewer", "text": "That sounds great. Do you eat fast food?"},
+    {"speaker": "student", "text": "I sometimes do, but I don't eat it every day. I try to lead a healthy lifestyle."},
+    {"speaker": "interviewer", "text": "Does your mum cook healthy meals?"},
+    {"speaker": "student", "text": "Yes, she does. She makes salads and soup, and we drink water, not fizzy drinks."},
+    {"speaker": "interviewer", "text": "What healthy meals does your mum cook?"},
+    {"speaker": "student", "text": "She often cooks vegetable soup and fresh salads for dinner."},
+    {"speaker": "interviewer", "text": "Sounds delicious! Do you stay at home at the weekend?"},
+    {"speaker": "student", "text": "No, I don't. I don't like sitting at home all day."},
+    {"speaker": "interviewer", "text": "Does your family go anywhere on Saturdays?"},
+    {"speaker": "student", "text": "Yes, we do. We often go to the countryside and enjoy peace and quiet."},
+    {"speaker": "interviewer", "text": "Where does your family go on Saturdays?"},
+    {"speaker": "student", "text": "We usually go to a small village near the river."},
+    {"speaker": "interviewer", "text": "That's nice. Thanks for telling me about your lifestyle."},
+    {"speaker": "student", "text": "You're welcome. See you later!"}
+  ]
+}

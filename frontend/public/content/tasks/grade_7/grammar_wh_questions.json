@@ -1,0 +1,27 @@
+{
+  "id": "grammar_wh_questions",
+  "title": "Специальные вопросы",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Составь специальный вопрос: выбери вопросительное слово и вспомогательный глагол (лексика Lifestyles)",
+  "question_words": ["What", "Where", "When", "How", "How often", "What time"],
+  "auxiliary": ["do", "does"],
+  "items": [
+    {"statement": "Your friend goes to the sports club after school.", "hint": "Когда твой друг ходит в спортивный клуб?", "answer": "When does your friend go to the sports club?"},
+    {"statement": "Teenagers use social media every day.", "hint": "Как часто подростки пользуются соцсетями?", "answer": "How often do teenagers use social media?"},
+    {"statement": "Your sister watches TV in the evening.", "hint": "Когда сестра смотрит телевизор?", "answer": "When does your sister watch TV?"},
+    {"statement": "You have English lessons twice a week.", "hint": "Как часто у тебя уроки английского?", "answer": "How often do you have English lessons?"},
+    {"statement": "Your teacher gives you tests on Fridays.", "hint": "Когда учитель даёт вам тесты?", "answer": "When does your teacher give you tests?"},
+    {"statement": "Your parents work in a modern office.", "hint": "Где работают твои родители?", "answer": "Where do your parents work?"},
+    {"statement": "You do your homework in your bedroom.", "hint": "Где ты делаешь домашнее задание?", "answer": "Where do you do your homework?"},
+    {"statement": "Your classmates play computer games at the weekend.", "hint": "Когда одноклассники играют в компьютерные игры?", "answer": "When do your classmates play computer games?"},
+    {"statement": "Your cousin lives in a big city.", "hint": "Где живёт твой кузен?", "answer": "Where does your cousin live?"},
+    {"statement": "You visit your grandparents every month.", "hint": "Как часто ты навещаешь бабушку с дедушкой?", "answer": "How often do you visit your grandparents?"},
+    {"statement": "He studies for his exams in the library.", "hint": "Где он готовится к экзаменам?", "answer": "Where does he study for his exams?"},
+    {"statement": "They go to the cinema on Saturdays.", "hint": "Когда они ходят в кино?", "answer": "When do they go to the cinema?"},
+    {"statement": "Your brother plays the guitar very well.", "hint": "Что твой брат играет очень хорошо?", "answer": "What does your brother play very well?"},
+    {"statement": "You read magazines about music.", "hint": "Что ты читаешь о музыке?", "answer": "What do you read about music?"},
+    {"statement": "Your family has dinner together in the evening.", "hint": "Когда ваша семья ужинает вместе?", "answer": "When does your family have dinner together?"},
+    {"statement": "Your mum cooks healthy meals for dinner.", "hint": "Что мама готовит на ужин?", "answer": "What does your mum cook for dinner?"}
+  ]
+}

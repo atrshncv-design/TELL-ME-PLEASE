@@ -1,0 +1,26 @@
+{
+  "id": "grammar_adverbs_place",
+  "title": "Наречия: вставь в правильное место",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Реши: наречие частоты — между подлежащим и сказуемым, а обстоятельство времени — в конец предложения (лексика Lifestyles)",
+  "available_adverbs": ["always", "usually", "often", "sometimes", "rarely", "never", "every day", "after school", "in the evening", "at night", "at the weekend", "on Sundays"],
+  "items": [
+    {"sentence_base": "My friend uses the Internet", "answer_position": "middle", "adverb": "always", "full": "My friend always uses the Internet every day"},
+    {"sentence_base": "We go to the sports club", "answer_position": "middle", "adverb": "often", "full": "We often go to the sports club after school"},
+    {"sentence_base": "My sister watches films", "answer_position": "middle", "adverb": "sometimes", "full": "My sister sometimes watches films in the evenings"},
+    {"sentence_base": "Parents have dinner together", "answer_position": "middle", "adverb": "usually", "full": "Parents usually have dinner together in the evening"},
+    {"sentence_base": "I play computer games", "answer_position": "middle", "adverb": "never", "full": "I never play computer games at night"},
+    {"sentence_base": "The teacher gives homework", "answer_position": "middle", "adverb": "always", "full": "The teacher always gives homework every day"},
+    {"sentence_base": "Teenagers listen to music on headphones", "answer_position": "middle", "adverb": "often", "full": "Teenagers often listen to music on headphones after school"},
+    {"sentence_base": "We go to the cinema", "answer_position": "middle", "adverb": "rarely", "full": "We rarely go to the cinema at the weekend"},
+    {"sentence_base": "My brother does his homework", "answer_position": "middle", "adverb": "usually", "full": "My brother usually does his homework in the living room"},
+    {"sentence_base": "I chat with my friends online", "answer_position": "middle", "adverb": "often", "full": "I often chat with my friends online in the evening"},
+    {"sentence_base": "We visit our relatives in the country", "answer_position": "middle", "adverb": "sometimes", "full": "We sometimes visit our relatives in the country on Sundays"},
+    {"sentence_base": "My dad reads the newspaper", "answer_position": "middle", "adverb": "always", "full": "My dad always reads the newspaper in the morning"},
+    {"sentence_base": "My mum cooks a tasty dinner", "answer_position": "middle", "adverb": "often", "full": "My mum often cooks a tasty dinner in the evening"},
+    {"sentence_base": "He goes jogging in the park", "answer_position": "middle", "adverb": "usually", "full": "He usually goes jogging in the park in the morning"},
+    {"sentence_base": "My friend plays the guitar in a band", "answer_position": "end", "adverb": "every day", "full": "My friend plays the guitar in a band every day"},
+    {"sentence_base": "My cousin plays the guitar very well", "answer_position": "end", "adverb": "every day", "full": "My cousin plays the guitar very well every day"}
+  ]
+}

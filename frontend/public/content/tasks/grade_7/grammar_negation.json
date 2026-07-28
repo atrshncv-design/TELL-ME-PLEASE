@@ -1,0 +1,24 @@
+{
+  "id": "grammar_negation",
+  "title": "Отрицание",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильную отрицательную форму: don't / doesn't (лексика Lifestyles)",
+  "items": [
+    {"sentence": "She ___ like reading magazines.", "options": ["don't like", "doesn't like", "isn't like", "not likes"], "answer": "doesn't like"},
+    {"sentence": "He ___ do his homework at night.", "options": ["don't do", "doesn't do", "isn't do", "not does"], "answer": "doesn't do"},
+    {"sentence": "They ___ go to the sports centre.", "options": ["doesn't go", "don't go", "aren't go", "not go"], "answer": "don't go"},
+    {"sentence": "I ___ live in the city centre.", "options": ["doesn't live", "don't live", "isn't live", "not live"], "answer": "don't live"},
+    {"sentence": "My friend ___ to school by train every day.", "options": ["don't go", "doesn't go", "isn't go", "not goes"], "answer": "doesn't go"},
+    {"sentence": "My parents ___ in a big office.", "options": ["doesn't work", "don't work", "aren't work", "not work"], "answer": "don't work"},
+    {"sentence": "The bus ___ at eight o'clock on Sundays.", "options": ["don't arrive", "doesn't arrive", "isn't arrive", "not arrive"], "answer": "doesn't arrive"},
+    {"sentence": "Our classmates ___ French at school.", "options": ["doesn't study", "don't study", "aren't study", "not study"], "answer": "don't study"},
+    {"sentence": "My sister ___ to music in the morning.", "options": ["don't listen", "doesn't listen", "isn't listen", "not listen"], "answer": "doesn't listen"},
+    {"sentence": "Teenagers ___ fast food every day, they prefer healthy meals.", "options": ["doesn't eat", "don't eat", "aren't eat", "not eat"], "answer": "don't eat"},
+    {"sentence": "He ___ computer games after school, he prefers outdoor activities.", "options": ["don't play", "doesn't play", "isn't play", "not play"], "answer": "doesn't play"},
+    {"sentence": "My dad ___ at home in the morning, he goes to work early.", "options": ["doesn't stay", "don't stay", "isn't stay", "not stay"], "answer": "doesn't stay"},
+    {"sentence": "We ___ to the cinema very often at the weekend.", "options": ["doesn't go", "don't go", "aren't go", "not go"], "answer": "don't go"},
+    {"sentence": "My best friend ___ computer games very often.", "options": ["don't play", "doesn't play", "isn't play", "not play"], "answer": "doesn't play"},
+    {"sentence": "I ___ fizzy drinks, I drink water.", "options": ["doesn't drink", "don't drink", "isn't drink", "not drink"], "answer": "don't drink"}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "grammar_roulette",
+  "title": "Рулетка: все части предложения",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола V1 / Vs (лексика Lifestyles и школа)",
+  "items": [
+    {"sentence": "My classmates usually ___ basketball after school.", "verb": "play", "answer": "play"},
+    {"sentence": "We ___ English at school three times a week.", "verb": "have", "answer": "have"},
+    {"sentence": "My sister ___ to music in the evening.", "verb": "listen", "answer": "listens"},
+    {"sentence": "Teenagers ___ the Internet every day.", "verb": "use", "answer": "use"},
+    {"sentence": "My parents ___ in the city centre.", "verb": "work", "answer": "work"},
+    {"sentence": "My friend ___ to the sports club twice a week.", "verb": "go", "answer": "goes"},
+    {"sentence": "They ___ horror films at night.", "verb": "watch", "answer": "watch"},
+    {"sentence": "I ___ books before bedtime.", "verb": "read", "answer": "read"},
+    {"sentence": "We ___ our grandparents on Sundays.", "verb": "visit", "answer": "visit"},
+    {"sentence": "He ___ exercises in the morning.", "verb": "do", "answer": "does"},
+    {"sentence": "Students ___ online about homework.", "verb": "chat", "answer": "chat"},
+    {"sentence": "She ___ very hard for tests.", "verb": "study", "answer": "studies"},
+    {"sentence": "We ___ to school by bus.", "verb": "go", "answer": "go"},
+    {"sentence": "My cousin ___ the guitar in a band.", "verb": "play", "answer": "plays"},
+    {"sentence": "Teenagers ___ videos on their phones in the evening.", "verb": "watch", "answer": "watch"}
+  ]
+}

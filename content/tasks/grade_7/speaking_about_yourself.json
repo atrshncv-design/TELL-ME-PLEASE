@@ -1,0 +1,22 @@
+{
+  "id": "speaking_about_yourself",
+  "title": "Расскажи о своём образе жизни",
+  "category": "speaking",
+  "type": "fill-in-and-speak",
+  "description": "Продолжи подсказку и расскажи сверстнику о своём распорядке дня и привычках",
+  "sections": [
+    {
+      "name": "My lifestyle",
+      "prompts": [
+        "On a school day I usually get up at ___ and I ___",
+        "I go to school by ___ because I ___",
+        "After school I usually ___ and then I ___",
+        "I have English lessons ___ times a week and I really ___ them",
+        "In my free time I often ___ and sometimes I ___",
+        "I think I lead a ___ lifestyle because I ___",
+        "At the weekend my family usually ___ and we ___",
+        "I never ___ because I ___"
+      ]
+    }
+  ]
+}

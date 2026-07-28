@@ -1,0 +1,27 @@
+{
+  "id": "grammar_verb_forms_quiz",
+  "title": "Викторина: вставь форму глагола",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола или вспомогательного глагола в предложение (лексика Lifestyles)",
+  "items": [
+    {"sentence": "My friend ___ to school by train every day.", "answer": "goes"},
+    {"sentence": "We ___ TV in the evening.", "answer": "watch"},
+    {"sentence": "___ he play computer games after school?", "answer": "Does"},
+    {"sentence": "Teenagers ___ the Internet every day.", "answer": "use"},
+    {"sentence": "He ___ do his homework at night.", "answer": "doesn't"},
+    {"sentence": "The bus ___ at eight o'clock every day.", "answer": "arrives"},
+    {"sentence": "Our classmates ___ French at school.", "answer": "study"},
+    {"sentence": "___ your sister listen to music in the morning?", "answer": "Does"},
+    {"sentence": "My teacher ___ us tests every Friday.", "answer": "gives"},
+    {"sentence": "My parents ___ in a big office.", "answer": "work"},
+    {"sentence": "I ___ live in the city centre.", "answer": "don't"},
+    {"sentence": "___ you lead a healthy lifestyle?", "answer": "Do"},
+    {"sentence": "She ___ to bed very late on weekdays.", "answer": "goes"},
+    {"sentence": "___ your parents work at the weekend?", "answer": "Do"},
+    {"sentence": "My friend ___ to the sports club twice a week.", "answer": "goes"},
+    {"sentence": "What ___ your mum cook for dinner?", "answer": "does"},
+    {"sentence": "My sister sometimes ___ films in the evenings.", "answer": "watches"},
+    {"sentence": "We rarely ___ to the cinema at the weekend.", "answer": "go"}
+  ]
+}

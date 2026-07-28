@@ -1,0 +1,39 @@
+{
+  "id": "grammar_ladder",
+  "title": "Лесенка: Lifestyles",
+  "category": "grammar",
+  "type": "ladder",
+  "description": "Наступай на ступеньки, подсвечивая слова. Лесенка 1 — здоровый образ жизни (снизу-вверх), Лесенка 2 — день школьника (сверху-вниз)",
+  "ladders": [
+    {
+      "id": "active",
+      "direction": "up",
+      "title": "Активный образ жизни (снизу вверх)",
+      "steps": [
+        "I go jogging.",
+        "I go jogging in the park.",
+        "I go jogging in the park in the morning.",
+        "I go jogging in the park in the morning three times a week.",
+        "I go jogging in the park in the morning and play volleyball at the weekend.",
+        "I go jogging in the park, play volleyball and visit the sports centre with my friends.",
+        "I go jogging in the park, play volleyball, visit the sports centre and eat healthy food.",
+        "I lead an active lifestyle: I go jogging, play volleyball, visit the sports centre and eat healthy food."
+      ]
+    },
+    {
+      "id": "schoolday",
+      "direction": "down",
+      "title": "День школьника (сверху вниз)",
+      "steps": [
+        "On a school day, I get up early, go to school, do my homework, meet my friends and go to bed at ten.",
+        "On a school day, I get up early, go to school, do my homework and meet my friends.",
+        "On a school day, I get up early, go to school and do my homework.",
+        "On a school day, I get up early and go to school by bus.",
+        "On a school day, I get up early and have breakfast.",
+        "On a school day, I get up early in the morning.",
+        "On a school day, I get up at seven o'clock.",
+        "I go to bed at night."
+      ]
+    }
+  ]
+}

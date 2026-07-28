@@ -1,0 +1,82 @@
+{
+  "id": "story_harry_potter_routine",
+  "title": "Распорядок дня подростка",
+  "category": "vocabulary",
+  "type": "fill-in",
+  "description": "Вставь глагол в правильную форму Present Simple (распорядок дня и образ жизни)",
+  "story": [
+    {
+      "text": "Kate is a fourteen-year-old student who lives in a big city.",
+      "blank": null
+    },
+    {
+      "text": "She usually ___ early in the morning and has breakfast with her mum.",
+      "verb": "get up",
+      "answer": "gets up"
+    },
+    {
+      "text": "Her dad ___ at home in the morning because he goes to work very early.",
+      "verb": "not stay",
+      "answer": "doesn't stay"
+    },
+    {
+      "text": "After breakfast Kate ___ to school by bus with her classmates.",
+      "verb": "go",
+      "answer": "goes"
+    },
+    {
+      "text": "At school she ___ to the teachers, writes in her notebook and does her exercises.",
+      "verb": "listen",
+      "answer": "listens"
+    },
+    {
+      "text": "She ___ English lessons three times a week and loves them.",
+      "verb": "have",
+      "answer": "has"
+    },
+    {
+      "text": "After school she usually ___ her homework and then meets her friends at five o'clock.",
+      "verb": "do",
+      "answer": "does"
+    },
+    {
+      "text": "Alex is Kate's classmate and he leads an active lifestyle.",
+      "blank": null
+    },
+    {
+      "text": "He ___ jogging in the park in the morning three times a week.",
+      "verb": "go",
+      "answer": "goes"
+    },
+    {
+      "text": "At the weekend he ___ volleyball at the sports centre with his friends.",
+      "verb": "play",
+      "answer": "plays"
+    },
+    {
+      "text": "He ___ computer games every day, but not for very long.",
+      "verb": "play",
+      "answer": "plays"
+    },
+    {
+      "text": "His mum often ___ healthy meals: salads and vegetable soup for dinner.",
+      "verb": "cook",
+      "answer": "cooks"
+    },
+    {
+      "text": "Alex ___ fast food every day because he tries to lead a healthy lifestyle.",
+      "verb": "not eat",
+      "answer": "doesn't eat"
+    },
+    {
+      "text": "On Saturdays his family ___ to the countryside and enjoys peace and quiet.",
+      "verb": "go",
+      "answer": "goes"
+    },
+    {
+      "text": "In the evening Alex ___ to music, reads books and chats with his friends online.",
+      "verb": "listen",
+      "answer": "listens"
+    }
+  ]
+}
