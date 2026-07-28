@@ -19,6 +19,16 @@ class Settings:
     ]
     tts_url: str = os.getenv("TTS_URL", "http://localhost:8880/v1/audio/speech")
     tts_voice: str = os.getenv("TTS_VOICE", "af_bella")
+    # TTS backend mode: "http" (separate Kokoro container, local dev) or
+    # "kokoro" (in-process kokoro-onnx, for HF Spaces single-container).
+    tts_mode: str = os.getenv("TTS_MODE", "http")
+    # Paths to the kokoro-onnx model + voices files. ONLY used when
+    # TTS_MODE=kokoro. The library does NOT bundle or auto-download these;
+    # they must be present on disk (HF Spaces stores them in the persistent
+    # data dir, local dev points at the checked-out release assets). Defaults
+    # match the canonical v1.0 release filenames in the repo root.
+    tts_kokoro_model: str = os.getenv("TTS_KOKORO_MODEL", "kokoro-v1.0.onnx")
+    tts_kokoro_voices: str = os.getenv("TTS_KOKORO_VOICES", "voices-v1.0.bin")
     max_turns: int = 12
     # Session duration in seconds (PRD: 3-min voice chat). Read from env so it
     # can be shortened for testing without editing code or .env.

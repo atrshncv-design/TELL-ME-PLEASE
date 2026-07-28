@@ -1,0 +1,13 @@
+# Python dependencies for the Hugging Face Spaces Docker image.
+# Pinned for stability on HF free CPU tier (16GB RAM).
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+httpx==0.28.1
+websockets==14.1
+python-dotenv==1.0.1
+# Kokoro TTS, in-process (replaces the separate Kokoro-FastAPI HTTP container
+# used in local dev). onnxruntime CPU-only is fine on HF free tier.
+kokoro-onnx==0.4.4
+onnxruntime==1.20.1
+numpy==1.26.4
+soundfile==0.12.1
