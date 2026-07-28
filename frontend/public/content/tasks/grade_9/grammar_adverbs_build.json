@@ -1,0 +1,11 @@
+{
+  "id": "grammar_adverbs_build",
+  "title": "Наречия: построй предложения",
+  "category": "grammar",
+  "type": "build-sentence",
+  "description": "Составь как можно больше предложений, комбинируя наречие частоты и время (лексика Festivals and traditions)",
+  "adverbs": ["always", "usually", "often", "sometimes", "rarely", "never"],
+  "time_phrases": ["every year", "before festivals", "in the evening", "on holidays", "at midnight", "on special days"],
+  "base_verb": "celebrate",
+  "subject": "My family"
+}

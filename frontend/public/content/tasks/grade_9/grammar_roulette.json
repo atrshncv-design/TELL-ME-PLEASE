@@ -1,0 +1,27 @@
+{
+  "id": "grammar_roulette",
+  "title": "Рулетка: все части предложения",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола V1 / Vs (лексика Festivals and traditions)",
+  "items": [
+    {"sentence": "Samba schools ___ for months before the parade.", "verb": "prepare", "answer": "prepare"},
+    {"sentence": "The parade ___ at noon.", "verb": "begin", "answer": "begins"},
+    {"sentence": "He ___ fireworks from the balcony.", "verb": "watch", "answer": "watches"},
+    {"sentence": "My family ___ Easter every year.", "verb": "celebrate", "answer": "celebrates"},
+    {"sentence": "The dragon symbol ___ strength and luck.", "verb": "represent", "answer": "represents"},
+    {"sentence": "People ___ this event with great excitement.", "verb": "celebrate", "answer": "celebrate"},
+    {"sentence": "Performers ___ traditional clothes at the carnival.", "verb": "wear", "answer": "wear"},
+    {"sentence": "She ___ a lucky coin in her bag.", "verb": "carry", "answer": "carries"},
+    {"sentence": "The celebration ___ late at night.", "verb": "end", "answer": "ends"},
+    {"sentence": "My cousin ___ superstitions before exams.", "verb": "follow", "answer": "follows"},
+    {"sentence": "The ceremony ___ music and dance.", "verb": "include", "answer": "includes"},
+    {"sentence": "The bell ___ at midnight.", "verb": "ring", "answer": "rings"},
+    {"sentence": "My teacher ___ us about national holidays.", "verb": "teach", "answer": "teaches"},
+    {"sentence": "The streets ___ with music and joyful crowds.", "verb": "fill", "answer": "fill"},
+    {"sentence": "Each group ___ a unique performance in the parade.", "verb": "present", "answer": "presents"},
+    {"sentence": "Our town ___ street parties every summer.", "verb": "organise", "answer": "organises"},
+    {"sentence": "Tourists from different countries ___ to Brazil for Carnival.", "verb": "come", "answer": "come"},
+    {"sentence": "The combination of colours ___ the carnival look magnificent.", "verb": "make", "answer": "makes"}
+  ]
+}

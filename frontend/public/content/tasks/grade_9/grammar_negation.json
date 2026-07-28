@@ -1,0 +1,25 @@
+{
+  "id": "grammar_negation",
+  "title": "Отрицание",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильную отрицательную форму: don't / doesn't (лексика Festivals and traditions)",
+  "items": [
+    {"sentence": "She ___ believe in superstitions.", "options": ["don't believe", "doesn't believe", "isn't believe", "not believes"], "answer": "doesn't believe"},
+    {"sentence": "They ___ take part in the parade.", "options": ["doesn't take", "don't take", "aren't take", "not take"], "answer": "don't take"},
+    {"sentence": "He ___ wear lucky socks on exam day.", "options": ["don't wear", "doesn't wear", "isn't wear", "not wear"], "answer": "doesn't wear"},
+    {"sentence": "My brother ___ follow old traditions.", "options": ["doesn't follow", "don't follow", "isn't follow", "not follow"], "answer": "doesn't follow"},
+    {"sentence": "I ___ carry a lucky charm.", "options": ["doesn't carry", "don't carry", "isn't carry", "not carry"], "answer": "don't carry"},
+    {"sentence": "Our school ___ organise a concert this year.", "options": ["don't organise", "doesn't organise", "isn't organise", "not organise"], "answer": "doesn't organise"},
+    {"sentence": "The fireworks ___ end the show this time.", "options": ["doesn't end", "don't end", "aren't end", "not end"], "answer": "don't end"},
+    {"sentence": "We ___ decorate the house before the festival.", "options": ["doesn't decorate", "don't decorate", "aren't decorate", "not decorate"], "answer": "don't decorate"},
+    {"sentence": "The Chinese Dragon Carnival ___ be a small event.", "options": ["don't be", "doesn't be", "isn't", "aren't"], "answer": "isn't"},
+    {"sentence": "Performers ___ wear ordinary clothes at the carnival.", "options": ["doesn't wear", "don't wear", "aren't wear", "not wear"], "answer": "don't wear"},
+    {"sentence": "The parade ___ fill the city with silence.", "options": ["doesn't fill", "don't fill", "isn't fill", "not fill"], "answer": "doesn't fill"},
+    {"sentence": "People ___ celebrate Venice Carnival with loud street parties.", "options": ["doesn't celebrate", "don't celebrate", "aren't celebrate", "not celebrate"], "answer": "don't celebrate"},
+    {"sentence": "The masks in Venice ___ be simple; they are very detailed.", "options": ["don't be", "doesn't be", "aren't", "isn't"], "answer": "aren't"},
+    {"sentence": "My family ___ celebrate Easter at home this year.", "options": ["doesn't celebrate", "don't celebrate", "aren't celebrate", "not celebrate"], "answer": "doesn't celebrate"},
+    {"sentence": "They ___ take umbrellas because of superstitions.", "options": ["doesn't take", "don't take", "aren't take", "not take"], "answer": "don't take"},
+    {"sentence": "The combination of colours ___ make the carnival look dull.", "options": ["don't make", "doesn't make", "isn't make", "not make"], "answer": "doesn't make"}
+  ]
+}

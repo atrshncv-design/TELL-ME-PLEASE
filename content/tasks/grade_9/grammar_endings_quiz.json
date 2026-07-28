@@ -1,0 +1,51 @@
+{
+  "id": "grammar_endings_quiz",
+  "title": "Окончания: викторина",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильное окончание для формы he/she/it (лексика Festivals and traditions)",
+  "groups": [
+    {
+      "name": "Обычные с -s",
+      "items": [
+        {"question": "celebrate → ?", "options": ["celebrates", "celebrate"], "answer": "celebrates"},
+        {"question": "prepare → ?", "options": ["prepare", "prepares"], "answer": "prepares"},
+        {"question": "decorate → ?", "options": ["decorates", "decorate"], "answer": "decorates"},
+        {"question": "organise → ?", "options": ["organise", "organises"], "answer": "organises"},
+        {"question": "follow → ?", "options": ["follows", "follow"], "answer": "follows"},
+        {"question": "begin → ?", "options": ["begin", "begins"], "answer": "begins"}
+      ]
+    },
+    {
+      "name": "Обычные с -es (шипящие/свистящие и -o)",
+      "items": [
+        {"question": "watch → ?", "options": ["watches", "watch"], "answer": "watches"},
+        {"question": "go → ?", "options": ["go", "goes"], "answer": "goes"},
+        {"question": "teach → ?", "options": ["teach", "teaches"], "answer": "teaches"},
+        {"question": "finish → ?", "options": ["finishes", "finish"], "answer": "finishes"},
+        {"question": "dress → ?", "options": ["dress", "dresses"], "answer": "dresses"},
+        {"question": "relax → ?", "options": ["relax", "relaxes"], "answer": "relaxes"}
+      ]
+    },
+    {
+      "name": "y → ies (перед y согласная)",
+      "items": [
+        {"question": "carry → ?", "options": ["carrys", "carries"], "answer": "carries"},
+        {"question": "study → ?", "options": ["studies", "studys"], "answer": "studies"},
+        {"question": "worry → ?", "options": ["worrys", "worries"], "answer": "worries"},
+        {"question": "hurry → ?", "options": ["hurries", "hurrys"], "answer": "hurries"},
+        {"question": "cry → ?", "options": ["cries", "crys"], "answer": "cries"}
+      ]
+    },
+    {
+      "name": "y после гласной (окончание не меняется, просто -s)",
+      "items": [
+        {"question": "play → ?", "options": ["play", "plays"], "answer": "plays"},
+        {"question": "enjoy → ?", "options": ["enjoys", "enjoy"], "answer": "enjoys"},
+        {"question": "stay → ?", "options": ["stay", "stays"], "answer": "stays"},
+        {"question": "say → ?", "options": ["says", "say"], "answer": "says"},
+        {"question": "buy → ?", "options": ["buys", "buy"], "answer": "buys"}
+      ]
+    }
+  ]
+}

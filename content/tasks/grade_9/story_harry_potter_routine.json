@@ -1,0 +1,73 @@
+{
+  "id": "story_harry_potter_routine",
+  "title": "Бразильский карнавал",
+  "category": "vocabulary",
+  "type": "fill-in",
+  "description": "Вставь глагол в правильную форму Present Simple (текст о Brazilian Carnival)",
+  "story": [
+    {
+      "text": "Brazilian Carnival is one of the most famous and colourful celebrations in the world.",
+      "blank": null
+    },
+    {
+      "text": "It ___ place every year before Lent, and millions of people take part in it.",
+      "verb": "take",
+      "answer": "takes"
+    },
+    {
+      "text": "In Rio de Janeiro, the streets ___ with music, dancing, bright costumes and joyful crowds.",
+      "verb": "fill",
+      "answer": "fill"
+    },
+    {
+      "text": "Samba schools ___ for months, and each group presents a unique performance in the parade.",
+      "verb": "prepare",
+      "answer": "prepare"
+    },
+    {
+      "text": "During the Carnival, people ___ life, freedom and cultural tradition.",
+      "verb": "celebrate",
+      "answer": "celebrate"
+    },
+    {
+      "text": "Many families ___ the parades together, while others join street parties called blocos.",
+      "verb": "watch",
+      "answer": "watch"
+    },
+    {
+      "text": "These events ___ a lively atmosphere, and the whole city seems full of energy.",
+      "verb": "create",
+      "answer": "create"
+    },
+    {
+      "text": "Tourists from different countries ___ to Brazil to see the celebration.",
+      "verb": "come",
+      "answer": "come"
+    },
+    {
+      "text": "The Carnival also ___ Brazilian identity.",
+      "verb": "reflect",
+      "answer": "reflects"
+    },
+    {
+      "text": "It ___ music, dance, art and history.",
+      "verb": "combine",
+      "answer": "combines"
+    },
+    {
+      "text": "People often ___ that it shows the soul of the nation.",
+      "verb": "say",
+      "answer": "say"
+    },
+    {
+      "text": "The Carnival ___ with unforgettable memories.",
+      "verb": "end",
+      "answer": "ends"
+    },
+    {
+      "text": "People usually ___ forward to it for another year.",
+      "verb": "look",
+      "answer": "look"
+    }
+  ]
+}

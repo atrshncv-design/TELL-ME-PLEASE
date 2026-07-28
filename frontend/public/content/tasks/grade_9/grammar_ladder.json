@@ -1,0 +1,39 @@
+{
+  "id": "grammar_ladder",
+  "title": "Лесенка: Festivals and traditions",
+  "category": "grammar",
+  "type": "ladder",
+  "description": "Наступай на ступеньки, подсвечивая слова. Лесенка 1 — подготовка к фестивалю (снизу-вверх), Лесенка 2 — день карнавала (сверху-вниз)",
+  "ladders": [
+    {
+      "id": "prepare",
+      "direction": "up",
+      "title": "Подготовка к фестивалю (снизу вверх)",
+      "steps": [
+        "We decorate the house.",
+        "We decorate the house before the festival.",
+        "We decorate the house before the festival with bright colours.",
+        "We decorate the house before the festival and make special decorations.",
+        "We decorate the house, make decorations and prepare traditional food.",
+        "We decorate the house, make decorations, prepare food and invite our relatives.",
+        "We decorate the house, make decorations, prepare food, invite relatives and light candles.",
+        "We celebrate together: we decorate the house, make decorations, prepare food, invite relatives and light candles."
+      ]
+    },
+    {
+      "id": "carnival",
+      "direction": "down",
+      "title": "День карнавала (сверху вниз)",
+      "steps": [
+        "At the carnival, people wear costumes, watch the parade, dance to the music, take photos and enjoy every moment.",
+        "At the carnival, people wear costumes, watch the parade, dance to the music and take photos.",
+        "At the carnival, people wear costumes, watch the parade and dance to the music.",
+        "At the carnival, people wear costumes and watch the parade.",
+        "At the carnival, people wear bright costumes.",
+        "At the carnival, performers play drums in the street.",
+        "At the carnival, the dragon figures move through the streets.",
+        "The carnival begins at noon."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "grammar_joke_quiz",
+  "title": "Шутка: V1/Vs",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Забавные предложения — выбери правильную форму первого глагола (лексика Festivals and traditions)",
+  "items": [
+    {"sentence": "My sister ___ up for the festival and forgets the way home.", "options": ["dress", "dresses"], "answer": "dresses"},
+    {"sentence": "The parade ___ at noon but nobody is ready.", "options": ["begin", "begins"], "answer": "begins"},
+    {"sentence": "He ___ a lucky coin in his pocket and loses it on the bus.", "options": ["carry", "carries"], "answer": "carries"},
+    {"sentence": "My family ___ Easter at home and eats all the chocolate eggs.", "options": ["celebrate", "celebrates"], "answer": "celebrates"},
+    {"sentence": "The celebration ___ late at night and wakes up the whole street.", "options": ["end", "ends"], "answer": "ends"},
+    {"sentence": "My cousin ___ superstitions before exams and then fails them anyway.", "options": ["follow", "follows"], "answer": "follows"},
+    {"sentence": "The bell ___ at midnight and scares the cat.", "options": ["ring", "rings"], "answer": "rings"},
+    {"sentence": "My teacher ___ us about holidays and gives us extra homework.", "options": ["teach", "teaches"], "answer": "teaches"},
+    {"sentence": "Samba schools ___ for months and forget the most important step.", "options": ["prepare", "prepares"], "answer": "prepare"},
+    {"sentence": "She ___ candles in the evening and burns the curtains.", "options": ["light", "lights"], "answer": "lights"},
+    {"sentence": "The dragon symbol ___ strength, luck and bad jokes.", "options": ["represent", "represents"], "answer": "represents"},
+    {"sentence": "Performers ___ drums at the carnival and wake up the neighbours.", "options": ["play", "plays"], "answer": "play"},
+    {"sentence": "The fireworks ___ the show and start a small fire.", "options": ["finish", "finishes"], "answer": "finish"},
+    {"sentence": "My grandpa ___ a lucky charm everywhere and still loses his keys.", "options": ["carry", "carries"], "answer": "carries"},
+    {"sentence": "Our town ___ a big carnival every spring and the mayor always dances badly.", "options": ["organise", "organises"], "answer": "organises"},
+    {"sentence": "Tourists ___ to Venice for the masks and buy the ugliest ones.", "options": ["come", "comes"], "answer": "come"},
+    {"sentence": "The dragon figures ___ through the streets and knock over the lanterns.", "options": ["move", "moves"], "answer": "move"},
+    {"sentence": "My mum ___ a special meal for the celebration and burns the soup.", "options": ["cook", "cooks"], "answer": "cooks"},
+    {"sentence": "Children ___ costumes at the carnival and refuse to take them off for a week.", "options": ["wear", "wears"], "answer": "wear"},
+    {"sentence": "I ___ in superstitions only when it helps me pass the test.", "options": ["believe", "believes"], "answer": "believe"}
+  ]
+}

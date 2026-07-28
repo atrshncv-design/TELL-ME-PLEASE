@@ -1,0 +1,26 @@
+{
+  "id": "grammar_adverbs_place",
+  "title": "Наречия: вставь в правильное место",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Реши: наречие частоты — между подлежащим и сказуемым, а обстоятельство времени — в конец предложения (лексика Festivals and traditions)",
+  "available_adverbs": ["always", "usually", "often", "sometimes", "rarely", "never", "every year", "before festivals", "in the evening", "at midnight", "on holidays", "on special days"],
+  "items": [
+    {"sentence_base": "My family celebrates New Year", "answer_position": "end", "adverb": "every year", "full": "My family celebrates New Year every year"},
+    {"sentence_base": "People decorate their homes", "answer_position": "end", "adverb": "before festivals", "full": "People decorate their homes before festivals"},
+    {"sentence_base": "We celebrate together", "answer_position": "middle", "adverb": "always", "full": "We always celebrate together on holidays"},
+    {"sentence_base": "My sister dresses up for the carnival", "answer_position": "middle", "adverb": "usually", "full": "My sister usually dresses up for the carnival"},
+    {"sentence_base": "The bell rings", "answer_position": "end", "adverb": "at midnight", "full": "The bell rings at midnight"},
+    {"sentence_base": "Performers wear traditional clothes", "answer_position": "middle", "adverb": "always", "full": "Performers always wear traditional clothes"},
+    {"sentence_base": "Our town organises fireworks", "answer_position": "end", "adverb": "on holidays", "full": "Our town organises fireworks on holidays"},
+    {"sentence_base": "She lights candles", "answer_position": "middle", "adverb": "often", "full": "She often lights candles in the evening"},
+    {"sentence_base": "Tourists come to Brazil", "answer_position": "end", "adverb": "every year", "full": "Tourists come to Brazil every year"},
+    {"sentence_base": "My grandparents keep old traditions", "answer_position": "middle", "adverb": "always", "full": "My grandparents always keep old traditions"},
+    {"sentence_base": "The parade begins", "answer_position": "end", "adverb": "at noon", "full": "The parade begins at noon"},
+    {"sentence_base": "My school organises concerts", "answer_position": "end", "adverb": "on special days", "full": "My school organises concerts on special days"},
+    {"sentence_base": "Families have a special meal", "answer_position": "end", "adverb": "on holidays", "full": "Families have a special meal on holidays"},
+    {"sentence_base": "People take part in the parade", "answer_position": "middle", "adverb": "often", "full": "People often take part in the parade"},
+    {"sentence_base": "Samba schools prepare for the celebration", "answer_position": "middle", "adverb": "usually", "full": "Samba schools usually prepare for the celebration"},
+    {"sentence_base": "He follows superstitions", "answer_position": "middle", "adverb": "sometimes", "full": "He sometimes follows superstitions"}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "speaking_about_yourself",
+  "title": "Расскажи о своём любимом празднике",
+  "category": "speaking",
+  "type": "fill-in-and-speak",
+  "description": "Продолжи подсказку и расскажи сверстнику о своём любимом празднике или семейной традиции",
+  "sections": [
+    {
+      "name": "My favourite festival",
+      "prompts": [
+        "My favourite festival is ___ and it happens in ___",
+        "During this festival my family usually ___ and we ___",
+        "People wear ___ and eat ___ on this holiday",
+        "My family celebrates it because ___",
+        "I believe in some superstitions: for example, I ___",
+        "The most important tradition for us is ___",
+        "I like this celebration because ___",
+        "A festival from another country I'd like to visit is ___"
+      ]
+    }
+  ]
+}

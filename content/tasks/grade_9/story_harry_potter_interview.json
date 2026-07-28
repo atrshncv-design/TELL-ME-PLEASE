@@ -1,0 +1,29 @@
+{
+  "id": "story_harry_potter_interview",
+  "title": "Разговор о фестивалях и традициях",
+  "category": "listening",
+  "type": "role-play",
+  "description": "Проиграй по ролям интервью о праздниках и фестивалях в твоей стране: карнавалы, костюмы, фейерверки и суеверия. Реплики появляются на экране по очереди.",
+  "dialogue": [
+    {"speaker": "student a", "text": "Hi! I'd like to ask you some questions about festivals in your country."},
+    {"speaker": "student b", "text": "Sure! I'll be happy to answer."},
+    {"speaker": "student a", "text": "What are the most popular festivals in your country?"},
+    {"speaker": "student b", "text": "We have many popular festivals, but New Year and Victory Day are very important. People also enjoy local carnivals and city celebrations."},
+    {"speaker": "student a", "text": "Do people wear special clothes at festivals?"},
+    {"speaker": "student b", "text": "Yes, they do. At some festivals people wear traditional clothes or costumes."},
+    {"speaker": "student a", "text": "What do people usually do at a carnival?"},
+    {"speaker": "student b", "text": "They watch parades, listen to music, dance and take photos. It is always very exciting."},
+    {"speaker": "student a", "text": "Do families usually celebrate together?"},
+    {"speaker": "student b", "text": "Yes, they usually do. Families often have a special meal and spend time together."},
+    {"speaker": "student a", "text": "Are fireworks common at celebrations in your country?"},
+    {"speaker": "student b", "text": "Yes, they are. Fireworks are very popular on big holidays."},
+    {"speaker": "student a", "text": "Do people believe in any superstitions connected with holidays?"},
+    {"speaker": "student b", "text": "Some people do. They carry lucky coins or charms before exams and important days."},
+    {"speaker": "student a", "text": "What festival from another country would you like to visit?"},
+    {"speaker": "student b", "text": "I'd like to visit Carnival in Brazil, because it looks colourful and fun."},
+    {"speaker": "student a", "text": "Why do you think festivals are important?"},
+    {"speaker": "student b", "text": "I think they bring people together and help us learn about traditions."},
+    {"speaker": "student a", "text": "That's interesting. Thank you for your answers!"},
+    {"speaker": "student b", "text": "You're welcome. It was nice to talk to you."}
+  ]
+}

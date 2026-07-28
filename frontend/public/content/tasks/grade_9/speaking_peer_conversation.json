@@ -1,0 +1,49 @@
+{
+  "id": "speaking_peer_conversation",
+  "title": "Поговори со сверстником о праздниках",
+  "category": "speaking",
+  "type": "voice-chat",
+  "description": "Задавай вопросы сверстнику из другой страны о его праздниках, фестивалях и традициях",
+  "sections": [
+    {
+      "name": "About festivals in your country",
+      "questions": [
+        "What are the most popular festivals in your country?",
+        "Which festival do you like best and why?",
+        "Do people wear special clothes at festivals in your country?",
+        "Do families usually celebrate festivals together?",
+        "What food do people usually eat on holidays?"
+      ]
+    },
+    {
+      "name": "About carnivals and celebrations",
+      "questions": [
+        "Do you have carnivals in your country?",
+        "What do people usually do at a carnival?",
+        "Do people dance, sing or watch parades at festivals?",
+        "Are fireworks common at celebrations in your country?",
+        "Do children take part in festivals and parades?"
+      ]
+    },
+    {
+      "name": "About traditions and superstitions",
+      "questions": [
+        "What traditions are important in your country?",
+        "Do people decorate their homes before celebrations?",
+        "Do you believe in any superstitions connected with holidays?",
+        "Are there any lucky things or symbols people use on special days?",
+        "Do you think old traditions are still important for teenagers?"
+      ]
+    },
+    {
+      "name": "Comparing countries",
+      "questions": [
+        "What festival from another country would you like to visit?",
+        "Do young people in your country enjoy national holidays?",
+        "Which country do you think has the most interesting celebrations?",
+        "If you could join one festival in another country, which one would you choose?",
+        "Do you prefer big public festivals or small family celebrations?"
+      ]
+    }
+  ]
+}

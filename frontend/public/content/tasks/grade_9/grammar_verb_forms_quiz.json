@@ -1,0 +1,27 @@
+{
+  "id": "grammar_verb_forms_quiz",
+  "title": "Викторина: вставь форму глагола",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола или вспомогательного глагола в предложение (лексика Festivals and traditions)",
+  "items": [
+    {"sentence": "My mum ___ a special meal for celebrations.", "answer": "cooks"},
+    {"sentence": "People ___ traditional clothes during festivals.", "answer": "wear"},
+    {"sentence": "He ___ believe in bad luck.", "answer": "doesn't"},
+    {"sentence": "We ___ songs at the carnival.", "answer": "sing"},
+    {"sentence": "She ___ candles in the evening.", "answer": "lights"},
+    {"sentence": "Our town ___ street parties every summer.", "answer": "organises"},
+    {"sentence": "I ___ nervous before the exam.", "answer": "feel"},
+    {"sentence": "The children ___ decorations for the party.", "answer": "make"},
+    {"sentence": "My grandparents ___ old festival traditions.", "answer": "keep"},
+    {"sentence": "___ your sister believe in superstitions?", "answer": "Does"},
+    {"sentence": "The parade ___ at 10 o'clock.", "answer": "starts"},
+    {"sentence": "My family ___ to church at Christmas.", "answer": "goes"},
+    {"sentence": "The festival ___ people from different places together.", "answer": "brings"},
+    {"sentence": "___ your parents celebrate New Year at home?", "answer": "Do"},
+    {"sentence": "Our town ___ celebrations in the square.", "answer": "organises"},
+    {"sentence": "What ___ your town organise in summer?", "answer": "does"},
+    {"sentence": "The celebration ___ at six o'clock and finishes with fireworks.", "answer": "starts"},
+    {"sentence": "The Chinese Dragon Carnival ___ more than just a festival.", "answer": "is"}
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "grammar_yes_no_questions",
+  "title": "Общие вопросы Do/Does",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Поставь общий вопрос Do / Does к утверждению (лексика Festivals and traditions)",
+  "items": [
+    {"statement": "Your family celebrates New Year in the evening.", "question": "Does your family celebrate New Year in the evening?", "answer": "Does your family celebrate New Year in the evening?"},
+    {"statement": "She wears traditional clothes on festivals.", "question": "Does she wear traditional clothes on festivals?", "answer": "Does she wear traditional clothes on festivals?"},
+    {"statement": "They take part in a parade every spring.", "question": "Do they take part in a parade every spring?", "answer": "Do they take part in a parade every spring?"},
+    {"statement": "He carries a lucky charm in his pocket.", "question": "Does he carry a lucky charm in his pocket?", "answer": "Does he carry a lucky charm in his pocket?"},
+    {"statement": "The celebration starts at 6 p.m.", "question": "Does the celebration start at 6 p.m.?", "answer": "Does the celebration start at 6 p.m.?"},
+    {"statement": "Your sister believes in superstitions.", "question": "Does your sister believe in superstitions?", "answer": "Does your sister believe in superstitions?"},
+    {"statement": "Our school organises concerts on special days.", "question": "Does our school organise concerts on special days?", "answer": "Does our school organise concerts on special days?"},
+    {"statement": "You feel excited before the festival.", "question": "Do you feel excited before the festival?", "answer": "Do you feel excited before the festival?"},
+    {"statement": "The fireworks finish the celebration.", "question": "Do the fireworks finish the celebration?", "answer": "Do the fireworks finish the celebration?"},
+    {"statement": "Your family has a special meal on holidays.", "question": "Does your family have a special meal on holidays?", "answer": "Does your family have a special meal on holidays?"},
+    {"statement": "Your friend believes in bad luck.", "question": "Does your friend believe in bad luck?", "answer": "Does your friend believe in bad luck?"},
+    {"statement": "People wear costumes during the carnival.", "question": "Do people wear costumes during the carnival?", "answer": "Do people wear costumes during the carnival?"},
+    {"statement": "Your town organises fireworks every year.", "question": "Does your town organise fireworks every year?", "answer": "Does your town organise fireworks every year?"},
+    {"statement": "Samba schools prepare for months.", "question": "Do samba schools prepare for months?", "answer": "Do samba schools prepare for months?"},
+    {"statement": "The dragon symbol represents strength and luck.", "question": "Does the dragon symbol represent strength and luck?", "answer": "Does the dragon symbol represent strength and luck?"},
+    {"statement": "Tourists come to Brazil to see the Carnival.", "question": "Do tourists come to Brazil to see the Carnival?", "answer": "Do tourists come to Brazil to see the Carnival?"},
+    {"statement": "The parade fills the city with energy.", "question": "Does the parade fill the city with energy?", "answer": "Does the parade fill the city with energy?"},
+    {"statement": "Your family has a big dinner on Christmas Eve.", "question": "Does your family have a big dinner on Christmas Eve?", "answer": "Does your family have a big dinner on Christmas Eve?"},
+    {"statement": "Your friends light candles on special occasions.", "question": "Do your friends light candles on special occasions?", "answer": "Do your friends light candles on special occasions?"},
+    {"statement": "You decorate the house before festivals.", "question": "Do you decorate the house before festivals?", "answer": "Do you decorate the house before festivals?"}
+  ]
+}

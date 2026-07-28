@@ -1,0 +1,27 @@
+{
+  "id": "grammar_v1_vs_quiz",
+  "title": "V1 / Vs: выбери форму",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Сверху местоимение или подлежащее — выбери правильную форму (лексика Festivals and traditions)",
+  "items": [
+    {"subject": "My sister", "options": ["dress up", "dresses up"], "answer": "dresses up"},
+    {"subject": "The parade", "options": ["begin", "begins"], "answer": "begins"},
+    {"subject": "He", "options": ["watch", "watches"], "answer": "watches"},
+    {"subject": "We", "options": ["sing", "sings"], "answer": "sing"},
+    {"subject": "She", "options": ["light", "lights"], "answer": "lights"},
+    {"subject": "Our town", "options": ["organise", "organises"], "answer": "organises"},
+    {"subject": "The celebration", "options": ["end", "ends"], "answer": "ends"},
+    {"subject": "My cousin", "options": ["follow", "follows"], "answer": "follows"},
+    {"subject": "The ceremony", "options": ["include", "includes"], "answer": "includes"},
+    {"subject": "The bell", "options": ["ring", "rings"], "answer": "rings"},
+    {"subject": "My teacher", "options": ["teach", "teaches"], "answer": "teaches"},
+    {"subject": "My family", "options": ["celebrate", "celebrates"], "answer": "celebrates"},
+    {"subject": "People", "options": ["wear", "wears"], "answer": "wear"},
+    {"subject": "The festival", "options": ["bring", "brings"], "answer": "brings"},
+    {"subject": "They", "options": ["take", "takes"], "answer": "take"},
+    {"subject": "The fireworks", "options": ["finish", "finishes"], "answer": "finish"},
+    {"subject": "Samba schools", "options": ["prepare", "prepares"], "answer": "prepare"},
+    {"subject": "My brother", "options": ["carry", "carries"], "answer": "carries"}
+  ]
+}

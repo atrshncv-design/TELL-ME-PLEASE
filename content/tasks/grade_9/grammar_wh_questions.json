@@ -1,0 +1,27 @@
+{
+  "id": "grammar_wh_questions",
+  "title": "Специальные вопросы",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Составь специальный вопрос: выбери вопросительное слово и вспомогательный глагол (лексика Festivals and traditions)",
+  "question_words": ["What", "Where", "When", "How often", "What time", "Why"],
+  "auxiliary": ["do", "does"],
+  "items": [
+    {"statement": "My family celebrates New Year in the evening.", "hint": "Когда твоя семья празднует Новый год?", "answer": "When does your family celebrate New Year?"},
+    {"statement": "She wears traditional clothes on festivals.", "hint": "Что она надевает на фестивали?", "answer": "What does she wear on festivals?"},
+    {"statement": "He carries a lucky charm in his pocket.", "hint": "Что он носит в кармане?", "answer": "What does he carry in his pocket?"},
+    {"statement": "They take part in a parade every spring.", "hint": "Как часто они участвуют в параде?", "answer": "How often do they take part in a parade?"},
+    {"statement": "We make decorations for the party.", "hint": "Что вы делаете для вечеринки?", "answer": "What do you make for the party?"},
+    {"statement": "The celebration starts at 6 p.m.", "hint": "Во сколько начинается празднование?", "answer": "What time does the celebration start?"},
+    {"statement": "My sister believes in superstitions.", "hint": "Во что верит твоя сестра?", "answer": "What does your sister believe in?"},
+    {"statement": "Our school organises concerts on special days.", "hint": "Что ваша школа организует в особенные дни?", "answer": "What does your school organise on special days?"},
+    {"statement": "I feel excited before the festival.", "hint": "Как ты себя чувствуешь перед фестивалем?", "answer": "How do you feel before the festival?"},
+    {"statement": "The fireworks finish the celebration.", "hint": "Чем заканчивается празднование?", "answer": "What do the fireworks finish?"},
+    {"statement": "The parade begins at noon.", "hint": "Когда начинается парад?", "answer": "When does the parade begin?"},
+    {"statement": "People celebrate this event with great excitement.", "hint": "Как люди празднуют это событие?", "answer": "How do people celebrate this event?"},
+    {"statement": "Performers wear traditional clothes.", "hint": "Что носят артисты?", "answer": "What do performers wear?"},
+    {"statement": "The dragon symbol is very important in Chinese culture.", "hint": "Почему символ дракона очень важен в китайской культуре?", "answer": "Why is the dragon symbol very important in Chinese culture?"},
+    {"statement": "Samba schools prepare for months.", "hint": "Как долго готовятся школы самбы?", "answer": "How long do samba schools prepare?"},
+    {"statement": "Tourists come to Brazil for the celebration.", "hint": "Куда приезжают туристы ради праздника?", "answer": "Where do tourists come for the celebration?"}
+  ]
+}
