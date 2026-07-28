@@ -7,7 +7,14 @@
 
 ## Скопируй этот текст ↓↓↓
 
-Я подключил к этой сессии репозиторий GitHub: **atrshncv-design/TELL-ME-PLEASE**
+Сначала **склонируй репозиторий проекта** с GitHub:
+
+```
+git clone https://github.com/atrshncv-design/TELL-ME-PLEASE.git
+cd TELL-ME-PLEASE
+```
+
+Это репозиторий: **https://github.com/atrshncv-design/TELL-ME-PLEASE**
 
 Это интерактивная голосовая платформа для изучения английского школьниками 5–9 классов. Стек: **Next.js 16 (App Router, Turbopack) фронтенд + FastAPI/WebSocket бэкенд + Kokoro TTS в Docker + OpenCode Zen как LLM**.
 
@@ -17,7 +24,7 @@
 
 ### Пошаговый план:
 
-1. **Прочитай документацию проекта:**
+1. **Прочитай документацию проекта** (внутри склонированной папки):
    - `START.md` — точка входа
    - `DEPLOY.md` — полная инструкция по окружению (используй как референс всех переменных и портов)
    - `# Architecture Specification.md` и `# Product Requirements Document (PRD).md` — что это за продукт
