@@ -1,0 +1,27 @@
+{
+  "id": "grammar_verb_forms_quiz",
+  "title": "Викторина: вставь форму глагола",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола или вспомогательного глагола (лексика о блогере, работе и мнениях)",
+  "items": [
+    {"sentence": "My friend ___ like playing video games online.", "answer": "doesn't"},
+    {"sentence": "___ she send text messages every day?", "answer": "Does"},
+    {"sentence": "He usually ___ new apps in the evening.", "answer": "downloads"},
+    {"sentence": "My parents ___ use public transport, they drive a car.", "answer": "don't"},
+    {"sentence": "___ your brother study programming at school?", "answer": "Does"},
+    {"sentence": "My sister ___ a part-time job on Sundays.", "answer": "has"},
+    {"sentence": "___ he play the guitar in a band?", "answer": "Does"},
+    {"sentence": "I ___ agree with your opinion about this film.", "answer": "don't"},
+    {"sentence": "My manager ___ me at 12 PM to discuss new projects.", "answer": "calls"},
+    {"sentence": "Lily ___ work in the afternoon, she edits my videos.", "answer": "doesn't"},
+    {"sentence": "Thousands of people ___ me stream a new game.", "answer": "watch"},
+    {"sentence": "My fans ___ me funny messages every day.", "answer": "send"},
+    {"sentence": "___ you often feel stressed before exams?", "answer": "Do"},
+    {"sentence": "Modern teens ___ watch TV, they watch TikTok.", "answer": "don't"},
+    {"sentence": "What ___ you want to be when you finish school?", "answer": "do"},
+    {"sentence": "How often ___ you check your notifications?", "answer": "do"},
+    {"sentence": "Influencers ___ live an easy life, they work very hard.", "answer": "don't"},
+    {"sentence": "Where ___ the pilot fly to?", "answer": "does"}
+  ]
+}

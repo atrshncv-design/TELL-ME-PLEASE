@@ -1,0 +1,24 @@
+{
+  "id": "grammar_roulette",
+  "title": "Рулетка: все части предложения",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола V1 / Vs (лексика о блогере, работе и привычках)",
+  "items": [
+    {"sentence": "My girlfriend ___ breakfast for us every morning.", "verb": "make", "answer": "makes"},
+    {"sentence": "My manager ___ me at 12 PM to discuss new projects.", "verb": "call", "answer": "calls"},
+    {"sentence": "I ___ up early because my day starts at 10 AM.", "verb": "not wake", "answer": "don't wake up"},
+    {"sentence": "Thousands of people ___ me stream a new game.", "verb": "watch", "answer": "watch"},
+    {"sentence": "My fans ___ me funny messages every day.", "verb": "send", "answer": "send"},
+    {"sentence": "The surgeon ___ on sick people in a hospital.", "verb": "operate", "answer": "operates"},
+    {"sentence": "The mechanic ___ cars and changes tires.", "verb": "fix", "answer": "fixes"},
+    {"sentence": "The gardener ___ trees and waters the flowers.", "verb": "plant", "answer": "plants"},
+    {"sentence": "The journalist ___ articles for a famous magazine.", "verb": "write", "answer": "writes"},
+    {"sentence": "The programmer ___ code and creates new apps.", "verb": "write", "answer": "writes"},
+    {"sentence": "The pilot ___ planes to different countries.", "verb": "fly", "answer": "flies"},
+    {"sentence": "The chef ___ delicious meals in a restaurant.", "verb": "cook", "answer": "cooks"},
+    {"sentence": "The vet ___ sick dogs and cats.", "verb": "treat", "answer": "treats"},
+    {"sentence": "The teacher ___ difficult rules to students.", "verb": "explain", "answer": "explains"},
+    {"sentence": "Influencers ___ an easy life.", "verb": "live", "answer": "live"}
+  ]
+}

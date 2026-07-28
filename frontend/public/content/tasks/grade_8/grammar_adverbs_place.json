@@ -1,0 +1,26 @@
+{
+  "id": "grammar_adverbs_place",
+  "title": "Наречия: вставь в правильное место",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Реши: наречие частоты — между подлежащим и сказуемым, а обстоятельство времени — в конец предложения (привычки подростка)",
+  "available_adverbs": ["always", "usually", "often", "sometimes", "never", "every day", "after school", "on weekends", "at night", "in the evening", "on Monday mornings", "during lessons"],
+  "items": [
+    {"sentence_base": "I text my friends", "answer_position": "middle", "adverb": "always", "full": "I always text my friends during lessons"},
+    {"sentence_base": "I argue with my parents", "answer_position": "middle", "adverb": "never", "full": "I never argue with my parents at night"},
+    {"sentence_base": "I download new games", "answer_position": "middle", "adverb": "usually", "full": "I usually download new games on weekends"},
+    {"sentence_base": "I forget to charge my phone", "answer_position": "middle", "adverb": "often", "full": "I often forget to charge my phone in the evening"},
+    {"sentence_base": "I buy fast food", "answer_position": "middle", "adverb": "sometimes", "full": "I sometimes buy fast food after school"},
+    {"sentence_base": "I do my homework on time", "answer_position": "middle", "adverb": "always", "full": "I always do my homework on time"},
+    {"sentence_base": "I watch scary movies", "answer_position": "middle", "adverb": "never", "full": "I never watch scary movies at night"},
+    {"sentence_base": "I help my mom with the housework", "answer_position": "middle", "adverb": "usually", "full": "I usually help my mom with the housework on weekends"},
+    {"sentence_base": "I feel tired", "answer_position": "middle", "adverb": "often", "full": "I often feel tired on Monday mornings"},
+    {"sentence_base": "I go to the cinema with friends", "answer_position": "middle", "adverb": "sometimes", "full": "I sometimes go to the cinema with friends after school"},
+    {"sentence_base": "I cheat in tests", "answer_position": "middle", "adverb": "never", "full": "I never cheat in tests"},
+    {"sentence_base": "I listen to music when I study", "answer_position": "middle", "adverb": "always", "full": "I always listen to music when I study in the evening"},
+    {"sentence_base": "I spend my pocket money on clothes", "answer_position": "middle", "adverb": "usually", "full": "I usually spend my pocket money on clothes on weekends"},
+    {"sentence_base": "I surf the Net for funny memes", "answer_position": "middle", "adverb": "often", "full": "I often surf the Net for funny memes at night"},
+    {"sentence_base": "I throw litter on the street", "answer_position": "middle", "adverb": "never", "full": "I never throw litter on the street"},
+    {"sentence_base": "My manager calls me", "answer_position": "end", "adverb": "every day", "full": "My manager calls me every day"}
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "grammar_ladder",
+  "title": "Лесенка: день блогера и привычки подростка",
+  "category": "grammar",
+  "type": "ladder",
+  "description": "Наступай на ступеньки, подсвечивая слова. Лесенка 1 — день блогера (снизу вверх), Лесенка 2 — день подростка (сверху вниз)",
+  "ladders": [
+    {
+      "id": "blogger",
+      "direction": "up",
+      "title": "День блогера (снизу вверх)",
+      "steps": [
+        "My day starts at 10 AM.",
+        "My day starts at 10 AM because I don't wake up early.",
+        "My day starts at 10 AM because I don't wake up early and my girlfriend makes breakfast.",
+        "My day starts at 10 AM because I don't wake up early, so my girlfriend makes breakfast for us.",
+        "After breakfast I check my emails and comments.",
+        "After breakfast I check my emails, my manager calls me and we discuss new projects.",
+        "At 5 PM I stream a new game and thousands of people watch me.",
+        "I love my job: I check emails, discuss projects, stream games and my fans send me funny messages."
+      ]
+    },
+    {
+      "id": "teenday",
+      "direction": "down",
+      "title": "Привычки подростка (сверху вниз)",
+      "steps": [
+        "I study English because I want to travel, I read detective novels in bed and I dream of becoming a famous blogger.",
+        "I study English because I want to travel and I read detective novels in bed.",
+        "I study English because I want to travel and meet new people.",
+        "I study English because I want to travel.",
+        "I sometimes argue with my best friend about silly things.",
+        "I don't trust strangers on the Internet and I never share my secrets.",
+        "I don't like waking up early on weekends.",
+        "I dream of becoming a famous blogger."
+      ]
+    }
+  ]
+}

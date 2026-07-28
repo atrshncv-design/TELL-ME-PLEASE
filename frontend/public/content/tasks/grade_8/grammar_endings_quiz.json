@@ -1,0 +1,51 @@
+{
+  "id": "grammar_endings_quiz",
+  "title": "Окончания: викторина",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильное окончание для формы he/she/it (лексика о работе, привычках и мнениях)",
+  "groups": [
+    {
+      "name": "Обычные с -s",
+      "items": [
+        {"question": "play → ?", "options": ["plays", "play"], "answer": "plays"},
+        {"question": "download → ?", "options": ["download", "downloads"], "answer": "downloads"},
+        {"question": "send → ?", "options": ["sends", "send"], "answer": "sends"},
+        {"question": "write → ?", "options": ["write", "writes"], "answer": "writes"},
+        {"question": "create → ?", "options": ["creates", "create"], "answer": "creates"},
+        {"question": "travel → ?", "options": ["travel", "travels"], "answer": "travels"}
+      ]
+    },
+    {
+      "name": "Обычные с -es (шипящие/свистящие и -o)",
+      "items": [
+        {"question": "watch → ?", "options": ["watches", "watch"], "answer": "watches"},
+        {"question": "go → ?", "options": ["go", "goes"], "answer": "goes"},
+        {"question": "do → ?", "options": ["does", "do"], "answer": "does"},
+        {"question": "teach → ?", "options": ["teach", "teaches"], "answer": "teaches"},
+        {"question": "fix → ?", "options": ["fixes", "fix"], "answer": "fixes"},
+        {"question": "wash → ?", "options": ["wash", "washes"], "answer": "washes"}
+      ]
+    },
+    {
+      "name": "y → ies (перед y согласная)",
+      "items": [
+        {"question": "study → ?", "options": ["studys", "studies"], "answer": "studies"},
+        {"question": "carry → ?", "options": ["carries", "carrys"], "answer": "carries"},
+        {"question": "hurry → ?", "options": ["hurries", "hurrys"], "answer": "hurries"},
+        {"question": "worry → ?", "options": ["worrys", "worries"], "answer": "worries"},
+        {"question": "fly → ?", "options": ["flys", "flies"], "answer": "flies"}
+      ]
+    },
+    {
+      "name": "y после гласной (окончание не меняется, просто -s)",
+      "items": [
+        {"question": "play → ?", "options": ["play", "plays"], "answer": "plays"},
+        {"question": "enjoy → ?", "options": ["enjoys", "enjoy"], "answer": "enjoys"},
+        {"question": "stay → ?", "options": ["stay", "stays"], "answer": "stays"},
+        {"question": "say → ?", "options": ["says", "say"], "answer": "says"},
+        {"question": "buy → ?", "options": ["buys", "buy"], "answer": "buys"}
+      ]
+    }
+  ]
+}

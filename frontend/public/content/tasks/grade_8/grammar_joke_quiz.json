@@ -1,0 +1,29 @@
+{
+  "id": "grammar_joke_quiz",
+  "title": "Шутка: V1/Vs",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Забавные предложения о блогерах, подростках и работе — выбери правильную форму первого глагола",
+  "items": [
+    {"sentence": "My friend ___ playing video games online but he hates losing.", "options": ["like", "likes"], "answer": "likes"},
+    {"sentence": "She ___ text messages every day and runs out of credit.", "options": ["send", "sends"], "answer": "sends"},
+    {"sentence": "My sister ___ a part-time job on Sundays and spends all the money on snacks.", "options": ["have", "has"], "answer": "has"},
+    {"sentence": "He ___ the guitar in a band and plays very badly at school concerts.", "options": ["play", "plays"], "answer": "plays"},
+    {"sentence": "My dog ___ my school shoes and then looks innocent.", "options": ["chew", "chews"], "answer": "chews"},
+    {"sentence": "Boys ___ shopping for clothes and then buy everything in the sale.", "options": ["hate", "hates"], "answer": "hate"},
+    {"sentence": "Girls ___ hours on social media and forget to eat dinner.", "options": ["spend", "spends"], "answer": "spend"},
+    {"sentence": "A good friend never ___ with you, but my best friend always does.", "options": ["argue", "argues"], "answer": "argues"},
+    {"sentence": "Influencers ___ an easy life, or so everyone thinks.", "options": ["live", "lives"], "answer": "live"},
+    {"sentence": "My manager ___ me at 12 PM and asks why I am still asleep.", "options": ["call", "calls"], "answer": "calls"},
+    {"sentence": "Thousands of people ___ me stream and write funny comments in the chat.", "options": ["watch", "watches"], "answer": "watch"},
+    {"sentence": "My fans ___ me funny messages and I laugh all day long.", "options": ["send", "sends"], "answer": "send"},
+    {"sentence": "My girlfriend ___ cooking, but she always burns the breakfast.", "options": ["love", "loves"], "answer": "loves"},
+    {"sentence": "The surgeon ___ on sick people and never sleeps at night.", "options": ["operate", "operates"], "answer": "operates"},
+    {"sentence": "The mechanic ___ cars and gets his hands dirty every single day.", "options": ["fix", "fixes"], "answer": "fixes"},
+    {"sentence": "The gardener ___ trees and talks to the flowers like old friends.", "options": ["plant", "plants"], "answer": "plants"},
+    {"sentence": "The vet ___ sick dogs and cats and gets bitten twice a week.", "options": ["treat", "treats"], "answer": "treats"},
+    {"sentence": "The pilot ___ planes to different countries and never sees his family.", "options": ["fly", "flies"], "answer": "flies"},
+    {"sentence": "The programmer ___ code all night and forgets what sunlight looks like.", "options": ["write", "writes"], "answer": "writes"},
+    {"sentence": "Modern teens ___ TikTok for hours and then say they have no free time.", "options": ["watch", "watches"], "answer": "watch"}
+  ]
+}

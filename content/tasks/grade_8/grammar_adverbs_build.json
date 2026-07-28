@@ -1,0 +1,11 @@
+{
+  "id": "grammar_adverbs_build",
+  "title": "Наречия: построй предложения",
+  "category": "grammar",
+  "type": "build-sentence",
+  "description": "Составь как можно больше предложений о своих привычках, комбинируя наречие частоты и время",
+  "adverbs": ["always", "usually", "often", "sometimes", "never"],
+  "time_phrases": ["during lessons", "on weekends", "after school", "on Monday mornings", "at night", "in the evening"],
+  "base_verb": "text my friends",
+  "subject": "I"
+}

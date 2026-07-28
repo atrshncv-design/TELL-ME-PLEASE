@@ -1,0 +1,51 @@
+{
+  "id": "speaking_peer_conversation",
+  "title": "Поговори со сверстником о предпочтениях",
+  "category": "speaking",
+  "type": "voice-chat",
+  "description": "Задавай вопросы сверстнику из другой страны о технологиях, хобби, здоровье и планах на будущее (8 класс)",
+  "sections": [
+    {
+      "name": "Technology and social media",
+      "questions": [
+        "Do you spend much time on social media every day?",
+        "What kind of apps do you usually download on your smartphone?",
+        "Do you prefer texting your friends or calling them?",
+        "How often do you check your notifications?"
+      ]
+    },
+    {
+      "name": "Hobbies and free time",
+      "questions": [
+        "What do you usually do in your free time after school?",
+        "Do you play any computer games or do you prefer active sports?",
+        "Do you listen to music when you do your homework?",
+        "Does your school have a drama or an art club?"
+      ]
+    },
+    {
+      "name": "Health and lifestyle",
+      "questions": [
+        "Do you eat a lot of junk food or do you try to keep a healthy diet?",
+        "How much water do you drink during the day?",
+        "Do you often feel stressed before exams at school?"
+      ]
+    },
+    {
+      "name": "School and future job",
+      "questions": [
+        "What subjects do you study at school?",
+        "Do you have a part-time job on weekends or holidays?",
+        "What do you want to be when you finish school?"
+      ]
+    },
+    {
+      "name": "Environment and city",
+      "questions": [
+        "Do you and your family recycle paper, plastic and glass?",
+        "Do teenagers in your country care about the environment?",
+        "What do you do to help the environment?"
+      ]
+    }
+  ]
+}

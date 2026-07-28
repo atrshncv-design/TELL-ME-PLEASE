@@ -1,0 +1,24 @@
+{
+  "id": "grammar_negation",
+  "title": "Отрицание",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильную отрицательную форму: don't / doesn't (лексика о блогере, привычках и мнениях)",
+  "items": [
+    {"sentence": "She ___ believe in stereotypes about teenagers.", "options": ["don't believe", "doesn't believe", "isn't believe", "not believes"], "answer": "doesn't believe"},
+    {"sentence": "He ___ download new apps in the evening.", "options": ["don't download", "doesn't download", "isn't download", "not download"], "answer": "doesn't download"},
+    {"sentence": "My parents ___ use public transport, they drive a car.", "options": ["doesn't use", "don't use", "aren't use", "not use"], "answer": "don't use"},
+    {"sentence": "I ___ agree with your opinion about this film.", "options": ["doesn't agree", "don't agree", "isn't agree", "not agree"], "answer": "don't agree"},
+    {"sentence": "My friend ___ like waking up early.", "options": ["don't like", "doesn't like", "isn't like", "not like"], "answer": "doesn't like"},
+    {"sentence": "We ___ go to the gym on Mondays, we are too tired.", "options": ["doesn't go", "don't go", "aren't go", "not go"], "answer": "don't go"},
+    {"sentence": "Lily ___ work in the afternoon, she edits videos instead.", "options": ["don't work", "doesn't work", "isn't work", "not work"], "answer": "doesn't work"},
+    {"sentence": "Modern teens ___ watch TV, they watch TikTok.", "options": ["doesn't watch", "don't watch", "aren't watch", "not watch"], "answer": "don't watch"},
+    {"sentence": "Gamers ___ do sports, they only move their fingers.", "options": ["doesn't do", "don't do", "aren't do", "not do"], "answer": "don't do"},
+    {"sentence": "Influencers ___ live an easy life, they work very hard.", "options": ["doesn't live", "don't live", "aren't live", "not live"], "answer": "don't live"},
+    {"sentence": "A true hero ___ feel fear.", "options": ["don't feel", "doesn't feel", "isn't feel", "not feel"], "answer": "doesn't feel"},
+    {"sentence": "My classmates ___ listen to the teacher during the test.", "options": ["doesn't listen", "don't listen", "aren't listen", "not listen"], "answer": "don't listen"},
+    {"sentence": "I ___ trust strangers on the Internet.", "options": ["doesn't trust", "don't trust", "isn't trust", "not trust"], "answer": "don't trust"},
+    {"sentence": "He ___ drive a car, he rides a bike.", "options": ["doesn't drive", "don't drive", "isn't drive", "not drive"], "answer": "doesn't drive"},
+    {"sentence": "I ___ think it is a good idea.", "options": ["don't think", "doesn't think", "isn't think", "not think"], "answer": "don't think"}
+  ]
+}

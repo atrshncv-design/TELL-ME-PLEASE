@@ -1,0 +1,24 @@
+{
+  "id": "speaking_about_yourself",
+  "title": "Расскажи о себе: технологии, хобби и планы",
+  "category": "speaking",
+  "type": "fill-in-and-speak",
+  "description": "Продолжи подсказку и расскажи сверстнику о своих привычках, интересах и планах на будущее",
+  "sections": [
+    {
+      "name": "My life and plans",
+      "prompts": [
+        "I usually spend ___ time on social media every day and I ___",
+        "On my smartphone I usually download apps that ___",
+        "I prefer ___ my friends because I ___",
+        "After school I usually ___ and then I ___",
+        "When I do my homework I often ___ because it ___",
+        "I try to keep a healthy diet, but I sometimes ___",
+        "I often feel stressed before exams because I ___",
+        "When I finish school I want to be ___ because I ___",
+        "I think modern teenagers ___ because they ___",
+        "I never ___ because I ___"
+      ]
+    }
+  ]
+}

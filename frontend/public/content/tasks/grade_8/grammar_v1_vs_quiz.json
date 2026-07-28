@@ -1,0 +1,27 @@
+{
+  "id": "grammar_v1_vs_quiz",
+  "title": "V1 / Vs: выбери форму",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Сверху подлежащее — выбери правильную форму (лексика о работе, подростках и мнениях)",
+  "items": [
+    {"subject": "I", "options": ["play", "plays"], "answer": "play"},
+    {"subject": "You", "options": ["download", "downloads"], "answer": "download"},
+    {"subject": "She", "options": ["write", "writes"], "answer": "writes"},
+    {"subject": "They", "options": ["study", "studies"], "answer": "study"},
+    {"subject": "My friend", "options": ["go", "goes"], "answer": "goes"},
+    {"subject": "My parents", "options": ["drive", "drives"], "answer": "drive"},
+    {"subject": "He", "options": ["fix", "fixes"], "answer": "fixes"},
+    {"subject": "Teenagers", "options": ["spend", "spends"], "answer": "spend"},
+    {"subject": "My sister", "options": ["have", "has"], "answer": "has"},
+    {"subject": "My manager", "options": ["call", "calls"], "answer": "calls"},
+    {"subject": "My girlfriend", "options": ["make", "makes"], "answer": "makes"},
+    {"subject": "Students", "options": ["do", "does"], "answer": "do"},
+    {"subject": "My fans", "options": ["send", "sends"], "answer": "send"},
+    {"subject": "A good friend", "options": ["argue", "argues"], "answer": "argues"},
+    {"subject": "Gamers", "options": ["play", "plays"], "answer": "play"},
+    {"subject": "Influencers", "options": ["live", "lives"], "answer": "live"},
+    {"subject": "A true hero", "options": ["feel", "feels"], "answer": "feels"},
+    {"subject": "Modern teens", "options": ["watch", "watches"], "answer": "watch"}
+  ]
+}

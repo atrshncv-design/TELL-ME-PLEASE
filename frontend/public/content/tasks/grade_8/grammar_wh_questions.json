@@ -1,0 +1,27 @@
+{
+  "id": "grammar_wh_questions",
+  "title": "Специальные вопросы",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Составь специальный вопрос: выбери вопросительное слово и вспомогательный глагол (лексика о блогере, работе и привычках)",
+  "question_words": ["What", "Where", "When", "How often", "Why", "Who"],
+  "auxiliary": ["do", "does"],
+  "items": [
+    {"statement": "Teenagers usually live in big cities.", "hint": "Где живут подростки?", "answer": "Where do teenagers live?"},
+    {"statement": "Your friend studies programming at school.", "hint": "Что твой друг изучает в школе?", "answer": "What does your friend study at school?"},
+    {"statement": "You check your notifications every five minutes.", "hint": "Как часто ты проверяешь уведомления?", "answer": "How often do you check your notifications?"},
+    {"statement": "Your manager calls you at 12 PM.", "hint": "Когда твой менеджер звонит тебе?", "answer": "When does your manager call you?"},
+    {"statement": "Lily edits your videos in the afternoon.", "hint": "Когда Лили монтирует твои видео?", "answer": "When does Lily edit your videos?"},
+    {"statement": "He writes code and creates new apps.", "hint": "Что он пишет и создаёт?", "answer": "What does he write and create?"},
+    {"statement": "The pilot flies planes to different countries.", "hint": "Куда пилот летает?", "answer": "Where does the pilot fly to?"},
+    {"statement": "The chef cooks delicious meals in a restaurant.", "hint": "Где шеф-повар готовит вкусные блюда?", "answer": "Where does the chef cook delicious meals?"},
+    {"statement": "You download new games on weekends.", "hint": "Когда ты скачиваешь новые игры?", "answer": "When do you download new games?"},
+    {"statement": "You spend your pocket money on clothes.", "hint": "На что ты тратишь карманные деньги?", "answer": "What do you spend your pocket money on?"},
+    {"statement": "You go to the dentist twice a year.", "hint": "Как часто ты ходишь к стоматологу?", "answer": "How often do you go to the dentist?"},
+    {"statement": "Your sister has a part-time job on Sundays.", "hint": "Когда у сестры подработка?", "answer": "When does your sister have a part-time job?"},
+    {"statement": "Your fans send you funny messages every day.", "hint": "Что твои фанаты присылают тебе?", "answer": "What do your fans send you?"},
+    {"statement": "He drives a car to work.", "hint": "На чём он ездит на работу?", "answer": "What does he drive to work?"},
+    {"statement": "Modern teens watch TikTok for hours.", "hint": "Что современные подростки смотрят часами?", "answer": "What do modern teens watch for hours?"},
+    {"statement": "You want to be a famous blogger when you finish school.", "hint": "Кем ты хочешь стать?", "answer": "Who do you want to be?"}
+  ]
+}

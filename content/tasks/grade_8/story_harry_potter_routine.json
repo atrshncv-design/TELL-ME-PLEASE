@@ -1,0 +1,87 @@
+{
+  "id": "story_harry_potter_routine",
+  "title": "Распорядок дня блогера",
+  "category": "vocabulary",
+  "type": "fill-in",
+  "description": "Вставь глагол в правильную форму Present Simple (распорядок дня блогера и его подруги)",
+  "story": [
+    {
+      "text": "Hi guys! My name is Max and I am a full-time blogger.",
+      "blank": null
+    },
+    {
+      "text": "My life ___ very busy because I stream every day.",
+      "verb": "be",
+      "answer": "is"
+    },
+    {
+      "text": "My day ___ at 10 AM and I don't wake up early.",
+      "verb": "start",
+      "answer": "starts"
+    },
+    {
+      "text": "My girlfriend Lily ___ breakfast for us because she loves cooking.",
+      "verb": "make",
+      "answer": "makes"
+    },
+    {
+      "text": "After breakfast I ___ my emails and comments from my fans.",
+      "verb": "check",
+      "answer": "check"
+    },
+    {
+      "text": "My manager ___ me at 12 PM and we discuss new projects.",
+      "verb": "call",
+      "answer": "calls"
+    },
+    {
+      "text": "Lily ___ work in the afternoon, so she edits my videos.",
+      "verb": "not work",
+      "answer": "doesn't work"
+    },
+    {
+      "text": "At 5 PM I ___ a new game and thousands of people watch me.",
+      "verb": "stream",
+      "answer": "stream"
+    },
+    {
+      "text": "My fans ___ me funny messages and I laugh all day long.",
+      "verb": "send",
+      "answer": "send"
+    },
+    {
+      "text": "We ___ tired because we love our job and drink a lot of coffee.",
+      "verb": "not feel",
+      "answer": "don't feel"
+    },
+    {
+      "text": "Being a blogger ___, and I really think it rocks!",
+      "verb": "rock",
+      "answer": "rocks"
+    },
+    {
+      "text": "My friend Alex wants to be a blogger too.",
+      "blank": null
+    },
+    {
+      "text": "He ___ all his pocket money on new games and equipment.",
+      "verb": "spend",
+      "answer": "spends"
+    },
+    {
+      "text": "He ___ to wake up early, so he sleeps until noon.",
+      "verb": "not like",
+      "answer": "doesn't like"
+    },
+    {
+      "text": "He ___ detective novels in bed before he goes to sleep.",
+      "verb": "read",
+      "answer": "reads"
+    },
+    {
+      "text": "Alex ___ of becoming a famous blogger and travelling the world.",
+      "verb": "dream",
+      "answer": "dreams"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "grammar_yes_no_questions",
+  "title": "Общие вопросы Do/Does",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Поставь общий вопрос Do / Does к утверждению (лексика о блогере, работе и привычках)",
+  "items": [
+    {"statement": "Your friend likes playing video games online.", "question": "Does your friend like playing video games online?", "answer": "Does your friend like playing video games online?"},
+    {"statement": "She sends text messages every day.", "question": "Does she send text messages every day?", "answer": "Does she send text messages every day?"},
+    {"statement": "He downloads new apps in the evening.", "question": "Does he download new apps in the evening?", "answer": "Does he download new apps in the evening?"},
+    {"statement": "Your parents use public transport.", "question": "Do your parents use public transport?", "answer": "Do your parents use public transport?"},
+    {"statement": "You always complain about your homework.", "question": "Do you always complain about your homework?", "answer": "Do you always complain about your homework?"},
+    {"statement": "Your brother studies programming at school.", "question": "Does your brother study programming at school?", "answer": "Does your brother study programming at school?"},
+    {"statement": "Your sister has a part-time job on Sundays.", "question": "Does your sister have a part-time job on Sundays?", "answer": "Does your sister have a part-time job on Sundays?"},
+    {"statement": "He plays the guitar in a band.", "question": "Does he play the guitar in a band?", "answer": "Does he play the guitar in a band?"},
+    {"statement": "You agree with my opinion about this film.", "question": "Do you agree with my opinion about this film?", "answer": "Do you agree with my opinion about this film?"},
+    {"statement": "Your dog chews your school shoes.", "question": "Does your dog chew your school shoes?", "answer": "Does your dog chew your school shoes?"},
+    {"statement": "Your manager calls you at 12 PM.", "question": "Does your manager call you at 12 PM?", "answer": "Does your manager call you at 12 PM?"},
+    {"statement": "Lily edits your videos.", "question": "Does Lily edit your videos?", "answer": "Does Lily edit your videos?"},
+    {"statement": "Thousands of people watch your stream.", "question": "Do thousands of people watch your stream?", "answer": "Do thousands of people watch your stream?"},
+    {"statement": "Your fans send you funny messages.", "question": "Do your fans send you funny messages?", "answer": "Do your fans send you funny messages?"},
+    {"statement": "You and your family recycle paper, plastic and glass.", "question": "Do you and your family recycle paper, plastic and glass?", "answer": "Do you and your family recycle paper, plastic and glass?"},
+    {"statement": "Your friend dreams of becoming a famous blogger.", "question": "Does your friend dream of becoming a famous blogger?", "answer": "Does your friend dream of becoming a famous blogger?"},
+    {"statement": "You check your notifications every five minutes.", "question": "Do you check your notifications every five minutes?", "answer": "Do you check your notifications every five minutes?"},
+    {"statement": "Your school has a drama or an art club.", "question": "Does your school have a drama or an art club?", "answer": "Does your school have a drama or an art club?"},
+    {"statement": "You often feel stressed before exams.", "question": "Do you often feel stressed before exams?", "answer": "Do you often feel stressed before exams?"},
+    {"statement": "You have a part-time job on weekends.", "question": "Do you have a part-time job on weekends?", "answer": "Do you have a part-time job on weekends?"}
+  ]
+}
