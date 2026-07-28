@@ -1,0 +1,39 @@
+{
+  "id": "grammar_ladder",
+  "title": "Лесенка: Up and Down",
+  "category": "grammar",
+  "type": "ladder",
+  "description": "Наступай на ступеньки, подсвечивая слова. Лесенка 1 — свободное время (снизу-вверх), Лесенка 2 — вечер (сверху-вниз)",
+  "ladders": [
+    {
+      "id": "freetime",
+      "direction": "up",
+      "title": "Свободное время (снизу вверх)",
+      "steps": [
+        "I play computer games.",
+        "I play computer games after school.",
+        "I play computer games after school in the afternoon.",
+        "I play computer games after school in the afternoon and listen to music.",
+        "I play computer games after school, listen to music and draw pictures.",
+        "I play computer games after school, listen to music, draw pictures and read comics.",
+        "I play computer games after school, listen to music, draw pictures, read comics and chat with my friends.",
+        "In my free time, I play computer games, listen to music, draw pictures, read comics and chat with my friends."
+      ]
+    },
+    {
+      "id": "evening",
+      "direction": "down",
+      "title": "Вечер (сверху вниз)",
+      "steps": [
+        "In the evening, I eat dinner, talk with my friends, play board games and watch a DVD before I go to bed.",
+        "In the evening, I eat dinner, talk with my friends, play board games and watch a DVD.",
+        "In the evening, I eat dinner, talk with my friends and play board games.",
+        "In the evening, I eat dinner and talk with my friends.",
+        "In the evening, I eat dinner and watch a DVD.",
+        "In the evening, I eat dinner and relax.",
+        "In the evening, I read comics and relax.",
+        "I go to bed."
+      ]
+    }
+  ]
+}

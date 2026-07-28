@@ -1,0 +1,49 @@
+{
+  "id": "grammar_endings_quiz",
+  "title": "Окончания: викторина",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильное окончание для формы he/she/it",
+  "groups": [
+    {
+      "name": "Обычные с -s",
+      "items": [
+        {"question": "want → ?", "options": ["want", "wants"], "answer": "wants"},
+        {"question": "open → ?", "options": ["opens", "open"], "answer": "opens"},
+        {"question": "visit → ?", "options": ["visit", "visits"], "answer": "visits"},
+        {"question": "jump → ?", "options": ["jumps", "jump"], "answer": "jumps"},
+        {"question": "dance → ?", "options": ["dance", "dances"], "answer": "dances"}
+      ]
+    },
+    {
+      "name": "Обычные с -es (шипящие/свистящие и -o)",
+      "items": [
+        {"question": "watch → ?", "options": ["watch", "watches"], "answer": "watches"},
+        {"question": "pass → ?", "options": ["passes", "pass"], "answer": "passes"},
+        {"question": "fix → ?", "options": ["fix", "fixes"], "answer": "fixes"},
+        {"question": "go → ?", "options": ["goes", "go"], "answer": "goes"},
+        {"question": "miss → ?", "options": ["miss", "misses"], "answer": "misses"}
+      ]
+    },
+    {
+      "name": "y → ies (перед y согласная)",
+      "items": [
+        {"question": "study → ?", "options": ["studys", "studies"], "answer": "studies"},
+        {"question": "carry → ?", "options": ["carries", "carry"], "answer": "carries"},
+        {"question": "hurry → ?", "options": ["hurries", "hurrys"], "answer": "hurries"},
+        {"question": "try → ?", "options": ["trys", "tries"], "answer": "tries"},
+        {"question": "fly → ?", "options": ["flies", "flys"], "answer": "flies"}
+      ]
+    },
+    {
+      "name": "y после гласной (окончание не меняется, просто -s)",
+      "items": [
+        {"question": "play → ?", "options": ["play", "plays"], "answer": "plays"},
+        {"question": "enjoy → ?", "options": ["enjoys", "enjoy"], "answer": "enjoys"},
+        {"question": "stay → ?", "options": ["stay", "stays"], "answer": "stays"},
+        {"question": "buy → ?", "options": ["buys", "buy"], "answer": "buys"},
+        {"question": "say → ?", "options": ["says", "say"], "answer": "says"}
+      ]
+    }
+  ]
+}

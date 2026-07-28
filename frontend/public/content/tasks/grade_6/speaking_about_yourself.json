@@ -1,0 +1,21 @@
+{
+  "id": "speaking_about_yourself",
+  "title": "Расскажи о своём идеальном дне",
+  "category": "speaking",
+  "type": "fill-in-and-speak",
+  "description": "Продолжи подсказку и расскажи друзьям о своём идеальном дне",
+  "sections": [
+    {
+      "name": "My perfect day",
+      "prompts": [
+        "My perfect day is on ___",
+        "In the morning I usually ___ at ___ o'clock and I ___",
+        "In the afternoon I often ___ and I sometimes ___ with my friends",
+        "At the weekend / On Saturdays I always ___ because I ___",
+        "In the evening we ___ at ___ o'clock and then I ___",
+        "As a rule, I go to bed at ___ o'clock at night",
+        "This is my perfect day because ___"
+      ]
+    }
+  ]
+}

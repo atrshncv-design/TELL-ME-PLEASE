@@ -1,0 +1,24 @@
+{
+  "id": "grammar_roulette",
+  "title": "Рулетка: все части предложения",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола V1 / Vs",
+  "items": [
+    {"sentence": "My friend ___ funny stickers.", "verb": "collect", "answer": "collects"},
+    {"sentence": "My brother ___ computer games every evening.", "verb": "play", "answer": "plays"},
+    {"sentence": "My sister ___ monsters in her notebook.", "verb": "draw", "answer": "draws"},
+    {"sentence": "We ___ board games on Sundays.", "verb": "play", "answer": "play"},
+    {"sentence": "He ___ photos of his cat all the time.", "verb": "take", "answer": "takes"},
+    {"sentence": "They ___ videos about skateboards.", "verb": "watch", "answer": "watch"},
+    {"sentence": "She ___ to music and dances in her room.", "verb": "listen", "answer": "listens"},
+    {"sentence": "My cousin ___ robots after school.", "verb": "build", "answer": "builds"},
+    {"sentence": "I ___ comics and laugh a lot.", "verb": "read", "answer": "read"},
+    {"sentence": "The boy ___ in the park and falls every five minutes.", "verb": "skate", "answer": "skates"},
+    {"sentence": "My friend ___ stories about superheroes.", "verb": "write", "answer": "writes"},
+    {"sentence": "The girl ___ the guitar and sings very loudly.", "verb": "play", "answer": "plays"},
+    {"sentence": "We ___ the sports center and swim together.", "verb": "visit", "answer": "visit"},
+    {"sentence": "He ___ model cars and puts them on his shelf.", "verb": "collect", "answer": "collects"},
+    {"sentence": "They ___ dragons and show them to the teacher.", "verb": "draw", "answer": "draw"}
+  ]
+}

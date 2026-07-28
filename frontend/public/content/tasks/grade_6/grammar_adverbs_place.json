@@ -1,0 +1,26 @@
+{
+  "id": "grammar_adverbs_place",
+  "title": "Наречия: вставь в правильное место",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Реши: наречие частоты — между подлежащим и сказуемым, а обстоятельство времени — в конец предложения",
+  "available_adverbs": ["always", "usually", "often", "sometimes", "never", "every day", "in the morning", "in the afternoon", "in the evening", "at night", "on Saturdays", "after school"],
+  "items": [
+    {"sentence_base": "Teenagers play computer games", "answer_position": "middle", "adverb": "always", "full": "Teenagers always play computer games after school"},
+    {"sentence_base": "My friends meet in the park", "answer_position": "middle", "adverb": "usually", "full": "My friends usually meet in the park at the weekend"},
+    {"sentence_base": "Teenagers watch videos on their phones", "answer_position": "middle", "adverb": "often", "full": "Teenagers often watch videos on their phones in the evening"},
+    {"sentence_base": "My brother goes to the sports centre", "answer_position": "middle", "adverb": "sometimes", "full": "My brother sometimes goes to the sports centre on Saturdays"},
+    {"sentence_base": "My cousin does his homework", "answer_position": "middle", "adverb": "never", "full": "My cousin never does his homework at night"},
+    {"sentence_base": "Teenagers chat with their friends on social media", "answer_position": "end", "adverb": "every day", "full": "Teenagers chat with their friends on social media every day"},
+    {"sentence_base": "Teens listen to music on the way to school", "answer_position": "end", "adverb": "in the morning", "full": "Teens listen to music on the way to school in the morning"},
+    {"sentence_base": "Teenagers play online games with their friends", "answer_position": "end", "adverb": "in the evening", "full": "Teenagers play online games with their friends in the evening"},
+    {"sentence_base": "Teenagers go out with their friends", "answer_position": "end", "adverb": "at the weekend", "full": "Teenagers go out with their friends at the weekend"},
+    {"sentence_base": "Teens watch films with their families", "answer_position": "end", "adverb": "on Saturdays", "full": "Teens watch films with their families on Saturdays"},
+    {"sentence_base": "Teenagers meet their friends", "answer_position": "end", "adverb": "after school", "full": "Teenagers meet their friends after school"},
+    {"sentence_base": "Teens visit the sports club", "answer_position": "end", "adverb": "once a week", "full": "Teens visit the sports club once a week"},
+    {"sentence_base": "Teenagers relax and watch TV", "answer_position": "end", "adverb": "at night", "full": "Teenagers relax and watch TV at night"},
+    {"sentence_base": "I read books", "answer_position": "middle", "adverb": "sometimes", "full": "I sometimes read books on Sundays"},
+    {"sentence_base": "The cat goes outside", "answer_position": "end", "adverb": "at night", "full": "The cat goes outside at night"},
+    {"sentence_base": "My dad works on the computer", "answer_position": "end", "adverb": "every day", "full": "My dad works on the computer every day"}
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "grammar_wh_questions",
+  "title": "Специальные вопросы",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Составь специальный вопрос: выбери вопросительное слово и вспомогательный глагол",
+  "question_words": ["What", "Where", "When", "How", "Why", "How often", "What time"],
+  "auxiliary": ["do", "does"],
+  "items": [
+    {"statement": "My dad drives to work by car.", "hint": "Как папа ездит на работу?", "answer": "How does your dad drive to work?"},
+    {"statement": "My family travels to the sea by train every summer.", "hint": "Как часто твоя семья ездит на море?", "answer": "How often does your family travel to the sea by train?"},
+    {"statement": "We go to school by bus.", "hint": "Как вы добираетесь до школы?", "answer": "How do you go to school?"},
+    {"statement": "My mum goes to work at 8 o'clock.", "hint": "Во сколько мама ходит на работу?", "answer": "What time does your mum go to work?"},
+    {"statement": "My brother rides his bike in the park.", "hint": "Где брат катается на велосипеде?", "answer": "Where does your brother ride his bike?"},
+    {"statement": "My parents visit our grandparents every Sunday.", "hint": "Как часто родители навещают бабушку с дедушкой?", "answer": "How often do your parents visit your grandparents?"},
+    {"statement": "Our family has dinner together at seven o'clock.", "hint": "Во сколько семья ужинает вместе?", "answer": "What time does your family have dinner together?"},
+    {"statement": "My cousin lives in a big city.", "hint": "Где живёт кузен?", "answer": "Where does your cousin live?"},
+    {"statement": "My friends walk to the sports centre after school.", "hint": "Куда друзья идут после школы?", "answer": "Where do your friends walk after school?"},
+    {"statement": "My sister takes a taxi to the city centre.", "hint": "Как часто сестра ездит на такси в центр?", "answer": "How often does your sister take a taxi to the city centre?"},
+    {"statement": "My dad uses the underground in the morning.", "hint": "Когда папа пользуется метро?", "answer": "When does your dad use the underground?"},
+    {"statement": "We go to the country by car in August.", "hint": "Когда вы едете за город на машине?", "answer": "When do you go to the country by car?"},
+    {"statement": "My mum and dad work in the city centre.", "hint": "Где работают мама и папа?", "answer": "Where do your mum and dad work?"},
+    {"statement": "My friend goes to school on foot.", "hint": "Как друг ходит в школу?", "answer": "How does your friend go to school?"},
+    {"statement": "Our family visits the museum on Saturday.", "hint": "Когда семья посещает музей?", "answer": "When does your family visit the museum?"}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "grammar_yes_no_questions",
+  "title": "Общие вопросы Do/Does",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Поставь общий вопрос Do / Does к утверждению",
+  "items": [
+    {"statement": "Your family has dinner together every day.", "question": "Does your family have dinner together every day?", "answer": "Does your family have dinner together every day?"},
+    {"statement": "Your mum cooks breakfast in the morning.", "question": "Does your mum cook breakfast in the morning?", "answer": "Does your mum cook breakfast in the morning?"},
+    {"statement": "Your dad works in the city centre.", "question": "Does your dad work in the city centre?", "answer": "Does your dad work in the city centre?"},
+    {"statement": "Your brother plays computer games in the evening.", "question": "Does your brother play computer games in the evening?", "answer": "Does your brother play computer games in the evening?"},
+    {"statement": "Your sister helps you with homework.", "question": "Does your sister help you with homework?", "answer": "Does your sister help you with homework?"},
+    {"statement": "Your friends meet you after school.", "question": "Do your friends meet you after school?", "answer": "Do your friends meet you after school?"},
+    {"statement": "Your best friend lives near your house.", "question": "Does your best friend live near your house?", "answer": "Does your best friend live near your house?"},
+    {"statement": "Your friends play football at the weekend.", "question": "Do your friends play football at the weekend?", "answer": "Do your friends play football at the weekend?"},
+    {"statement": "Your classmate sends you funny messages.", "question": "Does your classmate send you funny messages?", "answer": "Does your classmate send you funny messages?"},
+    {"statement": "Your friends visit you on your birthday.", "question": "Do your friends visit you on your birthday?", "answer": "Do your friends visit you on your birthday?"},
+    {"statement": "You have interesting hobbies.", "question": "Do you have interesting hobbies?", "answer": "Do you have interesting hobbies?"},
+    {"statement": "Your friend collects stickers or cards.", "question": "Does your friend collect stickers or cards?", "answer": "Does your friend collect stickers or cards?"},
+    {"statement": "Your cousin plays a musical instrument.", "question": "Does your cousin play a musical instrument?", "answer": "Does your cousin play a musical instrument?"},
+    {"statement": "You go to a sports club after school.", "question": "Do you go to a sports club after school?", "answer": "Do you go to a sports club after school?"},
+    {"statement": "Your sister draws pictures in her free time.", "question": "Does your sister draw pictures in her free time?", "answer": "Does your sister draw pictures in her free time?"},
+    {"statement": "You go to school by bus.", "question": "Do you go to school by bus?", "answer": "Do you go to school by bus?"},
+    {"statement": "Your dad drives to work every day.", "question": "Does your dad drive to work every day?", "answer": "Does your dad drive to work every day?"},
+    {"statement": "Your family travels by train in summer.", "question": "Does your family travel by train in summer?", "answer": "Does your family travel by train in summer?"},
+    {"statement": "Your friend rides a bike to school.", "question": "Does your friend ride a bike to school?", "answer": "Does your friend ride a bike to school?"},
+    {"statement": "Your parents use the underground.", "question": "Do your parents use the underground?", "answer": "Do your parents use the underground?"},
+    {"statement": "You get up early on weekdays.", "question": "Do you get up early on weekdays?", "answer": "Do you get up early on weekdays?"},
+    {"statement": "Your mum goes to work at 8 o'clock.", "question": "Does your mum go to work at 8 o'clock?", "answer": "Does your mum go to work at 8 o'clock?"}
+  ]
+}

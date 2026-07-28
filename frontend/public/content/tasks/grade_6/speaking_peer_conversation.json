@@ -1,0 +1,26 @@
+{
+  "id": "speaking_peer_conversation",
+  "title": "Поговори со сверстником",
+  "category": "speaking",
+  "type": "voice-chat",
+  "description": "Задавай вопросы сверстнику из англоговорящей страны о его идеальном дне и помни о нормах этикета",
+  "sections": [
+    {
+      "name": "Perfect day",
+      "questions": [
+        "What is your perfect day – on Saturday or on Sunday?",
+        "What do you usually do in the morning on your perfect day?",
+        "What time do you get up on this day?",
+        "Do you have breakfast with your family on your perfect day?",
+        "What do you do after breakfast?",
+        "What do you do in the afternoon – do you go to the park, the sports centre or the cinema?",
+        "Do you meet your friends after school or at the weekend on your perfect day?",
+        "What hobbies do you usually do – do you play computer games, read books or ride your bike?",
+        "Do you spend your free time at home or outside?",
+        "What do you do in the evening – do you watch TV or films with your family or friends?",
+        "What time do you go to bed on your perfect day?",
+        "Why do you like this day?"
+      ]
+    }
+  ]
+}

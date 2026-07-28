@@ -1,0 +1,29 @@
+{
+  "id": "grammar_joke_quiz",
+  "title": "Шутка: V1/Vs",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Забавные предложения — выбери правильную форму первого глагола",
+  "items": [
+    {"sentence": "My friend ___ games and forgets homework.", "options": ["play", "plays"], "answer": "plays"},
+    {"sentence": "My dad ___ dinner and burns it.", "options": ["cook", "cooks"], "answer": "cooks"},
+    {"sentence": "We ___ films and eat popcorn.", "options": ["watch", "watches"], "answer": "watch"},
+    {"sentence": "My sister ___ and lays the table.", "options": ["draw", "draws"], "answer": "draws"},
+    {"sentence": "They ___ grandparents and bring cake.", "options": ["visit", "visits"], "answer": "visit"},
+    {"sentence": "He ___ cars and talks to them.", "options": ["collect", "collects"], "answer": "collects"},
+    {"sentence": "My mum ___ to music and dances.", "options": ["listen", "listens"], "answer": "listens"},
+    {"sentence": "We ___ games and argue.", "options": ["play", "plays"], "answer": "play"},
+    {"sentence": "My brother ___ and falls.", "options": ["skate", "skates"], "answer": "skates"},
+    {"sentence": "I ___ comics and laugh loudly.", "options": ["read", "reads"], "answer": "read"},
+    {"sentence": "My grandma ___ stories and changes them.", "options": ["tell", "tells"], "answer": "tells"},
+    {"sentence": "They ___ to the sports centre and forget trainers.", "options": ["go", "goes"], "answer": "go"},
+    {"sentence": "The girl ___ and scares her brother.", "options": ["dance", "dances"], "answer": "dances"},
+    {"sentence": "My grandpa ___ and sleeps.", "options": ["read", "reads"], "answer": "reads"},
+    {"sentence": "We ___ lunch and fight for cookies.", "options": ["have", "has"], "answer": "have"},
+    {"sentence": "My cousin ___ photos and posts funny faces.", "options": ["take", "takes"], "answer": "takes"},
+    {"sentence": "I ___ my aunt and eat sweets.", "options": ["visit", "visits"], "answer": "visit"},
+    {"sentence": "My parents ___ TV and lose the remote.", "options": ["watch", "watches"], "answer": "watch"},
+    {"sentence": "The boy ___ his bike and pretends.", "options": ["ride", "rides"], "answer": "rides"},
+    {"sentence": "Our family ___ and packs too much.", "options": ["travel", "travels"], "answer": "travels"}
+  ]
+}

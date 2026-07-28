@@ -1,0 +1,82 @@
+{
+  "id": "story_harry_potter_routine",
+  "title": "Распорядок дня друзей Гарри Поттера",
+  "category": "vocabulary",
+  "type": "fill-in",
+  "description": "Вставь глагол в правильную форму Present Simple (Гермиона и Рон)",
+  "story": [
+    {
+      "text": "Hermione Granger is a very clever schoolgirl at Hogwarts.",
+      "blank": null
+    },
+    {
+      "text": "She ___ in the Gryffindor tower and loves books and school.",
+      "verb": "live",
+      "answer": "lives"
+    },
+    {
+      "text": "In the morning she ___ early, puts on her school uniform, takes her bag and checks her books.",
+      "verb": "get up",
+      "answer": "gets up"
+    },
+    {
+      "text": "Then she ___ breakfast with Harry and Ron and goes to her classes.",
+      "verb": "have",
+      "answer": "has"
+    },
+    {
+      "text": "At school Hermione ___ to the teachers, writes in her exercise book and does her homework.",
+      "verb": "listen",
+      "answer": "listens"
+    },
+    {
+      "text": "After lessons she ___ to the common room, does her homework and then reads or writes in her diary.",
+      "verb": "go",
+      "answer": "goes"
+    },
+    {
+      "text": "In the evening she ___ dinner, talks with her friends and sometimes plays board games.",
+      "verb": "have",
+      "answer": "has"
+    },
+    {
+      "text": "Ron Weasley is a funny and friendly schoolboy at Hogwarts.",
+      "blank": null
+    },
+    {
+      "text": "He ___ in the Gryffindor tower and loves his friends and his big family.",
+      "verb": "live",
+      "answer": "lives"
+    },
+    {
+      "text": "In the morning Ron ___, puts on his cloak, takes his school bag and goes to breakfast with Harry.",
+      "verb": "get up",
+      "answer": "gets up"
+    },
+    {
+      "text": "Then they ___ to their lessons together.",
+      "verb": "go",
+      "answer": "go"
+    },
+    {
+      "text": "At school Ron ___ to the teachers, writes in his notebook and does his exercises.",
+      "verb": "listen",
+      "answer": "listens"
+    },
+    {
+      "text": "At break time he ___ with his friends and tells funny stories.",
+      "verb": "talk",
+      "answer": "talks"
+    },
+    {
+      "text": "After school he often ___ to the Quidditch pitch with Harry or plays games in the common room.",
+      "verb": "go",
+      "answer": "goes"
+    },
+    {
+      "text": "In the evening Ron ___ dinner, spends time with Harry and Hermione and talks about their day.",
+      "verb": "have",
+      "answer": "has"
+    }
+  ]
+}

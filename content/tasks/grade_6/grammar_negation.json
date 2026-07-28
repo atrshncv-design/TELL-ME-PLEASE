@@ -1,0 +1,24 @@
+{
+  "id": "grammar_negation",
+  "title": "Отрицание",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильную отрицательную форму: don't / doesn't / isn't / haven't got",
+  "items": [
+    {"sentence": "My family ___ a small car.", "options": ["don't has", "doesn't have", "isn't have", "haven't got"], "answer": "doesn't have"},
+    {"sentence": "My dad ___ to work on Sunday.", "options": ["doesn't drive", "don't drive", "isn't drive", "not drives"], "answer": "doesn't drive"},
+    {"sentence": "We ___ to school by bus on Saturday.", "options": ["don't go", "doesn't goes", "aren't go", "not go"], "answer": "don't go"},
+    {"sentence": "My mum ___ a bike.", "options": ["doesn't has", "hasn't got", "don't has", "isn't got"], "answer": "hasn't got"},
+    {"sentence": "My brother ___ his scooter to school.", "options": ["doesn't ride", "don't rides", "isn't ride", "not ride"], "answer": "doesn't ride"},
+    {"sentence": "Our family ___ by train in summer.", "options": ["doesn't travel", "don't travels", "isn't travel", "not travel"], "answer": "doesn't travel"},
+    {"sentence": "My aunt ___ a taxi to work.", "options": ["doesn't take", "don't take", "isn't take", "not takes"], "answer": "doesn't take"},
+    {"sentence": "My grandparents ___ in a small village.", "options": ["don't live", "doesn't lives", "aren't live", "not live"], "answer": "don't live"},
+    {"sentence": "My cousin ___ computer games every day.", "options": ["doesn't play", "don't plays", "isn't play", "not play"], "answer": "doesn't play"},
+    {"sentence": "We ___ a lot of board games at home.", "options": ["haven't got", "doesn't have", "don't has", "isn't have"], "answer": "haven't got"},
+    {"sentence": "My sister ___ TV in the morning.", "options": ["doesn't watch", "don't watch", "isn't watch", "not watches"], "answer": "doesn't watch"},
+    {"sentence": "My parents ___ to the sports centre on Monday.", "options": ["don't go", "doesn't go", "aren't go", "not goes"], "answer": "don't go"},
+    {"sentence": "I ___ a crocodile as a pet.", "options": ["don't has", "doesn't have", "isn't have", "haven't got"], "answer": "haven't got"},
+    {"sentence": "My friends ___ stamps.", "options": ["don't collect", "doesn't collects", "aren't collect", "not collect"], "answer": "don't collect"},
+    {"sentence": "Our teacher ___ comics in class.", "options": ["doesn't read", "don't read", "isn't read", "not reads"], "answer": "doesn't read"}
+  ]
+}
