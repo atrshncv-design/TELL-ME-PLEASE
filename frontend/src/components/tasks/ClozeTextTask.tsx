@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useMemo, useCallback } from "react"
+import { useVerbBot } from "@/components/VerbBot"
 import { motion, AnimatePresence } from "framer-motion"
 
 /**
@@ -182,6 +183,7 @@ function RoundView({
   )
   const [activeBlank, setActiveBlank] = useState<number | null>(null)
   const [checked, setChecked] = useState(false)
+  const { say } = useVerbBot()
 
   // Per-blank correctness (only meaningful after check).
   const results = useMemo(() => {
@@ -248,6 +250,8 @@ function RoundView({
       )
       return ok ? acc + 1 : acc
     }, 0)
+
+    say(correctCount === round.answers.length ? "correct" : "wrong")
 
     // Auto-finish: for single-round this is the whole task; for multi, advance.
     setTimeout(() => {
