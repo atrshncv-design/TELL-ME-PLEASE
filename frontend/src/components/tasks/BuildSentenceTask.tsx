@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useSound } from "@/lib/useSound"
 
 interface BuildSentenceTaskProps {
   title: string
@@ -37,6 +38,7 @@ export function BuildSentenceTask({
   const [showResult, setShowResult] = useState(false)
   const [isCorrect, setIsCorrect] = useState(false)
   const [finished, setFinished] = useState(false)
+  const { play } = useSound()
 
   if (rounds.length === 0) {
     return (
@@ -70,6 +72,7 @@ export function BuildSentenceTask({
     setIsCorrect(correct)
     if (correct) setScore((s) => s + 1)
     setShowResult(true)
+    play(correct ? "correct" : "wrong")
 
     setTimeout(() => {
       if (current + 1 < rounds.length) {
@@ -79,6 +82,7 @@ export function BuildSentenceTask({
         setShowResult(false)
       } else {
         setFinished(true)
+        play("fanfare")
         onComplete?.(correct ? score + 1 : score, rounds.length)
       }
     }, 1400)

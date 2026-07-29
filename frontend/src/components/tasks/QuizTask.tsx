@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useVerbBot } from "@/components/VerbBot"
+import { useSound } from "@/lib/useSound"
 
 interface QuizItem {
   question?: string
@@ -26,6 +27,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
   const [showResult, setShowResult] = useState(false)
   const [finished, setFinished] = useState(false)
   const { say } = useVerbBot()
+  const { play } = useSound()
   // Read-only review history, indexed by question number.
   const [history, setHistory] = useState<{ selected: string | null; showResult: boolean }[]>([])
   // True while the auto-advance timeout is pending — disables navigation.
@@ -57,6 +59,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
     const correct = option === item.answer
     if (correct) setScore((s) => s + 1)
     say(correct ? "correct" : "wrong")
+    play(correct ? "correct" : "wrong")
 
     // Persist this answer for read-only review.
     setHistory((prev) => {
@@ -78,6 +81,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
         setFinished(true)
         onComplete?.(correct ? score + 1 : score, items.length)
         say("finish")
+        play("fanfare")
       }
     }, 1200)
   }

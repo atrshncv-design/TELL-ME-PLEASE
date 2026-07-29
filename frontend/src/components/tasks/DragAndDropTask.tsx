@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useSound } from "@/lib/useSound"
 
 interface Column {
   id: string
@@ -35,6 +36,7 @@ export function DragAndDropTask({
   )
   const [dragging, setDragging] = useState<DragItem | null>(null)
   const [checked, setChecked] = useState(false)
+  const { play } = useSound()
 
   const handleDragStart = (item: DragItem) => setDragging(item)
 
@@ -63,6 +65,8 @@ export function DragAndDropTask({
         if (item.answer === col.id) score++
       })
     })
+    // One-shot task: the check IS the finish — fanfare on perfect, else wrong.
+    play(score === items.length ? "fanfare" : "wrong")
     onComplete?.(score, items.length)
   }
 

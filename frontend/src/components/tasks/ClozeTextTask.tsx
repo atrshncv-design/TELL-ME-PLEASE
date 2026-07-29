@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useCallback } from "react"
 import { useVerbBot } from "@/components/VerbBot"
+import { useSound } from "@/lib/useSound"
 import { motion, AnimatePresence } from "framer-motion"
 
 /**
@@ -84,6 +85,7 @@ export function ClozeTextTask({
   const [current, setCurrent] = useState(0)
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
+  const { play } = useSound()
 
   if (effectiveRounds.length === 0) {
     return (
@@ -103,6 +105,7 @@ export function ClozeTextTask({
       setCurrent((c) => c + 1)
     } else {
       setFinished(true)
+      play("fanfare")
       // Score is total correct blanks across all rounds; total is sum of blanks.
       const totalBlanks = effectiveRounds.reduce((sum, r) => sum + r.answers.length, 0)
       onComplete?.(newScore, totalBlanks)
@@ -184,6 +187,7 @@ function RoundView({
   const [activeBlank, setActiveBlank] = useState<number | null>(null)
   const [checked, setChecked] = useState(false)
   const { say } = useVerbBot()
+  const { play } = useSound()
 
   // Per-blank correctness (only meaningful after check).
   const results = useMemo(() => {
@@ -251,7 +255,9 @@ function RoundView({
       return ok ? acc + 1 : acc
     }, 0)
 
-    say(correctCount === round.answers.length ? "correct" : "wrong")
+    const roundCorrect = correctCount === round.answers.length
+    say(roundCorrect ? "correct" : "wrong")
+    play(roundCorrect ? "correct" : "wrong")
 
     // Auto-finish: for single-round this is the whole task; for multi, advance.
     setTimeout(() => {

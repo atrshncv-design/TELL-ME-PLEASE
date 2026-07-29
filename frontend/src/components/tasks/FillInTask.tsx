@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useVerbBot } from "@/components/VerbBot"
+import { useSound } from "@/lib/useSound"
 
 interface FillItem {
   sentence: string
@@ -31,6 +32,7 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
   // True while the auto-advance timeout is pending — disables navigation.
   const [transitioning, setTransitioning] = useState(false)
   const { say } = useVerbBot()
+  const { play } = useSound()
 
   if (!items || items.length === 0) {
     return (
@@ -69,6 +71,7 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
     if (correct) setScore((s) => s + 1)
     setShowResult(true)
     say(correct ? "correct" : "wrong")
+    play(correct ? "correct" : "wrong")
 
     // Persist this answer for read-only review.
     setHistory((prev) => {
@@ -96,6 +99,7 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
         setFinished(true)
         onComplete?.(correct ? score + 1 : score, items.length)
         say("finish")
+        play("fanfare")
       }
     }, 1500)
   }

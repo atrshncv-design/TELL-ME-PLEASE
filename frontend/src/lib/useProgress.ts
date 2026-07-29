@@ -31,10 +31,14 @@ export function useProgress(grade: string) {
   const saveTask = useCallback(
     (taskId: string, score: number, total: number) => {
       setProgress((prev) => {
-        const next: ProgressMap = {
-          ...prev,
-          [taskId]: { score, total, ts: new Date().toISOString() },
-        }
+        // Keep the BEST result per task (decision Q13): stars and 💎 badges
+        // are earned from the best run, so a weaker retake never loses them.
+        const existing = prev[taskId]
+        const entry =
+          existing && existing.score > score
+            ? existing
+            : { score, total, ts: new Date().toISOString() }
+        const next: ProgressMap = { ...prev, [taskId]: entry }
         try {
           localStorage.setItem(key(grade), JSON.stringify(next))
         } catch {
@@ -47,6 +51,11 @@ export function useProgress(grade: string) {
   )
 
   const completedCount = Object.keys(progress).length
+  // Gamification (decision Q13): ⭐ = sum of best scores; 💎 per 100% task.
+  const totalStars = Object.values(progress).reduce((sum, p) => sum + p.score, 0)
+  const perfectCount = Object.values(progress).filter(
+    (p) => p.total > 0 && p.score === p.total
+  ).length
 
-  return { progress, saveTask, completedCount }
+  return { progress, saveTask, completedCount, totalStars, perfectCount }
 }

@@ -228,7 +228,7 @@ export default function SectionsPage() {
   const [links, setLinks] = useState<UsefulLink[] | null>(null)
 
   // Per-grade client-side progress (localStorage, no backend — decision Q8).
-  const { progress, completedCount } = useProgress(grade)
+  const { progress, completedCount, totalStars } = useProgress(grade)
 
   const { track } = useAnalytics()
   useEffect(() => {
@@ -283,8 +283,12 @@ export default function SectionsPage() {
       <h1 className="text-3xl font-bold text-indigo-900 mb-1">{grade} класс</h1>
       <p className="text-slate-500 mb-2">Карта заданий</p>
       {sections && sections.length > 0 && (
-        <div className="text-sm text-indigo-600 mb-4">
-          Пройдено {completedCount} из {totalTasks}
+        <div className="text-sm text-indigo-600 mb-4 flex items-center gap-3">
+          <span>
+            Пройдено {completedCount} из {totalTasks}
+          </span>
+          {/* ⭐ total = sum of best scores (decision Q13). */}
+          <span className="font-semibold text-amber-500">⭐ {totalStars}</span>
         </div>
       )}
 
@@ -382,6 +386,10 @@ export default function SectionsPage() {
                       {done && (
                         <span className="ml-1 text-xs text-emerald-600 font-semibold whitespace-nowrap">
                           ✓ {progress[t.id].score}/{progress[t.id].total}
+                          {/* 💎 badge for a 100% run (decision Q13). */}
+                          {progress[t.id].total > 0 &&
+                            progress[t.id].score === progress[t.id].total &&
+                            " 💎"}
                         </span>
                       )}
                     </motion.button>
