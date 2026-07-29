@@ -20,6 +20,11 @@ const files = [
   "grammar_verb_forms_quiz.json",
   "grammar_adverbs_build.json",
   "grammar_adverbs_place.json",
+  "tobe_assembly.json",
+  "tobe_magnet.json",
+  "tobe_why.json",
+  "tobe_lie_detector.json",
+  "tobe_email.json",
   "story_harry_potter_routine.json",
   "story_harry_potter_interview.json",
   "speaking_about_yourself.json",
@@ -206,11 +211,11 @@ function sanityCheck(label, ok, detail = "") {
   )
 }
 
-// 4. All 16 files normalize without throwing — the per-file loop above counts
+// 4. All 21 files normalize without throwing — the per-file loop above counts
 //    this; assert it explicitly.
 sanityCheck(
-  "all 16 files normalize without throwing",
-  normalizedCount === 16,
+  "all 21 files normalize without throwing",
+  normalizedCount === 21,
   `normalizedCount=${normalizedCount}`,
 )
 

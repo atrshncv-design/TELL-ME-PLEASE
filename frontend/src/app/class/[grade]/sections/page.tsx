@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { useProgress } from "@/lib/useProgress"
 import { useAnalytics } from "@/lib/useAnalytics"
 
-type Category = "grammar" | "vocabulary" | "listening" | "speaking"
+type Category = "grammar" | "to-be" | "vocabulary" | "listening" | "speaking"
 
 interface Exercise {
   file: string
@@ -39,6 +39,12 @@ const SECTION_META: Record<Category, SectionMeta> = {
     title: "Грамматика",
     icon: "✏️",
     desc: "Окончания, вопросы, наречия",
+  },
+  "to-be": {
+    sectionId: "tobe",
+    title: "Глагол to be",
+    icon: "🤖",
+    desc: "Формы глагола to be: am / is / are",
   },
   vocabulary: {
     sectionId: "vocab",
@@ -73,6 +79,11 @@ const SECTION_COLOR: Record<string, { accent: string; badge: string; ring: strin
     badge: "bg-indigo-50 border-indigo-200",
     ring: "hover:border-indigo-400",
   },
+  "to-be": {
+    accent: "text-teal-700",
+    badge: "bg-teal-50 border-teal-200",
+    ring: "hover:border-teal-400",
+  },
   vocabulary: {
     accent: "text-emerald-700",
     badge: "bg-emerald-50 border-emerald-200",
@@ -92,7 +103,7 @@ const SECTION_COLOR: Record<string, { accent: string; badge: string; ring: strin
 const DEFAULT_COLOR = SECTION_COLOR.grammar
 
 /** Render order: skip categories that have no exercises. */
-const SECTION_ORDER: Category[] = ["grammar", "vocabulary", "listening", "speaking"]
+const SECTION_ORDER: Category[] = ["grammar", "to-be", "vocabulary", "listening", "speaking"]
 
 interface Section {
   meta: SectionMeta
@@ -103,6 +114,7 @@ interface Section {
 function groupExercises(exercises: Exercise[]): Section[] {
   const byCategory: Record<Category, { id: string; title: string }[]> = {
     grammar: [],
+    "to-be": [],
     vocabulary: [],
     listening: [],
     speaking: [],

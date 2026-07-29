@@ -1,0 +1,24 @@
+{
+  "id": "tobe_magnet",
+  "title": "Магнит: притяни not",
+  "category": "to-be",
+  "type": "quiz",
+  "description": "Преврати утверждение в отрицание, выбрав правильную форму",
+  "items": [
+    {"sentence": "He is a clever boy.", "options": ["He isn't a clever boy.", "He don't a clever boy.", "He not a clever boy.", "He aren't a clever boy."], "answer": "He isn't a clever boy."},
+    {"sentence": "They are in the park.", "options": ["They isn't in the park.", "They aren't in the park.", "They don't in the park.", "They not in the park."], "answer": "They aren't in the park."},
+    {"sentence": "I am from Spain.", "options": ["I amn't from Spain.", "I don't from Spain.", "I am not from Spain.", "I isn't from Spain."], "answer": "I am not from Spain."},
+    {"sentence": "She is my best friend.", "options": ["She aren't my best friend.", "She don't my best friend.", "She not my best friend.", "She isn't my best friend."], "answer": "She isn't my best friend."},
+    {"sentence": "We are in the 5th grade.", "options": ["We isn't in the 5th grade.", "We don't in the 5th grade.", "We aren't in the 5th grade.", "We not in the 5th grade."], "answer": "We aren't in the 5th grade."},
+    {"sentence": "The computer is new.", "options": ["The computer aren't new.", "The computer isn't new.", "The computer don't new.", "The computer not new."], "answer": "The computer isn't new."},
+    {"sentence": "You are a good student.", "options": ["You isn't a good student.", "You don't a good student.", "You not a good student.", "You aren't a good student."], "answer": "You aren't a good student."},
+    {"sentence": "My mum is a doctor.", "options": ["My mum aren't a doctor.", "My mum don't a doctor.", "My mum not a doctor.", "My mum isn't a doctor."], "answer": "My mum isn't a doctor."},
+    {"sentence": "The dogs are very noisy.", "options": ["The dogs isn't very noisy.", "The dogs aren't very noisy.", "The dogs don't very noisy.", "The dogs not very noisy."], "answer": "The dogs aren't very noisy."},
+    {"sentence": "It is a rainy day today.", "options": ["It aren't a rainy day today.", "It isn't a rainy day today.", "It don't a rainy day today.", "It not a rainy day today."], "answer": "It isn't a rainy day today."},
+    {"sentence": "Tom and Jerry are my favorite cartoons.", "options": ["Tom and Jerry isn't my favorite cartoons.", "Tom and Jerry don't my favorite cartoons.", "Tom and Jerry aren't my favorite cartoons.", "Tom and Jerry not my favorite cartoons."], "answer": "Tom and Jerry aren't my favorite cartoons."},
+    {"sentence": "My ruler is broken.", "options": ["My ruler aren't broken.", "My ruler isn't broken.", "My ruler don't broken.", "My ruler not broken."], "answer": "My ruler isn't broken."},
+    {"sentence": "The lessons are boring.", "options": ["The lessons isn't boring.", "The lessons aren't boring.", "The lessons don't boring.", "The lessons not boring."], "answer": "The lessons aren't boring."},
+    {"sentence": "I am a football fan.", "options": ["I amn't a football fan.", "I don't a football fan.", "I am not a football fan.", "I isn't a football fan."], "answer": "I am not a football fan."},
+    {"sentence": "We are ready for the test.", "options": ["We isn't ready for the test.", "We don't ready for the test.", "We aren't ready for the test.", "We not ready for the test."], "answer": "We aren't ready for the test."}
+  ]
+}

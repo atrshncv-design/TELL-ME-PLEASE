@@ -1,0 +1,25 @@
+{
+  "id": "tobe_assembly",
+  "title": "Сборка: am / is / are",
+  "category": "to-be",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола to be (am / is / are)",
+  "items": [
+    {"sentence": "I ___ a student in the 5th grade.", "answer": "am"},
+    {"sentence": "History ___ my favourite subject.", "answer": "is"},
+    {"sentence": "My pens ___ in the pencil case.", "answer": "are"},
+    {"sentence": "___ you from Russia?", "answer": "Are"},
+    {"sentence": "Jane ___ British.", "answer": "is"},
+    {"sentence": "She ___ from the UK.", "answer": "is"},
+    {"sentence": "We ___ in the classroom now.", "answer": "are"},
+    {"sentence": "The ruler ___ on the desk.", "answer": "is"},
+    {"sentence": "It ___ an interesting book.", "answer": "is"},
+    {"sentence": "My brother ___ eleven years old.", "answer": "is"},
+    {"sentence": "They ___ my classmates.", "answer": "are"},
+    {"sentence": "The homework ___ very difficult today.", "answer": "is"},
+    {"sentence": "___ he a new student?", "answer": "Is"},
+    {"sentence": "I ___ not good at Maths.", "answer": "am"},
+    {"sentence": "The posters ___ on the wall.", "answer": "are"},
+    {"sentence": "PE ___ on Monday.", "answer": "is"}
+  ]
+}

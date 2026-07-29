@@ -1,0 +1,23 @@
+{
+  "id": "tobe_lie_detector",
+  "title": "Детектор лжи: найди ошибку",
+  "category": "to-be",
+  "type": "fill-in",
+  "description": "Найди и исправь ошибку в форме глагола to be. Зачёркнута неверная форма — впиши правильную.",
+  "items": [
+    {"sentence": "I ~~is~~ ___ a student.", "answer": "am", "hint": "I + ?"},
+    {"sentence": "She ~~are~~ ___ very beautiful.", "answer": "is", "hint": "She + ?"},
+    {"sentence": "They ~~isn't~~ ___ from London.", "answer": "aren't", "hint": "They + not"},
+    {"sentence": "We ~~isn't~~ ___ ready for the lesson.", "answer": "aren't", "hint": "We + not"},
+    {"sentence": "My dad ~~are~~ ___ a mechanic.", "answer": "is", "hint": "My dad (he) + ?"},
+    {"sentence": "You ~~is~~ ___ my best friend.", "answer": "are", "hint": "You + ?"},
+    {"sentence": "The books ~~is~~ ___ on the shelf.", "answer": "are", "hint": "The books (they) + ?"},
+    {"sentence": "~~Is~~ ___ they your classmates?", "answer": "Are", "hint": "they + ?"},
+    {"sentence": "It ~~aren't~~ ___ a spider, it is a fly.", "answer": "isn't", "hint": "It + not"},
+    {"sentence": "My favorite subject ~~are~~ ___ Art.", "answer": "is", "hint": "subject (it) + ?"},
+    {"sentence": "She ~~don't be~~ ___ happy.", "answer": "isn't", "hint": "She + not"},
+    {"sentence": "We ~~am~~ ___ from Russia.", "answer": "are", "hint": "We + ?"},
+    {"sentence": "Is your brother a student? Yes, he ~~are~~ ___.", "answer": "is", "hint": "he + ?"},
+    {"sentence": "The ruler ~~are~~ ___ in the bag.", "answer": "is", "hint": "The ruler (it) + ?"}
+  ]
+}

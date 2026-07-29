@@ -1,0 +1,24 @@
+{
+  "id": "tobe_why",
+  "title": "Почемучка: задай вопрос",
+  "category": "to-be",
+  "type": "cloze",
+  "description": "Преврати утверждение в вопрос — вынеси глагол вперед. Нажми на пропуск, затем на слово.",
+  "rounds": [
+    {"text": "___ ___ from Canada?", "answers": [["Is"], ["he"]], "word_bank": ["Is", "Are", "he", "they", "she"]},
+    {"text": "___ ___ in the library?", "answers": [["Are"], ["they"]], "word_bank": ["Is", "Are", "they", "he", "we"]},
+    {"text": "___ ___ your sister?", "answers": [["Is"], ["she"]], "word_bank": ["Is", "Are", "she", "he", "they"]},
+    {"text": "___ ___ a teacher?", "answers": [["Are"], ["you"]], "word_bank": ["Is", "Are", "you", "he", "they"]},
+    {"text": "___ ___ a red pencil?", "answers": [["Is"], ["it"]], "word_bank": ["Is", "Are", "it", "he", "she"]},
+    {"text": "___ ___ in the same class?", "answers": [["Are"], ["we"]], "word_bank": ["Is", "Are", "we", "they", "you"]},
+    {"text": "___ ___ on the desk?", "answers": [["Is"], ["the book"]], "word_bank": ["Is", "Are", "the book", "the books", "the pen"]},
+    {"text": "___ ___ late for school?", "answers": [["Are"], ["you"]], "word_bank": ["Am", "Are", "you", "I", "he"]},
+    {"text": "___ ___ my friends?", "answers": [["Are"], ["the boys"]], "word_bank": ["Is", "Are", "the boys", "the boy", "the girls"]},
+    {"text": "___ ___ a nurse?", "answers": [["Is"], ["your mother"]], "word_bank": ["Is", "Are", "your mother", "your father", "your parents"]},
+    {"text": "___ ___ blue?", "answers": [["Are"], ["the pens"]], "word_bank": ["Is", "Are", "the pens", "the pen", "the pencil"]},
+    {"text": "___ ___ a tall boy?", "answers": [["Is"], ["he"]], "word_bank": ["Is", "Are", "he", "she", "they"]},
+    {"text": "___ ___ from the USA?", "answers": [["Are"], ["they"]], "word_bank": ["Is", "Are", "they", "he", "we"]},
+    {"text": "___ ___ under the table?", "answers": [["Is"], ["the cat"]], "word_bank": ["Is", "Are", "the cat", "the cats", "the dog"]},
+    {"text": "___ ___ good at English?", "answers": [["Are"], ["we"]], "word_bank": ["Is", "Are", "we", "they", "you"]}
+  ]
+}
