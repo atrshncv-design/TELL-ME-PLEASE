@@ -8,33 +8,33 @@
     {
       "name": "Morning",
       "prompts": [
-        "In the morning, I wake up at ___",
-        "I get up and ___",
-        "Then I have breakfast and ___",
-        "After breakfast I go to school and ___"
+        "In the morning, I wake up at …",
+        "I get up and …",
+        "Then I have breakfast and …",
+        "After breakfast I go to school and …"
       ]
     },
     {
       "name": "School and day",
       "prompts": [
-        "At school I usually ___",
-        "In the afternoon I come home and ___",
-        "After school I do my homework and ___"
+        "At school I usually … (study English / play with my friends / have lunch)",
+        "In the afternoon I come home and …",
+        "After school I do my homework and …"
       ]
     },
     {
       "name": "Evening",
       "prompts": [
-        "In the evening I ___",
-        "I have dinner with ___",
-        "After dinner I ___"
+        "In the evening I … (watch TV / play computer games / read books)",
+        "I have dinner with … (my family / my mum and dad)",
+        "After dinner I … (talk to my friends / work on the computer / play with my pet)"
       ]
     },
     {
       "name": "Night / weekend",
       "prompts": [
-        "At night I go to bed at ___ and ___",
-        "At the weekend I ___"
+        "At night I go to bed at … and … (read a book / listen to music)",
+        "At the weekend I … (go to the park / visit my grandparents / play football)"
       ]
     }
   ]
