@@ -5,7 +5,7 @@
     {"file": "grammar_endings_quiz.json", "title": "Окончания: викторина", "category": "grammar", "type": "quiz"},
     {"file": "grammar_v1_vs_quiz.json", "title": "V1 / Vs: выбери форму", "category": "grammar", "type": "quiz"},
     {"file": "grammar_roulette.json", "title": "Рулетка: все части предложения", "category": "grammar", "type": "fill-in"},
-    {"file": "grammar_joke_quiz.json", "title": "Шутка: V1/Vs", "category": "grammar", "type": "quiz"},
+    {"file": "grammar_joke_quiz.json", "title": "Выбери правильную форму", "category": "grammar", "type": "quiz"},
     {"file": "grammar_negation.json", "title": "Отрицание", "category": "grammar", "type": "quiz"},
     {"file": "grammar_yes_no_questions.json", "title": "Общие вопросы Do/Does", "category": "grammar", "type": "quiz"},
     {"file": "grammar_wh_questions.json", "title": "Специальные вопросы", "category": "grammar", "type": "fill-in"},

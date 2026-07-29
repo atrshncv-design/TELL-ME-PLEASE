@@ -23,6 +23,12 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
   const [showResult, setShowResult] = useState(false)
   const [isCorrect, setIsCorrect] = useState(false)
   const [finished, setFinished] = useState(false)
+  // Read-only review history, indexed by question number.
+  const [history, setHistory] = useState<
+    { inputs: string[]; showResult: boolean; isCorrect: boolean }[]
+  >([])
+  // True while the auto-advance timeout is pending — disables navigation.
+  const [transitioning, setTransitioning] = useState(false)
 
   if (!items || items.length === 0) {
     return (
@@ -61,16 +67,49 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
     if (correct) setScore((s) => s + 1)
     setShowResult(true)
 
+    // Persist this answer for read-only review.
+    setHistory((prev) => {
+      const next = [...prev]
+      next[current] = { inputs: [...inputs], showResult: true, isCorrect: correct }
+      return next
+    })
+
+    setTransitioning(true)
     setTimeout(() => {
+      setTransitioning(false)
       if (current + 1 < items.length) {
         setCurrent((c) => c + 1)
-        setInputs(Array.from({ length: Math.max(blankCount, 1) }, () => ""))
-        setShowResult(false)
+        // Restore any previously-saved state for the next question, or reset.
+        const nextEntry = history[current + 1]
+        if (nextEntry) {
+          setInputs(nextEntry.inputs)
+          setShowResult(nextEntry.showResult)
+          setIsCorrect(nextEntry.isCorrect)
+        } else {
+          setInputs(Array.from({ length: Math.max(blankCount, 1) }, () => ""))
+          setShowResult(false)
+        }
       } else {
         setFinished(true)
         onComplete?.(correct ? score + 1 : score, items.length)
       }
     }, 1500)
+  }
+
+  // Read-only navigation: jump to a question index and restore its saved state.
+  const goTo = (index: number) => {
+    if (transitioning) return
+    setCurrent(index)
+    const entry = history[index]
+    if (entry) {
+      setInputs(entry.inputs)
+      setShowResult(entry.showResult)
+      setIsCorrect(entry.isCorrect)
+    } else {
+      // Should not happen (we only navigate to answered questions), but be safe.
+      setInputs(Array.from({ length: Math.max(blankCount, 1) }, () => ""))
+      setShowResult(false)
+    }
   }
 
   if (finished) {
@@ -87,13 +126,39 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
     )
   }
 
+  const canGoBack = current > 0 && !transitioning
+  // Forward is allowed when this question is answered and a later question exists.
+  const canGoForward = showResult && current < items.length - 1 && !transitioning
+
   return (
     <div className="flex flex-col gap-4 p-4 max-w-lg mx-auto">
       <h2 className="text-xl font-bold text-indigo-900">{title}</h2>
       <p className="text-sm text-slate-500">{description}</p>
 
-      <div className="text-xs text-slate-400">
-        Предложение {current + 1} из {items.length}
+      <div className="flex items-center justify-between gap-2">
+        {canGoBack ? (
+          <button
+            onClick={() => goTo(current - 1)}
+            className="text-sm text-slate-500 hover:text-slate-700"
+          >
+            ← Назад
+          </button>
+        ) : (
+          <span className="text-sm text-transparent select-none">← Назад</span>
+        )}
+        <div className="text-xs text-slate-400">
+          Предложение {current + 1} из {items.length}
+        </div>
+        {canGoForward ? (
+          <button
+            onClick={() => goTo(current + 1)}
+            className="text-sm text-slate-500 hover:text-slate-700"
+          >
+            Вперёд →
+          </button>
+        ) : (
+          <span className="text-sm text-transparent select-none">Вперёд →</span>
+        )}
       </div>
       <div className="w-full bg-slate-100 rounded-full h-2">
         <motion.div
