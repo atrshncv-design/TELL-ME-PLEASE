@@ -21,6 +21,13 @@
  * can import any absolute path, so the root-level wrapper reaches back in here.
  */
 export function normalize(raw) {
+  // cloze tasks are already in their final component shape (text/answers/
+  // word_bank single-round OR rounds[] multi-round). Pass through untouched so
+  // the `story` / `wh_questions` branches below never try to re-derive them.
+  if (raw.type === "cloze") {
+    return raw
+  }
+
   // grammar_endings_quiz: groups → flat items
   if (raw.groups && Array.isArray(raw.groups)) {
     raw.items = raw.groups.flatMap((g) => g.items ?? [])

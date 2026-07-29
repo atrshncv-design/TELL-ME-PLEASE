@@ -2,122 +2,133 @@
   "id": "story_harry_potter_routine",
   "title": "Распорядок дня Гарри Поттера",
   "category": "vocabulary",
-  "type": "fill-in",
-  "description": "Вставь глагол в правильную форму (Present Simple)",
-  "story": [
-    {
-      "text": "Harry Potter is a schoolboy and a wizard.",
-      "blank": null
-    },
-    {
-      "text": "He ___ at Hogwarts School of Witchcraft and Wizardry.",
-      "verb": "live",
-      "answer": "lives"
-    },
-    {
-      "text": "Every day Harry ___ in the morning in the Gryffindor tower.",
-      "verb": "wake up",
-      "answer": "wakes up"
-    },
-    {
-      "text": "He ___, puts on his cloak and goes to the Great Hall.",
-      "verb": "get up",
-      "answer": "gets up"
-    },
-    {
-      "text": "He ___ with his friends Ron and Hermione.",
-      "verb": "have breakfast",
-      "answer": "has breakfast"
-    },
-    {
-      "text": "Then he ___ to his classes.",
-      "verb": "go",
-      "answer": "goes"
-    },
-    {
-      "text": "Harry ___ a lot of magic tricks.",
-      "verb": "study",
-      "answer": "studies"
-    },
-    {
-      "text": "He ___ to the teachers.",
-      "verb": "listen",
-      "answer": "listens"
-    },
-    {
-      "text": "He ___ in his exercise book.",
-      "verb": "write",
-      "answer": "writes"
-    },
-    {
-      "text": "At break time he ___ with his friends.",
-      "verb": "talk",
-      "answer": "talks"
-    },
-    {
-      "text": "He ___ in the corridor.",
-      "verb": "walk",
-      "answer": "walks"
-    },
-    {
-      "text": "After school he sometimes ___ to the Quidditch pitch.",
-      "verb": "go",
-      "answer": "goes"
-    },
-    {
-      "text": "He ___ on his broom.",
-      "verb": "fly",
-      "answer": "flies"
-    },
-    {
-      "text": "He ___ Quidditch.",
-      "verb": "practice",
-      "answer": "practices"
-    },
-    {
-      "text": "In the afternoon he ___ his homework in the common room.",
-      "verb": "do",
-      "answer": "does"
-    },
-    {
-      "text": "He ___ books.",
-      "verb": "read",
-      "answer": "reads"
-    },
-    {
-      "text": "He ___ on his essays.",
-      "verb": "work",
-      "answer": "works"
-    },
-    {
-      "text": "In the evening he ___ in the Great Hall.",
-      "verb": "have dinner",
-      "answer": "has dinner"
-    },
-    {
-      "text": "After dinner he ___ chess.",
-      "verb": "play",
-      "answer": "plays"
-    },
-    {
-      "text": "He ___ with Ron and Hermione.",
-      "verb": "talk",
-      "answer": "talks"
-    },
-    {
-      "text": "At night he ___ back to the Gryffindor tower.",
-      "verb": "go",
-      "answer": "goes"
-    },
-    {
-      "text": "He ___ to bed.",
-      "verb": "go",
-      "answer": "goes"
-    },
-    {
-      "text": "He ___ about new adventures.",
-      "verb": "dream",
-      "answer": "dreams"
-    }
+  "type": "cloze",
+  "description": "Прочитай текст. Вставь глагол в правильную форму (Present Simple): нажми на пропуск, затем на слово.",
+  "text": "Harry Potter is a schoolboy and a wizard. He ___ at Hogwarts School of Witchcraft and Wizardry. Every day Harry ___ in the morning in the Gryffindor tower. He ___, puts on his cloak and goes to the Great Hall. He ___ with his friends Ron and Hermione. Then he ___ to his classes. Harry ___ a lot of magic tricks. He ___ to the teachers. He ___ in his exercise book. At break time he ___ with his friends. He ___ in the corridor. After school he sometimes ___ to the Quidditch pitch. He ___ on his broom. He ___ Quidditch. In the afternoon he ___ his homework in the common room. He ___ books. He ___ on his essays. In the evening he ___ in the Great Hall. After dinner he ___ chess. He ___ with Ron and Hermione. At night he ___ back to the Gryffindor tower. He ___ to bed. He ___ about new adventures.",
+  "answers": [
+    [
+      "lives"
+    ],
+    [
+      "wakes up"
+    ],
+    [
+      "gets up"
+    ],
+    [
+      "has breakfast"
+    ],
+    [
+      "goes"
+    ],
+    [
+      "studies"
+    ],
+    [
+      "listens"
+    ],
+    [
+      "writes"
+    ],
+    [
+      "talks"
+    ],
+    [
+      "walks"
+    ],
+    [
+      "goes"
+    ],
+    [
+      "flies"
+    ],
+    [
+      "practices"
+    ],
+    [
+      "does"
+    ],
+    [
+      "reads"
+    ],
+    [
+      "works"
+    ],
+    [
+      "has dinner"
+    ],
+    [
+      "plays"
+    ],
+    [
+      "talks"
+    ],
+    [
+      "goes"
+    ],
+    [
+      "goes"
+    ],
+    [
+      "dreams"
+    ]
+  ],
+  "word_bank": [
+    "lives",
+    "wakes up",
+    "gets up",
+    "has breakfast",
+    "goes",
+    "studies",
+    "listens",
+    "writes",
+    "talks",
+    "walks",
+    "goes",
+    "flies",
+    "practices",
+    "does",
+    "reads",
+    "works",
+    "has dinner",
+    "plays",
+    "talks",
+    "goes",
+    "goes",
+    "dreams",
+    "live",
+    "wake up",
+    "go",
+    "study",
+    "write",
+    "read",
+    "work",
+    "play",
+    "do",
+    "have breakfast"
+  ],
+  "hints": [
+    "live",
+    "wake up",
+    "get up",
+    "have breakfast",
+    "go",
+    "study",
+    "listen",
+    "write",
+    "talk",
+    "walk",
+    "go",
+    "fly",
+    "practice",
+    "do",
+    "read",
+    "work",
+    "have dinner",
+    "play",
+    "talk",
+    "go",
+    "go",
+    "dream"
   ]
 }

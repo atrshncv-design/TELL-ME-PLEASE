@@ -73,8 +73,44 @@ for (const file of files) {
         }
       }
     }
-    
-    if (items.length === 0 && task.type !== "role-play" && task.type !== "voice-chat") {
+
+    if (task.type === "cloze") {
+      // Single-round: text + answers[][] + word_bank[]. Multi-round: rounds[].
+      const rounds = task.rounds && task.rounds.length > 0
+        ? task.rounds
+        : task.text && task.answers && task.word_bank
+          ? [{ text: task.text, answers: task.answers, word_bank: task.word_bank }]
+          : []
+      if (rounds.length === 0) {
+        console.log(`❌ ${file}: cloze task has neither rounds[] nor text/answers/word_bank`)
+        errors++
+      }
+      rounds.forEach((r, ri) => {
+        const blankCount = r.text.split("___").length - 1
+        if (blankCount !== r.answers.length) {
+          console.log(`❌ ${file}[round ${ri}]: ${blankCount} blanks in text but ${r.answers.length} answer slots`)
+          errors++
+        }
+        r.answers.forEach((acceptable, bi) => {
+          if (!Array.isArray(acceptable) || acceptable.length === 0) {
+            console.log(`❌ ${file}[round ${ri}][blank ${bi}]: answers must be a non-empty string[]`)
+            errors++
+          }
+        })
+        // Every answer must appear (case-insensitive) somewhere in the word bank.
+        const bankLower = r.word_bank.map((w) => String(w).toLowerCase())
+        r.answers.forEach((acceptable, bi) => {
+          const inBank = acceptable.some((a) => bankLower.includes(String(a).toLowerCase()))
+          if (!inBank) {
+            console.log(`❌ ${file}[round ${ri}][blank ${bi}]: answer ${JSON.stringify(acceptable)} not in word_bank`)
+            errors++
+          }
+        })
+      })
+    }
+
+    const clozeHasData = task.type === "cloze" && ((task.rounds && task.rounds.length > 0) || task.text)
+    if (items.length === 0 && !clozeHasData && task.type !== "role-play" && task.type !== "voice-chat") {
       console.log(`⚠️ ${file}: no items (type=${task.type})`)
     }
     
@@ -188,6 +224,7 @@ sanityCheck(
     "drag-and-drop",
     "ladder",
     "build-sentence",
+    "cloze",
     "role-play",
     "voice-chat",
     "fill-in-and-speak",
