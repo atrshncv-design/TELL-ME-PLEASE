@@ -135,12 +135,21 @@ function groupExercises(exercises: Exercise[]): Section[] {
   })).filter((s) => s.tasks.length > 0)
 }
 
+interface UsefulLink {
+  title: string
+  url: string
+  description?: string
+}
+
 export default function SectionsPage() {
   const { grade } = useParams<{ grade: string }>()
   const router = useRouter()
 
   const [sections, setSections] = useState<Section[] | null>(null)
   const [error, setError] = useState(false)
+  // Useful links section (decision Q2/Q9) — loaded from links.json, separate
+  // from the graded exercises. Contains songs/videos for self-study.
+  const [links, setLinks] = useState<UsefulLink[] | null>(null)
 
   // Per-grade client-side progress (localStorage, no backend — decision Q8).
   const { progress, completedCount } = useProgress(grade)
@@ -168,6 +177,19 @@ export default function SectionsPage() {
         if (cancelled) return
         console.error("[SectionsPage] Failed to load index.json", err)
         setError(true)
+      })
+    // Best-effort: also fetch the useful-links file (it may not exist for all
+    // grades — that's fine, the section just doesn't render). Per Q9 these are
+    // placeholder links the teacher/client fills in.
+    fetch(`/content/tasks/grade_${grade}/links.json`)
+      .then(async (res) => {
+        if (!res.ok) return
+        const data = await res.json()
+        if (cancelled) return
+        if (Array.isArray(data.links)) setLinks(data.links)
+      })
+      .catch(() => {
+        // links.json missing or invalid — silently skip (section hidden).
       })
     return () => {
       cancelled = true
@@ -247,6 +269,45 @@ export default function SectionsPage() {
           </div>
           )
         })}
+
+      {/* Useful links section (decision Q2/Q9) — songs/videos for self-study.
+          Links open in a new tab. Hidden if links.json is absent/empty. */}
+      {links && links.length > 0 && (
+        <div className="w-full mb-6">
+          <motion.div
+            initial={{ x: -20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="flex items-center gap-3 mb-3"
+          >
+            <span className="text-2xl">🎵</span>
+            <div>
+              <div className="font-bold text-sky-700">Полезное</div>
+              <div className="text-xs text-slate-500">Песенки и материалы для самостоятельного изучения</div>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 gap-2 ml-10">
+            {links.map((l, li) => (
+              <motion.a
+                key={li}
+                href={l.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 + li * 0.05 }}
+                className="flex flex-col px-3 py-2 rounded-xl border text-sm text-slate-700 hover:shadow-md transition-all bg-sky-50 border-sky-200 hover:border-sky-400"
+              >
+                <span className="font-medium text-sky-800">▶ {l.title}</span>
+                {l.description && (
+                  <span className="text-xs text-slate-500 mt-0.5">{l.description}</span>
+                )}
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

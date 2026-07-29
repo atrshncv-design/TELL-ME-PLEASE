@@ -1,0 +1,12 @@
+{
+  "id": "useful_links",
+  "title": "Полезные ссылки",
+  "category": "useful",
+  "type": "links",
+  "description": "Песенки и материалы для самостоятельного изучения",
+  "links": [
+    {"title": "Present Simple песня (заглушка)", "url": "https://example.com/present-simple-song", "description": "Вставьте ссылку на YouTube-песню по Present Simple"},
+    {"title": "Глагол to be — песня (заглушка)", "url": "https://example.com/to-be-song", "description": "Вставьте ссылку на YouTube-песню по глаголу to be"},
+    {"title": "Видео: окончания глаголов (заглушка)", "url": "https://example.com/endings-video", "description": "Вставьте ссылку на обучающее видео"}
+  ]
+}
