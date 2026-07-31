@@ -12,7 +12,8 @@ import { useCallback, useEffect, useRef, useState } from "react"
  *   {"type":"done","content":"<полный ответ>"}
  *   {"type":"error","content":"..."}
  *   {"type":"session_ended","content":"<финальный фидбек>"}  — только при final=true
- * (событие "queued" появится в T03 — сейчас неизвестные типы игнорируются).
+ *   {"type":"queued","content":"Думаю над твоими словами…","position":N} — T03: слот
+ *     очереди занят, запрос ждёт (один раз, до начала стриминга).
  */
 
 export type ChatStreamMessage =
@@ -20,6 +21,7 @@ export type ChatStreamMessage =
   | { type: "done"; content: string }
   | { type: "error"; content: string }
   | { type: "session_ended"; content: string }
+  | { type: "queued"; content: string; position?: number }
 
 type ChatMsg = { role: "user" | "assistant"; content: string }
 
@@ -118,11 +120,11 @@ export function useChatStream({
       let buffer = ""
       let full = ""
 
-      // Одно SSE-событие ("data: <json>"). Неизвестные типы (напр. "queued" из T03)
-      // молча пропускаем — клиент остаётся совместимым вперёд.
+      // Одно SSE-событие ("data: <json>"). Неизвестные типы молча пропускаем —
+      // клиент остаётся совместимым вперёд.
       const handleEvent = (data: string) => {
         if (data === "[DONE]") return
-        let evt: { type?: string; content?: unknown }
+        let evt: { type?: string; content?: unknown; position?: unknown }
         try {
           evt = JSON.parse(data)
         } catch {
@@ -133,11 +135,13 @@ export function useChatStream({
           type !== "token" &&
           type !== "done" &&
           type !== "error" &&
-          type !== "session_ended"
+          type !== "session_ended" &&
+          type !== "queued"
         ) {
           return
         }
         const content = typeof evt.content === "string" ? evt.content : ""
+        const position = typeof evt.position === "number" ? evt.position : undefined
 
         if (type === "token") full += content
         if (type === "done") {
@@ -147,7 +151,7 @@ export function useChatStream({
         }
         if (type === "session_ended") setConnected(false)
 
-        onMessageRef.current({ type, content })
+        onMessageRef.current({ type, content, ...(position !== undefined ? { position } : {}) })
       }
 
       // Разбор накопленного буфера: события разделены пустой строкой (\n\n)

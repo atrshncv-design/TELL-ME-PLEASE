@@ -1,10 +1,13 @@
 "use client"
 
+import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { motion } from "framer-motion"
+import AdminLoginModal from "@/components/AdminLoginModal"
 
 export default function Home() {
   const router = useRouter()
+  const [adminOpen, setAdminOpen] = useState(false)
 
   return (
     <div className="relative flex flex-1 flex-col items-center justify-center overflow-hidden px-4">
@@ -32,6 +35,23 @@ export default function Home() {
           Начать →
         </button>
       </motion.div>
+
+      {/* Незаметная кнопка входа в админ-панель (T05, решение 14 SPEC).
+          Левый нижний угол — правый занят Verb Bot'ом. Мелкая, серая,
+          почти прозрачная: дети её не замечают, учительница знает, где она. */}
+      <button
+        type="button"
+        onClick={() => setAdminOpen(true)}
+        aria-label="Админка"
+        className="absolute bottom-3 left-3 z-40 rounded-full p-2 text-slate-400 opacity-25 transition-opacity hover:opacity-100 focus:opacity-100"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      </button>
+
+      <AdminLoginModal open={adminOpen} onClose={() => setAdminOpen(false)} />
     </div>
   )
 }

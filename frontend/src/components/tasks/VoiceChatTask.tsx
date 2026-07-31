@@ -38,6 +38,7 @@ function VoiceChatInner({
 
   const [messages, setMessages] = useState<{ role: "user" | "ai"; text: string }[]>([])
   const [aiText, setAiText] = useState("")
+  const [queued, setQueued] = useState<string | null>(null)
   const [sessionEnded, setSessionEnded] = useState(false)
   const [finalFeedback, setFinalFeedback] = useState("")
   const [timeLeft, setTimeLeft] = useState(sessionSeconds)
@@ -85,11 +86,18 @@ function VoiceChatInner({
   const handleChatMessage = useCallback(
     (msg: ChatStreamMessage) => {
       switch (msg.type) {
+        case "queued":
+          // T03: запрос в очереди — показываем реплику «ИИ задумался…»
+          setQueued(msg.content)
+          break
         case "token":
+          // Начался стриминг — очередь снимаем
+          setQueued(null)
           aiTextRef.current += msg.content
           setAiText(aiTextRef.current)
           break
         case "done": {
+          setQueued(null)
           // Полный ответ (done несёт content) — показываем текстом и озвучиваем
           const full = msg.content || aiTextRef.current
           if (full) {
@@ -101,6 +109,7 @@ function VoiceChatInner({
           break
         }
         case "session_ended":
+          setQueued(null)
           sessionEndedRef.current = true
           setSessionEnded(true)
           if (msg.content) setFinalFeedback(msg.content)
@@ -108,6 +117,7 @@ function VoiceChatInner({
           if (!speakingRef.current) setLastAudioPlayed(true)
           break
         case "error":
+          setQueued(null)
           setMessages((p) => [...p, { role: "ai", text: `⚠️ ${msg.content}` }])
           // Финальный запрос упал — завершаем сессию мягко (финальный экран)
           if (timeUpRef.current && !sessionEndedRef.current) {
@@ -189,8 +199,8 @@ function VoiceChatInner({
   }
 
   const hasPanel = (dialogue && dialogue.length > 0) || (sections && sections.length > 0)
-  // «muted» (микрофон на паузе) = ИИ говорит
-  const muted = speaking
+  // «muted» (микрофон на паузе) = ИИ говорит или ждёт слот в очереди
+  const muted = speaking || queued !== null
 
   return (
     // 100dvh so the mic button stays visible when the mobile address bar
@@ -251,6 +261,19 @@ function VoiceChatInner({
               <div className="flex justify-start">
                 <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm bg-white text-slate-800 shadow border border-slate-100">
                   {aiText}<span className="inline-block w-1 h-3 bg-indigo-400 ml-0.5 animate-pulse rounded" />
+                </div>
+              </div>
+            )}
+            {/* T03: запрос ждёт слот в очереди — реплика персонажа */}
+            {queued && (
+              <div className="flex justify-start">
+                <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm bg-white text-slate-400 shadow border border-slate-100 italic">
+                  {queued}
+                  <span className="inline-flex gap-1 ml-1 align-middle">
+                    <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" />
+                    <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:150ms]" />
+                    <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:300ms]" />
+                  </span>
                 </div>
               </div>
             )}

@@ -10,11 +10,14 @@
  *   {"type":"done","content":"<полный ответ>"}
  *   {"type":"error","content":"..."}
  *   {"type":"session_ended","content":"<финальный фидбек>"}   — только при final=true
+ *   {"type":"queued","content":"Думаю над твоими словами…","position":N} — T03: слот
+ *     очереди занят, запрос ждёт (один раз, до начала стриминга).
  *
  * Ошибки ДО начала стрима (валидация) — JSON 400; ошибки сервиса/LLM —
  * SSE-событие error (как error-событие WS-контракта фазы 1).
  */
 import { keyManager, streamChatCompletion } from "@/server/chat/stream"
+import { acquire, QueueTimeoutError } from "@/server/chat/queue"
 
 // Платформа space.z-ai — полный Node.js; fetch-стриминг в edge не гарантирован
 export const runtime = "nodejs"
@@ -116,16 +119,36 @@ export async function POST(request: Request): Promise<Response> {
           return
         }
 
-        for await (const event of streamChatCompletion({
-          branchId: branch_id,
-          taskId: task_id,
-          taskContext: task_context,
-          messages,
-          final,
-        })) {
-          send(event)
+        // T03: очередь — максимум MAX_CONCURRENT параллельных LLM-запросов,
+        // остальные ждут (queued-событие), таймаут ожидания — error.
+        const slot = await acquire()
+        if (slot.queued) {
+          send({
+            type: "queued",
+            content: "Думаю над твоими словами…",
+            position: slot.position,
+          })
+        }
+
+        try {
+          for await (const event of streamChatCompletion({
+            branchId: branch_id,
+            taskId: task_id,
+            taskContext: task_context,
+            messages,
+            final,
+          })) {
+            send(event)
+          }
+        } finally {
+          slot.release()
         }
       } catch (err) {
+        // Таймаут очереди — мягкое падение (предложение повторить)
+        if (err instanceof QueueTimeoutError) {
+          send({ type: "error", content: err.message })
+          return
+        }
         // Непредвиденная ошибка — шлём error-событие, чтобы клиент не висел
         console.error("[api/chat/stream] unexpected error:", err)
         send({ type: "error", content: "Внутренняя ошибка сервера. Попробуйте ещё раз." })
