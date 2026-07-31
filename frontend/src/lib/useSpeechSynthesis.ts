@@ -57,21 +57,47 @@ export function useSpeechSynthesis() {
   const queueRef = useRef<string[]>([])
   const speakingRef = useRef(false)
   const supportedRef = useRef(false)
+  const warmedRef = useRef(false)
 
   // Голоса могут загрузиться асинхронно (Chrome: первый getVoices() пустой) —
   // слушаем voiceschanged. Без найденного en-голоса озвучка не включается.
+  const loadVoices = useCallback(() => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return
+    const picked = pickVoice(window.speechSynthesis.getVoices())
+    voiceRef.current = picked
+    supportedRef.current = picked !== null
+    setSupported(picked !== null)
+  }, [])
+
   useEffect(() => {
     if (typeof window === "undefined" || !("speechSynthesis" in window)) return
     const synth = window.speechSynthesis
-    const load = () => {
-      const picked = pickVoice(synth.getVoices())
-      voiceRef.current = picked
-      supportedRef.current = picked !== null
-      setSupported(picked !== null)
+    loadVoices()
+    synth.addEventListener?.("voiceschanged", loadVoices)
+    return () => synth.removeEventListener?.("voiceschanged", loadVoices)
+  }, [loadVoices])
+
+  // iOS Safari блокирует speechSynthesis без user gesture (жест «протухает»
+  // к моменту SSE-done через 5-10с). Стандартный фикс: «прогреть» движок
+  // пустым utterance на первом жесте пользователя (тап/клик/клавиша).
+  useEffect(() => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return
+    const synth = window.speechSynthesis
+    const warm = () => {
+      if (warmedRef.current) return
+      warmedRef.current = true
+      try {
+        const u = new SpeechSynthesisUtterance(" ")
+        u.volume = 0
+        synth.speak(u)
+        synth.cancel()
+      } catch {
+        /* превент не критичен */
+      }
     }
-    load()
-    synth.addEventListener?.("voiceschanged", load)
-    return () => synth.removeEventListener?.("voiceschanged", load)
+    const events = ["pointerdown", "touchstart", "keydown"] as const
+    events.forEach((e) => window.addEventListener(e, warm))
+    return () => events.forEach((e) => window.removeEventListener(e, warm))
   }, [])
 
   /** Произнести следующее предложение из очереди (или завершить). */
@@ -105,8 +131,26 @@ export function useSpeechSynthesis() {
   const speak = useCallback(
     (text: string) => {
       if (typeof window === "undefined") return
-      if (!supportedRef.current || !text.trim()) return // молчаливый no-op
+      if (!text.trim()) return
       const synth = window.speechSynthesis
+      // Голоса могли подгрузиться позже (voiceschanged ещё не пришёл) —
+      // пробуем перечитать список перед тем, как сдаться.
+      if (!supportedRef.current) {
+        loadVoices()
+        if (!supportedRef.current) return // молчаливый no-op, текст виден на экране
+      }
+      // iOS-страховка: пустой utterance «прогревает» движок, если жест-превент
+      // не успел сработать (например, ответ пришёл без предшествующего тапа).
+      if (!synth.speaking) {
+        try {
+          const u = new SpeechSynthesisUtterance("")
+          u.volume = 0
+          synth.speak(u)
+          synth.cancel()
+        } catch {
+          /* не критично */
+        }
+      }
       // Новый текст заменяет текущую речь — ответы не должны накладываться
       synth.cancel()
       queueRef.current = splitSentences(text)
@@ -115,7 +159,7 @@ export function useSpeechSynthesis() {
       setSpeaking(true)
       speakNext()
     },
-    [speakNext],
+    [loadVoices, speakNext],
   )
 
   /** Остановить озвучку (кнопка/размонтирование). */
