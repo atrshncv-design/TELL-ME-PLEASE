@@ -3,17 +3,9 @@ import { useEffect, useRef, useState } from "react"
 
 const SESSION_KEY = "tmp_device_session"
 
-// The backend runs on :8000. In dev the frontend (:3000) must call
-// http://localhost:8000/api/event (cross-origin — CORS allows :3000). We derive
-// the backend base from NEXT_PUBLIC_WS_URL, which is already required for the
-// chat socket and follows the form ws://localhost:8000/ws/chat.
-// TODO(prod): replace this derivation with a dedicated NEXT_PUBLIC_API_BASE env.
-function apiBase(): string {
-  if (typeof window === "undefined") return ""
-  const ws = process.env.NEXT_PUBLIC_WS_URL || "ws://localhost:8000/ws/chat"
-  // ws://localhost:8000/ws/chat -> http://localhost:8000  (also covers wss:// -> https://)
-  return ws.replace(/^ws/, "http").replace(/\/ws\/chat.*$/, "")
-}
+// API-роут /api/event живёт на том же origin, что и фронт (Next.js App Router,
+// решения 1/13 из docs/SPEC-spacezai-live-mvp.md), поэтому ходим по
+// относительному пути — никаких базовых URL и CORS.
 
 // crypto.randomUUID() requires a secure context (HTTPS or localhost) — fine for
 // dev (localhost) and prod (Vercel/space-z.ai HTTPS). Add a Math.random-based
@@ -71,9 +63,10 @@ export function useAnalytics() {
       user_agent: typeof navigator !== "undefined" ? navigator.userAgent : undefined,
       extra: params.extra,
     }
-    // Fire-and-forget. Never block UX. Swallow all errors.
+    // Fire-and-forget: аналитика не должна блокировать UX. Ошибки сети
+    // игнорируем молча (событие не критично для пользователя).
     try {
-      fetch(`${apiBase()}/api/event`, {
+      fetch("/api/event", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

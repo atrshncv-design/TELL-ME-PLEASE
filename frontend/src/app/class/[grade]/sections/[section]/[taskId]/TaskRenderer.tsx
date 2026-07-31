@@ -99,7 +99,7 @@ export function TaskRenderer({ task, grade }: { task: TaskData; grade: string })
     case "role-play":
     case "voice-chat":
     case "fill-in-and-speak":
-      return <div className={BG}><VoiceChatTask title={task.title} description={task.description} dialogue={task.dialogue} sections={task.sections} taskContext={serializeContext(task)} grade={grade} /></div>
+      return <div className={BG}><VoiceChatTask title={task.title} description={task.description} dialogue={task.dialogue} sections={task.sections} taskContext={serializeContext(task)} grade={grade} taskId={task.id} /></div>
     default:
       return <div className="flex items-center justify-center h-screen"><p className="text-slate-500">Тип "{task.type}" пока не поддерживается</p></div>
   }

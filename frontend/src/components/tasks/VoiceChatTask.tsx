@@ -4,9 +4,9 @@ import { Suspense, useCallback, useEffect, useRef, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
-import { useWebSocket, type WsMessage } from "@/lib/useWebSocket"
+import { useChatStream, type ChatStreamMessage } from "@/lib/useChatStream"
+import { useSpeechSynthesis } from "@/lib/useSpeechSynthesis"
 import { useSpeechRecognition } from "@/lib/useSpeechRecognition"
-import { useAudioPlayer } from "@/lib/useAudioPlayer"
 import { useAnalytics } from "@/lib/useAnalytics"
 
 interface VoiceChatTaskProps {
@@ -16,6 +16,8 @@ interface VoiceChatTaskProps {
   dialogue?: { speaker: string; text: string }[]
   taskContext?: string
   grade?: string
+  /** id задания — уходит на бэкенд для выбора роли ИИ (промпт-роутер). */
+  taskId?: string
   sessionSeconds?: number
 }
 
@@ -26,6 +28,7 @@ function VoiceChatInner({
   dialogue,
   taskContext,
   grade: gradeProp,
+  taskId,
   sessionSeconds = 180,
 }: VoiceChatTaskProps) {
   const params = useSearchParams()
@@ -35,15 +38,24 @@ function VoiceChatInner({
 
   const [messages, setMessages] = useState<{ role: "user" | "ai"; text: string }[]>([])
   const [aiText, setAiText] = useState("")
-  const [muted, setMuted] = useState(false)
   const [sessionEnded, setSessionEnded] = useState(false)
+  const [finalFeedback, setFinalFeedback] = useState("")
   const [timeLeft, setTimeLeft] = useState(sessionSeconds)
   const [textInput, setTextInput] = useState("")
-  const aiTextRef = useRef("")
-  const sessionEndedRef = useRef(false)
   const [lastAudioPlayed, setLastAudioPlayed] = useState(false)
   const [showPanel, setShowPanel] = useState(false)
+  const aiTextRef = useRef("")
+  const sessionEndedRef = useRef(false)
+  // 3-мин таймер истёк — финальный запрос отправлен, ввод заблокирован
+  const timeUpRef = useRef(false)
 
+  const { speak, stop, speaking, supported: ttsSupported } = useSpeechSynthesis()
+  // Зеркало speaking для синхронных проверок в обработчиках событий
+  const speakingRef = useRef(speaking)
+  speakingRef.current = speaking
+
+  // 3-мин таймер СЕССИИ: отсчитывает с момента старта (как в старом бэкенде),
+  // НЕ сбрасывается при обмене репликами.
   useEffect(() => {
     if (sessionEnded) return
     const iv = setInterval(() => {
@@ -70,48 +82,77 @@ function VoiceChatInner({
     return `${m}:${(s % 60).toString().padStart(2, "0")}`
   }
 
-  const { playing, enqueue } = useAudioPlayer({
-    onPlaybackStart: () => setMuted(true),
-    onPlaybackEnd: () => {
-      setMuted(false)
-      if (sessionEndedRef.current) setLastAudioPlayed(true)
-    },
-  })
-
-  const handleWsMessage = useCallback(
-    (msg: WsMessage) => {
+  const handleChatMessage = useCallback(
+    (msg: ChatStreamMessage) => {
       switch (msg.type) {
         case "token":
           aiTextRef.current += msg.content
           setAiText(aiTextRef.current)
           break
-        case "audio":
-          enqueue(msg.content)
-          break
-        case "done":
-          if (aiTextRef.current) {
-            setMessages((p) => [...p, { role: "ai", text: aiTextRef.current }])
+        case "done": {
+          // Полный ответ (done несёт content) — показываем текстом и озвучиваем
+          const full = msg.content || aiTextRef.current
+          if (full) {
+            setMessages((p) => [...p, { role: "ai", text: full }])
+            speak(full)
           }
           aiTextRef.current = ""
           setAiText("")
           break
+        }
         case "session_ended":
           sessionEndedRef.current = true
           setSessionEnded(true)
+          if (msg.content) setFinalFeedback(msg.content)
+          // Без TTS финальный экран показываем сразу (только текст)
+          if (!speakingRef.current) setLastAudioPlayed(true)
           break
         case "error":
           setMessages((p) => [...p, { role: "ai", text: `⚠️ ${msg.content}` }])
+          // Финальный запрос упал — завершаем сессию мягко (финальный экран)
+          if (timeUpRef.current && !sessionEndedRef.current) {
+            sessionEndedRef.current = true
+            setSessionEnded(true)
+            setLastAudioPlayed(true)
+          }
           break
       }
     },
-    [enqueue]
+    [speak],
   )
 
-  const { connected, send, reconnect } = useWebSocket({ branchId: grade, onMessage: handleWsMessage, taskContext })
+  const { connected, sending, startSession, send, sendFinal, reconnect } = useChatStream({
+    onMessage: handleChatMessage,
+  })
 
-  const { listening, supported, error, start, stop } = useSpeechRecognition({
-    enabled: !muted && !sessionEnded,
+  // Сессия стартует при монтировании (аналог WS-init фазы 1):
+  // «connected» = сессия готова, а не сетевое соединение.
+  useEffect(() => {
+    startSession({ branchId: grade, taskId, taskContext })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // По истечении 180с — финальный запрос с final:true (сервер сам соберёт
+  // фидбек и пришлёт session_ended). Срабатывает ровно один раз.
+  useEffect(() => {
+    if (timeLeft > 0 || sessionEndedRef.current || timeUpRef.current) return
+    timeUpRef.current = true
+    sendFinal()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timeLeft])
+
+  // Озвучка фидбека закончилась (и сессия завершена) — показываем финальный экран
+  useEffect(() => {
+    if (!speaking && sessionEndedRef.current) setLastAudioPlayed(true)
+  }, [speaking])
+
+  // Стоп озвучки при размонтировании
+  useEffect(() => () => stop(), [stop])
+
+  const { listening, supported, error, start, stop: stopListening } = useSpeechRecognition({
+    enabled: !speaking && !sessionEnded && !timeUpRef.current,
     onResult: (text) => {
+      if (timeUpRef.current || sessionEndedRef.current) return
       setMessages((p) => [...p, { role: "user", text }])
       send(text)
       aiTextRef.current = ""
@@ -119,13 +160,13 @@ function VoiceChatInner({
     },
   })
 
-  const toggleMic = () => (listening ? stop() : start())
+  const toggleMic = () => (listening ? stopListening() : start())
 
   // Text-input fallback for browsers where Web Speech API is unavailable (e.g. Firefox).
-  // Mirrors the voice `onResult` path: append the user message, send over WS, clear any partial AI text.
+  // Mirrors the voice `onResult` path: append the user message, send over SSE, clear any partial AI text.
   const handleSendText = () => {
     const text = textInput.trim()
-    if (!text || !connected || sessionEnded) return
+    if (!text || !connected || sessionEnded || timeUpRef.current) return
     setMessages((p) => [...p, { role: "user", text }])
     send(text)
     aiTextRef.current = ""
@@ -138,12 +179,18 @@ function VoiceChatInner({
       <div className="flex flex-col h-[100dvh] items-center justify-center px-6 gap-4">
         <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-5xl">🎉</motion.div>
         <h2 className="text-2xl font-bold text-indigo-900">Отлично!</h2>
-        <p className="text-slate-600">Ты хорошо поговорил на английском!</p>
+        {finalFeedback ? (
+          <p className="text-slate-600 text-center max-w-md">{finalFeedback}</p>
+        ) : (
+          <p className="text-slate-600">Ты хорошо поговорил на английском!</p>
+        )}
       </div>
     )
   }
 
   const hasPanel = (dialogue && dialogue.length > 0) || (sections && sections.length > 0)
+  // «muted» (микрофон на паузе) = ИИ говорит
+  const muted = speaking
 
   return (
     // 100dvh so the mic button stays visible when the mobile address bar
@@ -164,8 +211,8 @@ function VoiceChatInner({
           <div>
             <div className="font-bold text-indigo-900 text-sm">{title}</div>
             <div className="text-xs text-slate-500 flex items-center gap-2">
-              {connected ? "онлайн" : "офлайн"}
-              {!connected && (
+              {sessionEnded ? "сессия завершена" : connected ? "онлайн" : "офлайн"}
+              {!connected && !sessionEnded && (
                 <button onClick={reconnect} className="text-indigo-600 underline hover:text-indigo-800">
                   Переподключиться
                 </button>
@@ -207,11 +254,23 @@ function VoiceChatInner({
                 </div>
               </div>
             )}
+            {/* Ждём первый токен от LLM (до начала стрима) */}
+            {sending && !aiText && !muted && (
+              <div className="flex justify-start">
+                <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm bg-white text-slate-400 shadow border border-slate-100">
+                  <span className="inline-flex gap-1">
+                    <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" />
+                    <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:150ms]" />
+                    <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:300ms]" />
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Input area — three branches: mic (Chrome/Edge), text fallback (Firefox), nothing (session ended) */}
           <div className="flex flex-col items-center gap-2 px-4 py-3 border-t border-indigo-100">
-            {supported && !sessionEnded ? (() => {
+            {supported && !sessionEnded && !timeUpRef.current ? (() => {
               // Priority order: offline > muted > listening > idle.
               // Each state gets a distinct color + icon + native tooltip so the user
               // understands WHY the mic isn't reacting when it's disabled.
@@ -219,7 +278,7 @@ function VoiceChatInner({
               const micConfig = {
                 listening: { icon: "⏹", bg: "bg-red-500 text-white shadow-red-200 animate-pulse", title: "Идёт запись. Нажми, чтобы остановить." },
                 muted:     { icon: "🔇", bg: "bg-amber-200 text-amber-700", title: "ИИ говорит. Микрофон на паузе." },
-                offline:   { icon: "🎤", bg: "bg-slate-300 text-slate-500 opacity-60 cursor-not-allowed", title: "Нет связи с сервером. Проверь, что бэкенд запущен." },
+                offline:   { icon: "🎤", bg: "bg-slate-300 text-slate-500 opacity-60 cursor-not-allowed", title: "Нет связи с сервером. Проверь, что сервис запущен." },
                 idle:      { icon: "🎤", bg: "bg-indigo-600 text-white shadow-indigo-200 hover:bg-indigo-700", title: "Нажми, чтобы говорить." },
               }[micState]
               const statusLabel = !connected ? "офлайн" : muted ? "пауза (ИИ говорит)" : listening ? "слушаю..." : ""
@@ -238,7 +297,7 @@ function VoiceChatInner({
                 </>
               )
             })() : null}
-            {!supported && !sessionEnded ? (
+            {!supported && !sessionEnded && !timeUpRef.current ? (
               <>
                 <div className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 text-center">
                   🎤 Голосовая запись доступна в Chrome или Edge. Можно написать ответ текстом:
@@ -267,9 +326,9 @@ function VoiceChatInner({
             {error && (
               <p className="text-xs text-red-500 text-center">{error}</p>
             )}
-            {playing && (
+            {muted && (
               <div className="flex items-center gap-1 text-xs text-indigo-600">
-                <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full animate-pulse" />Воспроизведение...
+                <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full animate-pulse" />Озвучиваю ответ...
               </div>
             )}
           </div>
