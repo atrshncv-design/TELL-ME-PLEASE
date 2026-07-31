@@ -8,4 +8,5 @@ frontend/.git/
 frontend/.env.local
 .mimocode/
 backend/data/
+frontend/data/
 graphify-out/
