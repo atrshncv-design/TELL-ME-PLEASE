@@ -75,8 +75,10 @@ const SECTION_META: Record<Category, SectionMeta> = {
 
 /**
  * World accent colors (decision Q11): grammar=indigo, to-be=teal,
- * vocab=emerald, listening=amber, speaking=rose. All class names are
- * string literals so Tailwind can see them.
+ * vocab=emerald, listening=amber, speaking=rose. Semantic tokens from
+ * DESIGN.md (--color-grammar-*, --color-tobe-*, ...) — same hues as phase 1,
+ * now exported from the design system. All class names are string literals
+ * so Tailwind can see them.
  */
 const SECTION_COLOR: Record<
   string,
@@ -92,54 +94,54 @@ const SECTION_COLOR: Record<
   }
 > = {
   grammar: {
-    header: "text-indigo-700",
-    zone: "bg-indigo-50/70 border-indigo-100",
-    dot: "bg-indigo-500",
-    dotIdle: "bg-indigo-300",
-    connectorDone: "bg-indigo-400",
-    card: "bg-white border-indigo-200",
-    ring: "hover:border-indigo-400",
-    currentRing: "ring-indigo-400",
+    header: "text-grammar-800",
+    zone: "bg-gradient-to-br from-grammar-100/80 via-grammar-50/60 to-white border-grammar-200/80 shadow-sm shadow-grammar-100/60",
+    dot: "bg-grammar-500 shadow shadow-grammar-300/70",
+    dotIdle: "bg-grammar-300",
+    connectorDone: "bg-grammar-400",
+    card: "bg-white border-grammar-200",
+    ring: "hover:border-grammar-400 hover:shadow-lg hover:shadow-grammar-100/70",
+    currentRing: "ring-grammar-400",
   },
   "to-be": {
-    header: "text-teal-700",
-    zone: "bg-teal-50/70 border-teal-100",
-    dot: "bg-teal-500",
-    dotIdle: "bg-teal-300",
-    connectorDone: "bg-teal-400",
-    card: "bg-white border-teal-200",
-    ring: "hover:border-teal-400",
-    currentRing: "ring-teal-400",
+    header: "text-tobe-800",
+    zone: "bg-gradient-to-br from-tobe-100/80 via-tobe-50/60 to-white border-tobe-200/80 shadow-sm shadow-tobe-100/60",
+    dot: "bg-tobe-500 shadow shadow-tobe-300/70",
+    dotIdle: "bg-tobe-300",
+    connectorDone: "bg-tobe-400",
+    card: "bg-white border-tobe-200",
+    ring: "hover:border-tobe-400 hover:shadow-lg hover:shadow-tobe-100/70",
+    currentRing: "ring-tobe-400",
   },
   vocabulary: {
-    header: "text-emerald-700",
-    zone: "bg-emerald-50/70 border-emerald-100",
-    dot: "bg-emerald-500",
-    dotIdle: "bg-emerald-300",
-    connectorDone: "bg-emerald-400",
-    card: "bg-white border-emerald-200",
-    ring: "hover:border-emerald-400",
-    currentRing: "ring-emerald-400",
+    header: "text-vocabulary-800",
+    zone: "bg-gradient-to-br from-vocabulary-100/80 via-vocabulary-50/60 to-white border-vocabulary-200/80 shadow-sm shadow-vocabulary-100/60",
+    dot: "bg-vocabulary-500 shadow shadow-vocabulary-300/70",
+    dotIdle: "bg-vocabulary-300",
+    connectorDone: "bg-vocabulary-400",
+    card: "bg-white border-vocabulary-200",
+    ring: "hover:border-vocabulary-400 hover:shadow-lg hover:shadow-vocabulary-100/70",
+    currentRing: "ring-vocabulary-400",
   },
   listening: {
-    header: "text-amber-700",
-    zone: "bg-amber-50/70 border-amber-100",
-    dot: "bg-amber-500",
-    dotIdle: "bg-amber-300",
-    connectorDone: "bg-amber-400",
-    card: "bg-white border-amber-200",
-    ring: "hover:border-amber-400",
-    currentRing: "ring-amber-400",
+    header: "text-listening-800",
+    zone: "bg-gradient-to-br from-listening-100/80 via-listening-50/60 to-white border-listening-200/80 shadow-sm shadow-listening-100/60",
+    dot: "bg-listening-500 shadow shadow-listening-300/70",
+    dotIdle: "bg-listening-300",
+    connectorDone: "bg-listening-400",
+    card: "bg-white border-listening-200",
+    ring: "hover:border-listening-400 hover:shadow-lg hover:shadow-listening-100/70",
+    currentRing: "ring-listening-400",
   },
   speaking: {
-    header: "text-rose-700",
-    zone: "bg-rose-50/70 border-rose-100",
-    dot: "bg-rose-500",
-    dotIdle: "bg-rose-300",
-    connectorDone: "bg-rose-400",
-    card: "bg-white border-rose-200",
-    ring: "hover:border-rose-400",
-    currentRing: "ring-rose-400",
+    header: "text-speaking-800",
+    zone: "bg-gradient-to-br from-speaking-100/80 via-speaking-50/60 to-white border-speaking-200/80 shadow-sm shadow-speaking-100/60",
+    dot: "bg-speaking-500 shadow shadow-speaking-300/70",
+    dotIdle: "bg-speaking-300",
+    connectorDone: "bg-speaking-400",
+    card: "bg-white border-speaking-200",
+    ring: "hover:border-speaking-400 hover:shadow-lg hover:shadow-speaking-100/70",
+    currentRing: "ring-speaking-400",
   },
 }
 const DEFAULT_COLOR = SECTION_COLOR.grammar
@@ -280,15 +282,15 @@ export default function SectionsPage() {
 
   return (
     <div className="flex flex-col items-center px-4 py-8 max-w-2xl mx-auto">
-      <h1 className="text-3xl font-bold text-indigo-900 mb-1">{grade} класс</h1>
+      <h1 className="text-3xl font-bold text-primary-900 mb-1">{grade} класс</h1>
       <p className="text-slate-500 mb-2">Карта заданий</p>
       {sections && sections.length > 0 && (
-        <div className="text-sm text-indigo-600 mb-4 flex items-center gap-3">
+        <div className="text-sm text-primary-600 mb-4 flex items-center gap-3">
           <span>
             Пройдено {completedCount} из {totalTasks}
           </span>
           {/* ⭐ total = sum of best scores (decision Q13). */}
-          <span className="font-semibold text-amber-500">⭐ {totalStars}</span>
+          <span className="font-semibold text-listening-500">⭐ {totalStars}</span>
         </div>
       )}
 
@@ -313,7 +315,7 @@ export default function SectionsPage() {
           <p className="text-slate-600 mb-6">Не удалось загрузить задания</p>
           <button
             onClick={() => router.push(`/class/${grade}`)}
-            className="px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm hover:bg-indigo-700 transition-colors"
+            className="px-4 py-2 rounded-xl bg-primary-600 text-white text-sm hover:bg-primary-700 transition-colors"
           >
             Назад
           </button>
@@ -340,7 +342,7 @@ export default function SectionsPage() {
               {/* World header = transition between worlds (decision Q12):
                   icon + title + Verb Bot greeting. */}
               <div className="flex items-start gap-3 mb-4">
-                <span className="text-3xl">{s.meta.icon}</span>
+                <span className="text-3xl drop-shadow-md">{s.meta.icon}</span>
                 <div className="min-w-0">
                   <div className={`font-bold text-lg ${color.header}`}>{s.meta.title}</div>
                   <div className="text-xs text-slate-500">{s.meta.desc}</div>
@@ -384,7 +386,7 @@ export default function SectionsPage() {
                       <span className="mr-1">{TYPE_ICON[t.type] ?? DEFAULT_TYPE_ICON}</span>
                       <span className="text-slate-700">{t.title}</span>
                       {done && (
-                        <span className="ml-1 text-xs text-emerald-600 font-semibold whitespace-nowrap">
+                        <span className="ml-1 text-xs text-vocabulary-600 font-semibold whitespace-nowrap">
                           ✓ {progress[t.id].score}/{progress[t.id].total}
                           {/* 💎 badge for a 100% run (decision Q13). */}
                           {progress[t.id].total > 0 &&
@@ -447,10 +449,10 @@ export default function SectionsPage() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="w-full mb-6 rounded-3xl border border-amber-200 bg-amber-50 px-4 py-4 text-center"
+          className="w-full mb-6 rounded-3xl border border-listening-200 bg-listening-50 px-4 py-4 text-center"
         >
           <div className="text-2xl mb-1">🏁</div>
-          <div className="font-bold text-amber-700">Все задания пройдены!</div>
+          <div className="font-bold text-listening-700">Все задания пройдены!</div>
           <div className="text-xs text-slate-500">Ты — герой глаголов! Можно повторить любое задание.</div>
         </motion.div>
       )}

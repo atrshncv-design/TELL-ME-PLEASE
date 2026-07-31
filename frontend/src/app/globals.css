@@ -11,6 +11,84 @@
   --font-sans: var(--font-geist);
 }
 
+/*
+ * Bright Kids Palette — generated from DESIGN.md (root)
+ * (`npx -y @google/design.md export --format css-tailwind DESIGN.md`).
+ * Semantic scales: primary + 5 world accents (grammar / to-be / vocabulary /
+ * listening / speaking) + neutrals. Default Tailwind colors stay available.
+ */
+@theme {
+  --color-primary: #4f46e5;
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+  --color-grammar: #6366f1;
+  --color-grammar-50: #eef2ff;
+  --color-grammar-100: #e0e7ff;
+  --color-grammar-200: #c7d2fe;
+  --color-grammar-300: #a5b4fc;
+  --color-grammar-400: #818cf8;
+  --color-grammar-500: #6366f1;
+  --color-grammar-600: #4f46e5;
+  --color-grammar-700: #4338ca;
+  --color-grammar-800: #3730a3;
+  --color-grammar-900: #312e81;
+  --color-tobe: #14b8a6;
+  --color-tobe-50: #f0fdfa;
+  --color-tobe-100: #ccfbf1;
+  --color-tobe-200: #99f6e4;
+  --color-tobe-300: #5eead4;
+  --color-tobe-400: #2dd4bf;
+  --color-tobe-500: #14b8a6;
+  --color-tobe-600: #0d9488;
+  --color-tobe-700: #0f766e;
+  --color-tobe-800: #115e59;
+  --color-tobe-900: #134e4a;
+  --color-vocabulary: #10b981;
+  --color-vocabulary-50: #ecfdf5;
+  --color-vocabulary-100: #d1fae5;
+  --color-vocabulary-200: #a7f3d0;
+  --color-vocabulary-300: #6ee7b7;
+  --color-vocabulary-400: #34d399;
+  --color-vocabulary-500: #10b981;
+  --color-vocabulary-600: #059669;
+  --color-vocabulary-700: #047857;
+  --color-vocabulary-800: #065f46;
+  --color-vocabulary-900: #064e3b;
+  --color-listening: #f59e0b;
+  --color-listening-50: #fffbeb;
+  --color-listening-100: #fef3c7;
+  --color-listening-200: #fde68a;
+  --color-listening-300: #fcd34d;
+  --color-listening-400: #fbbf24;
+  --color-listening-500: #f59e0b;
+  --color-listening-600: #d97706;
+  --color-listening-700: #b45309;
+  --color-listening-800: #92400e;
+  --color-listening-900: #78350f;
+  --color-speaking: #f43f5e;
+  --color-speaking-50: #fff1f2;
+  --color-speaking-100: #ffe4e6;
+  --color-speaking-200: #fecdd3;
+  --color-speaking-300: #fda4af;
+  --color-speaking-400: #fb7185;
+  --color-speaking-500: #f43f5e;
+  --color-speaking-600: #e11d48;
+  --color-speaking-700: #be123c;
+  --color-speaking-800: #9f1239;
+  --color-speaking-900: #881337;
+  --color-surface: #ffffff;
+  --color-ink: #1e293b;
+  --color-ink-soft: #64748b;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
