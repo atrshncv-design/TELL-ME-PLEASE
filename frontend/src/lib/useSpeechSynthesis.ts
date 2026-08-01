@@ -25,9 +25,14 @@ function splitSentences(text: string): string[] {
 }
 
 /**
- * Выбор лучшего английского голоса по качеству:
- *   Google UK English → Google US English → Microsoft → Samantha/Aria → любой en.
- * (порядок из TICKETS T02: «Google UK English Male/Female → Microsoft → Siri»)
+ * Выбор лучшего английского голоса по качеству И надёжности:
+ *   1) ЛОКАЛЬНЫЕ системные голоса (Apple/macOS: Samantha, Daniel, Karen…;
+ *      системные TTS) — работают офлайн, без скачивания;
+ *   2) Microsoft (локальные на Windows);
+ *   3) Google (сетевые, скачиваются по требованию) — ПОСЛЕДНЕЕ средство:
+ *      в некоторых сетях серверы Google TTS недоступны, и Chrome молча
+ *      не воспроизводит такой голос, хотя API отвечает нормально.
+ * Внутри каждой группы предпочитаем en-US / en-GB.
  */
 function pickVoice(voices: SpeechSynthesisVoice[]): SpeechSynthesisVoice | null {
   const english = voices.filter((v) => v.lang.toLowerCase().startsWith("en"))
@@ -38,12 +43,10 @@ function pickVoice(voices: SpeechSynthesisVoice[]): SpeechSynthesisVoice | null 
     const lang = v.lang.toLowerCase()
     const isGoogle = name.includes("google")
     const isMicrosoft = name.includes("microsoft")
-    const isApple = name.includes("samantha") || name.includes("aria")
-    if (isGoogle && lang.startsWith("en-gb")) return 4
-    if (isGoogle && lang.startsWith("en-us")) return 3
-    if (isMicrosoft) return 2
-    if (isApple) return 2
-    return 1
+    // Всё, что не Google и не Microsoft, — локальный системный голос
+    const group = isGoogle ? 1 : isMicrosoft ? 2 : 3
+    const dialect = lang === "en-us" || lang === "en-gb" ? 1 : 0
+    return group * 10 + dialect
   }
 
   return english.reduce((best, v) => (rank(v) > rank(best) ? v : best))
