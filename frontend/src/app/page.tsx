@@ -4,13 +4,36 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { motion } from "framer-motion"
 import AdminLoginModal from "@/components/AdminLoginModal"
+import { WorldIcon, type WorldId } from "@/components/WorldIcon"
+
+/**
+ * World preview chips (design/opendesign) — the five worlds of the map,
+ * each with its own SVG icon and accent colors (Bright Kids Palette).
+ */
+const WORLDS: { id: WorldId; name: string; chip: string }[] = [
+  { id: "grammar", name: "Грамматика", chip: "bg-grammar-100 text-grammar-800 border-grammar-200" },
+  { id: "to-be", name: "Глагол to be", chip: "bg-tobe-100 text-tobe-800 border-tobe-200" },
+  { id: "vocabulary", name: "Словарный запас", chip: "bg-vocabulary-100 text-vocabulary-800 border-vocabulary-200" },
+  { id: "listening", name: "Аудирование", chip: "bg-listening-100 text-listening-800 border-listening-200" },
+  { id: "speaking", name: "Общение", chip: "bg-speaking-100 text-speaking-800 border-speaking-200" },
+]
+
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } },
+}
+
+const item = {
+  hidden: { y: 16, opacity: 0, scale: 0.92 },
+  visible: { y: 0, opacity: 1, scale: 1 },
+}
 
 export default function Home() {
   const router = useRouter()
   const [adminOpen, setAdminOpen] = useState(false)
 
   return (
-    <div className="relative flex flex-1 flex-col items-center justify-center overflow-hidden px-4">
+    <div className="relative flex min-h-[100dvh] flex-1 flex-col items-center justify-center overflow-hidden px-4 py-12">
       {/* Decorative color blobs (Bright Kids Palette, DESIGN.md). */}
       <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-primary-200/60 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-speaking-200/50 blur-3xl" />
@@ -18,22 +41,71 @@ export default function Home() {
       <div className="pointer-events-none absolute bottom-1/4 left-1/4 h-32 w-32 rounded-full bg-vocabulary-200/40 blur-2xl" />
 
       <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="relative flex flex-col items-center gap-6 text-center"
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="relative z-10 flex w-full max-w-md flex-col items-center gap-5 text-center"
       >
-        <div className="text-6xl drop-shadow-lg">🎓</div>
-        <h1 className="text-4xl font-bold text-primary-900">Tell Me Please</h1>
-        <p className="max-w-md text-lg text-slate-600">
-          Интерактивная платформа для изучения английского языка
-        </p>
-        <button
-          onClick={() => router.push("/class")}
-          className="mt-4 rounded-2xl bg-gradient-to-r from-primary-500 to-violet-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-primary-300/70 transition-all hover:from-primary-600 hover:to-violet-600 hover:shadow-xl hover:shadow-primary-300/80 active:scale-95"
+        {/* Verb Bot hero — floating mascot with a speech bubble. */}
+        <motion.div variants={item} className="relative mt-2 flex flex-col items-center">
+          <motion.div
+            className="mb-2 rounded-2xl rounded-br-md border border-primary-100 bg-white px-3 py-1.5 text-sm font-semibold text-primary-800 shadow-soft"
+            initial={{ opacity: 0, y: 6, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0.4, type: "spring", stiffness: 300, damping: 18 }}
+          >
+            Hi! I&apos;m Verb Bot! 🤖
+          </motion.div>
+          <motion.img
+            src="/mascot/happy.jpg"
+            alt="Verb Bot — маскот платформы"
+            className="h-28 w-28 rounded-full border-4 border-white object-cover shadow-pop"
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </motion.div>
+
+        <motion.h1
+          variants={item}
+          className="font-display text-5xl font-black leading-[1.05] tracking-tight text-primary-900 text-balance"
         >
-          Начать →
-        </button>
+          Tell Me Please
+        </motion.h1>
+
+        <motion.p variants={item} className="max-w-sm text-lg font-medium text-slate-600">
+          Учи английский — играя! Задания, миры и Verb Bot ждут тебя.
+        </motion.p>
+
+        <motion.button
+          variants={item}
+          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.03 }}
+          onClick={() => router.push("/class")}
+          className="mt-2 min-h-[56px] rounded-2xl bg-primary-600 px-10 py-4 text-lg font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
+        >
+          Начать играть →
+        </motion.button>
+
+        {/* World preview — what awaits inside the map. */}
+        <motion.div variants={item} className="mt-4 flex flex-col items-center gap-3">
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
+            Что тебя ждёт
+          </p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {WORLDS.map((w) => (
+              <motion.button
+                key={w.id}
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.92 }}
+                onClick={() => router.push("/class")}
+                className={`flex min-h-[44px] items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-bold shadow-soft transition-shadow hover:shadow-pop ${w.chip}`}
+              >
+                <WorldIcon world={w.id} className="h-5 w-5" />
+                {w.name}
+              </motion.button>
+            ))}
+          </div>
+        </motion.div>
       </motion.div>
 
       {/* Незаметная кнопка входа в админ-панель (T05, решение 14 SPEC).

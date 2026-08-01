@@ -5,6 +5,8 @@ import { useParams, useRouter } from "next/navigation"
 import { motion } from "framer-motion"
 import { useProgress } from "@/lib/useProgress"
 import { useAnalytics } from "@/lib/useAnalytics"
+import { WorldIcon } from "@/components/WorldIcon"
+import { Confetti } from "@/components/Confetti"
 
 type Category = "grammar" | "to-be" | "vocabulary" | "listening" | "speaking"
 
@@ -146,6 +148,22 @@ const SECTION_COLOR: Record<
 }
 const DEFAULT_COLOR = SECTION_COLOR.grammar
 
+/** Icon color + icon box per world (design/opendesign, WorldIcon SVGs). */
+const NAV_ICON: Record<string, string> = {
+  grammar: "text-grammar-600",
+  "to-be": "text-tobe-600",
+  vocabulary: "text-vocabulary-600",
+  listening: "text-listening-600",
+  speaking: "text-speaking-600",
+}
+const ICON_BOX: Record<string, string> = {
+  grammar: "bg-grammar-50 border-grammar-200",
+  "to-be": "bg-tobe-50 border-tobe-200",
+  vocabulary: "bg-vocabulary-50 border-vocabulary-200",
+  listening: "bg-listening-50 border-listening-200",
+  speaking: "bg-speaking-50 border-speaking-200",
+}
+
 /** Task type → island emoji (shown on the map island cards). */
 const TYPE_ICON: Record<string, string> = {
   quiz: "❓",
@@ -230,7 +248,7 @@ export default function SectionsPage() {
   const [links, setLinks] = useState<UsefulLink[] | null>(null)
 
   // Per-grade client-side progress (localStorage, no backend — decision Q8).
-  const { progress, completedCount, totalStars } = useProgress(grade)
+  const { progress, completedCount, totalStars, perfectCount } = useProgress(grade)
 
   const { track } = useAnalytics()
   useEffect(() => {
@@ -282,29 +300,37 @@ export default function SectionsPage() {
 
   return (
     <div className="flex flex-col items-center px-4 py-8 max-w-2xl mx-auto">
-      <h1 className="text-3xl font-bold text-primary-900 mb-1">{grade} класс</h1>
-      <p className="text-slate-500 mb-2">Карта заданий</p>
+      <h1 className="font-display mb-1 text-3xl font-extrabold tracking-tight text-primary-900">
+        {grade} класс
+      </h1>
+      <p className="mb-2 text-slate-500">Карта заданий</p>
       {sections && sections.length > 0 && (
-        <div className="text-sm text-primary-600 mb-4 flex items-center gap-3">
-          <span>
+        <div className="mb-4 flex flex-wrap items-center justify-center gap-2 text-sm font-bold">
+          <span className="rounded-full border border-slate-100 bg-white/80 px-3 py-1.5 text-slate-600 shadow-soft">
             Пройдено {completedCount} из {totalTasks}
           </span>
           {/* ⭐ total = sum of best scores (decision Q13). */}
-          <span className="font-semibold text-listening-500">⭐ {totalStars}</span>
+          <span className="rounded-full border border-listening-200 bg-listening-100 px-3 py-1.5 text-listening-800 shadow-soft">
+            ⭐ {totalStars}
+          </span>
+          {/* 💎 per perfect task (decision Q13). */}
+          <span className="rounded-full border border-vocabulary-200 bg-vocabulary-100 px-3 py-1.5 text-vocabulary-800 shadow-soft">
+            💎 {perfectCount}
+          </span>
         </div>
       )}
 
       {/* World mini-navigation (decision Q12) — sticky jump bar. */}
       {sections && sections.length > 0 && (
-        <div className="sticky top-2 z-40 flex justify-center gap-2 mb-6 bg-white/80 backdrop-blur rounded-full px-3 py-2 shadow border border-slate-100">
+        <div className="sticky top-2 z-40 flex justify-center gap-2 mb-6 bg-white/80 backdrop-blur rounded-full px-3 py-2 shadow-soft border border-slate-100">
           {sections.map((s) => (
             <button
               key={s.meta.sectionId}
               onClick={() => scrollToWorld(s.meta.sectionId)}
               title={s.meta.title}
-              className="w-9 h-9 rounded-full bg-white border border-slate-200 text-lg hover:scale-110 transition-transform"
+              className={`flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow-soft transition-transform hover:scale-110 ${NAV_ICON[s.category]}`}
             >
-              {s.meta.icon}
+              <WorldIcon world={s.category} className="h-5 w-5" />
             </button>
           ))}
         </div>
@@ -342,19 +368,44 @@ export default function SectionsPage() {
               {/* World header = transition between worlds (decision Q12):
                   icon + title + Verb Bot greeting. */}
               <div className="flex items-start gap-3 mb-4">
-                <span className="text-3xl drop-shadow-md">{s.meta.icon}</span>
-                <div className="min-w-0">
-                  <div className={`font-bold text-lg ${color.header}`}>{s.meta.title}</div>
+                <div
+                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border shadow-soft ${ICON_BOX[s.category]} ${NAV_ICON[s.category]}`}
+                >
+                  <WorldIcon world={s.category} className="h-7 w-7" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className={`font-display text-lg font-extrabold ${color.header}`}>
+                    {s.meta.title}
+                  </div>
                   <div className="text-xs text-slate-500">{s.meta.desc}</div>
-                  <div className="mt-1 flex items-center gap-1.5 text-xs text-slate-600 italic">
+                  <div className="mt-2 flex items-center gap-2 rounded-2xl border border-white/80 bg-white/70 px-3 py-1.5 shadow-soft">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/mascot/happy.jpg" alt="Verb Bot" className="w-5 h-5 rounded-full object-cover" />
-                    {s.meta.greeting}
+                    <img
+                      src="/mascot/happy.jpg"
+                      alt="Verb Bot"
+                      className="h-6 w-6 rounded-full object-cover"
+                    />
+                    <p className="text-xs font-medium leading-snug text-slate-600">
+                      {s.meta.greeting}
+                    </p>
                   </div>
                 </div>
-                <div className={`ml-auto text-xs font-semibold whitespace-nowrap ${color.header}`}>
+                <div className={`ml-auto whitespace-nowrap text-xs font-bold ${color.header}`}>
                   {doneCount}/{s.tasks.length}
                 </div>
+              </div>
+
+              {/* World progress bar (design/opendesign) — fills with the
+                  world accent as islands are completed. */}
+              <div className="mb-3 h-2 w-full overflow-hidden rounded-full bg-white/80">
+                <motion.div
+                  className={`h-full rounded-full ${color.dot}`}
+                  initial={{ width: 0 }}
+                  animate={{
+                    width: `${s.tasks.length > 0 ? (doneCount / s.tasks.length) * 100 : 0}%`,
+                  }}
+                  transition={{ type: "spring", stiffness: 120, damping: 20 }}
+                />
               </div>
 
               {/* Vertical trail of islands (decision Q11). Each island row is
@@ -449,11 +500,16 @@ export default function SectionsPage() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="w-full mb-6 rounded-3xl border border-listening-200 bg-listening-50 px-4 py-4 text-center"
+          className="relative mb-6 w-full overflow-hidden rounded-3xl border border-listening-200 bg-listening-50 px-4 py-4 text-center"
         >
-          <div className="text-2xl mb-1">🏁</div>
-          <div className="font-bold text-listening-700">Все задания пройдены!</div>
-          <div className="text-xs text-slate-500">Ты — герой глаголов! Можно повторить любое задание.</div>
+          <Confetti count={22} />
+          <div className="relative mb-1 text-2xl">🏁</div>
+          <div className="relative font-display font-extrabold text-listening-700">
+            Все задания пройдены!
+          </div>
+          <div className="relative text-xs text-slate-500">
+            Ты — герой глаголов! Можно повторить любое задание.
+          </div>
         </motion.div>
       )}
 

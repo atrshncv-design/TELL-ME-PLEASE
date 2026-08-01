@@ -77,37 +77,59 @@ colors:
   ink: "#1E293B"
   ink-soft: "#64748B"
 typography:
+  display:
+    fontFamily: Nunito
+    fontSize: 3rem
+    fontWeight: 900
+    lineHeight: 1.05
+    letterSpacing: "-0.02em"
   h1:
-    fontFamily: Geist
+    fontFamily: Nunito
     fontSize: 2.25rem
     fontWeight: 800
-    lineHeight: 1.15
-    letterSpacing: "-0.02em"
+    lineHeight: 1.1
+    letterSpacing: "-0.015em"
   h2:
-    fontFamily: Geist
+    fontFamily: Nunito
     fontSize: 1.5rem
-    fontWeight: 700
+    fontWeight: 800
     lineHeight: 1.25
+    letterSpacing: "-0.01em"
   body-md:
-    fontFamily: Geist
+    fontFamily: "Nunito Sans"
     fontSize: 1rem
     fontWeight: 500
     lineHeight: 1.6
   body-sm:
-    fontFamily: Geist
+    fontFamily: "Nunito Sans"
     fontSize: 0.875rem
-    fontWeight: 400
+    fontWeight: 500
     lineHeight: 1.5
 rounded:
   sm: 8px
   md: 12px
   lg: 16px
   xl: 24px
+  2xl: 32px
 spacing:
   sm: 8px
   md: 16px
   lg: 24px
   xl: 32px
+# Геймификация и «свечение» (design/opendesign)
+gamification:
+  xp: "#F59E0B"
+  streak: "#F43F5E"
+  success: "#059669"
+  danger: "#DC2626"
+shadows:
+  soft: "0 2px 8px rgba(30,41,59,0.06), 0 8px 24px rgba(30,41,59,0.08)"
+  pop: "0 12px 32px rgba(30,41,59,0.16)"
+  glow-grammar: "0 6px 24px rgba(99,102,241,0.35)"
+  glow-tobe: "0 6px 24px rgba(20,184,166,0.35)"
+  glow-vocabulary: "0 6px 24px rgba(16,185,129,0.35)"
+  glow-listening: "0 6px 24px rgba(245,158,11,0.35)"
+  glow-speaking: "0 6px 24px rgba(244,63,94,0.35)"
 components:
   button-primary:
     backgroundColor: "{colors.primary}"
@@ -247,33 +269,55 @@ TELL ME PLEASE — интерактивная платформа английс�
 
 ## Typography
 
-- **Geist** — единственный шрифт (переменная `--font-geist` в Next.js).
-- **h1** — 2.25rem / 800 / -0.02em: заголовки страниц («Выбери свой класс»).
-- **h2** — 1.5rem / 700: заголовки миров на карте.
+- **Nunito** (display, `--font-display`) — округлённый, дружелюбный шрифт для
+  заголовков и крупных чисел. Полная кириллица (UI на русском). Подключается
+  через `next/font/google` с subsets `["latin", "cyrillic"]`.
+- **Nunito Sans** (body, `--font-sans`) — читаемый компаньон того же семейства
+  для основного текста. Тоже кириллица.
+- **display** — 3rem / 900 / -0.02em: hero-заголовки и счётчики результата.
+- **h1** — 2.25rem / 800 / -0.015em: заголовки страниц («Выбери свой класс»).
+- **h2** — 1.5rem / 800 / -0.01em: заголовки миров и заданий.
 - **body-md** — 1rem / 500: основной текст и подписи.
-- **body-sm** — 0.875rem / 400: описания, счётчики, реплики Verb Bot.
+- **body-sm** — 0.875rem / 500: описания, счётчики, реплики Verb Bot.
 
 ## Layout & Spacing
 
 - Базовая сетка — `sm: 8px`, `md: 16px`, `lg: 24px`, `xl: 32px`.
 - Карта миров — вертикальная лента зон (по одной на категорию), внутри —
   «острова»-задания по 3 колонкам: карточка | точка-маршрут | карточка.
+- У каждой зоны мира — анимированный прогресс-бар тона акцента
+  (заполняется с spring-физикой по мере прохождения островов).
 - Мобильный first: всё умещается на экране смартфона (вход через QR).
 
 ## Elevation & Depth
 
-- Карточки — `shadow-md` в покое, `shadow-lg` + `scale-105` при hover
-  (кнопки выбора класса), цветная тень тона акцента (`shadow-{accent}-100`).
+- Карточки — `shadow-soft` в покое, `shadow-pop` при hover/подъёме.
+- Цветное «свечение» акцентом мира — `shadow-glow-{world}` (грамматика,
+  to be, словарь, аудирование, общение) на CTA и карточках классов:
+  тень повторяет тон мира вместо серой.
 - Точки маршрута на карте миров — цветные с белой обводкой и мягкой тенью;
   текущее задание обводится `ring-2` цвета мира.
-- Кнопки — «пружинят» при нажатии (`active:scale-95`), как игрушечные.
+- Кнопки — «пружинят» при нажатии (`whileTap scale 0.93–0.95`), как игрушечные.
+- Появление карточек — spring-физика `{ type: "spring", stiffness: 380, damping: 22 }`
+  со stagger-задержками; никогда не duration-only fade.
 
 ## Shapes
 
 - Кнопки и бейджи — `rounded-lg` (16px) / `rounded-sm` (8px), «подушечки».
-- Карточки и зоны миров — `rounded-xl` (24px), крупные скругления для детского
-  ощущения «наклейки».
-- Точки маршрута — круги.
+- Карточки и зоны миров — `rounded-xl` (24px), hero-блоки и крупные панели —
+  `rounded-2xl` (32px). Крупные скругления для детского ощущения «наклейки».
+- Точки маршрута — круги. Иконки миров — квадрат `rounded-2xl` с тонированным
+  фоном мира (50) и обводкой (200).
+
+## Gamification
+
+- **xp** `#F59E0B` — очки/звёзды (счётчики на карте миров).
+- **streak** `#F43F5E` — серии и рекорды.
+- **success** `#059669` — правильный ответ, 100% результат (600-уровень,
+  белый текст на нём держит WCAG AA).
+- **danger** `#DC2626` — ошибка (тоже 600-уровень).
+- Конфетти на идеальном результате — CSS-only (keyframes `confetti-fall` в
+  globals.css, компонент `Confetti.tsx`), без внешних библиотек.
 
 ## Components
 
@@ -289,6 +333,19 @@ TELL ME PLEASE — интерактивная платформа английс�
   пройдено.
 - **badge-*** — бейджи категорий: светлый фон (100) + тёмный текст (800)
   — контраст ~7:1 и выше. Используются в счётчиках и результатах.
+
+## Assets (design/opendesign)
+
+| Ассет | Файл | Источник / лицензия |
+| --- | --- | --- |
+| Иконки 5 миров | `src/components/WorldIcon.tsx` (inline SVG) | Lucide icon set, ISC — открытая лицензия |
+| Конфетти | `src/components/Confetti.tsx` + keyframes в globals.css | Своё, CSS-only, палитра проекта |
+| Экран результата | `src/components/ResultScreen.tsx` | Своё, Framer Motion spring |
+| Маскот Verb Bot (4 настроения) | `public/mascot/*.jpg` | AI-сгенерированные фото, уникальные (обновляются) |
+| Hero-иллюстрация | `public/hero-illustration.png` (план) | AI-генерация, unique |
+
+Запрещено: персонажи Disney/фильмов, сток-фото CDN (unsplash/placehold),
+эмодзи как иконки функций. Эмодзи допустимы только как декор.
 
 ## Do's and Don'ts
 

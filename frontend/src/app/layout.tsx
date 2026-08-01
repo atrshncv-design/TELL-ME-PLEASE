@@ -1,13 +1,25 @@
 import type { Metadata, Viewport } from "next"
-import { Geist } from "next/font/google"
+import { Nunito, Nunito_Sans } from "next/font/google"
 import "./globals.css"
 import { VerbBotProvider } from "@/components/VerbBot"
 
-const geist = Geist({ variable: "--font-geist", subsets: ["latin"] })
+// Playful rounded pairing (design/opendesign): Nunito for display/headings,
+// Nunito Sans for body. Both ship full Cyrillic — the whole UI is in Russian.
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin", "cyrillic"],
+  display: "swap",
+})
+
+const nunitoSans = Nunito_Sans({
+  variable: "--font-nunito-sans",
+  subsets: ["latin", "cyrillic"],
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Tell Me Please",
-  description: "Interactive English learning platform for grades 5-9",
+  description: "Интерактивная платформа для изучения английского языка",
 }
 
 // Mobile-first: the PRD entry point is a QR code scanned on a smartphone, so
@@ -23,8 +35,8 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geist.variable} h-full`}>
-      <body className="min-h-full bg-gradient-to-br from-primary-100 via-sky-50 to-listening-100 font-[family-name:var(--font-geist)]">
+    <html lang="ru" className={`${nunito.variable} ${nunitoSans.variable} h-full`}>
+      <body className="min-h-full bg-gradient-to-br from-primary-100 via-sky-50 to-listening-100 font-sans antialiased">
         <VerbBotProvider>{children}</VerbBotProvider>
       </body>
     </html>

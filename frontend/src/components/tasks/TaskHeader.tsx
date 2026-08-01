@@ -9,14 +9,16 @@ interface TaskHeaderProps {
 
 export function TaskHeader({ title, backHref }: TaskHeaderProps) {
   return (
-    <div className="flex items-center gap-3 px-4 py-3 border-b border-indigo-100 bg-white/80">
+    <div className="flex items-center gap-3 px-4 py-3 border-b border-indigo-100 bg-white/80 backdrop-blur">
       <Link
         href={backHref}
-        className="flex items-center justify-center min-h-[44px] min-w-[44px] px-3 py-2 rounded-xl bg-indigo-100 text-indigo-700 font-semibold text-base hover:bg-indigo-200 transition-colors"
+        className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-2xl bg-primary-100 px-3 py-2 text-base font-bold text-primary-700 transition-colors hover:bg-primary-200"
       >
         ← Назад
       </Link>
-      <h1 className="text-lg font-bold text-indigo-900 truncate">{title}</h1>
+      <h1 className="font-display truncate text-lg font-extrabold tracking-tight text-primary-900">
+        {title}
+      </h1>
     </div>
   )
 }
