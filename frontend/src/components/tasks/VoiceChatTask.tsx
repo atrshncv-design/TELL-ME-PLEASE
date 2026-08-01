@@ -50,7 +50,7 @@ function VoiceChatInner({
   // 3-мин таймер истёк — финальный запрос отправлен, ввод заблокирован
   const timeUpRef = useRef(false)
 
-  const { speak, stop, speaking, supported: ttsSupported } = useSpeechSynthesis()
+  const { speak, stop, speaking, supported: ttsSupported, voiceName } = useSpeechSynthesis()
   // Зеркало speaking для синхронных проверок в обработчиках событий
   const speakingRef = useRef(speaking)
   speakingRef.current = speaking
@@ -222,6 +222,16 @@ function VoiceChatInner({
             <div className="font-bold text-indigo-900 text-sm">{title}</div>
             <div className="text-xs text-slate-500 flex items-center gap-2">
               {sessionEnded ? "сессия завершена" : connected ? "онлайн" : "офлайн"}
+              {/* Диагностика TTS: видно, есть ли голос на устройстве */}
+              {ttsSupported ? (
+                <span className="text-emerald-600" title={`Голос: ${voiceName ?? "—"}`}>
+                  🔊
+                </span>
+              ) : (
+                <span className="text-rose-500" title="На этом устройстве нет английского голоса — ответы будут только текстом">
+                  🔇
+                </span>
+              )}
               {!connected && !sessionEnded && (
                 <button onClick={reconnect} className="text-indigo-600 underline hover:text-indigo-800">
                   Переподключиться

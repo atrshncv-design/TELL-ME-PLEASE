@@ -52,6 +52,7 @@ function pickVoice(voices: SpeechSynthesisVoice[]): SpeechSynthesisVoice | null 
 export function useSpeechSynthesis() {
   const [speaking, setSpeaking] = useState(false)
   const [supported, setSupported] = useState(false)
+  const [voiceName, setVoiceName] = useState<string | null>(null)
 
   const voiceRef = useRef<SpeechSynthesisVoice | null>(null)
   const queueRef = useRef<string[]>([])
@@ -67,6 +68,14 @@ export function useSpeechSynthesis() {
     voiceRef.current = picked
     supportedRef.current = picked !== null
     setSupported(picked !== null)
+    setVoiceName(picked ? picked.name : null)
+    // Диагностика: голоса подгружены/изменились
+    if (typeof console !== "undefined") {
+      console.log(
+        `[tts] voices=${window.speechSynthesis.getVoices().length} supported=${picked !== null}` +
+          (picked ? ` voice="${picked.name}" (${picked.lang})` : ""),
+      )
+    }
   }, [])
 
   useEffect(() => {
@@ -137,7 +146,13 @@ export function useSpeechSynthesis() {
       // пробуем перечитать список перед тем, как сдаться.
       if (!supportedRef.current) {
         loadVoices()
-        if (!supportedRef.current) return // молчаливый no-op, текст виден на экране
+        if (!supportedRef.current) {
+          // Диагностика: почему молчим
+          if (typeof console !== "undefined") {
+            console.warn(`[tts] speak() пропущен: нет английского голоса (voices=${synth.getVoices().length})`)
+          }
+          return // молчаливый no-op, текст виден на экране
+        }
       }
       // iOS-страховка: пустой utterance «прогревает» движок, если жест-превент
       // не успел сработать (например, ответ пришёл без предшествующего тапа).
@@ -157,6 +172,10 @@ export function useSpeechSynthesis() {
       if (queueRef.current.length === 0) return
       speakingRef.current = true
       setSpeaking(true)
+      // Диагностика: начинаем озвучку
+      if (typeof console !== "undefined") {
+        console.log(`[tts] speak(${queueRef.current.length} предложений, ${text.length} симв.) voice=${voiceRef.current?.name}`)
+      }
       speakNext()
     },
     [loadVoices, speakNext],
@@ -185,5 +204,5 @@ export function useSpeechSynthesis() {
     return () => clearInterval(iv)
   }, [speaking])
 
-  return { speak, stop, speaking, supported }
+  return { speak, stop, speaking, supported, voiceName }
 }
