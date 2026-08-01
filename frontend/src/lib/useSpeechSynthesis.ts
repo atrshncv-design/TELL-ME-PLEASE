@@ -133,7 +133,26 @@ export function useSpeechSynthesis() {
       if (e.error === "canceled" || e.error === "interrupted") return
       speakNext()
     }
+    // Chrome-страховка: первый speak() иногда «теряется» (голоса Google
+    // скачиваются по требованию). Если за 2.5с произнесение не началось
+    // (onstart не сработал) — отменяем и повторяем один раз.
+    let started = false
+    let retried = false
+    utterance.onstart = () => {
+      started = true
+    }
     synth.speak(utterance)
+    setTimeout(() => {
+      if (!started && !retried) {
+        retried = true
+        try {
+          synth.cancel()
+          synth.speak(utterance)
+        } catch {
+          /* повтор не критичен */
+        }
+      }
+    }, 2500)
   }, [])
 
   /** Озвучить текст: ставит предложения в очередь и говорит последовательно. */
@@ -154,19 +173,10 @@ export function useSpeechSynthesis() {
           return // молчаливый no-op, текст виден на экране
         }
       }
-      // iOS-страховка: пустой utterance «прогревает» движок, если жест-превент
-      // не успел сработать (например, ответ пришёл без предшествующего тапа).
-      if (!synth.speaking) {
-        try {
-          const u = new SpeechSynthesisUtterance("")
-          u.volume = 0
-          synth.speak(u)
-          synth.cancel()
-        } catch {
-          /* не критично */
-        }
-      }
-      // Новый текст заменяет текущую речь — ответы не должны накладываться
+      // Новый текст заменяет текущую речь — ответы не должны накладываться.
+      // Превент-utterance здесь НЕ ставим: warm-прогрев уже сделал это на
+      // первом жесте, а лишний speak+cancel в одном тике может «съесть»
+      // реальную речь (известный глюк Chrome).
       synth.cancel()
       queueRef.current = splitSentences(text)
       if (queueRef.current.length === 0) return
