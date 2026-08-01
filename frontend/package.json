@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next build && next start -p 3000",
+    "dev": "next start -p 3000",
     "dev:local": "next dev --turbopack",
     "build": "next build",
+    "postinstall": "next build",
     "start": "next start",
     "lint": "eslint"
   },
