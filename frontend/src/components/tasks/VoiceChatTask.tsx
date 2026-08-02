@@ -4,6 +4,7 @@ import { Suspense, useCallback, useEffect, useRef, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
+import { Confetti } from "@/components/Confetti"
 import { useChatStream, type ChatStreamMessage } from "@/lib/useChatStream"
 import { useSpeechSynthesis } from "@/lib/useSpeechSynthesis"
 import { useSpeechRecognition } from "@/lib/useSpeechRecognition"
@@ -19,6 +20,22 @@ interface VoiceChatTaskProps {
   /** id задания — уходит на бэкенд для выбора роли ИИ (промпт-роутер). */
   taskId?: string
   sessionSeconds?: number
+}
+
+/** Приветствия Verb Bot на старте сессии — ротация по hash taskId (чистый рендер, не уходит в стрим). */
+const GREETINGS = [
+  "Привет! Я Verb Bot — давай поболтаем на английском! 🎙️",
+  "Готов слушать и говорить. Поехали!",
+  "Не бойся ошибаться — я тоже учусь!",
+  "Нажми на микрофон и скажи что-нибудь по-английски!",
+]
+
+/** Детерминированный выбор фразы по taskId (стабильно между рендерами/гидрацией). */
+function pickGreeting(taskId?: string): string {
+  const key = taskId ?? ""
+  let hash = 0
+  for (let i = 0; i < key.length; i++) hash = (hash * 31 + key.charCodeAt(i)) | 0
+  return GREETINGS[Math.abs(hash) % GREETINGS.length]
 }
 
 function VoiceChatInner({
@@ -186,14 +203,30 @@ function VoiceChatInner({
 
   if (sessionEnded && lastAudioPlayed) {
     return (
-      <div className="flex flex-col h-[100dvh] items-center justify-center px-6 gap-4">
-        <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-5xl">🎉</motion.div>
-        <h2 className="text-2xl font-bold text-indigo-900">Отлично!</h2>
+      <div className="relative flex flex-col h-[100dvh] items-center justify-center px-6 gap-5 overflow-hidden">
+        {/* Праздничный финал: конфетти всегда (сигнал «сессия прошла») */}
+        <Confetti count={40} />
+        <motion.div
+          initial={{ scale: 0, rotate: -25, opacity: 0 }}
+          animate={{ scale: 1, rotate: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 240, damping: 14, delay: 0.15 }}
+          className="text-6xl drop-shadow-lg"
+        >
+          🏆
+        </motion.div>
+        <h2 className="font-display text-3xl font-extrabold text-primary-900 text-center">Отлично!</h2>
         {finalFeedback ? (
           <p className="text-slate-600 text-center max-w-md">{finalFeedback}</p>
         ) : (
-          <p className="text-slate-600">Ты хорошо поговорил на английском!</p>
+          <p className="text-slate-600 text-center">Ты хорошо поговорил на английском!</p>
         )}
+        <motion.button
+          whileTap={{ scale: 0.95 }}
+          onClick={() => window.location.reload()}
+          className="min-h-[44px] rounded-2xl bg-primary-600 text-white font-bold px-6 py-3 shadow-glow-primary hover:bg-primary-700 active:bg-primary-800 transition-colors"
+        >
+          ↻ Ещё раз
+        </motion.button>
       </div>
     )
   }
@@ -208,7 +241,46 @@ function VoiceChatInner({
     // wrapper provides the gradient page background via min-h-screen; this
     // screen manages its own height within that. max-w-lg keeps it mobile-width
     // on desktop (consistent with other task components).
-    <div className="flex flex-col h-[100dvh] max-w-lg mx-auto">
+    <div className="relative flex flex-col h-[100dvh] max-w-lg mx-auto overflow-hidden">
+      {/* Театральная сцена: софиты, звёздочки и мягкое свечение (чистый декор под чатом, pointer-events-none) */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <svg className="absolute inset-0 h-full w-full" viewBox="0 0 512 900" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="vb-spot-l" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stopColor="#fecdd3" stopOpacity="0.55" />
+              <stop offset="1" stopColor="#fecdd3" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="vb-spot-r" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor="#fda4af" stopOpacity="0.5" />
+              <stop offset="1" stopColor="#fda4af" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="vb-spot-c" x1="0.5" y1="0" x2="0.5" y2="1">
+              <stop offset="0" stopColor="#ffe4e6" stopOpacity="0.4" />
+              <stop offset="1" stopColor="#ffe4e6" stopOpacity="0" />
+            </linearGradient>
+            <radialGradient id="vb-glow" cx="0.5" cy="0.18" r="0.75">
+              <stop offset="0" stopColor="#fff1f2" stopOpacity="0.85" />
+              <stop offset="1" stopColor="#fff1f2" stopOpacity="0" />
+            </radialGradient>
+          </defs>
+          {/* Мягкое свечение сверху */}
+          <rect width="512" height="900" fill="url(#vb-glow)" />
+          {/* Лучи софитов из верхних углов к центру (speaking-200/300, ~0.25 opacity) */}
+          <polygon points="0,0 512,0 340,660 0,660" fill="url(#vb-spot-l)" opacity="0.5" />
+          <polygon points="512,0 0,0 172,660 512,660" fill="url(#vb-spot-r)" opacity="0.5" />
+          <polygon points="200,0 312,0 256,720 176,720" fill="url(#vb-spot-c)" opacity="0.6" />
+          {/* Звёздочки-конфетти */}
+          <circle cx="92" cy="130" r="4" fill="#fda4af" opacity="0.55" />
+          <circle cx="430" cy="96" r="3" fill="#fecdd3" opacity="0.7" />
+          <circle cx="362" cy="228" r="5" fill="#fda4af" opacity="0.35" />
+          <circle cx="150" cy="286" r="3" fill="#fecdd3" opacity="0.45" />
+          <circle cx="58" cy="430" r="4" fill="#fda4af" opacity="0.3" />
+          <circle cx="452" cy="392" r="3.5" fill="#fecdd3" opacity="0.45" />
+          <path d="M256 470 l3.5 7.5 7.5 3.5 -7.5 3.5 -3.5 7.5 -3.5 -7.5 -7.5 -3.5 7.5 -3.5z" fill="#fda4af" opacity="0.3" />
+          <path d="M110 560 l2.5 5.5 5.5 2.5 -5.5 2.5 -2.5 5.5 -2.5 -5.5 -5.5 -2.5 5.5 -2.5z" fill="#fecdd3" opacity="0.35" />
+        </svg>
+      </div>
+
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-2 border-b border-indigo-100 bg-white/80">
         <div className="flex items-center gap-2">
@@ -257,6 +329,14 @@ function VoiceChatInner({
         {/* Chat area */}
         <div className={`flex-1 flex flex-col ${showPanel ? "border-r border-indigo-100" : ""}`}>
           <div className="flex-1 overflow-y-auto px-4 py-3 space-y-2">
+            {/* Мем-реплика Verb Bot при старте: чистый рендер, в стрим не уходит */}
+            {!sessionEnded && messages.length === 0 && (
+              <motion.div initial={{ y: 8, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="flex justify-start">
+                <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm bg-white text-slate-800 shadow border border-slate-100">
+                  {pickGreeting(taskId)}
+                </div>
+              </motion.div>
+            )}
             <AnimatePresence>
               {messages.map((m, i) => (
                 <motion.div key={i} initial={{ y: 8, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
@@ -309,24 +389,127 @@ function VoiceChatInner({
               // understands WHY the mic isn't reacting when it's disabled.
               const micState = !connected ? "offline" : muted ? "muted" : listening ? "listening" : "idle"
               const micConfig = {
-                listening: { icon: "⏹", bg: "bg-red-500 text-white shadow-red-200 animate-pulse", title: "Идёт запись. Нажми, чтобы остановить." },
-                muted:     { icon: "🔇", bg: "bg-amber-200 text-amber-700", title: "ИИ говорит. Микрофон на паузе." },
-                offline:   { icon: "🎤", bg: "bg-slate-300 text-slate-500 opacity-60 cursor-not-allowed", title: "Нет связи с сервером. Проверь, что сервис запущен." },
-                idle:      { icon: "🎤", bg: "bg-indigo-600 text-white shadow-indigo-200 hover:bg-indigo-700", title: "Нажми, чтобы говорить." },
+                listening: { bg: "bg-red-500 text-white shadow-red-200", title: "Идёт запись. Нажми, чтобы остановить." },
+                muted:     { bg: "bg-amber-200 text-amber-700", title: "ИИ говорит. Микрофон на паузе." },
+                offline:   { bg: "bg-slate-300 text-slate-500 opacity-60 cursor-not-allowed", title: "Нет связи с сервером. Проверь, что сервис запущен." },
+                idle:      { bg: "bg-indigo-600 text-white shadow-indigo-200 hover:bg-indigo-700", title: "Нажми, чтобы говорить." },
               }[micState]
-              const statusLabel = !connected ? "офлайн" : muted ? "пауза (ИИ говорит)" : listening ? "слушаю..." : ""
+              const statusLabel = !connected ? "офлайн" : muted ? "пауза (ИИ говорит)" : listening ? "слушаю..." : "готов слушать"
+              // Волна «живёт» при записи (красная, быстрая) и озвучке (индиго, медленнее); в idle — еле дышит
+              const waveActive = micState === "listening" || micState === "muted"
+              const waveColor = micState === "listening" ? "text-red-500" : micState === "muted" ? "text-indigo-500" : "text-slate-300"
               return (
                 <>
-                  <motion.button
-                    whileTap={{ scale: 0.9 }}
-                    onClick={toggleMic}
-                    disabled={muted || !connected}
-                    title={micConfig.title}
-                    className={`w-14 h-14 rounded-full flex items-center justify-center text-xl shadow-lg transition-all ${micConfig.bg}`}
-                  >
-                    {micConfig.icon}
-                  </motion.button>
-                  <div className="text-xs text-slate-500 text-center min-h-[16px]">{statusLabel}</div>
+                  {/* Реакция маскота: фото + пузырь состояния */}
+                  <div className="flex items-center gap-2 min-h-[40px]">
+                    <motion.div
+                      animate={
+                        micState === "listening"
+                          ? { rotate: [0, -8, 8, 0] }
+                          : micState === "muted"
+                            ? { y: [0, -4, 0] }
+                            : { y: [0, -2, 0] }
+                      }
+                      transition={{ duration: micState === "listening" ? 0.8 : micState === "muted" ? 1.2 : 2.2, repeat: Infinity, ease: "easeInOut" }}
+                      className="shrink-0"
+                    >
+                      <img
+                        src={micState === "muted" ? "/mascot/cheer.jpg" : "/mascot/happy.jpg"}
+                        alt="Verb Bot"
+                        className="h-10 w-10 rounded-full object-cover border-2 border-white shadow"
+                      />
+                    </motion.div>
+                    <AnimatePresence mode="wait">
+                      {micState === "listening" ? (
+                        <motion.span
+                          key="listening"
+                          initial={{ opacity: 0, y: 4 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -4 }}
+                          className="text-xs font-semibold text-white bg-red-500 rounded-full px-3 py-1.5 shadow"
+                        >
+                          Слушаю…
+                        </motion.span>
+                      ) : micState === "muted" ? (
+                        <motion.span
+                          key="muted"
+                          initial={{ opacity: 0, y: 4 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -4 }}
+                          className="text-xs font-semibold text-indigo-700 bg-indigo-100 rounded-full px-3 py-1.5"
+                        >
+                          Говорю…
+                        </motion.span>
+                      ) : micState === "idle" ? (
+                        <motion.span
+                          key="idle"
+                          initial={{ opacity: 0, y: 4 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -4 }}
+                          className="text-xs font-semibold text-slate-600 bg-white border border-slate-100 rounded-full px-3 py-1.5 shadow-sm"
+                        >
+                          Готов слушать
+                        </motion.span>
+                      ) : null}
+                    </AnimatePresence>
+                  </div>
+
+                  {/* Звуковая волна + кнопка микрофона */}
+                  <div className="flex flex-col items-center gap-2">
+                    <div className={`flex items-end gap-[3px] h-7 ${waveColor}`} aria-hidden>
+                      {[0, 1, 2, 3, 4].map((i) => (
+                        <motion.span
+                          key={i}
+                          className="w-1 rounded-full bg-current origin-bottom"
+                          style={{ height: 12 + (i % 3) * 7 }}
+                          animate={
+                            micState === "offline"
+                              ? { scaleY: 0.5 }
+                              : waveActive
+                                ? { scaleY: [0.35, 1, 0.55, 0.9, 0.35] }
+                                : { scaleY: [0.55, 0.8, 0.55] }
+                          }
+                          transition={
+                            micState === "offline"
+                              ? {}
+                              : {
+                                  duration: micState === "listening" ? 0.65 : micState === "muted" ? 1.1 : 2.6,
+                                  repeat: Infinity,
+                                  ease: "easeInOut",
+                                  delay: i * 0.1,
+                                }
+                          }
+                        />
+                      ))}
+                    </div>
+                    <div className="relative">
+                      {/* Пульсирующее кольцо записи */}
+                      {micState === "listening" && (
+                        <motion.span
+                          className="absolute inset-0 rounded-full border-2 border-red-400"
+                          animate={{ scale: [1, 1.45], opacity: [0.8, 0] }}
+                          transition={{ duration: 1.2, repeat: Infinity, ease: "easeOut" }}
+                        />
+                      )}
+                      <motion.button
+                        whileTap={{ scale: 0.9 }}
+                        animate={micState === "idle" ? { scale: [1, 1.07, 1] } : { scale: 1 }}
+                        transition={micState === "idle" ? { duration: 2.2, repeat: Infinity, ease: "easeInOut" } : {}}
+                        onClick={toggleMic}
+                        disabled={muted || !connected}
+                        title={micConfig.title}
+                        className={`w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-colors ${micConfig.bg}`}
+                      >
+                        {/* SVG-микрофон (stroke currentColor) */}
+                        <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                          <rect x="9" y="2" width="6" height="12" rx="3" />
+                          <path d="M5 10.5v.5a7 7 0 0 0 14 0v-.5" />
+                          <line x1="12" y1="18" x2="12" y2="22" />
+                        </svg>
+                      </motion.button>
+                    </div>
+                    <div className="text-xs text-slate-500 text-center min-h-[16px]">{statusLabel}</div>
+                  </div>
                 </>
               )
             })() : null}

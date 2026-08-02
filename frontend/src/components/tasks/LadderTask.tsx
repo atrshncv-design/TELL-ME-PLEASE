@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { ResultScreen } from "@/components/ResultScreen"
 
 interface LadderData {
   id: string
@@ -14,12 +15,25 @@ interface LadderTaskProps {
   title: string
   description: string
   ladders: LadderData[]
+  onComplete?: (score: number, total: number) => void
 }
 
-export function LadderTask({ title, description, ladders }: LadderTaskProps) {
+export function LadderTask({ title, description, ladders, onComplete }: LadderTaskProps) {
   const [activeLadder, setActiveLadder] = useState(0)
   const [currentStep, setCurrentStep] = useState(0)
+  const [finished, setFinished] = useState(false)
+
+  if (!ladders || ladders.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center h-full gap-4 p-6">
+        <p className="text-slate-500">Нет данных для отображения</p>
+      </div>
+    )
+  }
+
   const ladder = ladders[activeLadder]
+  // Счёт = пройденные ступени / всего ступеней (лесенка — чтение без ошибок).
+  const totalSteps = ladders.reduce((sum, l) => sum + l.steps.length, 0)
 
   const stepIdx =
     ladder.direction === "up" ? currentStep : ladder.steps.length - 1 - currentStep
@@ -30,6 +44,10 @@ export function LadderTask({ title, description, ladders }: LadderTaskProps) {
     } else if (activeLadder < ladders.length - 1) {
       setActiveLadder((a) => a + 1)
       setCurrentStep(0)
+    } else {
+      // Последняя ступень последней лесенки — задание завершено (все ступени пройдены).
+      setFinished(true)
+      onComplete?.(totalSteps, totalSteps)
     }
   }
 
@@ -40,6 +58,16 @@ export function LadderTask({ title, description, ladders }: LadderTaskProps) {
       setActiveLadder((a) => a - 1)
       setCurrentStep(ladders[activeLadder - 1].steps.length - 1)
     }
+  }
+
+  const retry = () => {
+    setActiveLadder(0)
+    setCurrentStep(0)
+    setFinished(false)
+  }
+
+  if (finished) {
+    return <ResultScreen title={title} score={totalSteps} total={totalSteps} onRetry={retry} />
   }
 
   return (
@@ -101,10 +129,11 @@ export function LadderTask({ title, description, ladders }: LadderTaskProps) {
         </button>
         <button
           onClick={handleNext}
-          disabled={activeLadder === ladders.length - 1 && currentStep === ladder.steps.length - 1}
-          className="px-4 py-2 rounded-xl bg-indigo-600 text-white font-medium disabled:opacity-40"
+          className="px-4 py-2 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-700"
         >
-          Далее →
+          {activeLadder === ladders.length - 1 && currentStep === ladder.steps.length - 1
+            ? "Готово"
+            : "Далее →"}
         </button>
       </div>
     </div>

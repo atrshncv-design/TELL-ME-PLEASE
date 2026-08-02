@@ -4,6 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useVerbBot } from "@/components/VerbBot"
 import { useSound } from "@/lib/useSound"
+import { ResultScreen } from "@/components/ResultScreen"
 
 interface FillItem {
   sentence: string
@@ -120,18 +121,20 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
     }
   }
 
+  const retry = () => {
+    setCurrent(0)
+    setScore(0)
+    const firstParts = items[0]?.sentence.split("___") ?? []
+    setInputs(Array.from({ length: Math.max(firstParts.length - 1, 1) }, () => ""))
+    setShowResult(false)
+    setIsCorrect(false)
+    setFinished(false)
+    setHistory([])
+    setTransitioning(false)
+  }
+
   if (finished) {
-    return (
-      <div className="flex flex-col items-center gap-4 p-6">
-        <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="text-5xl">
-          {score === items.length ? "🏆" : score >= items.length * 0.7 ? "🎉" : "💪"}
-        </motion.div>
-        <h2 className="text-2xl font-bold text-indigo-900">{title}</h2>
-        <p className="text-lg text-slate-600">
-          Результат: {score} / {items.length}
-        </p>
-      </div>
-    )
+    return <ResultScreen title={title} score={score} total={items.length} onRetry={retry} />
   }
 
   const canGoBack = current > 0 && !transitioning

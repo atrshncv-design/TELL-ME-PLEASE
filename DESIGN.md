@@ -83,6 +83,12 @@ typography:
     fontWeight: 900
     lineHeight: 1.05
     letterSpacing: "-0.02em"
+  display-alt:
+    fontFamily: Unbounded
+    fontSize: 3rem
+    fontWeight: 800
+    lineHeight: 1.1
+    letterSpacing: "-0.01em"
   h1:
     fontFamily: Nunito
     fontSize: 2.25rem
@@ -274,7 +280,12 @@ TELL ME PLEASE — интерактивная платформа английс�
   через `next/font/google` с subsets `["latin", "cyrillic"]`.
 - **Nunito Sans** (body, `--font-sans`) — читаемый компаньон того же семейства
   для основного текста. Тоже кириллица.
+- **Unbounded** (display-alt, `--font-display-alt`) — акцентный дисплейный
+  шрифт (реш. 8 интервью): широкий, игривый, полная кириллица. Правило
+  «2–3 места на экран»: hero-заголовок главной, названия миров, цифры XP.
+  Длинные русские слова НЕ растягивать на всю ширину (шрифт широкий).
 - **display** — 3rem / 900 / -0.02em: hero-заголовки и счётчики результата.
+- **display-alt** — 3rem / 800 / -0.01em: акцентный hero (бренд-заголовок).
 - **h1** — 2.25rem / 800 / -0.015em: заголовки страниц («Выбери свой класс»).
 - **h2** — 1.5rem / 800 / -0.01em: заголовки миров и заданий.
 - **body-md** — 1rem / 500: основной текст и подписи.
@@ -287,6 +298,10 @@ TELL ME PLEASE — интерактивная платформа английс�
   «острова»-задания по 3 колонкам: карточка | точка-маршрут | карточка.
 - У каждой зоны мира — анимированный прогресс-бар тона акцента
   (заполняется с spring-физикой по мере прохождения островов).
+- Зоны миров — с лёгкими SVG-паттернами по темам (реш. 3/6): `.pattern-scrolls`
+  (grammar), `.pattern-stars` (to-be), `.pattern-leaves` (vocabulary),
+  `.pattern-notes` (listening), `.pattern-spotlights` (speaking). Поверх
+  градиента зоны, прозрачность ≈6–8% — декор, не снижающий читаемость.
 - Мобильный first: всё умещается на экране смартфона (вход через QR).
 
 ## Elevation & Depth
@@ -339,13 +354,18 @@ TELL ME PLEASE — интерактивная платформа английс�
 | Ассет | Файл | Источник / лицензия |
 | --- | --- | --- |
 | Иконки 5 миров | `src/components/WorldIcon.tsx` (inline SVG) | Lucide icon set, ISC — открытая лицензия |
+| Иконки 12 типов заданий | `src/components/icons/task-icons.tsx` (inline SVG) | Lucide-стиль (monoline stroke 2), свои пути, копирайт-чисто |
 | Конфетти | `src/components/Confetti.tsx` + keyframes в globals.css | Своё, CSS-only, палитра проекта |
 | Экран результата | `src/components/ResultScreen.tsx` | Своё, Framer Motion spring |
-| Маскот Verb Bot (4 настроения) | `public/mascot/*.jpg` | AI-сгенерированные фото, уникальные (обновляются) |
-| Hero-иллюстрация | `public/hero-illustration.png` (план) | AI-генерация, unique |
+| Стикеры-реакции Verb Bot | `src/components/StickerReaction.tsx` (inline SVG) | Свои пути (fire/mindblown/laugh/heart-eyes/oops), копирайт-чисто |
+| Паттерны зон миров | классы `.pattern-*` в globals.css (data-URI SVG) | Свои, темы миров: свитки/звёзды/листья/ноты/софиты |
+| Маскот Verb Bot (4 настроения) | `public/mascot/*.jpg` | AI-сгенерированные фото, уникальные (не рестайлим — реш. 2) |
+| Hero-иллюстрация «страны миров» | `public/hero/` (план, P2) | AI-генерация, unique, палитра DESIGN.md |
 
-Запрещено: персонажи Disney/фильмов, сток-фото CDN (unsplash/placehold),
-эмодзи как иконки функций. Эмодзи допустимы только как декор.
+Запрещено: персонажи Disney/фильмов (Гарри Поттер и т.п.), сток-фото CDN
+(unsplash/placehold), эмодзи как иконки функций. Эмодзи допустимы только как
+декор. Стикеры и иконки — свои SVG (монолайн-стиль), открытые наборы (Twemoji/
+OpenMoji, CC-BY 4.0) — только с указанием источника в отчёте.
 
 ## Do's and Don'ts
 
