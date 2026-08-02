@@ -10,6 +10,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-nunito-sans);
   --font-display: var(--font-nunito);
+  /* Акцентный дисплейный шрифт (реш. 8): Unbounded — только 2–3 места на
+     экран (названия миров, цифры XP). Класс: font-display-alt. */
+  --font-display-alt: var(--font-unbounded);
 }
 
 /*
@@ -140,4 +143,28 @@ body {
   animation-delay: var(--cf-delay, 0s);
   will-change: transform, opacity;
   pointer-events: none;
+}
+
+/*
+ * World zone patterns (design-boost, тикет 04, реш. 3/6) — лёгкие SVG-подложки
+ * по темам миров: свитки (grammar), звёзды (to-be), листья (vocabulary),
+ * ноты (listening), софиты (speaking). Data-URI, повтор 64px, рисуются
+ * currentColor-независимо — цвет задаётся классом-модификатором через
+ * opacity (≈6–8%), чтобы не снижать читаемость (контраст токенов не меняем).
+ * Использование: зона мира = pattern-класс + цветовой класс (bg-grammar-800/5 и т.п.).
+ */
+.pattern-scrolls {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%234f46e5' stroke-width='1.2' opacity='0.5'%3E%3Cpath d='M14 18c6-4 12-4 16 0 4 4-2 6-8 6s-8-2-8-6z'/%3E%3Cpath d='M22 24v14c0 3-4 3-8 3'/%3E%3Cpath d='M50 18c-6-4-12-4-16 0-4 4 2 6 8 6s8-2 8-6z'/%3E%3Cpath d='M42 24v14c0 3 4 3 8 3'/%3E%3C/g%3E%3C/svg%3E");
+}
+.pattern-stars {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%230d9488' stroke-width='1.2' opacity='0.5'%3E%3Cpath d='M18 18l1.6 3.2 3.4.5-2.5 2.4.6 3.4-3.1-1.6-3.1 1.6.6-3.4-2.5-2.4 3.4-.5z'/%3E%3Cpath d='M46 42l1.3 2.6 2.8.4-2 2 .5 2.8-2.6-1.4-2.6 1.4.5-2.8-2-2 2.8-.4z'/%3E%3Ccircle cx='44' cy='18' r='1.6'/%3E%3Ccircle cx='18' cy='44' r='1.2'/%3E%3C/g%3E%3C/svg%3E");
+}
+.pattern-leaves {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23059669' stroke-width='1.2' opacity='0.5'%3E%3Cpath d='M18 16c7-1 12 4 11 11-.8 6-7 8-13 7C11 30 11 20 18 16z'/%3E%3Cpath d='M22 22c3-3 6-4 7-4'/%3E%3Cpath d='M46 42c-7 1-12-4-11-11 .8-6 7-8 13-7 5 1 5 11-2 18z'/%3E%3Cpath d='M42 36c-3 3-6 4-7 4'/%3E%3C/g%3E%3C/svg%3E");
+}
+.pattern-notes {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23d97706' stroke-width='1.2' opacity='0.5'%3E%3Cpath d='M20 16v18'/%3E%3Cellipse cx='17' cy='35' rx='3.5' ry='2.6'/%3E%3Cpath d='M20 20l18-4v18'/%3E%3Cellipse cx='35' cy='35' rx='3.5' ry='2.6'/%3E%3Cpath d='M44 42v12'/%3E%3Cellipse cx='41' cy='55' rx='3' ry='2.2'/%3E%3C/g%3E%3C/svg%3E");
+}
+.pattern-spotlights {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23e11d48' stroke-width='1.2' opacity='0.5'%3E%3Cpath d='M8 8h6l2 6h-10z'/%3E%3Cpath d='M48 8h6l2 6h-10z'/%3E%3Cpath d='M14 26c6 8 30 8 36 0'/%3E%3Cpath d='M14 26c6 8 30 8 36 0' transform='translate(0 10)'/%3E%3Ccircle cx='32' cy='48' r='2'/%3E%3Ccircle cx='22' cy='42' r='1.4'/%3E%3Ccircle cx='42' cy='42' r='1.4'/%3E%3C/g%3E%3C/svg%3E");
 }

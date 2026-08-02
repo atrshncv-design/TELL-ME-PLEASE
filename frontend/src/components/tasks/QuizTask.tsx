@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useVerbBot } from "@/components/VerbBot"
 import { useSound } from "@/lib/useSound"
 import { ResultScreen } from "@/components/ResultScreen"
+import { StickerReaction } from "@/components/StickerReaction"
 
 interface QuizItem {
   question?: string
@@ -35,6 +36,9 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
   const [history, setHistory] = useState<{ selected: string | null; showResult: boolean }[]>([])
   // True while the auto-advance timeout is pending — disables navigation.
   const [transitioning, setTransitioning] = useState(false)
+  // Тикет 05: стикер-реакция на последний ответ (+XP-вспышка). Ключ = номер
+  // вопроса, чтобы AnimatePresence перезапускал анимацию на каждом ответе.
+  const [reaction, setReaction] = useState<{ key: number; correct: boolean } | null>(null)
 
   if (!items || items.length === 0) {
     return (
@@ -63,6 +67,8 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
     if (correct) setScore((s) => s + 1)
     say(correct ? "correct" : "wrong")
     play(correct ? "correct" : "wrong")
+    // Тикет 05: стикер-реакция + «+1» на ответ (правило реш. 7 — один на экран).
+    setReaction({ key: current, correct })
 
     // Persist this answer for read-only review.
     setHistory((prev) => {
@@ -105,6 +111,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
     setShowResult(false)
     setFinished(false)
     setHistory([])
+    setReaction(null)
   }
 
   if (finished) {
@@ -169,7 +176,20 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
         </motion.div>
       </AnimatePresence>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="relative grid grid-cols-2 gap-3">
+        {/* Тикет 05: стикер-реакция на последний ответ — по центру поверх
+            кнопок, улетает и тает (~1.3с). Правило «один на экран»: рендерится
+            только сразу после ответа, пока идёт автопереход. */}
+        <AnimatePresence>
+          {reaction && (
+            <StickerReaction
+              key={reaction.key}
+              id={reaction.correct ? "fire" : "oops"}
+              text={reaction.correct ? "+1 ⭐" : undefined}
+              className="left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+          )}
+        </AnimatePresence>
         {item.options.map((opt, oi) => {
           const isCorrect = opt === item.answer
           const isSelected = opt === selected

@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useSound } from "@/lib/useSound"
+import { ResultScreen } from "@/components/ResultScreen"
 
 interface Column {
   id: string
@@ -36,6 +37,8 @@ export function DragAndDropTask({
   )
   const [dragging, setDragging] = useState<DragItem | null>(null)
   const [checked, setChecked] = useState(false)
+  const [score, setScore] = useState(0)
+  const [finished, setFinished] = useState(false)
   const { play } = useSound()
 
   const handleDragStart = (item: DragItem) => setDragging(item)
@@ -58,6 +61,7 @@ export function DragAndDropTask({
   }
 
   const checkAnswers = () => {
+    if (checked) return
     setChecked(true)
     let score = 0
     columns.forEach((col) => {
@@ -65,9 +69,27 @@ export function DragAndDropTask({
         if (item.answer === col.id) score++
       })
     })
+    setScore(score)
     // One-shot task: the check IS the finish — fanfare on perfect, else wrong.
     play(score === items.length ? "fanfare" : "wrong")
-    onComplete?.(score, items.length)
+    // Короткая пауза, чтобы показать зелёные/красные рамки, затем ResultScreen.
+    setTimeout(() => {
+      setFinished(true)
+      onComplete?.(score, items.length)
+    }, 1200)
+  }
+
+  const retry = () => {
+    setPool([...items].sort(() => Math.random() - 0.5))
+    setPlaced(Object.fromEntries(columns.map((c) => [c.id, []])))
+    setDragging(null)
+    setChecked(false)
+    setScore(0)
+    setFinished(false)
+  }
+
+  if (finished) {
+    return <ResultScreen title={title} score={score} total={items.length} onRetry={retry} />
   }
 
   return (

@@ -67,7 +67,7 @@ export default function Home() {
 
         <motion.h1
           variants={item}
-          className="font-display text-5xl font-black leading-[1.05] tracking-tight text-primary-900 text-balance"
+          className="font-display-alt text-5xl font-black leading-[1.05] tracking-tight text-primary-900 text-balance"
         >
           Tell Me Please
         </motion.h1>

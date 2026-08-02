@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useSound } from "@/lib/useSound"
+import { ResultScreen } from "@/components/ResultScreen"
 
 interface BuildSentenceTaskProps {
   title: string
@@ -88,18 +89,18 @@ export function BuildSentenceTask({
     }, 1400)
   }
 
+  const retry = () => {
+    setCurrent(0)
+    setScore(0)
+    setPlacedAdverb(null)
+    setPlacedTime(null)
+    setShowResult(false)
+    setIsCorrect(false)
+    setFinished(false)
+  }
+
   if (finished) {
-    return (
-      <div className="flex flex-col items-center gap-4 p-6">
-        <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="text-5xl">
-          {score === rounds.length ? "🏆" : score >= rounds.length * 0.7 ? "🎉" : "💪"}
-        </motion.div>
-        <h2 className="text-2xl font-bold text-indigo-900">{title}</h2>
-        <p className="text-lg text-slate-600">
-          Результат: {score} / {rounds.length}
-        </p>
-      </div>
-    )
+    return <ResultScreen title={title} score={score} total={rounds.length} onRetry={retry} />
   }
 
   const target = `${subject} ${round.adverb} ${baseVerb} ${round.timePhrase}`

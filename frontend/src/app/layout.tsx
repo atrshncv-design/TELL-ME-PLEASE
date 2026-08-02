@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Nunito, Nunito_Sans } from "next/font/google"
+import { Nunito, Nunito_Sans, Unbounded } from "next/font/google"
 import "./globals.css"
 import { VerbBotProvider } from "@/components/VerbBot"
 
@@ -13,6 +13,14 @@ const nunito = Nunito({
 
 const nunitoSans = Nunito_Sans({
   variable: "--font-nunito-sans",
+  subsets: ["latin", "cyrillic"],
+  display: "swap",
+})
+
+// Accent display face (design-boost, реш. 8): Unbounded — wide, playful,
+// full Cyrillic. Rule «2–3 места на экран»: world names, XP digits only.
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
   subsets: ["latin", "cyrillic"],
   display: "swap",
 })
@@ -35,7 +43,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ru" className={`${nunito.variable} ${nunitoSans.variable} h-full`}>
+    <html lang="ru" className={`${nunito.variable} ${nunitoSans.variable} ${unbounded.variable} h-full`}>
       <body className="min-h-full bg-gradient-to-br from-primary-100 via-sky-50 to-listening-100 font-sans antialiased">
         <VerbBotProvider>{children}</VerbBotProvider>
       </body>

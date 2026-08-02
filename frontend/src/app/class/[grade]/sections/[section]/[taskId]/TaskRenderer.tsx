@@ -117,7 +117,7 @@ export function TaskRenderer({ task, grade }: { task: TaskData; grade: string })
     case "wheel":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><WheelTask title={task.title} description={task.description} items={task.items || []} /></div>
     case "ladder":
-      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><LadderTask title={task.title} description={task.description} ladders={task.ladders || []} /></div>
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><LadderTask title={task.title} description={task.description} ladders={task.ladders || []} onComplete={onScored} /></div>
     case "role-play":
     case "voice-chat":
     case "fill-in-and-speak":

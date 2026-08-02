@@ -4,6 +4,7 @@ import { useState, useMemo, useCallback } from "react"
 import { useVerbBot } from "@/components/VerbBot"
 import { useSound } from "@/lib/useSound"
 import { motion, AnimatePresence } from "framer-motion"
+import { ResultScreen } from "@/components/ResultScreen"
 
 /**
  * ClozeTextTask — unified "two-click cloze" mechanic (decision Q5/Q6).
@@ -85,6 +86,9 @@ export function ClozeTextTask({
   const [current, setCurrent] = useState(0)
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
+  // Инкрементится при «Ещё раз», чтобы пересоздать RoundView и сбросить его
+  // внутреннее состояние (placements/checked) даже для одного раунда.
+  const [resetToken, setResetToken] = useState(0)
   const { play } = useSound()
 
   if (effectiveRounds.length === 0) {
@@ -112,26 +116,24 @@ export function ClozeTextTask({
     }
   }
 
+  const retry = () => {
+    setCurrent(0)
+    setScore(0)
+    setFinished(false)
+    // Новый ключ пересоздаёт RoundView — сбрасывает placements/checked раунда.
+    setResetToken((t) => t + 1)
+  }
+
   if (finished) {
     const totalBlanks = effectiveRounds.reduce((sum, r) => sum + r.answers.length, 0)
-    return (
-      <div className="flex flex-col items-center gap-4 p-6">
-        <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="text-5xl">
-          {score === totalBlanks ? "🏆" : score >= totalBlanks * 0.7 ? "🎉" : "💪"}
-        </motion.div>
-        <h2 className="text-2xl font-bold text-indigo-900">{title}</h2>
-        <p className="text-lg text-slate-600">
-          Результат: {score} / {totalBlanks}
-        </p>
-      </div>
-    )
+    return <ResultScreen title={title} score={score} total={totalBlanks} onRetry={retry} />
   }
 
   const round = effectiveRounds[current]
 
   return (
     <RoundView
-      key={current}
+      key={`${resetToken}-${current}`}
       round={round}
       roundIndex={current}
       title={title}

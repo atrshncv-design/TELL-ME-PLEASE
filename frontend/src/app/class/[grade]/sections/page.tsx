@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import { useProgress } from "@/lib/useProgress"
 import { useAnalytics } from "@/lib/useAnalytics"
 import { WorldIcon } from "@/components/WorldIcon"
+import { TaskIcon } from "@/components/icons/task-icons"
 import { Confetti } from "@/components/Confetti"
 
 type Category = "grammar" | "to-be" | "vocabulary" | "listening" | "speaking"
@@ -87,6 +88,7 @@ const SECTION_COLOR: Record<
   {
     header: string
     zone: string
+    pattern: string
     dot: string
     dotIdle: string
     connectorDone: string
@@ -98,6 +100,7 @@ const SECTION_COLOR: Record<
   grammar: {
     header: "text-grammar-800",
     zone: "bg-gradient-to-br from-grammar-100/80 via-grammar-50/60 to-white border-grammar-200/80 shadow-sm shadow-grammar-100/60",
+    pattern: "pattern-scrolls",
     dot: "bg-grammar-500 shadow shadow-grammar-300/70",
     dotIdle: "bg-grammar-300",
     connectorDone: "bg-grammar-400",
@@ -108,6 +111,7 @@ const SECTION_COLOR: Record<
   "to-be": {
     header: "text-tobe-800",
     zone: "bg-gradient-to-br from-tobe-100/80 via-tobe-50/60 to-white border-tobe-200/80 shadow-sm shadow-tobe-100/60",
+    pattern: "pattern-stars",
     dot: "bg-tobe-500 shadow shadow-tobe-300/70",
     dotIdle: "bg-tobe-300",
     connectorDone: "bg-tobe-400",
@@ -118,6 +122,7 @@ const SECTION_COLOR: Record<
   vocabulary: {
     header: "text-vocabulary-800",
     zone: "bg-gradient-to-br from-vocabulary-100/80 via-vocabulary-50/60 to-white border-vocabulary-200/80 shadow-sm shadow-vocabulary-100/60",
+    pattern: "pattern-leaves",
     dot: "bg-vocabulary-500 shadow shadow-vocabulary-300/70",
     dotIdle: "bg-vocabulary-300",
     connectorDone: "bg-vocabulary-400",
@@ -128,6 +133,7 @@ const SECTION_COLOR: Record<
   listening: {
     header: "text-listening-800",
     zone: "bg-gradient-to-br from-listening-100/80 via-listening-50/60 to-white border-listening-200/80 shadow-sm shadow-listening-100/60",
+    pattern: "pattern-notes",
     dot: "bg-listening-500 shadow shadow-listening-300/70",
     dotIdle: "bg-listening-300",
     connectorDone: "bg-listening-400",
@@ -138,6 +144,7 @@ const SECTION_COLOR: Record<
   speaking: {
     header: "text-speaking-800",
     zone: "bg-gradient-to-br from-speaking-100/80 via-speaking-50/60 to-white border-speaking-200/80 shadow-sm shadow-speaking-100/60",
+    pattern: "pattern-spotlights",
     dot: "bg-speaking-500 shadow shadow-speaking-300/70",
     dotIdle: "bg-speaking-300",
     connectorDone: "bg-speaking-400",
@@ -163,22 +170,6 @@ const ICON_BOX: Record<string, string> = {
   listening: "bg-listening-50 border-listening-200",
   speaking: "bg-speaking-50 border-speaking-200",
 }
-
-/** Task type → island emoji (shown on the map island cards). */
-const TYPE_ICON: Record<string, string> = {
-  quiz: "❓",
-  "fill-in": "✍️",
-  cloze: "🧩",
-  "drag-and-drop": "🧲",
-  ladder: "🪜",
-  "build-sentence": "🔧",
-  "role-play": "🎭",
-  "fill-in-and-speak": "🗣️",
-  "voice-chat": "🎙️",
-  "click-mistake": "🖱️",
-  flashcards: "🃏",
-}
-const DEFAULT_TYPE_ICON = "📝"
 
 /** Render order: skip categories that have no exercises. */
 const SECTION_ORDER: Category[] = ["grammar", "to-be", "vocabulary", "listening", "speaking"]
@@ -311,13 +302,14 @@ export default function SectionsPage() {
           <span className="rounded-full border border-slate-100 bg-white/80 px-3 py-1.5 text-slate-600 shadow-soft">
             Пройдено {completedCount} из {totalTasks}
           </span>
-          {/* ⭐ total = sum of best scores (decision Q13). */}
+          {/* ⭐ total = sum of best scores (decision Q13). Цифры — Unbounded
+              (реш. 8: «2–3 места на экран» — XP-цифры как раз такое место). */}
           <span className="rounded-full border border-listening-200 bg-listening-100 px-3 py-1.5 text-listening-800 shadow-soft">
-            ⭐ {totalStars}
+            <span className="font-display-alt font-bold">⭐ {totalStars}</span>
           </span>
           {/* 💎 per perfect task (decision Q13). */}
           <span className="rounded-full border border-vocabulary-200 bg-vocabulary-100 px-3 py-1.5 text-vocabulary-800 shadow-soft">
-            💎 {perfectCount}
+            <span className="font-display-alt font-bold">💎 {perfectCount}</span>
           </span>
         </div>
       )}
@@ -365,8 +357,14 @@ export default function SectionsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: si * 0.08 }}
-              className={`w-full mb-6 rounded-3xl border px-4 py-4 scroll-mt-20 ${color.zone}`}
+              className={`relative w-full mb-6 overflow-hidden rounded-3xl border px-4 py-4 scroll-mt-20 ${color.zone}`}
             >
+              {/* World zone pattern (design-boost, реш. 3/6) — лёгкий SVG-декор
+                  по теме мира: свитки/звёзды/листья/ноты/софиты. */}
+              <div
+                aria-hidden="true"
+                className={`pointer-events-none absolute inset-0 opacity-[0.07] ${color.pattern}`}
+              />
               {/* World header = transition between worlds (decision Q12):
                   icon + title + Verb Bot greeting. */}
               <div className="flex items-start gap-3 mb-4">
@@ -436,7 +434,7 @@ export default function SectionsPage() {
                         done ? "opacity-70" : ""
                       } ${color.card} ${color.ring} ${isCurrent ? `ring-2 ${color.currentRing} shadow-md` : "hover:shadow-md"}`}
                     >
-                      <span className="mr-1">{TYPE_ICON[t.type] ?? DEFAULT_TYPE_ICON}</span>
+                      <TaskIcon type={t.type} className="mr-1 h-4 w-4 shrink-0 align-[-2px]" />
                       <span className="text-slate-700">{t.title}</span>
                       {done && (
                         <span className="ml-1 text-xs text-vocabulary-600 font-semibold whitespace-nowrap">
