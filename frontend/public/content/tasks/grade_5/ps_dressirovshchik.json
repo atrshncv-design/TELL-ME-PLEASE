@@ -1,0 +1,24 @@
+{
+  "id": "ps_dressirovshchik",
+  "title": "Дрессировщик: am / is / are",
+  "category": "grammar",
+  "type": "flashcards",
+  "description": "Переверни карточку и назови форму глагола to be (am / is / are)",
+  "cards": [
+    {"front": "I", "back": "am"},
+    {"front": "My mum", "back": "is"},
+    {"front": "We", "back": "are"},
+    {"front": "The ruler", "back": "is"},
+    {"front": "They", "back": "are"},
+    {"front": "She", "back": "is"},
+    {"front": "Tom", "back": "is"},
+    {"front": "You", "back": "are"},
+    {"front": "The pens", "back": "are"},
+    {"front": "My friend", "back": "is"},
+    {"front": "It", "back": "is"},
+    {"front": "The children", "back": "are"},
+    {"front": "His brother", "back": "is"},
+    {"front": "Mary and Jane", "back": "are"},
+    {"front": "A spider", "back": "is"}
+  ]
+}

@@ -7,6 +7,9 @@ import { LadderTask } from "@/components/tasks/LadderTask"
 import { VoiceChatTask } from "@/components/tasks/VoiceChatTask"
 import { BuildSentenceTask } from "@/components/tasks/BuildSentenceTask"
 import { ClozeTextTask } from "@/components/tasks/ClozeTextTask"
+import { ClickMistakeTask } from "@/components/tasks/ClickMistakeTask"
+import { FlashcardsTask } from "@/components/tasks/FlashcardsTask"
+import { WheelTask } from "@/components/tasks/WheelTask"
 import { TaskHeader } from "@/components/tasks/TaskHeader"
 import { useProgress } from "@/lib/useProgress"
 import { useAnalytics } from "@/lib/useAnalytics"
@@ -34,6 +37,8 @@ interface TaskData {
   underline_words?: string[]
   // cloze (multi-round)
   rounds?: { text: string; answers: string[][]; word_bank: string[]; hints?: string[] }[]
+  // flashcards
+  cards?: { front: string; back: string }[]
 }
 
 function serializeContext(task: TaskData): string {
@@ -94,6 +99,12 @@ export function TaskRenderer({ task, grade }: { task: TaskData; grade: string })
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><BuildSentenceTask title={task.title} description={task.description} adverbs={task.adverbs || []} timePhrases={task.time_phrases || []} baseVerb={task.base_verb || ""} subject={task.subject || "I"} onComplete={onScored} /></div>
     case "cloze":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><ClozeTextTask title={task.title} description={task.description} text={task.text} answers={task.answers} wordBank={task.word_bank} hints={task.hints} underlineWords={task.underline_words} rounds={(task.rounds || []).map((r) => ({ text: r.text, answers: r.answers, wordBank: r.word_bank, hints: r.hints }))} onComplete={onScored} /></div>
+    case "click-mistake":
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><ClickMistakeTask title={task.title} description={task.description} items={task.items || []} onComplete={onScored} /></div>
+    case "flashcards":
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><FlashcardsTask title={task.title} description={task.description} cards={task.cards || []} onComplete={onScored} /></div>
+    case "wheel":
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><WheelTask title={task.title} description={task.description} items={task.items || []} /></div>
     case "ladder":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><LadderTask title={task.title} description={task.description} ladders={task.ladders || []} /></div>
     case "role-play":

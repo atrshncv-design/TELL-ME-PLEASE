@@ -1,0 +1,23 @@
+{
+  "id": "pc_detector",
+  "title": "🕵️ Детектор лжи: Present Continuous",
+  "category": "grammar",
+  "type": "click-mistake",
+  "description": "В предложениях спрятаны ошибки в Present Continuous. Кликни на неверное слово.",
+  "items": [
+    {"text": "He playing football now.", "wrong": "playing"},
+    {"text": "I am play tennis every day.", "wrong": "am"},
+    {"text": "She is read a book at the moment.", "wrong": "read"},
+    {"text": "We watches TV every evening.", "wrong": "watches"},
+    {"text": "They are swim now.", "wrong": "swim"},
+    {"text": "He do his homework every day.", "wrong": "do"},
+    {"text": "The dog is run now.", "wrong": "run"},
+    {"text": "You listening to me now.", "wrong": "listening"},
+    {"text": "My mum cook dinner every day.", "wrong": "cook"},
+    {"text": "She is dances now.", "wrong": "dances"},
+    {"text": "I am go to school every morning.", "wrong": "am"},
+    {"text": "We are sit on the sofa now.", "wrong": "sit"},
+    {"text": "They is playing football now.", "wrong": "is"},
+    {"text": "She watch TV every evening.", "wrong": "watch"}
+  ]
+}

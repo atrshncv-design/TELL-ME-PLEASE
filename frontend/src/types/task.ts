@@ -49,6 +49,12 @@ export interface BuildSentenceData {
   subject: string;
 }
 
+/** One card of a flashcards task: stimulus on the front, reaction on the back. */
+export interface FlashcardItem {
+  front: string
+  back: string
+}
+
 /** One round of a cloze task: a text with `___` blanks + bank. */
 export interface ClozeRound {
   text: string;
@@ -69,6 +75,18 @@ export interface ClozeTextData {
   underline_words?: string[];
   /** Multi-round shape (one text per round). */
   rounds?: ClozeRound[];
+}
+
+/** Один сектор «Колеса удачи»: слово/подлежащее + опциональный ответ для самопроверки. */
+export interface WheelItem {
+  label: string
+  answer?: string
+}
+
+/** «Колесо удачи»: SVG-спиннер, выпавший сектор → самопроверка по кнопке «Показать ответ». */
+export interface WheelTask extends TaskData {
+  type: "wheel"
+  items: WheelItem[]
 }
 
 export interface TaskData {
@@ -92,4 +110,19 @@ export interface TaskData {
   word_bank?: string[];
   underline_words?: string[];
   rounds?: ClozeRound[];
+  // flashcards
+  cards?: FlashcardItem[];
+}
+
+/** Одно предложение задания «Кликни на ошибку» (click-mistake). */
+export interface ClickMistakeItem {
+  /** Предложение целиком; слова разделены пробелами, пунктуация приклеена к словам. */
+  text: string;
+  /** Слово с ошибкой, по которому надо кликнуть. null = «ловушка»: ошибки нет. */
+  wrong: string | null;
+}
+
+/** «Кликни на ошибку»: найди и кликни неверное слово (или подтверди, что всё верно). */
+export interface ClickMistakeTask extends TaskData {
+  items: ClickMistakeItem[];
 }

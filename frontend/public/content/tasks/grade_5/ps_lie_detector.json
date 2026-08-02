@@ -1,0 +1,24 @@
+{
+  "id": "ps_lie_detector",
+  "title": "🕵️ Детектор лжи: Present Simple",
+  "category": "grammar",
+  "type": "click-mistake",
+  "description": "В предложениях спрятаны ошибки в Present Simple. Кликни на неверное слово. Если ошибки нет — нажми «Всё верно!».",
+  "items": [
+    {"text": "I is a student.", "wrong": "is"},
+    {"text": "She are very beautiful.", "wrong": "are"},
+    {"text": "They isn't from London.", "wrong": "isn't"},
+    {"text": "Am I a good singer? Yes, I am.", "wrong": null},
+    {"text": "We isn't ready for the lesson.", "wrong": "isn't"},
+    {"text": "My dad are a mechanic.", "wrong": "are"},
+    {"text": "You is my best friend.", "wrong": "is"},
+    {"text": "The books is on the shelf.", "wrong": "is"},
+    {"text": "Is they your classmates?", "wrong": "Is"},
+    {"text": "It aren't a spider, it is a fly.", "wrong": "aren't"},
+    {"text": "My favorite subject are Art.", "wrong": "are"},
+    {"text": "We am from Russia.", "wrong": "am"},
+    {"text": "Is your brother a student? Yes, he are.", "wrong": "are"},
+    {"text": "The ruler are in the bag.", "wrong": "are"},
+    {"text": "I am play tennis every day.", "wrong": "am"}
+  ]
+}

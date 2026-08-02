@@ -1,0 +1,24 @@
+{
+  "id": "pc_svetofor_wheel",
+  "title": "Светофор: колесо удачи",
+  "description": "Крути колесо, называй форму глагола to be для выпавшего слова",
+  "category": "grammar",
+  "type": "wheel",
+  "items": [
+    { "label": "I", "answer": "am" },
+    { "label": "He", "answer": "is" },
+    { "label": "They", "answer": "are" },
+    { "label": "She", "answer": "is" },
+    { "label": "We", "answer": "are" },
+    { "label": "The dog", "answer": "is" },
+    { "label": "You", "answer": "are" },
+    { "label": "My mum", "answer": "is" },
+    { "label": "The children", "answer": "are" },
+    { "label": "It", "answer": "is" },
+    { "label": "Tom", "answer": "is" },
+    { "label": "My friends", "answer": "are" },
+    { "label": "The cat", "answer": "is" },
+    { "label": "You and I", "answer": "are" },
+    { "label": "The book", "answer": "is" }
+  ]
+}

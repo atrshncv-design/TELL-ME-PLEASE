@@ -29,6 +29,9 @@ const files = [
   "story_harry_potter_interview.json",
   "speaking_about_yourself.json",
   "speaking_peer_conversation.json",
+  "ps_dressirovshchik.json",
+  "pc_svetofor_cards.json",
+  "pc_svetofor_wheel.json",
 ]
 
 let errors = 0
@@ -114,8 +117,37 @@ for (const file of files) {
       })
     }
 
+    if (task.type === "flashcards") {
+      const cards = task.cards || []
+      if (!Array.isArray(cards) || cards.length === 0) {
+        console.log(`❌ ${file}: flashcards task has no cards`)
+        errors++
+      }
+      for (let j = 0; j < cards.length; j++) {
+        const c = cards[j]
+        if (!c.front || typeof c.front !== "string" || !c.back || typeof c.back !== "string") {
+          console.log(`❌ ${file}[${j}]: card must have non-empty string front/back: ${JSON.stringify(c)}`)
+          errors++
+        }
+      }
+    }
+
+    if (task.type === "wheel") {
+      for (let j = 0; j < items.length; j++) {
+        const item = items[j]
+        if (!item.label || typeof item.label !== "string") {
+          console.log(`❌ ${file}[${j}]: wheel item missing label: ${JSON.stringify(item)}`)
+          errors++
+        }
+        if (item.answer !== undefined && typeof item.answer !== "string") {
+          console.log(`❌ ${file}[${j}]: wheel answer must be a string: ${JSON.stringify(item)}`)
+          errors++
+        }
+      }
+    }
+
     const clozeHasData = task.type === "cloze" && ((task.rounds && task.rounds.length > 0) || task.text)
-    if (items.length === 0 && !clozeHasData && task.type !== "role-play" && task.type !== "voice-chat") {
+    if (items.length === 0 && !clozeHasData && task.type !== "role-play" && task.type !== "voice-chat" && task.type !== "flashcards") {
       console.log(`⚠️ ${file}: no items (type=${task.type})`)
     }
     
@@ -211,11 +243,11 @@ function sanityCheck(label, ok, detail = "") {
   )
 }
 
-// 4. All 21 files normalize without throwing — the per-file loop above counts
+// 4. All 24 files normalize without throwing — the per-file loop above counts
 //    this; assert it explicitly.
 sanityCheck(
-  "all 21 files normalize without throwing",
-  normalizedCount === 21,
+  "all 24 files normalize without throwing",
+  normalizedCount === 24,
   `normalizedCount=${normalizedCount}`,
 )
 
@@ -233,6 +265,9 @@ sanityCheck(
     "role-play",
     "voice-chat",
     "fill-in-and-speak",
+    "click-mistake",
+    "flashcards",
+    "wheel",
   ])
   const offenders = [...seenTypes].filter((t) => !knownTypes.has(t))
   sanityCheck(

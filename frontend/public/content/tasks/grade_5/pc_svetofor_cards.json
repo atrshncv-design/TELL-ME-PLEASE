@@ -1,0 +1,24 @@
+{
+  "id": "pc_svetofor_cards",
+  "title": "Светофор: am/is/are + V-ing",
+  "category": "grammar",
+  "type": "flashcards",
+  "description": "Переверни карточку и скажи полное предложение в Present Continuous (am/is/are + V-ing)",
+  "cards": [
+    {"front": "I / play", "back": "I am playing"},
+    {"front": "He / sleep", "back": "He is sleeping"},
+    {"front": "We / run", "back": "We are running"},
+    {"front": "She / sing", "back": "She is singing"},
+    {"front": "They / swim", "back": "They are swimming"},
+    {"front": "It / rain", "back": "It is raining"},
+    {"front": "You / read", "back": "You are reading"},
+    {"front": "My dog / bark", "back": "My dog is barking"},
+    {"front": "The children / jump", "back": "The children are jumping"},
+    {"front": "My mum / cook", "back": "My mum is cooking"},
+    {"front": "Tom / drive", "back": "Tom is driving"},
+    {"front": "We / watch TV", "back": "We are watching TV"},
+    {"front": "The cat / drink milk", "back": "The cat is drinking milk"},
+    {"front": "I / write", "back": "I am writing"},
+    {"front": "You / listen to music", "back": "You are listening to music"}
+  ]
+}
