@@ -5,8 +5,35 @@
   "type": "links",
   "description": "Песенки и материалы для самостоятельного изучения",
   "links": [
-    {"title": "Present Simple песня (заглушка)", "url": "https://example.com/present-simple-song", "description": "Вставьте ссылку на YouTube-песню по Present Simple"},
-    {"title": "Глагол to be — песня (заглушка)", "url": "https://example.com/to-be-song", "description": "Вставьте ссылку на YouTube-песню по глаголу to be"},
-    {"title": "Видео: окончания глаголов (заглушка)", "url": "https://example.com/endings-video", "description": "Вставьте ссылку на обучающее видео"}
+    {
+      "title": "🎵 Present Simple песня",
+      "url": "https://rutube.ru/video/7bb23590e287b1ba09eff35857572503/",
+      "description": "Песня для запоминания Present Simple"
+    },
+    {
+      "title": "🎵 Глагол to be — песня",
+      "url": "https://yandex.ru/video/preview/8418537712335806877",
+      "description": "Песня про глагол to be"
+    },
+    {
+      "title": "🎥 Окончания глаголов — видео",
+      "url": "https://yandex.ru/video/preview/17764916693209110830",
+      "description": "Обучающее видео: окончания глаголов"
+    },
+    {
+      "title": "🎵 Ещё песня (1)",
+      "url": "https://rutube.ru/video/8b8cb17eb9f9a8b6d8d4cee33713b515/",
+      "description": "Песня для повторения грамматики"
+    },
+    {
+      "title": "🎵 Ещё песня (2)",
+      "url": "https://rutube.ru/video/248335e1a0922b48fc4111c513eecf19/",
+      "description": "Песня для повторения грамматики"
+    },
+    {
+      "title": "🎵 Ещё песня (3)",
+      "url": "https://rutube.ru/video/19721fd0281a910775ce4a97a845b55c/",
+      "description": "Песня для повторения грамматики"
+    }
   ]
 }
