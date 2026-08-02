@@ -1,91 +1,61 @@
-# TICKETS — Фаза 2: Живой MVP на space.z-ai
+# TICKETS — Фаза 3: Пилот «Present Tenses 5 класс»
 
-_Источник: `docs/SPEC-spacezai-live-mvp.md`. Порядок = зависимостями (блокеры первыми). Статусы: ready-for-agent / in progress / done / failed._
+_Источник: `docs/SPEC-present-tenses-pilot.md`. Порядок = зависимостями. Статусы: ready-for-agent / in progress / done / failed._
 
-## T01 — LLM-чат в Next.js API Routes (SSE + ротация ключей + промпт-роутер)
+## P1 — Механика «Кликни на ошибку» (ClickMistakeTask)
 
-**Задача.** Перенести логику `backend/app/main.py` (LLM-чат) в Next.js API Routes: `frontend/src/app/api/chat/stream/route.ts` — POST-запрос, ответ SSE (`ReadableStream`, `text/event-stream`). Контракт событий фазы 1: `init` → `user` → токены → `done`/`error`. Перенести: `key_rotation.py` (in-memory ротация по 429/пустому content, `LLM_API_KEYS` из env), `prompt_router.py` + `prompts_config.json` (роли по task_id → fallback grade_N, без динамической генерации), ветки `final_feedback`/`_session_timer` (3-мин финал). Модели: `LLM_MODELS` из env, проверить актуальный список `opencode.ai/zen/v1/models`.
+**Задача.** Новый тип задания: предложение с ошибкой → ученик кликает на неверное слово. Иногда «ловушка»: ошибки нет (кнопка «Здесь всё верно!»). По образцу контента `tobe_lie_detector` (но клик, не ввод).
+- `frontend/src/components/tasks/ClickMistakeTask.tsx` + тип в `frontend/src/types/task.ts` + рендер в `TaskRenderer.tsx` (case "click-mistake").
+- Формат JSON: `{ type: "click-mistake", items: [{ text: "I is a student.", wrong: "is" } | { text: "...", wrong: null }] }` — wrong=null = ловушка. Клик по слову: если оно == wrong → зелёный pop + ✓; если wrong=null и клик по «Всё верно» → ✓; неверный клик → shake.
+- Стиль: Tailwind, цвета платформы, мобильный. Framer Motion для pop/shake.
+- **Контент**: PS T8 (15 предл., 1 ловушка), PS P3 (15), PC №4 (15), PC №9 (14) — из `/tmp/new-materials/*.txt` (очистить от AI-мусора/опечаток).
+- Проверка: tsc, build, ручной проход страницы задания.
 
-**Приёмка.** `tsc --noEmit` 0 ошибок; `npm run build` зелёный; локальный прогон: POST → SSE-стрим токенов → `done`; 3-мин финал срабатывает; ротация на 429 работает (мок).
+## P2 — Механика «Флеш-карточки» (FlashcardsTask)
 
-**Blocked by:** — | **Status:** ready-for-agent
+**Задача.** Новый тип: карточка со стимулом (подлежащее/слово) → переворот показывает реакцию (форма глагола). Таймер, счётчик, «перемешать», автопереворот.
+- `frontend/src/components/tasks/FlashcardsTask.tsx` + тип + рендер (case "flashcards").
+- JSON: `{ type: "flashcards", cards: [{ front: "I", back: "am" }, ...] }`. Переворот по клику, кнопки «Знаю/Не знаю» → счётчик, в конце итог.
+- **Контент**: PS T1 (15 пар I—am, My mum—is…), PC №11 (15 пар I/play → I am playing).
+- Проверка: tsc, build, ручной проход.
 
-## T02 — Браузерный TTS + SSE-клиент вместо WebSocket
+## P3 — Механика «Колесо удачи» (WheelTask)
 
-**Задача.** Хук `useSpeechSynthesis` (`frontend/src/lib/useSpeechSynthesis.ts`): выбор лучшего en-US голоса (Google UK English → Microsoft → Siri), `voiceschanged`, rate ≈ 1.0, озвучка реплик ИИ. Заменить `useWebSocket` на SSE-клиент (`fetch` + парсинг `ReadableStream`) в `VoiceChatTask.tsx`. Текст ответа всегда показывается на экране (фолбэк при отсутствии голоса). Убрать `useAudioPlayer` из голосового пути (Kokoro больше нет).
+**Задача.** Новый тип: спиннер со словами/вопросами (SVG-колесо, анимация вращения) → выпало слово → ученик отвечает (устно/выбором из вариантов). Кнопка «Крутить».
+- `frontend/src/components/tasks/WheelTask.tsx` + тип + рендер (case "wheel").
+- JSON: `{ type: "wheel", items: [{ label: "I", answer: "am" }, ...] }` (answer опционален — для самопроверки по кнопке «Показать ответ»).
+- **Контент**: PC №1 «Светофор» (15 слов I—am, The dog—is…).
+- Проверка: tsc, build, ручной проход.
 
-**Приёмка.** Голосовое задание локально: реплика ИИ озвучивается speechSynthesis + видна текстом; в браузере без голоса — только текст, без ошибок; микрофон оживает после реплики.
+## P4 — Контент Present Continuous 5 класс (JSON, существующие механики)
 
-**Blocked by:** T01 | **Status:** ready-for-agent
+**Задача.** Создать JSON-задания из файла `Present Continuous 5 класс.txt` (собственно Continuous, НЕ первые 10 to-be-дублей):
+- №12 Сборка (fill-in: am/is/are + V-ing, 15) · №13 Орфография (drag-and-drop пары, 15) · 3.1 Сортировка правил -ing (drag-and-drop группы, 15 глаголов) · 3.2 Орфотренажёр (fill-in, 15) · 3.3 Ловушка для глаз (quiz, 15) · №4 Анти-реакция (build-sentence, 15) · №5 Рефлекс вопроса (build-sentence, 10) · №6 Короткий ответ (quiz, 10) · №7 Фильтр Simple/Continuous (drag-and-drop группы, 15) · №8 Машина времени (quiz, 15) · №10 Письмо от подруги (cloze, 15) · №12 Угадай по эмодзи (quiz с эмодзи, 8) · №14 Два мира (drag-and-drop пары, 15) · №16 Интервью с кибер-другом (voice-chat, промпт-персонаж «10-летний бот», банк 15 вопросов).
+- id: `pc_*` (present_continuous_*), категория grammar, добавить в `content/tasks/grade_5/index.json`.
+- Очистить от AI-мусора и опечаток. Проверить форматы JSON по образцам существующих заданий.
+- Проверка: валидность JSON, tsc/build, ручной проход нескольких заданий.
 
-## T03 — Очередь и трейтлимит LLM-запросов
+## P5 — Контент Present Simple 5 класс (недостающее)
 
-**Задача.** In-memory FIFO-очередь + семафор: максимум **8 одновременных LLM-запросов**, остальные ждут (таймаут ожидания ~30с). Пока запрос в очереди — клиент получает от сервера событие `queued` и показывает реплику персонажа «Думаю над твоими словами…» (текст, анимация печати; голосом не озвучивается). Мягкое падение: таймаут/все ключи исчерпаны → извиняющаяся реплика персонажа + предложение повторить. При свободном слоте очередь невидима (задержка = 0).
+**Задача.** JSON-задания из `Present Simple 5 класс (1).txt` (чего ещё нет в контенте):
+- To be: T1 (flashcards, 15 — нужен P2) · T3 Множ.число (drag-and-drop группы is/are, 15) · T4 Анти-реакция (build-sentence, 15) · T5 Почемучка (build-sentence, 15) · T6 Короткий ответ (quiz, 15) · T7 Фильтр (quiz, 15) · T10 Разделительные (drag-and-drop пары, 15) · T11 Угадай кто (quiz с эмодзи, 10) · T12 Опросник (survey — отложить, если M4 не готов) · T13 Страны (drag-and-drop пары, 15) · T15 Визитка (fill-in шаблон, 15).
+- Have got: H1 (quiz, 15) · H2 (fill-in, 15) · H3 (build-sentence, 15) · H4 (quiz, 15) · H5 Монстр (cloze, 15).
+- Проверь себя: P1 (quiz, 15) · P2 (fill-in, 15) · P3 (click-mistake — нужен P1, 15) · P4 (build-sentence, 15) · P5 (cloze, 15).
+- id: `ps_*` / `havegot_*` / `pscheck_*`, категория grammar, index.json.
+- Проверка: валидность, tsc/build, ручной проход.
 
-**Приёмка.** Скрипт `scripts/load-test.mjs`: 10 одновременных POST → 8 обрабатываются, 2 получают `queued` → ответили все, 0 ошибок 500; одиночный запрос — без события `queued`.
+## P6 — Чат-бот учитель: шпаргалка «Правила» + режим «Спроси учителя»
 
-**Blocked by:** T01 | **Status:** ready-for-agent
+**Задача.**
+1. Компонент `RulesPanel` (модалка/панель «Правила») — справочник Present Simple из `/tmp/new-materials/Чат-бот учитель (1).txt` (разделы 1–8, 10: когда используется, образование, -s/-es, отрицание, вопросы, Wh, to be, слова-подсказки, короткая схема). Кнопка «📖 Правила» на страницах заданий Present Simple (в TaskRenderer или в карточке секции).
+2. Задание «Спроси учителя» (voice-chat): системный промпт = разделы 1–10 справочника (правила + примеры + типичные ошибки для диагностики), персонаж — учитель английского. Отдельный JSON `ps_ask_teacher.json` (voice-chat) в секцию speaking или grammar.
+- Проверка: tsc/build, ручной проход: шпаргалка открывается, «Спроси учителя» отвечает по правилам (SSE).
 
-## T04 — Аналитика: POST /api/event → JSONL
+## P7 — Ссылки на песни (links.json)
 
-**Задача.** Перенести приём событий воронки из `backend` в `frontend/src/app/api/event/route.ts`: append в `data/events.jsonl` (fs). События: `grade_selected`, `section_selected`, `task_started`, `task_completed(+score)`, `task_abandoned`, `voice_session_started`, `voice_session_ended`. Анонимный device-session ID (localStorage). Проверить `useAnalytics.ts` (endpoint обновить на `/api/event`).
+**Задача.** Заменить заглушки в `content/tasks/grade_5/links.json` на реальные URL из файла Present Simple (6 ссылок rutube/yandex). Названия песен по контексту (Present Simple + to be).
+- Проверка: URL отвечают 200 (curl).
 
-**Приёмка.** Прогон воронки локально → события в `data/events.jsonl`; `tsc`/`build` зелёные.
+## P8 — Верификация пилота + пуш
 
-**Blocked by:** T01 | **Status:** ready-for-agent
-
-## T05 — Админ-панель: кнопка → модалка → дашборд
-
-**Задача.** Незаметная кнопка входа (футер/угол карты миров, без надписи «админ») → модалка логин+пароль → проверка `ADMIN_PASSWORD` из env (логин — константа) → закрытый роут `/admin` (server-side check) + `GET /api/admin/stats`: счётчики посещений, классы/задания, доходимость до голосового чата, средние баллы, последние события. Минималистичный UI (таблица + цифры).
-
-**Приёмка.** Вход с правильным/неправильным паролем; пустой дашборд до событий; цифры после прогона T04; ученик кнопку не замечает (визуальная проверка).
-
-**Blocked by:** T04 | **Status:** ready-for-agent
-
-## T06 — Дизайн-система: DESIGN.md + яркая палитра
-
-**Задача.** `DESIGN.md` в корне (скилл design-md): яркая детская палитра (5–9 классы), акценты по категориям секций (grammar/vocabulary/listening/speaking), токены + проза. Линт: `npx -y @google/design.md lint` (WCAG AA). Экспорт в Tailwind v4 theme и пролить на компоненты (карта миров, карточки, кнопки, Verb Bot).
-
-**Приёмка.** `lint` без ошибок; палитра применена на 5 ключевых экранах; контраст AA; `tsc`/`build` зелёные.
-
-**Blocked by:** — | **Status:** ready-for-agent
-
-## T07 — Визуал: стикеры, эмодзи, стоковые иллюстрации и фото
-
-**Задача.** Twemoji/OpenMoji стикеры на карте миров, карточках заданий, в репликах Verb Bot. Фото-фоны Pexels/Unsplash (свободные лицензии). Иллюстрации-человечки Open Peeps/Blush (в цветах палитры T06) для персонажей-помощников. Без конкретных мульт-персонажей (права).
-
-**Приёмка.** Визуальный аудит: экраны стали ярче, ничего не ломает читаемость; `tsc`/`build` зелёные.
-
-**Blocked by:** T06 | **Status:** ready-for-agent
-
-## T08 — AI-маскоты: Verb Bot 2.0 + маскот карты миров
-
-**Задача.** Сгенерировать 1–2 уникальных персонажа (не из мультиков) в фирменных цветах: обновлённый Verb Bot + маскот карты миров. Инструмент: open-design (BYOK) или бесплатный API генерации. Интеграция в UI (аватар в чате, маркер на карте).
-
-**Приёмка.** Маскоты на проде, соответствуют палитре, весят мало (оптимизация формата).
-
-**Blocked by:** T07 | **Status:** ready-for-agent
-
-## T09 — Production-режим и деплой на space.z-ai
-
-**Задача.** Проверить, можно ли переключить space.z-ai с `next dev` на `next build && next start` (`.zscripts`, конфиг платформы, build-команда). Если нельзя — задокументировать и компенсировать очередью (T03). Залить `.env` на платформу (пользователь — сам: `LLM_API_KEYS`, `LLM_MODELS`, `ADMIN_PASSWORD`). Прод-проверка всего: фронт + чат + SSE + аналитика + админ.
-
-**Приёмка.** `https://m1ed663b3d70-d.space-z.ai/` — голосовой чат отвечает с телефона (эмулятор iPhone/Android), SSE работает, админ-вход работает.
-
-**Blocked by:** T03, T05 | **Status:** ready-for-agent
-
-## T10 — Нагрузочный тест + правки заказчицы по контенту
-
-**Задача.** `scripts/load-test.mjs` — эмуляция 10 одновременных голосовых сессий на проде: 8 параллельных + 2 в очереди, замер TTFB, 0 ошибок. Применить присланные заказчицей правки по содержанию заданий (5 класс) + `verify-content.mjs` ALL PASSED.
-
-**Приёмка.** Лог нагрузочного прогона без 500; verify-content зелёный; правки в контенте.
-
-**Blocked by:** T09 | **Status:** ready-for-agent
-
-## T11 — Уборка и документация
-
-**Задача.** `huggingface/` — пометить DEPRECATED (или удалить по согласию); `backend/` — пометить «историческая реализация» (README-заглушка), `docs/HF_DEPLOY.md` — устарел; обновить `Status.md`, `docs/SPEC.md` (ссылка на новую фазу), README (архитектура: всё в Next.js). Удалить `NEXT_PUBLIC_WS_URL` из env-документации.
-
-**Приёмка.** Дерево проекта отражает реальность; доки не противоречат спеке.
-
-**Blocked by:** T10 | **Status:** ready-for-agent
+**Задача.** Полный прогон: `npx tsc --noEmit`, `npm run build`, скрипт проверки контента (все id уникальны, index.json валиден, файлы существуют), браузерный проход карты 5 класса (новые задания открываются и проходятся), коммит + пуш в origin. Отчёт для показа заказчице (список новых заданий).
