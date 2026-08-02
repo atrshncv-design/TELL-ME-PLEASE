@@ -99,145 +99,145 @@
     },
     {
       "file": "tb6_svetofor_cards.json",
-      "title": "⚡ Светофор: назови форму to be",
+      "title": "Светофор: назови форму to be",
       "category": "to-be",
       "type": "flashcards"
     },
     {
       "file": "tb6_svetofor_wheel.json",
-      "title": "🎡 Светофор: колесо удачи",
+      "title": "Светофор: колесо удачи",
       "category": "to-be",
       "type": "wheel"
     },
     {
       "file": "tb6_assembly.json",
-      "title": "🧩 Сборка: am / is / are",
+      "title": "Сборка: am / is / are",
       "category": "to-be",
       "type": "fill-in"
     },
     {
       "file": "tb6_negative.json",
-      "title": "🚫 Анти-реакция: скажи наоборот",
+      "title": "Анти-реакция: скажи наоборот",
       "category": "to-be",
       "type": "fill-in"
     },
     {
       "file": "tb6_question.json",
-      "title": "❓ Рефлекс вопроса: вынеси to be вперёд",
+      "title": "Рефлекс вопроса: вынеси to be вперёд",
       "category": "to-be",
       "type": "fill-in"
     },
     {
       "file": "tb6_filter.json",
-      "title": "🧠 Фильтр: be или смысловой глагол?",
+      "title": "Фильтр: be или смысловой глагол?",
       "category": "to-be",
       "type": "quiz"
     },
     {
       "file": "tb6_blog.json",
-      "title": "🌍 Туристический блог: Лондон",
+      "title": "Туристический блог: Лондон",
       "category": "to-be",
       "type": "cloze"
     },
     {
       "file": "tb6_short_answer.json",
-      "title": "🗣️ Короткий ответ: am / is / are",
+      "title": "Короткий ответ: am / is / are",
       "category": "to-be",
       "type": "quiz"
     },
     {
       "file": "tb6_detective.json",
-      "title": "🕵️ Детектив: фоторобот",
+      "title": "Детектив: фоторобот",
       "category": "listening",
       "type": "role-play"
     },
     {
       "file": "tb6_room.json",
-      "title": "⭐ Моя комната: дизайн и to be",
+      "title": "Моя комната: дизайн и to be",
       "category": "to-be",
       "type": "fill-in"
     },
     {
       "file": "pc6_form_quiz.json",
-      "title": "🚦 Выбор формы: am / is / are",
+      "title": "Выбор формы: am / is / are",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "pc6_assembly.json",
-      "title": "🧩 Сборка: смешанный контекст",
+      "title": "Сборка: смешанный контекст",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "pc6_unjumble.json",
-      "title": "🔀 Расположи слова: собери предложение",
+      "title": "Расположи слова: собери предложение",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "pc6_short_answer.json",
-      "title": "🗣️ Короткий ответ: am / is / are",
+      "title": "Короткий ответ: am / is / are",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "pc6_detector.json",
-      "title": "🕵️ Детектор ошибок: to be",
+      "title": "Детектор ошибок: to be",
       "category": "grammar",
       "type": "click-mistake"
     },
     {
       "file": "pc6_svetofor_cards.json",
-      "title": "⚡ Светофор: am/is/are + V-ing",
+      "title": "Светофор: am/is/are + V-ing",
       "category": "grammar",
       "type": "flashcards"
     },
     {
       "file": "pc6_ing_assembly.json",
-      "title": "🧩 Сборка: прямо сейчас",
+      "title": "Сборка: прямо сейчас",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "pc6_spelling_pairs.json",
-      "title": "✍️ Орфография: соедини пары",
+      "title": "Орфография: соедини пары",
       "category": "grammar",
       "type": "drag-and-drop"
     },
     {
       "file": "pc6_ing_rules_sort.json",
-      "title": "🧠 Сортировка правил -ing",
+      "title": "Сортировка правил -ing",
       "category": "grammar",
       "type": "drag-and-drop"
     },
     {
       "file": "pc6_ing_trainer.json",
-      "title": "⌨️ Орфографический тренажёр",
+      "title": "⌨ Орфографический тренажёр",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "pc6_spelling_quiz.json",
-      "title": "🛑 Ловушка для глаз: -ing",
+      "title": "Ловушка для глаз: -ing",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "pc6_negative.json",
-      "title": "🚫 Анти-реакция: отрицание",
+      "title": "Анти-реакция: отрицание",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "pc6_question.json",
-      "title": "❓ Рефлекс вопроса",
+      "title": "Рефлекс вопроса",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "pc6_markers_sort.json",
-      "title": "🧠 Сортировка маркеров времени",
+      "title": "Сортировка маркеров времени",
       "category": "grammar",
       "type": "drag-and-drop"
     },
@@ -249,49 +249,49 @@
     },
     {
       "file": "pc6_lie_detector.json",
-      "title": "🕵️ Детектор лжи: Simple или Continuous",
+      "title": "Детектор лжи: Simple или Continuous",
       "category": "grammar",
       "type": "click-mistake"
     },
     {
       "file": "pc6_two_worlds.json",
-      "title": "⚖️ Два мира: обычно и сейчас",
+      "title": "Два мира: обычно и сейчас",
       "category": "grammar",
       "type": "drag-and-drop"
     },
     {
       "file": "pc6_letter.json",
-      "title": "📧 Письмо из Лондона",
+      "title": "Письмо из Лондона",
       "category": "grammar",
       "type": "cloze"
     },
     {
       "file": "pc6_emoji_quiz.json",
-      "title": "🎭 Угадай по эмодзи",
+      "title": "Угадай по эмодзи",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "pc6_blog.json",
-      "title": "⭐ Блог: привычки и сейчас",
+      "title": "Блог: привычки и сейчас",
       "category": "speaking",
       "type": "fill-in-and-speak"
     },
     {
       "file": "pc6_survey.json",
-      "title": "📱 Цифровой опросник: что ты делаешь?",
+      "title": "Цифровой опросник: что ты делаешь?",
       "category": "speaking",
       "type": "voice-chat"
     },
     {
       "file": "pc6_ai_friend.json",
-      "title": "🤖 Кибер-друг: спроси меня!",
+      "title": "Кибер-друг: спроси меня!",
       "category": "grammar",
       "type": "voice-chat"
     },
     {
       "file": "pc6_photo.json",
-      "title": "📸 Опиши картинку: пикник",
+      "title": "Опиши картинку: пикник",
       "category": "speaking",
       "type": "fill-in-and-speak"
     }

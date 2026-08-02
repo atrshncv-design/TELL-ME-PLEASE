@@ -1,65 +1,365 @@
 {
   "grade": 5,
   "exercises": [
-    {"file": "grammar_endings_sort.json", "title": "Сортировка окончаний", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "grammar_endings_quiz.json", "title": "Окончания: викторина", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_v1_vs_quiz.json", "title": "V1 / Vs: выбери форму", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_roulette.json", "title": "Рулетка: все части предложения", "category": "grammar", "type": "fill-in"},
-    {"file": "grammar_joke_quiz.json", "title": "Выбери правильную форму", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_negation.json", "title": "Отрицание", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_yes_no_questions.json", "title": "Общие вопросы Do/Does", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_wh_questions.json", "title": "Специальные вопросы", "category": "grammar", "type": "cloze"},
-    {"file": "grammar_ladder.json", "title": "Лесенка: Up and Down", "category": "grammar", "type": "ladder"},
-    {"file": "grammar_verb_forms_quiz.json", "title": "Викторина: вставь форму глагола", "category": "grammar", "type": "fill-in"},
-    {"file": "grammar_adverbs_build.json", "title": "Наречия: построй предложения", "category": "grammar", "type": "build-sentence"},
-    {"file": "grammar_adverbs_place.json", "title": "Наречия: вставь в правильное место", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "tobe_assembly.json", "title": "Сборка: am / is / are", "category": "to-be", "type": "fill-in"},
-    {"file": "tobe_magnet.json", "title": "Магнит: притяни not", "category": "to-be", "type": "quiz"},
-    {"file": "tobe_why.json", "title": "Почемучка: задай вопрос", "category": "to-be", "type": "cloze"},
-    {"file": "tobe_lie_detector.json", "title": "Детектор лжи: найди ошибку", "category": "to-be", "type": "fill-in"},
-    {"file": "tobe_email.json", "title": "Письмо по обмену", "category": "to-be", "type": "cloze"},
-    {"file": "story_harry_potter_routine.json", "title": "Распорядок дня Гарри Поттера", "category": "vocabulary", "type": "cloze"},
-    {"file": "story_harry_potter_interview.json", "title": "Интервью с Гарри Поттером", "category": "listening", "type": "role-play"},
-    {"file": "speaking_about_yourself.json", "title": "Расскажи о себе", "category": "speaking", "type": "fill-in-and-speak"},
-    {"file": "speaking_peer_conversation.json", "title": "Поговори со сверстником", "category": "speaking", "type": "voice-chat"},
-    {"file": "ps_lie_detector.json", "title": "🕵️ Детектор лжи: Present Simple", "category": "grammar", "type": "click-mistake"},
-    {"file": "pc_detector.json", "title": "🕵️ Детектор лжи: Present Continuous", "category": "grammar", "type": "click-mistake"},
-    {"file": "ps_dressirovshchik.json", "title": "🃏 Дрессировщик: am / is / are", "category": "grammar", "type": "flashcards"},
-    {"file": "pc_svetofor_cards.json", "title": "🃏 Светофор: am/is/are + V-ing", "category": "grammar", "type": "flashcards"},
-    {"file": "pc_svetofor_wheel.json", "title": "🎡 Светофор: колесо удачи", "category": "grammar", "type": "wheel"},
-    {"file": "pc_assembly.json", "title": "🧩 Сборка: am/is/are + V-ing", "category": "grammar", "type": "fill-in"},
-    {"file": "pc_spelling_pairs.json", "title": "✍️ Орфография: соедини пары", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "pc_ing_rules_sort.json", "title": "🧠 Сортировка правил -ing", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "pc_ing_trainer.json", "title": "⌨️ Орфографический тренажёр", "category": "grammar", "type": "fill-in"},
-    {"file": "pc_spelling_quiz.json", "title": "🛑 Ловушка для глаз", "category": "grammar", "type": "quiz"},
-    {"file": "pc_negative.json", "title": "🚫 Анти-реакция: собери отрицание", "category": "grammar", "type": "fill-in"},
-    {"file": "pc_question.json", "title": "❓ Рефлекс вопроса", "category": "grammar", "type": "quiz"},
-    {"file": "pc_short_answer.json", "title": "🗣️ Короткий ответ", "category": "grammar", "type": "quiz"},
-    {"file": "pc_simple_vs_continuous.json", "title": "🧠 Фильтр: Simple или Continuous", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "pc_time_machine.json", "title": "⏰ Машина времени", "category": "grammar", "type": "quiz"},
-    {"file": "pc_letter.json", "title": "📧 Письмо от подруги", "category": "grammar", "type": "cloze"},
-    {"file": "pc_emoji_quiz.json", "title": "🎭 Угадай по эмодзи", "category": "grammar", "type": "quiz"},
-    {"file": "pc_two_worlds.json", "title": "⚖️ Два мира: обычно и сейчас", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "pc_cyber_friend.json", "title": "🤖 Интервью с кибер-другом", "category": "grammar", "type": "voice-chat"},
-    {"file": "ps_ask_teacher.json", "title": "🧑‍🏫 Спроси учителя: Present Simple", "category": "grammar", "type": "voice-chat"},
-    {"file": "ps_plural_sort.json", "title": "🧲 Множественное число: is / are", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "ps_negative_build.json", "title": "✍️ Анти-реакция: отрицание с to be", "category": "grammar", "type": "fill-in"},
-    {"file": "ps_why_build.json", "title": "✍️ Почемучка: вопросы с to be", "category": "grammar", "type": "fill-in"},
-    {"file": "ps_short_answer.json", "title": "❓ Короткий ответ: am / is / are", "category": "grammar", "type": "quiz"},
-    {"file": "ps_filter_quiz.json", "title": "❓ Фильтр: be или смысловой глагол?", "category": "grammar", "type": "quiz"},
-    {"file": "ps_tag_questions.json", "title": "🧲 Разделительные вопросы", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "ps_guess_who.json", "title": "❓ Угадай, кто это?", "category": "grammar", "type": "quiz"},
-    {"file": "ps_countries.json", "title": "🧲 Страны и национальности", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "ps_visitka.json", "title": "✍️ Визитка: расскажи о себе", "category": "grammar", "type": "fill-in"},
-    {"file": "hg_svetofor.json", "title": "❓ Светофор: have got / has got", "category": "grammar", "type": "quiz"},
-    {"file": "hg_negative.json", "title": "✍️ Анти-реакция: haven't got / hasn't got", "category": "grammar", "type": "fill-in"},
-    {"file": "hg_question.json", "title": "✍️ Рефлекс вопроса: Have / Has", "category": "grammar", "type": "fill-in"},
-    {"file": "hg_short_answer.json", "title": "❓ Короткий ответ: have / has", "category": "grammar", "type": "quiz"},
-    {"file": "hg_monster.json", "title": "🧩 Монстр из шкафа", "category": "grammar", "type": "cloze"},
-    {"file": "ps_check_whales.json", "title": "❓ Три кита: is / has got / plays", "category": "grammar", "type": "quiz"},
-    {"file": "ps_check_assembly.json", "title": "✍️ Сборка: смешанный контекст", "category": "grammar", "type": "fill-in"},
-    {"file": "ps_check_detector.json", "title": "🕵️ Детектор ошибок", "category": "grammar", "type": "click-mistake"},
-    {"file": "ps_check_unjumble.json", "title": "✍️ Расположи слова", "category": "grammar", "type": "fill-in"},
-    {"file": "ps_check_family.json", "title": "🧩 Моя семья и я", "category": "grammar", "type": "cloze"}
+    {
+      "file": "grammar_endings_sort.json",
+      "title": "Сортировка окончаний",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "grammar_endings_quiz.json",
+      "title": "Окончания: викторина",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_v1_vs_quiz.json",
+      "title": "V1 / Vs: выбери форму",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_roulette.json",
+      "title": "Рулетка: все части предложения",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "grammar_joke_quiz.json",
+      "title": "Выбери правильную форму",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_negation.json",
+      "title": "Отрицание",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_yes_no_questions.json",
+      "title": "Общие вопросы Do/Does",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_wh_questions.json",
+      "title": "Специальные вопросы",
+      "category": "grammar",
+      "type": "cloze"
+    },
+    {
+      "file": "grammar_ladder.json",
+      "title": "Лесенка: Up and Down",
+      "category": "grammar",
+      "type": "ladder"
+    },
+    {
+      "file": "grammar_verb_forms_quiz.json",
+      "title": "Викторина: вставь форму глагола",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "grammar_adverbs_build.json",
+      "title": "Наречия: построй предложения",
+      "category": "grammar",
+      "type": "build-sentence"
+    },
+    {
+      "file": "grammar_adverbs_place.json",
+      "title": "Наречия: вставь в правильное место",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "tobe_assembly.json",
+      "title": "Сборка: am / is / are",
+      "category": "to-be",
+      "type": "fill-in"
+    },
+    {
+      "file": "tobe_magnet.json",
+      "title": "Магнит: притяни not",
+      "category": "to-be",
+      "type": "quiz"
+    },
+    {
+      "file": "tobe_why.json",
+      "title": "Почемучка: задай вопрос",
+      "category": "to-be",
+      "type": "cloze"
+    },
+    {
+      "file": "tobe_lie_detector.json",
+      "title": "Детектор лжи: найди ошибку",
+      "category": "to-be",
+      "type": "fill-in"
+    },
+    {
+      "file": "tobe_email.json",
+      "title": "Письмо по обмену",
+      "category": "to-be",
+      "type": "cloze"
+    },
+    {
+      "file": "story_harry_potter_routine.json",
+      "title": "Распорядок дня Гарри Поттера",
+      "category": "vocabulary",
+      "type": "cloze"
+    },
+    {
+      "file": "story_harry_potter_interview.json",
+      "title": "Интервью с Гарри Поттером",
+      "category": "listening",
+      "type": "role-play"
+    },
+    {
+      "file": "speaking_about_yourself.json",
+      "title": "Расскажи о себе",
+      "category": "speaking",
+      "type": "fill-in-and-speak"
+    },
+    {
+      "file": "speaking_peer_conversation.json",
+      "title": "Поговори со сверстником",
+      "category": "speaking",
+      "type": "voice-chat"
+    },
+    {
+      "file": "ps_lie_detector.json",
+      "title": "Детектор лжи: Present Simple",
+      "category": "grammar",
+      "type": "click-mistake"
+    },
+    {
+      "file": "pc_detector.json",
+      "title": "Детектор лжи: Present Continuous",
+      "category": "grammar",
+      "type": "click-mistake"
+    },
+    {
+      "file": "ps_dressirovshchik.json",
+      "title": "Дрессировщик: am / is / are",
+      "category": "grammar",
+      "type": "flashcards"
+    },
+    {
+      "file": "pc_svetofor_cards.json",
+      "title": "Светофор: am/is/are + V-ing",
+      "category": "grammar",
+      "type": "flashcards"
+    },
+    {
+      "file": "pc_svetofor_wheel.json",
+      "title": "Светофор: колесо удачи",
+      "category": "grammar",
+      "type": "wheel"
+    },
+    {
+      "file": "pc_assembly.json",
+      "title": "Сборка: am/is/are + V-ing",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "pc_spelling_pairs.json",
+      "title": "Орфография: соедини пары",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "pc_ing_rules_sort.json",
+      "title": "Сортировка правил -ing",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "pc_ing_trainer.json",
+      "title": "⌨ Орфографический тренажёр",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "pc_spelling_quiz.json",
+      "title": "Ловушка для глаз",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc_negative.json",
+      "title": "Анти-реакция: собери отрицание",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "pc_question.json",
+      "title": "Рефлекс вопроса",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc_short_answer.json",
+      "title": "Короткий ответ",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc_simple_vs_continuous.json",
+      "title": "Фильтр: Simple или Continuous",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "pc_time_machine.json",
+      "title": "⏰ Машина времени",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc_letter.json",
+      "title": "Письмо от подруги",
+      "category": "grammar",
+      "type": "cloze"
+    },
+    {
+      "file": "pc_emoji_quiz.json",
+      "title": "Угадай по эмодзи",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc_two_worlds.json",
+      "title": "Два мира: обычно и сейчас",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "pc_cyber_friend.json",
+      "title": "Интервью с кибер-другом",
+      "category": "grammar",
+      "type": "voice-chat"
+    },
+    {
+      "file": "ps_ask_teacher.json",
+      "title": "Спроси учителя: Present Simple",
+      "category": "grammar",
+      "type": "voice-chat"
+    },
+    {
+      "file": "ps_plural_sort.json",
+      "title": "Множественное число: is / are",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "ps_negative_build.json",
+      "title": "Анти-реакция: отрицание с to be",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps_why_build.json",
+      "title": "Почемучка: вопросы с to be",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps_short_answer.json",
+      "title": "Короткий ответ: am / is / are",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps_filter_quiz.json",
+      "title": "Фильтр: be или смысловой глагол?",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps_tag_questions.json",
+      "title": "Разделительные вопросы",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "ps_guess_who.json",
+      "title": "Угадай, кто это?",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps_countries.json",
+      "title": "Страны и национальности",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "ps_visitka.json",
+      "title": "Визитка: расскажи о себе",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "hg_svetofor.json",
+      "title": "Светофор: have got / has got",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "hg_negative.json",
+      "title": "Анти-реакция: haven't got / hasn't got",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "hg_question.json",
+      "title": "Рефлекс вопроса: Have / Has",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "hg_short_answer.json",
+      "title": "Короткий ответ: have / has",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "hg_monster.json",
+      "title": "Монстр из шкафа",
+      "category": "grammar",
+      "type": "cloze"
+    },
+    {
+      "file": "ps_check_whales.json",
+      "title": "Три кита: is / has got / plays",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps_check_assembly.json",
+      "title": "Сборка: смешанный контекст",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps_check_detector.json",
+      "title": "Детектор ошибок",
+      "category": "grammar",
+      "type": "click-mistake"
+    },
+    {
+      "file": "ps_check_unjumble.json",
+      "title": "Расположи слова",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps_check_family.json",
+      "title": "Моя семья и я",
+      "category": "grammar",
+      "type": "cloze"
+    }
   ]
 }

@@ -43,23 +43,24 @@ export function useSpeechRecognition({
     recognition.onresult = (event: any) => {
       const last = event.results[event.results.length - 1]
       if (last.isFinal) {
-        onResultRef.current(last[0].transcript.trim())
+        const text = last[0].transcript.trim()
+        if (text) {
+          onResultRef.current(text)
+          // Push-to-talk с авто-стопом: реплика распознана и отправлена —
+          // выключаем микрофон, чтобы бот не ждал «продолжения» (continuous
+          // держит сессию открытой, отсюда зависания на 30+ секунд).
+          userWantsListeningRef.current = false
+          try {
+            recognition.stop()
+          } catch {}
+        }
       }
     }
 
     recognition.onend = () => {
       runningRef.current = false
-      if (enabledRef.current && !runningRef.current) {
-        try {
-          recognition.start()
-          runningRef.current = true
-        } catch (e) {
-          // InvalidStateError if already running — log for debugging, don't crash
-          console.warn("[useSpeechRecognition] restart failed:", e)
-        }
-      } else {
-        setListening(false)
-      }
+      // БЕЗ авто-рестарта: микрофон включается только кнопкой (push-to-talk).
+      setListening(false)
     }
 
     recognition.onerror = (e: any) => {

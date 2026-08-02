@@ -99,67 +99,67 @@
     },
     {
       "file": "ps7_word_order.json",
-      "title": "🧩 Построй предложения",
+      "title": "Построй предложения",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "ps7_error_detector.json",
-      "title": "🕵️ Детектор ошибок: Present Simple",
+      "title": "Детектор ошибок: Present Simple",
       "category": "grammar",
       "type": "click-mistake"
     },
     {
       "file": "ps7_translation_pairs.json",
-      "title": "🔗 Перевод и предложение",
+      "title": "Перевод и предложение",
       "category": "grammar",
       "type": "drag-and-drop"
     },
     {
       "file": "ps7_negative.json",
-      "title": "🚫 Анти-реакция: отрицание",
+      "title": "Анти-реакция: отрицание",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "ps7_yes_no.json",
-      "title": "❓ Общий вопрос: Does / Do",
+      "title": "Общий вопрос: Does / Do",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "ps7_wh_question.json",
-      "title": "❓ Специальные вопросы",
+      "title": "Специальные вопросы",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "ps7_dialogues.json",
-      "title": "🎭 Разыграй диалог: образ жизни",
+      "title": "Разыграй диалог: образ жизни",
       "category": "grammar",
       "type": "voice-chat"
     },
     {
       "file": "ps7_habits_chat.json",
-      "title": "💬 Поговори о привычках",
+      "title": "Поговори о привычках",
       "category": "grammar",
       "type": "voice-chat"
     },
     {
       "file": "ps7_tobe_svetofor.json",
-      "title": "⚡ Светофор: now / yesterday",
+      "title": "Светофор: now / yesterday",
       "category": "grammar",
       "type": "flashcards"
     },
     {
       "file": "ps7_tobe_assembly.json",
-      "title": "🧩 Сборка: am / is / are / was / were",
+      "title": "Сборка: am / is / are / was / were",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "ps7_tobe_filter.json",
-      "title": "🧠 Фильтр: to be или нет?",
+      "title": "Фильтр: to be или нет?",
       "category": "grammar",
       "type": "quiz"
     },
@@ -171,139 +171,139 @@
     },
     {
       "file": "ps7_tobe_negative.json",
-      "title": "🚫 Анти-реакция: отрицание to be",
+      "title": "Анти-реакция: отрицание to be",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "ps7_tobe_blog.json",
-      "title": "🌍 Блог путешественника",
+      "title": "Блог путешественника",
       "category": "grammar",
       "type": "cloze"
     },
     {
       "file": "ps7_tobe_short_answer.json",
-      "title": "🗣️ Короткий ответ: to be",
+      "title": "Короткий ответ: to be",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "ps7_tobe_alibi.json",
-      "title": "🕵️ Алиби: допрос",
+      "title": "Алиби: допрос",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "ps7_tobe_brownian.json",
-      "title": "🏃 Найди того, кто...",
+      "title": "Найди того, кто...",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "ps7_tobe_star.json",
-      "title": "⭐ Интервью со звездой",
+      "title": "Интервью со звездой",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "pc7_svetofor_cards.json",
-      "title": "⚡ Светофор: am/is/are + V-ing",
+      "title": "Светофор: am/is/are + V-ing",
       "category": "grammar",
       "type": "flashcards"
     },
     {
       "file": "pc7_assembly.json",
-      "title": "🧩 Сборка: прямо сейчас",
+      "title": "Сборка: прямо сейчас",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "pc7_spelling_pairs.json",
-      "title": "✍️ Орфография: соедини пары",
+      "title": "Орфография: соедини пары",
       "category": "grammar",
       "type": "drag-and-drop"
     },
     {
       "file": "pc7_ing_rules_sort.json",
-      "title": "🧠 Сортировка правил -ing",
+      "title": "Сортировка правил -ing",
       "category": "grammar",
       "type": "drag-and-drop"
     },
     {
       "file": "pc7_ing_trainer.json",
-      "title": "⌨️ Орфографический тренажёр",
+      "title": "⌨ Орфографический тренажёр",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "pc7_spelling_quiz.json",
-      "title": "🛑 Ловушка для глаз",
+      "title": "Ловушка для глаз",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "pc7_negative.json",
-      "title": "🚫 Анти-реакция: отрицание",
+      "title": "Анти-реакция: отрицание",
       "category": "grammar",
       "type": "fill-in"
     },
     {
       "file": "pc7_question.json",
-      "title": "❓ Рефлекс вопроса",
+      "title": "Рефлекс вопроса",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "pc7_short_answer.json",
-      "title": "🗣️ Короткий ответ",
+      "title": "Короткий ответ",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "pc7_marker_sort.json",
-      "title": "🧠 Сортировка маркеров",
+      "title": "Сортировка маркеров",
       "category": "grammar",
       "type": "drag-and-drop"
     },
     {
       "file": "pc7_time_machine.json",
-      "title": "🚦 Машина времени",
+      "title": "Машина времени",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "pc7_stative_quiz.json",
-      "title": "🛑 Ловушка: Stative Verbs",
+      "title": "Ловушка: Stative Verbs",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "pc7_two_worlds.json",
-      "title": "⚖️ Два мира: обычно и сейчас",
+      "title": "Два мира: обычно и сейчас",
       "category": "grammar",
       "type": "drag-and-drop"
     },
     {
       "file": "pc7_letter.json",
-      "title": "📧 Письмо из путешествия",
+      "title": "Письмо из путешествия",
       "category": "grammar",
       "type": "cloze"
     },
     {
       "file": "pc7_emoji_quiz.json",
-      "title": "🎭 Угадай по эмодзи",
+      "title": "Угадай по эмодзи",
       "category": "grammar",
       "type": "quiz"
     },
     {
       "file": "pc7_weekend_plans.json",
-      "title": "📅 Планы на выходные",
+      "title": "Планы на выходные",
       "category": "speaking",
       "type": "fill-in-and-speak"
     },
     {
       "file": "pc7_cyber_friend.json",
-      "title": "🤖 Кибер-блогер",
+      "title": "Кибер-блогер",
       "category": "grammar",
       "type": "voice-chat"
     }
