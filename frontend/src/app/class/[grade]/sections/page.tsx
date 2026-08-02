@@ -175,6 +175,8 @@ const TYPE_ICON: Record<string, string> = {
   "role-play": "🎭",
   "fill-in-and-speak": "🗣️",
   "voice-chat": "🎙️",
+  "click-mistake": "🖱️",
+  flashcards: "🃏",
 }
 const DEFAULT_TYPE_ICON = "📝"
 

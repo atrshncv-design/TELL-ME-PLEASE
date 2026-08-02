@@ -21,6 +21,11 @@
     {"file": "story_harry_potter_routine.json", "title": "Распорядок дня Гарри Поттера", "category": "vocabulary", "type": "cloze"},
     {"file": "story_harry_potter_interview.json", "title": "Интервью с Гарри Поттером", "category": "listening", "type": "role-play"},
     {"file": "speaking_about_yourself.json", "title": "Расскажи о себе", "category": "speaking", "type": "fill-in-and-speak"},
-    {"file": "speaking_peer_conversation.json", "title": "Поговори со сверстником", "category": "speaking", "type": "voice-chat"}
+    {"file": "speaking_peer_conversation.json", "title": "Поговори со сверстником", "category": "speaking", "type": "voice-chat"},
+    {"file": "ps_lie_detector.json", "title": "🕵️ Детектор лжи: Present Simple", "category": "grammar", "type": "click-mistake"},
+    {"file": "pc_detector.json", "title": "🕵️ Детектор лжи: Present Continuous", "category": "grammar", "type": "click-mistake"},
+    {"file": "ps_dressirovshchik.json", "title": "🃏 Дрессировщик: am / is / are", "category": "grammar", "type": "flashcards"},
+    {"file": "pc_svetofor_cards.json", "title": "🃏 Светофор: am/is/are + V-ing", "category": "grammar", "type": "flashcards"},
+    {"file": "pc_svetofor_wheel.json", "title": "🎡 Светофор: колесо удачи", "category": "grammar", "type": "wheel"}
   ]
 }
