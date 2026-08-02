@@ -1,0 +1,24 @@
+{
+  "id": "ps_visitka",
+  "title": "✍️ Визитка: расскажи о себе",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Заполни анкету-визитку о себе: вставь am, is или are.",
+  "items": [
+    {"sentence": "Hello! My name ___ Kate.", "answer": "is"},
+    {"sentence": "I ___ from Russia.", "answer": "am"},
+    {"sentence": "I ___ 11 years old.", "answer": "am"},
+    {"sentence": "My best friend ___ Max.", "answer": "is"},
+    {"sentence": "My favorite school subjects ___ Maths and English.", "answer": "are"},
+    {"sentence": "My hobbies ___ football and music.", "answer": "are"},
+    {"sentence": "My family ___ big.", "answer": "is"},
+    {"sentence": "My mother ___ a doctor.", "answer": "is"},
+    {"sentence": "My father ___ an engineer.", "answer": "is"},
+    {"sentence": "We ___ a happy family.", "answer": "are"},
+    {"sentence": "My pet ___ a cat.", "answer": "is"},
+    {"sentence": "I ___ good at English.", "answer": "am"},
+    {"sentence": "I ___ not good at Maths.", "answer": "am"},
+    {"sentence": "My dream ___ to be a pilot.", "answer": "is"},
+    {"sentence": "That ___ all about me! Bye!", "answer": "is"}
+  ]
+}

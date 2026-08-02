@@ -1,0 +1,28 @@
+{
+  "id": "ps_plural_sort",
+  "title": "🧲 Множественное число: is / are",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Раскидай словосочетания по корзинам: с is (один предмет) или с are (много).",
+  "columns": [
+    {"id": "is", "label": "is", "rule": "один предмет"},
+    {"id": "are", "label": "are", "rule": "много предметов"}
+  ],
+  "items": [
+    {"verb": "The boy", "answer": "is"},
+    {"verb": "The boys", "answer": "are"},
+    {"verb": "My friend", "answer": "is"},
+    {"verb": "My friends", "answer": "are"},
+    {"verb": "The desk", "answer": "is"},
+    {"verb": "The desks", "answer": "are"},
+    {"verb": "The teacher", "answer": "is"},
+    {"verb": "The teachers", "answer": "are"},
+    {"verb": "The woman", "answer": "is"},
+    {"verb": "The women", "answer": "are"},
+    {"verb": "The child", "answer": "is"},
+    {"verb": "The children", "answer": "are"},
+    {"verb": "A pencil", "answer": "is"},
+    {"verb": "The man", "answer": "is"},
+    {"verb": "The men", "answer": "are"}
+  ]
+}

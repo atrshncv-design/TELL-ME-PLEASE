@@ -1,0 +1,24 @@
+{
+  "id": "ps_negative_build",
+  "title": "✍️ Анти-реакция: отрицание с to be",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Собери отрицательное предложение: вставь isn't, aren't или am not.",
+  "items": [
+    {"sentence": "He ___ my brother.", "answer": "isn't"},
+    {"sentence": "They ___ from London.", "answer": "aren't"},
+    {"sentence": "I ___ a teacher.", "answer": "am not"},
+    {"sentence": "She ___ your friend.", "answer": "isn't"},
+    {"sentence": "We ___ in the park.", "answer": "aren't"},
+    {"sentence": "It ___ a cat.", "answer": "isn't"},
+    {"sentence": "You ___ 10 years old.", "answer": "aren't"},
+    {"sentence": "The pen ___ blue.", "answer": "isn't"},
+    {"sentence": "My dad ___ a pilot.", "answer": "isn't"},
+    {"sentence": "The windows ___ open.", "answer": "aren't"},
+    {"sentence": "We ___ good at English.", "answer": "aren't"},
+    {"sentence": "This ___ my book.", "answer": "isn't"},
+    {"sentence": "They ___ classmates.", "answer": "aren't"},
+    {"sentence": "I ___ from Spain.", "answer": "am not"},
+    {"sentence": "The lesson ___ boring.", "answer": "isn't"}
+  ]
+}

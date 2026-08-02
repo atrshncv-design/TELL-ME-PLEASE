@@ -1,0 +1,24 @@
+{
+  "id": "hg_short_answer",
+  "title": "❓ Короткий ответ: have / has",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Ответь коротко на вопрос с have got. Ловушка: вариант с do/does не подходит!",
+  "items": [
+    {"question": "Have you got a pet?", "options": ["Yes, I have", "Yes, I do"], "answer": "Yes, I have"},
+    {"question": "Has she got a brother?", "options": ["No, she hasn't", "No, she doesn't"], "answer": "No, she hasn't"},
+    {"question": "Have we got a test?", "options": ["Yes, we have", "Yes, we do"], "answer": "Yes, we have"},
+    {"question": "Has he got a car?", "options": ["Yes, he has", "Yes, he does"], "answer": "Yes, he has"},
+    {"question": "Have they got a dog?", "options": ["No, they haven't", "No, they don't"], "answer": "No, they haven't"},
+    {"question": "Has it got a tail?", "options": ["Yes, it has", "Yes, it does"], "answer": "Yes, it has"},
+    {"question": "Have you got a phone?", "options": ["No, I haven't", "No, I don't"], "answer": "No, I haven't"},
+    {"question": "Has your mum got a sister?", "options": ["Yes, she has", "Yes, she does"], "answer": "Yes, she has"},
+    {"question": "Has the cat got green eyes?", "options": ["No, it hasn't", "No, it doesn't"], "answer": "No, it hasn't"},
+    {"question": "Have the boys got footballs?", "options": ["Yes, they have", "Yes, they do"], "answer": "Yes, they have"},
+    {"question": "Has he got a headache?", "options": ["No, he hasn't", "No, he doesn't"], "answer": "No, he hasn't"},
+    {"question": "Have we got English today?", "options": ["Yes, we have", "Yes, we do"], "answer": "Yes, we have"},
+    {"question": "Has she got a dress?", "options": ["Yes, she has", "Yes, she does"], "answer": "Yes, she has"},
+    {"question": "Have I got a red pen?", "options": ["Yes, you have", "Yes, you do"], "answer": "Yes, you have"},
+    {"question": "Has the dog got a bone?", "options": ["No, it hasn't", "No, it doesn't"], "answer": "No, it hasn't"}
+  ]
+}

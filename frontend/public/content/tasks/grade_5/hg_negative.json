@@ -1,0 +1,24 @@
+{
+  "id": "hg_negative",
+  "title": "✍️ Анти-реакция: haven't got / hasn't got",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Напиши отрицание сокращённо: haven't got или hasn't got.",
+  "items": [
+    {"sentence": "I ___ a pet.", "answer": "haven't got"},
+    {"sentence": "She ___ a brother.", "answer": "hasn't got"},
+    {"sentence": "We ___ a test today.", "answer": "haven't got"},
+    {"sentence": "He ___ a car.", "answer": "hasn't got"},
+    {"sentence": "They ___ a big dog.", "answer": "haven't got"},
+    {"sentence": "It ___ a long tail.", "answer": "hasn't got"},
+    {"sentence": "You ___ a new phone.", "answer": "haven't got"},
+    {"sentence": "My mother ___ a sister.", "answer": "hasn't got"},
+    {"sentence": "The cat ___ green eyes.", "answer": "hasn't got"},
+    {"sentence": "The boys ___ footballs.", "answer": "haven't got"},
+    {"sentence": "He ___ a headache.", "answer": "hasn't got"},
+    {"sentence": "We ___ English today.", "answer": "haven't got"},
+    {"sentence": "She ___ a beautiful dress.", "answer": "hasn't got"},
+    {"sentence": "I ___ a red pen.", "answer": "haven't got"},
+    {"sentence": "The dog ___ a bone.", "answer": "hasn't got"}
+  ]
+}

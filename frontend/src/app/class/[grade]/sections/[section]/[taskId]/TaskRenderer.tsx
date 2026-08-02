@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { QuizTask } from "@/components/tasks/QuizTask"
 import { DragAndDropTask } from "@/components/tasks/DragAndDropTask"
 import { FillInTask } from "@/components/tasks/FillInTask"
@@ -11,6 +12,7 @@ import { ClickMistakeTask } from "@/components/tasks/ClickMistakeTask"
 import { FlashcardsTask } from "@/components/tasks/FlashcardsTask"
 import { WheelTask } from "@/components/tasks/WheelTask"
 import { TaskHeader } from "@/components/tasks/TaskHeader"
+import { RulesPanel } from "@/components/RulesPanel"
 import { useProgress } from "@/lib/useProgress"
 import { useAnalytics } from "@/lib/useAnalytics"
 
@@ -39,10 +41,17 @@ interface TaskData {
   rounds?: { text: string; answers: string[][]; word_bank: string[]; hints?: string[] }[]
   // flashcards
   cards?: { front: string; back: string }[]
+  // voice-chat: системный промпт-роль из контента (тикет P6, «Спроси учителя»)
+  task_context?: string
 }
 
 function serializeContext(task: TaskData): string {
   const parts: string[] = []
+  // task_context (если есть) — главная инструкция роли: идёт первой,
+  // до тем диалога (sections) и заголовка задания.
+  if (task.task_context) {
+    parts.push(task.task_context)
+  }
   if (task.dialogue && task.dialogue.length > 0) {
     // Determine unique speakers
     const speakers = [...new Set(task.dialogue.map(d => d.speaker))]
@@ -79,6 +88,8 @@ export function TaskRenderer({ task, grade }: { task: TaskData; grade: string })
   const backHref = `/class/${grade}/sections`
   const { saveTask } = useProgress(grade)
   const { track } = useAnalytics()
+  // Тикет P6: панель-шпаргалка «Правила» (открывается кнопкой на voice-заданиях)
+  const [rulesOpen, setRulesOpen] = useState(false)
   // onComplete was previously dead — never passed by TaskRenderer. Now wired
   // to the useProgress hook (no backend, decision Q8) so per-task score/total
   // is persisted to localStorage and surfaced as badges on the section cards.
@@ -110,7 +121,23 @@ export function TaskRenderer({ task, grade }: { task: TaskData; grade: string })
     case "role-play":
     case "voice-chat":
     case "fill-in-and-speak":
-      return <div className={BG}><VoiceChatTask title={task.title} description={task.description} dialogue={task.dialogue} sections={task.sections} taskContext={serializeContext(task)} grade={grade} taskId={task.id} /></div>
+      return (
+        <div className={BG}>
+          <div className="relative mx-auto max-w-lg">
+            {/* Кнопка «Правила» (тикет P6): плавающая, над voice-экраном.
+                Не съедает высоту (VoiceChatTask = h-[100dvh]) и не перекрывает
+                шапку — позиция top-16 ниже строки заголовка. */}
+            <button
+              onClick={() => setRulesOpen(true)}
+              className="absolute right-3 top-16 z-20 flex items-center gap-1 rounded-full border border-indigo-200 bg-white/95 px-3 py-1.5 text-xs font-semibold text-indigo-700 shadow-sm transition-colors hover:bg-indigo-50"
+            >
+              📖 Правила
+            </button>
+            <VoiceChatTask title={task.title} description={task.description} dialogue={task.dialogue} sections={task.sections} taskContext={serializeContext(task)} grade={grade} taskId={task.id} />
+          </div>
+          <RulesPanel open={rulesOpen} onClose={() => setRulesOpen(false)} />
+        </div>
+      )
     default:
       return <div className="flex items-center justify-center h-screen"><p className="text-slate-500">Тип "{task.type}" пока не поддерживается</p></div>
   }

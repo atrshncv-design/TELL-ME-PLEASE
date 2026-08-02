@@ -1,0 +1,24 @@
+{
+  "id": "pc_spelling_quiz",
+  "title": "🛑 Ловушка для глаз",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Только один вариант написания верный. Остальные — ловушки! Смотри на слово и выбирай внимательно.",
+  "items": [
+    {"question": "🏃 run", "options": ["runing", "running", "runnning"], "answer": "running"},
+    {"question": "⚽ play", "options": ["plaing", "playing", "playying"], "answer": "playing"},
+    {"question": "🎂 make", "options": ["makeing", "making", "macking"], "answer": "making"},
+    {"question": "🏊 swim", "options": ["swiming", "swimming", "swimmng"], "answer": "swimming"},
+    {"question": "✍️ write", "options": ["writeing", "writing", "writting"], "answer": "writing"},
+    {"question": "💃 dance", "options": ["danceing", "dancing", "danccing"], "answer": "dancing"},
+    {"question": "🪑 sit", "options": ["siting", "sittting", "sitting"], "answer": "sitting"},
+    {"question": "📖 read", "options": ["reading", "readding", "readeing"], "answer": "reading"},
+    {"question": "🚲 ride", "options": ["rideing", "riding", "ridding"], "answer": "riding"},
+    {"question": "🐸 hop", "options": ["hopeing", "hopping", "hoping"], "answer": "hopping"},
+    {"question": "📸 take", "options": ["takeing", "taking", "takking"], "answer": "taking"},
+    {"question": "🎤 sing", "options": ["singging", "singing", "singeing"], "answer": "singing"},
+    {"question": "⬆️ jump", "options": ["jumping", "jumpming", "jumpping"], "answer": "jumping"},
+    {"question": "🪢 skip", "options": ["skiping", "skipping", "skippng"], "answer": "skipping"},
+    {"question": "😴 sleep", "options": ["sleeping", "sleepping", "sleepeng"], "answer": "sleeping"}
+  ]
+}

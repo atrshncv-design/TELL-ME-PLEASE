@@ -1,0 +1,24 @@
+{
+  "id": "ps_check_assembly",
+  "title": "✍️ Сборка: смешанный контекст",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь правильную форму. В подсказке — начальная форма глагола.",
+  "items": [
+    {"sentence": "I ___ a student.", "answer": "am", "hint": "be"},
+    {"sentence": "She ___ a red pen.", "answer": "has got", "hint": "have got"},
+    {"sentence": "We ___ games every day.", "answer": "play", "hint": "play"},
+    {"sentence": "He ___ tall.", "answer": "is", "hint": "be"},
+    {"sentence": "They ___ new bikes.", "answer": "have got", "hint": "have got"},
+    {"sentence": "My cat ___ milk.", "answer": "drinks", "hint": "drink"},
+    {"sentence": "You ___ my friend.", "answer": "are", "hint": "be"},
+    {"sentence": "I ___ books in the evening.", "answer": "read", "hint": "read"},
+    {"sentence": "It ___ long ears.", "answer": "has got", "hint": "have got"},
+    {"sentence": "We ___ to school.", "answer": "go", "hint": "go"},
+    {"sentence": "She ___ beautiful.", "answer": "is", "hint": "be"},
+    {"sentence": "He ___ tennis.", "answer": "plays", "hint": "play"},
+    {"sentence": "I ___ 11.", "answer": "am", "hint": "be"},
+    {"sentence": "They ___ a big house.", "answer": "have got", "hint": "have got"},
+    {"sentence": "My mum ___ dinner.", "answer": "cooks", "hint": "cook"}
+  ]
+}

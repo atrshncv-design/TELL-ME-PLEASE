@@ -1,0 +1,24 @@
+{
+  "id": "hg_question",
+  "title": "✍️ Рефлекс вопроса: Have / Has",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Составь вопрос: вынеси Have или Has на первое место.",
+  "items": [
+    {"sentence": "___ you got a pet?", "answer": "Have"},
+    {"sentence": "___ she got a brother?", "answer": "Has"},
+    {"sentence": "___ we got a test today?", "answer": "Have"},
+    {"sentence": "___ he got a car?", "answer": "Has"},
+    {"sentence": "___ they got a big dog?", "answer": "Have"},
+    {"sentence": "___ it got a long tail?", "answer": "Has"},
+    {"sentence": "___ you got a new phone?", "answer": "Have"},
+    {"sentence": "___ my mother got a sister?", "answer": "Has"},
+    {"sentence": "___ the cat got green eyes?", "answer": "Has"},
+    {"sentence": "___ the boys got footballs?", "answer": "Have"},
+    {"sentence": "___ he got a headache?", "answer": "Has"},
+    {"sentence": "___ we got English today?", "answer": "Have"},
+    {"sentence": "___ she got a beautiful dress?", "answer": "Has"},
+    {"sentence": "___ I got a red pen?", "answer": "Have"},
+    {"sentence": "___ the dog got a bone?", "answer": "Has"}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "ps_why_build",
+  "title": "✍️ Почемучка: вопросы с to be",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Составь вопрос: вставь Am, Is или Are в начало.",
+  "items": [
+    {"sentence": "___ he a student?", "answer": "Is"},
+    {"sentence": "___ you from Russia?", "answer": "Are"},
+    {"sentence": "___ she 11?", "answer": "Is"},
+    {"sentence": "___ they friends?", "answer": "Are"},
+    {"sentence": "___ I late?", "answer": "Am"},
+    {"sentence": "___ it a dog?", "answer": "Is"},
+    {"sentence": "___ we ready?", "answer": "Are"},
+    {"sentence": "___ the pen red?", "answer": "Is"},
+    {"sentence": "___ your parents doctors?", "answer": "Are"},
+    {"sentence": "___ your name Tom?", "answer": "Is"},
+    {"sentence": "___ the books on the desk?", "answer": "Are"},
+    {"sentence": "___ she your sister?", "answer": "Is"},
+    {"sentence": "___ you in Year 5?", "answer": "Are"},
+    {"sentence": "___ Maths your favorite subject?", "answer": "Is"},
+    {"sentence": "___ I a good student?", "answer": "Am"}
+  ]
+}

@@ -112,6 +112,8 @@ export interface TaskData {
   rounds?: ClozeRound[];
   // flashcards
   cards?: FlashcardItem[];
+  /** voice-chat: системный промпт-роль из контента (тикет P6, «Спроси учителя»). */
+  task_context?: string;
 }
 
 /** Одно предложение задания «Кликни на ошибку» (click-mistake). */

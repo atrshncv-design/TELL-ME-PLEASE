@@ -1,0 +1,29 @@
+{
+  "id": "pc_ing_rules_sort",
+  "title": "🧠 Сортировка правил -ing",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Распредели глаголы по трём корзинам: просто добавь -ing, убери немую -e или удвой согласную",
+  "columns": [
+    {"id": "add", "label": "Just add -ing", "rule": "play → playing"},
+    {"id": "drop", "label": "Drop -e, add -ing", "rule": "make → making"},
+    {"id": "double", "label": "Double the consonant", "rule": "run → running"}
+  ],
+  "items": [
+    {"verb": "play", "answer": "add"},
+    {"verb": "make", "answer": "drop"},
+    {"verb": "run", "answer": "double"},
+    {"verb": "dance", "answer": "drop"},
+    {"verb": "swim", "answer": "double"},
+    {"verb": "read", "answer": "add"},
+    {"verb": "write", "answer": "drop"},
+    {"verb": "sit", "answer": "double"},
+    {"verb": "jump", "answer": "add"},
+    {"verb": "ride", "answer": "drop"},
+    {"verb": "hop", "answer": "double"},
+    {"verb": "sing", "answer": "add"},
+    {"verb": "skip", "answer": "double"},
+    {"verb": "take", "answer": "drop"},
+    {"verb": "sleep", "answer": "add"}
+  ]
+}

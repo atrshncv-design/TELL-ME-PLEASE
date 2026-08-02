@@ -1,0 +1,24 @@
+{
+  "id": "hg_svetofor",
+  "title": "❓ Светофор: have got / has got",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Вставь have got или has got. Смотри на подлежащее: he/she/it — has got!",
+  "items": [
+    {"sentence": "I ___ a dog.", "options": ["have got", "has got"], "answer": "have got"},
+    {"sentence": "She ___ a red pen.", "options": ["have got", "has got"], "answer": "has got"},
+    {"sentence": "We ___ a big house.", "options": ["have got", "has got"], "answer": "have got"},
+    {"sentence": "He ___ a sister.", "options": ["have got", "has got"], "answer": "has got"},
+    {"sentence": "They ___ new bikes.", "options": ["have got", "has got"], "answer": "have got"},
+    {"sentence": "It ___ long ears.", "options": ["have got", "has got"], "answer": "has got"},
+    {"sentence": "My cat ___ green eyes.", "options": ["have got", "has got"], "answer": "has got"},
+    {"sentence": "You ___ a nice hat.", "options": ["have got", "has got"], "answer": "have got"},
+    {"sentence": "Tom and Bob ___ skateboards.", "options": ["have got", "has got"], "answer": "have got"},
+    {"sentence": "My mum ___ a car.", "options": ["have got", "has got"], "answer": "has got"},
+    {"sentence": "The dog ___ a bone.", "options": ["have got", "has got"], "answer": "has got"},
+    {"sentence": "The children ___ toys.", "options": ["have got", "has got"], "answer": "have got"},
+    {"sentence": "Anna ___ a blue pencil case.", "options": ["have got", "has got"], "answer": "has got"},
+    {"sentence": "I ___ a headache.", "options": ["have got", "has got"], "answer": "have got"},
+    {"sentence": "The bird ___ wings.", "options": ["have got", "has got"], "answer": "has got"}
+  ]
+}

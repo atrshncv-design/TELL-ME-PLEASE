@@ -1,0 +1,24 @@
+{
+  "id": "ps_check_unjumble",
+  "title": "✍️ Расположи слова",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Собери предложение: вставь пропущенную форму глагола.",
+  "items": [
+    {"sentence": "She ___ a doctor.", "answer": "is"},
+    {"sentence": "I ___ a dog.", "answer": "have got"},
+    {"sentence": "We ___ football.", "answer": "play"},
+    {"sentence": "He ___ tall.", "answer": "is"},
+    {"sentence": "They ___ new bikes.", "answer": "have got"},
+    {"sentence": "The cat ___ milk.", "answer": "drinks"},
+    {"sentence": "You ___ my friend.", "answer": "are"},
+    {"sentence": "I ___ books every day.", "answer": "read"},
+    {"sentence": "It ___ a long tail.", "answer": "has got"},
+    {"sentence": "We ___ to school.", "answer": "go"},
+    {"sentence": "She ___ beautiful.", "answer": "is"},
+    {"sentence": "He ___ tennis on Sundays.", "answer": "plays"},
+    {"sentence": "I ___ 11 years old.", "answer": "am"},
+    {"sentence": "They ___ a big house.", "answer": "have got"},
+    {"sentence": "My mum ___ dinner.", "answer": "cooks"}
+  ]
+}

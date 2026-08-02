@@ -1,0 +1,55 @@
+{
+  "id": "ps_ask_teacher",
+  "title": "🧑‍🏫 Спроси учителя: Present Simple",
+  "category": "grammar",
+  "type": "voice-chat",
+  "description": "Спроси учителя о Present Simple: когда используется, как образуется, как строить отрицания и вопросы. Учитель объяснит правило и найдёт твои ошибки.",
+  "task_context": "Ты — добрый учитель английского языка для ученика 5 класса. Отвечай на вопросы ученика о Present Simple: когда используется (привычки, повторяющиеся действия, постоянные ситуации, факты, расписание, статичные глаголы), как образуется (I/you/we/they + глагол в начальной форме; he/she/it + глагол + -s/-es), правило -s/-es (после -s, -sh, -ch, -x, -o — -es; согласная + y → -ies; гласная + y → -s), отрицание (don't / doesn't + глагол в начальной форме, без -s после doesn't), общие вопросы (Do / Does + подлежащее + глагол), Wh-вопросы (Wh-слово + do/does + глагол), глагол to be (am/is/are, с be не нужны do/does), слова-подсказки (always, usually, often, sometimes, never, every day, on Sundays). Находи и мягко объясняй ошибки ученика. Объясняй правила по-русски, а примеры приводи на английском. Говори просто, короткими предложениями, будь добрым и поддерживающим. Не выходи из роли учителя.",
+  "sections": [
+    {
+      "name": "Когда используется",
+      "questions": [
+        "When do we use Present Simple?",
+        "Do we use Present Simple for habits and facts?",
+        "What is a daily routine? Tell me about yours.",
+        "Do we use Present Simple for timetables?"
+      ]
+    },
+    {
+      "name": "Образование и -s / -es",
+      "questions": [
+        "How do we form Present Simple?",
+        "When do we add -s or -es to the verb?",
+        "Why do we say 'he watches' but 'they watch'?",
+        "What happens with verbs ending in -y, like 'study'?"
+      ]
+    },
+    {
+      "name": "Отрицания",
+      "questions": [
+        "How do we make negative sentences?",
+        "When do we use don't and when doesn't?",
+        "Is it correct to say 'She doesn't likes music'?",
+        "Say the negative form of 'I like tea'."
+      ]
+    },
+    {
+      "name": "Вопросы",
+      "questions": [
+        "How do we ask yes/no questions?",
+        "How do we ask questions with what, where, why?",
+        "Is 'Does he work here?' correct?",
+        "Ask me a question about my morning."
+      ]
+    },
+    {
+      "name": "Глагол to be",
+      "questions": [
+        "What are the forms of the verb to be?",
+        "When do we use am, is and are?",
+        "Is 'Does he is tired?' correct?",
+        "Make a question with 'they' and 'at school'."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "pc_ing_trainer",
+  "title": "⌨️ Орфографический тренажёр",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Напечатай глагол из скобок в форме с -ing. Не забудь убрать немую -e или удвоить согласную!",
+  "items": [
+    {"sentence": "Look! The dog is ___ (run) in the park.", "answer": "running"},
+    {"sentence": "She is ___ (dance) to music.", "answer": "dancing"},
+    {"sentence": "I am ___ (play) football.", "answer": "playing"},
+    {"sentence": "He is ___ (write) a letter.", "answer": "writing"},
+    {"sentence": "They are ___ (swim) in the pool.", "answer": "swimming"},
+    {"sentence": "We are ___ (read) a book.", "answer": "reading"},
+    {"sentence": "The cat is ___ (sleep) on the bed.", "answer": "sleeping"},
+    {"sentence": "You are ___ (make) a cake.", "answer": "making"},
+    {"sentence": "The dog is ___ (sit) on the sofa.", "answer": "sitting"},
+    {"sentence": "She is ___ (ride) a bike.", "answer": "riding"},
+    {"sentence": "I am ___ (sing) a song.", "answer": "singing"},
+    {"sentence": "He is ___ (take) a photo.", "answer": "taking"},
+    {"sentence": "The frog is ___ (hop).", "answer": "hopping"},
+    {"sentence": "We are ___ (jump).", "answer": "jumping"},
+    {"sentence": "He is ___ (skip) rope.", "answer": "skipping"}
+  ]
+}

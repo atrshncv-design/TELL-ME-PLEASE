@@ -32,6 +32,39 @@ const files = [
   "ps_dressirovshchik.json",
   "pc_svetofor_cards.json",
   "pc_svetofor_wheel.json",
+  "pc_assembly.json",
+  "pc_spelling_pairs.json",
+  "pc_ing_rules_sort.json",
+  "pc_ing_trainer.json",
+  "pc_spelling_quiz.json",
+  "pc_negative.json",
+  "pc_question.json",
+  "pc_short_answer.json",
+  "pc_simple_vs_continuous.json",
+  "pc_time_machine.json",
+  "pc_letter.json",
+  "pc_emoji_quiz.json",
+  "pc_two_worlds.json",
+  "pc_cyber_friend.json",
+  "ps_plural_sort.json",
+  "ps_negative_build.json",
+  "ps_why_build.json",
+  "ps_short_answer.json",
+  "ps_filter_quiz.json",
+  "ps_tag_questions.json",
+  "ps_guess_who.json",
+  "ps_countries.json",
+  "ps_visitka.json",
+  "hg_svetofor.json",
+  "hg_negative.json",
+  "hg_question.json",
+  "hg_short_answer.json",
+  "hg_monster.json",
+  "ps_check_whales.json",
+  "ps_check_assembly.json",
+  "ps_check_detector.json",
+  "ps_check_unjumble.json",
+  "ps_check_family.json",
 ]
 
 let errors = 0
@@ -243,11 +276,11 @@ function sanityCheck(label, ok, detail = "") {
   )
 }
 
-// 4. All 24 files normalize without throwing — the per-file loop above counts
+// 4. All 57 files normalize without throwing — the per-file loop above counts
 //    this; assert it explicitly.
 sanityCheck(
-  "all 24 files normalize without throwing",
-  normalizedCount === 24,
+  "all 57 files normalize without throwing",
+  normalizedCount === 57,
   `normalizedCount=${normalizedCount}`,
 )
 

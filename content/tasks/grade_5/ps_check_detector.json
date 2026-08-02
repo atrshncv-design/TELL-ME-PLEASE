@@ -1,0 +1,24 @@
+{
+  "id": "ps_check_detector",
+  "title": "🕵️ Детектор ошибок",
+  "category": "grammar",
+  "type": "click-mistake",
+  "description": "Дети склеили два глагола (am play, is has...). Кликни на первое слово ошибки.",
+  "items": [
+    {"text": "I am play tennis.", "wrong": "am"},
+    {"text": "She is has got a cat.", "wrong": "is"},
+    {"text": "We are go to school.", "wrong": "are"},
+    {"text": "He is play football.", "wrong": "is"},
+    {"text": "They are have got bikes.", "wrong": "are"},
+    {"text": "The cat is drinks milk.", "wrong": "is"},
+    {"text": "You are read books.", "wrong": "are"},
+    {"text": "I am have got a pen.", "wrong": "am"},
+    {"text": "It is has got a tail.", "wrong": "is"},
+    {"text": "We are go to the park.", "wrong": "are"},
+    {"text": "She is sing a song.", "wrong": "is"},
+    {"text": "He is has a brother.", "wrong": "is"},
+    {"text": "I am have 11 years old.", "wrong": "am"},
+    {"text": "They are play games.", "wrong": "are"},
+    {"text": "My mum is cook dinner.", "wrong": "is"}
+  ]
+}

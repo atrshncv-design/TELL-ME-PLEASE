@@ -1,0 +1,19 @@
+{
+  "id": "pc_short_answer",
+  "title": "🗣️ Короткий ответ",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Ответь коротко: Yes, I am / No, he isn't и так далее. Не перепутай с do/does!",
+  "items": [
+    {"question": "Are you reading?", "options": ["Yes, I am", "Yes, I do"], "answer": "Yes, I am"},
+    {"question": "Is he sleeping?", "options": ["No, he isn't", "No, he doesn't"], "answer": "No, he isn't"},
+    {"question": "Are they playing?", "options": ["Yes, they are", "Yes, they do"], "answer": "Yes, they are"},
+    {"question": "Is she dancing?", "options": ["Yes, she is", "Yes, she does"], "answer": "Yes, she is"},
+    {"question": "Are we watching TV?", "options": ["No, we aren't", "No, we don't"], "answer": "No, we aren't"},
+    {"question": "Is the dog barking?", "options": ["Yes, it is", "Yes, it does"], "answer": "Yes, it is"},
+    {"question": "Are you running?", "options": ["No, I am not", "No, I don't"], "answer": "No, I am not"},
+    {"question": "Is it raining?", "options": ["Yes, it is", "Yes, it does"], "answer": "Yes, it is"},
+    {"question": "Is your mum cooking?", "options": ["Yes, she is", "Yes, she does"], "answer": "Yes, she is"},
+    {"question": "Are the boys fighting?", "options": ["No, they aren't", "No, they don't"], "answer": "No, they aren't"}
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "ps_tag_questions",
+  "title": "🧲 Разделительные вопросы",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Соедини начало предложения с правильным «хвостиком»: после утверждения — isn't he?, после отрицания — is it?",
+  "columns": [
+    {"id": "isnt_he", "label": "isn't he?"},
+    {"id": "arent_they", "label": "aren't they?"},
+    {"id": "arent_i", "label": "aren't I?"},
+    {"id": "isnt_she", "label": "isn't she?"},
+    {"id": "arent_we", "label": "aren't we?"},
+    {"id": "isnt_it", "label": "isn't it?"},
+    {"id": "arent_you", "label": "aren't you?"},
+    {"id": "is_it", "label": "is it?"},
+    {"id": "are_they", "label": "are they?"}
+  ],
+  "items": [
+    {"verb": "He is your brother", "answer": "isnt_he"},
+    {"verb": "They are from London", "answer": "arent_they"},
+    {"verb": "I am a student", "answer": "arent_i"},
+    {"verb": "She is 11", "answer": "isnt_she"},
+    {"verb": "We are in Year 5", "answer": "arent_we"},
+    {"verb": "It is a cat", "answer": "isnt_it"},
+    {"verb": "You are my friend", "answer": "arent_you"},
+    {"verb": "The pen isn't red", "answer": "is_it"},
+    {"verb": "My dad is a doctor", "answer": "isnt_he"},
+    {"verb": "The books aren't new", "answer": "are_they"},
+    {"verb": "He is from the UK", "answer": "isnt_he"},
+    {"verb": "They aren't classmates", "answer": "are_they"},
+    {"verb": "We are ready", "answer": "arent_we"},
+    {"verb": "The ruler is in the bag", "answer": "isnt_it"},
+    {"verb": "I am late", "answer": "arent_i"}
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "pc_two_worlds",
+  "title": "⚖️ Два мира: обычно и сейчас",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Соедини привычку (Present Simple) с тем, что происходит прямо сейчас (Present Continuous). Перетащи первую часть к подходящей второй!",
+  "columns": [
+    {"id": "p1", "label": "but today I am wearing a skirt."},
+    {"id": "p2", "label": "but now we are watching TV."},
+    {"id": "p3", "label": "but at the moment she is sleeping."},
+    {"id": "p4", "label": "but today he is staying at home."},
+    {"id": "p5", "label": "but now they are eating pizza."},
+    {"id": "p6", "label": "but now it is barking."},
+    {"id": "p7", "label": "but now you are playing."},
+    {"id": "p8", "label": "but today I am drinking coffee."},
+    {"id": "p9", "label": "but now we are singing."},
+    {"id": "p10", "label": "but today he is walking."},
+    {"id": "p11", "label": "but now she is resting."},
+    {"id": "p12", "label": "but now they are running."},
+    {"id": "p13", "label": "but now I am writing."},
+    {"id": "p14", "label": "but now we are standing."},
+    {"id": "p15", "label": "but now it is sleeping."}
+  ],
+  "items": [
+    {"verb": "I usually wear jeans", "answer": "p1"},
+    {"verb": "We usually play football", "answer": "p2"},
+    {"verb": "She usually reads books", "answer": "p3"},
+    {"verb": "He usually goes to school", "answer": "p4"},
+    {"verb": "They usually eat apples", "answer": "p5"},
+    {"verb": "My dog usually sleeps", "answer": "p6"},
+    {"verb": "You usually do homework", "answer": "p7"},
+    {"verb": "I usually drink tea", "answer": "p8"},
+    {"verb": "We usually study English", "answer": "p9"},
+    {"verb": "He usually drives a car", "answer": "p10"},
+    {"verb": "She usually cooks", "answer": "p11"},
+    {"verb": "They usually swim", "answer": "p12"},
+    {"verb": "I usually read", "answer": "p13"},
+    {"verb": "We usually sit", "answer": "p14"},
+    {"verb": "The cat usually climbs", "answer": "p15"}
+  ]
+}

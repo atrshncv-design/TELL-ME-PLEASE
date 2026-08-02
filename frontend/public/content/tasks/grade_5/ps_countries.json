@@ -1,0 +1,29 @@
+{
+  "id": "ps_countries",
+  "title": "🧲 Страны и национальности",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Раскидай фразы по корзинам: откуда (from + страна), национальность или прилагательное.",
+  "columns": [
+    {"id": "country", "label": "Откуда? (from …)"},
+    {"id": "nationality", "label": "Национальность"},
+    {"id": "adjective", "label": "Какой? (прилагательное)"}
+  ],
+  "items": [
+    {"verb": "I am from", "answer": "country"},
+    {"verb": "He is from", "answer": "country"},
+    {"verb": "They are", "answer": "nationality"},
+    {"verb": "She is from", "answer": "country"},
+    {"verb": "We are", "answer": "nationality"},
+    {"verb": "You are from", "answer": "country"},
+    {"verb": "It is an", "answer": "nationality"},
+    {"verb": "My friend is", "answer": "nationality"},
+    {"verb": "My parents are from", "answer": "country"},
+    {"verb": "The city is", "answer": "adjective"},
+    {"verb": "The people are", "answer": "adjective"},
+    {"verb": "I am a", "answer": "nationality"},
+    {"verb": "He's from", "answer": "country"},
+    {"verb": "They are not from", "answer": "country"},
+    {"verb": "We're", "answer": "nationality"}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "ps_short_answer",
+  "title": "❓ Короткий ответ: am / is / are",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Ответь на вопрос коротко. Внимание: ловушка — вариант с do/does!",
+  "items": [
+    {"question": "Are you a student?", "options": ["Yes, I am", "Yes, I do"], "answer": "Yes, I am"},
+    {"question": "Is she 11?", "options": ["No, she isn't", "No, she doesn't"], "answer": "No, she isn't"},
+    {"question": "Are they friends?", "options": ["Yes, they are", "Yes, they do"], "answer": "Yes, they are"},
+    {"question": "Is it a dog?", "options": ["No, it isn't", "No, it doesn't"], "answer": "No, it isn't"},
+    {"question": "Am I late?", "options": ["No, you aren't", "No, you don't"], "answer": "No, you aren't"},
+    {"question": "Are we ready?", "options": ["Yes, we are", "Yes, we do"], "answer": "Yes, we are"},
+    {"question": "Is your dad a doctor?", "options": ["Yes, he is", "Yes, he does"], "answer": "Yes, he is"},
+    {"question": "Are the pens new?", "options": ["No, they aren't", "No, they don't"], "answer": "No, they aren't"},
+    {"question": "Is he 11 years old?", "options": ["Yes, he is", "Yes, he does"], "answer": "Yes, he is"},
+    {"question": "Are you from Moscow?", "options": ["No, I am not", "No, I don't"], "answer": "No, I am not"},
+    {"question": "Is the pen red?", "options": ["Yes, it is", "Yes, it does"], "answer": "Yes, it is"},
+    {"question": "Are your sisters at school?", "options": ["Yes, they are", "Yes, they do"], "answer": "Yes, they are"},
+    {"question": "Is Maths your favorite subject?", "options": ["No, it isn't", "No, it doesn't"], "answer": "No, it isn't"},
+    {"question": "Am I your friend?", "options": ["Yes, you are", "Yes, you do"], "answer": "Yes, you are"},
+    {"question": "Are we classmates?", "options": ["Yes, we are", "Yes, we do"], "answer": "Yes, we are"}
+  ]
+}

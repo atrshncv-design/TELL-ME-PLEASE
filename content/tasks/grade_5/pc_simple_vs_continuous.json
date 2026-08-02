@@ -1,0 +1,28 @@
+{
+  "id": "pc_simple_vs_continuous",
+  "title": "🧠 Фильтр: Simple или Continuous",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Раскидай предложения по корзинам. Глагол в скобках — в начальной форме: реши, какое время нужно!",
+  "columns": [
+    {"id": "simple", "label": "Present Simple", "rule": "обычно: every day, every evening, on Sundays"},
+    {"id": "continuous", "label": "Present Continuous", "rule": "сейчас: now, at the moment"}
+  ],
+  "items": [
+    {"verb": "I (play) tennis every day.", "answer": "simple"},
+    {"verb": "I (play) tennis now.", "answer": "continuous"},
+    {"verb": "She (read) a book at the moment.", "answer": "continuous"},
+    {"verb": "She (read) a book every evening.", "answer": "simple"},
+    {"verb": "We (watch) TV now.", "answer": "continuous"},
+    {"verb": "We (watch) TV every evening.", "answer": "simple"},
+    {"verb": "He (do) his homework now.", "answer": "continuous"},
+    {"verb": "He (do) his homework every day.", "answer": "simple"},
+    {"verb": "They (swim) in the pool now.", "answer": "continuous"},
+    {"verb": "They (swim) in the pool on Sundays.", "answer": "simple"},
+    {"verb": "The dog (run) now.", "answer": "continuous"},
+    {"verb": "The dog (run) every morning.", "answer": "simple"},
+    {"verb": "You (listen) to me now.", "answer": "continuous"},
+    {"verb": "You (listen) to music every day.", "answer": "simple"},
+    {"verb": "My mum (cook) dinner now.", "answer": "continuous"}
+  ]
+}

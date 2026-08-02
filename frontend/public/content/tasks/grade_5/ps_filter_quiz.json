@@ -1,0 +1,24 @@
+{
+  "id": "ps_filter_quiz",
+  "title": "❓ Фильтр: be или смысловой глагол?",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Реши: нужен глагол to be или смысловой глагол? Если есть действие — to be не нужен!",
+  "items": [
+    {"sentence": "She ___ a clever girl.", "options": ["is", "plays"], "answer": "is"},
+    {"sentence": "She ___ chess every day.", "options": ["is", "plays"], "answer": "plays"},
+    {"sentence": "The water ___ cold.", "options": ["is", "drink"], "answer": "is"},
+    {"sentence": "I ___ cold water in the morning.", "options": ["am", "drink"], "answer": "drink"},
+    {"sentence": "They ___ in London now.", "options": ["are", "go"], "answer": "are"},
+    {"sentence": "They ___ to London every summer.", "options": ["are", "go"], "answer": "go"},
+    {"sentence": "We ___ students.", "options": ["are", "do"], "answer": "are"},
+    {"sentence": "We ___ our homework in the evening.", "options": ["are", "do"], "answer": "do"},
+    {"sentence": "The ruler ___ in the bag.", "options": ["is", "use"], "answer": "is"},
+    {"sentence": "I ___ the ruler every day.", "options": ["am", "use"], "answer": "use"},
+    {"sentence": "He ___ a pilot.", "options": ["is", "flies"], "answer": "is"},
+    {"sentence": "He ___ planes.", "options": ["is", "flies"], "answer": "flies"},
+    {"sentence": "You ___ hungry.", "options": ["are", "eat"], "answer": "are"},
+    {"sentence": "You ___ a sandwich for breakfast.", "options": ["are", "eat"], "answer": "eat"},
+    {"sentence": "The dog ___ funny.", "options": ["is", "barks"], "answer": "is"}
+  ]
+}

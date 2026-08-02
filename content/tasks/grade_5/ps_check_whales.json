@@ -1,0 +1,24 @@
+{
+  "id": "ps_check_whales",
+  "title": "❓ Три кита: is / has got / plays",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильную форму из трёх: to be, have got или смысловой глагол.",
+  "items": [
+    {"sentence": "She ___ a doctor.", "options": ["is", "has got", "plays"], "answer": "is"},
+    {"sentence": "I ___ a dog.", "options": ["am", "have got", "go"], "answer": "have got"},
+    {"sentence": "We ___ football every day.", "options": ["are", "have got", "play"], "answer": "play"},
+    {"sentence": "He ___ a sister.", "options": ["is", "has got", "plays"], "answer": "has got"},
+    {"sentence": "They ___ happy.", "options": ["are", "have got", "play"], "answer": "are"},
+    {"sentence": "My cat ___ milk.", "options": ["is", "has got", "drinks"], "answer": "drinks"},
+    {"sentence": "You ___ a student.", "options": ["are", "have got", "read"], "answer": "are"},
+    {"sentence": "I ___ books every day.", "options": ["am", "have got", "read"], "answer": "read"},
+    {"sentence": "It ___ a long tail.", "options": ["is", "has got", "runs"], "answer": "has got"},
+    {"sentence": "We ___ to school by bus.", "options": ["are", "have got", "go"], "answer": "go"},
+    {"sentence": "She ___ beautiful.", "options": ["is", "has got", "sings"], "answer": "is"},
+    {"sentence": "He ___ tennis on Sundays.", "options": ["is", "has got", "plays"], "answer": "plays"},
+    {"sentence": "I ___ 11 years old.", "options": ["am", "have got", "live"], "answer": "am"},
+    {"sentence": "They ___ a big house.", "options": ["are", "have got", "live"], "answer": "have got"},
+    {"sentence": "My mum ___ dinner.", "options": ["is", "has got", "cooks"], "answer": "cooks"}
+  ]
+}

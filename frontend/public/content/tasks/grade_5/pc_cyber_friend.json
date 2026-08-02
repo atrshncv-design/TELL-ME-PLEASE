@@ -1,0 +1,39 @@
+{
+  "id": "pc_cyber_friend",
+  "title": "🤖 Интервью с кибер-другом",
+  "category": "grammar",
+  "type": "voice-chat",
+  "description": "Проведи интервью с кибер-другом — 10-летним ботом, который живёт в компьютере. Задавай вопросы из сценария, слушай ответы и спрашивай ещё!",
+  "sections": [
+    {
+      "name": "🎮 Жизнь внутри компьютера (прямо сейчас)",
+      "questions": [
+        "What are you doing right now?",
+        "Are you playing any computer games at the moment?",
+        "Are you listening to music?",
+        "What are you eating today?",
+        "Are you talking to other people now?",
+        "Is your battery getting hot?"
+      ]
+    },
+    {
+      "name": "🗓️ Привычки робота (обычно)",
+      "questions": [
+        "What do you usually do in the morning?",
+        "Do you sleep at night?",
+        "Where do you live?",
+        "Do you play football?",
+        "What subjects do you study?",
+        "Do you have a pet?"
+      ]
+    },
+    {
+      "name": "⚖️ Сравни: обычно и сейчас",
+      "questions": [
+        "Do you usually read books, or are you reading my messages now?",
+        "What do you usually do on Sundays, and what are you doing this Sunday?",
+        "Do you always answer quickly, or are you answering slowly today?"
+      ]
+    }
+  ]
+}

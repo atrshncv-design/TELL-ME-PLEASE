@@ -1,0 +1,19 @@
+{
+  "id": "ps_guess_who",
+  "title": "❓ Угадай, кто это?",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Прочитай описание с to be и угадай, кто это. Эмодзи в конце — подсказка!",
+  "items": [
+    {"question": "He is brave. He is a doctor. He is not afraid of fire. Who is he? 👨‍🚒", "options": ["Teacher", "Fireman", "Pilot"], "answer": "Fireman"},
+    {"question": "It is small. It is green. It is not a dog. It is a... 🐸", "options": ["Frog", "Cat", "Elephant"], "answer": "Frog"},
+    {"question": "She is kind. She is a teacher. She is at school. Who is she? 👩‍🏫", "options": ["Doctor", "Teacher", "Singer"], "answer": "Teacher"},
+    {"question": "They are tall. They are players. They are not short. Who are they? 🏀", "options": ["Basketball players", "Babies", "Clowns"], "answer": "Basketball players"},
+    {"question": "It is fast. It is red. It is not a bike. It is a... 🚗", "options": ["Car", "Snail", "Apple"], "answer": "Car"},
+    {"question": "He is funny. He is a clown. He is in the circus. Who is he? 🤡", "options": ["Clown", "Police officer", "Doctor"], "answer": "Clown"},
+    {"question": "It is big. It is grey. It is not a cat. It is an... 🐘", "options": ["Elephant", "Ant", "Eraser"], "answer": "Elephant"},
+    {"question": "They are students. They are in Year 5. They are 11 years old. Who are they? 🎒", "options": ["Pupils", "Teachers", "Parents"], "answer": "Pupils"},
+    {"question": "It is yellow. It is long. It is a pencil. ✏️", "options": ["True", "False"], "answer": "True"},
+    {"question": "She is beautiful. She is a singer. She is on TV. Who is she? 🎤", "options": ["Singer", "Sportsman", "Cook"], "answer": "Singer"}
+  ]
+}
