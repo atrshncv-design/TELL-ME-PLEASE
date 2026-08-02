@@ -25,6 +25,22 @@ function splitSentences(text: string): string[] {
 }
 
 /**
+ * Убирает эмодзи/пиктограммы из текста ПЕРЕД озвучкой: speechSynthesis
+ * пытается «произносить» смайлики (например «🤖» как «робот»), что путает
+ * ребёнка. В чате эмодзи остаются — фильтр только для речи.
+ */
+function stripEmoji(text: string): string {
+  return text
+    .replace(
+      /[\u{1F000}-\u{1F0FF}\u{1F100}-\u{1F64F}\u{1F680}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{1FA70}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}\u{200D}\u{1F1E6}-\u{1F1FF}]/gu,
+      "",
+    )
+    .replace(/\s{2,}/g, " ")
+    .replace(/\s+([,.!?;:…])/g, "$1")
+    .trim()
+}
+
+/**
  * Выбор лучшего английского голоса по качеству И надёжности:
  *   1) ЛОКАЛЬНЫЕ системные голоса (Apple/macOS: Samantha, Daniel, Karen…;
  *      системные TTS) — работают офлайн, без скачивания;
@@ -181,7 +197,8 @@ export function useSpeechSynthesis() {
       // первом жесте, а лишний speak+cancel в одном тике может «съесть»
       // реальную речь (известный глюк Chrome).
       synth.cancel()
-      queueRef.current = splitSentences(text)
+      // Эмодзи в речи не произносим (бот не должен «говорить» смайлики)
+      queueRef.current = splitSentences(stripEmoji(text))
       if (queueRef.current.length === 0) return
       speakingRef.current = true
       setSpeaking(true)
