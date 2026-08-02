@@ -1,0 +1,144 @@
+{
+  "id": "ps9_tobe_modal",
+  "title": "🚫 Модальный фильтр: be или have been?",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильную форму после модального глагола: be + V3 или have been + V3.",
+  "items": [
+    {
+      "sentence": "The work must ___ tomorrow.",
+      "options": [
+        "be done",
+        "have been done",
+        "done"
+      ],
+      "answer": "be done"
+    },
+    {
+      "sentence": "The work must ___ yesterday.",
+      "options": [
+        "have been done",
+        "be done",
+        "done"
+      ],
+      "answer": "have been done"
+    },
+    {
+      "sentence": "The room should ___ every day.",
+      "options": [
+        "be cleaned",
+        "have been cleaned",
+        "cleaned"
+      ],
+      "answer": "be cleaned"
+    },
+    {
+      "sentence": "The room should ___ yesterday.",
+      "options": [
+        "have been cleaned",
+        "be cleaned",
+        "cleaned"
+      ],
+      "answer": "have been cleaned"
+    },
+    {
+      "sentence": "The criminal can ___ soon.",
+      "options": [
+        "be found",
+        "have been found",
+        "found"
+      ],
+      "answer": "be found"
+    },
+    {
+      "sentence": "The criminal could ___ yesterday.",
+      "options": [
+        "have been found",
+        "be found",
+        "found"
+      ],
+      "answer": "have been found"
+    },
+    {
+      "sentence": "The book must ___ by every student.",
+      "options": [
+        "be read",
+        "have been read",
+        "read"
+      ],
+      "answer": "be read"
+    },
+    {
+      "sentence": "The book must ___ already.",
+      "options": [
+        "have been read",
+        "be read",
+        "read"
+      ],
+      "answer": "have been read"
+    },
+    {
+      "sentence": "The tree must ___ next spring.",
+      "options": [
+        "be planted",
+        "have been planted",
+        "planted"
+      ],
+      "answer": "be planted"
+    },
+    {
+      "sentence": "The tree should ___ last autumn.",
+      "options": [
+        "have been planted",
+        "be planted",
+        "planted"
+      ],
+      "answer": "have been planted"
+    },
+    {
+      "sentence": "The mistake can ___ by anyone.",
+      "options": [
+        "be made",
+        "have been made",
+        "made"
+      ],
+      "answer": "be made"
+    },
+    {
+      "sentence": "The mistake must ___ yesterday.",
+      "options": [
+        "have been made",
+        "be made",
+        "made"
+      ],
+      "answer": "have been made"
+    },
+    {
+      "sentence": "The letters can ___ tomorrow.",
+      "options": [
+        "be sent",
+        "have been sent",
+        "sent"
+      ],
+      "answer": "be sent"
+    },
+    {
+      "sentence": "The letters could ___ yesterday.",
+      "options": [
+        "have been sent",
+        "be sent",
+        "sent"
+      ],
+      "answer": "have been sent"
+    },
+    {
+      "sentence": "The rule must ___ by heart.",
+      "options": [
+        "be learned",
+        "have been learned",
+        "learned"
+      ],
+      "answer": "be learned"
+    }
+  ]
+}

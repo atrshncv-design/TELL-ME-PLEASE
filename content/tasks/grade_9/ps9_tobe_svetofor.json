@@ -1,0 +1,69 @@
+{
+  "id": "ps9_tobe_svetofor",
+  "title": "⚡ Светофор: сложные формы to be",
+  "category": "grammar",
+  "type": "flashcards",
+  "description": "Переверни карточку: стимул (подлежащее + маркер времени) → нужная форма to be.",
+  "cards": [
+    {
+      "front": "The house / by 5 PM tomorrow",
+      "back": "will have been"
+    },
+    {
+      "front": "The room / for 2 hours already",
+      "back": "has been"
+    },
+    {
+      "front": "The boy / when mother came",
+      "back": "was"
+    },
+    {
+      "front": "The new hospital / now",
+      "back": "is being"
+    },
+    {
+      "front": "The problem / tomorrow",
+      "back": "will be"
+    },
+    {
+      "front": "The keys / yesterday",
+      "back": "were"
+    },
+    {
+      "front": "The car / at the moment",
+      "back": "is being"
+    },
+    {
+      "front": "The text / yet",
+      "back": "has not been"
+    },
+    {
+      "front": "I / for 3 hours",
+      "back": "have been"
+    },
+    {
+      "front": "The bridge / by next year",
+      "back": "will have been"
+    },
+    {
+      "front": "The letter / at 5 PM yesterday",
+      "back": "was being"
+    },
+    {
+      "front": "He / since morning",
+      "back": "has been"
+    },
+    {
+      "front": "The exhibition / last month",
+      "back": "was"
+    },
+    {
+      "front": "The trees / every spring",
+      "back": "are"
+    },
+    {
+      "front": "The work / just",
+      "back": "has been"
+    }
+  ]
+}

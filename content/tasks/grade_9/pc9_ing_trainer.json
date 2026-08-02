@@ -1,0 +1,84 @@
+{
+  "id": "pc9_ing_trainer",
+  "title": "⌨️ Тренажёр ОГЭ: орфография -ing",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Напечатай глагол с правильным окончанием -ing (сложные случаи орфографии).",
+  "items": [
+    {
+      "sentence": "The journalist is ___ live.",
+      "answer": "broadcasting",
+      "hint": "broadcast"
+    },
+    {
+      "sentence": "She is ___ a new app.",
+      "answer": "creating",
+      "hint": "create"
+    },
+    {
+      "sentence": "They are ___ on the grass.",
+      "answer": "lying",
+      "hint": "lie"
+    },
+    {
+      "sentence": "The factory is ___ the river.",
+      "answer": "polluting",
+      "hint": "pollute"
+    },
+    {
+      "sentence": "We are ___ with a blogger.",
+      "answer": "chatting",
+      "hint": "chat"
+    },
+    {
+      "sentence": "I am ___ my shoelaces.",
+      "answer": "tying",
+      "hint": "tie"
+    },
+    {
+      "sentence": "The scientist is ___ the crime.",
+      "answer": "investigating",
+      "hint": "investigate"
+    },
+    {
+      "sentence": "He is ___ away.",
+      "answer": "running",
+      "hint": "run"
+    },
+    {
+      "sentence": "She is ___ because she lost her phone.",
+      "answer": "panicking",
+      "hint": "panic"
+    },
+    {
+      "sentence": "We are ___ the evidence.",
+      "answer": "uploading",
+      "hint": "upload"
+    },
+    {
+      "sentence": "They are ___ with the verdict.",
+      "answer": "agreeing",
+      "hint": "agree"
+    },
+    {
+      "sentence": "The celebrity is ___ autographs.",
+      "answer": "signing",
+      "hint": "sign"
+    },
+    {
+      "sentence": "He is ___ to know the truth.",
+      "answer": "dying",
+      "hint": "die"
+    },
+    {
+      "sentence": "The technology is ___ fast.",
+      "answer": "developing",
+      "hint": "develop"
+    },
+    {
+      "sentence": "The police officer is ___ the car.",
+      "answer": "stopping",
+      "hint": "stop"
+    }
+  ]
+}

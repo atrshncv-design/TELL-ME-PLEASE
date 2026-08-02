@@ -1,0 +1,69 @@
+{
+  "id": "ps9_tobe_photo",
+  "title": "📸 Опиши фотографию",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Опиши фотографию, используя пассивные конструкции и Present Continuous (подготовка к заданию 3 ОГЭ).",
+  "items": [
+    {
+      "sentence": "The photo ___ in the park.",
+      "answer": "was taken"
+    },
+    {
+      "sentence": "The boy in the photo ___ on the grass.",
+      "answer": "is sitting"
+    },
+    {
+      "sentence": "The tree ___ last year.",
+      "answer": "was planted"
+    },
+    {
+      "sentence": "The bike ___ by the boy.",
+      "answer": "is being ridden"
+    },
+    {
+      "sentence": "The weather ___ as sunny.",
+      "answer": "can be described"
+    },
+    {
+      "sentence": "The picture ___ on the wall.",
+      "answer": "is hanging"
+    },
+    {
+      "sentence": "The room ___ with balloons.",
+      "answer": "is decorated"
+    },
+    {
+      "sentence": "The book ___ by the girl.",
+      "answer": "is being read"
+    },
+    {
+      "sentence": "The house ___ in 1990.",
+      "answer": "was built"
+    },
+    {
+      "sentence": "The event ___ by the school.",
+      "answer": "was organized"
+    },
+    {
+      "sentence": "The results ___ tomorrow.",
+      "answer": "will be announced"
+    },
+    {
+      "sentence": "The work ___ perfectly.",
+      "answer": "has been done"
+    },
+    {
+      "sentence": "The monument ___ by tourists.",
+      "answer": "is visited"
+    },
+    {
+      "sentence": "The competition ___ every year.",
+      "answer": "is held"
+    },
+    {
+      "sentence": "I ___ by the view.",
+      "answer": "am impressed"
+    }
+  ]
+}

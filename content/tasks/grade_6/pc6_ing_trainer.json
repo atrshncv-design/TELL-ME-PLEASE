@@ -1,0 +1,69 @@
+{
+  "id": "pc6_ing_trainer",
+  "title": "⌨️ Орфографический тренажёр",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Напечатай глагол с -ing с правильным написанием: помни про немую -e и удвоение согласной!",
+  "items": [
+    {
+      "sentence": "Look! The cat is ___ (drink) milk.",
+      "answer": "drinking"
+    },
+    {
+      "sentence": "My mum is ___ (make) a cake in the kitchen.",
+      "answer": "making"
+    },
+    {
+      "sentence": "They are ___ (run) in the park.",
+      "answer": "running"
+    },
+    {
+      "sentence": "She is ___ (dance) to music.",
+      "answer": "dancing"
+    },
+    {
+      "sentence": "We are ___ (swim) in the pool.",
+      "answer": "swimming"
+    },
+    {
+      "sentence": "He is ___ (write) a test.",
+      "answer": "writing"
+    },
+    {
+      "sentence": "The dog is ___ (sit) on the sofa.",
+      "answer": "sitting"
+    },
+    {
+      "sentence": "I am ___ (clean) my room.",
+      "answer": "cleaning"
+    },
+    {
+      "sentence": "You are ___ (drive) a car.",
+      "answer": "driving"
+    },
+    {
+      "sentence": "The girls are ___ (skip) rope.",
+      "answer": "skipping"
+    },
+    {
+      "sentence": "We are ___ (watch) a film.",
+      "answer": "watching"
+    },
+    {
+      "sentence": "He is ___ (hop) on one leg.",
+      "answer": "hopping"
+    },
+    {
+      "sentence": "The baby is ___ (sleep).",
+      "answer": "sleeping"
+    },
+    {
+      "sentence": "I am ___ (bake) bread.",
+      "answer": "baking"
+    },
+    {
+      "sentence": "She is ___ (eat) an apple.",
+      "answer": "eating"
+    }
+  ]
+}

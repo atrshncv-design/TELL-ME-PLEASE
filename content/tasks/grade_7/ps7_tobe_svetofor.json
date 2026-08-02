@@ -1,0 +1,69 @@
+{
+  "id": "ps7_tobe_svetofor",
+  "title": "⚡ Светофор: now / yesterday",
+  "category": "grammar",
+  "type": "flashcards",
+  "description": "Переверни карточку и назови форму глагола to be: смотрим на маркер времени (now — настоящее, yesterday — прошлое).",
+  "cards": [
+    {
+      "front": "I / now",
+      "back": "am"
+    },
+    {
+      "front": "He / yesterday",
+      "back": "was"
+    },
+    {
+      "front": "We / now",
+      "back": "are"
+    },
+    {
+      "front": "They / yesterday",
+      "back": "were"
+    },
+    {
+      "front": "She / now",
+      "back": "is"
+    },
+    {
+      "front": "My parents / yesterday",
+      "back": "were"
+    },
+    {
+      "front": "It / now",
+      "back": "is"
+    },
+    {
+      "front": "The weather / yesterday",
+      "back": "was"
+    },
+    {
+      "front": "You / now",
+      "back": "are"
+    },
+    {
+      "front": "The children / yesterday",
+      "back": "were"
+    },
+    {
+      "front": "The gadget / now",
+      "back": "is"
+    },
+    {
+      "front": "We / last year",
+      "back": "were"
+    },
+    {
+      "front": "The lawyer / now",
+      "back": "is"
+    },
+    {
+      "front": "I / two days ago",
+      "back": "was"
+    },
+    {
+      "front": "The tickets / yesterday",
+      "back": "were"
+    }
+  ]
+}

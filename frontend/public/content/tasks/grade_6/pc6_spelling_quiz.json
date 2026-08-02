@@ -1,0 +1,144 @@
+{
+  "id": "pc6_spelling_quiz",
+  "title": "🛑 Ловушка для глаз: -ing",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Только один вариант написания правильный. Найди его — тормозим типичные ошибки!",
+  "items": [
+    {
+      "question": "run",
+      "options": [
+        "runing",
+        "running",
+        "runnning"
+      ],
+      "answer": "running"
+    },
+    {
+      "question": "make",
+      "options": [
+        "makeing",
+        "making",
+        "macking"
+      ],
+      "answer": "making"
+    },
+    {
+      "question": "swim",
+      "options": [
+        "swiming",
+        "swimming",
+        "swimmng"
+      ],
+      "answer": "swimming"
+    },
+    {
+      "question": "dance",
+      "options": [
+        "danceing",
+        "dancing",
+        "danccing"
+      ],
+      "answer": "dancing"
+    },
+    {
+      "question": "sit",
+      "options": [
+        "siting",
+        "sittting",
+        "sitting"
+      ],
+      "answer": "sitting"
+    },
+    {
+      "question": "write",
+      "options": [
+        "writeing",
+        "writing",
+        "writting"
+      ],
+      "answer": "writing"
+    },
+    {
+      "question": "skip",
+      "options": [
+        "skiping",
+        "skippng",
+        "skipping"
+      ],
+      "answer": "skipping"
+    },
+    {
+      "question": "watch",
+      "options": [
+        "watchting",
+        "watching",
+        "watchhing"
+      ],
+      "answer": "watching"
+    },
+    {
+      "question": "drive",
+      "options": [
+        "driveing",
+        "driving",
+        "drivving"
+      ],
+      "answer": "driving"
+    },
+    {
+      "question": "hop",
+      "options": [
+        "hopeing",
+        "hopping",
+        "hoping"
+      ],
+      "answer": "hopping"
+    },
+    {
+      "question": "eat",
+      "options": [
+        "eating",
+        "eatting",
+        "eateing"
+      ],
+      "answer": "eating"
+    },
+    {
+      "question": "bake",
+      "options": [
+        "bakeing",
+        "baking",
+        "bakking"
+      ],
+      "answer": "baking"
+    },
+    {
+      "question": "read",
+      "options": [
+        "reading",
+        "readding",
+        "readeing"
+      ],
+      "answer": "reading"
+    },
+    {
+      "question": "clean",
+      "options": [
+        "cleaning",
+        "cleanning",
+        "cleaneing"
+      ],
+      "answer": "cleaning"
+    },
+    {
+      "question": "sleep",
+      "options": [
+        "sleeping",
+        "sleepping",
+        "sleepeng"
+      ],
+      "answer": "sleeping"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": "pc6_time_machine",
+  "title": "⏰ Машина времени",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Смотри на маркер времени: now — Present Continuous, every day — Present Simple.",
+  "items": [
+    {
+      "sentence": "Look! He ___ a bike.",
+      "options": [
+        "rides",
+        "is riding"
+      ],
+      "answer": "is riding"
+    },
+    {
+      "sentence": "He ___ a bike every day.",
+      "options": [
+        "rides",
+        "is riding"
+      ],
+      "answer": "rides"
+    },
+    {
+      "sentence": "I ___ my homework now.",
+      "options": [
+        "do",
+        "am doing"
+      ],
+      "answer": "am doing"
+    },
+    {
+      "sentence": "I ___ my homework every evening.",
+      "options": [
+        "do",
+        "am doing"
+      ],
+      "answer": "do"
+    },
+    {
+      "sentence": "They ___ football at the moment.",
+      "options": [
+        "play",
+        "are playing"
+      ],
+      "answer": "are playing"
+    },
+    {
+      "sentence": "They ___ football on Saturdays.",
+      "options": [
+        "play",
+        "are playing"
+      ],
+      "answer": "play"
+    },
+    {
+      "sentence": "She ___ a book now.",
+      "options": [
+        "reads",
+        "is reading"
+      ],
+      "answer": "is reading"
+    },
+    {
+      "sentence": "She ___ a book every night.",
+      "options": [
+        "reads",
+        "is reading"
+      ],
+      "answer": "reads"
+    },
+    {
+      "sentence": "We ___ a film now.",
+      "options": [
+        "watch",
+        "are watching"
+      ],
+      "answer": "are watching"
+    },
+    {
+      "sentence": "We ___ a film every weekend.",
+      "options": [
+        "watch",
+        "are watching"
+      ],
+      "answer": "watch"
+    },
+    {
+      "sentence": "The dog ___ now.",
+      "options": [
+        "runs",
+        "is running"
+      ],
+      "answer": "is running"
+    },
+    {
+      "sentence": "The dog ___ every morning.",
+      "options": [
+        "runs",
+        "is running"
+      ],
+      "answer": "runs"
+    },
+    {
+      "sentence": "You ___ to me now.",
+      "options": [
+        "listen",
+        "are listening"
+      ],
+      "answer": "are listening"
+    },
+    {
+      "sentence": "You ___ to music every day.",
+      "options": [
+        "listen",
+        "are listening"
+      ],
+      "answer": "listen"
+    },
+    {
+      "sentence": "My mum ___ dinner now.",
+      "options": [
+        "cooks",
+        "is cooking"
+      ],
+      "answer": "is cooking"
+    }
+  ]
+}

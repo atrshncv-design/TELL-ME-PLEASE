@@ -1,0 +1,69 @@
+{
+  "id": "pc8_temp_detector",
+  "title": "🏕️ Временная ситуация: найди ошибку",
+  "category": "grammar",
+  "type": "click-mistake",
+  "description": "Маркеры this week, currently, at the moment требуют Present Continuous. Кликни на глагол, который нужно поставить в Continuous!",
+  "items": [
+    {
+      "text": "I live with my friend this week.",
+      "wrong": "live"
+    },
+    {
+      "text": "She studies at the library today.",
+      "wrong": "studies"
+    },
+    {
+      "text": "We go to school by bus this week because our car is broken.",
+      "wrong": "go"
+    },
+    {
+      "text": "He works from home currently.",
+      "wrong": "works"
+    },
+    {
+      "text": "They stay at a hotel at the moment.",
+      "wrong": "stay"
+    },
+    {
+      "text": "I don't eat sweets these days.",
+      "wrong": "don't"
+    },
+    {
+      "text": "My dad sleeps on the sofa tonight.",
+      "wrong": "sleeps"
+    },
+    {
+      "text": "We don't have classes this afternoon.",
+      "wrong": "don't"
+    },
+    {
+      "text": "She doesn't wear a uniform today.",
+      "wrong": "doesn't"
+    },
+    {
+      "text": "The shop opens later this week.",
+      "wrong": "opens"
+    },
+    {
+      "text": "I try to eat more healthy food these days.",
+      "wrong": "try"
+    },
+    {
+      "text": "He plays basketball for the school team this month.",
+      "wrong": "plays"
+    },
+    {
+      "text": "We don't watch TV these days.",
+      "wrong": "don't"
+    },
+    {
+      "text": "My phone doesn't work properly today.",
+      "wrong": "doesn't"
+    },
+    {
+      "text": "They don't travel abroad this summer.",
+      "wrong": "don't"
+    }
+  ]
+}

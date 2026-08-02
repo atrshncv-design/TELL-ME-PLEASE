@@ -1,0 +1,69 @@
+{
+  "id": "pc6_assembly",
+  "title": "🧩 Сборка: смешанный контекст",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Напечатай форму глагола to be (am / is / are). Для отрицания используй isn't, aren't или am not.",
+  "items": [
+    {
+      "sentence": "I ___ hungry. Can I have a sandwich?",
+      "answer": "am"
+    },
+    {
+      "sentence": "___ your sister good at Maths?",
+      "answer": "Is"
+    },
+    {
+      "sentence": "The trainers ___ (not) under the bed.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "My favorite food ___ pasta.",
+      "answer": "is"
+    },
+    {
+      "sentence": "___ we in the 6th grade?",
+      "answer": "Are"
+    },
+    {
+      "sentence": "The curtains ___ red and blue.",
+      "answer": "are"
+    },
+    {
+      "sentence": "He ___ (not) interested in sports.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "___ the sink in the bathroom?",
+      "answer": "Is"
+    },
+    {
+      "sentence": "They ___ from Canada.",
+      "answer": "are"
+    },
+    {
+      "sentence": "I ___ (not) late for school today.",
+      "answer": "am not"
+    },
+    {
+      "sentence": "The weather ___ sunny today.",
+      "answer": "is"
+    },
+    {
+      "sentence": "___ you thirsty?",
+      "answer": "Are"
+    },
+    {
+      "sentence": "The apple ___ (not) in the bowl.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "We ___ (not) ready for the test.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "London ___ a beautiful city.",
+      "answer": "is"
+    }
+  ]
+}

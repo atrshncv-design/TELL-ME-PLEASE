@@ -1,0 +1,31 @@
+{
+  "id": "pc6_photo",
+  "title": "📸 Опиши картинку: пикник",
+  "category": "speaking",
+  "type": "fill-in-and-speak",
+  "description": "Посмотри на картинку и продолжи предложения: что происходит прямо сейчас? Используй Present Continuous.",
+  "sections": [
+    {
+      "name": "На пикнике",
+      "prompts": [
+        "In this photo, my family is at the park. The sun is ...",
+        "My father is ...",
+        "My mother is sitting on ...",
+        "My sister is eating ...",
+        "I am playing with ...",
+        "The dog is running after ..."
+      ]
+    },
+    {
+      "name": "Вокруг нас",
+      "prompts": [
+        "Some birds are singing ...",
+        "Two boys are riding ...",
+        "A girl is flying ...",
+        "We aren't working. We are ...",
+        "My friend is taking a photo ...",
+        "It is a perfect day because ..."
+      ]
+    }
+  ]
+}

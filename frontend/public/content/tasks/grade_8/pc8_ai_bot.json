@@ -1,0 +1,49 @@
+{
+  "id": "pc8_ai_bot",
+  "title": "🤖 Эко-активист: поговори с AI-ботом",
+  "category": "speaking",
+  "type": "voice-chat",
+  "description": "Поговори с 14-летним эко-активистом и школьным журналистом. Обсуди привычки, текущие проекты, планы и то, что вас раздражает — используй Present Continuous!",
+  "sections": [
+    {
+      "name": "⚡ Действие прямо сейчас (Action now)",
+      "questions": [
+        "What are you doing right now?",
+        "Are you listening to music at the moment?",
+        "Is anyone in your family using the computer right now?"
+      ]
+    },
+    {
+      "name": "🏕️ Временная ситуация (Temporary)",
+      "questions": [
+        "Are you working on any school project these days?",
+        "Are you reading any interesting books at the moment?",
+        "Are you staying at home today?"
+      ]
+    },
+    {
+      "name": "🔄 Тенденции и перемены (Trends)",
+      "questions": [
+        "How is our planet changing right now?",
+        "Do you think technology is getting too fast?",
+        "Is your town growing?"
+      ]
+    },
+    {
+      "name": "📅 Планы на будущее (Future arrangements)",
+      "questions": [
+        "What are you doing this weekend?",
+        "Are you meeting your friends tomorrow?",
+        "Where are you going for your summer holidays?"
+      ]
+    },
+    {
+      "name": "😡 Раздражение (Irritation with always)",
+      "questions": [
+        "What is one thing your friend is always doing that annoys you?",
+        "Is your sibling always taking your things?",
+        "What are you constantly complaining about at school?"
+      ]
+    }
+  ]
+}

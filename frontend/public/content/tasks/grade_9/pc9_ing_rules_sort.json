@@ -1,0 +1,91 @@
+{
+  "id": "pc9_ing_rules_sort",
+  "title": "✍️ Орфографический фильтр: -ing",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Распредели глаголы по правилам добавления -ing: просто добавь, убери -e, удвой согласную, -ie → -y.",
+  "columns": [
+    {
+      "id": "add",
+      "label": "Just add -ing",
+      "rule": "play → playing"
+    },
+    {
+      "id": "drop_e",
+      "label": "Drop -e, add -ing",
+      "rule": "create → creating"
+    },
+    {
+      "id": "double",
+      "label": "Double the consonant",
+      "rule": "run → running"
+    },
+    {
+      "id": "ie_y",
+      "label": "Change -ie to -y",
+      "rule": "lie → lying"
+    }
+  ],
+  "items": [
+    {
+      "verb": "broadcast",
+      "answer": "add"
+    },
+    {
+      "verb": "create",
+      "answer": "drop_e"
+    },
+    {
+      "verb": "chat",
+      "answer": "double"
+    },
+    {
+      "verb": "lie",
+      "answer": "ie_y"
+    },
+    {
+      "verb": "investigate",
+      "answer": "add"
+    },
+    {
+      "verb": "run",
+      "answer": "double"
+    },
+    {
+      "verb": "tie",
+      "answer": "ie_y"
+    },
+    {
+      "verb": "produce",
+      "answer": "drop_e"
+    },
+    {
+      "verb": "swim",
+      "answer": "double"
+    },
+    {
+      "verb": "die",
+      "answer": "ie_y"
+    },
+    {
+      "verb": "text",
+      "answer": "double"
+    },
+    {
+      "verb": "pollute",
+      "answer": "drop_e"
+    },
+    {
+      "verb": "programme",
+      "answer": "drop_e"
+    },
+    {
+      "verb": "panic",
+      "answer": "double"
+    },
+    {
+      "verb": "design",
+      "answer": "add"
+    }
+  ]
+}

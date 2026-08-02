@@ -1,0 +1,89 @@
+{
+  "id": "ps7_tobe_blog",
+  "title": "🌍 Блог путешественника",
+  "category": "grammar",
+  "type": "cloze",
+  "description": "Прочитай пост о поездке в Испанию. Вставь форму глагола to be (Present или Past): нажми на пропуск, затем на слово.",
+  "text": "Hi! My name ___ Tom. Last summer, my family and I ___ in Spain. It ___ fantastic! The weather ___ very hot. The sea ___ warm. My parents ___ happy. My sister ___ interested in shopping, so she ___ busy every day. The food ___ delicious. Paella ___ my favorite! Now we ___ at home. I ___ tired, but I ___ glad we went there. Spain ___ a beautiful country. I ___ sure we will go there again.",
+  "answers": [
+    [
+      "is"
+    ],
+    [
+      "were"
+    ],
+    [
+      "was"
+    ],
+    [
+      "was"
+    ],
+    [
+      "was"
+    ],
+    [
+      "were"
+    ],
+    [
+      "was"
+    ],
+    [
+      "was"
+    ],
+    [
+      "was"
+    ],
+    [
+      "was"
+    ],
+    [
+      "are"
+    ],
+    [
+      "am"
+    ],
+    [
+      "am"
+    ],
+    [
+      "is"
+    ],
+    [
+      "am"
+    ]
+  ],
+  "word_bank": [
+    "is",
+    "were",
+    "was",
+    "was",
+    "was",
+    "were",
+    "was",
+    "was",
+    "was",
+    "was",
+    "are",
+    "am",
+    "am",
+    "is",
+    "am"
+  ],
+  "hints": [
+    "name (it)",
+    "family and I (we)",
+    "It",
+    "The weather",
+    "The sea",
+    "My parents",
+    "My sister",
+    "she",
+    "The food",
+    "Paella",
+    "we",
+    "I",
+    "I",
+    "Spain",
+    "I"
+  ]
+}

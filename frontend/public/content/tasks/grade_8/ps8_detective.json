@@ -1,0 +1,72 @@
+{
+  "id": "ps8_detective",
+  "title": "🕵️ Следствие ведут знатоки",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Детектив опрашивает свидетеля. Восстанови вопросы и ответы с to be (Continuous и Passive).",
+  "items": [
+    {
+      "sentence": "What ___ you ___ at 8 PM? (you / do)",
+      "answer": [
+        "were",
+        "doing"
+      ]
+    },
+    {
+      "sentence": "I ___ my dog. (walk)",
+      "answer": "was walking"
+    },
+    {
+      "sentence": "___ the window broken? (Was)",
+      "answer": "Was"
+    },
+    {
+      "sentence": "Yes, it ___ by a stone. (break)",
+      "answer": "was broken"
+    },
+    {
+      "sentence": "___ anyone seen near the house? (Was)",
+      "answer": "Was"
+    },
+    {
+      "sentence": "Yes, a strange man ___ by my neighbor. (notice)",
+      "answer": "was noticed"
+    },
+    {
+      "sentence": "What ___ he wearing? (was)",
+      "answer": "was"
+    },
+    {
+      "sentence": "He ___ a black jacket. (wear)",
+      "answer": "was wearing"
+    },
+    {
+      "sentence": "___ the lights on? (Were)",
+      "answer": "Were"
+    },
+    {
+      "sentence": "No, the electricity ___ cut off. (was)",
+      "answer": "was"
+    },
+    {
+      "sentence": "___ you scared? (Were)",
+      "answer": "Were"
+    },
+    {
+      "sentence": "Yes, I ___ . (terrify)",
+      "answer": "was terrified"
+    },
+    {
+      "sentence": "The thief ___ found yet. (not / find)",
+      "answer": "hasn't been"
+    },
+    {
+      "sentence": "He ___ caught soon. (must)",
+      "answer": "must be"
+    },
+    {
+      "sentence": "I hope he ___ arrested tomorrow. (will be)",
+      "answer": "will be"
+    }
+  ]
+}

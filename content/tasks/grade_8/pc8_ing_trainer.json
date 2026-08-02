@@ -1,0 +1,69 @@
+{
+  "id": "pc8_ing_trainer",
+  "title": "⌨️ Орфография -ing: тренажёр",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Напечатай глагол в скобках с правильным окончанием -ing. Внимание на ловушки: lie → lying, panic → panicking!",
+  "items": [
+    {
+      "sentence": "The journalist is ___ (broadcast) live from London.",
+      "answer": "broadcasting"
+    },
+    {
+      "sentence": "She is ___ (create) a new design for the app.",
+      "answer": "creating"
+    },
+    {
+      "sentence": "They are ___ (lie) on the grass and looking at the stars.",
+      "answer": "lying"
+    },
+    {
+      "sentence": "The factory is ___ (pollute) the river.",
+      "answer": "polluting"
+    },
+    {
+      "sentence": "We are ___ (chat) with a famous blogger.",
+      "answer": "chatting"
+    },
+    {
+      "sentence": "I am ___ (tie) my shoelaces.",
+      "answer": "tying"
+    },
+    {
+      "sentence": "The scientist is ___ (investigate) the disease.",
+      "answer": "investigating"
+    },
+    {
+      "sentence": "He is ___ (run) for president.",
+      "answer": "running"
+    },
+    {
+      "sentence": "The children are ___ (see) a movie.",
+      "answer": "seeing"
+    },
+    {
+      "sentence": "She is ___ (panic) because she lost her phone.",
+      "answer": "panicking"
+    },
+    {
+      "sentence": "We are ___ (upload) the video to the cloud.",
+      "answer": "uploading"
+    },
+    {
+      "sentence": "The artist is ___ (paint) a portrait.",
+      "answer": "painting"
+    },
+    {
+      "sentence": "They are ___ (agree) with the new rules.",
+      "answer": "agreeing"
+    },
+    {
+      "sentence": "The celebrity is ___ (sign) autographs.",
+      "answer": "signing"
+    },
+    {
+      "sentence": "He is ___ (die) to know the truth.",
+      "answer": "dying"
+    }
+  ]
+}

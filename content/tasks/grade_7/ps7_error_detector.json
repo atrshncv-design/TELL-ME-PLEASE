@@ -1,0 +1,77 @@
+{
+  "id": "ps7_error_detector",
+  "title": "🕵️ Детектор ошибок: Present Simple",
+  "category": "grammar",
+  "type": "click-mistake",
+  "description": "В каждом предложении есть ошибка в Present Simple. Кликни на неверное слово. Если ошибки нет — нажми «Всё верно!».",
+  "items": [
+    {
+      "text": "My friend go to school by train every day.",
+      "wrong": "go"
+    },
+    {
+      "text": "She don't like reading magazines.",
+      "wrong": "don't"
+    },
+    {
+      "text": "We watches TV in the evening.",
+      "wrong": "watches"
+    },
+    {
+      "text": "Does he plays computer games after school?",
+      "wrong": "plays"
+    },
+    {
+      "text": "My parents works in a big office.",
+      "wrong": "works"
+    },
+    {
+      "text": "Teenagers uses the Internet every day.",
+      "wrong": "uses"
+    },
+    {
+      "text": "He don't do his homework at night.",
+      "wrong": "don't"
+    },
+    {
+      "text": "Do your sister listens to music in the morning?",
+      "wrong": "listens"
+    },
+    {
+      "text": "My teacher give us tests every Friday.",
+      "wrong": "give"
+    },
+    {
+      "text": "They doesn't go to the sports centre.",
+      "wrong": "doesn't"
+    },
+    {
+      "text": "The bus arrive at eight o'clock every day.",
+      "wrong": "arrive"
+    },
+    {
+      "text": "I doesn't live in the city centre.",
+      "wrong": "doesn't"
+    },
+    {
+      "text": "Our classmates studies French at school.",
+      "wrong": "studies"
+    },
+    {
+      "text": "Does your parents work at the weekend?",
+      "wrong": "Does"
+    },
+    {
+      "text": "She go to bed very late on weekdays.",
+      "wrong": "go"
+    },
+    {
+      "text": "My friend goes to school by train every day.",
+      "wrong": null
+    },
+    {
+      "text": "They don't go to the sports centre.",
+      "wrong": null
+    }
+  ]
+}

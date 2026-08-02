@@ -1,0 +1,63 @@
+{
+  "id": "ps9_meaning_sort",
+  "title": "🗂️ Раздели на группы значений",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Распредели предложения по группам значений Present Simple: постоянная ситуация, расписание, повторяющееся действие, факт или стативный глагол.",
+  "columns": [
+    {
+      "id": "situation",
+      "label": "Постоянная ситуация"
+    },
+    {
+      "id": "schedule",
+      "label": "Расписание / программа"
+    },
+    {
+      "id": "repeated",
+      "label": "Повторяющееся действие"
+    },
+    {
+      "id": "fact",
+      "label": "Общеизвестный факт"
+    },
+    {
+      "id": "stative",
+      "label": "Стативный глагол"
+    }
+  ],
+  "items": [
+    {
+      "verb": "My parents work in a hotel.",
+      "answer": "situation"
+    },
+    {
+      "verb": "The bus arrives at 8:00.",
+      "answer": "schedule"
+    },
+    {
+      "verb": "Children often wear costumes at carnival.",
+      "answer": "repeated"
+    },
+    {
+      "verb": "The sun rises in the east.",
+      "answer": "fact"
+    },
+    {
+      "verb": "I know this festival very well.",
+      "answer": "stative"
+    },
+    {
+      "verb": "We go to the countryside every summer.",
+      "answer": "repeated"
+    },
+    {
+      "verb": "The parade starts at 5 p.m.",
+      "answer": "schedule"
+    },
+    {
+      "verb": "The Earth goes around the Sun.",
+      "answer": "fact"
+    }
+  ]
+}

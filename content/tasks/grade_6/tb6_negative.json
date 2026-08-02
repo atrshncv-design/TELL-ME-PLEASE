@@ -1,0 +1,69 @@
+{
+  "id": "tb6_negative",
+  "title": "🚫 Анти-реакция: скажи наоборот",
+  "category": "to-be",
+  "type": "fill-in",
+  "description": "Сделай предложение отрицательным: вставь isn't, aren't или am not.",
+  "items": [
+    {
+      "sentence": "He ___ a famous actor.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "The bananas ___ green.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "I ___ late for school.",
+      "answer": "am not"
+    },
+    {
+      "sentence": "The sink ___ broken.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "We ___ ready for the test.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "The weather ___ sunny.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "You ___ in the kitchen.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "The soup ___ hot.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "She ___ thirsty.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "The posters ___ on the wall.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "It ___ a dangerous animal.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "My clothes ___ dirty.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "They ___ interested in music.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "The museum ___ open.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "You ___ a bad student.",
+      "answer": "aren't"
+    }
+  ]
+}

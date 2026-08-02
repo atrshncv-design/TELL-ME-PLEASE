@@ -1,0 +1,84 @@
+{
+  "id": "ps7_tobe_star",
+  "title": "⭐ Интервью со звездой",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Журналист берёт интервью у звезды. Составь вопросы: вставь пропущенную форму глагола to be.",
+  "items": [
+    {
+      "sentence": "Where ___ you from?",
+      "answer": "are",
+      "hint": "(Where / you / from?)"
+    },
+    {
+      "sentence": "How old ___ you last year?",
+      "answer": "were",
+      "hint": "(How old / you / last year?)"
+    },
+    {
+      "sentence": "___ your parents famous too?",
+      "answer": "Are",
+      "hint": "(Your parents / famous too?)"
+    },
+    {
+      "sentence": "What ___ your favorite food?",
+      "answer": "is",
+      "hint": "(What / your favorite food?)"
+    },
+    {
+      "sentence": "___ you happy with your life?",
+      "answer": "Are",
+      "hint": "(You / happy with your life?)"
+    },
+    {
+      "sentence": "Where ___ you last summer?",
+      "answer": "were",
+      "hint": "(Where / you / last summer?)"
+    },
+    {
+      "sentence": "___ the fans crazy?",
+      "answer": "Are",
+      "hint": "(The fans / crazy?)"
+    },
+    {
+      "sentence": "___ it a difficult job?",
+      "answer": "Is",
+      "hint": "(It / a difficult job?)"
+    },
+    {
+      "sentence": "___ you a sociable person?",
+      "answer": "Are",
+      "hint": "(You / a sociable person?)"
+    },
+    {
+      "sentence": "___ your last film interesting?",
+      "answer": "Was",
+      "hint": "(Your last film / interesting?)"
+    },
+    {
+      "sentence": "What ___ your hobbies?",
+      "answer": "are",
+      "hint": "(What / your hobbies?)"
+    },
+    {
+      "sentence": "___ you good at singing?",
+      "answer": "Are",
+      "hint": "(You / good at singing?)"
+    },
+    {
+      "sentence": "___ the tickets expensive?",
+      "answer": "Were",
+      "hint": "(The tickets / expensive?)"
+    },
+    {
+      "sentence": "___ you tired now?",
+      "answer": "Are",
+      "hint": "(You / tired now?)"
+    },
+    {
+      "sentence": "It ___ a pleasure to talk to you!",
+      "answer": "is",
+      "hint": "(It / a pleasure to talk to you!)"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "pc6_ai_friend",
+  "title": "🤖 Кибер-друг: спроси меня!",
+  "category": "grammar",
+  "type": "voice-chat",
+  "description": "Поговори с 12-летним ботом из умного дома: спроси о его привычках (Present Simple) и о том, что он делает прямо сейчас (Present Continuous).",
+  "task_context": "Hello! Let's speak English. Act like a 12-year-old boy or girl who lives in a smart house. You love gadgets, pizza and video games. Keep your answers simple (A1 level). Ask the student questions back. Answer in short sentences.",
+  "sections": [
+    {
+      "name": "🍕 Привычки и рутина",
+      "questions": [
+        "What do you usually do after school?",
+        "Do you eat fast food every day?",
+        "What is your favorite room in your house?",
+        "Do you help your parents with the housework?",
+        "How often do you play computer games?",
+        "Do you have a pet?"
+      ]
+    },
+    {
+      "name": "📱 Прямо сейчас",
+      "questions": [
+        "What are you doing right now?",
+        "Are you sitting in your bedroom at the moment?",
+        "Are you listening to music while talking to me?",
+        "What are you eating right now?",
+        "Are you wearing a school uniform now?"
+      ]
+    },
+    {
+      "name": "⚖️ Сравни: обычно и сейчас",
+      "questions": [
+        "Do you usually drink cola, or are you drinking water right now?",
+        "What do you usually do on Sundays, and what are you doing this Sunday?",
+        "Do you always text your friends, or are you playing a game now?",
+        "Is your pet sleeping now, or is it playing?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "pc7_svetofor_cards",
+  "title": "⚡ Светофор: am/is/are + V-ing",
+  "category": "grammar",
+  "type": "flashcards",
+  "description": "Переверни карточку и скажи полное предложение в Present Continuous (am/is/are + глагол с -ing).",
+  "cards": [
+    {
+      "front": "I / travel",
+      "back": "I am traveling"
+    },
+    {
+      "front": "She / explore",
+      "back": "She is exploring"
+    },
+    {
+      "front": "We / survive",
+      "back": "We are surviving"
+    },
+    {
+      "front": "He / design",
+      "back": "He is designing"
+    },
+    {
+      "front": "They / broadcast",
+      "back": "They are broadcasting"
+    },
+    {
+      "front": "It / rain",
+      "back": "It is raining"
+    },
+    {
+      "front": "You / download",
+      "back": "You are downloading"
+    },
+    {
+      "front": "The journalist / report",
+      "back": "The journalist is reporting"
+    },
+    {
+      "front": "The guide / describe",
+      "back": "The guide is describing"
+    },
+    {
+      "front": "The children / chat",
+      "back": "The children are chatting"
+    },
+    {
+      "front": "Tom / drive",
+      "back": "Tom is driving"
+    },
+    {
+      "front": "We / surf the Net",
+      "back": "We are surfing the Net"
+    },
+    {
+      "front": "The actor / perform",
+      "back": "The actor is performing"
+    },
+    {
+      "front": "I / upload",
+      "back": "I am uploading"
+    },
+    {
+      "front": "You / text",
+      "back": "You are texting"
+    }
+  ]
+}

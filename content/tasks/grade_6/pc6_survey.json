@@ -1,0 +1,39 @@
+{
+  "id": "pc6_survey",
+  "title": "📱 Цифровой опросник: что ты делаешь?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "description": "Ответь голосом на вопросы: что ты делаешь прямо сейчас? Используй Present Continuous.",
+  "sections": [
+    {
+      "name": "Прямо сейчас",
+      "questions": [
+        "What are you wearing right now?",
+        "Are you sitting or standing?",
+        "What are you holding in your hands?",
+        "Are you listening to music?",
+        "Are you writing notes?",
+        "Are you thinking about lunch?"
+      ]
+    },
+    {
+      "name": "Вокруг тебя",
+      "questions": [
+        "Is your teacher looking at you now?",
+        "What is your classmate doing right now?",
+        "Is the door closed?",
+        "Is your friend sitting next to you?",
+        "What is the weather like today?"
+      ]
+    },
+    {
+      "name": "О себе",
+      "questions": [
+        "Are you feeling tired?",
+        "Are you using a computer or a phone?",
+        "Are you speaking English now?",
+        "Are you enjoying this lesson?"
+      ]
+    }
+  ]
+}

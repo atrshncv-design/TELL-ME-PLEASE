@@ -1,0 +1,69 @@
+{
+  "id": "pc8_trends",
+  "title": "🔄 Тенденции и перемены",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Тренируем рефлекс на слова-маркеры изменений (rapidly, every year, these days). Раскрой скобки в Present Continuous.",
+  "items": [
+    {
+      "sentence": "The climate ___ (change) rapidly.",
+      "answer": "is changing"
+    },
+    {
+      "sentence": "Technology ___ (develop) very fast.",
+      "answer": "is developing"
+    },
+    {
+      "sentence": "More teenagers ___ (become) interested in ecology.",
+      "answer": "are becoming"
+    },
+    {
+      "sentence": "The internet ___ (get) faster every year.",
+      "answer": "is getting"
+    },
+    {
+      "sentence": "Pollution ___ (increase) in big cities.",
+      "answer": "is increasing"
+    },
+    {
+      "sentence": "Traditional newspapers ___ (disappear) slowly.",
+      "answer": "are disappearing"
+    },
+    {
+      "sentence": "People ___ (live) longer these days.",
+      "answer": "are living"
+    },
+    {
+      "sentence": "The sea level ___ (rise).",
+      "answer": "is rising"
+    },
+    {
+      "sentence": "Our town ___ (grow) quickly.",
+      "answer": "is growing"
+    },
+    {
+      "sentence": "Virtual reality ___ (become) more popular.",
+      "answer": "is becoming"
+    },
+    {
+      "sentence": "The number of internet users ___ (increase) daily.",
+      "answer": "is increasing"
+    },
+    {
+      "sentence": "Animals ___ (lose) their habitats.",
+      "answer": "are losing"
+    },
+    {
+      "sentence": "Communication ___ (get) easier.",
+      "answer": "is getting"
+    },
+    {
+      "sentence": "Robots ___ (replace) factory workers.",
+      "answer": "are replacing"
+    },
+    {
+      "sentence": "The environment ___ (suffer) from our actions.",
+      "answer": "is suffering"
+    }
+  ]
+}

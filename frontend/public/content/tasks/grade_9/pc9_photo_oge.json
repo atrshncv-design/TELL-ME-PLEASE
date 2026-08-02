@@ -1,0 +1,42 @@
+{
+  "id": "pc9_photo_oge",
+  "title": "📸 Задание 3 ОГЭ: опиши фото",
+  "category": "speaking",
+  "type": "fill-in-and-speak",
+  "description": "Опиши фотографию по плану ОГЭ: место, люди, действия (Present Continuous!), чувства. Заполни пропуски и расскажи вслух.",
+  "sections": [
+    {
+      "name": "📍 Место (place)",
+      "prompts": [
+        "The photo was taken in ...",
+        "It was taken ... (in a park / on the street / at a stadium)",
+        "I can see ... in the background"
+      ]
+    },
+    {
+      "name": "👥 Люди (people)",
+      "prompts": [
+        "There is / are ... in the photo",
+        "I can see a group of ...",
+        "They look like ..."
+      ]
+    },
+    {
+      "name": "🎬 Действия (actions)",
+      "prompts": [
+        "They are ... (Present Continuous!)",
+        "One boy is ...",
+        "A girl is ...",
+        "They are wearing ..."
+      ]
+    },
+    {
+      "name": "😊 Чувства (feelings)",
+      "prompts": [
+        "They look ... (happy / proud)",
+        "They seem ...",
+        "I think they are ..."
+      ]
+    }
+  ]
+}

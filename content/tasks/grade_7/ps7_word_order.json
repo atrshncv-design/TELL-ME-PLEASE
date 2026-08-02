@@ -1,0 +1,144 @@
+{
+  "id": "ps7_word_order",
+  "title": "🧩 Построй предложения",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Слова перепутаны! Выбери правильный порядок слов, чтобы получилось предложение в Present Simple.",
+  "items": [
+    {
+      "question": "usually / my classmates / after school / play / basketball",
+      "options": [
+        "My classmates usually play basketball after school.",
+        "My classmates play usually basketball after school.",
+        "Usually my classmates play basketball after school."
+      ],
+      "answer": "My classmates usually play basketball after school."
+    },
+    {
+      "question": "English / at school / we / three times a week / have",
+      "options": [
+        "We have English at school three times a week.",
+        "We have English three times a week at school.",
+        "We at school have English three times a week."
+      ],
+      "answer": "We have English at school three times a week."
+    },
+    {
+      "question": "listens / to music / in the evening / my sister",
+      "options": [
+        "My sister listens to music in the evening.",
+        "My sister listens in the evening to music.",
+        "In the evening my sister listens to music."
+      ],
+      "answer": "My sister listens to music in the evening."
+    },
+    {
+      "question": "the Internet / every day / use / teenagers",
+      "options": [
+        "Teenagers use the Internet every day.",
+        "Teenagers every day use the Internet.",
+        "The Internet teenagers use every day."
+      ],
+      "answer": "Teenagers use the Internet every day."
+    },
+    {
+      "question": "my parents / in the city centre / work",
+      "options": [
+        "My parents work in the city centre.",
+        "My parents in the city centre work.",
+        "Work my parents in the city centre."
+      ],
+      "answer": "My parents work in the city centre."
+    },
+    {
+      "question": "goes / to the sports club / twice a week / my friend",
+      "options": [
+        "My friend goes to the sports club twice a week.",
+        "My friend goes twice a week to the sports club.",
+        "Twice a week my friend goes to the sports club."
+      ],
+      "answer": "My friend goes to the sports club twice a week."
+    },
+    {
+      "question": "at night / watch / horror films / they",
+      "options": [
+        "They watch horror films at night.",
+        "They watch at night horror films.",
+        "At night they watch horror films."
+      ],
+      "answer": "They watch horror films at night."
+    },
+    {
+      "question": "read / before bedtime / I / books",
+      "options": [
+        "I read books before bedtime.",
+        "I read before bedtime books.",
+        "Before bedtime I read books."
+      ],
+      "answer": "I read books before bedtime."
+    },
+    {
+      "question": "on Sundays / visit / we / our grandparents",
+      "options": [
+        "We visit our grandparents on Sundays.",
+        "We visit on Sundays our grandparents.",
+        "On Sundays we visit our grandparents."
+      ],
+      "answer": "We visit our grandparents on Sundays."
+    },
+    {
+      "question": "do / in the morning / exercises / he",
+      "options": [
+        "He does exercises in the morning.",
+        "He does in the morning exercises.",
+        "In the morning he does exercises."
+      ],
+      "answer": "He does exercises in the morning."
+    },
+    {
+      "question": "chat / online / about homework / students",
+      "options": [
+        "Students chat online about homework.",
+        "Students chat about homework online.",
+        "Online students chat about homework."
+      ],
+      "answer": "Students chat online about homework."
+    },
+    {
+      "question": "studies / very hard / for tests / she",
+      "options": [
+        "She studies very hard for tests.",
+        "She studies for tests very hard.",
+        "Very hard she studies for tests."
+      ],
+      "answer": "She studies very hard for tests."
+    },
+    {
+      "question": "go / by bus / to school / we",
+      "options": [
+        "We go to school by bus.",
+        "We go by bus to school.",
+        "By bus we go to school."
+      ],
+      "answer": "We go to school by bus."
+    },
+    {
+      "question": "play / in a band / the guitar / my cousin",
+      "options": [
+        "My cousin plays the guitar in a band.",
+        "My cousin plays in a band the guitar.",
+        "In a band my cousin plays the guitar."
+      ],
+      "answer": "My cousin plays the guitar in a band."
+    },
+    {
+      "question": "watch / videos / on their phones / teenagers",
+      "options": [
+        "Teenagers watch videos on their phones.",
+        "Teenagers watch on their phones videos.",
+        "On their phones teenagers watch videos."
+      ],
+      "answer": "Teenagers watch videos on their phones."
+    }
+  ]
+}

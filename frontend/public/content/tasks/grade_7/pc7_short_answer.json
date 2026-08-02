@@ -1,0 +1,129 @@
+{
+  "id": "pc7_short_answer",
+  "title": "🗣️ Короткий ответ",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Ответь коротко: Yes, I am / No, he isn't и так далее. Не перепутай с do/does!",
+  "items": [
+    {
+      "question": "Are you traveling?",
+      "options": [
+        "Yes, I am",
+        "Yes, I do"
+      ],
+      "answer": "Yes, I am"
+    },
+    {
+      "question": "Is he exploring?",
+      "options": [
+        "No, he isn't",
+        "No, he doesn't"
+      ],
+      "answer": "No, he isn't"
+    },
+    {
+      "question": "Are they broadcasting?",
+      "options": [
+        "Yes, they are",
+        "Yes, they do"
+      ],
+      "answer": "Yes, they are"
+    },
+    {
+      "question": "Is she performing?",
+      "options": [
+        "Yes, she is",
+        "Yes, she does"
+      ],
+      "answer": "Yes, she is"
+    },
+    {
+      "question": "Are we watching TV?",
+      "options": [
+        "No, we aren't",
+        "No, we don't"
+      ],
+      "answer": "No, we aren't"
+    },
+    {
+      "question": "Is the dog barking?",
+      "options": [
+        "Yes, it is",
+        "Yes, it does"
+      ],
+      "answer": "Yes, it is"
+    },
+    {
+      "question": "Are you driving?",
+      "options": [
+        "No, I am not",
+        "No, I don't"
+      ],
+      "answer": "No, I am not"
+    },
+    {
+      "question": "Is it raining?",
+      "options": [
+        "Yes, it is",
+        "Yes, it does"
+      ],
+      "answer": "Yes, it is"
+    },
+    {
+      "question": "Is your mum downloading?",
+      "options": [
+        "Yes, she is",
+        "Yes, she does"
+      ],
+      "answer": "Yes, she is"
+    },
+    {
+      "question": "Are the boys fighting?",
+      "options": [
+        "No, they aren't",
+        "No, they don't"
+      ],
+      "answer": "No, they aren't"
+    },
+    {
+      "question": "Is he doing homework?",
+      "options": [
+        "Yes, he is",
+        "Yes, he does"
+      ],
+      "answer": "Yes, he is"
+    },
+    {
+      "question": "Are we sitting?",
+      "options": [
+        "Yes, we are",
+        "Yes, we do"
+      ],
+      "answer": "Yes, we are"
+    },
+    {
+      "question": "Is the cat climbing?",
+      "options": [
+        "No, it isn't",
+        "No, it doesn't"
+      ],
+      "answer": "No, it isn't"
+    },
+    {
+      "question": "Am I listening?",
+      "options": [
+        "Yes, you are",
+        "Yes, you do"
+      ],
+      "answer": "Yes, you are"
+    },
+    {
+      "question": "Is she performing?",
+      "options": [
+        "No, she isn't",
+        "No, she doesn't"
+      ],
+      "answer": "No, she isn't"
+    }
+  ]
+}

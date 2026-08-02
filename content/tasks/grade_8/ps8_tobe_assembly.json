@@ -1,0 +1,69 @@
+{
+  "id": "ps8_tobe_assembly",
+  "title": "🧩 Сборка контекста: to be",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола to be (am, is, are, was, were, will be, has been, is being).",
+  "items": [
+    {
+      "sentence": "The internet ___ a great source of information. (is)",
+      "answer": "is"
+    },
+    {
+      "sentence": "The film ___ directed by a famous director last year. (was)",
+      "answer": "was"
+    },
+    {
+      "sentence": "I ___ interested in journalism. (am)",
+      "answer": "am"
+    },
+    {
+      "sentence": "Yesterday at 6 PM, the students ___ taking their exam. (were)",
+      "answer": "were"
+    },
+    {
+      "sentence": "Global warming ___ caused by pollution. (is)",
+      "answer": "is"
+    },
+    {
+      "sentence": "My brother ___ a lawyer for 5 years. (has been)",
+      "answer": "has been"
+    },
+    {
+      "sentence": "Next month, a new art gallery ___ opened in our city. (will be)",
+      "answer": "will be"
+    },
+    {
+      "sentence": "___ you ready for the test? (Are)",
+      "answer": "Are"
+    },
+    {
+      "sentence": "The new smartphone ___ released next week. (will be)",
+      "answer": "will be"
+    },
+    {
+      "sentence": "The environment ___ destroyed by human activity. (is being)",
+      "answer": "is being"
+    },
+    {
+      "sentence": "We ___ friends since childhood. (have been)",
+      "answer": "have been"
+    },
+    {
+      "sentence": "The message ___ sent two hours ago. (was)",
+      "answer": "was"
+    },
+    {
+      "sentence": "The Olympic Games ___ held every four years. (are)",
+      "answer": "are"
+    },
+    {
+      "sentence": "She ___ a talented painter. (is)",
+      "answer": "is"
+    },
+    {
+      "sentence": "The crime ___ already solved by the police. (has been)",
+      "answer": "has been"
+    }
+  ]
+}

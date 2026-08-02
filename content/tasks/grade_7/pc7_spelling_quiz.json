@@ -1,0 +1,144 @@
+{
+  "id": "pc7_spelling_quiz",
+  "title": "🛑 Ловушка для глаз",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Только один вариант написания -ing правильный. Остальные — ловушки! Найди верный.",
+  "items": [
+    {
+      "question": "run",
+      "options": [
+        "runing",
+        "running",
+        "runnning"
+      ],
+      "answer": "running"
+    },
+    {
+      "question": "make",
+      "options": [
+        "makeing",
+        "making",
+        "macking"
+      ],
+      "answer": "making"
+    },
+    {
+      "question": "swim",
+      "options": [
+        "swiming",
+        "swimming",
+        "swimmng"
+      ],
+      "answer": "swimming"
+    },
+    {
+      "question": "explore",
+      "options": [
+        "exploreing",
+        "exploring",
+        "explring"
+      ],
+      "answer": "exploring"
+    },
+    {
+      "question": "sit",
+      "options": [
+        "siting",
+        "sitting",
+        "sittting"
+      ],
+      "answer": "sitting"
+    },
+    {
+      "question": "dive",
+      "options": [
+        "diveing",
+        "divng",
+        "diving"
+      ],
+      "answer": "diving"
+    },
+    {
+      "question": "chat",
+      "options": [
+        "chating",
+        "chatting",
+        "chattting"
+      ],
+      "answer": "chatting"
+    },
+    {
+      "question": "hike",
+      "options": [
+        "hikeing",
+        "hiking",
+        "hikking"
+      ],
+      "answer": "hiking"
+    },
+    {
+      "question": "write",
+      "options": [
+        "writeing",
+        "writing",
+        "writting"
+      ],
+      "answer": "writing"
+    },
+    {
+      "question": "lie",
+      "options": [
+        "lieing",
+        "laying",
+        "lying"
+      ],
+      "answer": "lying"
+    },
+    {
+      "question": "travel",
+      "options": [
+        "traveling",
+        "travelling",
+        "travelizing"
+      ],
+      "answer": "travelling"
+    },
+    {
+      "question": "take",
+      "options": [
+        "takeing",
+        "taking",
+        "takking"
+      ],
+      "answer": "taking"
+    },
+    {
+      "question": "stop",
+      "options": [
+        "stoping",
+        "stopping",
+        "stpping"
+      ],
+      "answer": "stopping"
+    },
+    {
+      "question": "surf",
+      "options": [
+        "surfing",
+        "surffing",
+        "surphing"
+      ],
+      "answer": "surfing"
+    },
+    {
+      "question": "die",
+      "options": [
+        "dieing",
+        "dying",
+        "diing"
+      ],
+      "answer": "dying"
+    }
+  ]
+}

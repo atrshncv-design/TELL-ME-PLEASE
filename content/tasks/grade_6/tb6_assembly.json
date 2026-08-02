@@ -1,0 +1,69 @@
+{
+  "id": "tb6_assembly",
+  "title": "🧩 Сборка: am / is / are",
+  "category": "to-be",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола to be (am / is / are). Лексика из Spotlight 6: еда, комната, чувства.",
+  "items": [
+    {
+      "sentence": "The milk ___ in the fridge.",
+      "answer": "is"
+    },
+    {
+      "sentence": "My trainers ___ under the bed.",
+      "answer": "are"
+    },
+    {
+      "sentence": "I ___ hungry. Can I have a sandwich?",
+      "answer": "am"
+    },
+    {
+      "sentence": "The curtains ___ red and blue.",
+      "answer": "are"
+    },
+    {
+      "sentence": "London ___ a beautiful city.",
+      "answer": "is"
+    },
+    {
+      "sentence": "We ___ tired after the PE lesson.",
+      "answer": "are"
+    },
+    {
+      "sentence": "The pizza ___ very tasty.",
+      "answer": "is"
+    },
+    {
+      "sentence": "___ you good at Maths?",
+      "answer": "Are"
+    },
+    {
+      "sentence": "My sister ___ afraid of spiders.",
+      "answer": "is"
+    },
+    {
+      "sentence": "The books ___ on the shelf.",
+      "answer": "are"
+    },
+    {
+      "sentence": "It ___ very cold today.",
+      "answer": "is"
+    },
+    {
+      "sentence": "My favorite food ___ pasta.",
+      "answer": "is"
+    },
+    {
+      "sentence": "The glasses ___ on the kitchen table.",
+      "answer": "are"
+    },
+    {
+      "sentence": "They ___ from Canada.",
+      "answer": "are"
+    },
+    {
+      "sentence": "The sink ___ in the bathroom.",
+      "answer": "is"
+    }
+  ]
+}

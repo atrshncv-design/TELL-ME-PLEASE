@@ -1,0 +1,75 @@
+{
+  "id": "ps9_translation_pairs",
+  "title": "🔗 Переведи на английский",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Соедини русское предложение с английским переводом.",
+  "columns": [
+    {
+      "id": "t1",
+      "label": "My family celebrates Christmas every year."
+    },
+    {
+      "id": "t2",
+      "label": "People wear costumes at the carnival."
+    },
+    {
+      "id": "t3",
+      "label": "She doesn't believe in superstitions."
+    },
+    {
+      "id": "t4",
+      "label": "The parade starts at noon."
+    },
+    {
+      "id": "t5",
+      "label": "We decorate the house before the festival."
+    },
+    {
+      "id": "t6",
+      "label": "My grandpa carries a lucky coin."
+    },
+    {
+      "id": "t7",
+      "label": "There are fireworks at the end of the celebration."
+    },
+    {
+      "id": "t8",
+      "label": "Our town organises big celebrations in summer."
+    }
+  ],
+  "items": [
+    {
+      "verb": "Моя семья каждый год празднует Рождество.",
+      "answer": "t1"
+    },
+    {
+      "verb": "Люди надевают костюмы на карнавал.",
+      "answer": "t2"
+    },
+    {
+      "verb": "Она не верит в суеверия.",
+      "answer": "t3"
+    },
+    {
+      "verb": "Парад начинается в полдень.",
+      "answer": "t4"
+    },
+    {
+      "verb": "Мы украшаем дом перед праздником.",
+      "answer": "t5"
+    },
+    {
+      "verb": "Мой дедушка носит счастливую монету.",
+      "answer": "t6"
+    },
+    {
+      "verb": "В конце праздника есть фейерверк.",
+      "answer": "t7"
+    },
+    {
+      "verb": "Наш город организует большие празднования летом.",
+      "answer": "t8"
+    }
+  ]
+}

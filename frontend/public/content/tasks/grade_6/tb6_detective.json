@@ -1,0 +1,73 @@
+{
+  "id": "tb6_detective",
+  "title": "🕵️ Детектив: фоторобот",
+  "category": "listening",
+  "type": "role-play",
+  "description": "Разыграй по ролям: полицейский (ты) расспрашивает свидетеля (ИИ) о грабителе. Задавай вопросы и слушай ответы — всё про to be!",
+  "dialogue": [
+    {
+      "speaker": "interviewer",
+      "text": "Good afternoon! I'm a police officer. Tell me about the robber. Is he tall?"
+    },
+    {
+      "speaker": "witness",
+      "text": "Yes, he is tall."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is he old?"
+    },
+    {
+      "speaker": "witness",
+      "text": "No, he isn't. He is young."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "What colour is his hair?"
+    },
+    {
+      "speaker": "witness",
+      "text": "His hair is black."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Are his eyes blue?"
+    },
+    {
+      "speaker": "witness",
+      "text": "No, his eyes are brown."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is he dangerous?"
+    },
+    {
+      "speaker": "witness",
+      "text": "Yes, he is. He is very aggressive."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "What are his clothes like?"
+    },
+    {
+      "speaker": "witness",
+      "text": "His clothes are dark."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Are there any tattoos?"
+    },
+    {
+      "speaker": "witness",
+      "text": "Yes, there are tattoos on his arm."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Are you scared?"
+    },
+    {
+      "speaker": "witness",
+      "text": "Yes, I am very scared!"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "ps9_tobe_time_machine",
+  "title": "⏳ Машина времени: been или being?",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Раскрой скобки, используя to be в нужной форме: Present/Past Perfect Passive или Continuous Passive.",
+  "items": [
+    {
+      "sentence": "The room ___ for 2 hours already.",
+      "options": [
+        "has been painted",
+        "was being painted",
+        "was painted"
+      ],
+      "answer": "has been painted"
+    },
+    {
+      "sentence": "The room ___ when I came home.",
+      "options": [
+        "was being painted",
+        "has been painted",
+        "was painted"
+      ],
+      "answer": "was being painted"
+    },
+    {
+      "sentence": "The car ___ at the moment.",
+      "options": [
+        "is being repaired",
+        "has been repaired",
+        "was repaired"
+      ],
+      "answer": "is being repaired"
+    },
+    {
+      "sentence": "The car ___ by 5 PM yesterday.",
+      "options": [
+        "had been repaired",
+        "has been repaired",
+        "was repaired"
+      ],
+      "answer": "had been repaired"
+    },
+    {
+      "sentence": "The text ___ just.",
+      "options": [
+        "has been translated",
+        "was being translated",
+        "was translated"
+      ],
+      "answer": "has been translated"
+    },
+    {
+      "sentence": "The text ___ at 5 PM yesterday.",
+      "options": [
+        "was being translated",
+        "has been translated",
+        "was translated"
+      ],
+      "answer": "was being translated"
+    },
+    {
+      "sentence": "The house ___ by next year.",
+      "options": [
+        "will have been built",
+        "has been built",
+        "is being built"
+      ],
+      "answer": "will have been built"
+    },
+    {
+      "sentence": "The house ___ since last year.",
+      "options": [
+        "has been built",
+        "will have been built",
+        "was built"
+      ],
+      "answer": "has been built"
+    },
+    {
+      "sentence": "The problem ___ now.",
+      "options": [
+        "is being discussed",
+        "has been discussed",
+        "was discussed"
+      ],
+      "answer": "is being discussed"
+    },
+    {
+      "sentence": "The problem ___ for an hour before the boss arrived.",
+      "options": [
+        "had been discussed",
+        "is being discussed",
+        "has been discussed"
+      ],
+      "answer": "had been discussed"
+    },
+    {
+      "sentence": "___ the letters been sent yet?",
+      "options": [
+        "Have",
+        "Has",
+        "Are"
+      ],
+      "answer": "Have"
+    },
+    {
+      "sentence": "The letters ___ at 5 PM tomorrow.",
+      "options": [
+        "will be sent",
+        "will have been sent",
+        "are being sent"
+      ],
+      "answer": "will be sent"
+    },
+    {
+      "sentence": "The exhibition ___ already.",
+      "options": [
+        "has been opened",
+        "was being opened",
+        "is being opened"
+      ],
+      "answer": "has been opened"
+    },
+    {
+      "sentence": "The exhibition ___ at 10 AM yesterday.",
+      "options": [
+        "was opened",
+        "has been opened",
+        "is being opened"
+      ],
+      "answer": "was opened"
+    },
+    {
+      "sentence": "The project ___ by the end of the month.",
+      "options": [
+        "will have been finished",
+        "is being finished",
+        "has been finished"
+      ],
+      "answer": "will have been finished"
+    }
+  ]
+}

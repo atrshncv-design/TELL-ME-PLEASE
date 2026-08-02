@@ -1,21 +1,305 @@
 {
   "grade": 8,
   "exercises": [
-    {"file": "grammar_endings_sort.json", "title": "Сортировка окончаний", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "grammar_endings_quiz.json", "title": "Окончания: викторина", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_v1_vs_quiz.json", "title": "V1 / Vs: выбери форму", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_roulette.json", "title": "Рулетка: все части предложения", "category": "grammar", "type": "fill-in"},
-    {"file": "grammar_joke_quiz.json", "title": "Шутка: V1/Vs", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_negation.json", "title": "Отрицание", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_yes_no_questions.json", "title": "Общие вопросы Do/Does", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_wh_questions.json", "title": "Специальные вопросы", "category": "grammar", "type": "fill-in"},
-    {"file": "grammar_ladder.json", "title": "Лесенка: день блогера и привычки подростка", "category": "grammar", "type": "ladder"},
-    {"file": "grammar_verb_forms_quiz.json", "title": "Викторина: вставь форму глагола", "category": "grammar", "type": "fill-in"},
-    {"file": "grammar_adverbs_build.json", "title": "Наречия: построй предложения", "category": "grammar", "type": "build-sentence"},
-    {"file": "grammar_adverbs_place.json", "title": "Наречия: вставь в правильное место", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "story_harry_potter_routine.json", "title": "Распорядок дня блогера", "category": "vocabulary", "type": "fill-in"},
-    {"file": "story_harry_potter_interview.json", "title": "Интервью со звездой", "category": "listening", "type": "role-play"},
-    {"file": "speaking_about_yourself.json", "title": "Расскажи о себе: технологии, хобби и планы", "category": "speaking", "type": "fill-in-and-speak"},
-    {"file": "speaking_peer_conversation.json", "title": "Поговори со сверстником о предпочтениях", "category": "speaking", "type": "voice-chat"}
+    {
+      "file": "grammar_endings_sort.json",
+      "title": "Сортировка окончаний",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "grammar_endings_quiz.json",
+      "title": "Окончания: викторина",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_v1_vs_quiz.json",
+      "title": "V1 / Vs: выбери форму",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_roulette.json",
+      "title": "Рулетка: все части предложения",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "grammar_joke_quiz.json",
+      "title": "Шутка: V1/Vs",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_negation.json",
+      "title": "Отрицание",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_yes_no_questions.json",
+      "title": "Общие вопросы Do/Does",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_wh_questions.json",
+      "title": "Специальные вопросы",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "grammar_ladder.json",
+      "title": "Лесенка: день блогера и привычки подростка",
+      "category": "grammar",
+      "type": "ladder"
+    },
+    {
+      "file": "grammar_verb_forms_quiz.json",
+      "title": "Викторина: вставь форму глагола",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "grammar_adverbs_build.json",
+      "title": "Наречия: построй предложения",
+      "category": "grammar",
+      "type": "build-sentence"
+    },
+    {
+      "file": "grammar_adverbs_place.json",
+      "title": "Наречия: вставь в правильное место",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "story_harry_potter_routine.json",
+      "title": "Распорядок дня блогера",
+      "category": "vocabulary",
+      "type": "fill-in"
+    },
+    {
+      "file": "story_harry_potter_interview.json",
+      "title": "Интервью со звездой",
+      "category": "listening",
+      "type": "role-play"
+    },
+    {
+      "file": "speaking_about_yourself.json",
+      "title": "Расскажи о себе: технологии, хобби и планы",
+      "category": "speaking",
+      "type": "fill-in-and-speak"
+    },
+    {
+      "file": "speaking_peer_conversation.json",
+      "title": "Поговори со сверстником о предпочтениях",
+      "category": "speaking",
+      "type": "voice-chat"
+    },
+    {
+      "file": "ps8_lie_detector.json",
+      "title": "🕵️ Детектор лжи: Present Simple",
+      "category": "grammar",
+      "type": "click-mistake"
+    },
+    {
+      "file": "ps8_roommate.json",
+      "title": "🛋️ Тест на совместимость: сосед по комнате",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps8_blogger_cloze.json",
+      "title": "📱 Блогер-миллионник: день Макса",
+      "category": "grammar",
+      "type": "cloze"
+    },
+    {
+      "file": "ps8_myths.json",
+      "title": "🚀 Мифы о подростках: согласись или поспорь",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps8_jobs.json",
+      "title": "🕵️‍♀️ Угадай профессию",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps8_gossip.json",
+      "title": "🗣️ Сплетни: расскажи о друге",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps8_truth_or_dare.json",
+      "title": "🎲 Правда или действие: наречия частотности",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps8_alien_report.json",
+      "title": "👽 Репортаж пришельца: порядок слов",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps8_health_quiz.json",
+      "title": "🏃‍♂️ ЗОЖ-анкета: Find someone who...",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps8_star_interview.json",
+      "title": "⭐ Интервью со звездой",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps8_peer_talk.json",
+      "title": "💬 Поговори со сверстником: технологии, хобби и планы",
+      "category": "speaking",
+      "type": "voice-chat"
+    },
+    {
+      "file": "ps8_tobe_wheel.json",
+      "title": "⚡ Светофор: все времена to be (колесо)",
+      "category": "grammar",
+      "type": "wheel"
+    },
+    {
+      "file": "ps8_tobe_assembly.json",
+      "title": "🧩 Сборка контекста: to be",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps8_tobe_filter.json",
+      "title": "🧠 Фильтр: to be или смысловой глагол?",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps8_tobe_time_machine.json",
+      "title": "⏳ Машина времени: to be в трёх временах",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps8_tobe_tech_cloze.json",
+      "title": "🌍 Статья о технологиях: to be",
+      "category": "grammar",
+      "type": "cloze"
+    },
+    {
+      "file": "ps8_tobe_short_answer.json",
+      "title": "🗣️ Рефлекс короткого ответа: to be",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps8_detective.json",
+      "title": "🕵️ Следствие ведут знатоки",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps8_press_conference.json",
+      "title": "⭐ Пресс-конференция: вопросы журналиста",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc8_svetofor_cards.json",
+      "title": "⚡ Светофор: Present Continuous (карточки)",
+      "category": "grammar",
+      "type": "flashcards"
+    },
+    {
+      "file": "pc8_ing_sort.json",
+      "title": "✍️ Орфография -ing: сортировка",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "pc8_ing_trainer.json",
+      "title": "⌨️ Орфография -ing: тренажёр",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "pc8_ing_detector.json",
+      "title": "🛑 Орфография -ing: найди ошибку",
+      "category": "grammar",
+      "type": "click-mistake"
+    },
+    {
+      "file": "pc8_stative.json",
+      "title": "🛑 Ловушка: Stative Verbs",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc8_routine_vs_now.json",
+      "title": "🚦 Рутина vs Сейчас",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc8_function_sort.json",
+      "title": "🧠 Функции Present Continuous: сортировка",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "pc8_trends.json",
+      "title": "🔄 Тенденции и перемены",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "pc8_temp_detector.json",
+      "title": "🏕️ Временная ситуация: найди ошибку",
+      "category": "grammar",
+      "type": "click-mistake"
+    },
+    {
+      "file": "pc8_future_plans.json",
+      "title": "📅 Планы на будущее: соедини",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "pc8_irritation.json",
+      "title": "😡 Раздражение: is always doing",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc8_my_week_cloze.json",
+      "title": "📝 Моя неделя: сложный текст",
+      "category": "grammar",
+      "type": "cloze"
+    },
+    {
+      "file": "pc8_two_worlds.json",
+      "title": "⚖️ Два мира: рутина vs изменения",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "pc8_emoji_functions.json",
+      "title": "🎭 Угадай функцию по эмодзи",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc8_ai_bot.json",
+      "title": "🤖 Эко-активист: поговори с AI-ботом",
+      "category": "speaking",
+      "type": "voice-chat"
+    }
   ]
 }

@@ -1,0 +1,69 @@
+{
+  "id": "ps9_tobe_assembly",
+  "title": "🧩 Сборка: форма to be в контексте",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь нужную форму to be: am, is, are, was, were, been, being, will be.",
+  "items": [
+    {
+      "sentence": "A new modern hospital ___ built in our city last year.",
+      "answer": "was"
+    },
+    {
+      "sentence": "The famous novel ___ written by Pushkin.",
+      "answer": "was"
+    },
+    {
+      "sentence": "The criminal ___ arrested by the police yesterday.",
+      "answer": "was"
+    },
+    {
+      "sentence": "The environment ___ destroyed by pollution right now.",
+      "answer": "is being"
+    },
+    {
+      "sentence": "A new smartphone ___ released next month.",
+      "answer": "will be"
+    },
+    {
+      "sentence": "The students ___ taught English twice a week.",
+      "answer": "are"
+    },
+    {
+      "sentence": "The bridge ___ repaired for two weeks already.",
+      "answer": "has been"
+    },
+    {
+      "sentence": "The letters ___ sent tomorrow.",
+      "answer": "will be"
+    },
+    {
+      "sentence": "The window ___ broken by the boys yesterday.",
+      "answer": "was"
+    },
+    {
+      "sentence": "The dinner ___ cooked by my mother every day.",
+      "answer": "is"
+    },
+    {
+      "sentence": "The new law ___ discussed at 5 PM yesterday.",
+      "answer": "was being"
+    },
+    {
+      "sentence": "The project ___ finished by next Friday.",
+      "answer": "will have been"
+    },
+    {
+      "sentence": "The information ___ just found on the Internet.",
+      "answer": "has been"
+    },
+    {
+      "sentence": "The money ___ stolen from the bank last night.",
+      "answer": "was"
+    },
+    {
+      "sentence": "The trees ___ planted in the park every spring.",
+      "answer": "are"
+    }
+  ]
+}

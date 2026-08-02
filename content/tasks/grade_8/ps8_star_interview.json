@@ -1,0 +1,144 @@
+{
+  "id": "ps8_star_interview",
+  "title": "⭐ Интервью со звездой",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Ты — журналист. Используй карточки-подсказки и выбери правильный вопрос в Present Simple для звезды.",
+  "items": [
+    {
+      "question": "(wake up / early?)",
+      "options": [
+        "Do you wake up early?",
+        "Does you wake up early?",
+        "Do you wakes up early?"
+      ],
+      "answer": "Do you wake up early?"
+    },
+    {
+      "question": "(what / eat / for breakfast?)",
+      "options": [
+        "What do you eat for breakfast?",
+        "What does you eat for breakfast?",
+        "What do you eats for breakfast?"
+      ],
+      "answer": "What do you eat for breakfast?"
+    },
+    {
+      "question": "(how often / train?)",
+      "options": [
+        "How often do you train?",
+        "How often does you train?",
+        "How often do you trains?"
+      ],
+      "answer": "How often do you train?"
+    },
+    {
+      "question": "(play / any / musical instrument?)",
+      "options": [
+        "Do you play any musical instrument?",
+        "Does you play any musical instrument?",
+        "Do you plays any musical instrument?"
+      ],
+      "answer": "Do you play any musical instrument?"
+    },
+    {
+      "question": "(who / help / you / with / work?)",
+      "options": [
+        "Who helps you with your work?",
+        "Who help you with your work?",
+        "Who do helps you with your work?"
+      ],
+      "answer": "Who helps you with your work?"
+    },
+    {
+      "question": "(go / to / parties?)",
+      "options": [
+        "Do you go to parties?",
+        "Does you go to parties?",
+        "Do you goes to parties?"
+      ],
+      "answer": "Do you go to parties?"
+    },
+    {
+      "question": "(what / do / in / free time?)",
+      "options": [
+        "What do you do in your free time?",
+        "What does you do in your free time?",
+        "What do you does in your free time?"
+      ],
+      "answer": "What do you do in your free time?"
+    },
+    {
+      "question": "(have / a / pet?)",
+      "options": [
+        "Do you have a pet?",
+        "Does you have a pet?",
+        "Do you has a pet?"
+      ],
+      "answer": "Do you have a pet?"
+    },
+    {
+      "question": "(travel / a lot?)",
+      "options": [
+        "Do you travel a lot?",
+        "Does you travel a lot?",
+        "Do you travels a lot?"
+      ],
+      "answer": "Do you travel a lot?"
+    },
+    {
+      "question": "(how / feel / before / a concert?)",
+      "options": [
+        "How do you feel before a concert?",
+        "How does you feel before a concert?",
+        "How do you feels before a concert?"
+      ],
+      "answer": "How do you feel before a concert?"
+    },
+    {
+      "question": "(read / reviews / about / yourself?)",
+      "options": [
+        "Do you read reviews about yourself?",
+        "Does you read reviews about yourself?",
+        "Do you reads reviews about yourself?"
+      ],
+      "answer": "Do you read reviews about yourself?"
+    },
+    {
+      "question": "(spend / much / money?)",
+      "options": [
+        "Do you spend much money?",
+        "Does you spend much money?",
+        "Do you spends much money?"
+      ],
+      "answer": "Do you spend much money?"
+    },
+    {
+      "question": "(argue / with / manager?)",
+      "options": [
+        "Do you argue with your manager?",
+        "Does you argue with your manager?",
+        "Do you argues with your manager?"
+      ],
+      "answer": "Do you argue with your manager?"
+    },
+    {
+      "question": "(what / dream / about?)",
+      "options": [
+        "What do you dream about?",
+        "What does you dream about?",
+        "What do you dreams about?"
+      ],
+      "answer": "What do you dream about?"
+    },
+    {
+      "question": "(where / live / now?)",
+      "options": [
+        "Where do you live now?",
+        "Where does you live now?",
+        "Where do you lives now?"
+      ],
+      "answer": "Where do you live now?"
+    }
+  ]
+}

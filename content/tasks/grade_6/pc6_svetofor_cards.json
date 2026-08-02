@@ -1,0 +1,69 @@
+{
+  "id": "pc6_svetofor_cards",
+  "title": "⚡ Светофор: am/is/are + V-ing",
+  "category": "grammar",
+  "type": "flashcards",
+  "description": "Переверни карточку и назови полную форму: am/is/are + глагол с -ing.",
+  "cards": [
+    {
+      "front": "I / eat",
+      "back": "I am eating"
+    },
+    {
+      "front": "She / cook",
+      "back": "She is cooking"
+    },
+    {
+      "front": "We / sit",
+      "back": "We are sitting"
+    },
+    {
+      "front": "He / sleep",
+      "back": "He is sleeping"
+    },
+    {
+      "front": "They / run",
+      "back": "They are running"
+    },
+    {
+      "front": "It / rain",
+      "back": "It is raining"
+    },
+    {
+      "front": "You / read",
+      "back": "You are reading"
+    },
+    {
+      "front": "My mum / make",
+      "back": "My mum is making"
+    },
+    {
+      "front": "The dog / bark",
+      "back": "The dog is barking"
+    },
+    {
+      "front": "The children / jump",
+      "back": "The children are jumping"
+    },
+    {
+      "front": "Tom / drive",
+      "back": "Tom is driving"
+    },
+    {
+      "front": "We / watch TV",
+      "back": "We are watching TV"
+    },
+    {
+      "front": "The cat / drink milk",
+      "back": "The cat is drinking milk"
+    },
+    {
+      "front": "I / write",
+      "back": "I am writing"
+    },
+    {
+      "front": "You / listen to music",
+      "back": "You are listening to music"
+    }
+  ]
+}

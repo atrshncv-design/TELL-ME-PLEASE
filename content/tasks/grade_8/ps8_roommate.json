@@ -1,0 +1,144 @@
+{
+  "id": "ps8_roommate",
+  "title": "🛋️ Тест на совместимость: сосед по комнате",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Составь вопросы о привычках, чтобы проверить, насколько вы с партнёром подходите друг другу как соседи по комнате. Выбери правильный вопрос с Do you...?",
+  "items": [
+    {
+      "question": "(listen / to loud music)",
+      "options": [
+        "Do you listen to loud music?",
+        "Do you listens to loud music?",
+        "Does you listen to loud music?"
+      ],
+      "answer": "Do you listen to loud music?"
+    },
+    {
+      "question": "(leave / things on the floor)",
+      "options": [
+        "Do you leave things on the floor?",
+        "Do you leaves things on the floor?",
+        "Does you leave things on the floor?"
+      ],
+      "answer": "Do you leave things on the floor?"
+    },
+    {
+      "question": "(snore / at night)",
+      "options": [
+        "Do you snore at night?",
+        "Do you snores at night?",
+        "Does you snore at night?"
+      ],
+      "answer": "Do you snore at night?"
+    },
+    {
+      "question": "(play / computer games till 3 AM)",
+      "options": [
+        "Do you play computer games till 3 AM?",
+        "Do you plays computer games till 3 AM?",
+        "Does you play computer games till 3 AM?"
+      ],
+      "answer": "Do you play computer games till 3 AM?"
+    },
+    {
+      "question": "(wash / the dishes every day)",
+      "options": [
+        "Do you wash the dishes every day?",
+        "Do you washes the dishes every day?",
+        "Does you wash the dishes every day?"
+      ],
+      "answer": "Do you wash the dishes every day?"
+    },
+    {
+      "question": "(eat / junk food in bed)",
+      "options": [
+        "Do you eat junk food in bed?",
+        "Do you eats junk food in bed?",
+        "Does you eat junk food in bed?"
+      ],
+      "answer": "Do you eat junk food in bed?"
+    },
+    {
+      "question": "(talk / on the phone for hours)",
+      "options": [
+        "Do you talk on the phone for hours?",
+        "Do you talks on the phone for hours?",
+        "Does you talk on the phone for hours?"
+      ],
+      "answer": "Do you talk on the phone for hours?"
+    },
+    {
+      "question": "(keep / your room tidy)",
+      "options": [
+        "Do you keep your room tidy?",
+        "Do you keeps your room tidy?",
+        "Does you keep your room tidy?"
+      ],
+      "answer": "Do you keep your room tidy?"
+    },
+    {
+      "question": "(watch / horror films late at night)",
+      "options": [
+        "Do you watch horror films late at night?",
+        "Do you watches horror films late at night?",
+        "Does you watch horror films late at night?"
+      ],
+      "answer": "Do you watch horror films late at night?"
+    },
+    {
+      "question": "(invite / friends without asking)",
+      "options": [
+        "Do you invite friends without asking?",
+        "Do you invites friends without asking?",
+        "Does you invite friends without asking?"
+      ],
+      "answer": "Do you invite friends without asking?"
+    },
+    {
+      "question": "(study / in complete silence)",
+      "options": [
+        "Do you study in complete silence?",
+        "Do you studies in complete silence?",
+        "Does you study in complete silence?"
+      ],
+      "answer": "Do you study in complete silence?"
+    },
+    {
+      "question": "(wake up / early on weekends)",
+      "options": [
+        "Do you wake up early on weekends?",
+        "Do you wakes up early on weekends?",
+        "Does you wake up early on weekends?"
+      ],
+      "answer": "Do you wake up early on weekends?"
+    },
+    {
+      "question": "(share / your clothes with others)",
+      "options": [
+        "Do you share your clothes with others?",
+        "Do you shares your clothes with others?",
+        "Does you share your clothes with others?"
+      ],
+      "answer": "Do you share your clothes with others?"
+    },
+    {
+      "question": "(drink / too much coffee)",
+      "options": [
+        "Do you drink too much coffee?",
+        "Do you drinks too much coffee?",
+        "Does you drink too much coffee?"
+      ],
+      "answer": "Do you drink too much coffee?"
+    },
+    {
+      "question": "(argue / about silly things)",
+      "options": [
+        "Do you argue about silly things?",
+        "Do you argues about silly things?",
+        "Does you argue about silly things?"
+      ],
+      "answer": "Do you argue about silly things?"
+    }
+  ]
+}

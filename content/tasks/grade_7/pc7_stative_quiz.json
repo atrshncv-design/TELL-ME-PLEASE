@@ -1,0 +1,89 @@
+{
+  "id": "pc7_stative_quiz",
+  "title": "🛑 Ловушка: Stative Verbs",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Глаголы чувств (love, know, want, understand) не используются в Continuous, даже с маркером now!",
+  "items": [
+    {
+      "sentence": "I ___ this song! It's my favorite.",
+      "options": [
+        "love",
+        "am loving"
+      ],
+      "answer": "love"
+    },
+    {
+      "sentence": "Shh! I ___ to the news.",
+      "options": [
+        "listen",
+        "am listening"
+      ],
+      "answer": "am listening"
+    },
+    {
+      "sentence": "I ___ what you mean.",
+      "options": [
+        "understand",
+        "am understanding"
+      ],
+      "answer": "understand"
+    },
+    {
+      "sentence": "You ___ a new app now.",
+      "options": [
+        "download",
+        "are downloading"
+      ],
+      "answer": "are downloading"
+    },
+    {
+      "sentence": "She ___ to become a doctor.",
+      "options": [
+        "wants",
+        "is wanting"
+      ],
+      "answer": "wants"
+    },
+    {
+      "sentence": "We ___ a great time at the party!",
+      "options": [
+        "have",
+        "are having"
+      ],
+      "answer": "are having"
+    },
+    {
+      "sentence": "The soup ___ delicious.",
+      "options": [
+        "tastes",
+        "is tasting"
+      ],
+      "answer": "tastes"
+    },
+    {
+      "sentence": "Look, I ___ the soup!",
+      "options": [
+        "taste",
+        "am tasting"
+      ],
+      "answer": "am tasting"
+    },
+    {
+      "sentence": "He ___ it's a good idea.",
+      "options": [
+        "thinks",
+        "is thinking"
+      ],
+      "answer": "thinks"
+    },
+    {
+      "sentence": "Be quiet! I ___.",
+      "options": [
+        "think",
+        "am thinking"
+      ],
+      "answer": "am thinking"
+    }
+  ]
+}

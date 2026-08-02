@@ -1,0 +1,129 @@
+{
+  "id": "ps7_tobe_filter",
+  "title": "🧠 Фильтр: to be или нет?",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Реши: нужен глагол to be или смысловой глагол? Если есть действие — to be не нужен!",
+  "items": [
+    {
+      "sentence": "She ___ a clever girl.",
+      "options": [
+        "is",
+        "plays"
+      ],
+      "answer": "is"
+    },
+    {
+      "sentence": "She ___ chess every day.",
+      "options": [
+        "is",
+        "plays"
+      ],
+      "answer": "plays"
+    },
+    {
+      "sentence": "The water ___ cold.",
+      "options": [
+        "is",
+        "drink"
+      ],
+      "answer": "is"
+    },
+    {
+      "sentence": "I ___ cold water in the morning.",
+      "options": [
+        "am",
+        "drink"
+      ],
+      "answer": "drink"
+    },
+    {
+      "sentence": "They ___ in London now.",
+      "options": [
+        "are",
+        "go"
+      ],
+      "answer": "are"
+    },
+    {
+      "sentence": "They ___ to London every summer.",
+      "options": [
+        "are",
+        "go"
+      ],
+      "answer": "go"
+    },
+    {
+      "sentence": "We ___ students.",
+      "options": [
+        "are",
+        "do"
+      ],
+      "answer": "are"
+    },
+    {
+      "sentence": "We ___ our homework in the evening.",
+      "options": [
+        "are",
+        "do"
+      ],
+      "answer": "do"
+    },
+    {
+      "sentence": "The gadget ___ broken.",
+      "options": [
+        "is",
+        "surf"
+      ],
+      "answer": "is"
+    },
+    {
+      "sentence": "I ___ the Internet every day.",
+      "options": [
+        "am",
+        "surf"
+      ],
+      "answer": "surf"
+    },
+    {
+      "sentence": "He ___ a pilot.",
+      "options": [
+        "is",
+        "flies"
+      ],
+      "answer": "is"
+    },
+    {
+      "sentence": "He ___ planes.",
+      "options": [
+        "is",
+        "flies"
+      ],
+      "answer": "flies"
+    },
+    {
+      "sentence": "You ___ hungry.",
+      "options": [
+        "are",
+        "eat"
+      ],
+      "answer": "are"
+    },
+    {
+      "sentence": "You ___ a sandwich for breakfast.",
+      "options": [
+        "are",
+        "eat"
+      ],
+      "answer": "eat"
+    },
+    {
+      "sentence": "The job ___ dangerous.",
+      "options": [
+        "is",
+        "work"
+      ],
+      "answer": "is"
+    }
+  ]
+}

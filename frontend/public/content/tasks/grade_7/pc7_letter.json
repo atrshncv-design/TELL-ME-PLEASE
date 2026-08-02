@@ -1,0 +1,89 @@
+{
+  "id": "pc7_letter",
+  "title": "📧 Письмо из путешествия",
+  "category": "grammar",
+  "type": "cloze",
+  "description": "Прочитай письмо Сэма из Испании. Вставь пропущенные слова: нажми на пропуск, затем на слово. Смешанные времена: обычно — Present Simple, прямо сейчас — Present Continuous.",
+  "text": "Hi! My name ___ Sam. I ___ an email to you from Spain! I usually ___ my holidays at home, but this year is different. My family and I ___ around the country right now. At the moment, we ___ in a café in Madrid. My parents ___ coffee. My sister ___ photos of the square. She ___ photography. I ___ to buy a souvenir, so I ___ at the map now. We usually ___ early, but today we ___. The weather ___ fantastic. The sun ___. I ___ a great time!",
+  "answers": [
+    [
+      "is"
+    ],
+    [
+      "am writing"
+    ],
+    [
+      "spend"
+    ],
+    [
+      "are traveling"
+    ],
+    [
+      "are sitting"
+    ],
+    [
+      "are drinking"
+    ],
+    [
+      "is taking"
+    ],
+    [
+      "loves"
+    ],
+    [
+      "want"
+    ],
+    [
+      "am looking"
+    ],
+    [
+      "wake up"
+    ],
+    [
+      "are resting"
+    ],
+    [
+      "is"
+    ],
+    [
+      "is shining"
+    ],
+    [
+      "am having"
+    ]
+  ],
+  "word_bank": [
+    "is",
+    "am writing",
+    "spend",
+    "are traveling",
+    "are sitting",
+    "are drinking",
+    "is taking",
+    "loves",
+    "want",
+    "am looking",
+    "wake up",
+    "are resting",
+    "is",
+    "is shining",
+    "am having"
+  ],
+  "hints": [
+    "(be)",
+    "(write)",
+    "(spend)",
+    "(travel)",
+    "(sit)",
+    "(drink)",
+    "(take)",
+    "(love)",
+    "(want)",
+    "(look)",
+    "(wake up)",
+    "(rest)",
+    "(be)",
+    "(shine)",
+    "(have)"
+  ]
+}

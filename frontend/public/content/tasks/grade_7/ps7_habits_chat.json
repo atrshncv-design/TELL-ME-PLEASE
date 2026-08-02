@@ -1,0 +1,45 @@
+{
+  "id": "ps7_habits_chat",
+  "title": "💬 Поговори о привычках",
+  "category": "grammar",
+  "type": "voice-chat",
+  "description": "Поговори со сверстником из другой страны о своих привычках и распорядке дня. Используй Present Simple!",
+  "sections": [
+    {
+      "name": "🕐 Твой день",
+      "questions": [
+        "What is your daily routine like on a school day?",
+        "What time do you usually get up and go to bed?",
+        "How do you usually go to school – by bus, by car or on foot?",
+        "What do you usually do after school?"
+      ]
+    },
+    {
+      "name": "🎯 Хобби и спорт",
+      "questions": [
+        "What are your favourite hobbies?",
+        "How often do you do sports or exercise?",
+        "Do you play any sports or go to a sports centre?"
+      ]
+    },
+    {
+      "name": "🍔 Еда и привычки",
+      "questions": [
+        "Do you prefer staying at home or going out with friends in your free time?",
+        "Do you spend a lot of time online or on social media?",
+        "Do you think you lead a healthy lifestyle? Why / Why not?",
+        "What kind of food do you usually eat – healthy food or fast food?",
+        "How often do you eat fast food or drink fizzy drinks?"
+      ]
+    },
+    {
+      "name": "🌐 Подростки в твоей стране",
+      "questions": [
+        "What habits do teenagers in your country usually have?",
+        "Are there any bad habits that you can't stand?",
+        "What do teenagers in your country usually do at the weekend?"
+      ]
+    }
+  ],
+  "task_context": "Ты — ровесник ученика из англоговорящей страны (13-14 лет). Отвечай на вопросы о своём образе жизни, используя Present Simple и наречия частотности (usually, often, sometimes, never). Говори простым английским (уровень A1/A2), короткими предложениями. После каждого ответа задавай встречный вопрос ученику, чтобы поддержать разговор. Будь дружелюбным и поддерживающим."
+}

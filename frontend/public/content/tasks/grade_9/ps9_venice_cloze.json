@@ -1,0 +1,64 @@
+{
+  "id": "ps9_venice_cloze",
+  "title": "🎭 Венецианский карнавал: вставь форму",
+  "category": "grammar",
+  "type": "cloze",
+  "description": "Вставь правильную форму: do / does / is / are / don't / doesn't / isn't / aren't.",
+  "text": "Venice Carnival ___ one of the most elegant and famous festivals in Italy. It ___ place every year in February. People ___ celebrate it with loud music and big street parties. Instead, they ___ celebrate it with beautiful masks, stylish costumes and graceful traditions. The canals and squares ___ full of visitors, and the atmosphere ___ mysterious and magical. Tourists ___ come to Venice to enjoy the parade and take photos. The masks ___ simple; they are very detailed and artistic. The performers ___ wear modern clothes; they wear traditional outfits that remind people of the history of the city. The festival ___ important for local culture, and many people love it because it combines art, fashion and tradition.",
+  "answers": [
+    [
+      "is"
+    ],
+    [
+      "takes"
+    ],
+    [
+      "don't"
+    ],
+    [
+      "do"
+    ],
+    [
+      "are"
+    ],
+    [
+      "is"
+    ],
+    [
+      "do"
+    ],
+    [
+      "aren't"
+    ],
+    [
+      "don't"
+    ],
+    [
+      "is"
+    ]
+  ],
+  "word_bank": [
+    "is",
+    "takes",
+    "don't",
+    "do",
+    "are",
+    "is",
+    "do",
+    "aren't",
+    "don't",
+    "is"
+  ],
+  "hints": [
+    "(be)",
+    "(take)",
+    "(not celebrate)",
+    "(celebrate)",
+    "(be)",
+    "(be)",
+    "(come)",
+    "(not be)",
+    "(not wear)",
+    "(be)"
+  ]
+}

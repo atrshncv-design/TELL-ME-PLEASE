@@ -1,0 +1,69 @@
+{
+  "id": "ps8_tobe_wheel",
+  "title": "⚡ Светофор: все времена to be (колесо)",
+  "category": "grammar",
+  "type": "wheel",
+  "description": "Крути колесо и мгновенно называй форму глагола to be для пары «подлежащее + маркер времени».",
+  "items": [
+    {
+      "label": "I / now",
+      "answer": "am"
+    },
+    {
+      "label": "He / yesterday at 5 PM",
+      "answer": "was"
+    },
+    {
+      "label": "The book / by Pushkin",
+      "answer": "was"
+    },
+    {
+      "label": "They / already",
+      "answer": "have been"
+    },
+    {
+      "label": "The houses / every year",
+      "answer": "are"
+    },
+    {
+      "label": "We / tomorrow",
+      "answer": "will be"
+    },
+    {
+      "label": "She / usually",
+      "answer": "is"
+    },
+    {
+      "label": "The message / just sent",
+      "answer": "has been"
+    },
+    {
+      "label": "You / when I called",
+      "answer": "were"
+    },
+    {
+      "label": "The exam / tomorrow",
+      "answer": "will be"
+    },
+    {
+      "label": "I / for 2 hours",
+      "answer": "have been"
+    },
+    {
+      "label": "The film / next week",
+      "answer": "will be"
+    },
+    {
+      "label": "It / a mistake",
+      "answer": "is"
+    },
+    {
+      "label": "The trees / planted yesterday",
+      "answer": "were"
+    },
+    {
+      "label": "The technology / being developed now",
+      "answer": "is"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "pc8_irritation",
+  "title": "😡 Раздражение: is always doing",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выражаем недовольство: is always + V-ing. Выбери правильную конструкцию!",
+  "items": [
+    {
+      "question": "He ___ my pens!",
+      "options": [
+        "always takes",
+        "is always taking",
+        "always is taking"
+      ],
+      "answer": "is always taking"
+    },
+    {
+      "question": "She ___ about her marks!",
+      "options": [
+        "constantly complains",
+        "is constantly complaining",
+        "constantly is complaining"
+      ],
+      "answer": "is constantly complaining"
+    },
+    {
+      "question": "They ___ during the lesson!",
+      "options": [
+        "never listen",
+        "are never listening",
+        "are always talking"
+      ],
+      "answer": "are always talking"
+    },
+    {
+      "question": "You ___ your keys!",
+      "options": [
+        "always lose",
+        "are always losing",
+        "always are losing"
+      ],
+      "answer": "are always losing"
+    },
+    {
+      "question": "He ___ his phone in class!",
+      "options": [
+        "forever uses",
+        "is forever using",
+        "forever is using"
+      ],
+      "answer": "is forever using"
+    },
+    {
+      "question": "My sister ___ my clothes without asking!",
+      "options": [
+        "always borrows",
+        "is always borrowing",
+        "always is borrowing"
+      ],
+      "answer": "is always borrowing"
+    },
+    {
+      "question": "You ___ me!",
+      "options": [
+        "are forever interrupting",
+        "forever interrupt",
+        "forever are interrupting"
+      ],
+      "answer": "are forever interrupting"
+    },
+    {
+      "question": "He ___ late for school!",
+      "options": [
+        "is always coming",
+        "always comes",
+        "is coming always"
+      ],
+      "answer": "is always coming"
+    },
+    {
+      "question": "They ___ rubbish on the floor!",
+      "options": [
+        "constantly leave",
+        "are constantly leaving",
+        "constantly are leaving"
+      ],
+      "answer": "are constantly leaving"
+    },
+    {
+      "question": "You ___ to me!",
+      "options": [
+        "are never listening",
+        "never listen",
+        "are always lying"
+      ],
+      "answer": "are always lying"
+    },
+    {
+      "question": "She ___ her homework at the last minute!",
+      "options": [
+        "always does",
+        "is always doing",
+        "always is doing"
+      ],
+      "answer": "is always doing"
+    },
+    {
+      "question": "He ___ his gum loudly!",
+      "options": [
+        "always chews",
+        "is always chewing",
+        "always is chewing"
+      ],
+      "answer": "is always chewing"
+    },
+    {
+      "question": "You ___ the door open!",
+      "options": [
+        "always leave",
+        "are always leaving",
+        "always are leaving"
+      ],
+      "answer": "are always leaving"
+    },
+    {
+      "question": "They ___ during the film!",
+      "options": [
+        "are constantly talking",
+        "constantly talk",
+        "constantly are talking"
+      ],
+      "answer": "are constantly talking"
+    },
+    {
+      "question": "He ___ with his brother!",
+      "options": [
+        "always fights",
+        "is always fighting",
+        "always is fighting"
+      ],
+      "answer": "is always fighting"
+    }
+  ]
+}

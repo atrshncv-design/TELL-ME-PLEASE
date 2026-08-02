@@ -1,0 +1,144 @@
+{
+  "id": "ps8_tobe_filter",
+  "title": "🧠 Фильтр: to be или смысловой глагол?",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Главный рефлекс 8 класса: не путай to be со смысловым глаголом! Выбери слово для пропуска.",
+  "items": [
+    {
+      "question": "She ___ a clever student.",
+      "options": [
+        "is",
+        "plays",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "She ___ chess every day.",
+      "options": [
+        "is",
+        "plays",
+        "are"
+      ],
+      "answer": "plays"
+    },
+    {
+      "question": "The book ___ written in 1990.",
+      "options": [
+        "was",
+        "wrote",
+        "is"
+      ],
+      "answer": "was"
+    },
+    {
+      "question": "Pushkin ___ this poem.",
+      "options": [
+        "was",
+        "wrote",
+        "is"
+      ],
+      "answer": "wrote"
+    },
+    {
+      "question": "They ___ in London now.",
+      "options": [
+        "are",
+        "go",
+        "is"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "They ___ to London every summer.",
+      "options": [
+        "are",
+        "go",
+        "is"
+      ],
+      "answer": "go"
+    },
+    {
+      "question": "The house ___ built in 2005.",
+      "options": [
+        "was",
+        "built",
+        "is"
+      ],
+      "answer": "was"
+    },
+    {
+      "question": "The builder ___ the house.",
+      "options": [
+        "was",
+        "built",
+        "is"
+      ],
+      "answer": "built"
+    },
+    {
+      "question": "The technology ___ developing fast.",
+      "options": [
+        "is",
+        "develops",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "People ___ smartphones every day.",
+      "options": [
+        "is",
+        "use",
+        "are"
+      ],
+      "answer": "use"
+    },
+    {
+      "question": "He ___ a famous blogger.",
+      "options": [
+        "is",
+        "writes",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "He ___ blogs every week.",
+      "options": [
+        "is",
+        "writes",
+        "are"
+      ],
+      "answer": "writes"
+    },
+    {
+      "question": "The trees ___ cut down every year.",
+      "options": [
+        "are",
+        "cut",
+        "is"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "The workers ___ trees in the park.",
+      "options": [
+        "are",
+        "cut",
+        "is"
+      ],
+      "answer": "cut"
+    },
+    {
+      "question": "I ___ not ready for the trip.",
+      "options": [
+        "am",
+        "don't",
+        "is"
+      ],
+      "answer": "am"
+    }
+  ]
+}

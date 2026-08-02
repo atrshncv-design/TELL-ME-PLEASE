@@ -1,21 +1,311 @@
 {
   "grade": 7,
   "exercises": [
-    {"file": "grammar_endings_sort.json", "title": "Сортировка окончаний", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "grammar_endings_quiz.json", "title": "Окончания: викторина", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_v1_vs_quiz.json", "title": "V1 / Vs: выбери форму", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_roulette.json", "title": "Рулетка: все части предложения", "category": "grammar", "type": "fill-in"},
-    {"file": "grammar_joke_quiz.json", "title": "Шутка: V1/Vs", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_negation.json", "title": "Отрицание", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_yes_no_questions.json", "title": "Общие вопросы Do/Does", "category": "grammar", "type": "quiz"},
-    {"file": "grammar_wh_questions.json", "title": "Специальные вопросы", "category": "grammar", "type": "fill-in"},
-    {"file": "grammar_ladder.json", "title": "Лесенка: Lifestyles", "category": "grammar", "type": "ladder"},
-    {"file": "grammar_verb_forms_quiz.json", "title": "Викторина: вставь форму глагола", "category": "grammar", "type": "fill-in"},
-    {"file": "grammar_adverbs_build.json", "title": "Наречия: построй предложения", "category": "grammar", "type": "build-sentence"},
-    {"file": "grammar_adverbs_place.json", "title": "Наречия: вставь в правильное место", "category": "grammar", "type": "drag-and-drop"},
-    {"file": "story_harry_potter_routine.json", "title": "Распорядок дня подростка", "category": "vocabulary", "type": "fill-in"},
-    {"file": "story_harry_potter_interview.json", "title": "Интервью об образе жизни", "category": "listening", "type": "role-play"},
-    {"file": "speaking_about_yourself.json", "title": "Расскажи о своём образе жизни", "category": "speaking", "type": "fill-in-and-speak"},
-    {"file": "speaking_peer_conversation.json", "title": "Поговори со сверстником о привычках", "category": "speaking", "type": "voice-chat"}
+    {
+      "file": "grammar_endings_sort.json",
+      "title": "Сортировка окончаний",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "grammar_endings_quiz.json",
+      "title": "Окончания: викторина",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_v1_vs_quiz.json",
+      "title": "V1 / Vs: выбери форму",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_roulette.json",
+      "title": "Рулетка: все части предложения",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "grammar_joke_quiz.json",
+      "title": "Шутка: V1/Vs",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_negation.json",
+      "title": "Отрицание",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_yes_no_questions.json",
+      "title": "Общие вопросы Do/Does",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "grammar_wh_questions.json",
+      "title": "Специальные вопросы",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "grammar_ladder.json",
+      "title": "Лесенка: Lifestyles",
+      "category": "grammar",
+      "type": "ladder"
+    },
+    {
+      "file": "grammar_verb_forms_quiz.json",
+      "title": "Викторина: вставь форму глагола",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "grammar_adverbs_build.json",
+      "title": "Наречия: построй предложения",
+      "category": "grammar",
+      "type": "build-sentence"
+    },
+    {
+      "file": "grammar_adverbs_place.json",
+      "title": "Наречия: вставь в правильное место",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "story_harry_potter_routine.json",
+      "title": "Распорядок дня подростка",
+      "category": "vocabulary",
+      "type": "fill-in"
+    },
+    {
+      "file": "story_harry_potter_interview.json",
+      "title": "Интервью об образе жизни",
+      "category": "listening",
+      "type": "role-play"
+    },
+    {
+      "file": "speaking_about_yourself.json",
+      "title": "Расскажи о своём образе жизни",
+      "category": "speaking",
+      "type": "fill-in-and-speak"
+    },
+    {
+      "file": "speaking_peer_conversation.json",
+      "title": "Поговори со сверстником о привычках",
+      "category": "speaking",
+      "type": "voice-chat"
+    },
+    {
+      "file": "ps7_word_order.json",
+      "title": "🧩 Построй предложения",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps7_error_detector.json",
+      "title": "🕵️ Детектор ошибок: Present Simple",
+      "category": "grammar",
+      "type": "click-mistake"
+    },
+    {
+      "file": "ps7_translation_pairs.json",
+      "title": "🔗 Перевод и предложение",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "ps7_negative.json",
+      "title": "🚫 Анти-реакция: отрицание",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps7_yes_no.json",
+      "title": "❓ Общий вопрос: Does / Do",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps7_wh_question.json",
+      "title": "❓ Специальные вопросы",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps7_dialogues.json",
+      "title": "🎭 Разыграй диалог: образ жизни",
+      "category": "grammar",
+      "type": "voice-chat"
+    },
+    {
+      "file": "ps7_habits_chat.json",
+      "title": "💬 Поговори о привычках",
+      "category": "grammar",
+      "type": "voice-chat"
+    },
+    {
+      "file": "ps7_tobe_svetofor.json",
+      "title": "⚡ Светофор: now / yesterday",
+      "category": "grammar",
+      "type": "flashcards"
+    },
+    {
+      "file": "ps7_tobe_assembly.json",
+      "title": "🧩 Сборка: am / is / are / was / were",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps7_tobe_filter.json",
+      "title": "🧠 Фильтр: to be или нет?",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps7_tobe_time_machine.json",
+      "title": "⏳ Машина времени: to be",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps7_tobe_negative.json",
+      "title": "🚫 Анти-реакция: отрицание to be",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps7_tobe_blog.json",
+      "title": "🌍 Блог путешественника",
+      "category": "grammar",
+      "type": "cloze"
+    },
+    {
+      "file": "ps7_tobe_short_answer.json",
+      "title": "🗣️ Короткий ответ: to be",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps7_tobe_alibi.json",
+      "title": "🕵️ Алиби: допрос",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "ps7_tobe_brownian.json",
+      "title": "🏃 Найди того, кто...",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "ps7_tobe_star.json",
+      "title": "⭐ Интервью со звездой",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "pc7_svetofor_cards.json",
+      "title": "⚡ Светофор: am/is/are + V-ing",
+      "category": "grammar",
+      "type": "flashcards"
+    },
+    {
+      "file": "pc7_assembly.json",
+      "title": "🧩 Сборка: прямо сейчас",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "pc7_spelling_pairs.json",
+      "title": "✍️ Орфография: соедини пары",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "pc7_ing_rules_sort.json",
+      "title": "🧠 Сортировка правил -ing",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "pc7_ing_trainer.json",
+      "title": "⌨️ Орфографический тренажёр",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "pc7_spelling_quiz.json",
+      "title": "🛑 Ловушка для глаз",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc7_negative.json",
+      "title": "🚫 Анти-реакция: отрицание",
+      "category": "grammar",
+      "type": "fill-in"
+    },
+    {
+      "file": "pc7_question.json",
+      "title": "❓ Рефлекс вопроса",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc7_short_answer.json",
+      "title": "🗣️ Короткий ответ",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc7_marker_sort.json",
+      "title": "🧠 Сортировка маркеров",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "pc7_time_machine.json",
+      "title": "🚦 Машина времени",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc7_stative_quiz.json",
+      "title": "🛑 Ловушка: Stative Verbs",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc7_two_worlds.json",
+      "title": "⚖️ Два мира: обычно и сейчас",
+      "category": "grammar",
+      "type": "drag-and-drop"
+    },
+    {
+      "file": "pc7_letter.json",
+      "title": "📧 Письмо из путешествия",
+      "category": "grammar",
+      "type": "cloze"
+    },
+    {
+      "file": "pc7_emoji_quiz.json",
+      "title": "🎭 Угадай по эмодзи",
+      "category": "grammar",
+      "type": "quiz"
+    },
+    {
+      "file": "pc7_weekend_plans.json",
+      "title": "📅 Планы на выходные",
+      "category": "speaking",
+      "type": "fill-in-and-speak"
+    },
+    {
+      "file": "pc7_cyber_friend.json",
+      "title": "🤖 Кибер-блогер",
+      "category": "grammar",
+      "type": "voice-chat"
+    }
   ]
 }

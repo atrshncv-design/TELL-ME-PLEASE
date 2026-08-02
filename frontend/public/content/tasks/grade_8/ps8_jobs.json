@@ -1,0 +1,159 @@
+{
+  "id": "ps8_jobs",
+  "title": "🕵️‍♀️ Угадай профессию",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Прочитай описание повседневных дел (Present Simple) и угадай профессию из Spotlight 8.",
+  "items": [
+    {
+      "question": "He operates on sick people in a hospital.",
+      "options": [
+        "Surgeon",
+        "Vet",
+        "Plumber",
+        "Journalist"
+      ],
+      "answer": "Surgeon"
+    },
+    {
+      "question": "She fixes cars and changes tires.",
+      "options": [
+        "Mechanic",
+        "Pilot",
+        "Chef",
+        "Gardener"
+      ],
+      "answer": "Mechanic"
+    },
+    {
+      "question": "He plants trees and waters the flowers.",
+      "options": [
+        "Gardener",
+        "Programmer",
+        "Teacher",
+        "Pilot"
+      ],
+      "answer": "Gardener"
+    },
+    {
+      "question": "She writes articles for a famous magazine.",
+      "options": [
+        "Journalist",
+        "Teacher",
+        "Mechanic",
+        "Vet"
+      ],
+      "answer": "Journalist"
+    },
+    {
+      "question": "He writes code and creates new apps.",
+      "options": [
+        "Programmer",
+        "Surgeon",
+        "Chef",
+        "Gardener"
+      ],
+      "answer": "Programmer"
+    },
+    {
+      "question": "She flies planes to different countries.",
+      "options": [
+        "Pilot",
+        "Mechanic",
+        "Journalist",
+        "Plumber"
+      ],
+      "answer": "Pilot"
+    },
+    {
+      "question": "He cooks delicious meals in a restaurant.",
+      "options": [
+        "Chef",
+        "Gardener",
+        "Teacher",
+        "Surgeon"
+      ],
+      "answer": "Chef"
+    },
+    {
+      "question": "She fixes broken pipes in houses.",
+      "options": [
+        "Plumber",
+        "Mechanic",
+        "Pilot",
+        "Chef"
+      ],
+      "answer": "Plumber"
+    },
+    {
+      "question": "He treats sick dogs and cats.",
+      "options": [
+        "Vet",
+        "Surgeon",
+        "Gardener",
+        "Programmer"
+      ],
+      "answer": "Vet"
+    },
+    {
+      "question": "She explains difficult rules to students.",
+      "options": [
+        "Teacher",
+        "Journalist",
+        "Vet",
+        "Chef"
+      ],
+      "answer": "Teacher"
+    },
+    {
+      "question": "He doesn't sleep much because he saves lives.",
+      "options": [
+        "Surgeon",
+        "Chef",
+        "Teacher",
+        "Programmer"
+      ],
+      "answer": "Surgeon"
+    },
+    {
+      "question": "She doesn't work in an office; she travels a lot.",
+      "options": [
+        "Journalist",
+        "Teacher",
+        "Plumber",
+        "Gardener"
+      ],
+      "answer": "Journalist"
+    },
+    {
+      "question": "He uses special tools to repair engines.",
+      "options": [
+        "Mechanic",
+        "Plumber",
+        "Pilot",
+        "Chef"
+      ],
+      "answer": "Mechanic"
+    },
+    {
+      "question": "She uses a lot of spices in her dishes.",
+      "options": [
+        "Chef",
+        "Surgeon",
+        "Gardener",
+        "Journalist"
+      ],
+      "answer": "Chef"
+    },
+    {
+      "question": "He spends hours looking at a computer screen.",
+      "options": [
+        "Programmer",
+        "Teacher",
+        "Pilot",
+        "Plumber"
+      ],
+      "answer": "Programmer"
+    }
+  ]
+}

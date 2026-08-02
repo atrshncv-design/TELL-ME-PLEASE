@@ -1,0 +1,53 @@
+{
+  "id": "ps9_error_hunter",
+  "title": "🕵️ Детектор ошибок: Present Simple",
+  "category": "grammar",
+  "type": "click-mistake",
+  "description": "В предложениях спрятаны ошибки. Кликни на неверное слово. Если ошибки нет — нажми «Всё верно!».",
+  "items": [
+    {
+      "text": "She don't believe in bad luck.",
+      "wrong": "don't"
+    },
+    {
+      "text": "My family go to the festival every year.",
+      "wrong": "go"
+    },
+    {
+      "text": "Does they wear traditional clothes?",
+      "wrong": "Does"
+    },
+    {
+      "text": "The parade start at 10 o'clock.",
+      "wrong": "start"
+    },
+    {
+      "text": "We makes decorations for the celebration.",
+      "wrong": "makes"
+    },
+    {
+      "text": "He carry a lucky coin in his pocket.",
+      "wrong": "carry"
+    },
+    {
+      "text": "The fireworks finishes the show.",
+      "wrong": "finishes"
+    },
+    {
+      "text": "Our town organise concerts in the square.",
+      "wrong": "organise"
+    },
+    {
+      "text": "I wears special clothes on holidays.",
+      "wrong": "wears"
+    },
+    {
+      "text": "The ceremony don't begin until noon.",
+      "wrong": "don't"
+    },
+    {
+      "text": "My family celebrates Easter at home every year.",
+      "wrong": null
+    }
+  ]
+}

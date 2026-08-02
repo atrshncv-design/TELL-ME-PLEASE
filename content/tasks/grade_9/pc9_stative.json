@@ -1,0 +1,129 @@
+{
+  "id": "pc9_stative",
+  "title": "🛑 Ловушка: Stative Verbs",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Глаголы чувств и мышления НЕ используются в Continuous. Выбери правильную форму.",
+  "items": [
+    {
+      "sentence": "I ___ what you mean.",
+      "options": [
+        "understand",
+        "am understanding"
+      ],
+      "answer": "understand"
+    },
+    {
+      "sentence": "Shh! I ___ to the news.",
+      "options": [
+        "am listening",
+        "listen"
+      ],
+      "answer": "am listening"
+    },
+    {
+      "sentence": "She ___ it's a great idea.",
+      "options": [
+        "thinks",
+        "is thinking"
+      ],
+      "answer": "thinks"
+    },
+    {
+      "sentence": "Be quiet! I ___ about the solution.",
+      "options": [
+        "am thinking",
+        "think"
+      ],
+      "answer": "am thinking"
+    },
+    {
+      "sentence": "The soup ___ delicious.",
+      "options": [
+        "tastes",
+        "is tasting"
+      ],
+      "answer": "tastes"
+    },
+    {
+      "sentence": "I ___ the soup. Look!",
+      "options": [
+        "am tasting",
+        "taste"
+      ],
+      "answer": "am tasting"
+    },
+    {
+      "sentence": "We ___ a great time at the concert!",
+      "options": [
+        "are having",
+        "have"
+      ],
+      "answer": "are having"
+    },
+    {
+      "sentence": "He ___ in aliens.",
+      "options": [
+        "believes",
+        "is believing"
+      ],
+      "answer": "believes"
+    },
+    {
+      "sentence": "I ___ your phone. I can't find mine.",
+      "options": [
+        "see",
+        "am seeing"
+      ],
+      "answer": "see"
+    },
+    {
+      "sentence": "The doctor ___ you tomorrow.",
+      "options": [
+        "is seeing",
+        "sees"
+      ],
+      "answer": "is seeing"
+    },
+    {
+      "sentence": "This coffee ___ awful.",
+      "options": [
+        "smells",
+        "is smelling"
+      ],
+      "answer": "smells"
+    },
+    {
+      "sentence": "The bag ___ 5 kilos.",
+      "options": [
+        "weighs",
+        "is weighing"
+      ],
+      "answer": "weighs"
+    },
+    {
+      "sentence": "I ___ we should help the planet.",
+      "options": [
+        "think",
+        "am thinking"
+      ],
+      "answer": "think"
+    },
+    {
+      "sentence": "The judge ___ the evidence carefully.",
+      "options": [
+        "is weighing",
+        "weighs"
+      ],
+      "answer": "is weighing"
+    },
+    {
+      "sentence": "Why ___ you ___ the milk?",
+      "options": [
+        "are ... smelling",
+        "do ... smell"
+      ],
+      "answer": "are ... smelling"
+    }
+  ]
+}

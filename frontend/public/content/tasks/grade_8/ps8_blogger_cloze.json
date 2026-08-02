@@ -1,0 +1,89 @@
+{
+  "id": "ps8_blogger_cloze",
+  "title": "📱 Блогер-миллионник: день Макса",
+  "category": "grammar",
+  "type": "cloze",
+  "description": "Прочитай пост известного блогера. Раскрой скобки: поставь глагол в Present Simple (не забудь про he / she!).",
+  "text": "Hi guys! My name is Max. I am a full-time blogger. My life ___ very busy. My day ___ at 10 AM. I ___ up early. My girlfriend, Lily, ___ breakfast for us. She ___ cooking. After breakfast, I ___ my emails and comments. My manager ___ me at 12 PM. We ___ new projects. Lily ___ in the afternoon, so she ___ my videos. At 5 PM, I ___ a new game. Thousands of people ___ me. My fans ___ me funny messages. We ___ tired because we love our job. It ___!",
+  "answers": [
+    [
+      "is"
+    ],
+    [
+      "starts"
+    ],
+    [
+      "don't wake"
+    ],
+    [
+      "makes"
+    ],
+    [
+      "loves"
+    ],
+    [
+      "check"
+    ],
+    [
+      "calls"
+    ],
+    [
+      "discuss"
+    ],
+    [
+      "doesn't work"
+    ],
+    [
+      "edits"
+    ],
+    [
+      "stream"
+    ],
+    [
+      "watch"
+    ],
+    [
+      "send"
+    ],
+    [
+      "don't feel"
+    ],
+    [
+      "rocks"
+    ]
+  ],
+  "word_bank": [
+    "is",
+    "starts",
+    "don't wake",
+    "makes",
+    "loves",
+    "check",
+    "calls",
+    "discuss",
+    "doesn't work",
+    "edits",
+    "stream",
+    "watch",
+    "send",
+    "don't feel",
+    "rocks"
+  ],
+  "hints": [
+    "(be)",
+    "(start)",
+    "(not/wake)",
+    "(make)",
+    "(love)",
+    "(check)",
+    "(call)",
+    "(discuss)",
+    "(not/work)",
+    "(edit)",
+    "(stream)",
+    "(watch)",
+    "(send)",
+    "(not/feel)",
+    "(rock)"
+  ]
+}

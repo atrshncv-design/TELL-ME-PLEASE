@@ -1,0 +1,129 @@
+{
+  "id": "tb6_filter",
+  "title": "🧠 Фильтр: be или смысловой глагол?",
+  "category": "to-be",
+  "type": "quiz",
+  "description": "Реши: нужен глагол to be или обычный глагол? Если есть действие — to be не нужен!",
+  "items": [
+    {
+      "sentence": "She ___ a clever girl.",
+      "options": [
+        "is",
+        "plays"
+      ],
+      "answer": "is"
+    },
+    {
+      "sentence": "She ___ tennis every day.",
+      "options": [
+        "is",
+        "plays"
+      ],
+      "answer": "plays"
+    },
+    {
+      "sentence": "The water ___ cold.",
+      "options": [
+        "is",
+        "drink"
+      ],
+      "answer": "is"
+    },
+    {
+      "sentence": "I ___ cold water in the morning.",
+      "options": [
+        "am",
+        "drink"
+      ],
+      "answer": "drink"
+    },
+    {
+      "sentence": "They ___ in London.",
+      "options": [
+        "are",
+        "go"
+      ],
+      "answer": "are"
+    },
+    {
+      "sentence": "They ___ to London every summer.",
+      "options": [
+        "are",
+        "go"
+      ],
+      "answer": "go"
+    },
+    {
+      "sentence": "We ___ students.",
+      "options": [
+        "are",
+        "do"
+      ],
+      "answer": "are"
+    },
+    {
+      "sentence": "We ___ our homework in the evening.",
+      "options": [
+        "are",
+        "do"
+      ],
+      "answer": "do"
+    },
+    {
+      "sentence": "The fridge ___ empty.",
+      "options": [
+        "is",
+        "clean"
+      ],
+      "answer": "is"
+    },
+    {
+      "sentence": "I ___ the fridge every week.",
+      "options": [
+        "am",
+        "clean"
+      ],
+      "answer": "clean"
+    },
+    {
+      "sentence": "He ___ a fast runner.",
+      "options": [
+        "is",
+        "runs"
+      ],
+      "answer": "is"
+    },
+    {
+      "sentence": "He ___ very fast.",
+      "options": [
+        "is",
+        "runs"
+      ],
+      "answer": "runs"
+    },
+    {
+      "sentence": "You ___ hungry.",
+      "options": [
+        "are",
+        "eat"
+      ],
+      "answer": "are"
+    },
+    {
+      "sentence": "You ___ a sandwich for breakfast.",
+      "options": [
+        "are",
+        "eat"
+      ],
+      "answer": "eat"
+    },
+    {
+      "sentence": "The dog ___ funny.",
+      "options": [
+        "is",
+        "barks"
+      ],
+      "answer": "is"
+    }
+  ]
+}

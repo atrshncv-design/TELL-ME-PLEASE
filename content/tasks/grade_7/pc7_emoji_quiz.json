@@ -1,0 +1,99 @@
+{
+  "id": "pc7_emoji_quiz",
+  "title": "🎭 Угадай по эмодзи",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Посмотри на эмодзи и выбери, что происходит прямо сейчас. Только один вариант написан верно!",
+  "items": [
+    {
+      "question": "✈️",
+      "options": [
+        "She is fly",
+        "She is flying",
+        "She flies"
+      ],
+      "answer": "She is flying"
+    },
+    {
+      "question": "📸",
+      "options": [
+        "He is takeing",
+        "He is taking",
+        "He takes"
+      ],
+      "answer": "He is taking"
+    },
+    {
+      "question": "🎤📰",
+      "options": [
+        "They are report",
+        "They reporting",
+        "They are reporting"
+      ],
+      "answer": "They are reporting"
+    },
+    {
+      "question": "💻",
+      "options": [
+        "I am surf",
+        "I am surfing",
+        "I surfing"
+      ],
+      "answer": "I am surfing"
+    },
+    {
+      "question": "🏔️🚶",
+      "options": [
+        "We are hike",
+        "We are hiking",
+        "We hiking"
+      ],
+      "answer": "We are hiking"
+    },
+    {
+      "question": "🍔",
+      "options": [
+        "He is eat",
+        "He is eating",
+        "He eating"
+      ],
+      "answer": "He is eating"
+    },
+    {
+      "question": "🚗",
+      "options": [
+        "She is drive",
+        "She is driving",
+        "She drives"
+      ],
+      "answer": "She is driving"
+    },
+    {
+      "question": "📱💬",
+      "options": [
+        "They are chat",
+        "They are chatting",
+        "They chat"
+      ],
+      "answer": "They are chatting"
+    },
+    {
+      "question": "🎬",
+      "options": [
+        "We are watch",
+        "We watching",
+        "We are watching"
+      ],
+      "answer": "We are watching"
+    },
+    {
+      "question": "🖥️",
+      "options": [
+        "I am design",
+        "I am designing",
+        "I designing"
+      ],
+      "answer": "I am designing"
+    }
+  ]
+}

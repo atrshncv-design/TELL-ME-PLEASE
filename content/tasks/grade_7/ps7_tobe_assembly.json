@@ -1,0 +1,69 @@
+{
+  "id": "ps7_tobe_assembly",
+  "title": "🧩 Сборка: am / is / are / was / were",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь правильную форму глагола to be (am, is, are, was, were). Помни про маркеры времени!",
+  "items": [
+    {
+      "sentence": "The Internet ___ a great invention.",
+      "answer": "is"
+    },
+    {
+      "sentence": "Yesterday the weather ___ terrible.",
+      "answer": "was"
+    },
+    {
+      "sentence": "My brother ___ very sociable and friendly.",
+      "answer": "is"
+    },
+    {
+      "sentence": "The food at the cafe ___ delicious last Sunday.",
+      "answer": "was"
+    },
+    {
+      "sentence": "I ___ interested in programming.",
+      "answer": "am"
+    },
+    {
+      "sentence": "Last summer we ___ in Spain.",
+      "answer": "were"
+    },
+    {
+      "sentence": "The tickets for the concert ___ very expensive.",
+      "answer": "were"
+    },
+    {
+      "sentence": "___ you good at Maths?",
+      "answer": "Are"
+    },
+    {
+      "sentence": "The film ___ boring, so we left.",
+      "answer": "was"
+    },
+    {
+      "sentence": "Two days ago she ___ ill.",
+      "answer": "was"
+    },
+    {
+      "sentence": "My grandparents ___ retired now.",
+      "answer": "are"
+    },
+    {
+      "sentence": "The rollercoaster ___ really scary!",
+      "answer": "is"
+    },
+    {
+      "sentence": "I ___ not ready for the test yesterday.",
+      "answer": "was"
+    },
+    {
+      "sentence": "The vegetables ___ fresh today.",
+      "answer": "are"
+    },
+    {
+      "sentence": "My favorite subject ___ History.",
+      "answer": "is"
+    }
+  ]
+}

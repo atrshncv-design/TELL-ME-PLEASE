@@ -1,0 +1,59 @@
+{
+  "id": "ps9_wh_question",
+  "title": "❓ Специальные вопросы о праздниках",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь вопросительное слово, чтобы получился правильный специальный вопрос.",
+  "items": [
+    {
+      "sentence": "___ does my family celebrate New Year?",
+      "answer": "When",
+      "hint": "My family celebrates New Year in the evening."
+    },
+    {
+      "sentence": "___ clothes does she wear on festivals?",
+      "answer": "What",
+      "hint": "She wears traditional clothes."
+    },
+    {
+      "sentence": "___ does he carry in his pocket?",
+      "answer": "What",
+      "hint": "He carries a lucky charm in his pocket."
+    },
+    {
+      "sentence": "___ often do they take part in a parade?",
+      "answer": "How",
+      "hint": "They take part in a parade every spring."
+    },
+    {
+      "sentence": "___ do we make for the party?",
+      "answer": "What",
+      "hint": "We make decorations for the party."
+    },
+    {
+      "sentence": "___ time does the celebration start?",
+      "answer": "What",
+      "hint": "The celebration starts at 6 p.m."
+    },
+    {
+      "sentence": "___ does my sister believe in?",
+      "answer": "What",
+      "hint": "My sister believes in superstitions."
+    },
+    {
+      "sentence": "___ does our school organise on special days?",
+      "answer": "What",
+      "hint": "Our school organises concerts on special days."
+    },
+    {
+      "sentence": "___ do you feel before the festival?",
+      "answer": "How",
+      "hint": "I feel excited before the festival."
+    },
+    {
+      "sentence": "___ does the fireworks finish?",
+      "answer": "What",
+      "hint": "The fireworks finish the celebration."
+    }
+  ]
+}

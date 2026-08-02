@@ -1,0 +1,45 @@
+{
+  "id": "pc7_cyber_friend",
+  "title": "🤖 Кибер-блогер",
+  "category": "grammar",
+  "type": "voice-chat",
+  "description": "Проведи интервью с кибер-блогером — 13-летним подростком, который любит путешествия и TikTok. Задавай вопросы из сценария и слушай ответы!",
+  "sections": [
+    {
+      "name": "✈️ Рутина и хобби",
+      "questions": [
+        "Do you usually surf the Net before going to bed?",
+        "What kind of videos do you upload to your channel?",
+        "How often do you travel with your family?",
+        "Do you prefer texting or calling your friends?",
+        "Do you ever watch documentaries?"
+      ]
+    },
+    {
+      "name": "📱 Прямо сейчас",
+      "questions": [
+        "What are you doing right now?",
+        "Are you listening to music at the moment?",
+        "Are you playing a video game while talking to me?",
+        "What are you wearing today?",
+        "Is anyone in your family using the computer right now?"
+      ]
+    },
+    {
+      "name": "📅 Планы на будущее",
+      "questions": [
+        "What are you doing this weekend?",
+        "Are you going on holiday this summer?",
+        "Who are you meeting after school today?",
+        "Are you watching a new movie tonight?"
+      ]
+    },
+    {
+      "name": "⚖️ Ловушка для бота",
+      "questions": [
+        "Do you understand me, or are you confused?"
+      ]
+    }
+  ],
+  "task_context": "Ты — 13-летний подросток-блогер, который любит путешествия, гаджеты и снимает TikTok-видео. Ты очень дружелюбный. Говори простым английским (уровень A1/A2), короткими предложениями. Всегда задавай встречные вопросы, чтобы поддерживать разговор. Когда тебя спрашивают о чувствах и состоянии, отвечай с глаголами состояния (I want, I like, I understand), а не с Continuous (I am wanting, I am liking). Не выходи из роли."
+}

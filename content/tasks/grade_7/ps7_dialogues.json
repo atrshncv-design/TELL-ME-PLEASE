@@ -1,0 +1,50 @@
+{
+  "id": "ps7_dialogues",
+  "title": "🎭 Разыграй диалог: образ жизни",
+  "category": "grammar",
+  "type": "voice-chat",
+  "description": "Разыграй диалоги со сверстником об образе жизни: задавай вопросы и слушай ответы.",
+  "sections": [
+    {
+      "name": "🏃 Активный образ жизни",
+      "questions": [
+        "Do you have an active lifestyle?",
+        "Do you go jogging every day?",
+        "Where do you usually do sport at the weekend?"
+      ]
+    },
+    {
+      "name": "🌅 Распорядок дня",
+      "questions": [
+        "Does your family have breakfast together every day?",
+        "Do you have a busy day?",
+        "When do you meet your friends?"
+      ]
+    },
+    {
+      "name": "🎮 Свободное время",
+      "questions": [
+        "Do you spend a lot of time online?",
+        "Does your best friend like computer games?",
+        "How often does he play computer games?"
+      ]
+    },
+    {
+      "name": "🥗 Здоровый образ жизни",
+      "questions": [
+        "Do you eat fast food?",
+        "Does your mum cook healthy meals?",
+        "What healthy meals does your mum cook?"
+      ]
+    },
+    {
+      "name": "🏞️ Выходные",
+      "questions": [
+        "Do you stay at home at the weekend?",
+        "Does your family go anywhere on Saturdays?",
+        "Where does your family go on Saturdays?"
+      ]
+    }
+  ],
+  "task_context": "Ты — ровесник ученика из англоговорящей страны (13-14 лет). Отвечай на вопросы о своём образе жизни, используя Present Simple и наречия частотности (usually, often, sometimes, never). Говори простым английским (уровень A1/A2), короткими предложениями. После каждого ответа задавай встречный вопрос ученику, чтобы поддержать разговор. Будь дружелюбным и поддерживающим."
+}

@@ -1,0 +1,69 @@
+{
+  "id": "pc8_svetofor_cards",
+  "title": "⚡ Светофор: Present Continuous (карточки)",
+  "category": "grammar",
+  "type": "flashcards",
+  "description": "Переверни карточку и назови форму to be + V-ing для пары «подлежащее + глагол».",
+  "cards": [
+    {
+      "front": "The journalist / broadcast",
+      "back": "is broadcasting"
+    },
+    {
+      "front": "She / investigate",
+      "back": "is investigating"
+    },
+    {
+      "front": "They / download",
+      "back": "are downloading"
+    },
+    {
+      "front": "He / examine",
+      "back": "is examining"
+    },
+    {
+      "front": "We / pollute",
+      "back": "are polluting"
+    },
+    {
+      "front": "The artist / perform",
+      "back": "is performing"
+    },
+    {
+      "front": "The gadget / work",
+      "back": "is working"
+    },
+    {
+      "front": "The celebrity / sign",
+      "back": "is signing"
+    },
+    {
+      "front": "The environment / change",
+      "back": "is changing"
+    },
+    {
+      "front": "I / create",
+      "back": "am creating"
+    },
+    {
+      "front": "You / chat",
+      "back": "are chatting"
+    },
+    {
+      "front": "The scientist / experiment",
+      "back": "is experimenting"
+    },
+    {
+      "front": "My printer / print",
+      "back": "is printing"
+    },
+    {
+      "front": "We / upload",
+      "back": "are uploading"
+    },
+    {
+      "front": "He / text",
+      "back": "is texting"
+    }
+  ]
+}

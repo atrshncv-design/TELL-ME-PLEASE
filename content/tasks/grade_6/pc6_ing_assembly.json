@@ -1,0 +1,69 @@
+{
+  "id": "pc6_ing_assembly",
+  "title": "🧩 Сборка: прямо сейчас",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь am/is/are и глагол с -ing. Смотри на подлежащее и на слово в скобках!",
+  "items": [
+    {
+      "sentence": "Look! He ___ (ride) a bike.",
+      "answer": "is riding"
+    },
+    {
+      "sentence": "I ___ (do) my homework now.",
+      "answer": "am doing"
+    },
+    {
+      "sentence": "They ___ (play) football at the moment.",
+      "answer": "are playing"
+    },
+    {
+      "sentence": "She ___ (read) a book.",
+      "answer": "is reading"
+    },
+    {
+      "sentence": "We ___ (watch) a film now.",
+      "answer": "are watching"
+    },
+    {
+      "sentence": "The dog ___ (run) in the park.",
+      "answer": "is running"
+    },
+    {
+      "sentence": "You ___ (sit) on the sofa.",
+      "answer": "are sitting"
+    },
+    {
+      "sentence": "My mother ___ (make) a cake.",
+      "answer": "is making"
+    },
+    {
+      "sentence": "The students ___ (write) a test.",
+      "answer": "are writing"
+    },
+    {
+      "sentence": "It ___ (snow) today.",
+      "answer": "is snowing"
+    },
+    {
+      "sentence": "I ___ (listen) to the teacher.",
+      "answer": "am listening"
+    },
+    {
+      "sentence": "My friend ___ (draw) a picture.",
+      "answer": "is drawing"
+    },
+    {
+      "sentence": "The birds ___ (sing) in the tree.",
+      "answer": "are singing"
+    },
+    {
+      "sentence": "We ___ (have) lunch now.",
+      "answer": "are having"
+    },
+    {
+      "sentence": "He ___ (climb) the tree.",
+      "answer": "is climbing"
+    }
+  ]
+}

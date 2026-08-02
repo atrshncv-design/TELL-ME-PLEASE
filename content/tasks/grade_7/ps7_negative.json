@@ -1,0 +1,69 @@
+{
+  "id": "ps7_negative",
+  "title": "🚫 Анти-реакция: отрицание",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Сделай предложение отрицательным: вставь don't или doesn't. Смотри на подлежащее!",
+  "items": [
+    {
+      "sentence": "My friend ___ go to the sports club after school.",
+      "answer": "doesn't"
+    },
+    {
+      "sentence": "Teenagers ___ use social media every day.",
+      "answer": "don't"
+    },
+    {
+      "sentence": "My sister ___ watch TV in the evening.",
+      "answer": "doesn't"
+    },
+    {
+      "sentence": "We ___ have English lessons twice a week.",
+      "answer": "don't"
+    },
+    {
+      "sentence": "Our teacher ___ give us tests on Fridays.",
+      "answer": "doesn't"
+    },
+    {
+      "sentence": "My parents ___ work in a modern office.",
+      "answer": "don't"
+    },
+    {
+      "sentence": "I ___ do my homework in my bedroom.",
+      "answer": "don't"
+    },
+    {
+      "sentence": "My classmates ___ play computer games at the weekend.",
+      "answer": "don't"
+    },
+    {
+      "sentence": "My cousin ___ live in a big city.",
+      "answer": "doesn't"
+    },
+    {
+      "sentence": "We ___ visit our grandparents every month.",
+      "answer": "don't"
+    },
+    {
+      "sentence": "He ___ study for his exams in the library.",
+      "answer": "doesn't"
+    },
+    {
+      "sentence": "They ___ go to the cinema on Saturdays.",
+      "answer": "don't"
+    },
+    {
+      "sentence": "My brother ___ play the guitar very well.",
+      "answer": "doesn't"
+    },
+    {
+      "sentence": "I ___ read magazines about music.",
+      "answer": "don't"
+    },
+    {
+      "sentence": "Our family ___ have dinner together in the evening.",
+      "answer": "doesn't"
+    }
+  ]
+}

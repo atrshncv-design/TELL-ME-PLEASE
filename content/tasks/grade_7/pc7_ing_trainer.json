@@ -1,0 +1,69 @@
+{
+  "id": "pc7_ing_trainer",
+  "title": "⌨️ Орфографический тренажёр",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Напечатай глагол в скобках с правильным написанием -ing: не забудь про немую -e, удвоение и -ie → -y!",
+  "items": [
+    {
+      "sentence": "Look! He is ___ (make) a video blog.",
+      "answer": "making"
+    },
+    {
+      "sentence": "They are ___ (run) after the thief.",
+      "answer": "running"
+    },
+    {
+      "sentence": "I am ___ (explore) the virtual museum.",
+      "answer": "exploring"
+    },
+    {
+      "sentence": "She is ___ (swim) in the pool.",
+      "answer": "swimming"
+    },
+    {
+      "sentence": "We are ___ (broadcast) the news.",
+      "answer": "broadcasting"
+    },
+    {
+      "sentence": "The dog is ___ (sit) on the sofa.",
+      "answer": "sitting"
+    },
+    {
+      "sentence": "You are ___ (dive) into the water.",
+      "answer": "diving"
+    },
+    {
+      "sentence": "He is ___ (hike) in the mountains.",
+      "answer": "hiking"
+    },
+    {
+      "sentence": "The students are ___ (chat) online.",
+      "answer": "chatting"
+    },
+    {
+      "sentence": "I am ___ (write) an email.",
+      "answer": "writing"
+    },
+    {
+      "sentence": "My friend is ___ (take) a photo.",
+      "answer": "taking"
+    },
+    {
+      "sentence": "They are ___ (travel) around Spain.",
+      "answer": "travelling"
+    },
+    {
+      "sentence": "We are ___ (design) a website.",
+      "answer": "designing"
+    },
+    {
+      "sentence": "She is ___ (lie) on the grass.",
+      "answer": "lying"
+    },
+    {
+      "sentence": "He is ___ (tie) his shoelaces.",
+      "answer": "tying"
+    }
+  ]
+}

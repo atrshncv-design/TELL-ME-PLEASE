@@ -1,0 +1,84 @@
+{
+  "id": "pc9_trends",
+  "title": "📈 Тенденции и перемены",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Раскрой скобки, используя Present Continuous для описания изменений и тенденций.",
+  "items": [
+    {
+      "sentence": "The climate ___ rapidly.",
+      "answer": "is changing",
+      "hint": "change"
+    },
+    {
+      "sentence": "Technology ___ very fast.",
+      "answer": "is developing",
+      "hint": "develop"
+    },
+    {
+      "sentence": "More teenagers ___ interested in ecology.",
+      "answer": "are becoming",
+      "hint": "become"
+    },
+    {
+      "sentence": "The internet ___ faster every year.",
+      "answer": "is getting",
+      "hint": "get"
+    },
+    {
+      "sentence": "Pollution ___ in big cities.",
+      "answer": "is increasing",
+      "hint": "increase"
+    },
+    {
+      "sentence": "Traditional newspapers ___ slowly.",
+      "answer": "are disappearing",
+      "hint": "disappear"
+    },
+    {
+      "sentence": "People ___ longer these days.",
+      "answer": "are living",
+      "hint": "live"
+    },
+    {
+      "sentence": "The sea level ___ .",
+      "answer": "is rising",
+      "hint": "rise"
+    },
+    {
+      "sentence": "Our town ___ quickly.",
+      "answer": "is growing",
+      "hint": "grow"
+    },
+    {
+      "sentence": "Virtual reality ___ more popular.",
+      "answer": "is becoming",
+      "hint": "become"
+    },
+    {
+      "sentence": "The number of internet users ___ daily.",
+      "answer": "is increasing",
+      "hint": "increase"
+    },
+    {
+      "sentence": "Animals ___ their habitats.",
+      "answer": "are losing",
+      "hint": "lose"
+    },
+    {
+      "sentence": "Communication ___ easier.",
+      "answer": "is getting",
+      "hint": "get"
+    },
+    {
+      "sentence": "Robots ___ factory workers.",
+      "answer": "are replacing",
+      "hint": "replace"
+    },
+    {
+      "sentence": "The environment ___ from our actions.",
+      "answer": "is suffering",
+      "hint": "suffer"
+    }
+  ]
+}

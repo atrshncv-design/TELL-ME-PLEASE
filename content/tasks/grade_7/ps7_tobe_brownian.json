@@ -1,0 +1,129 @@
+{
+  "id": "ps7_tobe_brownian",
+  "title": "🏃 Найди того, кто...",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Задай вопрос с Are you...? или Were you...?, чтобы найти человека с нужным признаком.",
+  "items": [
+    {
+      "question": "Find someone who (was abroad last summer)",
+      "options": [
+        "Were",
+        "Are"
+      ],
+      "answer": "Were"
+    },
+    {
+      "question": "Find someone who (is interested in gadgets)",
+      "options": [
+        "Are",
+        "Were"
+      ],
+      "answer": "Are"
+    },
+    {
+      "question": "Find someone who (was ill last week)",
+      "options": [
+        "Were",
+        "Are"
+      ],
+      "answer": "Were"
+    },
+    {
+      "question": "Find someone who (is good at Maths)",
+      "options": [
+        "Are",
+        "Were"
+      ],
+      "answer": "Are"
+    },
+    {
+      "question": "Find someone who (favorite food is sushi)",
+      "options": [
+        "Is",
+        "Was"
+      ],
+      "answer": "Is"
+    },
+    {
+      "question": "Find someone who (was at the cinema at the weekend)",
+      "options": [
+        "Were",
+        "Are"
+      ],
+      "answer": "Were"
+    },
+    {
+      "question": "Find someone who (is a sociable person)",
+      "options": [
+        "Are",
+        "Were"
+      ],
+      "answer": "Are"
+    },
+    {
+      "question": "Find someone who (was late for school today)",
+      "options": [
+        "Were",
+        "Are"
+      ],
+      "answer": "Were"
+    },
+    {
+      "question": "Find someone who (is a fan of a football team)",
+      "options": [
+        "Are",
+        "Were"
+      ],
+      "answer": "Are"
+    },
+    {
+      "question": "Find someone who (parents are strict)",
+      "options": [
+        "Are",
+        "Were"
+      ],
+      "answer": "Are"
+    },
+    {
+      "question": "Find someone who (was in the 1st grade in 2016)",
+      "options": [
+        "Were",
+        "Are"
+      ],
+      "answer": "Were"
+    },
+    {
+      "question": "Find someone who (is afraid of spiders)",
+      "options": [
+        "Are",
+        "Were"
+      ],
+      "answer": "Are"
+    },
+    {
+      "question": "Find someone who (is a vegetarian)",
+      "options": [
+        "Are",
+        "Were"
+      ],
+      "answer": "Are"
+    },
+    {
+      "question": "Find someone who (was happy yesterday)",
+      "options": [
+        "Were",
+        "Are"
+      ],
+      "answer": "Were"
+    },
+    {
+      "question": "Find someone who (is tired now)",
+      "options": [
+        "Are",
+        "Were"
+      ],
+      "answer": "Are"
+    }
+  ]
+}

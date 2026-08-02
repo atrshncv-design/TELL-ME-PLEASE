@@ -1,0 +1,65 @@
+{
+  "id": "tb6_room",
+  "title": "⭐ Моя комната: дизайн и to be",
+  "category": "to-be",
+  "type": "fill-in",
+  "description": "Опиши свою идеальную комнату: вставь am, is или are. Лексика 6 класса: мебель, цвета, предлоги места.",
+  "items": [
+    {
+      "sentence": "Welcome to my room! It ___ big and cozy.",
+      "answer": "is"
+    },
+    {
+      "sentence": "The walls ___ light blue.",
+      "answer": "are"
+    },
+    {
+      "sentence": "The carpet ___ on the floor.",
+      "answer": "is"
+    },
+    {
+      "sentence": "My bed ___ near the window.",
+      "answer": "is"
+    },
+    {
+      "sentence": "The curtains ___ yellow.",
+      "answer": "are"
+    },
+    {
+      "sentence": "My desk ___ next to the wardrobe.",
+      "answer": "is"
+    },
+    {
+      "sentence": "The books ___ on the shelf.",
+      "answer": "are"
+    },
+    {
+      "sentence": "My computer ___ on the desk.",
+      "answer": "is"
+    },
+    {
+      "sentence": "My trainers ___ under the bed.",
+      "answer": "are"
+    },
+    {
+      "sentence": "The poster of my favorite singer ___ on the wall.",
+      "answer": "is"
+    },
+    {
+      "sentence": "My room ___ not boring.",
+      "answer": "is"
+    },
+    {
+      "sentence": "It ___ my favorite place in the house.",
+      "answer": "is"
+    },
+    {
+      "sentence": "I ___ happy here.",
+      "answer": "am"
+    },
+    {
+      "sentence": "What about your room? ___ it big?",
+      "answer": "Is"
+    }
+  ]
+}

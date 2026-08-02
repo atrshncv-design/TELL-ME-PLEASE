@@ -1,0 +1,144 @@
+{
+  "id": "ps9_tobe_tags",
+  "title": "⭐ Разделительные вопросы: хвостик",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Добавь правильный «хвостик» к предложению (tag question).",
+  "items": [
+    {
+      "sentence": "The book is written by him, ___?",
+      "options": [
+        "isn't it",
+        "is it",
+        "isn't he"
+      ],
+      "answer": "isn't it"
+    },
+    {
+      "sentence": "The room wasn't cleaned, ___?",
+      "options": [
+        "was it",
+        "wasn't it",
+        "is it"
+      ],
+      "answer": "was it"
+    },
+    {
+      "sentence": "The letters have been sent, ___?",
+      "options": [
+        "haven't they",
+        "have they",
+        "aren't they"
+      ],
+      "answer": "haven't they"
+    },
+    {
+      "sentence": "The trees are planted every year, ___?",
+      "options": [
+        "aren't they",
+        "are they",
+        "don't they"
+      ],
+      "answer": "aren't they"
+    },
+    {
+      "sentence": "The thief was caught yesterday, ___?",
+      "options": [
+        "wasn't he",
+        "was he",
+        "isn't he"
+      ],
+      "answer": "wasn't he"
+    },
+    {
+      "sentence": "The work hasn't been finished, ___?",
+      "options": [
+        "has it",
+        "hasn't it",
+        "is it"
+      ],
+      "answer": "has it"
+    },
+    {
+      "sentence": "The bridge is being repaired, ___?",
+      "options": [
+        "isn't it",
+        "is it",
+        "doesn't it"
+      ],
+      "answer": "isn't it"
+    },
+    {
+      "sentence": "The exam will be difficult, ___?",
+      "options": [
+        "won't it",
+        "will it",
+        "isn't it"
+      ],
+      "answer": "won't it"
+    },
+    {
+      "sentence": "The museum was built in 1990, ___?",
+      "options": [
+        "wasn't it",
+        "was it",
+        "isn't it"
+      ],
+      "answer": "wasn't it"
+    },
+    {
+      "sentence": "The problem has been solved, ___?",
+      "options": [
+        "hasn't it",
+        "has it",
+        "isn't it"
+      ],
+      "answer": "hasn't it"
+    },
+    {
+      "sentence": "You are interested in art, ___?",
+      "options": [
+        "aren't you",
+        "are you",
+        "don't you"
+      ],
+      "answer": "aren't you"
+    },
+    {
+      "sentence": "He wasn't punished, ___?",
+      "options": [
+        "was he",
+        "wasn't he",
+        "is he"
+      ],
+      "answer": "was he"
+    },
+    {
+      "sentence": "The exhibition was opened last week, ___?",
+      "options": [
+        "wasn't it",
+        "was it",
+        "hasn't it"
+      ],
+      "answer": "wasn't it"
+    },
+    {
+      "sentence": "The criminals have been arrested, ___?",
+      "options": [
+        "haven't they",
+        "have they",
+        "weren't they"
+      ],
+      "answer": "haven't they"
+    },
+    {
+      "sentence": "The new law is being discussed, ___?",
+      "options": [
+        "isn't it",
+        "is it",
+        "doesn't it"
+      ],
+      "answer": "isn't it"
+    }
+  ]
+}

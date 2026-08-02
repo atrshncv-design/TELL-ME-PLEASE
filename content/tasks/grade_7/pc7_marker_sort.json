@@ -1,0 +1,81 @@
+{
+  "id": "pc7_marker_sort",
+  "title": "🧠 Сортировка маркеров",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Раскидай маркеры времени по корзинам: Present Simple (обычно) или Present Continuous (прямо сейчас).",
+  "columns": [
+    {
+      "id": "simple",
+      "label": "Present Simple",
+      "rule": "обычно: every day, usually, always"
+    },
+    {
+      "id": "continuous",
+      "label": "Present Continuous",
+      "rule": "сейчас: now, at the moment, Look!"
+    }
+  ],
+  "items": [
+    {
+      "verb": "now",
+      "answer": "continuous"
+    },
+    {
+      "verb": "usually",
+      "answer": "simple"
+    },
+    {
+      "verb": "at the moment",
+      "answer": "continuous"
+    },
+    {
+      "verb": "every day",
+      "answer": "simple"
+    },
+    {
+      "verb": "Look!",
+      "answer": "continuous"
+    },
+    {
+      "verb": "often",
+      "answer": "simple"
+    },
+    {
+      "verb": "today",
+      "answer": "continuous"
+    },
+    {
+      "verb": "on Sundays",
+      "answer": "simple"
+    },
+    {
+      "verb": "right now",
+      "answer": "continuous"
+    },
+    {
+      "verb": "always",
+      "answer": "simple"
+    },
+    {
+      "verb": "Listen!",
+      "answer": "continuous"
+    },
+    {
+      "verb": "sometimes",
+      "answer": "simple"
+    },
+    {
+      "verb": "at present",
+      "answer": "continuous"
+    },
+    {
+      "verb": "twice a week",
+      "answer": "simple"
+    },
+    {
+      "verb": "these days",
+      "answer": "continuous"
+    }
+  ]
+}

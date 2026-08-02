@@ -1,0 +1,49 @@
+{
+  "id": "ps8_peer_talk",
+  "title": "💬 Поговори со сверстником: технологии, хобби и планы",
+  "category": "speaking",
+  "type": "voice-chat",
+  "description": "Поговори со сверстником из англоговорящей страны о его предпочтениях: технологии, хобби, здоровье, школа и экология.",
+  "sections": [
+    {
+      "name": "📱 Технологии и соцсети",
+      "questions": [
+        "Do you spend much time on social media every day?",
+        "What kind of apps do you usually download on your smartphone?",
+        "Do you prefer texting your friends or calling them?",
+        "How often do you check your notifications?"
+      ]
+    },
+    {
+      "name": "🎮 Хобби и свободное время",
+      "questions": [
+        "What do you usually do in your free time after school?",
+        "Do you play any computer games or do you prefer active sports?",
+        "Do you listen to music when you do your homework?",
+        "Does your school have a drama or an art club?"
+      ]
+    },
+    {
+      "name": "🍔 Здоровье и образ жизни",
+      "questions": [
+        "Do you eat a lot of junk food or do you try to keep a healthy diet?",
+        "How much water do you drink during the day?",
+        "Do you often feel stressed before exams at school?"
+      ]
+    },
+    {
+      "name": "💼 Школа и будущая профессия",
+      "questions": [
+        "What subjects do you study at school?",
+        "Do you have a part-time job on weekends or holidays?",
+        "What do you want to be when you finish school?"
+      ]
+    },
+    {
+      "name": "🌍 Окружающая среда и город",
+      "questions": [
+        "Do you and your family recycle paper, plastic, and glass?"
+      ]
+    }
+  ]
+}

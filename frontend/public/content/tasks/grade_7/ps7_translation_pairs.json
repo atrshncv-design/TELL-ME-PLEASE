@@ -1,0 +1,131 @@
+{
+  "id": "ps7_translation_pairs",
+  "title": "🔗 Перевод и предложение",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Соедини русское предложение с его английским переводом. Обрати внимание на наречия частотности!",
+  "columns": [
+    {
+      "id": "t1",
+      "label": "My friend uses the Internet every day."
+    },
+    {
+      "id": "t2",
+      "label": "We often go to the sports club after school."
+    },
+    {
+      "id": "t3",
+      "label": "My sister sometimes watches films in the evenings."
+    },
+    {
+      "id": "t4",
+      "label": "Parents usually have dinner together."
+    },
+    {
+      "id": "t5",
+      "label": "I never play computer games at night."
+    },
+    {
+      "id": "t6",
+      "label": "The teacher always gives homework."
+    },
+    {
+      "id": "t7",
+      "label": "Teenagers often listen to music on headphones."
+    },
+    {
+      "id": "t8",
+      "label": "We rarely go to the cinema at the weekend."
+    },
+    {
+      "id": "t9",
+      "label": "My brother usually does his homework in the living room."
+    },
+    {
+      "id": "t10",
+      "label": "Our classmates live near the school."
+    },
+    {
+      "id": "t11",
+      "label": "I often chat with my friends online."
+    },
+    {
+      "id": "t12",
+      "label": "My cousin plays the guitar in a band."
+    },
+    {
+      "id": "t13",
+      "label": "We sometimes visit our relatives in the country."
+    },
+    {
+      "id": "t14",
+      "label": "My dad always reads the newspaper in the morning."
+    },
+    {
+      "id": "t15",
+      "label": "My mum often cooks a tasty dinner."
+    }
+  ],
+  "items": [
+    {
+      "verb": "Мой друг каждый день пользуется интернетом.",
+      "answer": "t1"
+    },
+    {
+      "verb": "Мы часто ходим в спортивный клуб после школы.",
+      "answer": "t2"
+    },
+    {
+      "verb": "Моя сестра иногда смотрит фильмы по вечерам.",
+      "answer": "t3"
+    },
+    {
+      "verb": "Родители обычно ужинают вместе.",
+      "answer": "t4"
+    },
+    {
+      "verb": "Я никогда не играю в компьютерные игры ночью.",
+      "answer": "t5"
+    },
+    {
+      "verb": "Учитель всегда задаёт домашнее задание.",
+      "answer": "t6"
+    },
+    {
+      "verb": "Подростки часто слушают музыку в наушниках.",
+      "answer": "t7"
+    },
+    {
+      "verb": "Мы редко ходим в кино по выходным.",
+      "answer": "t8"
+    },
+    {
+      "verb": "Мой брат обычно делает уроки в гостиной.",
+      "answer": "t9"
+    },
+    {
+      "verb": "Наши одноклассники живут недалеко от школы.",
+      "answer": "t10"
+    },
+    {
+      "verb": "Я часто переписываюсь с друзьями онлайн.",
+      "answer": "t11"
+    },
+    {
+      "verb": "Мой двоюродный брат играет на гитаре в группе.",
+      "answer": "t12"
+    },
+    {
+      "verb": "Мы иногда навещаем родственников в деревне.",
+      "answer": "t13"
+    },
+    {
+      "verb": "Папа всегда читает газету утром.",
+      "answer": "t14"
+    },
+    {
+      "verb": "Мама часто готовит вкусный ужин.",
+      "answer": "t15"
+    }
+  ]
+}

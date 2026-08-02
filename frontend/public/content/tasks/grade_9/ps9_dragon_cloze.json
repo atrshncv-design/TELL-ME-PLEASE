@@ -1,0 +1,89 @@
+{
+  "id": "ps9_dragon_cloze",
+  "title": "🐉 Китайский дракон: вставь глаголы",
+  "category": "grammar",
+  "type": "cloze",
+  "description": "Прочитай текст о Китайском карнавале дракона и вставь глаголы в Present Simple.",
+  "text": "Chinese Dragon Carnival ___ one of the most impressive and colourful celebrations in the world. It ___ place every year and ___ together music, movement, bright costumes and ancient traditions. During the carnival, huge dragon figures ___ through the streets and ___ a magical atmosphere. People ___ this event with great excitement. Performers ___ traditional clothes, ___ drums and ___ in perfect rhythm. The dragon symbol ___ very important in Chinese culture because it ___ strength, luck and prosperity. The parade ___ the city with energy and happiness. Families, children and tourists ___ it with admiration, ___ photos and ___ every moment.",
+  "answers": [
+    [
+      "is"
+    ],
+    [
+      "takes"
+    ],
+    [
+      "brings"
+    ],
+    [
+      "move"
+    ],
+    [
+      "create"
+    ],
+    [
+      "celebrate"
+    ],
+    [
+      "wear"
+    ],
+    [
+      "play"
+    ],
+    [
+      "dance"
+    ],
+    [
+      "is"
+    ],
+    [
+      "represents"
+    ],
+    [
+      "fills"
+    ],
+    [
+      "watch"
+    ],
+    [
+      "take"
+    ],
+    [
+      "enjoy"
+    ]
+  ],
+  "word_bank": [
+    "is",
+    "takes",
+    "brings",
+    "move",
+    "create",
+    "celebrate",
+    "wear",
+    "play",
+    "dance",
+    "is",
+    "represents",
+    "fills",
+    "watch",
+    "take",
+    "enjoy"
+  ],
+  "hints": [
+    "(be)",
+    "(take)",
+    "(bring)",
+    "(move)",
+    "(create)",
+    "(celebrate)",
+    "(wear)",
+    "(play)",
+    "(dance)",
+    "(be)",
+    "(represent)",
+    "(fill)",
+    "(watch)",
+    "(take)",
+    "(enjoy)"
+  ]
+}

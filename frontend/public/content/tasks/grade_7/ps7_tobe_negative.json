@@ -1,0 +1,69 @@
+{
+  "id": "ps7_tobe_negative",
+  "title": "🚫 Анти-реакция: отрицание to be",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Сделай предложение отрицательным: вставь isn't, aren't, wasn't, weren't или am not.",
+  "items": [
+    {
+      "sentence": "He is a famous actor. → He ___ a famous actor.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "They were at the cinema. → They ___ at the cinema.",
+      "answer": "weren't"
+    },
+    {
+      "sentence": "The soup was spicy. → The soup ___ spicy.",
+      "answer": "wasn't"
+    },
+    {
+      "sentence": "I am an engineer. → I ___ an engineer.",
+      "answer": "am not"
+    },
+    {
+      "sentence": "We were tired. → We ___ tired.",
+      "answer": "weren't"
+    },
+    {
+      "sentence": "The gadgets are cheap. → The gadgets ___ cheap.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "She was happy. → She ___ happy.",
+      "answer": "wasn't"
+    },
+    {
+      "sentence": "You are 13 years old. → You ___ 13 years old.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "The museum was open. → The museum ___ open.",
+      "answer": "wasn't"
+    },
+    {
+      "sentence": "It is a dangerous job. → It ___ a dangerous job.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "The children were noisy. → The children ___ noisy.",
+      "answer": "weren't"
+    },
+    {
+      "sentence": "My friend is a chatterbox. → My friend ___ a chatterbox.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "The tickets were expensive. → The tickets ___ expensive.",
+      "answer": "weren't"
+    },
+    {
+      "sentence": "The food is cold. → The food ___ cold.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "I was late for school. → I ___ late for school.",
+      "answer": "wasn't"
+    }
+  ]
+}

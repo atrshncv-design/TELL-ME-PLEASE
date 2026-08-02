@@ -1,0 +1,94 @@
+{
+  "id": "pc8_my_week_cloze",
+  "title": "📝 Моя неделя: сложный текст",
+  "category": "grammar",
+  "type": "cloze",
+  "description": "В тексте смешаны все функции Present Continuous и Present Simple. Прочитай контекст и выбери правильную форму!",
+  "text": "Hi! My name ___ Max. I usually ___ to school, but today I ___ at home because I feel sick. It's a temporary thing. My mum ___ from home today too. Right now, she ___ soup in the kitchen. I ___ on the sofa. I ___ a great book about ecology these days. It says the climate ___ fast. People ___ down too many trees. It's awful! My brother ___ the lights on, and it drives me crazy! I ___ we must save energy. Tomorrow, I ___ the doctor. We ___ at 3 PM. I ___ to get well soon. What ___ you ___ this weekend?",
+  "answers": [
+    [
+      "is"
+    ],
+    [
+      "go"
+    ],
+    [
+      "am staying"
+    ],
+    [
+      "is working"
+    ],
+    [
+      "is making"
+    ],
+    [
+      "am lying"
+    ],
+    [
+      "am reading"
+    ],
+    [
+      "is changing"
+    ],
+    [
+      "are cutting"
+    ],
+    [
+      "is always leaving"
+    ],
+    [
+      "think"
+    ],
+    [
+      "am visiting"
+    ],
+    [
+      "are meeting"
+    ],
+    [
+      "want"
+    ],
+    [
+      "are"
+    ],
+    [
+      "doing"
+    ]
+  ],
+  "word_bank": [
+    "is",
+    "go",
+    "am staying",
+    "is working",
+    "is making",
+    "am lying",
+    "am reading",
+    "is changing",
+    "are cutting",
+    "is always leaving",
+    "think",
+    "am visiting",
+    "are meeting",
+    "want",
+    "are",
+    "doing"
+  ],
+  "hints": [
+    "(be)",
+    "(go)",
+    "(stay)",
+    "(work)",
+    "(make)",
+    "(lie)",
+    "(read)",
+    "(change)",
+    "(cut)",
+    "(always / leave)",
+    "(think)",
+    "(visit)",
+    "(meet)",
+    "(want)",
+    "(you / do)",
+    "(you / do)"
+  ]
+}

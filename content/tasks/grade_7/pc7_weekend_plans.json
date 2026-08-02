@@ -1,0 +1,29 @@
+{
+  "id": "pc7_weekend_plans",
+  "title": "📅 Планы на выходные",
+  "category": "speaking",
+  "type": "fill-in-and-speak",
+  "description": "Расскажи, что ты обычно делаешь по выходным (Present Simple) и что ты планируешь на эти выходные (Present Continuous for Future).",
+  "sections": [
+    {
+      "name": "🕖 Обычно (Present Simple)",
+      "prompts": [
+        "On Sundays I usually wake up at …",
+        "I always help my parents about the house.",
+        "I often play computer games on Saturdays.",
+        "I sometimes go to the cinema with my friends.",
+        "I rarely read books at the weekend."
+      ]
+    },
+    {
+      "name": "📅 Планы на эти выходные (Present Continuous for Future)",
+      "prompts": [
+        "This weekend is different! Tomorrow I am visiting …",
+        "In the evening, we are having …",
+        "On Sunday morning, my friend and I are going to …",
+        "We are meeting at … at 5 PM.",
+        "I am really looking forward to …!"
+      ]
+    }
+  ]
+}

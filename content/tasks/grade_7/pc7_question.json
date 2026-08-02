@@ -1,0 +1,89 @@
+{
+  "id": "pc7_question",
+  "title": "❓ Рефлекс вопроса",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Задай вопрос: выбери Is, Are или Am. Смотри на подлежащее!",
+  "items": [
+    {
+      "sentence": "___ he traveling?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ they broadcasting?",
+      "options": [
+        "Are",
+        "Is"
+      ],
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ I reading?",
+      "options": [
+        "Am",
+        "Is"
+      ],
+      "answer": "Am"
+    },
+    {
+      "sentence": "___ she exploring?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ we watching TV?",
+      "options": [
+        "Are",
+        "Is"
+      ],
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ the dog barking?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ you driving?",
+      "options": [
+        "Are",
+        "Is"
+      ],
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ it raining?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ your mum downloading?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ the boys fighting?",
+      "options": [
+        "Are",
+        "Is"
+      ],
+      "answer": "Are"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "pc6_letter",
+  "title": "📧 Письмо из Лондона",
+  "category": "grammar",
+  "type": "cloze",
+  "description": "Прочитай письмо Сэма. Вставь пропущенные слова: нажми на пропуск, затем на слово. Смешанные времена: обычно — Present Simple, прямо сейчас — Present Continuous.",
+  "text": "Hi! My name ___ Sam. I ___ an email to you now. I usually ___ emails on Sundays. My brother, Tom, ___ football in the garden now. He ___ football every day. My mother ___ dinner in the kitchen. She always ___ dinner at 6 PM. My father ___ TV now. He ___ watching sports. My dog, Rex, ___ on the sofa. He usually ___ in my room. We ___ a happy family. What about you? What ___ you doing now? ___ you listening to music? ___ you like music?",
+  "answers": [
+    [
+      "is"
+    ],
+    [
+      "am writing"
+    ],
+    [
+      "write"
+    ],
+    [
+      "is playing"
+    ],
+    [
+      "plays"
+    ],
+    [
+      "is cooking"
+    ],
+    [
+      "cooks"
+    ],
+    [
+      "is watching"
+    ],
+    [
+      "likes"
+    ],
+    [
+      "is sleeping"
+    ],
+    [
+      "sleeps"
+    ],
+    [
+      "are"
+    ],
+    [
+      "are"
+    ],
+    [
+      "Are"
+    ],
+    [
+      "Do"
+    ]
+  ],
+  "word_bank": [
+    "is",
+    "am writing",
+    "write",
+    "is playing",
+    "plays",
+    "is cooking",
+    "cooks",
+    "is watching",
+    "likes",
+    "is sleeping",
+    "sleeps",
+    "are",
+    "are",
+    "Are",
+    "Do"
+  ],
+  "hints": [
+    "(be)",
+    "(write)",
+    "(write)",
+    "(play)",
+    "(play)",
+    "(cook)",
+    "(cook)",
+    "(watch)",
+    "(like)",
+    "(sleep)",
+    "(sleep)",
+    "(be)",
+    "(you / do)",
+    "(you / listen)",
+    "(you / like)"
+  ]
+}

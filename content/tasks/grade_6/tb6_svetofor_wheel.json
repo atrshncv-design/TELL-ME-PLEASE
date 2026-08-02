@@ -1,0 +1,69 @@
+{
+  "id": "tb6_svetofor_wheel",
+  "title": "🎡 Светофор: колесо удачи",
+  "category": "to-be",
+  "type": "wheel",
+  "description": "Крути колесо и называй форму глагола to be (am / is / are) для выпавшего подлежащего.",
+  "items": [
+    {
+      "label": "I",
+      "answer": "am"
+    },
+    {
+      "label": "The apple",
+      "answer": "is"
+    },
+    {
+      "label": "My parents",
+      "answer": "are"
+    },
+    {
+      "label": "The weather",
+      "answer": "is"
+    },
+    {
+      "label": "The children",
+      "answer": "are"
+    },
+    {
+      "label": "The sofa",
+      "answer": "is"
+    },
+    {
+      "label": "The money",
+      "answer": "is"
+    },
+    {
+      "label": "They",
+      "answer": "are"
+    },
+    {
+      "label": "The news",
+      "answer": "is"
+    },
+    {
+      "label": "My friend",
+      "answer": "is"
+    },
+    {
+      "label": "We",
+      "answer": "are"
+    },
+    {
+      "label": "The holidays",
+      "answer": "are"
+    },
+    {
+      "label": "She",
+      "answer": "is"
+    },
+    {
+      "label": "The homework",
+      "answer": "is"
+    },
+    {
+      "label": "You",
+      "answer": "are"
+    }
+  ]
+}

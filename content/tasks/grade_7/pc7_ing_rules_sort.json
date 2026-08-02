@@ -1,0 +1,86 @@
+{
+  "id": "pc7_ing_rules_sort",
+  "title": "🧠 Сортировка правил -ing",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Распредели глаголы по трём корзинам: просто добавь -ing, убери немую -e или удвой согласную.",
+  "columns": [
+    {
+      "id": "add",
+      "label": "Just add -ing",
+      "rule": "play → playing"
+    },
+    {
+      "id": "drop",
+      "label": "Drop -e, add -ing",
+      "rule": "make → making"
+    },
+    {
+      "id": "double",
+      "label": "Double the consonant",
+      "rule": "run → running"
+    }
+  ],
+  "items": [
+    {
+      "verb": "read",
+      "answer": "add"
+    },
+    {
+      "verb": "make",
+      "answer": "drop"
+    },
+    {
+      "verb": "run",
+      "answer": "double"
+    },
+    {
+      "verb": "explore",
+      "answer": "drop"
+    },
+    {
+      "verb": "swim",
+      "answer": "double"
+    },
+    {
+      "verb": "watch",
+      "answer": "add"
+    },
+    {
+      "verb": "dive",
+      "answer": "drop"
+    },
+    {
+      "verb": "sit",
+      "answer": "double"
+    },
+    {
+      "verb": "broadcast",
+      "answer": "add"
+    },
+    {
+      "verb": "hike",
+      "answer": "drop"
+    },
+    {
+      "verb": "chat",
+      "answer": "double"
+    },
+    {
+      "verb": "surf",
+      "answer": "add"
+    },
+    {
+      "verb": "travel",
+      "answer": "double"
+    },
+    {
+      "verb": "design",
+      "answer": "add"
+    },
+    {
+      "verb": "write",
+      "answer": "drop"
+    }
+  ]
+}

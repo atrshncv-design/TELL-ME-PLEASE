@@ -1,0 +1,69 @@
+{
+  "id": "ps8_gossip",
+  "title": "🗣️ Сплетни: расскажи о друге",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Ученик А рассказывает о себе, а ты передаёшь это как «сплетню» в 3-м лице: I play → He plays.",
+  "items": [
+    {
+      "sentence": "He ___ like waking up early. (I don't like waking up early.)",
+      "answer": "doesn't"
+    },
+    {
+      "sentence": "He ___ all his pocket money on snacks. (I spend all my pocket money on snacks.)",
+      "answer": "spends"
+    },
+    {
+      "sentence": "She always ___ her parents with shopping. (I always help my parents with shopping.)",
+      "answer": "helps"
+    },
+    {
+      "sentence": "He ___ do his homework on Fridays. (I don't do my homework on Fridays.)",
+      "answer": "doesn't"
+    },
+    {
+      "sentence": "She ___ with her friends online every evening. (I chat with my friends online every evening.)",
+      "answer": "chats"
+    },
+    {
+      "sentence": "He ___ horror films alone. (I watch horror films alone.)",
+      "answer": "watches"
+    },
+    {
+      "sentence": "She ___ eat meat. (I don't eat meat.)",
+      "answer": "doesn't"
+    },
+    {
+      "sentence": "He ___ to the dentist twice a year. (I go to the dentist twice a year.)",
+      "answer": "goes"
+    },
+    {
+      "sentence": "She ___ English because she wants to travel. (I study English because I want to travel.)",
+      "answer": "studies"
+    },
+    {
+      "sentence": "He sometimes ___ with his best friend. (I sometimes argue with my best friend.)",
+      "answer": "argues"
+    },
+    {
+      "sentence": "She ___ like playing sports. (I don't like playing sports.)",
+      "answer": "doesn't"
+    },
+    {
+      "sentence": "He ___ detective novels in bed. (I read detective novels in bed.)",
+      "answer": "reads"
+    },
+    {
+      "sentence": "She ___ her dog for a walk twice a day. (I take my dog for a walk twice a day.)",
+      "answer": "takes"
+    },
+    {
+      "sentence": "He ___ trust strangers on the Internet. (I don't trust strangers on the Internet.)",
+      "answer": "doesn't"
+    },
+    {
+      "sentence": "She ___ of becoming a famous blogger. (I dream of becoming a famous blogger.)",
+      "answer": "dreams"
+    }
+  ]
+}

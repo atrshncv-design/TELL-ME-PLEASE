@@ -1,0 +1,129 @@
+{
+  "id": "pc8_routine_vs_now",
+  "title": "🚦 Рутина vs Сейчас",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Контраст Present Simple (рутина) и Present Continuous (действие в данный момент). Выбери правильную форму!",
+  "items": [
+    {
+      "question": "He usually ___ the news in the morning.",
+      "options": [
+        "watches",
+        "is watching"
+      ],
+      "answer": "watches"
+    },
+    {
+      "question": "But today he ___ a documentary.",
+      "options": [
+        "watches",
+        "is watching"
+      ],
+      "answer": "is watching"
+    },
+    {
+      "question": "I ___ to my favorite podcast every day.",
+      "options": [
+        "listen",
+        "am listening"
+      ],
+      "answer": "listen"
+    },
+    {
+      "question": "I ___ to it right now.",
+      "options": [
+        "listen",
+        "am listening"
+      ],
+      "answer": "am listening"
+    },
+    {
+      "question": "The river ___ every year because of pollution.",
+      "options": [
+        "pollutes",
+        "is polluting"
+      ],
+      "answer": "pollutes"
+    },
+    {
+      "question": "Look! The factory ___ the river!",
+      "options": [
+        "pollutes",
+        "is polluting"
+      ],
+      "answer": "is polluting"
+    },
+    {
+      "question": "She often ___ articles for the school magazine.",
+      "options": [
+        "writes",
+        "is writing"
+      ],
+      "answer": "writes"
+    },
+    {
+      "question": "She ___ an article right now.",
+      "options": [
+        "writes",
+        "is writing"
+      ],
+      "answer": "is writing"
+    },
+    {
+      "question": "We ___ our grandparents every weekend.",
+      "options": [
+        "visit",
+        "are visiting"
+      ],
+      "answer": "visit"
+    },
+    {
+      "question": "We ___ them right now.",
+      "options": [
+        "visit",
+        "are visiting"
+      ],
+      "answer": "are visiting"
+    },
+    {
+      "question": "The gadget ___ very well.",
+      "options": [
+        "works",
+        "is working"
+      ],
+      "answer": "works"
+    },
+    {
+      "question": "The gadget ___ perfectly right now.",
+      "options": [
+        "works",
+        "is working"
+      ],
+      "answer": "is working"
+    },
+    {
+      "question": "I ___ how to use this app.",
+      "options": [
+        "don't understand",
+        "am not understanding"
+      ],
+      "answer": "don't understand"
+    },
+    {
+      "question": "They ___ TV at the moment.",
+      "options": [
+        "watch",
+        "are watching"
+      ],
+      "answer": "are watching"
+    },
+    {
+      "question": "They ___ TV every evening.",
+      "options": [
+        "watch",
+        "are watching"
+      ],
+      "answer": "watch"
+    }
+  ]
+}

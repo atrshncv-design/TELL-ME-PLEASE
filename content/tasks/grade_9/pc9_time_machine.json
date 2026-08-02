@@ -1,0 +1,129 @@
+{
+  "id": "pc9_time_machine",
+  "title": "🚦 Рутина или прямо сейчас?",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери: Present Simple (рутина, привычка) или Present Continuous (прямо сейчас).",
+  "items": [
+    {
+      "sentence": "He usually ___ the news in the morning.",
+      "options": [
+        "watches",
+        "is watching"
+      ],
+      "answer": "watches"
+    },
+    {
+      "sentence": "But today he ___ a documentary.",
+      "options": [
+        "is watching",
+        "watches"
+      ],
+      "answer": "is watching"
+    },
+    {
+      "sentence": "I ___ to my favorite podcast every day.",
+      "options": [
+        "listen",
+        "am listening"
+      ],
+      "answer": "listen"
+    },
+    {
+      "sentence": "I ___ to it right now.",
+      "options": [
+        "am listening",
+        "listen"
+      ],
+      "answer": "am listening"
+    },
+    {
+      "sentence": "The river ___ every year because of pollution.",
+      "options": [
+        "pollutes",
+        "is polluting"
+      ],
+      "answer": "pollutes"
+    },
+    {
+      "sentence": "Look! The factory ___ the river!",
+      "options": [
+        "is polluting",
+        "pollutes"
+      ],
+      "answer": "is polluting"
+    },
+    {
+      "sentence": "She often ___ articles for the school magazine.",
+      "options": [
+        "writes",
+        "is writing"
+      ],
+      "answer": "writes"
+    },
+    {
+      "sentence": "She ___ an article right now.",
+      "options": [
+        "is writing",
+        "writes"
+      ],
+      "answer": "is writing"
+    },
+    {
+      "sentence": "We ___ our grandparents every weekend.",
+      "options": [
+        "visit",
+        "are visiting"
+      ],
+      "answer": "visit"
+    },
+    {
+      "sentence": "We ___ them right now.",
+      "options": [
+        "are visiting",
+        "visit"
+      ],
+      "answer": "are visiting"
+    },
+    {
+      "sentence": "The gadget ___ very well.",
+      "options": [
+        "works",
+        "is working"
+      ],
+      "answer": "works"
+    },
+    {
+      "sentence": "The gadget ___ perfectly right now.",
+      "options": [
+        "is working",
+        "works"
+      ],
+      "answer": "is working"
+    },
+    {
+      "sentence": "I ___ how to use this app.",
+      "options": [
+        "don't understand",
+        "am not understanding"
+      ],
+      "answer": "don't understand"
+    },
+    {
+      "sentence": "They ___ TV at the moment.",
+      "options": [
+        "are watching",
+        "watch"
+      ],
+      "answer": "are watching"
+    },
+    {
+      "sentence": "They ___ TV every evening.",
+      "options": [
+        "watch",
+        "are watching"
+      ],
+      "answer": "watch"
+    }
+  ]
+}

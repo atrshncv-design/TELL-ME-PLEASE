@@ -1,0 +1,29 @@
+{
+  "id": "pc6_blog",
+  "title": "⭐ Блог: привычки и сейчас",
+  "category": "speaking",
+  "type": "fill-in-and-speak",
+  "description": "Напиши 5 предложений о привычках (Present Simple) и 5 о том, что ты делаешь прямо сейчас (Present Continuous). Затем расскажи вслух!",
+  "sections": [
+    {
+      "name": "Мои привычки (Present Simple)",
+      "prompts": [
+        "I usually wake up at ...",
+        "I always go to school by ...",
+        "We usually study ... on Mondays.",
+        "I often play ... after school.",
+        "My mother usually ... dinner."
+      ]
+    },
+    {
+      "name": "Прямо сейчас (Present Continuous)",
+      "prompts": [
+        "Right now it is ... and I am ...",
+        "Today my dad is ...",
+        "At the moment, I am ...",
+        "Look! My cat is ...",
+        "I am not ... now."
+      ]
+    }
+  ]
+}

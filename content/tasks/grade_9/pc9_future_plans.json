@@ -1,0 +1,131 @@
+{
+  "id": "pc9_future_plans",
+  "title": "📅 Планы на будущее",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Соедини начало предложения с его концом: Present Continuous для договорённостей на будущее.",
+  "columns": [
+    {
+      "id": "p1",
+      "label": "my dentist at 3 PM."
+    },
+    {
+      "id": "p2",
+      "label": "to Paris next Monday."
+    },
+    {
+      "id": "p3",
+      "label": "to our party tonight."
+    },
+    {
+      "id": "p4",
+      "label": "this weekend?"
+    },
+    {
+      "id": "p5",
+      "label": "tomorrow."
+    },
+    {
+      "id": "p6",
+      "label": "at 5:30."
+    },
+    {
+      "id": "p7",
+      "label": "a test on Friday."
+    },
+    {
+      "id": "p8",
+      "label": "to the cinema tonight?"
+    },
+    {
+      "id": "p9",
+      "label": "his driving test next week."
+    },
+    {
+      "id": "p10",
+      "label": "at home this evening."
+    },
+    {
+      "id": "p11",
+      "label": "me tomorrow."
+    },
+    {
+      "id": "p12",
+      "label": "at 8 PM."
+    },
+    {
+      "id": "p13",
+      "label": "to a new house next month."
+    },
+    {
+      "id": "p14",
+      "label": "my grandparents on Sunday."
+    },
+    {
+      "id": "p15",
+      "label": "for Italy in the morning."
+    }
+  ],
+  "items": [
+    {
+      "verb": "I am meeting",
+      "answer": "p1"
+    },
+    {
+      "verb": "We are flying",
+      "answer": "p2"
+    },
+    {
+      "verb": "She is coming",
+      "answer": "p3"
+    },
+    {
+      "verb": "What are you doing",
+      "answer": "p4"
+    },
+    {
+      "verb": "They are not working",
+      "answer": "p5"
+    },
+    {
+      "verb": "The train is arriving",
+      "answer": "p6"
+    },
+    {
+      "verb": "We are having",
+      "answer": "p7"
+    },
+    {
+      "verb": "Are you going",
+      "answer": "p8"
+    },
+    {
+      "verb": "He is taking",
+      "answer": "p9"
+    },
+    {
+      "verb": "I am not staying",
+      "answer": "p10"
+    },
+    {
+      "verb": "My friends are visiting",
+      "answer": "p11"
+    },
+    {
+      "verb": "The concert is starting",
+      "answer": "p12"
+    },
+    {
+      "verb": "We are moving",
+      "answer": "p13"
+    },
+    {
+      "verb": "I am seeing",
+      "answer": "p14"
+    },
+    {
+      "verb": "They are leaving",
+      "answer": "p15"
+    }
+  ]
+}

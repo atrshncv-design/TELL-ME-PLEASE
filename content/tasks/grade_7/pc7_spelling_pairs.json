@@ -1,0 +1,131 @@
+{
+  "id": "pc7_spelling_pairs",
+  "title": "✍️ Орфография: соедини пары",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Перетащи глагол в начальной форме к его форме с -ing. Помни про немую -e и удвоение согласной!",
+  "columns": [
+    {
+      "id": "p1",
+      "label": "traveling"
+    },
+    {
+      "id": "p2",
+      "label": "swimming"
+    },
+    {
+      "id": "p3",
+      "label": "writing"
+    },
+    {
+      "id": "p4",
+      "label": "running"
+    },
+    {
+      "id": "p5",
+      "label": "dancing"
+    },
+    {
+      "id": "p6",
+      "label": "sitting"
+    },
+    {
+      "id": "p7",
+      "label": "hiking"
+    },
+    {
+      "id": "p8",
+      "label": "hopping"
+    },
+    {
+      "id": "p9",
+      "label": "coming"
+    },
+    {
+      "id": "p10",
+      "label": "putting"
+    },
+    {
+      "id": "p11",
+      "label": "taking"
+    },
+    {
+      "id": "p12",
+      "label": "cutting"
+    },
+    {
+      "id": "p13",
+      "label": "skipping"
+    },
+    {
+      "id": "p14",
+      "label": "diving"
+    },
+    {
+      "id": "p15",
+      "label": "driving"
+    }
+  ],
+  "items": [
+    {
+      "verb": "travel",
+      "answer": "p1"
+    },
+    {
+      "verb": "swim",
+      "answer": "p2"
+    },
+    {
+      "verb": "write",
+      "answer": "p3"
+    },
+    {
+      "verb": "run",
+      "answer": "p4"
+    },
+    {
+      "verb": "dance",
+      "answer": "p5"
+    },
+    {
+      "verb": "sit",
+      "answer": "p6"
+    },
+    {
+      "verb": "hike",
+      "answer": "p7"
+    },
+    {
+      "verb": "hop",
+      "answer": "p8"
+    },
+    {
+      "verb": "come",
+      "answer": "p9"
+    },
+    {
+      "verb": "put",
+      "answer": "p10"
+    },
+    {
+      "verb": "take",
+      "answer": "p11"
+    },
+    {
+      "verb": "cut",
+      "answer": "p12"
+    },
+    {
+      "verb": "skip",
+      "answer": "p13"
+    },
+    {
+      "verb": "dive",
+      "answer": "p14"
+    },
+    {
+      "verb": "drive",
+      "answer": "p15"
+    }
+  ]
+}

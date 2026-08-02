@@ -1,0 +1,144 @@
+{
+  "id": "ps8_myths",
+  "title": "🚀 Мифы о подростках: согласись или поспорь",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Учитель зачитывает стереотипы. Выбери грамматически верный ответ I disagree + предложение о себе.",
+  "items": [
+    {
+      "question": "Teenagers don't read books.",
+      "options": [
+        "I disagree. I read books every day.",
+        "I disagree. I reads books every day.",
+        "I disagree. I don't reads books."
+      ],
+      "answer": "I disagree. I read books every day."
+    },
+    {
+      "question": "Boys hate shopping for clothes.",
+      "options": [
+        "I disagree. I don't hate shopping for clothes.",
+        "I disagree. I doesn't hate shopping for clothes.",
+        "I disagree. I hates shopping for clothes."
+      ],
+      "answer": "I disagree. I don't hate shopping for clothes."
+    },
+    {
+      "question": "Girls spend hours on social media.",
+      "options": [
+        "I disagree. I don't spend hours on social media.",
+        "I disagree. I doesn't spend hours on social media.",
+        "I disagree. I don't spends hours on social media."
+      ],
+      "answer": "I disagree. I don't spend hours on social media."
+    },
+    {
+      "question": "Students always do their homework on time.",
+      "options": [
+        "I disagree. I don't always do my homework on time.",
+        "I disagree. I doesn't always do my homework on time.",
+        "I disagree. I don't always does my homework on time."
+      ],
+      "answer": "I disagree. I don't always do my homework on time."
+    },
+    {
+      "question": "People don't care about the environment.",
+      "options": [
+        "I disagree. I care about the environment.",
+        "I disagree. I cares about the environment.",
+        "I disagree. I don't care about the environment."
+      ],
+      "answer": "I disagree. I care about the environment."
+    },
+    {
+      "question": "Young people eat too much fast food.",
+      "options": [
+        "I disagree. I don't eat too much fast food.",
+        "I disagree. I doesn't eat too much fast food.",
+        "I disagree. I don't eats too much fast food."
+      ],
+      "answer": "I disagree. I don't eat too much fast food."
+    },
+    {
+      "question": "A good friend never argues with you.",
+      "options": [
+        "I disagree. My best friend and I argue sometimes.",
+        "I disagree. My best friend and I argues sometimes.",
+        "I disagree. My best friend and I don't argue sometimes."
+      ],
+      "answer": "I disagree. My best friend and I argue sometimes."
+    },
+    {
+      "question": "Parents understand their children perfectly.",
+      "options": [
+        "I disagree. My parents don't always understand me.",
+        "I disagree. My parents doesn't always understand me.",
+        "I disagree. My parents don't always understands me."
+      ],
+      "answer": "I disagree. My parents don't always understand me."
+    },
+    {
+      "question": "Everyone has a smartphone nowadays.",
+      "options": [
+        "I disagree. My little cousin doesn't have one.",
+        "I disagree. My little cousin don't have one.",
+        "I disagree. My little cousin doesn't has one."
+      ],
+      "answer": "I disagree. My little cousin doesn't have one."
+    },
+    {
+      "question": "Students love taking tests and exams.",
+      "options": [
+        "I disagree. I don't love taking tests.",
+        "I disagree. I doesn't love taking tests.",
+        "I disagree. I don't loves taking tests."
+      ],
+      "answer": "I disagree. I don't love taking tests."
+    },
+    {
+      "question": "Gamers don't do sports.",
+      "options": [
+        "I disagree. I play football every week.",
+        "I disagree. I plays football every week.",
+        "I disagree. I don't plays football every week."
+      ],
+      "answer": "I disagree. I play football every week."
+    },
+    {
+      "question": "Influencers live an easy life.",
+      "options": [
+        "I disagree. They work very hard.",
+        "I disagree. They works very hard.",
+        "I disagree. They doesn't work very hard."
+      ],
+      "answer": "I disagree. They work very hard."
+    },
+    {
+      "question": "Friends share all their secrets.",
+      "options": [
+        "I disagree. I don't share all my secrets.",
+        "I disagree. I doesn't share all my secrets.",
+        "I disagree. I don't shares all my secrets."
+      ],
+      "answer": "I disagree. I don't share all my secrets."
+    },
+    {
+      "question": "A true hero doesn't feel fear.",
+      "options": [
+        "I disagree. I feel fear sometimes.",
+        "I disagree. I feels fear sometimes.",
+        "I disagree. I don't feel fear sometimes."
+      ],
+      "answer": "I disagree. I feel fear sometimes."
+    },
+    {
+      "question": "Modern teens don't watch TV.",
+      "options": [
+        "I disagree. I watch TV every evening.",
+        "I disagree. I watches TV every evening.",
+        "I disagree. I doesn't watch TV every evening."
+      ],
+      "answer": "I disagree. I watch TV every evening."
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "ps8_press_conference",
+  "title": "⭐ Пресс-конференция: вопросы журналиста",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Ты — журналист на пресс-конференции. Составь вопросы с to be (Active, Passive, Continuous). Осторожно: в одном вопросе to be не нужен!",
+  "items": [
+    {
+      "question": "(Where / you / born?)",
+      "options": [
+        "Where were you born?",
+        "Where was you born?",
+        "Where are you born?"
+      ],
+      "answer": "Where were you born?"
+    },
+    {
+      "question": "(What / you / famous for?)",
+      "options": [
+        "What are you famous for?",
+        "What is you famous for?",
+        "What were you famous for?"
+      ],
+      "answer": "What are you famous for?"
+    },
+    {
+      "question": "(What / you / working on / now?)",
+      "options": [
+        "What are you working on now?",
+        "What is you working on now?",
+        "What were you working on now?"
+      ],
+      "answer": "What are you working on now?"
+    },
+    {
+      "question": "(How / your life / changed / recently?)",
+      "options": [
+        "How has your life been changed recently?",
+        "How have your life been changed recently?",
+        "How is your life been changed recently?"
+      ],
+      "answer": "How has your life been changed recently?"
+    },
+    {
+      "question": "(Your books / translated / into other languages?)",
+      "options": [
+        "Are your books translated into other languages?",
+        "Is your books translated into other languages?",
+        "Do your books translated into other languages?"
+      ],
+      "answer": "Are your books translated into other languages?"
+    },
+    {
+      "question": "(What / you / doing / yesterday at 10 AM?)",
+      "options": [
+        "What were you doing yesterday at 10 AM?",
+        "What was you doing yesterday at 10 AM?",
+        "What are you doing yesterday at 10 AM?"
+      ],
+      "answer": "What were you doing yesterday at 10 AM?"
+    },
+    {
+      "question": "(The film / based on your book / successful?)",
+      "options": [
+        "Was the film based on your book successful?",
+        "Were the film based on your book successful?",
+        "Is the film based on your book successful?"
+      ],
+      "answer": "Was the film based on your book successful?"
+    },
+    {
+      "question": "(You / often / recognized / by fans?)",
+      "options": [
+        "Are you often recognized by fans?",
+        "Is you often recognized by fans?",
+        "Do you often recognized by fans?"
+      ],
+      "answer": "Are you often recognized by fans?"
+    },
+    {
+      "question": "(What / your next project / about?)",
+      "options": [
+        "What will your next project be about?",
+        "What is your next project be about?",
+        "What will your next project about?"
+      ],
+      "answer": "What will your next project be about?"
+    },
+    {
+      "question": "(When / it / released?)",
+      "options": [
+        "When will it be released?",
+        "When is it will be released?",
+        "When will it released?"
+      ],
+      "answer": "When will it be released?"
+    },
+    {
+      "question": "(You / happy / with your career?)",
+      "options": [
+        "Are you happy with your career?",
+        "Is you happy with your career?",
+        "Were you happy with your career?"
+      ],
+      "answer": "Are you happy with your career?"
+    },
+    {
+      "question": "(What / you / most proud of?)",
+      "options": [
+        "What are you most proud of?",
+        "What is you most proud of?",
+        "What were you most proud of?"
+      ],
+      "answer": "What are you most proud of?"
+    },
+    {
+      "question": "(Your advice / appreciated / by young people?)",
+      "options": [
+        "Is your advice appreciated by young people?",
+        "Are your advice appreciated by young people?",
+        "Does your advice appreciated by young people?"
+      ],
+      "answer": "Is your advice appreciated by young people?"
+    },
+    {
+      "question": "(Where / you / see / yourself in 5 years?)",
+      "options": [
+        "Where do you see yourself in 5 years?",
+        "Where are you see yourself in 5 years?",
+        "Where does you see yourself in 5 years?"
+      ],
+      "answer": "Where do you see yourself in 5 years?"
+    },
+    {
+      "question": "(It / a pleasure to talk to you!)",
+      "options": [
+        "It is a pleasure to talk to you!",
+        "It are a pleasure to talk to you!",
+        "It am a pleasure to talk to you!"
+      ],
+      "answer": "It is a pleasure to talk to you!"
+    }
+  ]
+}

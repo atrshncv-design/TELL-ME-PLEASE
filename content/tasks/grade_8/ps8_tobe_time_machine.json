@@ -1,0 +1,69 @@
+{
+  "id": "ps8_tobe_time_machine",
+  "title": "⏳ Машина времени: to be в трёх временах",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Раскрой скобки: используй to be в Present, Past или Future (включая Passive и Continuous).",
+  "items": [
+    {
+      "sentence": "Now the students ___ (write) a test.",
+      "answer": "are writing"
+    },
+    {
+      "sentence": "Yesterday at 5 they ___ (play) football.",
+      "answer": "were playing"
+    },
+    {
+      "sentence": "The book ___ (write) 100 years ago.",
+      "answer": "was written"
+    },
+    {
+      "sentence": "Tomorrow the room ___ (clean).",
+      "answer": "will be cleaned"
+    },
+    {
+      "sentence": "Usually the room ___ (clean) by Jane.",
+      "answer": "is cleaned"
+    },
+    {
+      "sentence": "Look! The bridge ___ (repair).",
+      "answer": "is being repaired"
+    },
+    {
+      "sentence": "The bridge ___ (repair) last month.",
+      "answer": "was repaired"
+    },
+    {
+      "sentence": "I ___ (read) a book when he called.",
+      "answer": "was reading"
+    },
+    {
+      "sentence": "The letter ___ (send) tomorrow.",
+      "answer": "will be sent"
+    },
+    {
+      "sentence": "The letters ___ (send) every day.",
+      "answer": "are sent"
+    },
+    {
+      "sentence": "He ___ (work) on a project now.",
+      "answer": "is working"
+    },
+    {
+      "sentence": "The project ___ (finish) yesterday.",
+      "answer": "was finished"
+    },
+    {
+      "sentence": "We ___ (watch) a film at the moment.",
+      "answer": "are watching"
+    },
+    {
+      "sentence": "The film ___ (release) next week.",
+      "answer": "will be released"
+    },
+    {
+      "sentence": "The museum ___ (open) every day.",
+      "answer": "is opened"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "ps9_carnival_meanings",
+  "title": "🎪 Карнавал в Бразилии: значения",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Прочитай предложения из текста о бразильском карнавале и определи значение Present Simple в каждом.",
+  "items": [
+    {
+      "sentence": "Brazilian Carnival is one of the most famous and colourful celebrations in the world.",
+      "options": [
+        "Постоянная ситуация",
+        "Повествование",
+        "Повторяющееся действие",
+        "Стативный глагол"
+      ],
+      "answer": "Постоянная ситуация"
+    },
+    {
+      "sentence": "It takes place every year before Lent.",
+      "options": [
+        "Повторяющееся действие",
+        "Постоянная ситуация",
+        "Общеизвестный факт",
+        "Стативный глагол"
+      ],
+      "answer": "Повторяющееся действие"
+    },
+    {
+      "sentence": "In Rio de Janeiro, the streets fill with music, dancing and bright costumes.",
+      "options": [
+        "Постоянная ситуация",
+        "Повествование",
+        "Общеизвестный факт",
+        "Повторяющееся действие"
+      ],
+      "answer": "Постоянная ситуация"
+    },
+    {
+      "sentence": "Samba schools prepare for months.",
+      "options": [
+        "Повторяющееся действие",
+        "Расписание / программа",
+        "Стативный глагол",
+        "Закон природы"
+      ],
+      "answer": "Повторяющееся действие"
+    },
+    {
+      "sentence": "People celebrate life, freedom and cultural tradition.",
+      "options": [
+        "Повторяющееся действие",
+        "Закон природы",
+        "Стативный глагол",
+        "Постоянная ситуация"
+      ],
+      "answer": "Повторяющееся действие"
+    },
+    {
+      "sentence": "These events create a lively atmosphere.",
+      "options": [
+        "Общеизвестный факт",
+        "Закон природы",
+        "Постоянная ситуация",
+        "Стативный глагол"
+      ],
+      "answer": "Общеизвестный факт"
+    },
+    {
+      "sentence": "Tourists from different countries come to Brazil to see the celebration.",
+      "options": [
+        "Повторяющееся действие",
+        "Закон природы",
+        "Расписание / программа",
+        "Общеизвестный факт"
+      ],
+      "answer": "Повторяющееся действие"
+    },
+    {
+      "sentence": "The Carnival also reflects Brazilian identity.",
+      "options": [
+        "Постоянная ситуация",
+        "Повествование",
+        "Расписание / программа",
+        "Общеизвестный факт"
+      ],
+      "answer": "Постоянная ситуация"
+    },
+    {
+      "sentence": "It combines music, dance, art and history.",
+      "options": [
+        "Общеизвестный факт",
+        "Расписание / программа",
+        "Закон природы",
+        "Повторяющееся действие"
+      ],
+      "answer": "Общеизвестный факт"
+    },
+    {
+      "sentence": "People often say that it shows the soul of the nation.",
+      "options": [
+        "Общеизвестный факт",
+        "Повторяющееся действие",
+        "Закон природы",
+        "Постоянная ситуация"
+      ],
+      "answer": "Общеизвестный факт"
+    }
+  ]
+}

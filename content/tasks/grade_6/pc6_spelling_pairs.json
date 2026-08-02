@@ -1,0 +1,131 @@
+{
+  "id": "pc6_spelling_pairs",
+  "title": "✍️ Орфография: соедини пары",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Перетащи глагол в начальной форме к его форме с -ing. Помни про немую -e и удвоение согласной!",
+  "columns": [
+    {
+      "id": "making",
+      "label": "making"
+    },
+    {
+      "id": "swimming",
+      "label": "swimming"
+    },
+    {
+      "id": "writing",
+      "label": "writing"
+    },
+    {
+      "id": "running",
+      "label": "running"
+    },
+    {
+      "id": "dancing",
+      "label": "dancing"
+    },
+    {
+      "id": "sitting",
+      "label": "sitting"
+    },
+    {
+      "id": "riding",
+      "label": "riding"
+    },
+    {
+      "id": "hopping",
+      "label": "hopping"
+    },
+    {
+      "id": "coming",
+      "label": "coming"
+    },
+    {
+      "id": "putting",
+      "label": "putting"
+    },
+    {
+      "id": "taking",
+      "label": "taking"
+    },
+    {
+      "id": "cutting",
+      "label": "cutting"
+    },
+    {
+      "id": "having",
+      "label": "having"
+    },
+    {
+      "id": "skipping",
+      "label": "skipping"
+    },
+    {
+      "id": "driving",
+      "label": "driving"
+    }
+  ],
+  "items": [
+    {
+      "verb": "make",
+      "answer": "making"
+    },
+    {
+      "verb": "swim",
+      "answer": "swimming"
+    },
+    {
+      "verb": "write",
+      "answer": "writing"
+    },
+    {
+      "verb": "run",
+      "answer": "running"
+    },
+    {
+      "verb": "dance",
+      "answer": "dancing"
+    },
+    {
+      "verb": "sit",
+      "answer": "sitting"
+    },
+    {
+      "verb": "ride",
+      "answer": "riding"
+    },
+    {
+      "verb": "hop",
+      "answer": "hopping"
+    },
+    {
+      "verb": "come",
+      "answer": "coming"
+    },
+    {
+      "verb": "put",
+      "answer": "putting"
+    },
+    {
+      "verb": "take",
+      "answer": "taking"
+    },
+    {
+      "verb": "cut",
+      "answer": "cutting"
+    },
+    {
+      "verb": "have",
+      "answer": "having"
+    },
+    {
+      "verb": "skip",
+      "answer": "skipping"
+    },
+    {
+      "verb": "drive",
+      "answer": "driving"
+    }
+  ]
+}

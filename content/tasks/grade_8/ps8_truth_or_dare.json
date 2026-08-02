@@ -1,0 +1,69 @@
+{
+  "id": "ps8_truth_or_dare",
+  "title": "🎲 Правда или действие: наречия частотности",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вытяни карточку и составь честное предложение о себе: вставь наречие (always, usually, often, sometimes, never) и глагол.",
+  "items": [
+    {
+      "sentence": "I ___ my friends during lessons. (always / text)",
+      "answer": "always text"
+    },
+    {
+      "sentence": "I ___ with my parents. (never / argue)",
+      "answer": "never argue"
+    },
+    {
+      "sentence": "I ___ new games on weekends. (usually / download)",
+      "answer": "usually download"
+    },
+    {
+      "sentence": "I ___ to charge my phone. (often / forget)",
+      "answer": "often forget"
+    },
+    {
+      "sentence": "I ___ fast food after school. (sometimes / buy)",
+      "answer": "sometimes buy"
+    },
+    {
+      "sentence": "I ___ my homework on time. (always / do)",
+      "answer": "always do"
+    },
+    {
+      "sentence": "I ___ scary movies at night. (never / watch)",
+      "answer": "never watch"
+    },
+    {
+      "sentence": "I ___ my mom with the housework. (usually / help)",
+      "answer": "usually help"
+    },
+    {
+      "sentence": "I ___ tired on Monday mornings. (often / feel)",
+      "answer": "often feel"
+    },
+    {
+      "sentence": "I ___ to the cinema with friends. (sometimes / go)",
+      "answer": "sometimes go"
+    },
+    {
+      "sentence": "I ___ in tests. (never / cheat)",
+      "answer": "never cheat"
+    },
+    {
+      "sentence": "I ___ to music when I study. (always / listen)",
+      "answer": "always listen"
+    },
+    {
+      "sentence": "I ___ my pocket money on clothes. (usually / spend)",
+      "answer": "usually spend"
+    },
+    {
+      "sentence": "I ___ the Net for funny memes. (often / surf)",
+      "answer": "often surf"
+    },
+    {
+      "sentence": "I ___ litter on the street. (never / throw)",
+      "answer": "never throw"
+    }
+  ]
+}

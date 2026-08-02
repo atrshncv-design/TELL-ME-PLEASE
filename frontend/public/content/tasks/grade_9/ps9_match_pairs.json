@@ -1,0 +1,91 @@
+{
+  "id": "ps9_match_pairs",
+  "title": "🔗 Собери предложение",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Соедини начало предложения с его концом.",
+  "columns": [
+    {
+      "id": "c",
+      "label": "celebrates Easter at home."
+    },
+    {
+      "id": "e",
+      "label": "at noon."
+    },
+    {
+      "id": "f",
+      "label": "believe in superstitions."
+    },
+    {
+      "id": "h",
+      "label": "organise concerts every year?"
+    },
+    {
+      "id": "a",
+      "label": "a lucky charm."
+    },
+    {
+      "id": "b",
+      "label": "music and dance."
+    },
+    {
+      "id": "i",
+      "label": "to the carnival every spring."
+    },
+    {
+      "id": "j",
+      "label": "wear costumes on this day."
+    },
+    {
+      "id": "g",
+      "label": "a special dinner on holidays."
+    },
+    {
+      "id": "d",
+      "label": "the show."
+    }
+  ],
+  "items": [
+    {
+      "verb": "My family usually",
+      "answer": "c"
+    },
+    {
+      "verb": "The parade begins",
+      "answer": "e"
+    },
+    {
+      "verb": "I don't",
+      "answer": "f"
+    },
+    {
+      "verb": "Does your town",
+      "answer": "h"
+    },
+    {
+      "verb": "He often carries",
+      "answer": "a"
+    },
+    {
+      "verb": "The celebration includes",
+      "answer": "b"
+    },
+    {
+      "verb": "They go",
+      "answer": "i"
+    },
+    {
+      "verb": "She doesn't",
+      "answer": "j"
+    },
+    {
+      "verb": "We usually have",
+      "answer": "g"
+    },
+    {
+      "verb": "The fireworks finish",
+      "answer": "d"
+    }
+  ]
+}

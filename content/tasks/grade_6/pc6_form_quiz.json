@@ -1,0 +1,144 @@
+{
+  "id": "pc6_form_quiz",
+  "title": "🚦 Выбор формы: am / is / are",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильную форму глагола to be. Смотри на подлежащее и на тип предложения!",
+  "items": [
+    {
+      "sentence": "I ___ hungry. Can I have a sandwich?",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "am"
+    },
+    {
+      "sentence": "___ your sister good at Maths?",
+      "options": [
+        "Am",
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "The trainers ___ under the bed.",
+      "options": [
+        "isn't",
+        "aren't",
+        "am not"
+      ],
+      "answer": "aren't"
+    },
+    {
+      "sentence": "My favorite food ___ pasta.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "is"
+    },
+    {
+      "sentence": "___ we in the 6th grade?",
+      "options": [
+        "Am",
+        "Is",
+        "Are"
+      ],
+      "answer": "Are"
+    },
+    {
+      "sentence": "The curtains ___ red and blue.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "are"
+    },
+    {
+      "sentence": "He ___ interested in sports.",
+      "options": [
+        "isn't",
+        "aren't",
+        "am not"
+      ],
+      "answer": "isn't"
+    },
+    {
+      "sentence": "___ the sink in the bathroom?",
+      "options": [
+        "Am",
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "They ___ from Canada.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "are"
+    },
+    {
+      "sentence": "I ___ not late for school today.",
+      "options": [
+        "isn't",
+        "aren't",
+        "am not"
+      ],
+      "answer": "am not"
+    },
+    {
+      "sentence": "The weather ___ sunny today.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "is"
+    },
+    {
+      "sentence": "___ you thirsty?",
+      "options": [
+        "Am",
+        "Is",
+        "Are"
+      ],
+      "answer": "Are"
+    },
+    {
+      "sentence": "The apple ___ in the bowl.",
+      "options": [
+        "isn't",
+        "aren't",
+        "am not"
+      ],
+      "answer": "isn't"
+    },
+    {
+      "sentence": "We ___ not ready for the test.",
+      "options": [
+        "isn't",
+        "aren't",
+        "am not"
+      ],
+      "answer": "aren't"
+    },
+    {
+      "sentence": "London ___ a beautiful city.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "is"
+    }
+  ]
+}

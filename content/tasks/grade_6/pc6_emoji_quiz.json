@@ -1,0 +1,99 @@
+{
+  "id": "pc6_emoji_quiz",
+  "title": "🎭 Угадай по эмодзи",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Посмотри на эмодзи и выбери, что происходит прямо сейчас.",
+  "items": [
+    {
+      "question": "🛴💨",
+      "options": [
+        "He is rideing",
+        "He is riding",
+        "He rides"
+      ],
+      "answer": "He is riding"
+    },
+    {
+      "question": "🛌💤",
+      "options": [
+        "She is sleep",
+        "She is sleeping",
+        "She sleeps"
+      ],
+      "answer": "She is sleeping"
+    },
+    {
+      "question": "🏃💨",
+      "options": [
+        "They are run",
+        "They are running",
+        "They running"
+      ],
+      "answer": "They are running"
+    },
+    {
+      "question": "🎤🎶",
+      "options": [
+        "He is sing",
+        "He is singing",
+        "He singing"
+      ],
+      "answer": "He is singing"
+    },
+    {
+      "question": "🏊🌊",
+      "options": [
+        "I am swim",
+        "I swimming",
+        "I am swimming"
+      ],
+      "answer": "I am swimming"
+    },
+    {
+      "question": "☔️☁️",
+      "options": [
+        "It is rain",
+        "It is raining",
+        "It rains"
+      ],
+      "answer": "It is raining"
+    },
+    {
+      "question": "📖👀",
+      "options": [
+        "You are read",
+        "You reading",
+        "You are reading"
+      ],
+      "answer": "You are reading"
+    },
+    {
+      "question": "🐶🗣️",
+      "options": [
+        "The dog is barking",
+        "The dog barking",
+        "The dog is bark"
+      ],
+      "answer": "The dog is barking"
+    },
+    {
+      "question": "💃",
+      "options": [
+        "She is dance",
+        "She is dancing",
+        "She dancing"
+      ],
+      "answer": "She is dancing"
+    },
+    {
+      "question": "🍔",
+      "options": [
+        "We eat",
+        "We are eating",
+        "We eating"
+      ],
+      "answer": "We are eating"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-// Verify content normalization for all grade_5 JSON files
+// Verify content normalization for grade_5, grade_6 and grade_8 JSON files
 // Imports normalize from scripts/normalize.mjs (single source of truth)
 import { readFileSync } from "fs"
 import { join, dirname } from "path"
@@ -7,6 +7,7 @@ import { normalize } from "./normalize.mjs"
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const dir = join(__dirname, "../frontend/public/content/tasks/grade_5")
+const dir8 = join(__dirname, "../frontend/public/content/tasks/grade_8")
 const files = [
   "grammar_endings_sort.json",
   "grammar_endings_quiz.json",
@@ -67,15 +68,175 @@ const files = [
   "ps_check_family.json",
 ]
 
+// grade_8 tasks (Present Simple / Present Continuous / to be, migrated from customer materials)
+const files8 = [
+  "ps8_lie_detector.json",
+  "ps8_roommate.json",
+  "ps8_blogger_cloze.json",
+  "ps8_myths.json",
+  "ps8_jobs.json",
+  "ps8_gossip.json",
+  "ps8_truth_or_dare.json",
+  "ps8_alien_report.json",
+  "ps8_health_quiz.json",
+  "ps8_star_interview.json",
+  "ps8_peer_talk.json",
+  "ps8_tobe_wheel.json",
+  "ps8_tobe_assembly.json",
+  "ps8_tobe_filter.json",
+  "ps8_tobe_time_machine.json",
+  "ps8_tobe_tech_cloze.json",
+  "ps8_tobe_short_answer.json",
+  "ps8_detective.json",
+  "ps8_press_conference.json",
+  "pc8_svetofor_cards.json",
+  "pc8_ing_sort.json",
+  "pc8_ing_trainer.json",
+  "pc8_ing_detector.json",
+  "pc8_stative.json",
+  "pc8_routine_vs_now.json",
+  "pc8_function_sort.json",
+  "pc8_trends.json",
+  "pc8_temp_detector.json",
+  "pc8_future_plans.json",
+  "pc8_irritation.json",
+  "pc8_my_week_cloze.json",
+  "pc8_two_worlds.json",
+  "pc8_emoji_functions.json",
+  "pc8_ai_bot.json",
+]
+
+const dir6 = join(__dirname, "../frontend/public/content/tasks/grade_6")
+// grade_6 tasks (to be + Present Continuous 6, migrated from customer materials)
+const files6 = [
+  // shared grammar / story / speaking (6th-grade versions of the grade_5 set)
+  "grammar_endings_sort.json",
+  "grammar_endings_quiz.json",
+  "grammar_v1_vs_quiz.json",
+  "grammar_roulette.json",
+  "grammar_joke_quiz.json",
+  "grammar_negation.json",
+  "grammar_yes_no_questions.json",
+  "grammar_wh_questions.json",
+  "grammar_ladder.json",
+  "grammar_verb_forms_quiz.json",
+  "grammar_adverbs_build.json",
+  "grammar_adverbs_place.json",
+  "story_harry_potter_routine.json",
+  "story_harry_potter_interview.json",
+  "speaking_about_yourself.json",
+  "speaking_peer_conversation.json",
+  // to be (tb6_*)
+  "tb6_svetofor_cards.json",
+  "tb6_svetofor_wheel.json",
+  "tb6_assembly.json",
+  "tb6_negative.json",
+  "tb6_question.json",
+  "tb6_filter.json",
+  "tb6_blog.json",
+  "tb6_short_answer.json",
+  "tb6_detective.json",
+  "tb6_room.json",
+  // Present Continuous 6 (pc6_*)
+  "pc6_form_quiz.json",
+  "pc6_assembly.json",
+  "pc6_unjumble.json",
+  "pc6_short_answer.json",
+  "pc6_detector.json",
+  "pc6_svetofor_cards.json",
+  "pc6_ing_assembly.json",
+  "pc6_spelling_pairs.json",
+  "pc6_ing_rules_sort.json",
+  "pc6_ing_trainer.json",
+  "pc6_spelling_quiz.json",
+  "pc6_negative.json",
+  "pc6_question.json",
+  "pc6_markers_sort.json",
+  "pc6_time_machine.json",
+  "pc6_lie_detector.json",
+  "pc6_two_worlds.json",
+  "pc6_letter.json",
+  "pc6_emoji_quiz.json",
+  "pc6_blog.json",
+  "pc6_survey.json",
+  "pc6_ai_friend.json",
+  "pc6_photo.json",
+]
+
+// grade_9 tasks (Present Simple / Present Continuous / to be, migrated from customer materials)
+const dir9 = join(__dirname, "../frontend/public/content/tasks/grade_9")
+const files9 = [
+  // shared grammar / story / speaking (9th-grade versions of the grade_5 set)
+  "grammar_endings_sort.json",
+  "grammar_endings_quiz.json",
+  "grammar_v1_vs_quiz.json",
+  "grammar_roulette.json",
+  "grammar_joke_quiz.json",
+  "grammar_negation.json",
+  "grammar_yes_no_questions.json",
+  "grammar_wh_questions.json",
+  "grammar_ladder.json",
+  "grammar_verb_forms_quiz.json",
+  "grammar_adverbs_build.json",
+  "grammar_adverbs_place.json",
+  "story_harry_potter_routine.json",
+  "story_harry_potter_interview.json",
+  "speaking_about_yourself.json",
+  "speaking_peer_conversation.json",
+  // Present Simple 9 (ps9_*)
+  "ps9_meaning_quiz.json",
+  "ps9_meaning_sort.json",
+  "ps9_carnival_meanings.json",
+  "ps9_dragon_cloze.json",
+  "ps9_dragon_verbs.json",
+  "ps9_dragon_negative.json",
+  "ps9_dragon_question.json",
+  "ps9_venice_cloze.json",
+  "ps9_wh_question.json",
+  "ps9_error_hunter.json",
+  "ps9_match_pairs.json",
+  "ps9_text_fix.json",
+  "ps9_translation_pairs.json",
+  // to be 9 (ps9_tobe_*)
+  "ps9_tobe_svetofor.json",
+  "ps9_tobe_assembly.json",
+  "ps9_tobe_filter.json",
+  "ps9_tobe_time_machine.json",
+  "ps9_tobe_modal.json",
+  "ps9_tobe_invention_cloze.json",
+  "ps9_tobe_short_answer.json",
+  "ps9_tobe_photo.json",
+  "ps9_tobe_tags.json",
+  // Present Continuous 9 (pc9_*)
+  "pc9_svetofor.json",
+  "pc9_ing_rules_sort.json",
+  "pc9_ing_trainer.json",
+  "pc9_stative.json",
+  "pc9_time_machine.json",
+  "pc9_function_sort.json",
+  "pc9_trends.json",
+  "pc9_future_plans.json",
+  "pc9_irritation.json",
+  "pc9_oge19_cloze.json",
+  "pc9_photo_oge.json",
+  "pc9_two_worlds.json",
+  "pc9_emoji_functions.json",
+  "pc9_ai_examiner.json",
+]
+
 let errors = 0
 let normalizedCount = 0
+let normalizedCount6 = 0
+let normalizedCount8 = 0
+let normalizedCount9 = 0
 const seenTypes = new Set()
-for (const file of files) {
+
+/** Per-file checks shared by both grades (grade_5 and grade_6). */
+function verifyFile(file, dir) {
   try {
     const raw = JSON.parse(readFileSync(join(dir, file), "utf-8"))
     const task = normalize(raw)
     const items = task.items || []
-    normalizedCount++
     seenTypes.add(task.type)
 
     if (task.type === "quiz") {
@@ -191,6 +352,23 @@ for (const file of files) {
   }
 }
 
+for (const file of files) {
+  normalizedCount++
+  verifyFile(file, dir)
+}
+for (const file of files6) {
+  normalizedCount6++
+  verifyFile(file, dir6)
+}
+for (const file of files8) {
+  normalizedCount8++
+  verifyFile(file, dir8)
+}
+for (const file of files9) {
+  normalizedCount9++
+  verifyFile(file, dir9)
+}
+
 // === SANITY CHECKS ===
 // Per SPEC decision Q6, the project has no test framework. These lightweight
 // assertions live in the existing content-verify harness (the single verify
@@ -276,12 +454,27 @@ function sanityCheck(label, ok, detail = "") {
   )
 }
 
-// 4. All 57 files normalize without throwing — the per-file loop above counts
-//    this; assert it explicitly.
+// 4. All files normalize without throwing — the per-file loops above count
+//    this; assert per grade explicitly.
 sanityCheck(
-  "all 57 files normalize without throwing",
+  "all 57 grade_5 files normalize without throwing",
   normalizedCount === 57,
   `normalizedCount=${normalizedCount}`,
+)
+sanityCheck(
+  "all 49 grade_6 files normalize without throwing",
+  normalizedCount6 === 49,
+  `normalizedCount6=${normalizedCount6}`,
+)
+sanityCheck(
+  "all 34 grade_8 files normalize without throwing",
+  normalizedCount8 === 34,
+  `normalizedCount8=${normalizedCount8}`,
+)
+sanityCheck(
+  "all 52 grade_9 files normalize without throwing",
+  normalizedCount9 === 52,
+  `normalizedCount9=${normalizedCount9}`,
 )
 
 // 5. Every normalized type is in the known/whitelisted set (some raw types are

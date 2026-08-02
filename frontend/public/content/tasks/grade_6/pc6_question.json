@@ -1,0 +1,129 @@
+{
+  "id": "pc6_question",
+  "title": "❓ Рефлекс вопроса",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Собери вопрос: выбери Is, Are или Am. Смотри на подлежащее!",
+  "items": [
+    {
+      "sentence": "___ he sleeping?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ they playing?",
+      "options": [
+        "Are",
+        "Is"
+      ],
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ I reading?",
+      "options": [
+        "Am",
+        "Is"
+      ],
+      "answer": "Am"
+    },
+    {
+      "sentence": "___ she dancing?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ we watching TV?",
+      "options": [
+        "Are",
+        "Is"
+      ],
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ the dog barking?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ you running?",
+      "options": [
+        "Are",
+        "Is"
+      ],
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ it raining?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ my mum cooking?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ the boys fighting?",
+      "options": [
+        "Are",
+        "Is"
+      ],
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ he doing homework?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ we sitting?",
+      "options": [
+        "Are",
+        "Is"
+      ],
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ the cat climbing?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ I listening?",
+      "options": [
+        "Am",
+        "Are"
+      ],
+      "answer": "Am"
+    },
+    {
+      "sentence": "___ she singing?",
+      "options": [
+        "Is",
+        "Are"
+      ],
+      "answer": "Is"
+    }
+  ]
+}

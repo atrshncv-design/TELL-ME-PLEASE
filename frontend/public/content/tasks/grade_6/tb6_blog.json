@@ -1,0 +1,89 @@
+{
+  "id": "tb6_blog",
+  "title": "🌍 Туристический блог: Лондон",
+  "category": "to-be",
+  "type": "cloze",
+  "description": "Прочитай пост о поездке в Лондон. Вставь правильную форму to be: нажми на пропуск, затем на слово.",
+  "text": "Hi! My name ___ Sam. I ___ in London with my family. It ___ a fantastic city! The weather ___ rainy today, but we ___ happy. My parents ___ in a museum now. My sister ___ interested in shopping, so she ___ in Oxford Street. The souvenirs here ___ very beautiful, but they ___ not cheap. The food ___ tasty. Fish and chips ___ my favorite! The people in London ___ very friendly. I ___ sure we will have a great time. London ___ the best!",
+  "answers": [
+    [
+      "is"
+    ],
+    [
+      "am"
+    ],
+    [
+      "is"
+    ],
+    [
+      "is"
+    ],
+    [
+      "are"
+    ],
+    [
+      "are"
+    ],
+    [
+      "is"
+    ],
+    [
+      "is"
+    ],
+    [
+      "are"
+    ],
+    [
+      "are"
+    ],
+    [
+      "is"
+    ],
+    [
+      "is"
+    ],
+    [
+      "are"
+    ],
+    [
+      "am"
+    ],
+    [
+      "is"
+    ]
+  ],
+  "word_bank": [
+    "is",
+    "am",
+    "is",
+    "is",
+    "are",
+    "are",
+    "is",
+    "is",
+    "are",
+    "are",
+    "is",
+    "is",
+    "are",
+    "am",
+    "is"
+  ],
+  "hints": [
+    "name (he)",
+    "I",
+    "city (it)",
+    "weather (it)",
+    "we",
+    "parents (they)",
+    "sister (she)",
+    "she",
+    "souvenirs (they)",
+    "they",
+    "food (it)",
+    "dish (it)",
+    "people (they)",
+    "I",
+    "London (it)"
+  ]
+}

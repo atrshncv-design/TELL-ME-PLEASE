@@ -1,0 +1,46 @@
+{
+  "id": "pc9_ai_examiner",
+  "title": "🤖 Экзаменатор-AI: симуляция ОГЭ",
+  "category": "speaking",
+  "type": "voice-chat",
+  "description": "Ответь на вопросы «экзаменатора» полными предложениями: Present Continuous для планов и текущих дел, Present Simple для привычек (задание 2 ОГЭ).",
+  "sections": [
+    {
+      "name": "📅 Планы на будущее",
+      "questions": [
+        "What are you doing this weekend?",
+        "Are you going on holiday this summer? Where are you going?",
+        "What are you doing after school today?"
+      ]
+    },
+    {
+      "name": "🕐 Текущие дела",
+      "questions": [
+        "What are you doing right now?",
+        "Are you working on any school project these days?",
+        "How is our town changing right now?"
+      ]
+    },
+    {
+      "name": "⚖️ Рутина vs сейчас",
+      "questions": [
+        "Do you usually play sports, or are you doing something else right now?",
+        "What do you usually do in the evening, and what are you doing tonight?"
+      ]
+    },
+    {
+      "name": "😡 Раздражение",
+      "questions": [
+        "Is there anything your friend or sibling is always doing that annoys you?"
+      ]
+    },
+    {
+      "name": "💬 Свободная беседа",
+      "questions": [
+        "Ask me a question about my plans for the weekend.",
+        "What is the weather like today? How is it changing?"
+      ]
+    }
+  ],
+  "task_context": "Ты — экзаменатор на устной части ОГЭ (задание 2, условный диалог-расспрос). Задавай вопросы по одному о жизни, хобби и планах ученика. Если ответ слишком короткий или с грамматическими ошибками, дай подсказку (например: «Use Present Continuous for future plans: I am going to...»). Хвали за полные ответы, используй Present Continuous для планов и текущих дел и Present Simple для привычек. Будь доброжелательным, но строгим, как настоящий экзаменатор."
+}

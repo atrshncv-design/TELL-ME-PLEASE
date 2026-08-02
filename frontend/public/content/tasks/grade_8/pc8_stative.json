@@ -1,0 +1,129 @@
+{
+  "id": "pc8_stative",
+  "title": "🛑 Ловушка: Stative Verbs",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Глаголы чувств (know, believe, understand, taste) не используются в Continuous, даже с маркером now. Выбери правильный вариант!",
+  "items": [
+    {
+      "question": "I ___ what you mean.",
+      "options": [
+        "understand",
+        "am understanding"
+      ],
+      "answer": "understand"
+    },
+    {
+      "question": "Shh! I ___ to the news.",
+      "options": [
+        "listen",
+        "am listening"
+      ],
+      "answer": "am listening"
+    },
+    {
+      "question": "She ___ it's a great idea.",
+      "options": [
+        "thinks",
+        "is thinking"
+      ],
+      "answer": "thinks"
+    },
+    {
+      "question": "Be quiet! I ___ about the task.",
+      "options": [
+        "think",
+        "am thinking"
+      ],
+      "answer": "am thinking"
+    },
+    {
+      "question": "The soup ___ delicious.",
+      "options": [
+        "tastes",
+        "is tasting"
+      ],
+      "answer": "tastes"
+    },
+    {
+      "question": "I ___ the soup. Look!",
+      "options": [
+        "taste",
+        "am tasting"
+      ],
+      "answer": "am tasting"
+    },
+    {
+      "question": "We ___ a great time at the concert!",
+      "options": [
+        "have",
+        "are having"
+      ],
+      "answer": "are having"
+    },
+    {
+      "question": "He ___ in aliens.",
+      "options": [
+        "believes",
+        "is believing"
+      ],
+      "answer": "believes"
+    },
+    {
+      "question": "I ___ your phone. I can't find mine.",
+      "options": [
+        "see",
+        "am seeing"
+      ],
+      "answer": "see"
+    },
+    {
+      "question": "The doctor ___ you tomorrow.",
+      "options": [
+        "sees",
+        "is seeing"
+      ],
+      "answer": "is seeing"
+    },
+    {
+      "question": "This coffee ___ awful.",
+      "options": [
+        "smells",
+        "is smelling"
+      ],
+      "answer": "smells"
+    },
+    {
+      "question": "You ___ the milk. Why?",
+      "options": [
+        "smell",
+        "are smelling"
+      ],
+      "answer": "are smelling"
+    },
+    {
+      "question": "The bag ___ 5 kilos.",
+      "options": [
+        "weighs",
+        "is weighing"
+      ],
+      "answer": "weighs"
+    },
+    {
+      "question": "I ___ that we should help the planet.",
+      "options": [
+        "think",
+        "am thinking"
+      ],
+      "answer": "think"
+    },
+    {
+      "question": "The children ___ their presents.",
+      "options": [
+        "are loving",
+        "love"
+      ],
+      "answer": "love"
+    }
+  ]
+}

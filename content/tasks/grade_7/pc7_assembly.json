@@ -1,0 +1,69 @@
+{
+  "id": "pc7_assembly",
+  "title": "🧩 Сборка: прямо сейчас",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь am/is/are + глагол с -ing. Смотри на подлежащее и на маркеры now, at the moment, Look!",
+  "items": [
+    {
+      "sentence": "Look! He ___ (download) a new app.",
+      "answer": "is downloading"
+    },
+    {
+      "sentence": "I ___ (chat) with my friend online now.",
+      "answer": "am chatting"
+    },
+    {
+      "sentence": "They ___ (explore) the virtual museum at the moment.",
+      "answer": "are exploring"
+    },
+    {
+      "sentence": "She ___ (report) the news.",
+      "answer": "is reporting"
+    },
+    {
+      "sentence": "We ___ (watch) a documentary now.",
+      "answer": "are watching"
+    },
+    {
+      "sentence": "The dog ___ (run) after the ball.",
+      "answer": "is running"
+    },
+    {
+      "sentence": "You ___ (sit) in the wrong seat.",
+      "answer": "are sitting"
+    },
+    {
+      "sentence": "My mother ___ (make) a video blog.",
+      "answer": "is making"
+    },
+    {
+      "sentence": "The students ___ (design) a website.",
+      "answer": "are designing"
+    },
+    {
+      "sentence": "It ___ (snow) today.",
+      "answer": "is snowing"
+    },
+    {
+      "sentence": "I ___ (listen) to a podcast.",
+      "answer": "am listening"
+    },
+    {
+      "sentence": "My friend ___ (take) a photo of the monument.",
+      "answer": "is taking"
+    },
+    {
+      "sentence": "The birds ___ (sing) in the tree.",
+      "answer": "are singing"
+    },
+    {
+      "sentence": "We ___ (have) a great time here.",
+      "answer": "are having"
+    },
+    {
+      "sentence": "He ___ (climb) the mountain.",
+      "answer": "is climbing"
+    }
+  ]
+}

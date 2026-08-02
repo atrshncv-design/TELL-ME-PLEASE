@@ -1,0 +1,96 @@
+{
+  "id": "pc8_function_sort",
+  "title": "🧠 Функции Present Continuous: сортировка",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Прочитай предложение и определи функцию Present Continuous: действие сейчас, временная ситуация, планы, тенденции или раздражение.",
+  "columns": [
+    {
+      "id": "now",
+      "label": "Action now",
+      "rule": "Прямо сейчас"
+    },
+    {
+      "id": "temp",
+      "label": "Temporary situation",
+      "rule": "Временная ситуация"
+    },
+    {
+      "id": "future",
+      "label": "Future arrangement",
+      "rule": "Планы на будущее"
+    },
+    {
+      "id": "trends",
+      "label": "Changing trends",
+      "rule": "Тенденции и перемены"
+    },
+    {
+      "id": "irritation",
+      "label": "Irritation",
+      "rule": "Раздражение с always"
+    }
+  ],
+  "items": [
+    {
+      "verb": "The Earth is getting hotter.",
+      "answer": "trends"
+    },
+    {
+      "verb": "I am living with my aunt this week.",
+      "answer": "temp"
+    },
+    {
+      "verb": "He is always leaving his rubbish on my desk!",
+      "answer": "irritation"
+    },
+    {
+      "verb": "We are meeting Tom at 5 PM.",
+      "answer": "future"
+    },
+    {
+      "verb": "Look! The journalist is broadcasting live.",
+      "answer": "now"
+    },
+    {
+      "verb": "More people are buying electric cars.",
+      "answer": "trends"
+    },
+    {
+      "verb": "I am working on a school project these days.",
+      "answer": "temp"
+    },
+    {
+      "verb": "She is constantly complaining about her job!",
+      "answer": "irritation"
+    },
+    {
+      "verb": "What time are you flying to London tomorrow?",
+      "answer": "future"
+    },
+    {
+      "verb": "Be quiet! The baby is sleeping.",
+      "answer": "now"
+    },
+    {
+      "verb": "The climate is changing rapidly.",
+      "answer": "trends"
+    },
+    {
+      "verb": "We are having dinner with the Smiths tonight.",
+      "answer": "future"
+    },
+    {
+      "verb": "My sister is always taking my clothes!",
+      "answer": "irritation"
+    },
+    {
+      "verb": "I am reading a great book at the moment.",
+      "answer": "temp"
+    },
+    {
+      "verb": "They are playing football in the park right now.",
+      "answer": "now"
+    }
+  ]
+}

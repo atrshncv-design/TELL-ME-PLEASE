@@ -1,0 +1,73 @@
+{
+  "id": "pc6_detector",
+  "title": "🕵️ Детектор ошибок: to be",
+  "category": "grammar",
+  "type": "click-mistake",
+  "description": "Кликни на слово с ошибкой. Если ошибки нет — нажми «Всё верно!».",
+  "items": [
+    {
+      "text": "I is hungry.",
+      "wrong": "is"
+    },
+    {
+      "text": "Are your sister good at Maths?",
+      "wrong": "Are"
+    },
+    {
+      "text": "The trainers isn't under the bed.",
+      "wrong": "isn't"
+    },
+    {
+      "text": "My favorite food are pasta.",
+      "wrong": "are"
+    },
+    {
+      "text": "Is we in the 6th grade?",
+      "wrong": "Is"
+    },
+    {
+      "text": "The curtains is red and blue.",
+      "wrong": "is"
+    },
+    {
+      "text": "He aren't interested in sports.",
+      "wrong": "aren't"
+    },
+    {
+      "text": "The weather is sunny today.",
+      "wrong": null
+    },
+    {
+      "text": "Are the sink in the bathroom?",
+      "wrong": "Are"
+    },
+    {
+      "text": "They is from Canada.",
+      "wrong": "is"
+    },
+    {
+      "text": "I isn't late for school.",
+      "wrong": "isn't"
+    },
+    {
+      "text": "The weather are sunny today.",
+      "wrong": "are"
+    },
+    {
+      "text": "Is you thirsty?",
+      "wrong": "Is"
+    },
+    {
+      "text": "The apple aren't in the bowl.",
+      "wrong": "aren't"
+    },
+    {
+      "text": "We isn't ready for the test.",
+      "wrong": "isn't"
+    },
+    {
+      "text": "London are a beautiful city.",
+      "wrong": "are"
+    }
+  ]
+}

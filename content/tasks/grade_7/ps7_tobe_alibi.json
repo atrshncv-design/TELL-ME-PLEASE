@@ -1,0 +1,69 @@
+{
+  "id": "ps7_tobe_alibi",
+  "title": "🕵️ Алиби: допрос",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Полицейский допрашивает подозреваемого. Вставь was/were в вопросы и ответы!",
+  "items": [
+    {
+      "sentence": "Where ___ you yesterday at 5 PM?",
+      "answer": "were"
+    },
+    {
+      "sentence": "I ___ at home.",
+      "answer": "was"
+    },
+    {
+      "sentence": "___ your wife with you?",
+      "answer": "Was"
+    },
+    {
+      "sentence": "No, she ___ at work.",
+      "answer": "was"
+    },
+    {
+      "sentence": "___ the doors locked?",
+      "answer": "Were"
+    },
+    {
+      "sentence": "Yes, they ___.",
+      "answer": "were"
+    },
+    {
+      "sentence": "The weather ___ bad.",
+      "answer": "was"
+    },
+    {
+      "sentence": "___ you alone?",
+      "answer": "Were"
+    },
+    {
+      "sentence": "No, I ___ with my dog.",
+      "answer": "was"
+    },
+    {
+      "sentence": "The streets ___ empty.",
+      "answer": "were"
+    },
+    {
+      "sentence": "___ you scared?",
+      "answer": "Were"
+    },
+    {
+      "sentence": "No, I ___ not scared.",
+      "answer": "was"
+    },
+    {
+      "sentence": "Your story ___ very strange.",
+      "answer": "is"
+    },
+    {
+      "sentence": "I ___ telling the truth!",
+      "answer": "am"
+    },
+    {
+      "sentence": "We ___ not sure.",
+      "answer": "are"
+    }
+  ]
+}

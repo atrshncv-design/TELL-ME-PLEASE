@@ -1,0 +1,144 @@
+{
+  "id": "pc6_unjumble",
+  "title": "🔀 Расположи слова: собери предложение",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Слова перепутаны. Выбери правильный порядок слов — формируй структурный рефлекс для to be!",
+  "items": [
+    {
+      "question": "hungry / am / I",
+      "options": [
+        "I am hungry.",
+        "Am I hungry?",
+        "I hungry am."
+      ],
+      "answer": "I am hungry."
+    },
+    {
+      "question": "Maths / Is / sister / your / good / at",
+      "options": [
+        "Is your sister good at Maths?",
+        "Your sister is good at Maths?",
+        "Is good at Maths your sister?"
+      ],
+      "answer": "Is your sister good at Maths?"
+    },
+    {
+      "question": "bed / aren't / under / trainers / The / the",
+      "options": [
+        "The trainers aren't under the bed.",
+        "The trainers under the bed aren't.",
+        "Aren't the trainers under the bed."
+      ],
+      "answer": "The trainers aren't under the bed."
+    },
+    {
+      "question": "pasta / is / food / favorite / My",
+      "options": [
+        "My favorite food is pasta.",
+        "My favorite pasta is food.",
+        "Is my favorite food pasta."
+      ],
+      "answer": "My favorite food is pasta."
+    },
+    {
+      "question": "grade / 6th / in / Are / we",
+      "options": [
+        "Are we in the 6th grade?",
+        "We are in the 6th grade?",
+        "Are in the 6th grade we?"
+      ],
+      "answer": "Are we in the 6th grade?"
+    },
+    {
+      "question": "blue / curtains / are / The / and / red",
+      "options": [
+        "The curtains are red and blue.",
+        "The curtains red and blue are.",
+        "Are the curtains red and blue."
+      ],
+      "answer": "The curtains are red and blue."
+    },
+    {
+      "question": "sports / interested / isn't / He / in",
+      "options": [
+        "He isn't interested in sports.",
+        "He interested isn't in sports.",
+        "Isn't he interested in sports."
+      ],
+      "answer": "He isn't interested in sports."
+    },
+    {
+      "question": "sink / Is / bathroom / the / the / in",
+      "options": [
+        "Is the sink in the bathroom?",
+        "The sink is in the bathroom?",
+        "Is in the bathroom the sink?"
+      ],
+      "answer": "Is the sink in the bathroom?"
+    },
+    {
+      "question": "Canada / from / are / They",
+      "options": [
+        "They are from Canada.",
+        "Are they from Canada.",
+        "They from Canada are."
+      ],
+      "answer": "They are from Canada."
+    },
+    {
+      "question": "school / am / I / late / not / for",
+      "options": [
+        "I am not late for school.",
+        "I am late not for school.",
+        "Am I not late for school."
+      ],
+      "answer": "I am not late for school."
+    },
+    {
+      "question": "sunny / is / weather / The / today",
+      "options": [
+        "The weather is sunny today.",
+        "The weather today is sunny.",
+        "Is the weather sunny today."
+      ],
+      "answer": "The weather is sunny today."
+    },
+    {
+      "question": "thirsty / Are / you",
+      "options": [
+        "Are you thirsty?",
+        "You are thirsty?",
+        "Thirsty are you?"
+      ],
+      "answer": "Are you thirsty?"
+    },
+    {
+      "question": "bowl / apple / isn't / in / The / the",
+      "options": [
+        "The apple isn't in the bowl.",
+        "The apple in the bowl isn't.",
+        "Isn't the apple in the bowl."
+      ],
+      "answer": "The apple isn't in the bowl."
+    },
+    {
+      "question": "test / aren't / We / ready / the / for",
+      "options": [
+        "We aren't ready for the test.",
+        "We aren't ready the test for.",
+        "Aren't we ready for the test."
+      ],
+      "answer": "We aren't ready for the test."
+    },
+    {
+      "question": "beautiful / London / city / a / is",
+      "options": [
+        "London is a beautiful city.",
+        "London a beautiful city is.",
+        "Is London a beautiful city."
+      ],
+      "answer": "London is a beautiful city."
+    }
+  ]
+}

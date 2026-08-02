@@ -1,0 +1,131 @@
+{
+  "id": "pc9_two_worlds",
+  "title": "⚖️ Два мира: рутина vs изменения",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Соедини «обычно» (Present Simple) с «но сейчас / в этом году» (Present Continuous).",
+  "columns": [
+    {
+      "id": "w1",
+      "label": "but these days he is reading e-books."
+    },
+    {
+      "id": "w2",
+      "label": "but this year we are going to Italy."
+    },
+    {
+      "id": "w3",
+      "label": "but currently she is working from home."
+    },
+    {
+      "id": "w4",
+      "label": "but tonight they are playing board games."
+    },
+    {
+      "id": "w5",
+      "label": "but this week I am taking the bus."
+    },
+    {
+      "id": "w6",
+      "label": "but today he is ordering a pizza."
+    },
+    {
+      "id": "w7",
+      "label": "but today we are studying in the park."
+    },
+    {
+      "id": "w8",
+      "label": "but now they are buying online."
+    },
+    {
+      "id": "w9",
+      "label": "but this summer she is wearing bright colors."
+    },
+    {
+      "id": "w10",
+      "label": "but this month we are buying a new gadget."
+    },
+    {
+      "id": "w11",
+      "label": "but today he is playing computer games."
+    },
+    {
+      "id": "w12",
+      "label": "but this morning I am drinking tea."
+    },
+    {
+      "id": "w13",
+      "label": "but currently they are speaking English."
+    },
+    {
+      "id": "w14",
+      "label": "but these days it is recycling materials."
+    },
+    {
+      "id": "w15",
+      "label": "but this week I am sleeping late."
+    }
+  ],
+  "items": [
+    {
+      "verb": "He usually reads paper books",
+      "answer": "w1"
+    },
+    {
+      "verb": "We usually go to Spain",
+      "answer": "w2"
+    },
+    {
+      "verb": "She usually works in an office",
+      "answer": "w3"
+    },
+    {
+      "verb": "They usually watch TV",
+      "answer": "w4"
+    },
+    {
+      "verb": "I usually walk to school",
+      "answer": "w5"
+    },
+    {
+      "verb": "My dad usually cooks",
+      "answer": "w6"
+    },
+    {
+      "verb": "We usually study in the classroom",
+      "answer": "w7"
+    },
+    {
+      "verb": "People usually buy in shops",
+      "answer": "w8"
+    },
+    {
+      "verb": "She usually wears dark colors",
+      "answer": "w9"
+    },
+    {
+      "verb": "We usually save money",
+      "answer": "w10"
+    },
+    {
+      "verb": "He usually plays outside",
+      "answer": "w11"
+    },
+    {
+      "verb": "I usually drink coffee",
+      "answer": "w12"
+    },
+    {
+      "verb": "They usually speak Russian",
+      "answer": "w13"
+    },
+    {
+      "verb": "The factory usually produces plastic",
+      "answer": "w14"
+    },
+    {
+      "verb": "I usually wake up early",
+      "answer": "w15"
+    }
+  ]
+}

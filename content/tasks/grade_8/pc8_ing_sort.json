@@ -1,0 +1,86 @@
+{
+  "id": "pc8_ing_sort",
+  "title": "✍️ Орфография -ing: сортировка",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Распредели глаголы по трём корзинам: просто добавь -ing, отбрось -e, удвой согласную.",
+  "columns": [
+    {
+      "id": "add",
+      "label": "Just add -ing",
+      "rule": "play → playing"
+    },
+    {
+      "id": "drop",
+      "label": "Drop -e, add -ing",
+      "rule": "make → making"
+    },
+    {
+      "id": "double",
+      "label": "Double the consonant",
+      "rule": "run → running"
+    }
+  ],
+  "items": [
+    {
+      "verb": "broadcast",
+      "answer": "add"
+    },
+    {
+      "verb": "investigate",
+      "answer": "add"
+    },
+    {
+      "verb": "upload",
+      "answer": "add"
+    },
+    {
+      "verb": "design",
+      "answer": "add"
+    },
+    {
+      "verb": "report",
+      "answer": "add"
+    },
+    {
+      "verb": "create",
+      "answer": "drop"
+    },
+    {
+      "verb": "examine",
+      "answer": "drop"
+    },
+    {
+      "verb": "produce",
+      "answer": "drop"
+    },
+    {
+      "verb": "pollute",
+      "answer": "drop"
+    },
+    {
+      "verb": "programme",
+      "answer": "drop"
+    },
+    {
+      "verb": "chat",
+      "answer": "double"
+    },
+    {
+      "verb": "run",
+      "answer": "double"
+    },
+    {
+      "verb": "swim",
+      "answer": "double"
+    },
+    {
+      "verb": "text",
+      "answer": "double"
+    },
+    {
+      "verb": "begin",
+      "answer": "double"
+    }
+  ]
+}

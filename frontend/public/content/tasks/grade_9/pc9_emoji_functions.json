@@ -1,0 +1,99 @@
+{
+  "id": "pc9_emoji_functions",
+  "title": "🎭 Угадай функцию по эмодзи",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Посмотри на эмодзи и угадай, какую функцию Present Continuous они обозначают: действие сейчас, планы, тенденции, раздражение или временная ситуация.",
+  "items": [
+    {
+      "question": "🌍📈🌡️",
+      "options": [
+        "Trend",
+        "Action now",
+        "Irritation"
+      ],
+      "answer": "Trend"
+    },
+    {
+      "question": "😡📱",
+      "options": [
+        "Irritation",
+        "Future plan",
+        "Temporary"
+      ],
+      "answer": "Irritation"
+    },
+    {
+      "question": "✈️📅",
+      "options": [
+        "Future arrangement",
+        "Routine",
+        "Trend"
+      ],
+      "answer": "Future arrangement"
+    },
+    {
+      "question": "🏗️🚧",
+      "options": [
+        "Temporary situation",
+        "Stative verb",
+        "Routine"
+      ],
+      "answer": "Temporary situation"
+    },
+    {
+      "question": "📸👀",
+      "options": [
+        "Description of a photo",
+        "Future plan",
+        "Irritation"
+      ],
+      "answer": "Description of a photo"
+    },
+    {
+      "question": "📈💰",
+      "options": [
+        "Trend",
+        "Action now",
+        "Temporary"
+      ],
+      "answer": "Trend"
+    },
+    {
+      "question": "😡🚪",
+      "options": [
+        "Irritation",
+        "Future",
+        "Trend"
+      ],
+      "answer": "Irritation"
+    },
+    {
+      "question": "📅🍽️",
+      "options": [
+        "Future arrangement",
+        "Routine",
+        "Description"
+      ],
+      "answer": "Future arrangement"
+    },
+    {
+      "question": "🐶💤",
+      "options": [
+        "Action now",
+        "Stative",
+        "Irritation"
+      ],
+      "answer": "Action now"
+    },
+    {
+      "question": "🏠🗓️",
+      "options": [
+        "Temporary situation",
+        "Trend",
+        "Future"
+      ],
+      "answer": "Temporary situation"
+    }
+  ]
+}

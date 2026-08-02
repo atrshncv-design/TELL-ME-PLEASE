@@ -1,0 +1,69 @@
+{
+  "id": "pc6_negative",
+  "title": "🚫 Анти-реакция: отрицание",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь isn't, aren't или am not. Смотри на подлежащее!",
+  "items": [
+    {
+      "sentence": "He ___ sleeping.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "They ___ playing.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "I ___ reading.",
+      "answer": "am not"
+    },
+    {
+      "sentence": "She ___ dancing.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "We ___ watching TV.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "The dog ___ barking.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "You ___ running.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "It ___ raining.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "My mum ___ cooking.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "The boys ___ fighting.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "He ___ doing homework.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "We ___ sitting.",
+      "answer": "aren't"
+    },
+    {
+      "sentence": "The cat ___ climbing.",
+      "answer": "isn't"
+    },
+    {
+      "sentence": "I ___ listening.",
+      "answer": "am not"
+    },
+    {
+      "sentence": "She ___ singing.",
+      "answer": "isn't"
+    }
+  ]
+}

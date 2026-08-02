@@ -1,0 +1,89 @@
+{
+  "id": "ps9_dragon_verbs",
+  "title": "🔍 To be или смысловой глагол?",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Определи, какой глагол в предложении: to be (am/is/are/was/were) или смысловой глагол.",
+  "items": [
+    {
+      "sentence": "Chinese Dragon Carnival is one of the most impressive celebrations in the world.",
+      "options": [
+        "to be",
+        "смысловой глагол"
+      ],
+      "answer": "to be"
+    },
+    {
+      "sentence": "It takes place every year.",
+      "options": [
+        "смысловой глагол",
+        "to be"
+      ],
+      "answer": "смысловой глагол"
+    },
+    {
+      "sentence": "Huge dragon figures move through the streets.",
+      "options": [
+        "смысловой глагол",
+        "to be"
+      ],
+      "answer": "смысловой глагол"
+    },
+    {
+      "sentence": "The dragon symbol is very important.",
+      "options": [
+        "to be",
+        "смысловой глагол"
+      ],
+      "answer": "to be"
+    },
+    {
+      "sentence": "It represents strength and luck.",
+      "options": [
+        "смысловой глагол",
+        "to be"
+      ],
+      "answer": "смысловой глагол"
+    },
+    {
+      "sentence": "The parade fills the city with energy.",
+      "options": [
+        "смысловой глагол",
+        "to be"
+      ],
+      "answer": "смысловой глагол"
+    },
+    {
+      "sentence": "Families watch it with admiration.",
+      "options": [
+        "смысловой глагол",
+        "to be"
+      ],
+      "answer": "смысловой глагол"
+    },
+    {
+      "sentence": "The combination makes the carnival look magnificent.",
+      "options": [
+        "смысловой глагол",
+        "to be"
+      ],
+      "answer": "смысловой глагол"
+    },
+    {
+      "sentence": "The Chinese Dragon Carnival is more than just a festival.",
+      "options": [
+        "to be",
+        "смысловой глагол"
+      ],
+      "answer": "to be"
+    },
+    {
+      "sentence": "It is a chance to feel the spirit of history.",
+      "options": [
+        "to be",
+        "смысловой глагол"
+      ],
+      "answer": "to be"
+    }
+  ]
+}

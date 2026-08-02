@@ -1,0 +1,69 @@
+{
+  "id": "tb6_svetofor_cards",
+  "title": "⚡ Светофор: назови форму to be",
+  "category": "to-be",
+  "type": "flashcards",
+  "description": "Переверни карточку и мгновенно назови форму глагола to be (am / is / are) для подлежащего.",
+  "cards": [
+    {
+      "front": "The apple",
+      "back": "is"
+    },
+    {
+      "front": "My parents",
+      "back": "are"
+    },
+    {
+      "front": "The weather",
+      "back": "is"
+    },
+    {
+      "front": "The children",
+      "back": "are"
+    },
+    {
+      "front": "I",
+      "back": "am"
+    },
+    {
+      "front": "The sofa",
+      "back": "is"
+    },
+    {
+      "front": "The money",
+      "back": "is"
+    },
+    {
+      "front": "They",
+      "back": "are"
+    },
+    {
+      "front": "The news",
+      "back": "is"
+    },
+    {
+      "front": "My friend",
+      "back": "is"
+    },
+    {
+      "front": "We",
+      "back": "are"
+    },
+    {
+      "front": "The holidays",
+      "back": "are"
+    },
+    {
+      "front": "She",
+      "back": "is"
+    },
+    {
+      "front": "The homework",
+      "back": "is"
+    },
+    {
+      "front": "You",
+      "back": "are"
+    }
+  ]
+}

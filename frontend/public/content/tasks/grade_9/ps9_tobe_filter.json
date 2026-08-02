@@ -1,0 +1,129 @@
+{
+  "id": "ps9_tobe_filter",
+  "title": "🧠 Фильтр: Active или Passive?",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Раскрой скобки: выбери правильную форму — Active или Passive.",
+  "items": [
+    {
+      "sentence": "The police ___ the thief yesterday.",
+      "options": [
+        "caught",
+        "was caught"
+      ],
+      "answer": "caught"
+    },
+    {
+      "sentence": "The thief ___ by the police.",
+      "options": [
+        "was caught",
+        "caught"
+      ],
+      "answer": "was caught"
+    },
+    {
+      "sentence": "The famous writer ___ this book in 1990.",
+      "options": [
+        "wrote",
+        "was written"
+      ],
+      "answer": "wrote"
+    },
+    {
+      "sentence": "The book ___ by a famous writer.",
+      "options": [
+        "was written",
+        "wrote"
+      ],
+      "answer": "was written"
+    },
+    {
+      "sentence": "Every year a lot of trees ___ in the city.",
+      "options": [
+        "are planted",
+        "plant"
+      ],
+      "answer": "are planted"
+    },
+    {
+      "sentence": "People ___ trees every year.",
+      "options": [
+        "plant",
+        "are planted"
+      ],
+      "answer": "plant"
+    },
+    {
+      "sentence": "The Internet ___ by billions of people.",
+      "options": [
+        "is used",
+        "uses"
+      ],
+      "answer": "is used"
+    },
+    {
+      "sentence": "People ___ the Internet every day.",
+      "options": [
+        "use",
+        "are used"
+      ],
+      "answer": "use"
+    },
+    {
+      "sentence": "A new museum ___ last week.",
+      "options": [
+        "was opened",
+        "opened"
+      ],
+      "answer": "was opened"
+    },
+    {
+      "sentence": "The mayor ___ the new museum.",
+      "options": [
+        "opened",
+        "was opened"
+      ],
+      "answer": "opened"
+    },
+    {
+      "sentence": "The exhibition ___ by thousands of tourists.",
+      "options": [
+        "is visited",
+        "visit"
+      ],
+      "answer": "is visited"
+    },
+    {
+      "sentence": "Tourists ___ the exhibition every day.",
+      "options": [
+        "visit",
+        "are visited"
+      ],
+      "answer": "visit"
+    },
+    {
+      "sentence": "The room ___ every day.",
+      "options": [
+        "is cleaned",
+        "cleans"
+      ],
+      "answer": "is cleaned"
+    },
+    {
+      "sentence": "The cleaner ___ the room.",
+      "options": [
+        "cleans",
+        "is cleaned"
+      ],
+      "answer": "cleans"
+    },
+    {
+      "sentence": "The crime ___ by the detective two days ago.",
+      "options": [
+        "was solved",
+        "solved"
+      ],
+      "answer": "was solved"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "tb6_question",
+  "title": "❓ Рефлекс вопроса: вынеси to be вперёд",
+  "category": "to-be",
+  "type": "fill-in",
+  "description": "Преврати утверждение в вопрос: вставь Am, Is или Are. Инверсия — твой автоматический рефлекс!",
+  "items": [
+    {
+      "sentence": "___ the tea hot?",
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ she thirsty?",
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ they at home?",
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ you 12 years old?",
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ the sink in the bathroom?",
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ he a pilot?",
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ the apples in the bowl?",
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ we late?",
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ it dangerous?",
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ your sister interested in art?",
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ the shoes new?",
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ I right?",
+      "answer": "Am"
+    },
+    {
+      "sentence": "___ the museum open?",
+      "answer": "Is"
+    },
+    {
+      "sentence": "___ they hungry?",
+      "answer": "Are"
+    },
+    {
+      "sentence": "___ the weather rainy?",
+      "answer": "Is"
+    }
+  ]
+}

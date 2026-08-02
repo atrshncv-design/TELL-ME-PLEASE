@@ -1,0 +1,69 @@
+{
+  "id": "ps7_tobe_time_machine",
+  "title": "⏳ Машина времени: to be",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Раскрой скобки: выбери форму to be в Present (am/is/are) или Past (was/were) Simple. Смотри на маркер времени!",
+  "items": [
+    {
+      "sentence": "Now I ___ 13 years old.",
+      "answer": "am"
+    },
+    {
+      "sentence": "Last year I ___ 12.",
+      "answer": "was"
+    },
+    {
+      "sentence": "Today the weather ___ sunny.",
+      "answer": "is"
+    },
+    {
+      "sentence": "Yesterday it ___ rainy.",
+      "answer": "was"
+    },
+    {
+      "sentence": "My parents ___ at home now.",
+      "answer": "are"
+    },
+    {
+      "sentence": "Two days ago they ___ at work.",
+      "answer": "were"
+    },
+    {
+      "sentence": "We ___ in the 7th grade now.",
+      "answer": "are"
+    },
+    {
+      "sentence": "In 2022 we ___ in the 6th grade.",
+      "answer": "were"
+    },
+    {
+      "sentence": "The food ___ good today.",
+      "answer": "is"
+    },
+    {
+      "sentence": "The food at the cafe ___ bad yesterday.",
+      "answer": "was"
+    },
+    {
+      "sentence": "He ___ a doctor now.",
+      "answer": "is"
+    },
+    {
+      "sentence": "When he was a child, he ___ very curious.",
+      "answer": "was"
+    },
+    {
+      "sentence": "The gadgets ___ expensive now.",
+      "answer": "are"
+    },
+    {
+      "sentence": "Last month they ___ cheap.",
+      "answer": "were"
+    },
+    {
+      "sentence": "I ___ happy today!",
+      "answer": "am"
+    }
+  ]
+}

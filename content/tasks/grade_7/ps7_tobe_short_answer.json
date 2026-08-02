@@ -1,0 +1,129 @@
+{
+  "id": "ps7_tobe_short_answer",
+  "title": "🗣️ Короткий ответ: to be",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Ответь коротко: Yes, I am / No, it wasn't... Не перепутай с do/does!",
+  "items": [
+    {
+      "question": "Are you a student? — Yes, I ___.",
+      "options": [
+        "am",
+        "do"
+      ],
+      "answer": "am"
+    },
+    {
+      "question": "Was the film interesting? — No, it ___.",
+      "options": [
+        "wasn't",
+        "isn't"
+      ],
+      "answer": "wasn't"
+    },
+    {
+      "question": "Were they at the party? — Yes, they ___.",
+      "options": [
+        "were",
+        "are"
+      ],
+      "answer": "were"
+    },
+    {
+      "question": "Is he a programmer? — No, he ___.",
+      "options": [
+        "isn't",
+        "doesn't"
+      ],
+      "answer": "isn't"
+    },
+    {
+      "question": "Am I late? — No, you ___.",
+      "options": [
+        "aren't",
+        "am not"
+      ],
+      "answer": "aren't"
+    },
+    {
+      "question": "Were you in London last summer? — Yes, I ___.",
+      "options": [
+        "was",
+        "am"
+      ],
+      "answer": "was"
+    },
+    {
+      "question": "Is the soup spicy? — No, it ___.",
+      "options": [
+        "isn't",
+        "wasn't"
+      ],
+      "answer": "isn't"
+    },
+    {
+      "question": "Are the gadgets new? — Yes, they ___.",
+      "options": [
+        "are",
+        "were"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "Was she angry yesterday? — Yes, she ___.",
+      "options": [
+        "was",
+        "is"
+      ],
+      "answer": "was"
+    },
+    {
+      "question": "Are we ready for the test? — No, we ___.",
+      "options": [
+        "aren't",
+        "weren't"
+      ],
+      "answer": "aren't"
+    },
+    {
+      "question": "Was the weather nice on Sunday? — Yes, it ___.",
+      "options": [
+        "was",
+        "is"
+      ],
+      "answer": "was"
+    },
+    {
+      "question": "Is your dad a mechanic? — No, he ___.",
+      "options": [
+        "isn't",
+        "wasn't"
+      ],
+      "answer": "isn't"
+    },
+    {
+      "question": "Were the tickets expensive? — No, they ___.",
+      "options": [
+        "weren't",
+        "aren't"
+      ],
+      "answer": "weren't"
+    },
+    {
+      "question": "Are you tired? — Yes, I ___.",
+      "options": [
+        "am",
+        "was"
+      ],
+      "answer": "am"
+    },
+    {
+      "question": "Was it a dangerous trip? — No, it ___.",
+      "options": [
+        "wasn't",
+        "isn't"
+      ],
+      "answer": "wasn't"
+    }
+  ]
+}

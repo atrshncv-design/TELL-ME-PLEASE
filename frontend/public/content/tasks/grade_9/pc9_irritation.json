@@ -1,0 +1,144 @@
+{
+  "id": "pc9_irritation",
+  "title": "😡 Раздражение и критика",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Present Continuous с always / constantly / forever — раздражение и критика. Выбери правильную форму.",
+  "items": [
+    {
+      "sentence": "He ___ my pens!",
+      "options": [
+        "is always taking",
+        "always takes",
+        "is taking always"
+      ],
+      "answer": "is always taking"
+    },
+    {
+      "sentence": "She ___ about her marks!",
+      "options": [
+        "is constantly complaining",
+        "constantly complains",
+        "is complaining constantly"
+      ],
+      "answer": "is constantly complaining"
+    },
+    {
+      "sentence": "They ___ during the lesson!",
+      "options": [
+        "are always talking",
+        "are never listening",
+        "always talk"
+      ],
+      "answer": "are always talking"
+    },
+    {
+      "sentence": "You ___ your keys!",
+      "options": [
+        "are always losing",
+        "always lose",
+        "are losing always"
+      ],
+      "answer": "are always losing"
+    },
+    {
+      "sentence": "He ___ his phone in class!",
+      "options": [
+        "is forever using",
+        "forever uses",
+        "is using forever"
+      ],
+      "answer": "is forever using"
+    },
+    {
+      "sentence": "My sister ___ my clothes without asking!",
+      "options": [
+        "is always borrowing",
+        "always borrows",
+        "is borrowing always"
+      ],
+      "answer": "is always borrowing"
+    },
+    {
+      "sentence": "You ___ me!",
+      "options": [
+        "are forever interrupting",
+        "forever interrupt",
+        "are interrupting forever"
+      ],
+      "answer": "are forever interrupting"
+    },
+    {
+      "sentence": "He ___ late for school!",
+      "options": [
+        "is always being",
+        "always is",
+        "is being always"
+      ],
+      "answer": "is always being"
+    },
+    {
+      "sentence": "They ___ rubbish on the floor!",
+      "options": [
+        "are constantly leaving",
+        "constantly leave",
+        "are leaving constantly"
+      ],
+      "answer": "are constantly leaving"
+    },
+    {
+      "sentence": "You ___ to me!",
+      "options": [
+        "are always lying",
+        "are never listening",
+        "always lie"
+      ],
+      "answer": "are always lying"
+    },
+    {
+      "sentence": "She ___ her homework at the last minute!",
+      "options": [
+        "is always doing",
+        "always does",
+        "is doing always"
+      ],
+      "answer": "is always doing"
+    },
+    {
+      "sentence": "He ___ his gum loudly!",
+      "options": [
+        "is always chewing",
+        "always chews",
+        "is chewing always"
+      ],
+      "answer": "is always chewing"
+    },
+    {
+      "sentence": "You ___ the door open!",
+      "options": [
+        "are always leaving",
+        "always leave",
+        "are leaving always"
+      ],
+      "answer": "are always leaving"
+    },
+    {
+      "sentence": "They ___ during the film!",
+      "options": [
+        "are constantly talking",
+        "constantly talk",
+        "are talking constantly"
+      ],
+      "answer": "are constantly talking"
+    },
+    {
+      "sentence": "He ___ with his brother!",
+      "options": [
+        "is always fighting",
+        "always fights",
+        "is fighting always"
+      ],
+      "answer": "is always fighting"
+    }
+  ]
+}

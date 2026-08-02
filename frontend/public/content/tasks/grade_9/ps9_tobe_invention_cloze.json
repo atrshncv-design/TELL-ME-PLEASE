@@ -1,0 +1,89 @@
+{
+  "id": "ps9_tobe_invention_cloze",
+  "title": "🌍 Текст ОГЭ: история изобретения",
+  "category": "grammar",
+  "type": "cloze",
+  "description": "Прочитай текст об изобретении телефона и раскрой скобки, используя to be в нужной форме (Active/Passive/Perfect/Continuous).",
+  "text": "The telephone ___ by Alexander Graham Bell in 1876. At that time, the first device ___ in the laboratory. The first sentence ___ by Bell himself. Since then, telephones ___ a lot. Today, billions of calls ___ every day. The mobile phone ___ in 1973. It ___ by a few people at first. But now, smartphones ___ by everyone. Right now, a new model ___ by engineers in Japan. The new features ___ at the moment. A new smartphone ___ next month. By the end of the year, it ___ in many countries. The old models ___ by new ones every year. It ___ a great invention. I am sure that even more amazing gadgets ___ in the future.",
+  "answers": [
+    [
+      "was invented"
+    ],
+    [
+      "was being tested"
+    ],
+    [
+      "was spoken"
+    ],
+    [
+      "have been improved"
+    ],
+    [
+      "are made"
+    ],
+    [
+      "was invented"
+    ],
+    [
+      "was used"
+    ],
+    [
+      "are used"
+    ],
+    [
+      "is being developed"
+    ],
+    [
+      "are being tested"
+    ],
+    [
+      "will be released"
+    ],
+    [
+      "will have been sold"
+    ],
+    [
+      "are replaced"
+    ],
+    [
+      "is"
+    ],
+    [
+      "will be created"
+    ]
+  ],
+  "word_bank": [
+    "was invented",
+    "was being tested",
+    "was spoken",
+    "have been improved",
+    "are made",
+    "was invented",
+    "was used",
+    "are used",
+    "is being developed",
+    "are being tested",
+    "will be released",
+    "will have been sold",
+    "are replaced",
+    "is",
+    "will be created"
+  ],
+  "hints": [
+    "(invent)",
+    "(test)",
+    "(speak)",
+    "(improve)",
+    "(make)",
+    "(invent)",
+    "(use)",
+    "(use)",
+    "(develop)",
+    "(test)",
+    "(release)",
+    "(sell)",
+    "(replace)",
+    "(be)",
+    "(create)"
+  ]
+}

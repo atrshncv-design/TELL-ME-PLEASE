@@ -1,0 +1,45 @@
+{
+  "id": "ps9_text_fix",
+  "title": "📝 Исправь текст о Рождестве",
+  "category": "grammar",
+  "type": "click-mistake",
+  "description": "В тексте 8 ошибок. Кликни на неверное слово в каждом предложении. Если предложение верное — нажми «Всё верно!».",
+  "items": [
+    {
+      "text": "My family celebrate Christmas every year.",
+      "wrong": "celebrate"
+    },
+    {
+      "text": "We usually goes to my grandparents' house.",
+      "wrong": "goes"
+    },
+    {
+      "text": "My mum cook a special dinner.",
+      "wrong": "cook"
+    },
+    {
+      "text": "My sister make decorations.",
+      "wrong": "make"
+    },
+    {
+      "text": "I don't believes in superstitions.",
+      "wrong": "believes"
+    },
+    {
+      "text": "My grandma carry a lucky charm in her pocket.",
+      "wrong": "carry"
+    },
+    {
+      "text": "The celebration start at six o'clock.",
+      "wrong": "start"
+    },
+    {
+      "text": "It be a wonderful evening.",
+      "wrong": "be"
+    },
+    {
+      "text": "My family celebrates Christmas every year.",
+      "wrong": null
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "ps8_tobe_short_answer",
+  "title": "🗣️ Рефлекс короткого ответа: to be",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "В живой речи мы отвечаем коротко: Yes, I am / No, it isn't. Выбери правильный короткий ответ.",
+  "items": [
+    {
+      "question": "Are you a student? — Yes, I ___.",
+      "options": [
+        "am",
+        "are",
+        "do"
+      ],
+      "answer": "am"
+    },
+    {
+      "question": "Was the book written by him? — No, it ___.",
+      "options": [
+        "wasn't",
+        "weren't",
+        "isn't"
+      ],
+      "answer": "wasn't"
+    },
+    {
+      "question": "Were they playing tennis? — Yes, they ___.",
+      "options": [
+        "were",
+        "was",
+        "are"
+      ],
+      "answer": "were"
+    },
+    {
+      "question": "Is the room cleaned every day? — No, it ___.",
+      "options": [
+        "isn't",
+        "doesn't",
+        "wasn't"
+      ],
+      "answer": "isn't"
+    },
+    {
+      "question": "Am I in the team? — Yes, you ___.",
+      "options": [
+        "are",
+        "am",
+        "is"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "Has the letter been sent? — Yes, it ___.",
+      "options": [
+        "has",
+        "is",
+        "was"
+      ],
+      "answer": "has"
+    },
+    {
+      "question": "Are you listening to me? — Yes, I ___.",
+      "options": [
+        "am",
+        "do",
+        "are"
+      ],
+      "answer": "am"
+    },
+    {
+      "question": "Were the houses built last year? — Yes, they ___.",
+      "options": [
+        "were",
+        "was",
+        "are"
+      ],
+      "answer": "were"
+    },
+    {
+      "question": "Will the exam be difficult? — No, it ___.",
+      "options": [
+        "won't",
+        "isn't",
+        "doesn't"
+      ],
+      "answer": "won't"
+    },
+    {
+      "question": "Is the environment polluted? — Yes, it ___.",
+      "options": [
+        "is",
+        "does",
+        "was"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "Was she crying? — No, she ___.",
+      "options": [
+        "wasn't",
+        "weren't",
+        "isn't"
+      ],
+      "answer": "wasn't"
+    },
+    {
+      "question": "Has the work been finished? — No, it ___.",
+      "options": [
+        "hasn't",
+        "isn't",
+        "wasn't"
+      ],
+      "answer": "hasn't"
+    },
+    {
+      "question": "Are you a journalist? — No, I ___.",
+      "options": [
+        "am not",
+        "don't",
+        "isn't"
+      ],
+      "answer": "am not"
+    },
+    {
+      "question": "Were you at the museum? — Yes, I ___.",
+      "options": [
+        "was",
+        "were",
+        "am"
+      ],
+      "answer": "was"
+    },
+    {
+      "question": "Is the film being broadcast now? — Yes, it ___.",
+      "options": [
+        "is",
+        "was",
+        "does"
+      ],
+      "answer": "is"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "ps9_dragon_question",
+  "title": "❓ Дракон: задай вопрос",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Выбери правильный общий вопрос к предложению о карнавале дракона.",
+  "items": [
+    {
+      "question": "Chinese Dragon Carnival is one of the most impressive celebrations in the world.",
+      "options": [
+        "Is Chinese Dragon Carnival one of the most impressive celebrations in the world?",
+        "Does Chinese Dragon Carnival is one of the most impressive celebrations?",
+        "Are Chinese Dragon Carnival one of the most impressive celebrations?"
+      ],
+      "answer": "Is Chinese Dragon Carnival one of the most impressive celebrations in the world?"
+    },
+    {
+      "question": "It takes place every year.",
+      "options": [
+        "Does it take place every year?",
+        "Do it take place every year?",
+        "Is it take place every year?"
+      ],
+      "answer": "Does it take place every year?"
+    },
+    {
+      "question": "Huge dragon figures move through the streets.",
+      "options": [
+        "Do huge dragon figures move through the streets?",
+        "Does huge dragon figures move through the streets?",
+        "Are huge dragon figures move through the streets?"
+      ],
+      "answer": "Do huge dragon figures move through the streets?"
+    },
+    {
+      "question": "People celebrate this event with great excitement.",
+      "options": [
+        "Do people celebrate this event with great excitement?",
+        "Does people celebrate this event with great excitement?",
+        "Are people celebrate this event?"
+      ],
+      "answer": "Do people celebrate this event with great excitement?"
+    },
+    {
+      "question": "Performers wear traditional clothes.",
+      "options": [
+        "Do performers wear traditional clothes?",
+        "Does performers wear traditional clothes?",
+        "Is performers wear traditional clothes?"
+      ],
+      "answer": "Do performers wear traditional clothes?"
+    },
+    {
+      "question": "The dragon symbol is very important in Chinese culture.",
+      "options": [
+        "Is the dragon symbol very important in Chinese culture?",
+        "Does the dragon symbol is very important?",
+        "Are the dragon symbol very important?"
+      ],
+      "answer": "Is the dragon symbol very important in Chinese culture?"
+    },
+    {
+      "question": "The parade fills the city with energy and happiness.",
+      "options": [
+        "Does the parade fill the city with energy and happiness?",
+        "Do the parade fill the city with energy?",
+        "Is the parade fill the city with energy?"
+      ],
+      "answer": "Does the parade fill the city with energy and happiness?"
+    },
+    {
+      "question": "Families, children and tourists watch it with admiration.",
+      "options": [
+        "Do families, children and tourists watch it with admiration?",
+        "Does families watch it with admiration?",
+        "Are families watch it with admiration?"
+      ],
+      "answer": "Do families, children and tourists watch it with admiration?"
+    },
+    {
+      "question": "The combination of colours makes the carnival look magnificent.",
+      "options": [
+        "Does the combination of colours make the carnival look magnificent?",
+        "Do the combination of colours make the carnival look magnificent?",
+        "Is the combination make the carnival look magnificent?"
+      ],
+      "answer": "Does the combination of colours make the carnival look magnificent?"
+    },
+    {
+      "question": "The Chinese Dragon Carnival is more than just a festival.",
+      "options": [
+        "Is the Chinese Dragon Carnival more than just a festival?",
+        "Does the Chinese Dragon Carnival is more than a festival?",
+        "Are the Chinese Dragon Carnival more than a festival?"
+      ],
+      "answer": "Is the Chinese Dragon Carnival more than just a festival?"
+    }
+  ]
+}

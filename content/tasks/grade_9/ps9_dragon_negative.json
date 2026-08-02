@@ -1,0 +1,59 @@
+{
+  "id": "ps9_dragon_negative",
+  "title": "🚫 Дракон: отрицания",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Поставь глагол в отрицательную форму Present Simple.",
+  "items": [
+    {
+      "sentence": "Chinese Dragon Carnival ___ a small event.",
+      "answer": "isn't",
+      "hint": "be (негатив)"
+    },
+    {
+      "sentence": "It ___ place only once a year.",
+      "answer": "doesn't take",
+      "hint": "take"
+    },
+    {
+      "sentence": "People ___ it quietly.",
+      "answer": "don't celebrate",
+      "hint": "celebrate"
+    },
+    {
+      "sentence": "Performers ___ ordinary clothes.",
+      "answer": "don't wear",
+      "hint": "wear"
+    },
+    {
+      "sentence": "The dragon symbol ___ unimportant.",
+      "answer": "isn't",
+      "hint": "be (негатив)"
+    },
+    {
+      "sentence": "The parade ___ the city with silence.",
+      "answer": "doesn't fill",
+      "hint": "fill"
+    },
+    {
+      "sentence": "Families ___ it with boredom.",
+      "answer": "don't watch",
+      "hint": "watch"
+    },
+    {
+      "sentence": "The combination of colours ___ the carnival look dull.",
+      "answer": "doesn't make",
+      "hint": "make"
+    },
+    {
+      "sentence": "The Chinese Dragon Carnival ___ a boring festival.",
+      "answer": "isn't",
+      "hint": "be (негатив)"
+    },
+    {
+      "sentence": "It ___ a bad experience for tourists.",
+      "answer": "isn't",
+      "hint": "be (негатив)"
+    }
+  ]
+}

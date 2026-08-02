@@ -1,0 +1,131 @@
+{
+  "id": "pc7_two_worlds",
+  "title": "⚖️ Два мира: обычно и сейчас",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "description": "Соедини привычку (Present Simple) с тем, что происходит прямо сейчас (Present Continuous). Перетащи первую часть к подходящей второй!",
+  "columns": [
+    {
+      "id": "w1",
+      "label": "but today I am flying."
+    },
+    {
+      "id": "w2",
+      "label": "but now we are watching a comedy."
+    },
+    {
+      "id": "w3",
+      "label": "but at the moment she is writing her own."
+    },
+    {
+      "id": "w4",
+      "label": "but today he is staying at home."
+    },
+    {
+      "id": "w5",
+      "label": "but now they are playing basketball."
+    },
+    {
+      "id": "w6",
+      "label": "but now it is barking at the postman."
+    },
+    {
+      "id": "w7",
+      "label": "but now you are playing computer games."
+    },
+    {
+      "id": "w8",
+      "label": "but today I am drinking coffee."
+    },
+    {
+      "id": "w9",
+      "label": "but now we are taking a test."
+    },
+    {
+      "id": "w10",
+      "label": "but today he is walking."
+    },
+    {
+      "id": "w11",
+      "label": "but now she is ordering a pizza."
+    },
+    {
+      "id": "w12",
+      "label": "but now they are swimming in the sea."
+    },
+    {
+      "id": "w13",
+      "label": "but now I am reading an e-book."
+    },
+    {
+      "id": "w14",
+      "label": "but now we are sitting in the park."
+    },
+    {
+      "id": "w15",
+      "label": "but now it is sleeping on the sofa."
+    }
+  ],
+  "items": [
+    {
+      "verb": "I usually travel by train",
+      "answer": "w1"
+    },
+    {
+      "verb": "We usually watch the news",
+      "answer": "w2"
+    },
+    {
+      "verb": "She usually reads blogs",
+      "answer": "w3"
+    },
+    {
+      "verb": "He usually goes to school",
+      "answer": "w4"
+    },
+    {
+      "verb": "They usually play football",
+      "answer": "w5"
+    },
+    {
+      "verb": "My dog usually sleeps",
+      "answer": "w6"
+    },
+    {
+      "verb": "You usually do homework",
+      "answer": "w7"
+    },
+    {
+      "verb": "I usually drink tea",
+      "answer": "w8"
+    },
+    {
+      "verb": "We usually study English",
+      "answer": "w9"
+    },
+    {
+      "verb": "He usually drives a car",
+      "answer": "w10"
+    },
+    {
+      "verb": "She usually cooks dinner",
+      "answer": "w11"
+    },
+    {
+      "verb": "They usually swim in the pool",
+      "answer": "w12"
+    },
+    {
+      "verb": "I usually read paper books",
+      "answer": "w13"
+    },
+    {
+      "verb": "We usually sit in the classroom",
+      "answer": "w14"
+    },
+    {
+      "verb": "The cat usually climbs trees",
+      "answer": "w15"
+    }
+  ]
+}

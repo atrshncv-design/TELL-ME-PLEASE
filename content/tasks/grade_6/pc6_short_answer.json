@@ -1,0 +1,129 @@
+{
+  "id": "pc6_short_answer",
+  "title": "🗣️ Короткий ответ: am / is / are",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Мгновенно выбери правильный короткий ответ. Ловушка: вариант с do/does!",
+  "items": [
+    {
+      "question": "Are you hungry?",
+      "options": [
+        "Yes, I am",
+        "Yes, I do"
+      ],
+      "answer": "Yes, I am"
+    },
+    {
+      "question": "Is your sister good at Maths?",
+      "options": [
+        "Yes, she is",
+        "Yes, she does"
+      ],
+      "answer": "Yes, she is"
+    },
+    {
+      "question": "Are the trainers under the bed?",
+      "options": [
+        "No, they aren't",
+        "No, they don't"
+      ],
+      "answer": "No, they aren't"
+    },
+    {
+      "question": "Is your favorite food pasta?",
+      "options": [
+        "Yes, it is",
+        "Yes, it does"
+      ],
+      "answer": "Yes, it is"
+    },
+    {
+      "question": "Are we in the 6th grade?",
+      "options": [
+        "Yes, we are",
+        "Yes, we do"
+      ],
+      "answer": "Yes, we are"
+    },
+    {
+      "question": "Are the curtains red?",
+      "options": [
+        "Yes, they are",
+        "Yes, they do"
+      ],
+      "answer": "Yes, they are"
+    },
+    {
+      "question": "Is he interested in sports?",
+      "options": [
+        "No, he isn't",
+        "No, he doesn't"
+      ],
+      "answer": "No, he isn't"
+    },
+    {
+      "question": "Is the sink in the bathroom?",
+      "options": [
+        "Yes, it is",
+        "Yes, it does"
+      ],
+      "answer": "Yes, it is"
+    },
+    {
+      "question": "Are they from Canada?",
+      "options": [
+        "Yes, they are",
+        "Yes, they do"
+      ],
+      "answer": "Yes, they are"
+    },
+    {
+      "question": "Are you late for school?",
+      "options": [
+        "No, I am not",
+        "No, I don't"
+      ],
+      "answer": "No, I am not"
+    },
+    {
+      "question": "Is the weather sunny today?",
+      "options": [
+        "Yes, it is",
+        "Yes, it does"
+      ],
+      "answer": "Yes, it is"
+    },
+    {
+      "question": "Are you thirsty?",
+      "options": [
+        "Yes, I am",
+        "Yes, I do"
+      ],
+      "answer": "Yes, I am"
+    },
+    {
+      "question": "Is the apple in the bowl?",
+      "options": [
+        "No, it isn't",
+        "No, it doesn't"
+      ],
+      "answer": "No, it isn't"
+    },
+    {
+      "question": "Are you ready for the test?",
+      "options": [
+        "Yes, we are",
+        "Yes, we do"
+      ],
+      "answer": "Yes, we are"
+    },
+    {
+      "question": "Is London a beautiful city?",
+      "options": [
+        "Yes, it is",
+        "Yes, it does"
+      ],
+      "answer": "Yes, it is"
+    }
+  ]
+}

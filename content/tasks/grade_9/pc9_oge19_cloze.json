@@ -1,0 +1,89 @@
+{
+  "id": "pc9_oge19_cloze",
+  "title": "📝 Задание 19 ОГЭ: тренажёр",
+  "category": "grammar",
+  "type": "cloze",
+  "description": "Имитация экзаменационного текста: раскрой скобки, выбрав между Simple, Continuous и Stative.",
+  "text": "Hi! My name ___ Max. I usually ___ to school, but today I ___ at home because I feel sick. My mum ___ from home today too. Right now, she ___ soup. I ___ on the sofa. I ___ a great book about ecology these days. It says the climate ___ fast. People ___ down too many trees. My brother ___ the lights on, and it drives me crazy! I ___ we must save energy. Tomorrow, I ___ the doctor. We ___ at 3 PM. I ___ to get well soon. What ___ you doing this weekend?",
+  "answers": [
+    [
+      "is"
+    ],
+    [
+      "go"
+    ],
+    [
+      "am staying"
+    ],
+    [
+      "is working"
+    ],
+    [
+      "is making"
+    ],
+    [
+      "am lying"
+    ],
+    [
+      "am reading"
+    ],
+    [
+      "is changing"
+    ],
+    [
+      "are cutting"
+    ],
+    [
+      "is always leaving"
+    ],
+    [
+      "think"
+    ],
+    [
+      "am visiting"
+    ],
+    [
+      "are meeting"
+    ],
+    [
+      "want"
+    ],
+    [
+      "are"
+    ]
+  ],
+  "word_bank": [
+    "is",
+    "go",
+    "am staying",
+    "is working",
+    "is making",
+    "am lying",
+    "am reading",
+    "is changing",
+    "are cutting",
+    "is always leaving",
+    "think",
+    "am visiting",
+    "are meeting",
+    "want",
+    "are"
+  ],
+  "hints": [
+    "(be)",
+    "(go)",
+    "(stay)",
+    "(work)",
+    "(make)",
+    "(lie)",
+    "(read)",
+    "(change)",
+    "(cut)",
+    "(always / leave)",
+    "(think)",
+    "(visit)",
+    "(meet)",
+    "(want)",
+    "(you / do)"
+  ]
+}

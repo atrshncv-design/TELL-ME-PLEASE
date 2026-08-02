@@ -1,0 +1,144 @@
+{
+  "id": "ps8_health_quiz",
+  "title": "🏃‍♂️ ЗОЖ-анкета: Find someone who...",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Найди человека, который это делает! Преврати «Find someone who...» в вопрос с Do you...?",
+  "items": [
+    {
+      "question": "Find someone who (drink) green tea every morning.",
+      "options": [
+        "Do you drink green tea every morning?",
+        "Do you drinks green tea every morning?",
+        "Does you drink green tea every morning?"
+      ],
+      "answer": "Do you drink green tea every morning?"
+    },
+    {
+      "question": "Find someone who (not/eat) sugar.",
+      "options": [
+        "Do you not eat sugar?",
+        "Does you not eat sugar?",
+        "Do you not eats sugar?"
+      ],
+      "answer": "Do you not eat sugar?"
+    },
+    {
+      "question": "Find someone who (go) to the gym three times a week.",
+      "options": [
+        "Do you go to the gym three times a week?",
+        "Do you goes to the gym three times a week?",
+        "Does you go to the gym three times a week?"
+      ],
+      "answer": "Do you go to the gym three times a week?"
+    },
+    {
+      "question": "Find someone who (sleep) more than 8 hours.",
+      "options": [
+        "Do you sleep more than 8 hours?",
+        "Do you sleeps more than 8 hours?",
+        "Does you sleep more than 8 hours?"
+      ],
+      "answer": "Do you sleep more than 8 hours?"
+    },
+    {
+      "question": "Find someone who (take) cold showers.",
+      "options": [
+        "Do you take cold showers?",
+        "Do you takes cold showers?",
+        "Does you take cold showers?"
+      ],
+      "answer": "Do you take cold showers?"
+    },
+    {
+      "question": "Find someone who (not/drink) fizzy drinks.",
+      "options": [
+        "Do you not drink fizzy drinks?",
+        "Does you not drink fizzy drinks?",
+        "Do you not drinks fizzy drinks?"
+      ],
+      "answer": "Do you not drink fizzy drinks?"
+    },
+    {
+      "question": "Find someone who (ride) a bike to school.",
+      "options": [
+        "Do you ride a bike to school?",
+        "Do you rides a bike to school?",
+        "Does you ride a bike to school?"
+      ],
+      "answer": "Do you ride a bike to school?"
+    },
+    {
+      "question": "Find someone who (do) yoga or meditation.",
+      "options": [
+        "Do you do yoga or meditation?",
+        "Do you does yoga or meditation?",
+        "Does you do yoga or meditation?"
+      ],
+      "answer": "Do you do yoga or meditation?"
+    },
+    {
+      "question": "Find someone who (grow) vegetables in the garden.",
+      "options": [
+        "Do you grow vegetables in the garden?",
+        "Do you grows vegetables in the garden?",
+        "Does you grow vegetables in the garden?"
+      ],
+      "answer": "Do you grow vegetables in the garden?"
+    },
+    {
+      "question": "Find someone who (not/eat) fast food at all.",
+      "options": [
+        "Do you not eat fast food at all?",
+        "Does you not eat fast food at all?",
+        "Do you not eats fast food at all?"
+      ],
+      "answer": "Do you not eat fast food at all?"
+    },
+    {
+      "question": "Find someone who (walk) in the park every evening.",
+      "options": [
+        "Do you walk in the park every evening?",
+        "Do you walks in the park every evening?",
+        "Does you walk in the park every evening?"
+      ],
+      "answer": "Do you walk in the park every evening?"
+    },
+    {
+      "question": "Find someone who (play) a team sport.",
+      "options": [
+        "Do you play a team sport?",
+        "Do you plays a team sport?",
+        "Does you play a team sport?"
+      ],
+      "answer": "Do you play a team sport?"
+    },
+    {
+      "question": "Find someone who (drink) a lot of water.",
+      "options": [
+        "Do you drink a lot of water?",
+        "Do you drinks a lot of water?",
+        "Does you drink a lot of water?"
+      ],
+      "answer": "Do you drink a lot of water?"
+    },
+    {
+      "question": "Find someone who (not/spend) hours sitting at the PC.",
+      "options": [
+        "Do you not spend hours sitting at the PC?",
+        "Does you not spend hours sitting at the PC?",
+        "Do you not spends hours sitting at the PC?"
+      ],
+      "answer": "Do you not spend hours sitting at the PC?"
+    },
+    {
+      "question": "Find someone who (read) books before sleeping.",
+      "options": [
+        "Do you read books before sleeping?",
+        "Do you reads books before sleeping?",
+        "Does you read books before sleeping?"
+      ],
+      "answer": "Do you read books before sleeping?"
+    }
+  ]
+}

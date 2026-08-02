@@ -1,0 +1,69 @@
+{
+  "id": "ps7_wh_question",
+  "title": "❓ Специальные вопросы",
+  "category": "grammar",
+  "type": "fill-in",
+  "description": "Вставь do или does в специальный вопрос. Смотри на подлежащее!",
+  "items": [
+    {
+      "sentence": "When ___ your friend go to the sports club?",
+      "answer": "does"
+    },
+    {
+      "sentence": "How often ___ teenagers use social media?",
+      "answer": "do"
+    },
+    {
+      "sentence": "When ___ your sister watch TV?",
+      "answer": "does"
+    },
+    {
+      "sentence": "How often ___ you have English lessons?",
+      "answer": "do"
+    },
+    {
+      "sentence": "When ___ your teacher give you tests?",
+      "answer": "does"
+    },
+    {
+      "sentence": "Where ___ your parents work?",
+      "answer": "do"
+    },
+    {
+      "sentence": "Where ___ you do your homework?",
+      "answer": "do"
+    },
+    {
+      "sentence": "When ___ your classmates play computer games?",
+      "answer": "do"
+    },
+    {
+      "sentence": "Where ___ your cousin live?",
+      "answer": "does"
+    },
+    {
+      "sentence": "How often ___ you visit your grandparents?",
+      "answer": "do"
+    },
+    {
+      "sentence": "Where ___ he study for his exams?",
+      "answer": "does"
+    },
+    {
+      "sentence": "When ___ they go to the cinema?",
+      "answer": "do"
+    },
+    {
+      "sentence": "What ___ your brother play very well?",
+      "answer": "does"
+    },
+    {
+      "sentence": "What ___ you read about music?",
+      "answer": "do"
+    },
+    {
+      "sentence": "When ___ your family have dinner together?",
+      "answer": "does"
+    }
+  ]
+}

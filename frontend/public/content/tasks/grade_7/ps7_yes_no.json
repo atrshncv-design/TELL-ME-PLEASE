@@ -1,0 +1,129 @@
+{
+  "id": "ps7_yes_no",
+  "title": "❓ Общий вопрос: Does / Do",
+  "category": "grammar",
+  "type": "quiz",
+  "description": "Задай общий вопрос: вставь Does или Do. Смотри на подлежащее!",
+  "items": [
+    {
+      "sentence": "___ your friend go to the sports club after school?",
+      "options": [
+        "Does",
+        "Do"
+      ],
+      "answer": "Does"
+    },
+    {
+      "sentence": "___ teenagers use social media every day?",
+      "options": [
+        "Do",
+        "Does"
+      ],
+      "answer": "Do"
+    },
+    {
+      "sentence": "___ your sister watch TV in the evening?",
+      "options": [
+        "Does",
+        "Do"
+      ],
+      "answer": "Does"
+    },
+    {
+      "sentence": "___ you have English lessons twice a week?",
+      "options": [
+        "Do",
+        "Does"
+      ],
+      "answer": "Do"
+    },
+    {
+      "sentence": "___ your teacher give you tests on Fridays?",
+      "options": [
+        "Does",
+        "Do"
+      ],
+      "answer": "Does"
+    },
+    {
+      "sentence": "___ your parents work in a modern office?",
+      "options": [
+        "Do",
+        "Does"
+      ],
+      "answer": "Do"
+    },
+    {
+      "sentence": "___ you do your homework in your bedroom?",
+      "options": [
+        "Do",
+        "Does"
+      ],
+      "answer": "Do"
+    },
+    {
+      "sentence": "___ your classmates play computer games at the weekend?",
+      "options": [
+        "Do",
+        "Does"
+      ],
+      "answer": "Do"
+    },
+    {
+      "sentence": "___ your cousin live in a big city?",
+      "options": [
+        "Does",
+        "Do"
+      ],
+      "answer": "Does"
+    },
+    {
+      "sentence": "___ you visit your grandparents every month?",
+      "options": [
+        "Do",
+        "Does"
+      ],
+      "answer": "Do"
+    },
+    {
+      "sentence": "___ he study for his exams in the library?",
+      "options": [
+        "Does",
+        "Do"
+      ],
+      "answer": "Does"
+    },
+    {
+      "sentence": "___ they go to the cinema on Saturdays?",
+      "options": [
+        "Do",
+        "Does"
+      ],
+      "answer": "Do"
+    },
+    {
+      "sentence": "___ your brother play the guitar very well?",
+      "options": [
+        "Does",
+        "Do"
+      ],
+      "answer": "Does"
+    },
+    {
+      "sentence": "___ you read magazines about music?",
+      "options": [
+        "Do",
+        "Does"
+      ],
+      "answer": "Do"
+    },
+    {
+      "sentence": "___ your family have dinner together in the evening?",
+      "options": [
+        "Does",
+        "Do"
+      ],
+      "answer": "Does"
+    }
+  ]
+}

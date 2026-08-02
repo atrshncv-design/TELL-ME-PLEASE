@@ -1,0 +1,89 @@
+{
+  "id": "ps8_tobe_tech_cloze",
+  "title": "🌍 Статья о технологиях: to be",
+  "category": "grammar",
+  "type": "cloze",
+  "description": "Прочитай статью. Раскрой скобки: выбери правильную форму to be (Active, Passive или Continuous).",
+  "text": "Technology ___ everywhere today. Right now, a new gadget ___ by engineers in Japan. The internet ___ by billions of people every day. Ten years ago, smartphones ___ very expensive. Now they ___ affordable. Yesterday at 8 PM, I ___ with my friend online. While we ___, a new virus ___ on my computer. Luckily, my files ___ by the antivirus. In the future, robots ___ all the boring jobs. The environment ___ by pollution right now. Action must ___ immediately. A lot of trees ___ down every year. I ___ sure that eco-friendly technologies ___ soon to save our planet.",
+  "answers": [
+    [
+      "is"
+    ],
+    [
+      "is being developed"
+    ],
+    [
+      "is used"
+    ],
+    [
+      "were"
+    ],
+    [
+      "are"
+    ],
+    [
+      "was chatting"
+    ],
+    [
+      "were chatting"
+    ],
+    [
+      "was detected"
+    ],
+    [
+      "were saved"
+    ],
+    [
+      "will do"
+    ],
+    [
+      "is being destroyed"
+    ],
+    [
+      "be taken"
+    ],
+    [
+      "are cut"
+    ],
+    [
+      "am"
+    ],
+    [
+      "will be invented"
+    ]
+  ],
+  "word_bank": [
+    "is",
+    "is being developed",
+    "is used",
+    "were",
+    "are",
+    "was chatting",
+    "were chatting",
+    "was detected",
+    "were saved",
+    "will do",
+    "is being destroyed",
+    "be taken",
+    "are cut",
+    "am",
+    "will be invented"
+  ],
+  "hints": [
+    "(be)",
+    "(develop)",
+    "(use)",
+    "(be)",
+    "(be)",
+    "(chat)",
+    "(chat)",
+    "(detect)",
+    "(save)",
+    "(do)",
+    "(destroy)",
+    "(take)",
+    "(cut)",
+    "(be)",
+    "(invent)"
+  ]
+}

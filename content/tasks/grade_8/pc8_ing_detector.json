@@ -1,0 +1,69 @@
+{
+  "id": "pc8_ing_detector",
+  "title": "🛑 Орфография -ing: найди ошибку",
+  "category": "grammar",
+  "type": "click-mistake",
+  "description": "Кликни на слово с орфографической ошибкой в -ing. Если ошибки нет — нажми «Всё верно!».",
+  "items": [
+    {
+      "text": "The gadget is working perfectly.",
+      "wrong": null
+    },
+    {
+      "text": "She is createing a new website.",
+      "wrong": "createing"
+    },
+    {
+      "text": "They are runing after the thief.",
+      "wrong": "runing"
+    },
+    {
+      "text": "The climate is changeing rapidly.",
+      "wrong": "changeing"
+    },
+    {
+      "text": "He is lieing on the sofa.",
+      "wrong": "lieing"
+    },
+    {
+      "text": "We are swiming in the pool.",
+      "wrong": "swiming"
+    },
+    {
+      "text": "I am dieing of boredom!",
+      "wrong": "dieing"
+    },
+    {
+      "text": "The journalist is broadcastting the news.",
+      "wrong": "broadcastting"
+    },
+    {
+      "text": "She is writeing an article.",
+      "wrong": "writeing"
+    },
+    {
+      "text": "They are chatting online.",
+      "wrong": null
+    },
+    {
+      "text": "He is tieing his shoelaces.",
+      "wrong": "tieing"
+    },
+    {
+      "text": "The factory is polluteing the air.",
+      "wrong": "polluteing"
+    },
+    {
+      "text": "We are agreeing with you.",
+      "wrong": null
+    },
+    {
+      "text": "The student is panicing before the exam.",
+      "wrong": "panicing"
+    },
+    {
+      "text": "The artist is paintting a picture.",
+      "wrong": "paintting"
+    }
+  ]
+}
