@@ -1,12 +1,31 @@
-backend/venv/
-backend/.env
-backend/__pycache__/
-backend/.ruff_cache/
+# Python-бэкенд (устарел — весь бэкенд перенесён в Next.js API Routes)
+backend/
+
+# Локальные окружения и секреты
+frontend/.env.local
+frontend/.env
+.env
+.env.local
+
+# Артефакты ИИ-агентов (не проект)
+.agents/
+.claude/
+.scratch/
+agent/
+docs/agents/
+.mimocode/
+graphify-out/
+
+# macOS
+.DS_Store
+
+# Материалы заказчицы (исходники, не на платформу)
+НОВЫЕ МАТЕРИАЛЫ*/
+
+# node_modules / сборка
 frontend/node_modules/
 frontend/.next/
-frontend/.git/
-frontend/.env.local
-.mimocode/
-backend/data/
+frontend/out/
+
+# данные аналитики (генерируются на проде)
 frontend/data/
-graphify-out/
