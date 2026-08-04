@@ -36,7 +36,10 @@ export function useSpeechRecognition({
     setSupported(true)
 
     const recognition = new SR()
-    recognition.continuous = true
+    // continuous=false: движок сам останавливается после первой фразы
+    // (push-to-talk). С continuous=true Chrome ждёт 10–30 сек до финального
+    // результата — отсюда ощущение «микрофон не работает».
+    recognition.continuous = false
     recognition.interimResults = false
     recognition.lang = "en-US"
 

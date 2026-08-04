@@ -156,6 +156,12 @@ function VoiceChatInner({
   // «connected» = сессия готова, а не сетевое соединение.
   useEffect(() => {
     startSession({ branchId: grade, taskId, taskContext })
+    // Бот здоровается ПЕРВЫМ — отправляем триггер-приветствие, чтобы LLM
+    // ответил стартовой репликой и TTS её озвучил. Без этого пользователь
+    // видит «тишину» (SSE-сессия открыта, но запроса нет) и думает, что
+    // голос отвалился. Триггер — английская фраза-стартер; сервер вернёт
+    // нормальный ответ с done → speak().
+    send("Hi! Please start the conversation and introduce yourself.")
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
