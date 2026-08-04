@@ -4,6 +4,7 @@
   "category": "speaking",
   "type": "fill-in-and-speak",
   "description": "Продолжи подсказку и расскажи сверстнику о своём любимом празднике или семейной традиции",
+  "task_context": "You ARE a 14-15-year-old student from an English-speaking country. You are listening to your friend talk about their favourite festival or family tradition, and you share your own favourite festival too. Talk about celebrations, food, presents and traditions. Stay in character ALWAYS. Speak simple English (B1, 9th grade). Keep answers to 1-2 short sentences. Never break character, never say you are an AI.",
   "sections": [
     {
       "name": "My favourite festival",

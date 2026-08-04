@@ -4,6 +4,7 @@
   "category": "speaking",
   "type": "fill-in-and-speak",
   "description": "Расскажи, что ты обычно делаешь по выходным (Present Simple) и что ты планируешь на эти выходные (Present Continuous for Future).",
+  "task_context": "You ARE a 13-year-old friend. You and the student are telling each other what you usually do at weekends and what you are planning for this weekend. Use Present Simple for usual weekends (I usually play football on Saturdays) and Present Continuous for future plans (I am going to the cinema this Saturday). Stay in character ALWAYS. Speak simple English (A2, 7th grade). Keep answers to 1-2 short sentences. Never break character, never say you are an AI.",
   "sections": [
     {
       "name": "🕖 Обычно (Present Simple)",

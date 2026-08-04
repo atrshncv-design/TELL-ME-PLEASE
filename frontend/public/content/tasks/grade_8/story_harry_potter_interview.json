@@ -4,34 +4,119 @@
   "category": "listening",
   "type": "role-play",
   "description": "Проиграй по ролям интервью журналиста со звездой: распорядок дня, тренировки и свободное время. Реплики появляются на экране по очереди.",
+  "task_context": "You ARE a famous young star: a singer and an actor. A journalist (the student) is interviewing you about your daily routine, training and free time. Answer using Present Simple: you wake up at 10 AM, you work late at night, you train every day. Stay in character ALWAYS. Speak simple English (A2-B1, 8th grade). Keep answers to 1-2 short sentences. Never break character, never say you are an AI.",
   "dialogue": [
-    {"speaker": "journalist", "text": "Hi! Thanks for the interview. Do you wake up early?"},
-    {"speaker": "star", "text": "No, I don't. I usually wake up at 10 AM because I work late at night."},
-    {"speaker": "journalist", "text": "What do you eat for breakfast?"},
-    {"speaker": "star", "text": "I usually eat eggs and toast, and I drink a lot of coffee."},
-    {"speaker": "journalist", "text": "How often do you train?"},
-    {"speaker": "star", "text": "I train five times a week because I want to stay fit."},
-    {"speaker": "journalist", "text": "Do you play any musical instrument?"},
-    {"speaker": "star", "text": "Yes, I do. I play the guitar and I write my own songs."},
-    {"speaker": "journalist", "text": "Who helps you with your work?"},
-    {"speaker": "star", "text": "My manager helps me and my girlfriend edits my videos."},
-    {"speaker": "journalist", "text": "Do you go to parties?"},
-    {"speaker": "star", "text": "Sometimes I do, but I don't like big crowds of people."},
-    {"speaker": "journalist", "text": "What do you do in your free time?"},
-    {"speaker": "star", "text": "I read detective novels and I take my dog for a walk twice a day."},
-    {"speaker": "journalist", "text": "Do you have a pet?"},
-    {"speaker": "star", "text": "Yes, I have a dog. He chews my shoes but I love him."},
-    {"speaker": "journalist", "text": "Do you travel a lot?"},
-    {"speaker": "star", "text": "Yes, I do. I fly to different countries every month."},
-    {"speaker": "journalist", "text": "How do you feel before a concert?"},
-    {"speaker": "star", "text": "I always feel nervous, but when I start to play I feel great."},
-    {"speaker": "journalist", "text": "Do you read reviews about yourself?"},
-    {"speaker": "star", "text": "No, I don't. I don't trust strangers on the Internet."},
-    {"speaker": "journalist", "text": "What do you dream about?"},
-    {"speaker": "star", "text": "I dream of becoming famous all over the world."},
-    {"speaker": "journalist", "text": "Where do you live now?"},
-    {"speaker": "star", "text": "I live in a big house near the sea with my family."},
-    {"speaker": "journalist", "text": "Thanks for the interview and good luck!"},
-    {"speaker": "star", "text": "You're welcome. See you soon!"}
+    {
+      "speaker": "journalist",
+      "text": "Hi! Thanks for the interview. Do you wake up early?"
+    },
+    {
+      "speaker": "star",
+      "text": "No, I don't. I usually wake up at 10 AM because I work late at night."
+    },
+    {
+      "speaker": "journalist",
+      "text": "What do you eat for breakfast?"
+    },
+    {
+      "speaker": "star",
+      "text": "I usually eat eggs and toast, and I drink a lot of coffee."
+    },
+    {
+      "speaker": "journalist",
+      "text": "How often do you train?"
+    },
+    {
+      "speaker": "star",
+      "text": "I train five times a week because I want to stay fit."
+    },
+    {
+      "speaker": "journalist",
+      "text": "Do you play any musical instrument?"
+    },
+    {
+      "speaker": "star",
+      "text": "Yes, I do. I play the guitar and I write my own songs."
+    },
+    {
+      "speaker": "journalist",
+      "text": "Who helps you with your work?"
+    },
+    {
+      "speaker": "star",
+      "text": "My manager helps me and my girlfriend edits my videos."
+    },
+    {
+      "speaker": "journalist",
+      "text": "Do you go to parties?"
+    },
+    {
+      "speaker": "star",
+      "text": "Sometimes I do, but I don't like big crowds of people."
+    },
+    {
+      "speaker": "journalist",
+      "text": "What do you do in your free time?"
+    },
+    {
+      "speaker": "star",
+      "text": "I read detective novels and I take my dog for a walk twice a day."
+    },
+    {
+      "speaker": "journalist",
+      "text": "Do you have a pet?"
+    },
+    {
+      "speaker": "star",
+      "text": "Yes, I have a dog. He chews my shoes but I love him."
+    },
+    {
+      "speaker": "journalist",
+      "text": "Do you travel a lot?"
+    },
+    {
+      "speaker": "star",
+      "text": "Yes, I do. I fly to different countries every month."
+    },
+    {
+      "speaker": "journalist",
+      "text": "How do you feel before a concert?"
+    },
+    {
+      "speaker": "star",
+      "text": "I always feel nervous, but when I start to play I feel great."
+    },
+    {
+      "speaker": "journalist",
+      "text": "Do you read reviews about yourself?"
+    },
+    {
+      "speaker": "star",
+      "text": "No, I don't. I don't trust strangers on the Internet."
+    },
+    {
+      "speaker": "journalist",
+      "text": "What do you dream about?"
+    },
+    {
+      "speaker": "star",
+      "text": "I dream of becoming famous all over the world."
+    },
+    {
+      "speaker": "journalist",
+      "text": "Where do you live now?"
+    },
+    {
+      "speaker": "star",
+      "text": "I live in a big house near the sea with my family."
+    },
+    {
+      "speaker": "journalist",
+      "text": "Thanks for the interview and good luck!"
+    },
+    {
+      "speaker": "star",
+      "text": "You're welcome. See you soon!"
+    }
   ]
 }

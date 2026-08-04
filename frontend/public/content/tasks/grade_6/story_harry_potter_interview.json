@@ -4,23 +4,75 @@
   "category": "listening",
   "type": "role-play",
   "description": "Проиграй по ролям: идеальное утро, день в школе и выходной. Реплики появляются на экране по очереди.",
+  "task_context": "You ARE Harry Potter, an 11-12-year-old student at Hogwarts School of Witchcraft and Wizardry. You are talking with your friends Hermione and Ron about your perfect morning, a school day and the weekend. Talk about Quidditch, your owl Hedwig, magic lessons and your friends. Use Present Simple for your habits. Stay in character ALWAYS. Speak simple English (A1-A2, 6th grade). Keep answers to 1-2 short sentences. Never break character, never say you are an AI.",
   "dialogue": [
-    {"speaker": "harry", "text": "Hermione, what is your perfect morning on a school day?"},
-    {"speaker": "hermione", "text": "Well, I get up early at seven o'clock and read a book in the morning before school."},
-    {"speaker": "ron", "text": "Really? I sleep in the morning and get up at half past seven."},
-    {"speaker": "harry", "text": "I like to play with my owl in the morning and have a big breakfast at eight o'clock."},
-    {"speaker": "hermione", "text": "So, we all want a quiet, happy morning on a school day."},
-    {"speaker": "ron", "text": "Harry, what is your perfect day at Hogwarts?"},
-    {"speaker": "harry", "text": "My perfect day is on Friday. We have Quidditch training in the afternoon and no difficult tests."},
-    {"speaker": "hermione", "text": "My perfect day is on Monday. We have interesting lessons in the morning and I can study a lot."},
-    {"speaker": "ron", "text": "I like it when we have a long break in the afternoon and we can talk at break time."},
-    {"speaker": "harry", "text": "And I want a big dinner at six o'clock in the evening after a good school day."},
-    {"speaker": "hermione", "text": "Yes, a perfect school day is when we learn in the morning and relax in the evening."},
-    {"speaker": "hermione", "text": "What is your perfect day at the weekend, Harry?"},
-    {"speaker": "harry", "text": "My perfect day is on Saturday. I get up late in the morning and play Quidditch in the afternoon."},
-    {"speaker": "ron", "text": "I love Saturday too. I watch films in the evening and eat pizza at dinner time."},
-    {"speaker": "hermione", "text": "I read books in the afternoon and meet my friends at three o'clock."},
-    {"speaker": "harry", "text": "And on Sunday we can all relax in the evening in the common room."},
-    {"speaker": "ron", "text": "Yes, a perfect weekend is on Saturday and on Sunday, when we don't have homework at night."}
+    {
+      "speaker": "harry",
+      "text": "Hermione, what is your perfect morning on a school day?"
+    },
+    {
+      "speaker": "hermione",
+      "text": "Well, I get up early at seven o'clock and read a book in the morning before school."
+    },
+    {
+      "speaker": "ron",
+      "text": "Really? I sleep in the morning and get up at half past seven."
+    },
+    {
+      "speaker": "harry",
+      "text": "I like to play with my owl in the morning and have a big breakfast at eight o'clock."
+    },
+    {
+      "speaker": "hermione",
+      "text": "So, we all want a quiet, happy morning on a school day."
+    },
+    {
+      "speaker": "ron",
+      "text": "Harry, what is your perfect day at Hogwarts?"
+    },
+    {
+      "speaker": "harry",
+      "text": "My perfect day is on Friday. We have Quidditch training in the afternoon and no difficult tests."
+    },
+    {
+      "speaker": "hermione",
+      "text": "My perfect day is on Monday. We have interesting lessons in the morning and I can study a lot."
+    },
+    {
+      "speaker": "ron",
+      "text": "I like it when we have a long break in the afternoon and we can talk at break time."
+    },
+    {
+      "speaker": "harry",
+      "text": "And I want a big dinner at six o'clock in the evening after a good school day."
+    },
+    {
+      "speaker": "hermione",
+      "text": "Yes, a perfect school day is when we learn in the morning and relax in the evening."
+    },
+    {
+      "speaker": "hermione",
+      "text": "What is your perfect day at the weekend, Harry?"
+    },
+    {
+      "speaker": "harry",
+      "text": "My perfect day is on Saturday. I get up late in the morning and play Quidditch in the afternoon."
+    },
+    {
+      "speaker": "ron",
+      "text": "I love Saturday too. I watch films in the evening and eat pizza at dinner time."
+    },
+    {
+      "speaker": "hermione",
+      "text": "I read books in the afternoon and meet my friends at three o'clock."
+    },
+    {
+      "speaker": "harry",
+      "text": "And on Sunday we can all relax in the evening in the common room."
+    },
+    {
+      "speaker": "ron",
+      "text": "Yes, a perfect weekend is on Saturday and on Sunday, when we don't have homework at night."
+    }
   ]
 }
