@@ -5,11 +5,15 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useVerbBot } from "@/components/VerbBot"
 import { useSound } from "@/lib/useSound"
 import { ResultScreen } from "@/components/ResultScreen"
+import { hintFor } from "@/lib/hints"
 
 interface FillItem {
   sentence: string
   answer: string | string[]
   hint?: string
+  // Тикет W1-T3: умная обратная связь — необязательные подсказки из JSON.
+  wrongExplanation?: string
+  explanation?: string
 }
 
 interface FillInTaskProps {
@@ -272,9 +276,17 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
             isCorrect ? "bg-success/10 text-success" : "bg-danger/10 text-danger"
           }`}
         >
-          {isCorrect
-            ? "Правильно!"
-            : `Неверно. Ответ: ${answers.join(" / ")}`}
+          <div>
+            {isCorrect
+              ? "Правильно!"
+              : `Неверно. Ответ: ${answers.join(" / ")}`}
+          </div>
+          {/* Тикет W1-T3: умная обратная связь — подсказка под вердиктом. */}
+          {!isCorrect && (
+            <div className="mt-1 text-sm font-medium text-danger/90">
+              💡 {hintFor("fill-in", item, inputs)}
+            </div>
+          )}
         </motion.div>
       )}
 

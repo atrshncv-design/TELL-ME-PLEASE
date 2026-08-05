@@ -3,6 +3,7 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
+import { pluralTasks } from "@/lib/portal"
 
 /**
  * Verb Bot — floating mascot (decision Q7/Q15b).
@@ -57,6 +58,32 @@ const MOOD_FOR: Record<BotEventType, BotMood> = {
   finish: "cheer",
 }
 
+/**
+ * W1-T2 «Сюжет портала»: реплики бота при росте прогресса (после завершения
+ * задания). Русские, как приветствия миров на карте. {N} подставляется
+ * динамически (сколько заданий осталось до 100%).
+ */
+const PORTAL_PHRASES = [
+  "Портал оживает!",
+  "Отличная работа! Продолжай!",
+  "Портал заряжается — так держать!",
+  "Энергия портала растёт!",
+]
+const PORTAL_COUNTDOWN = (n: number) =>
+  `Ещё ${n} ${pluralTasks(n)} — и откроется следующий мир!`
+/** Когда прогресс дошёл до 100% — бот празднует вместе с оверлеем. */
+const PORTAL_DONE_PHRASES = [
+  "Портал открыт! Вперёд, путешественник! 🎉",
+  "Ты восстановил портал — это было здорово!",
+  "Портал полностью открыт! Ты — легенда!",
+]
+
+/** Событие от карты миров (sections/page.tsx) с числами прогресса. */
+interface PortalProgressDetail {
+  completedCount: number
+  totalTasks: number
+}
+
 interface VerbBotContextValue {
   say: (event: BotEventType) => void
 }
@@ -84,6 +111,14 @@ export function VerbBotProvider({ children }: { children: React.ReactNode }) {
   // everywhere else it stays in the bottom-right corner.
   const isTaskPage = /\/class\/\d+\/sections\/[^/]+\/[^/]+/.test(pathname)
 
+  // Показ реплики с таймером скрытия (общий для say и сюжета портала).
+  const speak = useCallback((text: string, mood: BotMood, duration = 3000) => {
+    setPhrase(text)
+    setMood(mood)
+    if (timerRef.current) clearTimeout(timerRef.current)
+    timerRef.current = setTimeout(() => setPhrase(null), duration)
+  }, [])
+
   const say = useCallback(
     (event: BotEventType) => {
       const options =
@@ -93,12 +128,9 @@ export function VerbBotProvider({ children }: { children: React.ReactNode }) {
             : PRAISE_JUNIOR
           : PHRASES[event]
       const text = options[Math.floor(Math.random() * options.length)]
-      setPhrase(text)
-      setMood(MOOD_FOR[event])
-      if (timerRef.current) clearTimeout(timerRef.current)
-      timerRef.current = setTimeout(() => setPhrase(null), 3000)
+      speak(text, MOOD_FOR[event])
     },
-    [grade],
+    [grade, speak],
   )
 
   // Greet once on mount (after first user interaction so it feels responsive)
@@ -124,6 +156,54 @@ export function VerbBotProvider({ children }: { children: React.ReactNode }) {
       if (timerRef.current) clearTimeout(timerRef.current)
     }
   }, [say])
+
+  // ── W1-T2 «Сюжет портала» ─────────────────────────────────────────────
+  // Карта миров шлёт window-событие verb-bot:portal-progress при каждом
+  // изменении completedCount/totalTasks. Бот сравнивает с последним
+  // значением и комментирует РОСТ (после завершения задания). API
+  // useVerbBot() при этом не меняется.
+  const portalLastRef = useRef<{ grade: string | null; count: number } | null>(null)
+  const gradeKey = grade === null ? null : String(grade)
+
+  // Базовая линия: эффекты дочерней страницы (dispatch события) выполняются
+  // РАНЬШЕ эффектов провайдера, поэтому первый dispatch при загрузке
+  // приложения прямо на карте миров слушатель может пропустить. Базу читаем
+  // сами из localStorage при каждой смене маршрута/класса — без реплики.
+  useEffect(() => {
+    if (grade === null) return
+    let count = 0
+    try {
+      const raw = localStorage.getItem(`tmp_progress_grade_${grade}`)
+      if (raw) count = Object.keys(JSON.parse(raw) as Record<string, unknown>).length
+    } catch {
+      /* ignore malformed / unavailable storage */
+    }
+    portalLastRef.current = { grade: gradeKey, count }
+  }, [grade, gradeKey, pathname])
+
+  useEffect(() => {
+    const onPortalProgress = (e: Event) => {
+      const detail = (e as CustomEvent<PortalProgressDetail>).detail
+      if (!detail || detail.totalTasks <= 0) return
+      const last = portalLastRef.current
+      if (last === null || last.grade !== gradeKey) {
+        // Первый заход на карту или смена класса — только базовая линия.
+        portalLastRef.current = { grade: gradeKey, count: detail.completedCount }
+        return
+      }
+      if (detail.completedCount <= last.count) return
+      portalLastRef.current = { grade: gradeKey, count: detail.completedCount }
+      // Рост прогресса — бот комментирует (mood cheer, чуть дольше таймер).
+      const done = detail.completedCount >= detail.totalTasks
+      const remaining = detail.totalTasks - detail.completedCount
+      const options = done
+        ? PORTAL_DONE_PHRASES
+        : [...PORTAL_PHRASES, PORTAL_COUNTDOWN(remaining)]
+      speak(options[Math.floor(Math.random() * options.length)], "cheer", 3500)
+    }
+    window.addEventListener("verb-bot:portal-progress", onPortalProgress)
+    return () => window.removeEventListener("verb-bot:portal-progress", onPortalProgress)
+  }, [gradeKey, speak])
 
   return (
     <VerbBotContext.Provider value={{ say }}>

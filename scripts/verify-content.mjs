@@ -66,6 +66,8 @@ const files = [
   "ps_check_detector.json",
   "ps_check_unjumble.json",
   "ps_check_family.json",
+  // W1-T4: Choose Your Story (новый тип choose-story, пилот 5 класс)
+  "story_choose_your_story.json",
 ]
 
 // grade_8 tasks (Present Simple / Present Continuous / to be, migrated from customer materials)
@@ -340,8 +342,41 @@ function verifyFile(file, dir) {
       }
     }
 
+    if (task.type === "choose-story") {
+      // W1-T4 Choose Your Story: выборы + шаблоны предложений + scaffold.
+      const arrays = [
+        ["characters", task.characters],
+        ["places", task.places],
+        ["problems", task.problems],
+        ["sentencePatterns", task.sentencePatterns],
+      ]
+      for (const [key, arr] of arrays) {
+        if (!Array.isArray(arr) || arr.length === 0 || !arr.every((s) => typeof s === "string" && s.length > 0)) {
+          console.log(`❌ ${file}: choose-story ${key} must be a non-empty string[]`)
+          errors++
+        }
+      }
+      if (task.scaffold !== "full" && task.scaffold !== "keywords") {
+        console.log(`❌ ${file}: choose-story scaffold must be "full" or "keywords", got: ${JSON.stringify(task.scaffold)}`)
+        errors++
+      }
+      if (Array.isArray(task.sentencePatterns)) {
+        task.sentencePatterns.forEach((p, pi) => {
+          if (typeof p !== "string" || p.trim() === "") {
+            console.log(`❌ ${file}[pattern ${pi}]: pattern must be a non-empty string: ${JSON.stringify(p)}`)
+            errors++
+          }
+        })
+        // Хотя бы один шаблон использует выборы (иначе рассказ не зависит от шага 1).
+        if (!task.sentencePatterns.some((p) => /\{(?:char|place|problem)\}/.test(p))) {
+          console.log(`❌ ${file}: no sentencePattern uses {char}/{place}/{problem}`)
+          errors++
+        }
+      }
+    }
+
     const clozeHasData = task.type === "cloze" && ((task.rounds && task.rounds.length > 0) || task.text)
-    if (items.length === 0 && !clozeHasData && task.type !== "role-play" && task.type !== "voice-chat" && task.type !== "flashcards") {
+    if (items.length === 0 && !clozeHasData && task.type !== "role-play" && task.type !== "voice-chat" && task.type !== "flashcards" && task.type !== "choose-story") {
       console.log(`⚠️ ${file}: no items (type=${task.type})`)
     }
     
@@ -457,8 +492,8 @@ function sanityCheck(label, ok, detail = "") {
 // 4. All files normalize without throwing — the per-file loops above count
 //    this; assert per grade explicitly.
 sanityCheck(
-  "all 57 grade_5 files normalize without throwing",
-  normalizedCount === 57,
+  "all 58 grade_5 files normalize without throwing",
+  normalizedCount === 58,
   `normalizedCount=${normalizedCount}`,
 )
 sanityCheck(
@@ -494,6 +529,8 @@ sanityCheck(
     "click-mistake",
     "flashcards",
     "wheel",
+    // W1-T4: Choose Your Story
+    "choose-story",
   ])
   const offenders = [...seenTypes].filter((t) => !knownTypes.has(t))
   sanityCheck(

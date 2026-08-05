@@ -6,6 +6,7 @@ import { useVerbBot } from "@/components/VerbBot"
 import { useSound } from "@/lib/useSound"
 import { ResultScreen } from "@/components/ResultScreen"
 import { StickerReaction } from "@/components/StickerReaction"
+import { hintFor } from "@/lib/hints"
 
 interface QuizItem {
   question?: string
@@ -13,6 +14,10 @@ interface QuizItem {
   subject?: string
   options: string[]
   answer: string
+  // Тикет W1-T3: умная обратная связь — необязательные подсказки из JSON.
+  wrongExplanation?: string
+  explanation?: string
+  hint?: string
 }
 
 interface QuizTaskProps {
@@ -132,6 +137,12 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
   const canGoBack = current > 0
   // Forward is allowed when this question is checked and a later question exists.
   const canGoForward = showResult && current < items.length - 1
+  // Тикет W1-T3: умная обратная связь — подсказка под вердиктом неверного
+  // ответа (wrongExplanation из JSON или фолбэк по типу задания).
+  const wrongHint =
+    showResult && selected !== null && selected !== item.answer
+      ? hintFor("quiz", item, selected)
+      : null
 
   return (
     <div className="flex flex-col gap-4 p-4 max-w-lg mx-auto">
@@ -263,6 +274,20 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
           )
         })}
       </div>
+
+      {/* Тикет W1-T3: подсказка под вердиктом неверного ответа (danger-soft). */}
+      <AnimatePresence>
+        {wrongHint && (
+          <motion.div
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="mt-3 rounded-2xl bg-danger/10 px-4 py-3 text-center text-base font-semibold text-danger"
+          >
+            💡 {wrongHint}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* CTA: «Проверить» (только когда вариант выбран) → после вердикта «Далее». */}
       <div className="mt-1">

@@ -114,6 +114,13 @@ export interface TaskData {
   cards?: FlashcardItem[];
   /** voice-chat: системный промпт-роль из контента (тикет P6, «Спроси учителя»). */
   task_context?: string;
+  // choose-story (тикет W1-T4): выбор героя/места/проблемы → рассказ по схеме.
+  scaffold?: "full" | "keywords";
+  characters?: string[];
+  places?: string[];
+  problems?: string[];
+  sentencePatterns?: string[];
+  keywords?: string[];
 }
 
 /** Одно предложение задания «Кликни на ошибку» (click-mistake). */
@@ -127,4 +134,17 @@ export interface ClickMistakeItem {
 /** «Кликни на ошибку»: найди и кликни неверное слово (или подтверди, что всё верно). */
 export interface ClickMistakeTask extends TaskData {
   items: ClickMistakeItem[];
+}
+
+/** Choose Your Story (W1-T4): выбор героя/места/проблемы → рассказ по схеме. */
+export interface ChooseStoryData {
+  /** "full" = готовые начала предложений (select-ы), "keywords" = свободный ввод. */
+  scaffold: "full" | "keywords";
+  characters: string[];
+  places: string[];
+  problems: string[];
+  /** Шаблоны предложений с плейсхолдерами {char}/{place}/{problem}. */
+  sentencePatterns: string[];
+  /** Ключевые слова для scaffold="keywords" (показываются как подсказка). */
+  keywords?: string[];
 }

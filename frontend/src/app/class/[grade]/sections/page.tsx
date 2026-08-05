@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation"
 import { motion } from "framer-motion"
 import { useProgress } from "@/lib/useProgress"
 import { useAnalytics } from "@/lib/useAnalytics"
+import { portalPercent, portalOpenedKey } from "@/lib/portal"
 import { WorldIcon } from "@/components/WorldIcon"
 import { TaskIcon } from "@/components/icons/task-icons"
 import { Confetti } from "@/components/Confetti"
@@ -240,8 +241,14 @@ export default function SectionsPage() {
   // graded exercises. Contains songs/videos for self-study.
   const [links, setLinks] = useState<UsefulLink[] | null>(null)
 
+  // W1-T2 «Сюжет портала»: финальная сцена «Портал открыт!» показывается
+  // один раз на класс (флаг в localStorage, формат tmp_portal_grade_N_opened).
+  const [showPortalCelebration, setShowPortalCelebration] = useState(false)
+
   // Per-grade client-side progress (localStorage, no backend — decision Q8).
-  const { progress, completedCount, totalStars, perfectCount } = useProgress(grade)
+  // W1-T1: две валюты — ⚡ Energy (не-голосовые) и 🗣 Communication
+  // (голосовые); totalStars переименован в energyTotal.
+  const { progress, completedCount, energyTotal, commTotal, perfectCount } = useProgress(grade)
 
   const { track } = useAnalytics()
   useEffect(() => {
@@ -287,6 +294,42 @@ export default function SectionsPage() {
 
   const totalTasks = sections ? sections.reduce((sum, s) => sum + s.tasks.length, 0) : 0
 
+  // W1-T2: % восстановления портала (completedCount / total × 100, 0..100).
+  const portalPct = portalPercent(completedCount, totalTasks)
+
+  // W1-T2: сообщаем Verb Bot о прогрессе портала (реплики при росте).
+  // Событие шлём при каждом изменении счётчиков — бот сравнивает с
+  // последним значением и комментирует только РОСТ после завершения задания.
+  useEffect(() => {
+    if (totalTasks <= 0) return
+    window.dispatchEvent(
+      new CustomEvent("verb-bot:portal-progress", {
+        detail: { completedCount, totalTasks },
+      })
+    )
+  }, [completedCount, totalTasks])
+
+  // W1-T2: финальная сцена — оверлей «Портал открыт!» при 100% класса.
+  // Показывается один раз на класс (флаг в localStorage).
+  useEffect(() => {
+    if (totalTasks <= 0 || completedCount < totalTasks) return
+    try {
+      if (localStorage.getItem(portalOpenedKey(grade))) return
+      setShowPortalCelebration(true)
+    } catch {
+      /* ignore unavailable storage */
+    }
+  }, [completedCount, totalTasks, grade])
+
+  const closePortalCelebration = () => {
+    try {
+      localStorage.setItem(portalOpenedKey(grade), "1")
+    } catch {
+      /* ignore unavailable storage */
+    }
+    setShowPortalCelebration(false)
+  }
+
   // The "current" island = first not-yet-completed task in map order
   // (decision Q12: Verb Bot stands on the current island).
   const currentKey = sections ? findCurrentTaskId(sections, progress) : null
@@ -309,15 +352,42 @@ export default function SectionsPage() {
           <span className="rounded-full border border-slate-100 bg-white/80 px-3 py-1.5 text-slate-600 shadow-soft">
             Пройдено {completedCount} из {totalTasks}
           </span>
-          {/* ⭐ total = sum of best scores (decision Q13). Цифры — Unbounded
+          {/* ⚡ energy = сумма лучших результатов за не-голосовые задания
+              (тикет W1-T1; старое ⭐ перечитывается как ⚡). Цифры — Unbounded
               (реш. 8: «2–3 места на экран» — XP-цифры как раз такое место). */}
           <span className="rounded-full border border-listening-200 bg-listening-100 px-3 py-1.5 text-listening-800 shadow-soft">
-            <span className="font-display-alt font-bold">⭐ {totalStars}</span>
+            <span className="font-display-alt font-bold">⚡ {energyTotal}</span>
+          </span>
+          {/* 🗣 comm = сумма лучших результатов за голосовые задания (W1-T1). */}
+          <span className="rounded-full border border-speaking-200 bg-speaking-100 px-3 py-1.5 text-speaking-800 shadow-soft">
+            <span className="font-display-alt font-bold">🗣 {commTotal}</span>
           </span>
           {/* 💎 per perfect task (decision Q13). */}
           <span className="rounded-full border border-vocabulary-200 bg-vocabulary-100 px-3 py-1.5 text-vocabulary-800 shadow-soft">
             <span className="font-display-alt font-bold">💎 {perfectCount}</span>
           </span>
+          {/* W1-T2 «Сюжет портала»: индикатор восстановления портала —
+              completedCount / total заданий класса × 100. Полоса — токены
+              primary-*, скругление rounded-2xl; встаёт отдельной строкой
+              (w-full в flex-wrap), карту миров не перекрывает. */}
+          {totalTasks > 0 && (
+            <div className="w-full rounded-2xl border border-primary-200 bg-white/80 px-3 py-2 shadow-soft">
+              <div className="mb-1 flex items-center justify-between gap-2 text-sm font-bold">
+                <span className="text-primary-800">Портал восстановлен на {portalPct}%</span>
+                <span className="text-xs font-semibold text-primary-500">
+                  {completedCount}/{totalTasks}
+                </span>
+              </div>
+              <div className="h-3 w-full overflow-hidden rounded-full bg-primary-100">
+                <motion.div
+                  className="h-full rounded-full bg-gradient-to-r from-primary-400 to-primary-600"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${portalPct}%` }}
+                  transition={{ type: "spring", stiffness: 120, damping: 20 }}
+                />
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -501,6 +571,31 @@ export default function SectionsPage() {
             </motion.div>
           )
         })}
+
+      {/* W1-T2 «Сюжет портала»: финальная сцена при 100% класса — оверлей
+          «Портал открыт!» + конфетти (переиспользуем Confetti). Показывается
+          один раз на класс: флаг tmp_portal_grade_N_opened в localStorage,
+          кнопка «Продолжить» закрывает. */}
+      {showPortalCelebration && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-primary-900/60 p-4 backdrop-blur-sm">
+          <div className="relative w-full max-w-sm overflow-hidden rounded-3xl bg-white px-6 py-8 text-center shadow-2xl">
+            <Confetti count={40} />
+            <div className="relative mb-2 text-6xl">🎉</div>
+            <h2 className="font-display relative text-3xl font-extrabold text-primary-900">
+              Портал открыт!
+            </h2>
+            <p className="relative mt-2 text-sm text-slate-500">
+              Ты восстановил портал — теперь можно путешествовать по мирам времени!
+            </p>
+            <button
+              onClick={closePortalCelebration}
+              className="relative mt-5 min-h-[44px] rounded-2xl bg-primary-600 px-6 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
+            >
+              Продолжить
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Finish flag when the whole map is completed. */}
       {sections && totalTasks > 0 && completedCount === totalTasks && (

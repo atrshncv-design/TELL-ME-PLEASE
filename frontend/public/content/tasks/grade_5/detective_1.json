@@ -1,0 +1,89 @@
+{
+  "id": "detective_1",
+  "title": "🕵️ Grammar Detective",
+  "category": "grammar",
+  "type": "click-mistake",
+  "description": "Найди ошибку, исправь её, выбери правило и задай вопрос к предложению.",
+  "items": [
+    {
+      "text": "He playing football now.",
+      "wrong": "playing",
+      "wrongExplanation": "После He нужен помощник is: He is playing football now.",
+      "fixOptions": [
+        {"text": "He is playing football now.", "correct": true},
+        {"text": "He plays football now.", "correct": false},
+        {"text": "He are playing football now.", "correct": false}
+      ],
+      "explanations": [
+        {"text": "Present Continuous: am/is/are + глагол с -ing.", "correct": true},
+        {"text": "Present Simple: глагол с -s.", "correct": false},
+        {"text": "Past Simple: глагол с -ed.", "correct": false}
+      ],
+      "questions": [
+        {"text": "Is he playing football now?", "correct": true},
+        {"text": "Does he playing football now?", "correct": false},
+        {"text": "Do he play football now?", "correct": false}
+      ]
+    },
+    {
+      "text": "She read a book at the moment.",
+      "wrong": "read",
+      "wrongExplanation": "at the moment — это Present Continuous: She is reading a book.",
+      "fixOptions": [
+        {"text": "She is reading a book at the moment.", "correct": true},
+        {"text": "She reads a book at the moment.", "correct": false},
+        {"text": "She are reading a book at the moment.", "correct": false}
+      ],
+      "explanations": [
+        {"text": "Present Continuous: am/is/are + глагол с -ing.", "correct": true},
+        {"text": "Present Simple: глагол с -s.", "correct": false},
+        {"text": "После She всегда нужен does.", "correct": false}
+      ],
+      "questions": [
+        {"text": "Is she reading a book at the moment?", "correct": true},
+        {"text": "Does she reading a book at the moment?", "correct": false},
+        {"text": "Do she read a book at the moment?", "correct": false}
+      ]
+    },
+    {
+      "text": "We watches TV every evening.",
+      "wrong": "watches",
+      "wrongExplanation": "С We глагол без -s: We watch TV every evening.",
+      "fixOptions": [
+        {"text": "We watch TV every evening.", "correct": true},
+        {"text": "We watches TV every evening.", "correct": false},
+        {"text": "We are watching TV every evening.", "correct": false}
+      ],
+      "explanations": [
+        {"text": "Present Simple с I/you/we/they: глагол без -s.", "correct": true},
+        {"text": "Present Simple с he/she/it: глагол с -s.", "correct": false},
+        {"text": "Present Continuous: am/is/are + -ing.", "correct": false}
+      ],
+      "questions": [
+        {"text": "Do we watch TV every evening?", "correct": true},
+        {"text": "Does we watch TV every evening?", "correct": false},
+        {"text": "Are we watch TV every evening?", "correct": false}
+      ]
+    },
+    {
+      "text": "I am go to school every morning.",
+      "wrong": "go",
+      "wrongExplanation": "every morning — это Present Simple: I go to school.",
+      "fixOptions": [
+        {"text": "I go to school every morning.", "correct": true},
+        {"text": "I am go to school every morning.", "correct": false},
+        {"text": "I goes to school every morning.", "correct": false}
+      ],
+      "explanations": [
+        {"text": "Present Simple с I: глагол без -s, am не нужен.", "correct": true},
+        {"text": "Present Continuous: I am + глагол с -ing.", "correct": false},
+        {"text": "С I нужен does.", "correct": false}
+      ],
+      "questions": [
+        {"text": "Do I go to school every morning?", "correct": true},
+        {"text": "Does I go to school every morning?", "correct": false},
+        {"text": "Am I go to school every morning?", "correct": false}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "story_choose_your_story",
+  "title": "Выбери свою историю",
+  "description": "Придумай героя, место и проблему — и построй свою историю на английском!",
+  "category": "speaking",
+  "type": "choose-story",
+  "scaffold": "full",
+  "characters": [
+    "a gamer",
+    "a detective",
+    "a pirate"
+  ],
+  "places": [
+    "an old castle",
+    "a space station",
+    "a deep forest"
+  ],
+  "problems": [
+    "a lost phone",
+    "a secret door",
+    "a broken robot"
+  ],
+  "sentencePatterns": [
+    "Yesterday, {char} went to {place}.",
+    "He was looking for {problem}.",
+    "Tomorrow, he will ask for help."
+  ],
+  "keywords": [
+    "yesterday",
+    "went",
+    "was looking for",
+    "tomorrow",
+    "will"
+  ]
+}

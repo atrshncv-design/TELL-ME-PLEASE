@@ -11,6 +11,7 @@ import { ClozeTextTask } from "@/components/tasks/ClozeTextTask"
 import { ClickMistakeTask } from "@/components/tasks/ClickMistakeTask"
 import { FlashcardsTask } from "@/components/tasks/FlashcardsTask"
 import { WheelTask } from "@/components/tasks/WheelTask"
+import { ChooseStoryTask } from "@/components/tasks/ChooseStoryTask"
 import { TaskHeader } from "@/components/tasks/TaskHeader"
 import { RulesPanel } from "@/components/RulesPanel"
 import { useProgress } from "@/lib/useProgress"
@@ -43,6 +44,13 @@ interface TaskData {
   cards?: { front: string; back: string }[]
   // voice-chat: системный промпт-роль из контента (тикет P6, «Спроси учителя»)
   task_context?: string
+  // choose-story (тикет W1-T4): выбор героя/места/проблемы → рассказ по схеме
+  scaffold?: "full" | "keywords"
+  characters?: string[]
+  places?: string[]
+  problems?: string[]
+  sentencePatterns?: string[]
+  keywords?: string[]
 }
 
 function serializeContext(task: TaskData): string {
@@ -95,7 +103,9 @@ export function TaskRenderer({ task, grade }: { task: TaskData; grade: string })
   // is persisted to localStorage and surfaced as badges on the section cards.
   // Also fires the task_completed analytics event (closes the funnel).
   const onScored = (score: number, total: number) => {
-    saveTask(task.id, score, total)
+    // W1-T1: передаём task.type — saveTask классифицирует валюту награды
+    // (🗣 для SPEAKING_TASK_TYPES, иначе ⚡). Choose-story → 🗣.
+    saveTask(task.id, score, total, task.type)
     track({ event_type: "task_completed", grade: Number(grade), task_id: task.id, score })
   }
 
@@ -118,6 +128,8 @@ export function TaskRenderer({ task, grade }: { task: TaskData; grade: string })
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><WheelTask title={task.title} description={task.description} items={task.items || []} /></div>
     case "ladder":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><LadderTask title={task.title} description={task.description} ladders={task.ladders || []} onComplete={onScored} /></div>
+    case "choose-story":
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><ChooseStoryTask title={task.title} description={task.description} scaffold={task.scaffold || "full"} characters={task.characters || []} places={task.places || []} problems={task.problems || []} sentencePatterns={task.sentencePatterns || []} keywords={task.keywords || []} onComplete={onScored} /></div>
     case "role-play":
     case "voice-chat":
     case "fill-in-and-speak":
