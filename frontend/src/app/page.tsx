@@ -54,7 +54,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.4, type: "spring", stiffness: 300, damping: 18 }}
           >
-            Hi! I&apos;m Verb Bot! 🤖
+            Hi! I&apos;m a Verb Bot! 🤖
           </motion.div>
           <motion.img
             src="/mascot/happy.jpg"
@@ -69,18 +69,18 @@ export default function Home() {
           variants={item}
           className="font-display-alt text-5xl font-black leading-[1.05] tracking-tight text-primary-900 text-balance"
         >
-          Tell Me Please
+          time travel mission
         </motion.h1>
 
         <motion.p variants={item} className="max-w-sm text-lg font-medium text-slate-600">
-          Учи английский — играя! Задания, миры и Verb Bot ждут тебя.
+          Учи английский — играя!
         </motion.p>
 
         <motion.button
           variants={item}
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.03 }}
-          onClick={() => router.push("/class")}
+          onClick={() => router.push("/mission")}
           className="mt-2 min-h-[56px] rounded-2xl bg-primary-600 px-10 py-4 text-lg font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
         >
           Начать играть →

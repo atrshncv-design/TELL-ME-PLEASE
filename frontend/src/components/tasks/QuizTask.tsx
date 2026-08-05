@@ -34,8 +34,6 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
   const { play } = useSound()
   // Read-only review history, indexed by question number.
   const [history, setHistory] = useState<{ selected: string | null; showResult: boolean }[]>([])
-  // True while the auto-advance timeout is pending — disables navigation.
-  const [transitioning, setTransitioning] = useState(false)
   // Тикет 05: стикер-реакция на последний ответ (+XP-вспышка). Ключ = номер
   // вопроса, чтобы AnimatePresence перезапускал анимацию на каждом ответе.
   const [reaction, setReaction] = useState<{ key: number; correct: boolean } | null>(null)
@@ -59,11 +57,19 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
 
   const display = item.question || item.sentence || item.subject || ""
 
+  // Клик по варианту только ВЫБИРАЕТ ответ (highlight) — проверка отложена до
+  // кнопки «Проверить». Повторный клик по другому варианту меняет выбор.
   const handleSelect = (option: string) => {
     if (showResult) return
     setSelected(option)
-    setShowResult(true)
-    const correct = option === item.answer
+  }
+
+  // «Проверить»: вердикт (подсветка правильного/неправильного), звук, say,
+  // стикер-реакция; ответ сохраняется в историю для read-only review.
+  // Авто-перехода больше нет — дальше ученик идёт кнопкой «Далее».
+  const handleCheck = () => {
+    if (showResult || selected === null) return
+    const correct = selected === item.answer
     if (correct) setScore((s) => s + 1)
     say(correct ? "correct" : "wrong")
     play(correct ? "correct" : "wrong")
@@ -73,32 +79,35 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
     // Persist this answer for read-only review.
     setHistory((prev) => {
       const next = [...prev]
-      next[current] = { selected: option, showResult: true }
+      next[current] = { selected, showResult: true }
       return next
     })
+    setShowResult(true)
+  }
 
-    setTransitioning(true)
-    setTimeout(() => {
-      setTransitioning(false)
-      if (current + 1 < items.length) {
-        setCurrent((c) => c + 1)
-        // Restore any previously-saved state for the next question, or reset.
-        const nextEntry = history[current + 1]
-        setSelected(nextEntry ? nextEntry.selected : null)
-        setShowResult(nextEntry ? nextEntry.showResult : false)
-      } else {
-        setFinished(true)
-        onComplete?.(correct ? score + 1 : score, items.length)
-        say("finish")
-        play("fanfare")
-      }
-    }, 1200)
+  // «Далее»: переход к следующему вопросу без авто-таймера (или ResultScreen
+  // в конце — onComplete(score, total) вызывается ровно один раз).
+  const advance = () => {
+    setReaction(null)
+    if (current + 1 < items.length) {
+      const nextIndex = current + 1
+      setCurrent(nextIndex)
+      // Restore any previously-saved state for the next question, or reset.
+      const nextEntry = history[nextIndex]
+      setSelected(nextEntry ? nextEntry.selected : null)
+      setShowResult(nextEntry ? nextEntry.showResult : false)
+    } else {
+      setFinished(true)
+      onComplete?.(score, items.length)
+      say("finish")
+      play("fanfare")
+    }
   }
 
   // Read-only navigation: jump to a question index and restore its saved state.
   const goTo = (index: number) => {
-    if (transitioning) return
     setCurrent(index)
+    setReaction(null)
     const entry = history[index]
     setSelected(entry ? entry.selected : null)
     setShowResult(entry ? entry.showResult : false)
@@ -120,9 +129,9 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
     )
   }
 
-  const canGoBack = current > 0 && !transitioning
-  // Forward is allowed when this question is answered and a later question exists.
-  const canGoForward = showResult && current < items.length - 1 && !transitioning
+  const canGoBack = current > 0
+  // Forward is allowed when this question is checked and a later question exists.
+  const canGoForward = showResult && current < items.length - 1
 
   return (
     <div className="flex flex-col gap-4 p-4 max-w-lg mx-auto">
@@ -179,9 +188,9 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
       <div className="relative grid grid-cols-2 gap-3">
         {/* Тикет 05: стикер-реакция на последний ответ — по центру поверх
             кнопок, улетает и тает (~1.3с). Правило «один на экран»: рендерится
-            только сразу после ответа, пока идёт автопереход. */}
+            только сразу после «Проверить» на текущем вопросе. */}
         <AnimatePresence>
-          {reaction && (
+          {reaction && reaction.key === current && (
             <StickerReaction
               key={reaction.key}
               id={reaction.correct ? "fire" : "oops"}
@@ -201,6 +210,10 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
           } else if (showResult && isSelected && !isCorrect) {
             bg = "bg-danger/10 border-2 border-danger"
             chip = "bg-danger text-white"
+          } else if (!showResult && isSelected) {
+            // Выбранный вариант подсвечивается до нажатия «Проверить».
+            bg = "bg-primary-100 border-2 border-primary-600"
+            chip = "bg-primary-600 text-white"
           }
 
           return (
@@ -249,6 +262,29 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
             </motion.button>
           )
         })}
+      </div>
+
+      {/* CTA: «Проверить» (только когда вариант выбран) → после вердикта «Далее». */}
+      <div className="mt-1">
+        {!showResult ? (
+          selected !== null && (
+            <motion.button
+              whileTap={{ scale: 0.97 }}
+              onClick={handleCheck}
+              className="w-full min-h-[44px] rounded-2xl bg-primary-600 px-6 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
+            >
+              Проверить
+            </motion.button>
+          )
+        ) : (
+          <motion.button
+            whileTap={{ scale: 0.97 }}
+            onClick={advance}
+            className="w-full min-h-[44px] rounded-2xl bg-primary-600 px-6 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
+          >
+            Далее
+          </motion.button>
+        )}
       </div>
     </div>
   )

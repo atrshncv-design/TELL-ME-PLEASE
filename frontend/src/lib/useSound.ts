@@ -14,6 +14,15 @@ import { useCallback, useEffect, useRef } from "react"
 
 export type SoundName = "correct" | "wrong" | "fanfare"
 
+/** localStorage key for the global sound toggle (see SoundToggle.tsx). */
+export const SOUND_STORAGE_KEY = "tmp-sound-enabled"
+
+/** True when sound effects are enabled. Default = enabled (no stored value). */
+export function isSoundEnabled(): boolean {
+  if (typeof window === "undefined") return true
+  return window.localStorage.getItem(SOUND_STORAGE_KEY) !== "false"
+}
+
 const FILES: Record<SoundName, string> = {
   correct: "/sounds/correct.wav",
   wrong: "/sounds/wrong.wav",
@@ -26,6 +35,9 @@ export function useSound() {
   useEffect(() => {
     const warm = () => {
       if (audioRef.current) return
+      // Skip pre-warming while sound is disabled; the play() path lazily
+      // creates the elements once sound is re-enabled, so nothing breaks.
+      if (!isSoundEnabled()) return
       audioRef.current = {
         correct: new Audio(FILES.correct),
         wrong: new Audio(FILES.wrong),
@@ -42,6 +54,9 @@ export function useSound() {
   }, [])
 
   const play = useCallback((name: SoundName) => {
+    // Global toggle: no sound at all while disabled (checked per call so a
+    // mid-session toggle takes effect immediately).
+    if (!isSoundEnabled()) return
     // Lazily create on first play in case no pointerdown happened yet
     // (e.g. keyboard-only flow). play() may be rejected until a gesture —
     // that's fine, the catch below swallows it.

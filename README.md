@@ -1,4 +1,4 @@
-# Tell Me Please
+# time travel mission
 
 Интерактивная платформа для изучения английского языка учащимися 5-9 классов с AI-аватаром для голосового общения.
 
@@ -85,7 +85,7 @@ npm run dev
 ## Структура проекта
 
 ```
-TELL ME PLEASE/
+time travel mission/
 ├── backend/
 │   ├── app/
 │   │   ├── main.py              # FastAPI + WebSocket + Sentence Buffer

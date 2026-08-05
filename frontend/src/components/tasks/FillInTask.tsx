@@ -30,8 +30,6 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
   const [history, setHistory] = useState<
     { inputs: string[]; showResult: boolean; isCorrect: boolean }[]
   >([])
-  // True while the auto-advance timeout is pending — disables navigation.
-  const [transitioning, setTransitioning] = useState(false)
   const { say } = useVerbBot()
   const { play } = useSound()
 
@@ -55,8 +53,19 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
   const parts = item.sentence.split("___")
   const answers = Array.isArray(item.answer) ? item.answer : [item.answer]
   const blankCount = parts.length - 1
+  // «Проверить» доступно, когда заполнены все пропуски.
+  const allFilled =
+    blankCount === 0 ||
+    Array.from({ length: blankCount }, (_, i) => (inputs[i] ?? "").trim()).every(
+      Boolean
+    )
+
+  // Вердикт по конкретному пропуску: зелёный (верно) или красный (неверно).
+  const blankCorrect = (i: number) =>
+    (inputs[i] ?? "").trim().toLowerCase() === (answers[i] ?? "").toLowerCase()
 
   const updateInput = (index: number, value: string) => {
+    if (showResult) return
     setInputs((prev) => {
       const next = [...prev]
       next[index] = value
@@ -64,7 +73,11 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
     })
   }
 
-  const handleSubmit = () => {
+  // «Проверить»: вердикт (зелёные/красные пропуски), звук, say; ответ
+  // сохраняется в историю для read-only review. Авто-перехода больше нет —
+  // дальше ученик идёт кнопкой «Далее».
+  const handleCheck = () => {
+    if (showResult) return
     const correct = answers.every(
       (ans, i) => (inputs[i] ?? "").trim().toLowerCase() === ans.toLowerCase()
     )
@@ -80,34 +93,39 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
       next[current] = { inputs: [...inputs], showResult: true, isCorrect: correct }
       return next
     })
+  }
 
-    setTransitioning(true)
-    setTimeout(() => {
-      setTransitioning(false)
-      if (current + 1 < items.length) {
-        setCurrent((c) => c + 1)
-        // Restore any previously-saved state for the next question, or reset.
-        const nextEntry = history[current + 1]
-        if (nextEntry) {
-          setInputs(nextEntry.inputs)
-          setShowResult(nextEntry.showResult)
-          setIsCorrect(nextEntry.isCorrect)
-        } else {
-          setInputs(Array.from({ length: Math.max(blankCount, 1) }, () => ""))
-          setShowResult(false)
-        }
+  // «Далее»: переход к следующему предложению без авто-таймера (или
+  // ResultScreen в конце — onComplete(score, total) вызывается ровно один раз).
+  const advance = () => {
+    if (current + 1 < items.length) {
+      const nextIndex = current + 1
+      setCurrent(nextIndex)
+      // Restore any previously-saved state for the next question, or reset.
+      const nextEntry = history[nextIndex]
+      if (nextEntry) {
+        setInputs(nextEntry.inputs)
+        setShowResult(nextEntry.showResult)
+        setIsCorrect(nextEntry.isCorrect)
       } else {
-        setFinished(true)
-        onComplete?.(correct ? score + 1 : score, items.length)
-        say("finish")
-        play("fanfare")
+        const nextItem = items[nextIndex]
+        const nextBlanks = nextItem
+          ? Math.max(nextItem.sentence.split("___").length - 1, 1)
+          : 1
+        setInputs(Array.from({ length: nextBlanks }, () => ""))
+        setShowResult(false)
+        setIsCorrect(false)
       }
-    }, 1500)
+    } else {
+      setFinished(true)
+      onComplete?.(score, items.length)
+      say("finish")
+      play("fanfare")
+    }
   }
 
   // Read-only navigation: jump to a question index and restore its saved state.
   const goTo = (index: number) => {
-    if (transitioning) return
     setCurrent(index)
     const entry = history[index]
     if (entry) {
@@ -116,30 +134,35 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
       setIsCorrect(entry.isCorrect)
     } else {
       // Should not happen (we only navigate to answered questions), but be safe.
-      setInputs(Array.from({ length: Math.max(blankCount, 1) }, () => ""))
+      const it = items[index]
+      const blanks = it ? Math.max(it.sentence.split("___").length - 1, 1) : 1
+      setInputs(Array.from({ length: blanks }, () => ""))
       setShowResult(false)
+      setIsCorrect(false)
     }
   }
 
   const retry = () => {
+    const firstItem = items[0]
+    const firstBlanks = firstItem
+      ? Math.max(firstItem.sentence.split("___").length - 1, 1)
+      : 1
     setCurrent(0)
     setScore(0)
-    const firstParts = items[0]?.sentence.split("___") ?? []
-    setInputs(Array.from({ length: Math.max(firstParts.length - 1, 1) }, () => ""))
+    setInputs(Array.from({ length: firstBlanks }, () => ""))
     setShowResult(false)
     setIsCorrect(false)
     setFinished(false)
     setHistory([])
-    setTransitioning(false)
   }
 
   if (finished) {
     return <ResultScreen title={title} score={score} total={items.length} onRetry={retry} />
   }
 
-  const canGoBack = current > 0 && !transitioning
-  // Forward is allowed when this question is answered and a later question exists.
-  const canGoForward = showResult && current < items.length - 1 && !transitioning
+  const canGoBack = current > 0
+  // Forward is allowed when this question is checked and a later question exists.
+  const canGoForward = showResult && current < items.length - 1
 
   return (
     <div className="flex flex-col gap-4 p-4 max-w-lg mx-auto">
@@ -150,7 +173,7 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
         {canGoBack ? (
           <button
             onClick={() => goTo(current - 1)}
-            className="text-sm text-slate-500 hover:text-slate-700"
+            className="min-h-[44px] text-sm text-slate-500 hover:text-slate-700"
           >
             ← Назад
           </button>
@@ -163,7 +186,7 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
         {canGoForward ? (
           <button
             onClick={() => goTo(current + 1)}
-            className="text-sm text-slate-500 hover:text-slate-700"
+            className="min-h-[44px] text-sm text-slate-500 hover:text-slate-700"
           >
             Вперёд →
           </button>
@@ -191,7 +214,15 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
               <span key={i}>
                 {part}
                 {i < blankCount && (
-                  <span className="inline-block min-w-[80px] border-b-2 border-indigo-400 mx-1 text-indigo-600 font-semibold">
+                  <span
+                    className={`inline-block min-w-[80px] border-b-2 mx-1 font-semibold rounded px-1 ${
+                      showResult
+                        ? blankCorrect(i)
+                          ? "border-success bg-success/10 text-success"
+                          : "border-danger bg-danger/10 text-danger"
+                        : "border-indigo-400 text-indigo-600"
+                    }`}
+                  >
                     {showResult ? (answers[i] ?? "?") : " ? "}
                   </span>
                 )}
@@ -210,32 +241,51 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
               type="text"
               value={inputs[i] ?? ""}
               onChange={(e) => updateInput(i, e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && i === blankCount - 1 && handleSubmit()}
+              onKeyDown={(e) =>
+                e.key === "Enter" &&
+                i === blankCount - 1 &&
+                allFilled &&
+                handleCheck()
+              }
               placeholder={`Пропуск ${i + 1}...`}
               className="flex-1 px-4 py-3 text-lg rounded-xl border-2 border-indigo-200 focus:border-indigo-500 outline-none text-center min-h-[52px]"
               autoFocus={i === 0}
             />
           ))}
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            onClick={handleSubmit}
-            className="px-6 py-2 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700"
-          >
-            OK
-          </motion.button>
+          {/* CTA: «Проверить» (только когда все пропуски заполнены) → после
+              вердикта «Далее». */}
+          {allFilled && (
+            <motion.button
+              whileTap={{ scale: 0.97 }}
+              onClick={handleCheck}
+              className="w-full min-h-[44px] rounded-2xl bg-primary-600 px-6 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
+            >
+              Проверить
+            </motion.button>
+          )}
         </div>
       ) : (
         <motion.div
           initial={{ scale: 0.8 }}
           animate={{ scale: 1 }}
           className={`text-center py-3 rounded-xl text-lg font-semibold ${
-            isCorrect ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
+            isCorrect ? "bg-success/10 text-success" : "bg-danger/10 text-danger"
           }`}
         >
           {isCorrect
             ? "Правильно!"
             : `Неверно. Ответ: ${answers.join(" / ")}`}
         </motion.div>
+      )}
+
+      {showResult && (
+        <motion.button
+          whileTap={{ scale: 0.97 }}
+          onClick={advance}
+          className="w-full min-h-[44px] rounded-2xl bg-primary-600 px-6 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
+        >
+          Далее
+        </motion.button>
       )}
     </div>
   )

@@ -1,6 +1,6 @@
 ---
 version: alpha
-name: Tell Me Please — Bright Kids Palette
+name: time travel mission — Bright Kids Palette
 description: >-
   Яркая детская палитра платформы английского для 5–9 классов: сочный
   индиго-синий primary + 5 миров-акцентов (grammar, to-be, vocabulary,
@@ -231,11 +231,11 @@ components:
     backgroundColor: "{colors.grammar-400}"
 ---
 
-# Tell Me Please — Bright Kids Palette
+# time travel mission — Bright Kids Palette
 
 ## Overview
 
-TELL ME PLEASE — интерактивная платформа английского для детей 5–9 классов.
+time travel mission — интерактивная платформа английского для детей 5–9 классов.
 Дизайн-система построена вокруг **яркой, сочной, «мультяшной» палитры**:
 один сильный основной цвет (индиго-синий) для действий и заголовков + пять
 «миров»-акцентов, каждый из которых кодирует категорию заданий на карте миров:

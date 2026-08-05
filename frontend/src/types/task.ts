@@ -1,4 +1,4 @@
-/** Unified data contracts for TELL ME PLEASE task JSON files. */
+/** Unified data contracts for time travel mission task JSON files. */
 
 export interface QuizItem {
   question?: string;

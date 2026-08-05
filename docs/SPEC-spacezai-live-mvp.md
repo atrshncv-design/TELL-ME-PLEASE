@@ -1,4 +1,4 @@
-# SPEC: TELL ME PLEASE — Живой MVP на space.z-ai
+# SPEC: time travel mission — Живой MVP на space.z-ai
 
 _Спецификация фазы 2 (autopilot, to-spec). Синтез grilling-интервью (14 вопросов, 31.07) + преемственность с `docs/SPEC.md` (фаза 1, 5 класс)._
 

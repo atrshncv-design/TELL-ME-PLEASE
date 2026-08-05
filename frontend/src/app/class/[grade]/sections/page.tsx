@@ -293,6 +293,13 @@ export default function SectionsPage() {
 
   return (
     <div className="flex flex-col items-center px-4 py-8 max-w-2xl mx-auto">
+      {/* Кнопка «← Назад» — обратно к выбору класса (стиль TaskHeader). */}
+      <button
+        onClick={() => router.push("/class")}
+        className="mb-4 flex min-h-[44px] min-w-[44px] items-center justify-center self-start rounded-2xl bg-primary-100 px-3 py-2 text-base font-bold text-primary-700 transition-colors hover:bg-primary-200"
+      >
+        ← Назад
+      </button>
       <h1 className="font-display mb-1 text-3xl font-extrabold tracking-tight text-primary-900">
         {grade} класс
       </h1>

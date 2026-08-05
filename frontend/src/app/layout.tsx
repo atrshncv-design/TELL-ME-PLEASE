@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { Nunito, Nunito_Sans, Unbounded } from "next/font/google"
 import "./globals.css"
 import { VerbBotProvider } from "@/components/VerbBot"
+import { SoundToggle } from "@/components/SoundToggle"
 
 // Playful rounded pairing (design/opendesign): Nunito for display/headings,
 // Nunito Sans for body. Both ship full Cyrillic — the whole UI is in Russian.
@@ -26,7 +27,7 @@ const unbounded = Unbounded({
 })
 
 export const metadata: Metadata = {
-  title: "Tell Me Please",
+  title: "time travel mission",
   description: "Интерактивная платформа для изучения английского языка",
 }
 
@@ -46,6 +47,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ru" className={`${nunito.variable} ${nunitoSans.variable} ${unbounded.variable} h-full`}>
       <body className="min-h-full bg-gradient-to-br from-primary-100 via-sky-50 to-listening-100 font-sans antialiased">
         <VerbBotProvider>{children}</VerbBotProvider>
+        {/* Global sound toggle — fixed top-right corner (VerbBot is bottom). */}
+        <SoundToggle />
       </body>
     </html>
   )

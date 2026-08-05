@@ -20,7 +20,7 @@ export const runtime = "nodejs"
 export const dynamic = "force-dynamic"
 
 export const metadata = {
-  title: "Админка — Tell Me Please",
+  title: "Админка — time travel mission",
   robots: { index: false, follow: false },
 }
 

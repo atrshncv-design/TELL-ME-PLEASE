@@ -43,7 +43,7 @@ const PRAISE_SENIOR = [
 ]
 
 const PHRASES: Record<Exclude<BotEventType, "correct">, string[]> = {
-  greet: ["Hi! I'm Verb Bot! 🤖", "Welcome! Let's learn verbs!"],
+  greet: ["Hi! I'm a Verb Bot! 🤖", "Welcome! Let's learn verbs!"],
   start: ["Let's go! 🚀", "Scan the verb! 🔍", "Ready? Let's do it!"],
   wrong: ["Try again! 💪", "Almost! Keep going!", "Not quite — check the form!"],
   finish: ["Ready for the next level? 🏆", "Awesome work! 🌟", "You're a verb hero! 🦸"],
@@ -77,6 +77,12 @@ export function VerbBotProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const gradeMatch = pathname.match(/\/class\/(\d+)/)
   const grade = gradeMatch ? Number(gradeMatch[1]) : null
+
+  // Task page = /class/<grade>/sections/<section>/<taskId> (two segments after
+  // sections — the world map .../sections alone must NOT match).
+  // On task pages the bot sits bottom-center so it never covers answer buttons;
+  // everywhere else it stays in the bottom-right corner.
+  const isTaskPage = /\/class\/\d+\/sections\/[^/]+\/[^/]+/.test(pathname)
 
   const say = useCallback(
     (event: BotEventType) => {
@@ -122,14 +128,30 @@ export function VerbBotProvider({ children }: { children: React.ReactNode }) {
   return (
     <VerbBotContext.Provider value={{ say }}>
       {children}
-      <VerbBotFloating phrase={phrase} mood={mood} />
+      <VerbBotFloating
+        phrase={phrase}
+        mood={mood}
+        position={isTaskPage ? "bottom-center" : "bottom-right"}
+      />
     </VerbBotContext.Provider>
   )
 }
 
-function VerbBotFloating({ phrase, mood }: { phrase: string | null; mood: BotMood }) {
+function VerbBotFloating({
+  phrase,
+  mood,
+  position,
+}: {
+  phrase: string | null
+  mood: BotMood
+  position: "bottom-right" | "bottom-center"
+}) {
+  const containerClass =
+    position === "bottom-center"
+      ? "fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-2 pointer-events-none"
+      : "fixed bottom-4 right-4 z-50 flex flex-col items-end gap-2 pointer-events-none"
   return (
-    <div className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-2 pointer-events-none">
+    <div className={containerClass}>
       <AnimatePresence>
         {phrase && (
           <motion.div

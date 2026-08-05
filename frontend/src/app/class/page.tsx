@@ -91,7 +91,15 @@ export default function ClassPage() {
   }, [])
 
   return (
-    <div className="flex flex-1 flex-col items-center justify-center px-4 py-12">
+    <div className="flex flex-1 flex-col px-4 py-12">
+      {/* Кнопка «← Назад» — на лендинг (стиль TaskHeader). */}
+      <button
+        onClick={() => router.push("/")}
+        className="mb-6 flex min-h-[44px] min-w-[44px] items-center justify-center self-start rounded-2xl bg-primary-100 px-3 py-2 text-base font-bold text-primary-700 transition-colors hover:bg-primary-200"
+      >
+        ← Назад
+      </button>
+      <div className="flex flex-1 flex-col items-center justify-center">
       <h1 className="font-display mb-2 text-3xl font-extrabold tracking-tight text-primary-900">
         Выбери свой класс
       </h1>
@@ -133,6 +141,7 @@ export default function ClassPage() {
           })}
         </motion.div>
       )}
+      </div>
     </div>
   )
 }
