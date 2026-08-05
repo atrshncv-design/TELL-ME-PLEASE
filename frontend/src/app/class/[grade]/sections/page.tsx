@@ -6,6 +6,13 @@ import { motion } from "framer-motion"
 import { useProgress } from "@/lib/useProgress"
 import { useAnalytics } from "@/lib/useAnalytics"
 import { portalPercent, portalOpenedKey } from "@/lib/portal"
+import {
+  ACHIEVEMENTS,
+  achievementsKey,
+  checkAchievements,
+  getAchievements,
+  type UnlockedAchievement,
+} from "@/lib/achievements"
 import { WorldIcon } from "@/components/WorldIcon"
 import { TaskIcon } from "@/components/icons/task-icons"
 import { Confetti } from "@/components/Confetti"
@@ -245,6 +252,11 @@ export default function SectionsPage() {
   // один раз на класс (флаг в localStorage, формат tmp_portal_grade_N_opened).
   const [showPortalCelebration, setShowPortalCelebration] = useState(false)
 
+  // W3-T4 «Достижения»: разблокированные (localStorage tmp_achievements_grade_N)
+  // + id достижения для короткого тоста о новой разблокировке.
+  const [unlocked, setUnlocked] = useState<UnlockedAchievement[]>([])
+  const [toastAch, setToastAch] = useState<string | null>(null)
+
   // Per-grade client-side progress (localStorage, no backend — decision Q8).
   // W1-T1: две валюты — ⚡ Energy (не-голосовые) и 🗣 Communication
   // (голосовые); totalStars переименован в energyTotal.
@@ -330,6 +342,39 @@ export default function SectionsPage() {
     setShowPortalCelebration(false)
   }
 
+  // W3-T4 «Достижения»: гидрация разблокированных из localStorage.
+  useEffect(() => {
+    setUnlocked(getAchievements(grade))
+  }, [grade])
+
+  // W3-T4: сверяем достижения при каждом изменении прогресса (завершил
+  // задание → вернулся на карту): маппинг taskId → тип из index.json,
+  // чистый checkAchievements находит новые → пишем в localStorage + тост.
+  useEffect(() => {
+    if (!sections) return
+    const typeById: Record<string, string> = {}
+    for (const s of sections) {
+      for (const t of s.tasks) typeById[t.id] = t.type
+    }
+    const fresh = getAchievements(grade)
+    const news = checkAchievements(progress, typeById, fresh)
+    if (news.length === 0) return
+    try {
+      localStorage.setItem(achievementsKey(grade), JSON.stringify([...fresh, ...news]))
+    } catch {
+      /* ignore unavailable storage */
+    }
+    setUnlocked([...fresh, ...news])
+    setToastAch(news[0].id)
+  }, [progress, sections, grade])
+
+  // W3-T4: короткий тост о новом достижении (4 с, потом сам скрывается).
+  useEffect(() => {
+    if (!toastAch) return
+    const t = setTimeout(() => setToastAch(null), 4000)
+    return () => clearTimeout(t)
+  }, [toastAch])
+
   // The "current" island = first not-yet-completed task in map order
   // (decision Q12: Verb Bot stands on the current island).
   const currentKey = sections ? findCurrentTaskId(sections, progress) : null
@@ -388,6 +433,33 @@ export default function SectionsPage() {
               </div>
             </div>
           )}
+          {/* W3-T4 «Достижения»: ряд значков под счётчиками ⚡/🗣/💎 —
+              разблокированные подсвечены (цветной кружок), заблокированные —
+              серые (grayscale + opacity), подпись «title — условие» в title. */}
+          <div className="w-full rounded-2xl border border-amber-200 bg-white/80 px-3 py-2 shadow-soft">
+            <div className="mb-1.5 flex items-center justify-between gap-2 text-sm font-bold">
+              <span className="text-amber-700">Достижения</span>
+            </div>
+            <div className="flex items-center justify-center gap-3">
+              {ACHIEVEMENTS.map((a) => {
+                const isUnlocked = unlocked.some((u) => u.id === a.id)
+                return (
+                  <div
+                    key={a.id}
+                    title={`${a.title} — ${a.description}`}
+                    aria-label={`${a.title} — ${a.description}`}
+                    className={`flex h-11 w-11 items-center justify-center rounded-2xl border-2 text-xl transition-colors ${
+                      isUnlocked
+                        ? "border-amber-300 bg-amber-100 shadow-soft"
+                        : "border-slate-200 bg-slate-100 opacity-50 grayscale"
+                    }`}
+                  >
+                    {a.emoji}
+                  </div>
+                )
+              })}
+            </div>
+          </div>
         </div>
       )}
 
@@ -595,6 +667,23 @@ export default function SectionsPage() {
             </button>
           </div>
         </div>
+      )}
+
+      {/* W3-T4: тост о новом достижении (упрощённо — подсветка + баннер,
+          без реплики Verb Bot; сам скрывается через 4 с). */}
+      {toastAch && (
+        <motion.div
+          initial={{ opacity: 0, y: 16, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          className="fixed bottom-24 left-1/2 z-50 w-max max-w-[85vw] -translate-x-1/2 rounded-2xl border-2 border-amber-300 bg-white px-4 py-3 text-center shadow-2xl"
+          role="status"
+        >
+          <div className="text-2xl">🏆</div>
+          <div className="text-sm font-extrabold text-amber-700">Новое достижение!</div>
+          <div className="text-xs font-semibold text-slate-600">
+            {ACHIEVEMENTS.find((a) => a.id === toastAch)?.title}
+          </div>
+        </motion.div>
       )}
 
       {/* Finish flag when the whole map is completed. */}

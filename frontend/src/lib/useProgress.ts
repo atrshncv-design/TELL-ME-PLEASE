@@ -22,6 +22,9 @@ export const SPEAKING_TASK_TYPES: readonly string[] = [
   // Тикет W2-T2: Survival Island — ученик говорит от лица команды по 5
   // категориям (речевая механика) → награда 🗣.
   "survival-island",
+  // Тикет W3-T3: Boss Battle — финальная битва с Grammar Boss. Финал речевой
+  // по духу («планируем школьную поездку»), решение тикета: весь тип → 🗣.
+  "boss-battle",
 ]
 
 export interface TaskProgress {

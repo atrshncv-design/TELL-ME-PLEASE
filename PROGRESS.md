@@ -17,9 +17,9 @@
 | 09 | W2-T3 Build a Chat | ✅ done |
 | 10 | W2-T4 Escape Room | ✅ done |
 | 11 | W2-T5 Верификация волны 2 + коммит | ✅ done (смоук пройден, коммит готов) |
-| 12 | W3-T1 Grammar Minecraft | pending |
-| 13 | W3-T2 Grammar Battle | pending |
-| 14 | W3-T3 Boss Battle | pending |
-| 15 | W3-T4 Структура уровня + достижения | pending |
-| 16 | W3-T5 Раздел «Мемы» | pending |
-| 17 | W3-T6 Регресс + коммит + финальный отчёт | pending |
+| 12 | W3-T1 Grammar Minecraft | ✅ done |
+| 13 | W3-T2 Grammar Battle | ✅ done |
+| 14 | W3-T3 Boss Battle | ✅ done |
+| 15 | W3-T4 Структура уровня + достижения | ✅ done |
+| 16 | W3-T5 Раздел «Мемы» | ✅ done |
+| 17 | W3-T6 Регресс + коммит + финальный отчёт | ✅ done (регресс пройден, коммит готов) |

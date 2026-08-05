@@ -8,6 +8,7 @@ import { ResultScreen } from "@/components/ResultScreen"
 import { StickerReaction } from "@/components/StickerReaction"
 import { hintFor } from "@/lib/hints"
 import { useSpeechRecognition } from "@/lib/useSpeechRecognition"
+import { LevelFlow, LEVEL_FLOW_STEPS } from "./LevelFlow"
 
 /**
  * Grammar Escape Room (тикет W2-T4) — новый тип задания "escape-room".
@@ -69,6 +70,11 @@ interface EscapeRoomTaskProps {
   description: string
   stations: EscapeRoomStation[]
   onComplete?: (score: number, total: number) => void
+  /** W3-T4: показывать лесенку этапов уровня (поле levelFlow: true в JSON).
+   *  Пока TaskRenderer не передаёт проп (параллельный батч boss-battle),
+   *  undefined = показывать: пилот escape_room_1 уже помечен в контенте;
+   *  после проводки пропа undefined начнёт означать «скрыто». */
+  levelFlow?: boolean
 }
 
 const LETTERS = ["A", "B", "C", "D"]
@@ -142,7 +148,7 @@ export function checkStationAnswer(
   }
 }
 
-export function EscapeRoomTask({ title, description, stations, onComplete }: EscapeRoomTaskProps) {
+export function EscapeRoomTask({ title, description, stations, onComplete, levelFlow }: EscapeRoomTaskProps) {
   const { say } = useVerbBot()
   const { play } = useSound()
   const [current, setCurrent] = useState(0)
@@ -538,6 +544,19 @@ export function EscapeRoomTask({ title, description, stations, onComplete }: Esc
           )
         })}
       </div>
+
+      {/* W3-T4 «Структура уровня»: лесенка этапов (levelFlow: true в JSON).
+          Заполняется по мере прохождения станций: пройденные станции = этапы,
+          финальный вердикт открывает «Награду» (последний этап). */}
+      {levelFlow !== false && (
+        <LevelFlow
+          currentStep={
+            finalPhase
+              ? LEVEL_FLOW_STEPS.length
+              : Math.min(current + (checked ? 1 : 0), stations.length)
+          }
+        />
+      )}
 
       {/* Финальный вердикт N из 5 → «Далее» → ResultScreen */}
       <AnimatePresence mode="wait">

@@ -1,0 +1,43 @@
+{
+  "id": "minecraft_blocks_1",
+  "title": "🧱 Grammar Minecraft",
+  "category": "grammar",
+  "type": "build-sentence",
+  "description": "Собери предложение из блоков-карточек, а потом перестрой его в другом времени!",
+  "blocksMode": true,
+  "blocks": [
+    {
+      "tense": "present",
+      "label": "Present Simple",
+      "blocks": [
+        { "category": "subject", "word": "They" },
+        { "category": "verb", "word": "watch" },
+        { "category": "object", "word": "a film" },
+        { "category": "place", "word": "at home" }
+      ]
+    },
+    {
+      "tense": "past",
+      "label": "Past Simple",
+      "blocks": [
+        { "category": "subject", "word": "They" },
+        { "category": "verb", "word": "watched" },
+        { "category": "object", "word": "a film" },
+        { "category": "place", "word": "at home" },
+        { "category": "time", "word": "yesterday" }
+      ]
+    },
+    {
+      "tense": "future",
+      "label": "Future Simple",
+      "blocks": [
+        { "category": "subject", "word": "They" },
+        { "category": "auxiliary", "word": "will" },
+        { "category": "verb", "word": "watch" },
+        { "category": "object", "word": "a film" },
+        { "category": "place", "word": "at home" },
+        { "category": "time", "word": "tomorrow" }
+      ]
+    }
+  ]
+}

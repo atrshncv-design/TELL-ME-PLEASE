@@ -1,0 +1,30 @@
+{
+  "id": "grammar_battle_1",
+  "title": "Grammar Battle",
+  "description": "Собери предложение из слов-плиток быстрее, чем истечёт время! Три раунда: утверждение, отрицание и вопрос.",
+  "category": "grammar",
+  "type": "grammar-battle",
+  "rounds": [
+    {
+      "stimulus": "play / now",
+      "mode": "positive",
+      "words": ["We", "play", "now"],
+      "answer": "We play now",
+      "timeSec": 20
+    },
+    {
+      "stimulus": "like / dogs",
+      "mode": "negative",
+      "words": ["They", "don't", "like", "dogs"],
+      "answer": "They don't like dogs",
+      "timeSec": 20
+    },
+    {
+      "stimulus": "she / read / books",
+      "mode": "question",
+      "words": ["Does", "she", "read", "books"],
+      "answer": "Does she read books",
+      "timeSec": 20
+    }
+  ]
+}

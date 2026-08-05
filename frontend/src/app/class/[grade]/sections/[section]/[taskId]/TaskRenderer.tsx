@@ -16,6 +16,8 @@ import { OneMinuteTask } from "@/components/tasks/OneMinuteTask"
 import { BuildChatTask } from "@/components/tasks/BuildChatTask"
 import { EscapeRoomTask } from "@/components/tasks/EscapeRoomTask"
 import { SurvivalIslandTask } from "@/components/tasks/SurvivalIslandTask"
+import { GrammarBattleTask, type GrammarBattleRound } from "@/components/tasks/GrammarBattleTask"
+import { BossBattleTask } from "@/components/tasks/BossBattleTask"
 import { TaskHeader } from "@/components/tasks/TaskHeader"
 import { RulesPanel } from "@/components/RulesPanel"
 import { useProgress } from "@/lib/useProgress"
@@ -36,6 +38,9 @@ interface TaskData {
   time_phrases?: string[]
   base_verb?: string
   subject?: string
+  // Grammar Minecraft (тикет W3-T1): режим блоков-категорий + варианты времени.
+  blocksMode?: boolean
+  blocks?: { tense: string; label: string; blocks: { category: "subject" | "auxiliary" | "verb" | "object" | "time" | "place"; word: string }[] }[]
   // cloze (single-round)
   text?: string
   answers?: string[][]
@@ -66,6 +71,9 @@ interface TaskData {
   steps?: any[]
   // escape-room (тикет W2-T4): цепочка 5 станций Grammar Escape Room
   stations?: any[]
+  // boss-battle (тикет W3-T3): цепочка 6 вызовов + финальный план поездки
+  challenges?: any[]
+  finalPlan?: any
 }
 
 function serializeContext(task: TaskData): string {
@@ -132,7 +140,7 @@ export function TaskRenderer({ task, grade }: { task: TaskData; grade: string })
     case "fill-in":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><FillInTask title={task.title} description={task.description} items={task.items || []} onComplete={onScored} /></div>
     case "build-sentence":
-      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><BuildSentenceTask title={task.title} description={task.description} adverbs={task.adverbs || []} timePhrases={task.time_phrases || []} baseVerb={task.base_verb || ""} subject={task.subject || "I"} onComplete={onScored} /></div>
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><BuildSentenceTask title={task.title} description={task.description} adverbs={task.adverbs || []} timePhrases={task.time_phrases || []} baseVerb={task.base_verb || ""} subject={task.subject || "I"} blocksMode={task.blocksMode} blocks={task.blocks || []} onComplete={onScored} /></div>
     case "cloze":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><ClozeTextTask title={task.title} description={task.description} text={task.text} answers={task.answers} wordBank={task.word_bank} hints={task.hints} underlineWords={task.underline_words} rounds={(task.rounds || []).map((r) => ({ text: r.text, answers: r.answers, wordBank: r.word_bank, hints: r.hints }))} onComplete={onScored} /></div>
     case "click-mistake":
@@ -153,6 +161,15 @@ export function TaskRenderer({ task, grade }: { task: TaskData; grade: string })
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><SurvivalIslandTask title={task.title} description={task.description} scaffold={(task.scaffold as "full" | "keywords" | "conditions") || "full"} steps={task.steps || []} conditions={task.conditions} onComplete={onScored} /></div>
     case "escape-room":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><EscapeRoomTask title={task.title} description={task.description} stations={task.stations || []} onComplete={onScored} /></div>
+    case "grammar-battle":
+      // W3-T2 Grammar Battle: 3 раунда сборки предложений на время (⚡).
+      // task.rounds в локальном интерфейсе описан формой cloze — приводим
+      // на СВОЕЙ строке рендера (аддитивно-безопасный паттерн, чужие ветки
+      // не трогаем). Контракт раунда: {stimulus, mode, words[], answer, timeSec?}.
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><GrammarBattleTask title={task.title} description={task.description} rounds={(task.rounds ?? []) as unknown as GrammarBattleRound[]} onComplete={onScored} /></div>
+    case "boss-battle":
+      // W3-T3 Boss Battle: цепочка 6 вызовов + финальный план поездки (🗣).
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><BossBattleTask title={task.title} description={task.description} challenges={task.challenges || []} finalPlan={task.finalPlan} onComplete={onScored} /></div>
     case "role-play":
     case "voice-chat":
     case "fill-in-and-speak":

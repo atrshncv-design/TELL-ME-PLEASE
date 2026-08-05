@@ -106,6 +106,34 @@ export default function Home() {
             ))}
           </div>
         </motion.div>
+
+        {/* Мемы — лёгкий раздел со смешными грамматическими карточками (W3-T5). */}
+        <motion.div variants={item} className="mt-1">
+          <motion.button
+            whileHover={{ scale: 1.06 }}
+            whileTap={{ scale: 0.92 }}
+            onClick={() => router.push("/memes")}
+            className="flex min-h-[44px] items-center gap-2 rounded-full border-2 border-primary-200 bg-white px-5 py-2 text-sm font-bold text-primary-700 shadow-soft transition-colors hover:bg-primary-100"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+              <line x1="9" y1="9" x2="9.01" y2="9" />
+              <line x1="15" y1="9" x2="15.01" y2="9" />
+            </svg>
+            Мемы
+          </motion.button>
+        </motion.div>
       </motion.div>
 
       {/* Незаметная кнопка входа в админ-панель (T05, решение 14 SPEC).

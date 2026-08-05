@@ -4,6 +4,7 @@
   "description": "Verb Bot заперт в лаборатории! Пройди 5 станций, чтобы открыть дверь.",
   "category": "grammar",
   "type": "escape-room",
+  "levelFlow": true,
   "stations": [
     {
       "type": "fill-gap",

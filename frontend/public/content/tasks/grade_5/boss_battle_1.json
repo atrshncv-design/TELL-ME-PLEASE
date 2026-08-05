@@ -1,0 +1,142 @@
+{
+  "id": "boss_battle_1",
+  "title": "Boss Battle: Grammar Boss",
+  "description": "Verb Bot встречает Grammar Boss! Победи его в финальной битве: пройди 6 вызовов и составь план школьной поездки.",
+  "category": "speaking",
+  "type": "boss-battle",
+  "challenges": [
+    {
+      "type": "fix-mistake",
+      "title": "Первый удар",
+      "sentence": "Verb Bot is play games every evening.",
+      "wrong": "play",
+      "options": [
+        "Verb Bot plays games every evening.",
+        "Verb Bot is playing games every evening.",
+        "Verb Bot play games every evening."
+      ],
+      "answer": "Verb Bot plays games every evening.",
+      "wrongExplanation": "«Every evening» — это Present Simple: у he / she / it глагол получает окончание -s, а is здесь лишний."
+    },
+    {
+      "type": "make-question",
+      "title": "Магический вопрос",
+      "prompt": "Составь вопрос из слов: the robot • is • working • now",
+      "options": [
+        "Is the robot working now?",
+        "The robot is working now?",
+        "Is working the robot now?"
+      ],
+      "answer": "Is the robot working now?",
+      "wrongExplanation": "Вопрос в Present Continuous начинается с is, потом подлежащее the robot, а в конце working now."
+    },
+    {
+      "type": "answer-partner",
+      "title": "Полный ответ",
+      "sentence": "What did you do yesterday?",
+      "options": [
+        "I played football with my friends yesterday.",
+        "I play football with my friends yesterday.",
+        "I am playing football with my friends yesterday."
+      ],
+      "answer": "I played football with my friends yesterday.",
+      "wrongExplanation": "«Yesterday» — это прошлое: нужен Past Simple, глагол с окончанием -ed (play → played)."
+    },
+    {
+      "type": "tell-past",
+      "title": "Эхо прошлого",
+      "prompt": "Выбери предложение о прошлом",
+      "options": [
+        "We visited the museum last Sunday.",
+        "We visit the museum every Sunday.",
+        "We will visit the museum next Sunday."
+      ],
+      "answer": "We visited the museum last Sunday.",
+      "wrongExplanation": "«Last Sunday» — маркер прошлого: Past Simple, глагол с окончанием -ed (visit → visited)."
+    },
+    {
+      "type": "describe-now",
+      "title": "Прямо сейчас",
+      "prompt": "Выбери предложение о том, что происходит прямо сейчас",
+      "options": [
+        "The students are listening to the teacher now.",
+        "The students listen to the teacher every day.",
+        "The students listened to the teacher yesterday."
+      ],
+      "answer": "The students are listening to the teacher now.",
+      "wrongExplanation": "«Now» — прямо сейчас: Present Continuous, am / is / are + глагол с -ing."
+    },
+    {
+      "type": "plan-future",
+      "title": "Взгляд в будущее",
+      "prompt": "Выбери предложение о будущем",
+      "options": [
+        "Tomorrow we will go to the zoo.",
+        "Yesterday we went to the zoo.",
+        "We go to the zoo every Sunday."
+      ],
+      "answer": "Tomorrow we will go to the zoo.",
+      "wrongExplanation": "«Tomorrow» — это будущее: will + глагол (go → will go)."
+    }
+  ],
+  "finalPlan": {
+    "intro": "You are planning a school trip. Decide where to go, what to take, what you did to prepare and what you will do there.",
+    "requirements": {
+      "present": 2,
+      "past": 2,
+      "future": 2,
+      "question": 1,
+      "negative": 1
+    },
+    "sentences": [
+      {
+        "text": "The school trip starts at eight o'clock in the morning.",
+        "kind": "present"
+      },
+      {
+        "text": "Our teacher gives us a map of the city.",
+        "kind": "present"
+      },
+      {
+        "text": "We take sandwiches and juice for the trip.",
+        "kind": "present"
+      },
+      {
+        "text": "Yesterday we bought tickets for the museum.",
+        "kind": "past"
+      },
+      {
+        "text": "We prepared our backpacks last night.",
+        "kind": "past"
+      },
+      {
+        "text": "Last week we discussed the trip with our teacher.",
+        "kind": "past"
+      },
+      {
+        "text": "We will visit the History Museum in the afternoon.",
+        "kind": "future"
+      },
+      {
+        "text": "Tomorrow we will take photos near the river.",
+        "kind": "future"
+      },
+      {
+        "text": "Where will we have lunch?",
+        "kind": "question"
+      },
+      {
+        "text": "Is the museum far from the bus stop?",
+        "kind": "question"
+      },
+      {
+        "text": "We will not forget our water bottles.",
+        "kind": "negative"
+      },
+      {
+        "text": "We don't need to take a lot of money.",
+        "kind": "negative"
+      }
+    ]
+  }
+}

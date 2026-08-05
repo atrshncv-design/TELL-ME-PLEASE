@@ -392,10 +392,28 @@
       "type": "escape-room"
     },
     {
+      "file": "grammar_battle_1.json",
+      "title": "Grammar Battle",
+      "category": "grammar",
+      "type": "grammar-battle"
+    },
+    {
       "file": "survival_island.json",
       "title": "Survival Island: план выживания",
       "category": "speaking",
       "type": "survival-island"
+    },
+    {
+      "file": "boss_battle_1.json",
+      "title": "Boss Battle: Grammar Boss",
+      "category": "speaking",
+      "type": "boss-battle"
+    },
+    {
+      "file": "minecraft_blocks_1.json",
+      "title": "Grammar Minecraft",
+      "category": "grammar",
+      "type": "build-sentence"
     }
   ]
 }

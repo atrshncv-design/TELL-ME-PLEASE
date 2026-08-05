@@ -76,6 +76,12 @@ const files = [
   "survival_island.json",
   // W2-T4: Grammar Escape Room (новый тип escape-room, пилот 5 класс)
   "escape_room_1.json",
+  // W3-T2: Grammar Battle (новый тип grammar-battle, пилот 5 класс)
+  "grammar_battle_1.json",
+  // W3-T3: Boss Battle (новый тип boss-battle, пилот 5 класс)
+  "boss_battle_1.json",
+  // W3-T1: Grammar Minecraft (достройка build-sentence: blocksMode, пилот 5 класс)
+  "minecraft_blocks_1.json",
 ]
 
 // grade_8 tasks (Present Simple / Present Continuous / to be, migrated from customer materials)
@@ -584,8 +590,179 @@ function verifyFile(file, dir) {
       }
     }
 
+    if (task.type === "grammar-battle") {
+      // W3-T2 Grammar Battle: ровно 3 раунда rounds[] (спека 6 «Grammar
+      // Battle»: быстро строить +/−/? по слову-стимулу, 3 раунда, таймер).
+      const modes = new Set(["positive", "negative", "question"])
+      if (!Array.isArray(task.rounds) || task.rounds.length !== 3) {
+        console.log(`❌ ${file}: grammar-battle rounds must be an array of exactly 3 rounds, got: ${Array.isArray(task.rounds) ? task.rounds.length : JSON.stringify(task.rounds)}`)
+        errors++
+      }
+      ;(task.rounds || []).forEach((r, ri) => {
+        if (!r || typeof r.stimulus !== "string" || r.stimulus.trim() === "") {
+          console.log(`❌ ${file}[round ${ri}]: stimulus must be a non-empty string: ${JSON.stringify(r && r.stimulus)}`)
+          errors++
+        }
+        if (!r || !modes.has(r.mode)) {
+          console.log(`❌ ${file}[round ${ri}]: mode must be positive|negative|question, got: ${JSON.stringify(r && r.mode)}`)
+          errors++
+        }
+        if (!Array.isArray(r.words) || r.words.length < 2 || !r.words.every((w) => typeof w === "string" && w.trim() !== "")) {
+          console.log(`❌ ${file}[round ${ri}]: words must be an array of ≥2 non-empty strings: ${JSON.stringify(r && r.words)}`)
+          errors++
+        }
+        if (typeof r.answer !== "string" || r.answer.trim() === "") {
+          console.log(`❌ ${file}[round ${ri}]: answer must be a non-empty string`)
+          errors++
+        } else if (Array.isArray(r.words) && r.words.length > 0) {
+          // Собранная строка = words.join(" ") — если answer не совпадает,
+          // раунд нерешаем (компонент сравнивает собранное с answer).
+          const joined = r.words.join(" ").trim().toLowerCase()
+          if (r.answer.trim().toLowerCase() !== joined) {
+            console.log(`❌ ${file}[round ${ri}]: answer "${r.answer}" != words joined "${joined}" (round unanswerable)`)
+            errors++
+          }
+        }
+        if (r.timeSec !== undefined && (!Number.isInteger(r.timeSec) || r.timeSec <= 0)) {
+          console.log(`❌ ${file}[round ${ri}]: timeSec must be a positive integer, got: ${JSON.stringify(r.timeSec)}`)
+          errors++
+        }
+      })
+    }
+
+    if (task.type === "boss-battle") {
+      // W3-T3 Boss Battle: цепочка 6 вызовов challenges[] + финальный план
+      // finalPlan (спека 6 «Boss Battle»: исправить/вопрос/ответ/прошлое/
+      // настоящее/будущее + «планируем школьную поездку» с минимумами).
+      const challengeTypes = new Set(["fix-mistake", "make-question", "answer-partner", "tell-past", "describe-now", "plan-future"])
+      if (!Array.isArray(task.challenges) || task.challenges.length !== 6) {
+        console.log(`❌ ${file}: boss-battle challenges must be an array of exactly 6, got: ${Array.isArray(task.challenges) ? task.challenges.length : JSON.stringify(task.challenges)}`)
+        errors++
+      }
+      ;(task.challenges || []).forEach((ch, ci) => {
+        if (!ch || !challengeTypes.has(ch.type)) {
+          console.log(`❌ ${file}[challenge ${ci}]: type must be one of fix-mistake|make-question|answer-partner|tell-past|describe-now|plan-future, got: ${JSON.stringify(ch && ch.type)}`)
+          errors++
+          return
+        }
+        if (!ch.title || typeof ch.title !== "string" || ch.title.trim() === "") {
+          console.log(`❌ ${file}[challenge ${ci}]: title must be a non-empty string`)
+          errors++
+        }
+        if (!Array.isArray(ch.options) || ch.options.length < 2 || ch.options.length > 3 || new Set(ch.options).size !== ch.options.length) {
+          console.log(`❌ ${file}[challenge ${ci}]: options must be 2-3 unique strings: ${JSON.stringify(ch.options)}`)
+          errors++
+        }
+        if (typeof ch.answer !== "string" || ch.answer.trim() === "") {
+          console.log(`❌ ${file}[challenge ${ci}]: answer must be a non-empty string`)
+          errors++
+        } else if (Array.isArray(ch.options) && !ch.options.includes(ch.answer)) {
+          console.log(`❌ ${file}[challenge ${ci}]: answer "${ch.answer}" not in options: ${JSON.stringify(ch.options)}`)
+          errors++
+        }
+      })
+      const usedTypes = new Set((task.challenges || []).map((c) => c && c.type))
+      const missingTypes = [...challengeTypes].filter((t) => !usedTypes.has(t))
+      if (missingTypes.length > 0) {
+        console.log(`❌ ${file}: boss-battle challenges must cover all 6 types, missing: ${missingTypes.join(", ")}`)
+        errors++
+      }
+      // Финальный план: пул предложений + достижимые минимумы по типам.
+      const fp = task.finalPlan || {}
+      const planKinds = new Set(["present", "past", "future", "question", "negative"])
+      if (typeof fp.intro !== "string" || fp.intro.trim() === "") {
+        console.log(`❌ ${file}: boss-battle finalPlan.intro must be a non-empty string`)
+        errors++
+      }
+      if (!Array.isArray(fp.sentences) || fp.sentences.length < 8) {
+        console.log(`❌ ${file}: boss-battle finalPlan.sentences must be an array of ≥8 sentences, got: ${Array.isArray(fp.sentences) ? fp.sentences.length : JSON.stringify(fp.sentences)}`)
+        errors++
+      }
+      const poolCounts = { present: 0, past: 0, future: 0, question: 0, negative: 0 }
+      const seenTexts = new Set()
+      ;(fp.sentences || []).forEach((s, si) => {
+        if (!s || typeof s.text !== "string" || s.text.trim() === "") {
+          console.log(`❌ ${file}[finalPlan sentence ${si}]: text must be a non-empty string`)
+          errors++
+        } else if (seenTexts.has(s.text)) {
+          console.log(`❌ ${file}[finalPlan sentence ${si}]: duplicate sentence text "${s.text}"`)
+          errors++
+        } else {
+          seenTexts.add(s.text)
+        }
+        if (!s || !planKinds.has(s.kind)) {
+          console.log(`❌ ${file}[finalPlan sentence ${si}]: kind must be present|past|future|question|negative, got: ${JSON.stringify(s && s.kind)}`)
+          errors++
+        } else {
+          poolCounts[s.kind]++
+        }
+      })
+      // Каждый минимум должен быть достижим пулом (по умолчанию 2/2/2/1/1).
+      const defaultNeed = { present: 2, past: 2, future: 2, question: 1, negative: 1 }
+      const req = fp.requirements || {}
+      ;[...planKinds].forEach((k) => {
+        const need = typeof req[k] === "number" ? req[k] : defaultNeed[k]
+        if (!Number.isInteger(need) || need < 1) {
+          console.log(`❌ ${file}: finalPlan.requirements.${k} must be a positive integer, got: ${JSON.stringify(req[k])}`)
+          errors++
+        } else if (poolCounts[k] < need) {
+          console.log(`❌ ${file}: finalPlan pool has only ${poolCounts[k]} "${k}" sentence(s), but requirement is ${need}`)
+          errors++
+        }
+      })
+    }
+
+    if (task.type === "build-sentence" && task.blocksMode === true) {
+      // W3-T1 Grammar Minecraft: режим блоков-категорий (blocksMode=true).
+      // blocks[] = варианты времени, каждый — упорядоченные блоки {category, word}
+      // (ПОДЛЕЖАЩЕЕ/ПОМОЩНИК/ГЛАГОЛ/ДОПОЛНЕНИЕ/ВРЕМЯ/МЕСТО).
+      const catSet = new Set(["subject", "auxiliary", "verb", "object", "time", "place"])
+      const tenses = task.blocks || []
+      if (!Array.isArray(tenses) || tenses.length < 2) {
+        console.log(`❌ ${file}: blocksMode build-sentence blocks[] must be an array of ≥2 tense variants, got: ${JSON.stringify(Array.isArray(tenses) ? tenses.length : tenses)}`)
+        errors++
+      }
+      const seenTenses = new Set()
+      tenses.forEach((t, ti) => {
+        if (!t || typeof t.tense !== "string" || t.tense.trim() === "") {
+          console.log(`❌ ${file}[tense ${ti}]: tense id must be a non-empty string: ${JSON.stringify(t && t.tense)}`)
+          errors++
+        } else if (seenTenses.has(t.tense)) {
+          console.log(`❌ ${file}[tense ${ti}]: duplicate tense id "${t.tense}"`)
+          errors++
+        } else {
+          seenTenses.add(t.tense)
+        }
+        if (!t || typeof t.label !== "string" || t.label.trim() === "") {
+          console.log(`❌ ${file}[tense ${ti}]: label must be a non-empty string: ${JSON.stringify(t && t.label)}`)
+          errors++
+        }
+        const tBlocks = (t && t.blocks) || []
+        if (!Array.isArray(tBlocks) || tBlocks.length === 0) {
+          console.log(`❌ ${file}[tense ${ti}]: blocks must be a non-empty array`)
+          errors++
+        }
+        const seenCats = new Set()
+        tBlocks.forEach((b, bi) => {
+          if (!b || !catSet.has(b.category)) {
+            console.log(`❌ ${file}[tense ${ti}][block ${bi}]: category must be one of subject|auxiliary|verb|object|time|place, got: ${JSON.stringify(b && b.category)}`)
+            errors++
+          } else if (seenCats.has(b.category)) {
+            console.log(`❌ ${file}[tense ${ti}][block ${bi}]: duplicate category "${b.category}" in one tense`)
+            errors++
+          } else {
+            seenCats.add(b.category)
+          }
+          if (!b || typeof b.word !== "string" || b.word.trim() === "") {
+            console.log(`❌ ${file}[tense ${ti}][block ${bi}]: word must be a non-empty string: ${JSON.stringify(b && b.word)}`)
+            errors++
+          }
+        })
+      })
+    }
+
     const clozeHasData = task.type === "cloze" && ((task.rounds && task.rounds.length > 0) || task.text)
-    if (items.length === 0 && !clozeHasData && task.type !== "role-play" && task.type !== "voice-chat" && task.type !== "flashcards" && task.type !== "choose-story" && task.type !== "build-chat" && task.type !== "one-minute" && task.type !== "survival-island" && task.type !== "escape-room") {
+    if (items.length === 0 && !clozeHasData && task.type !== "role-play" && task.type !== "voice-chat" && task.type !== "flashcards" && task.type !== "choose-story" && task.type !== "build-chat" && task.type !== "one-minute" && task.type !== "survival-island" && task.type !== "escape-room" && task.type !== "grammar-battle" && task.type !== "boss-battle" && task.type !== "build-sentence") {
       console.log(`⚠️ ${file}: no items (type=${task.type})`)
     }
     
@@ -701,8 +878,8 @@ function sanityCheck(label, ok, detail = "") {
 // 4. All files normalize without throwing — the per-file loops above count
 //    this; assert per grade explicitly.
 sanityCheck(
-  "all 62 grade_5 files normalize without throwing",
-  normalizedCount === 62,
+  "all 65 grade_5 files normalize without throwing",
+  normalizedCount === 65,
   `normalizedCount=${normalizedCount}`,
 )
 sanityCheck(
@@ -748,6 +925,10 @@ sanityCheck(
     "survival-island",
     // W2-T4: Grammar Escape Room
     "escape-room",
+    // W3-T2: Grammar Battle
+    "grammar-battle",
+    // W3-T3: Boss Battle
+    "boss-battle",
   ])
   const offenders = [...seenTypes].filter((t) => !knownTypes.has(t))
   sanityCheck(

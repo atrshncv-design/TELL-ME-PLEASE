@@ -47,6 +47,33 @@ export interface BuildSentenceData {
   timePhrases: string[];
   baseVerb: string;
   subject: string;
+  // Grammar Minecraft (тикет W3-T1): режим блоков-категорий + перестройка по временам.
+  blocksMode?: boolean;
+  blocks?: MinecraftTense[];
+}
+
+/** Категория блока-карточки Grammar Minecraft (W3-T1): подпись по-русски в UI. */
+export type MinecraftBlockCategory =
+  | "subject"
+  | "auxiliary"
+  | "verb"
+  | "object"
+  | "time"
+  | "place";
+
+/** Один блок-карточка: слово + его категория (ПОДЛЕЖАЩЕЕ / ПОМОЩНИК / ГЛАГОЛ / …). */
+export interface MinecraftBlock {
+  category: MinecraftBlockCategory;
+  word: string;
+}
+
+/** Один вариант времени Grammar Minecraft (W3-T1): набор блоков предложения. */
+export interface MinecraftTense {
+  /** Идентификатор времени: "present" | "past" | "future" (свободная строка). */
+  tense: string;
+  /** Подпись кнопки «Сменить время», например "Present Simple". */
+  label: string;
+  blocks: MinecraftBlock[];
 }
 
 /** One card of a flashcards task: stimulus on the front, reaction on the back. */
@@ -104,6 +131,10 @@ export interface TaskData {
   time_phrases?: string[];
   base_verb?: string;
   subject?: string;
+  // Grammar Minecraft (тикет W3-T1): режим блоков-категорий (blocksMode=true)
+  // + варианты времени blocks[] (см. MinecraftTense выше).
+  blocksMode?: boolean;
+  blocks?: MinecraftTense[];
   // cloze
   text?: string;
   answers?: string[][];
@@ -132,6 +163,9 @@ export interface TaskData {
   steps?: SurvivalIslandStep[];
   // escape-room (тикет W2-T4): цепочка 5 станций Grammar Escape Room.
   stations?: EscapeRoomStation[];
+  // boss-battle (тикет W3-T3): цепочка 6 вызовов + финальный план поездки.
+  challenges?: BossBattleChallenge[];
+  finalPlan?: BossBattleFinalPlan;
 }
 
 /** Одно предложение задания «Кликни на ошибку» (click-mistake). */
@@ -281,4 +315,78 @@ export interface EscapeRoomStation {
 /** Grammar Escape Room (W2-T4): цепочка 5 станций + прогресс дверей. */
 export interface EscapeRoomData {
   stations: EscapeRoomStation[];
+}
+
+/** Тип предложения в раунде Grammar Battle (W3-T2). */
+export type GrammarBattleMode = "positive" | "negative" | "question";
+
+/** Один раунд Grammar Battle (W3-T2): стимул + тип + слова-плитки + ответ. */
+export interface GrammarBattleRound {
+  /** Слово-стимул, например «play / now» (что строим). */
+  stimulus: string;
+  /** Тип предложения: утверждение / отрицание / вопрос. */
+  mode: GrammarBattleMode;
+  /** Слова-плитки в ПРАВИЛЬНОМ порядке (банк перемешивается в UI). */
+  words: string[];
+  /** Правильное предложение = words.join(" ") (сравнение без регистра). */
+  answer: string;
+  /** Таймер раунда в секундах (по умолчанию 20). */
+  timeSec?: number;
+}
+
+/** Grammar Battle (W3-T2): быстрая сборка предложений на время, ⚡ Energy. */
+export interface GrammarBattleData {
+  /** Ровно 3 раунда (спека 6): positive / negative / question. */
+  rounds: GrammarBattleRound[];
+}
+
+/** Тип вызова Grammar Boss (W3-T3). */
+export type BossBattleChallengeType =
+  | "fix-mistake"
+  | "make-question"
+  | "answer-partner"
+  | "tell-past"
+  | "describe-now"
+  | "plan-future";
+
+/** Один вызов Grammar Boss (W3-T3): выбор из 2-3 вариантов (паттерн QuizTask). */
+export interface BossBattleChallenge {
+  type: BossBattleChallengeType;
+  /** Заголовок по-русски («Исправь ошибку» и т.п.). */
+  title: string;
+  /** Текст вызова: предложение с ошибкой / слова для вопроса / вопрос. */
+  sentence?: string;
+  /** fix-mistake: слово с ошибкой для зачёркивания (необязательно). */
+  wrong?: string;
+  /** make-question: подсказка-слова для вопроса (необязательно). */
+  prompt?: string;
+  options: string[];
+  answer: string;
+  /** Умная обратная связь (W1-T3) — идёт в hintFor первой. */
+  wrongExplanation?: string;
+}
+
+/** Ключ требования финального плана (W3-T3). */
+export type BossBattlePlanKind = "present" | "past" | "future" | "question" | "negative";
+
+/** Одно предложение пула финального плана поездки (W3-T3). */
+export interface BossBattlePlanSentence {
+  text: string;
+  kind: BossBattlePlanKind;
+}
+
+/** Финальное задание «планируем школьную поездку» (W3-T3): мультивыбор по минимумам. */
+export interface BossBattleFinalPlan {
+  /** Сценарий по-английски: «You are planning a school trip…». */
+  intro: string;
+  /** Пул предложений (~10-12): тап — выбрать/убрать, можно перевыбирать. */
+  sentences: BossBattlePlanSentence[];
+  /** Минимумы по типам (по умолчанию 2/2/2/1/1, сумма = 5 групп-требований). */
+  requirements?: Partial<Record<BossBattlePlanKind, number>>;
+}
+
+/** Boss Battle (W3-T3): цепочка 6 вызовов + финальный план поездки, 🗣+⚡. */
+export interface BossBattleData {
+  challenges: BossBattleChallenge[];
+  finalPlan: BossBattleFinalPlan;
 }
