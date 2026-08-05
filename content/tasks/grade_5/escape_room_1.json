@@ -1,0 +1,67 @@
+{
+  "id": "escape_room_1",
+  "title": "Grammar Escape Room",
+  "description": "Verb Bot заперт в лаборатории! Пройди 5 станций, чтобы открыть дверь.",
+  "category": "grammar",
+  "type": "escape-room",
+  "stations": [
+    {
+      "type": "fill-gap",
+      "title": "Робот в лаборатории",
+      "data": {
+        "sentence": "Look! The robot ___ (dance) in the laboratory.",
+        "options": ["dances", "is dancing", "dance"],
+        "answer": "is dancing",
+        "wrongExplanation": "С «Look!» речь о том, что происходит прямо сейчас, — нужен Present Continuous: am / is / are + глагол с -ing."
+      }
+    },
+    {
+      "type": "fix-mistake",
+      "title": "Секретная комната",
+      "data": {
+        "sentence": "Verb Bot is work in the laboratory every day.",
+        "wrong": "work",
+        "options": [
+          "Verb Bot works in the laboratory every day.",
+          "Verb Bot is working in the laboratory every day.",
+          "Verb Bot work in the laboratory every day."
+        ],
+        "answer": "Verb Bot works in the laboratory every day.",
+        "wrongExplanation": "«Every day» — это Present Simple: у he / she / it глагол получает окончание -s, а am / is / are не нужны."
+      }
+    },
+    {
+      "type": "make-question",
+      "title": "Кодовый замок",
+      "data": {
+        "prompt": "Составь вопрос из слов: is • the door • open",
+        "options": ["Is the door open?", "The door is open?", "Is open the door?"],
+        "answer": "Is the door open?",
+        "wrongExplanation": "Вопрос начинается с is, потом подлежащее the door, а в конце open."
+      }
+    },
+    {
+      "type": "full-answer",
+      "title": "Главный компьютер",
+      "data": {
+        "question": "What is Verb Bot doing right now?",
+        "options": [
+          "He is fixing the machine.",
+          "He fixes the machine.",
+          "He fixing the machine."
+        ],
+        "answer": "He is fixing the machine.",
+        "wrongExplanation": "«Right now» — это Present Continuous: is + глагол с -ing. Не забывай помощника is!"
+      }
+    },
+    {
+      "type": "code-phrase",
+      "title": "Последняя дверь",
+      "data": {
+        "phrase": "The door is open!",
+        "keywords": ["door", "open"],
+        "wrongExplanation": "Произнеси кодовую фразу вслух: «The door is open!»"
+      }
+    }
+  ]
+}

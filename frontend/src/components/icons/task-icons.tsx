@@ -103,6 +103,14 @@ const PATHS: Record<string, ReactNode> = {
       <circle cx="16.8" cy="7.2" r="1" />
     </>
   ),
+  // Door (custom, monoline) — escape-room (тикет W2-T4): 5 станций, двери
+  "escape-room": (
+    <>
+      <path d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16" />
+      <path d="M4 21h16" />
+      <circle cx="14.5" cy="12.5" r="1.2" fill="currentColor" stroke="none" />
+    </>
+  ),
 }
 
 /** Neutral fallback for unknown types — list icon (NOT an emoji). */

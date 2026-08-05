@@ -68,6 +68,14 @@ const files = [
   "ps_check_family.json",
   // W1-T4: Choose Your Story (новый тип choose-story, пилот 5 класс)
   "story_choose_your_story.json",
+  // W2-T3: Build a Chat (новый тип build-chat, пилот 5 класс)
+  "build_chat_plans.json",
+  // W2-T1: One-Minute Challenge (новый тип one-minute, пилот 5 класс)
+  "one_minute_my_day.json",
+  // W2-T2: Survival Island (новый тип survival-island, пилот 5 класс)
+  "survival_island.json",
+  // W2-T4: Grammar Escape Room (новый тип escape-room, пилот 5 класс)
+  "escape_room_1.json",
 ]
 
 // grade_8 tasks (Present Simple / Present Continuous / to be, migrated from customer materials)
@@ -375,8 +383,209 @@ function verifyFile(file, dir) {
       }
     }
 
+    if (task.type === "build-chat") {
+      // W2-T3 Build a Chat: чат с пропусками + неожиданное событие с репликами.
+      const chat = task.chat || []
+      if (!Array.isArray(chat) || chat.length === 0) {
+        console.log(`❌ ${file}: build-chat task has no chat[]`)
+        errors++
+      }
+      for (let j = 0; j < chat.length; j++) {
+        const m = chat[j]
+        if (!m || typeof m !== "object") {
+          console.log(`❌ ${file}[chat ${j}]: message must be an object`)
+          errors++
+          continue
+        }
+        if (m.from !== "A" && m.from !== "B") {
+          console.log(`❌ ${file}[chat ${j}]: from must be "A" or "B", got: ${JSON.stringify(m.from)}`)
+          errors++
+        }
+        if (typeof m.text !== "string" || m.text.split("_").length - 1 !== 1) {
+          console.log(`❌ ${file}[chat ${j}]: text must contain exactly one "_" gap: ${JSON.stringify(m.text)}`)
+          errors++
+        }
+        if (!Array.isArray(m.options) || m.options.length < 2 || new Set(m.options).size !== m.options.length) {
+          console.log(`❌ ${file}[chat ${j}]: options must be ≥2 unique strings: ${JSON.stringify(m.options)}`)
+          errors++
+        }
+        if (Array.isArray(m.options) && !m.options.includes(m.answer)) {
+          console.log(`❌ ${file}[chat ${j}]: answer "${m.answer}" not in options: ${JSON.stringify(m.options)}`)
+          errors++
+        }
+      }
+      const event = task.event
+      if (!event || typeof event !== "object") {
+        console.log(`❌ ${file}: build-chat task missing event {title, text, replies}`)
+        errors++
+      } else {
+        if (typeof event.title !== "string" || event.title.trim() === "") {
+          console.log(`❌ ${file}: event.title must be a non-empty string`)
+          errors++
+        }
+        if (typeof event.text !== "string" || event.text.trim() === "") {
+          console.log(`❌ ${file}: event.text must be a non-empty string`)
+          errors++
+        }
+        const replies = event.replies || []
+        // Спека 5 / тикет W2-T3: ученик выбирает 2-3 реплики-ответа.
+        if (!Array.isArray(replies) || replies.length < 1 || replies.length > 3) {
+          console.log(`❌ ${file}: event.replies must be an array of 1-3 replies (спека: 2-3), got: ${replies.length}`)
+          errors++
+        }
+        for (let j = 0; j < replies.length; j++) {
+          const r = replies[j]
+          if (!Array.isArray(r.options) || r.options.length < 2 || new Set(r.options).size !== r.options.length) {
+            console.log(`❌ ${file}[reply ${j}]: options must be ≥2 unique strings: ${JSON.stringify(r.options)}`)
+            errors++
+          }
+          if (Array.isArray(r.options) && !r.options.includes(r.answer)) {
+            console.log(`❌ ${file}[reply ${j}]: answer "${r.answer}" not in options: ${JSON.stringify(r.options)}`)
+            errors++
+          }
+        }
+      }
+    }
+
+    if (task.type === "one-minute") {
+      // W2-T1 One-Minute Challenge: тема + условия с маркерами (эвристика).
+      if (typeof task.topic !== "string" || task.topic.trim() === "") {
+        console.log(`❌ ${file}: one-minute topic must be a non-empty string`)
+        errors++
+      }
+      if (task.duration !== undefined && (!Number.isInteger(task.duration) || task.duration <= 0)) {
+        console.log(`❌ ${file}: one-minute duration must be a positive integer, got: ${JSON.stringify(task.duration)}`)
+        errors++
+      }
+      if (!Array.isArray(task.conditions) || task.conditions.length === 0) {
+        console.log(`❌ ${file}: one-minute conditions must be a non-empty array`)
+        errors++
+      }
+      ;(task.conditions || []).forEach((c, ci) => {
+        if (!c || typeof c.label !== "string" || c.label.trim() === "") {
+          console.log(`❌ ${file}[condition ${ci}]: label must be a non-empty string`)
+          errors++
+        }
+        if (!c || typeof c.hint !== "string" || c.hint.trim() === "") {
+          console.log(`❌ ${file}[condition ${ci}]: hint must be a non-empty string`)
+          errors++
+        }
+        if (!Array.isArray(c.markers) || c.markers.length === 0 || !c.markers.every((m) => typeof m === "string" && m.trim() !== "")) {
+          console.log(`❌ ${file}[condition ${ci}]: markers must be a non-empty string[]`)
+          errors++
+        }
+        if (c.min !== undefined && (!Number.isInteger(c.min) || c.min < 1)) {
+          console.log(`❌ ${file}[condition ${ci}]: min must be a positive integer, got: ${JSON.stringify(c.min)}`)
+          errors++
+        }
+      })
+    }
+
+    if (task.type === "survival-island") {
+      // W2-T2 Survival Island: категории-реплики steps[] (говор от лица команды).
+      if (!Array.isArray(task.steps) || task.steps.length === 0) {
+        console.log(`❌ ${file}: survival-island steps must be a non-empty array`)
+        errors++
+      }
+      if (task.scaffold !== undefined && !["full", "keywords", "conditions"].includes(task.scaffold)) {
+        console.log(`❌ ${file}: survival-island scaffold must be "full"|"keywords"|"conditions", got: ${JSON.stringify(task.scaffold)}`)
+        errors++
+      }
+      ;(task.steps || []).forEach((s, si) => {
+        if (!s || typeof s.key !== "string" || s.key.trim() === "") {
+          console.log(`❌ ${file}[step ${si}]: key must be a non-empty string`)
+          errors++
+        }
+        if (!s || typeof s.labelRu !== "string" || s.labelRu.trim() === "") {
+          console.log(`❌ ${file}[step ${si}]: labelRu must be a non-empty string`)
+          errors++
+        }
+        if (!s || typeof s.example !== "string" || s.example.trim() === "") {
+          console.log(`❌ ${file}[step ${si}]: example must be a non-empty string`)
+          errors++
+        }
+        if (!Array.isArray(s.markers) || s.markers.length === 0 || !s.markers.every((m) => typeof m === "string" && m.trim() !== "")) {
+          console.log(`❌ ${file}[step ${si}]: markers must be a non-empty string[]`)
+          errors++
+        }
+        if (s.min !== undefined && (!Number.isInteger(s.min) || s.min < 1)) {
+          console.log(`❌ ${file}[step ${si}]: min must be a positive integer, got: ${JSON.stringify(s.min)}`)
+          errors++
+        }
+      })
+      ;(task.conditions || []).forEach((c, ci) => {
+        if (!c || typeof c.label !== "string" || c.label.trim() === "") {
+          console.log(`❌ ${file}[condition ${ci}]: label must be a non-empty string`)
+          errors++
+        }
+        if (!c || typeof c.hint !== "string" || c.hint.trim() === "") {
+          console.log(`❌ ${file}[condition ${ci}]: hint must be a non-empty string`)
+          errors++
+        }
+        if (!Array.isArray(c.markers) || c.markers.length === 0 || !c.markers.every((m) => typeof m === "string" && m.trim() !== "")) {
+          console.log(`❌ ${file}[condition ${ci}]: markers must be a non-empty string[]`)
+          errors++
+        }
+        if (c.min !== undefined && (!Number.isInteger(c.min) || c.min < 1)) {
+          console.log(`❌ ${file}[condition ${ci}]: min must be a positive integer, got: ${JSON.stringify(c.min)}`)
+          errors++
+        }
+      })
+    }
+
+    if (task.type === "escape-room") {
+      // W2-T4 Grammar Escape Room: цепочка ровно 5 станций stations[] —
+      // fill-gap, fix-mistake, make-question, full-answer, code-phrase.
+      const stationTypes = new Set(["fill-gap", "fix-mistake", "make-question", "full-answer", "code-phrase"])
+      if (!Array.isArray(task.stations) || task.stations.length !== 5) {
+        console.log(`❌ ${file}: escape-room stations must be an array of exactly 5 stations, got: ${Array.isArray(task.stations) ? task.stations.length : JSON.stringify(task.stations)}`)
+        errors++
+      }
+      ;(task.stations || []).forEach((st, si) => {
+        if (!st || !stationTypes.has(st.type)) {
+          console.log(`❌ ${file}[station ${si}]: type must be one of fill-gap|fix-mistake|make-question|full-answer|code-phrase, got: ${JSON.stringify(st && st.type)}`)
+          errors++
+          return
+        }
+        if (!st.title || typeof st.title !== "string" || st.title.trim() === "") {
+          console.log(`❌ ${file}[station ${si}]: title must be a non-empty string`)
+          errors++
+        }
+        const d = st.data || {}
+        if (st.type === "code-phrase") {
+          if (typeof d.phrase !== "string" || d.phrase.trim() === "") {
+            console.log(`❌ ${file}[station ${si}]: code-phrase data.phrase must be a non-empty string`)
+            errors++
+          }
+          if (!Array.isArray(d.keywords) || d.keywords.length === 0 || !d.keywords.every((k) => typeof k === "string" && k.trim() !== "")) {
+            console.log(`❌ ${file}[station ${si}]: code-phrase data.keywords must be a non-empty string[]`)
+            errors++
+          }
+        } else {
+          if (!Array.isArray(d.options) || d.options.length < 2 || new Set(d.options).size !== d.options.length) {
+            console.log(`❌ ${file}[station ${si}]: data.options must be ≥2 unique strings: ${JSON.stringify(d.options)}`)
+            errors++
+          }
+          if (Array.isArray(d.options) && !d.options.includes(d.answer)) {
+            console.log(`❌ ${file}[station ${si}]: answer "${d.answer}" not in options: ${JSON.stringify(d.options)}`)
+            errors++
+          }
+          if (st.type === "fill-gap" && (!d.sentence || !d.sentence.includes("___"))) {
+            console.log(`❌ ${file}[station ${si}]: fill-gap data.sentence must contain "___": ${JSON.stringify(d.sentence)}`)
+            errors++
+          }
+        }
+      })
+      const usedTypes = new Set((task.stations || []).map((s) => s && s.type))
+      const missing = [...stationTypes].filter((t) => !usedTypes.has(t))
+      if (missing.length > 0) {
+        console.log(`❌ ${file}: escape-room stations must cover all 5 types, missing: ${missing.join(", ")}`)
+        errors++
+      }
+    }
+
     const clozeHasData = task.type === "cloze" && ((task.rounds && task.rounds.length > 0) || task.text)
-    if (items.length === 0 && !clozeHasData && task.type !== "role-play" && task.type !== "voice-chat" && task.type !== "flashcards" && task.type !== "choose-story") {
+    if (items.length === 0 && !clozeHasData && task.type !== "role-play" && task.type !== "voice-chat" && task.type !== "flashcards" && task.type !== "choose-story" && task.type !== "build-chat" && task.type !== "one-minute" && task.type !== "survival-island" && task.type !== "escape-room") {
       console.log(`⚠️ ${file}: no items (type=${task.type})`)
     }
     
@@ -492,8 +701,8 @@ function sanityCheck(label, ok, detail = "") {
 // 4. All files normalize without throwing — the per-file loops above count
 //    this; assert per grade explicitly.
 sanityCheck(
-  "all 58 grade_5 files normalize without throwing",
-  normalizedCount === 58,
+  "all 62 grade_5 files normalize without throwing",
+  normalizedCount === 62,
   `normalizedCount=${normalizedCount}`,
 )
 sanityCheck(
@@ -531,6 +740,14 @@ sanityCheck(
     "wheel",
     // W1-T4: Choose Your Story
     "choose-story",
+    // W2-T3: Build a Chat
+    "build-chat",
+    // W2-T1: One-Minute Challenge
+    "one-minute",
+    // W2-T2: Survival Island
+    "survival-island",
+    // W2-T4: Grammar Escape Room
+    "escape-room",
   ])
   const offenders = [...seenTypes].filter((t) => !knownTypes.has(t))
   sanityCheck(

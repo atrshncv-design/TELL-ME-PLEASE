@@ -1,0 +1,74 @@
+{
+  "id": "build_chat_plans",
+  "title": "Build a Chat: планируем выходные",
+  "description": "Продолжи переписку с другом: выбери правильные формы глаголов и помоги поменять планы!",
+  "category": "speaking",
+  "type": "build-chat",
+  "chat": [
+    {
+      "from": "A",
+      "text": "Hi! What _ you doing this Saturday?",
+      "options": ["do", "are", "does"],
+      "answer": "are",
+      "wrongExplanation": "Мы спрашиваем про планы на субботу — нужен помощник am / is / are!"
+    },
+    {
+      "from": "B",
+      "text": "I _ free! Let's go to the park!",
+      "options": ["am", "is", "are"],
+      "answer": "am",
+      "wrongExplanation": "После «I» всегда am!"
+    },
+    {
+      "from": "A",
+      "text": "Great! My sister _ coming with us.",
+      "options": ["am", "are", "is"],
+      "answer": "is",
+      "wrongExplanation": "My sister — это «она» (she) → нужен is."
+    },
+    {
+      "from": "B",
+      "text": "Cool! We _ going to ride the roller coaster!",
+      "options": ["is", "are", "am"],
+      "answer": "are",
+      "wrongExplanation": "С «we» используем are!"
+    },
+    {
+      "from": "A",
+      "text": "I _ like roller coasters. They are too fast!",
+      "options": ["doesn't", "don't", "isn't"],
+      "answer": "don't",
+      "wrongExplanation": "С «I» отрицание — don't!"
+    },
+    {
+      "from": "B",
+      "text": "OK! The park _ great anyway. See you on Saturday!",
+      "options": ["are", "am", "is"],
+      "answer": "is",
+      "wrongExplanation": "The park — это «он» (it) → нужен is."
+    }
+  ],
+  "event": {
+    "title": "Нужно поменять планы",
+    "text": "Oh no! The park is closed on Saturday and the weather is bad! What can we do?",
+    "replies": [
+      {
+        "options": ["Let's go to the cinema!", "I am ten years old.", "The zoo is closed."],
+        "answer": "Let's go to the cinema!",
+        "wrongExplanation": "Друг спрашивает, что делать, — предложи новую идею!"
+      },
+      {
+        "prompt": "Great idea! I love films.",
+        "options": ["Me too! What time?", "I don't like ice cream.", "The park is green."],
+        "answer": "Me too! What time?",
+        "wrongExplanation": "Друг согласился — ответь по-дружески и договорись о времени!"
+      },
+      {
+        "prompt": "How about 3 pm?",
+        "options": ["OK, see you at 3 pm!", "No, I am a robot.", "Yes, we are happy."],
+        "answer": "OK, see you at 3 pm!",
+        "wrongExplanation": "Друг предложил время — согласись и подтверди встречу!"
+      }
+    ]
+  }
+}

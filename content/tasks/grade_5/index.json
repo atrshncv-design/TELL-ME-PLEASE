@@ -372,6 +372,30 @@
       "title": "Выбери свою историю",
       "category": "speaking",
       "type": "choose-story"
+    },
+    {
+      "file": "one_minute_my_day.json",
+      "title": "One-Minute Challenge",
+      "category": "speaking",
+      "type": "one-minute"
+    },
+    {
+      "file": "build_chat_plans.json",
+      "title": "Чат: планируем выходные",
+      "category": "speaking",
+      "type": "build-chat"
+    },
+    {
+      "file": "escape_room_1.json",
+      "title": "Grammar Escape Room",
+      "category": "grammar",
+      "type": "escape-room"
+    },
+    {
+      "file": "survival_island.json",
+      "title": "Survival Island: план выживания",
+      "category": "speaking",
+      "type": "survival-island"
     }
   ]
 }

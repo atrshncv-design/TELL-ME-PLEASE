@@ -1,0 +1,53 @@
+{
+  "id": "one_minute_my_day",
+  "title": "One-Minute Challenge: Мой распорядок дня",
+  "description": "Расскажи о своём распорядке дня за одну минуту и выполни грамматические условия!",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Мой распорядок дня",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Используй 5 глаголов в Present Simple",
+      "hint": "get up, have, go, play, watch…",
+      "markers": [
+        "get up", "wake up", "have", "go", "eat", "play", "watch", "do",
+        "brush", "wash", "take", "read", "help", "walk", "study", "listen",
+        "come", "finish", "start", "make", "drink", "dress", "like", "live"
+      ],
+      "min": 5
+    },
+    {
+      "label": "Используй 2 слова-маркера времени",
+      "hint": "every day, usually, in the morning…",
+      "markers": [
+        "every day", "every morning", "usually", "always", "often",
+        "sometimes", "never", "o'clock", "in the morning", "in the evening",
+        "after school", "on weekends", "at night"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Используй 1 отрицательное предложение",
+      "hint": "I don't… / He doesn't…",
+      "markers": ["don't", "doesn't", "do not", "does not"],
+      "min": 1
+    },
+    {
+      "label": "Используй 1 предложение с because",
+      "hint": "…because I like…",
+      "markers": ["because"],
+      "min": 1
+    },
+    {
+      "label": "Расскажи про семью или друга",
+      "hint": "my mum, my brother, my friend…",
+      "markers": [
+        "my mum", "my mother", "my dad", "my father", "my sister",
+        "my brother", "my friend", "my family", "my parents",
+        "my granny", "my grandpa"
+      ],
+      "min": 1
+    }
+  ]
+}

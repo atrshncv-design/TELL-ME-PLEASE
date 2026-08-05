@@ -12,11 +12,11 @@
 | 04 | W1-T4 Choose Your Story | ✅ done |
 | 05 | W1-T5 Detective-достройка | ✅ done |
 | 06 | W1-T6 Верификация волны 1 + коммит | ✅ done (смоук пройден, коммит ждёт подтверждения) |
-| 07 | W2-T1 One-Minute Challenge | pending |
-| 08 | W2-T2 Survival Island | pending |
-| 09 | W2-T3 Build a Chat | pending |
-| 10 | W2-T4 Escape Room | pending |
-| 11 | W2-T5 Верификация волны 2 + коммит | pending |
+| 07 | W2-T1 One-Minute Challenge | ✅ done |
+| 08 | W2-T2 Survival Island | ✅ done |
+| 09 | W2-T3 Build a Chat | ✅ done |
+| 10 | W2-T4 Escape Room | ✅ done |
+| 11 | W2-T5 Верификация волны 2 + коммит | ✅ done (смоук пройден, коммит готов) |
 | 12 | W3-T1 Grammar Minecraft | pending |
 | 13 | W3-T2 Grammar Battle | pending |
 | 14 | W3-T3 Boss Battle | pending |

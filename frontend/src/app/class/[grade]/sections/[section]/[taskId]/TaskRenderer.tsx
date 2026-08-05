@@ -12,6 +12,10 @@ import { ClickMistakeTask } from "@/components/tasks/ClickMistakeTask"
 import { FlashcardsTask } from "@/components/tasks/FlashcardsTask"
 import { WheelTask } from "@/components/tasks/WheelTask"
 import { ChooseStoryTask } from "@/components/tasks/ChooseStoryTask"
+import { OneMinuteTask } from "@/components/tasks/OneMinuteTask"
+import { BuildChatTask } from "@/components/tasks/BuildChatTask"
+import { EscapeRoomTask } from "@/components/tasks/EscapeRoomTask"
+import { SurvivalIslandTask } from "@/components/tasks/SurvivalIslandTask"
 import { TaskHeader } from "@/components/tasks/TaskHeader"
 import { RulesPanel } from "@/components/RulesPanel"
 import { useProgress } from "@/lib/useProgress"
@@ -51,6 +55,17 @@ interface TaskData {
   problems?: string[]
   sentencePatterns?: string[]
   keywords?: string[]
+  // one-minute (тикет W2-T1): One-Minute Challenge — тема, таймер, условия
+  topic?: string
+  duration?: number
+  conditions?: { label: string; hint: string; markers: string[]; min?: number }[]
+  // build-chat (тикет W2-T3): чат с пропусками + неожиданное событие
+  chat?: any[]
+  event?: any
+  // survival-island (тикет W2-T2): категории-реплики «от лица команды»
+  steps?: any[]
+  // escape-room (тикет W2-T4): цепочка 5 станций Grammar Escape Room
+  stations?: any[]
 }
 
 function serializeContext(task: TaskData): string {
@@ -130,6 +145,14 @@ export function TaskRenderer({ task, grade }: { task: TaskData; grade: string })
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><LadderTask title={task.title} description={task.description} ladders={task.ladders || []} onComplete={onScored} /></div>
     case "choose-story":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><ChooseStoryTask title={task.title} description={task.description} scaffold={task.scaffold || "full"} characters={task.characters || []} places={task.places || []} problems={task.problems || []} sentencePatterns={task.sentencePatterns || []} keywords={task.keywords || []} onComplete={onScored} /></div>
+    case "one-minute":
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><OneMinuteTask title={task.title} description={task.description} topic={task.topic || ""} duration={task.duration} conditions={task.conditions || []} onComplete={onScored} /></div>
+    case "build-chat":
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><BuildChatTask title={task.title} description={task.description} chat={task.chat || []} event={task.event} onComplete={onScored} /></div>
+    case "survival-island":
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><SurvivalIslandTask title={task.title} description={task.description} scaffold={(task.scaffold as "full" | "keywords" | "conditions") || "full"} steps={task.steps || []} conditions={task.conditions} onComplete={onScored} /></div>
+    case "escape-room":
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><EscapeRoomTask title={task.title} description={task.description} stations={task.stations || []} onComplete={onScored} /></div>
     case "role-play":
     case "voice-chat":
     case "fill-in-and-speak":

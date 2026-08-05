@@ -1,0 +1,55 @@
+{
+  "id": "survival_island",
+  "title": "🏝️ Survival Island: план выживания",
+  "description": "Ты и твоя команда — на острове! Говори от лица команды и составь план выживания.",
+  "category": "speaking",
+  "type": "survival-island",
+  "scaffold": "full",
+  "steps": [
+    {
+      "key": "have",
+      "labelRu": "Что у команды ЕСТЬ",
+      "example": "We have a tent.",
+      "template": "We have ___",
+      "wordHint": "a tent, water, food, a map, a compass, a rope…",
+      "markers": ["we have", "we've got", "we have got"],
+      "min": 1
+    },
+    {
+      "key": "doing",
+      "labelRu": "Что команда делает СЕЙЧАС",
+      "example": "We are looking for water.",
+      "template": "We are ___",
+      "wordHint": "looking for water, building a shelter, making a fire…",
+      "markers": ["we are looking", "we're looking", "we are searching", "we're searching", "we are building", "we're building", "we are making", "we're making", "we are trying", "we're trying"],
+      "min": 1
+    },
+    {
+      "key": "found",
+      "labelRu": "Что команда НАШЛА",
+      "example": "We found some food.",
+      "template": "We found ___",
+      "wordHint": "some food, a cave, a map, a boat, some fruit…",
+      "markers": ["we found", "we've found", "we have found", "we discovered"],
+      "min": 1
+    },
+    {
+      "key": "will",
+      "labelRu": "Что команда БУДЕТ делать",
+      "example": "We will build a fire.",
+      "template": "We will ___",
+      "wordHint": "build a fire, make a raft, find help, stay safe…",
+      "markers": ["we will", "we'll", "we are going to", "we're going to"],
+      "min": 1
+    },
+    {
+      "key": "must",
+      "labelRu": "Что команда ДОЛЖНА делать",
+      "example": "We must stay together.",
+      "template": "We must ___",
+      "wordHint": "stay together, be careful, help each other, save water…",
+      "markers": ["we must", "we have to", "we need to"],
+      "min": 1
+    }
+  ]
+}
