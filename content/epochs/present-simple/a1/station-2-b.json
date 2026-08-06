@@ -1,0 +1,137 @@
+{
+  "id": "a1_station_2_b",
+  "title": "Сканирование Формы: Игра V1/Vs",
+  "description": "Отработка чистого рефлекса на окончание -s/-es. Игра V1/Vs: выбери верную форму глагола (V1 или V-s).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I (eat/eats)",
+      "options": [
+        "eat",
+        "eats"
+      ],
+      "answer": "eat"
+    },
+    {
+      "question": "You (drink/drinks)",
+      "options": [
+        "drink",
+        "drinks"
+      ],
+      "answer": "drink"
+    },
+    {
+      "question": "She (plays/play)",
+      "options": [
+        "plays",
+        "play"
+      ],
+      "answer": "plays"
+    },
+    {
+      "question": "They (watch/watches)",
+      "options": [
+        "watch",
+        "watches"
+      ],
+      "answer": "watch"
+    },
+    {
+      "question": "The dog (sleeps/sleep)",
+      "options": [
+        "sleeps",
+        "sleep"
+      ],
+      "answer": "sleeps"
+    },
+    {
+      "question": "My mum (cook/cooks)",
+      "options": [
+        "cook",
+        "cooks"
+      ],
+      "answer": "cooks"
+    },
+    {
+      "question": "We (see/sees)",
+      "options": [
+        "see",
+        "sees"
+      ],
+      "answer": "see"
+    },
+    {
+      "question": "The bird (fly/flies) to the tree.",
+      "options": [
+        "fly",
+        "flies"
+      ],
+      "answer": "flies"
+    },
+    {
+      "question": "Birds (fly/flies)",
+      "options": [
+        "fly",
+        "flies"
+      ],
+      "answer": "fly"
+    },
+    {
+      "question": "He (go/goes)",
+      "options": [
+        "go",
+        "goes"
+      ],
+      "answer": "goes"
+    },
+    {
+      "question": "My friends (go/goes)",
+      "options": [
+        "go",
+        "goes"
+      ],
+      "answer": "go"
+    },
+    {
+      "question": "The cat (stay/stays)",
+      "options": [
+        "stay",
+        "stays"
+      ],
+      "answer": "stays"
+    },
+    {
+      "question": "Cats (run/runs)",
+      "options": [
+        "run",
+        "runs"
+      ],
+      "answer": "run"
+    },
+    {
+      "question": "It (read/reads)",
+      "options": [
+        "read",
+        "reads"
+      ],
+      "answer": "reads"
+    },
+    {
+      "question": "The teachers (tell/tells)",
+      "options": [
+        "tell",
+        "tells"
+      ],
+      "answer": "tell"
+    },
+    {
+      "question": "The horse (jump/jumps)",
+      "options": [
+        "jump",
+        "jumps"
+      ],
+      "answer": "jumps"
+    }
+  ]
+}

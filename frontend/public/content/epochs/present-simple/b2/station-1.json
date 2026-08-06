@@ -1,0 +1,71 @@
+{
+  "id": "b2_station_1",
+  "title": "Анализ Аномалий (Смыслы)",
+  "description": "Понимание функциональных значений Present Simple (факт, рутина, расписание, стативные глаголы).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "routine",
+      "label": "Повторяющееся действие"
+    },
+    {
+      "id": "schedule",
+      "label": "Расписание / программа"
+    },
+    {
+      "id": "fact",
+      "label": "Общеизвестный факт"
+    },
+    {
+      "id": "situation",
+      "label": "Постоянная ситуация"
+    },
+    {
+      "id": "narration",
+      "label": "Повествование"
+    },
+    {
+      "id": "nature",
+      "label": "Закон природы"
+    },
+    {
+      "id": "stative",
+      "label": "Статичный глагол"
+    }
+  ],
+  "items": [
+    {
+      "verb": "People celebrate New Year with their families.",
+      "answer": "routine"
+    },
+    {
+      "verb": "The train leaves at 7:20.",
+      "answer": "schedule"
+    },
+    {
+      "verb": "Water boils at 100 degrees Celsius.",
+      "answer": "fact"
+    },
+    {
+      "verb": "My sister lives in Paris.",
+      "answer": "situation"
+    },
+    {
+      "verb": "The story begins with a carnival.",
+      "answer": "narration"
+    },
+    {
+      "verb": "Birds fly south in winter.",
+      "answer": "nature"
+    },
+    {
+      "verb": "I usually spend holidays at the seaside.",
+      "answer": "routine"
+    },
+    {
+      "verb": "He believes festivals are important.",
+      "answer": "stative"
+    }
+  ]
+}

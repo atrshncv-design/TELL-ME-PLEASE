@@ -1,0 +1,69 @@
+{
+  "id": "b1_station_1",
+  "title": "Взлом Соцсетей (Дебаггинг)",
+  "description": "Поиск и исправление сложных ошибок (порядок слов, вспом. глаголы) в контексте соцсетей",
+  "category": "grammar",
+  "type": "click-mistake",
+  "items": [
+    {
+      "text": "My friend don't like playing video games online.",
+      "wrong": "don't"
+    },
+    {
+      "text": "Does she sends text messages every day?",
+      "wrong": "sends"
+    },
+    {
+      "text": "He usually download new apps in the evening.",
+      "wrong": "download"
+    },
+    {
+      "text": "My parents doesn't use public transport, they drive a car.",
+      "wrong": "doesn't"
+    },
+    {
+      "text": "Why do you always complain about your homework?",
+      "wrong": null
+    },
+    {
+      "text": "She don't believe in stereotypes about teenagers.",
+      "wrong": "don't"
+    },
+    {
+      "text": "Does your brother studies programming at school?",
+      "wrong": "studies"
+    },
+    {
+      "text": "We doesn't go to the gym on Mondays.",
+      "wrong": "doesn't"
+    },
+    {
+      "text": "How often do you checks your notifications?",
+      "wrong": "checks"
+    },
+    {
+      "text": "My sister have a part-time job on Sundays.",
+      "wrong": "have"
+    },
+    {
+      "text": "Does he plays the guitar in a band?",
+      "wrong": "plays"
+    },
+    {
+      "text": "You doesn't look like a typical bookworm.",
+      "wrong": "doesn't"
+    },
+    {
+      "text": "I don't agrees with your opinion about this film.",
+      "wrong": "agrees"
+    },
+    {
+      "text": "Does your dog chews your school shoes?",
+      "wrong": "chews"
+    },
+    {
+      "text": "My classmates doesn't listen to the teacher during the test.",
+      "wrong": "doesn't"
+    }
+  ]
+}

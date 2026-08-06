@@ -1,0 +1,208 @@
+{
+  "id": "b1_station_3",
+  "title": "Полевое Задание (Коммуникация)",
+  "description": "Снятие языкового барьера через опросы и интервью",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты — журналист и ровесник ученика 8 класса (уровень A2–B1). Сначала проведи опрос о здоровом образе жизни: задавай вопросы из списка «Анкета ЗОЖ» по одному, строго в порядке списка, и жди ответа. Затем возьми интервью у знаменитости: ученик играет роль звезды (актёр, певец, спортсмен), а ты задаёшь ему вопросы журналиста из списка «Интервью со звездой». Реагируй на каждый ответ дружелюбно и коротко: хвали за старание, мягко поправляй ошибки в Present Simple и подсказывай нужные слова. Если ответ слишком короткий, вежливо попроси сказать полным предложением (например: I drink green tea every morning). Говори простыми английскими фразами уровня A2–B1, на русский не переходи.",
+  "checklist": [
+    {
+      "question": "Do you drink green tea every morning?",
+      "markers": [
+        "green tea",
+        "tea",
+        "morning"
+      ],
+      "min": 1,
+      "hint": "Ответь полным предложением: Yes, I do. I drink green tea every morning."
+    },
+    {
+      "question": "Do you eat sugar?",
+      "markers": [
+        "sugar",
+        "don't",
+        "no"
+      ],
+      "min": 1,
+      "hint": "Ответь: No, I don't eat sugar."
+    },
+    {
+      "question": "Do you go to the gym three times a week?",
+      "markers": [
+        "gym",
+        "three times"
+      ],
+      "min": 1,
+      "hint": "Скажи: I go to the gym three times a week."
+    },
+    {
+      "question": "Do you sleep more than 8 hours?",
+      "markers": [
+        "8",
+        "eight",
+        "hours",
+        "sleep"
+      ],
+      "min": 1,
+      "hint": "Ответь: I sleep more than 8 hours."
+    },
+    {
+      "question": "Do you take cold showers?",
+      "markers": [
+        "cold showers",
+        "shower"
+      ],
+      "min": 1,
+      "hint": "Скажи: Yes, I take cold showers."
+    },
+    {
+      "question": "Do you drink fizzy drinks?",
+      "markers": [
+        "fizzy",
+        "don't",
+        "no"
+      ],
+      "min": 1,
+      "hint": "Ответь: No, I don't drink fizzy drinks."
+    },
+    {
+      "question": "Do you ride a bike to school?",
+      "markers": [
+        "bike",
+        "bicycle"
+      ],
+      "min": 1,
+      "hint": "Скажи: I ride a bike to school."
+    },
+    {
+      "question": "Do you do yoga or meditation?",
+      "markers": [
+        "yoga",
+        "meditation"
+      ],
+      "min": 1,
+      "hint": "Ответь: I do yoga / I do meditation."
+    },
+    {
+      "question": "Do you grow vegetables in the garden?",
+      "markers": [
+        "vegetables",
+        "garden",
+        "grow"
+      ],
+      "min": 1,
+      "hint": "Скажи: I grow vegetables in the garden."
+    },
+    {
+      "question": "Do you eat fast food?",
+      "markers": [
+        "fast food",
+        "don't",
+        "no"
+      ],
+      "min": 1,
+      "hint": "Ответь: No, I don't eat fast food at all."
+    },
+    {
+      "question": "Do you wake up early?",
+      "markers": [
+        "wake up",
+        "early"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I do. I wake up early / No, I don't."
+    },
+    {
+      "question": "What do you eat for breakfast?",
+      "markers": [
+        "breakfast",
+        "eat"
+      ],
+      "min": 1,
+      "hint": "Скажи: I eat porridge / eggs / cereal for breakfast."
+    },
+    {
+      "question": "How often do you train?",
+      "markers": [
+        "train",
+        "training"
+      ],
+      "min": 1,
+      "hint": "Ответь: I train every day / twice a week."
+    },
+    {
+      "question": "Do you play any musical instrument?",
+      "markers": [
+        "play",
+        "guitar",
+        "piano",
+        "instrument"
+      ],
+      "min": 1,
+      "hint": "Скажи: I play the guitar / the piano."
+    },
+    {
+      "question": "Who helps you with your work?",
+      "markers": [
+        "help",
+        "helps",
+        "team",
+        "manager"
+      ],
+      "min": 1,
+      "hint": "Ответь: My team / my manager helps me."
+    },
+    {
+      "question": "Do you go to parties?",
+      "markers": [
+        "parties",
+        "party"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I do. I go to parties / No, I don't."
+    },
+    {
+      "question": "What do you do in your free time?",
+      "markers": [
+        "free time",
+        "read",
+        "friends",
+        "games",
+        "music"
+      ],
+      "min": 1,
+      "hint": "Расскажи: In my free time I read books / play games."
+    },
+    {
+      "question": "Do you have a pet?",
+      "markers": [
+        "pet",
+        "cat",
+        "dog"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I have a cat / a dog. / No, I don't."
+    },
+    {
+      "question": "Do you travel a lot?",
+      "markers": [
+        "travel",
+        "travelling",
+        "trips"
+      ],
+      "min": 1,
+      "hint": "Скажи: Yes, I travel a lot / No, I don't travel much."
+    },
+    {
+      "question": "How do you feel before a concert?",
+      "markers": [
+        "feel",
+        "nervous",
+        "excited",
+        "concert"
+      ],
+      "min": 1,
+      "hint": "Ответь: I feel nervous / excited before a concert."
+    }
+  ]
+}

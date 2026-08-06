@@ -163,9 +163,18 @@ export interface TaskData {
   steps?: SurvivalIslandStep[];
   // escape-room (тикет W2-T4): цепочка 5 станций Grammar Escape Room.
   stations?: EscapeRoomStation[];
-  // boss-battle (тикет W3-T3): цепочка 6 вызовов + финальный план поездки.
+  // boss-battle (тикет W3-T3): цепочка 6 вызовов + финальный план поездки
   challenges?: BossBattleChallenge[];
   finalPlan?: BossBattleFinalPlan;
+  // matching (тикет T05, станция B1.2 «Анализ Профилей»): сопоставление
+  // описаний с профессиями — «Угадай профессию».
+  matching?: MatchingData;
+  // text-fix (тикет T06, станция B2.4 «Стабилизация Реальности»): найди и
+  // исправь ошибки в тексте — клик по ошибочному слову → варианты исправления.
+  textFix?: TextFixData;
+  // voice-chat checklist (тикет T07, станции Речи A1.4/A2.4/B1.3/B2.3):
+  // бот задаёт вопросы из списка по одному, ответ оценивается по маркерам.
+  checklist?: VoiceChecklistItem[];
 }
 
 /** Одно предложение задания «Кликни на ошибку» (click-mistake). */
@@ -389,4 +398,69 @@ export interface BossBattleFinalPlan {
 export interface BossBattleData {
   challenges: BossBattleChallenge[];
   finalPlan: BossBattleFinalPlan;
+}
+
+/** Одно описание-профиль matching (T05, станция B1.2 «Анализ Профилей»):
+ *  текст описания + профессии-варианты + правильная профессия (∈ options). */
+export interface MatchingItem {
+  /** Описание повседневных дел («He operates on sick people in a hospital.»). */
+  text: string;
+  /** Профессии-варианты для ЭТОГО описания (2–10, без дублей). */
+  options: string[];
+  /** Правильная профессия (обязана быть среди options). */
+  answer: string;
+}
+
+/** Сопоставление описаний с профессиями (T05): «Угадай профессию». */
+export interface MatchingData {
+  items: MatchingItem[];
+  /** Все профессии станции — легенда/подпись (необязательно). */
+  columns?: string[];
+}
+
+/** Одна ошибка в предложении text-fix (T06): слово-ошибка + его исправление.
+ *  `index` — позиция слова-ошибки в sentence по split(/\s+/) (0-based);
+ *  токен по index обязан совпадать с `wrong` (регистронезависимо). */
+export interface TextFixError {
+  /** Индекс слова-ошибки в предложении (по словам). */
+  index: number;
+  /** Неверное слово («goes»). */
+  wrong: string;
+  /** Исправление («go»). */
+  right: string;
+  /** Варианты исправления: right + 2–3 дистрактора (необязательно; если
+   *  нет — компонент генерирует дистракторы сам). */
+  options?: string[];
+}
+
+/** Одно предложение с 1+ ошибками (text-fix). */
+export interface TextFixSentence {
+  /** Предложение с ошибкой (без разметки, дословно из документа). */
+  sentence: string;
+  /** 1+ ошибок в этом предложении. */
+  errors: TextFixError[];
+  /** Подсказка (по желанию). */
+  hint?: string;
+}
+
+/** Один вопрос voice-chat checklist (тикет T07, станции Речи): бот задаёт
+ *  вопрос из документа, ответ ученика оценивается по маркерам. */
+export interface VoiceChecklistItem {
+  /** Вопрос бота (из документа, дословно). */
+  question: string;
+  /** Слова-маркеры: вопрос засчитан, если в ответе встретилось >= min
+   *  маркеров (эвристика \b-целых слов, как в one-minute). */
+  markers: string[];
+  /** Сколько маркеров нужно встретить (по умолчанию 1). */
+  min?: number;
+  /** Подсказка ученику (по-русски, по желанию). */
+  hint?: string;
+}
+
+/** text-fix (T06): «Исправь N ошибок в тексте» — найди ошибочные слова и
+ *  выбери исправление. Счёт = верно исправленные ошибки / всего ошибок. */
+export interface TextFixData {
+  sentences: TextFixSentence[];
+  /** «Найди и исправь 8 ошибок в тексте». */
+  instruction?: string;
 }

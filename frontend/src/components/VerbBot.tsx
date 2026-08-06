@@ -86,9 +86,16 @@ interface PortalProgressDetail {
 
 interface VerbBotContextValue {
   say: (event: BotEventType) => void
+  /** T12 «Геймификация эпохи»: произвольная реплика-брифинг (текст + настроение,
+   *  таймер скрытия как у say). Добавлен аддитивно — существующие страницы
+   *  используют только say(). */
+  speakText: (text: string, mood?: BotMood, duration?: number) => void
 }
 
-const VerbBotContext = createContext<VerbBotContextValue>({ say: () => {} })
+const VerbBotContext = createContext<VerbBotContextValue>({
+  say: () => {},
+  speakText: () => {},
+})
 
 export function useVerbBot() {
   return useContext(VerbBotContext)
@@ -131,6 +138,14 @@ export function VerbBotProvider({ children }: { children: React.ReactNode }) {
       speak(text, MOOD_FOR[event])
     },
     [grade, speak],
+  )
+
+  // T12: брифинги секторов/эпохи — произвольный текст через тот же speak
+  // (таймер скрытия переиспользуется, настроение по умолчанию happy).
+  const speakText = useCallback(
+    (text: string, mood: BotMood = "happy", duration = 4000) =>
+      speak(text, mood, duration),
+    [speak],
   )
 
   // Greet once on mount (after first user interaction so it feels responsive)
@@ -206,7 +221,7 @@ export function VerbBotProvider({ children }: { children: React.ReactNode }) {
   }, [gradeKey, speak])
 
   return (
-    <VerbBotContext.Provider value={{ say }}>
+    <VerbBotContext.Provider value={{ say, speakText }}>
       {children}
       <VerbBotFloating
         phrase={phrase}

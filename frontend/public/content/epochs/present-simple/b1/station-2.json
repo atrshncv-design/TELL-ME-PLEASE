@@ -1,0 +1,263 @@
+{
+  "id": "b1_station_2",
+  "title": "Анализ Профилей (Лексика)",
+  "description": "Использование Present Simple для описания рутины и фактов в контексте профессий",
+  "category": "grammar",
+  "type": "matching",
+  "matching": {
+    "columns": [
+      "Surgeon",
+      "Mechanic",
+      "Gardener",
+      "Vet",
+      "Programmer",
+      "Plumber",
+      "Journalist",
+      "Pilot",
+      "Chef",
+      "Teacher"
+    ],
+    "items": [
+      {
+        "text": "He operates on sick people in a hospital.",
+        "options": [
+          "Surgeon",
+          "Mechanic",
+          "Gardener",
+          "Vet",
+          "Programmer",
+          "Plumber",
+          "Journalist",
+          "Pilot",
+          "Chef",
+          "Teacher"
+        ],
+        "answer": "Surgeon"
+      },
+      {
+        "text": "She fixes cars and changes tires.",
+        "options": [
+          "Vet",
+          "Programmer",
+          "Plumber",
+          "Journalist",
+          "Pilot",
+          "Chef",
+          "Teacher",
+          "Surgeon",
+          "Mechanic",
+          "Gardener"
+        ],
+        "answer": "Mechanic"
+      },
+      {
+        "text": "He plants trees and waters the flowers.",
+        "options": [
+          "Journalist",
+          "Pilot",
+          "Chef",
+          "Teacher",
+          "Surgeon",
+          "Mechanic",
+          "Gardener",
+          "Vet",
+          "Programmer",
+          "Plumber"
+        ],
+        "answer": "Gardener"
+      },
+      {
+        "text": "She writes articles for a famous magazine.",
+        "options": [
+          "Teacher",
+          "Surgeon",
+          "Mechanic",
+          "Gardener",
+          "Vet",
+          "Programmer",
+          "Plumber",
+          "Journalist",
+          "Pilot",
+          "Chef"
+        ],
+        "answer": "Journalist"
+      },
+      {
+        "text": "He writes code and creates new apps.",
+        "options": [
+          "Gardener",
+          "Vet",
+          "Programmer",
+          "Plumber",
+          "Journalist",
+          "Pilot",
+          "Chef",
+          "Teacher",
+          "Surgeon",
+          "Mechanic"
+        ],
+        "answer": "Programmer"
+      },
+      {
+        "text": "She flies planes to different countries.",
+        "options": [
+          "Plumber",
+          "Journalist",
+          "Pilot",
+          "Chef",
+          "Teacher",
+          "Surgeon",
+          "Mechanic",
+          "Gardener",
+          "Vet",
+          "Programmer"
+        ],
+        "answer": "Pilot"
+      },
+      {
+        "text": "He cooks delicious meals in a restaurant.",
+        "options": [
+          "Chef",
+          "Teacher",
+          "Surgeon",
+          "Mechanic",
+          "Gardener",
+          "Vet",
+          "Programmer",
+          "Plumber",
+          "Journalist",
+          "Pilot"
+        ],
+        "answer": "Chef"
+      },
+      {
+        "text": "She fixes broken pipes in houses.",
+        "options": [
+          "Mechanic",
+          "Gardener",
+          "Vet",
+          "Programmer",
+          "Plumber",
+          "Journalist",
+          "Pilot",
+          "Chef",
+          "Teacher",
+          "Surgeon"
+        ],
+        "answer": "Plumber"
+      },
+      {
+        "text": "He treats sick dogs and cats.",
+        "options": [
+          "Programmer",
+          "Plumber",
+          "Journalist",
+          "Pilot",
+          "Chef",
+          "Teacher",
+          "Surgeon",
+          "Mechanic",
+          "Gardener",
+          "Vet"
+        ],
+        "answer": "Vet"
+      },
+      {
+        "text": "She explains difficult rules to students.",
+        "options": [
+          "Pilot",
+          "Chef",
+          "Teacher",
+          "Surgeon",
+          "Mechanic",
+          "Gardener",
+          "Vet",
+          "Programmer",
+          "Plumber",
+          "Journalist"
+        ],
+        "answer": "Teacher"
+      },
+      {
+        "text": "He doesn't sleep much because he saves lives.",
+        "options": [
+          "Surgeon",
+          "Mechanic",
+          "Gardener",
+          "Vet",
+          "Programmer",
+          "Plumber",
+          "Journalist",
+          "Pilot",
+          "Chef",
+          "Teacher"
+        ],
+        "answer": "Surgeon"
+      },
+      {
+        "text": "She doesn't work in an office; she travels a lot.",
+        "options": [
+          "Vet",
+          "Programmer",
+          "Plumber",
+          "Journalist",
+          "Pilot",
+          "Chef",
+          "Teacher",
+          "Surgeon",
+          "Mechanic",
+          "Gardener"
+        ],
+        "answer": "Journalist"
+      },
+      {
+        "text": "He uses special tools to repair engines.",
+        "options": [
+          "Journalist",
+          "Pilot",
+          "Chef",
+          "Teacher",
+          "Surgeon",
+          "Mechanic",
+          "Gardener",
+          "Vet",
+          "Programmer",
+          "Plumber"
+        ],
+        "answer": "Mechanic"
+      },
+      {
+        "text": "She uses a lot of spices in her dishes.",
+        "options": [
+          "Teacher",
+          "Surgeon",
+          "Mechanic",
+          "Gardener",
+          "Vet",
+          "Programmer",
+          "Plumber",
+          "Journalist",
+          "Pilot",
+          "Chef"
+        ],
+        "answer": "Chef"
+      },
+      {
+        "text": "He spends hours looking at a computer screen.",
+        "options": [
+          "Gardener",
+          "Vet",
+          "Programmer",
+          "Plumber",
+          "Journalist",
+          "Pilot",
+          "Chef",
+          "Teacher",
+          "Surgeon",
+          "Mechanic"
+        ],
+        "answer": "Programmer"
+      }
+    ]
+  }
+}

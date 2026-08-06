@@ -1,0 +1,190 @@
+{
+  "id": "b2_station_3",
+  "title": "Дипломатическая Миссия (Сложная Речь)",
+  "description": "Свободное использование времени в дискуссии на сложные темы (традиции, культура).",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль ровесника из англоговорящей страны (например, Великобритании, США или Канады) для ученика 9 класса (уровень B1–B2). Это дипломатическая миссия: ты и ученик сравниваете праздники и традиции своих стран. Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ дружелюбно и заинтересованно: хвали за старание, мягко поправляй ошибки в Present Simple, подсказывай нужные слова и добавляй один-два факта о праздниках своей страны. Если ответ слишком короткий, вежливо попроси сказать полным предложением (например: The most popular festival in my country is New Year). Говори на английском уровня B1–B2, на русский не переходи.",
+  "checklist": [
+    {
+      "question": "What are the most popular festivals in your country?",
+      "markers": [
+        "festival",
+        "festivals",
+        "popular",
+        "country",
+        "new year"
+      ],
+      "min": 1,
+      "hint": "Назови самые популярные праздники: The most popular festivals in my country are New Year and Victory Day."
+    },
+    {
+      "question": "Which festival do you like best and why?",
+      "markers": [
+        "festival",
+        "like",
+        "best",
+        "because",
+        "favourite"
+      ],
+      "min": 1,
+      "hint": "Назови любимый праздник и объясни почему: My favourite festival is New Year because I like fireworks."
+    },
+    {
+      "question": "Do people wear special clothes at festivals in your country?",
+      "markers": [
+        "wear",
+        "clothes",
+        "costume",
+        "costumes",
+        "dress"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, people wear special clothes / No, they don't."
+    },
+    {
+      "question": "Do families usually celebrate festivals together?",
+      "markers": [
+        "family",
+        "families",
+        "celebrate",
+        "together",
+        "don't"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, families celebrate festivals together / No, they don't."
+    },
+    {
+      "question": "What food do people usually eat on holidays?",
+      "markers": [
+        "food",
+        "eat",
+        "cook",
+        "cake",
+        "salad",
+        "pancakes"
+      ],
+      "min": 1,
+      "hint": "Расскажи о праздничной еде: People usually eat cake and salads."
+    },
+    {
+      "question": "Do you have carnivals in your country?",
+      "markers": [
+        "carnival",
+        "carnivals",
+        "yes",
+        "no",
+        "don't"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, we have carnivals / No, we don't."
+    },
+    {
+      "question": "What do people usually do at a carnival?",
+      "markers": [
+        "carnival",
+        "dance",
+        "sing",
+        "parade",
+        "music",
+        "costumes"
+      ],
+      "min": 1,
+      "hint": "Расскажи: People dance, sing and watch the parade."
+    },
+    {
+      "question": "Do people dance, sing or watch parades at festivals?",
+      "markers": [
+        "dance",
+        "sing",
+        "parade",
+        "parades",
+        "watch",
+        "music"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, people dance, sing and watch parades."
+    },
+    {
+      "question": "Are fireworks common at celebrations in your country?",
+      "markers": [
+        "firework",
+        "fireworks",
+        "common",
+        "celebrate",
+        "celebration"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, fireworks are common / No, they aren't."
+    },
+    {
+      "question": "Do children take part in festivals and parades?",
+      "markers": [
+        "children",
+        "take part",
+        "festival",
+        "parade",
+        "yes",
+        "no"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, children take part in festivals and parades."
+    },
+    {
+      "question": "What traditions are important in your country?",
+      "markers": [
+        "tradition",
+        "traditions",
+        "important"
+      ],
+      "min": 1,
+      "hint": "Назови традиции: An important tradition in my country is ..."
+    },
+    {
+      "question": "Do you believe in any superstitions connected with holidays?",
+      "markers": [
+        "believe",
+        "superstition",
+        "superstitions",
+        "lucky"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I believe in superstitions / No, I don't."
+    },
+    {
+      "question": "Are there any lucky things or symbols people use on special days?",
+      "markers": [
+        "lucky",
+        "symbol",
+        "symbols",
+        "special days"
+      ],
+      "min": 1,
+      "hint": "Назови символы: People use lucky symbols like ..."
+    },
+    {
+      "question": "Do you think old traditions are still important for teenagers?",
+      "markers": [
+        "tradition",
+        "traditions",
+        "important",
+        "teenager",
+        "teenagers",
+        "think"
+      ],
+      "min": 1,
+      "hint": "Вырази мнение: I think old traditions are important for teenagers."
+    },
+    {
+      "question": "What festival from another country would you like to visit?",
+      "markers": [
+        "festival",
+        "visit",
+        "country",
+        "would like"
+      ],
+      "min": 1,
+      "hint": "Назови праздник другой страны: I would like to visit the Venice Carnival in Italy."
+    }
+  ]
+}

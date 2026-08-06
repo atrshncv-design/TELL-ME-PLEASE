@@ -1,0 +1,154 @@
+{
+  "epoch": "present-simple",
+  "title": "Эпоха Present Simple",
+  "subtitle": "База рутины",
+  "sectors": [
+    {
+      "id": "a1",
+      "level": "A1",
+      "grade": 5,
+      "title": "Калибровка Новичка",
+      "story": "Агент знакомится с базовыми протоколами времени. Ошибки здесь рвут ткань времени.",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a1/station-1.json",
+          "title": "Проверка Системы (To be & Have got)",
+          "type": "quiz"
+        },
+        {
+          "id": "station-2",
+          "file": "a1/station-2.json",
+          "title": "Сканирование Формы (Механика)",
+          "type": "drag-and-drop"
+        },
+        {
+          "id": "station-3",
+          "file": "a1/station-3.json",
+          "title": "Сборка Ядра (Синтаксис)",
+          "type": "build-sentence"
+        },
+        {
+          "id": "station-4",
+          "file": "a1/station-4.json",
+          "title": "Первый Контакт (Речь)",
+          "type": "voice-chat"
+        },
+        {
+          "id": "station-2-b",
+          "file": "a1/station-2-b.json",
+          "title": "Сканирование Формы: Игра V1/Vs"
+        },
+        {
+          "id": "station-3-b",
+          "file": "a1/station-3-b.json",
+          "title": "Сборка Ядра: Игра 6 (+/-/?)"
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "level": "A2",
+      "grade": "6-7",
+      "title": "Отладка Оператора",
+      "story": "Агент переходит к более сложным алгоритмам. Нужно уметь задавать точные вопросы и находить поломки.",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a2/station-1.json",
+          "title": "Фильтрация Данных (Торможение)",
+          "type": "click-mistake"
+        },
+        {
+          "id": "station-2",
+          "file": "a2/station-2.json",
+          "title": "Допрос Свидетеля (Вопросы)",
+          "type": "quiz"
+        },
+        {
+          "id": "station-3",
+          "file": "a2/station-3.json",
+          "title": "Расшифровка Сценария (Текст)",
+          "type": "cloze"
+        },
+        {
+          "id": "station-4",
+          "file": "a2/station-4.json",
+          "title": "Протокол \"Идеальный День\" (Речь)",
+          "type": "voice-chat"
+        }
+      ]
+    },
+    {
+      "id": "b1",
+      "level": "B1",
+      "grade": 8,
+      "title": "Агент под Прикрытием",
+      "story": "Агент внедряется в общество. Нужно понимать стереотипы, описывать профессии и вести светские беседы.",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b1/station-1.json",
+          "title": "Взлом Соцсетей (Дебаггинг)",
+          "type": "click-mistake"
+        },
+        {
+          "id": "station-2",
+          "file": "b1/station-2.json",
+          "title": "Анализ Профилей (Лексика)",
+          "type": "matching"
+        },
+        {
+          "id": "station-3",
+          "file": "b1/station-3.json",
+          "title": "Полевое Задание (Коммуникация)",
+          "type": "voice-chat"
+        },
+        {
+          "id": "station-4",
+          "file": "b1/station-4.json",
+          "title": "Отчет о Наблюдении (Продукт)",
+          "type": "cloze"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "level": "B2",
+      "grade": "9 и ОГЭ",
+      "title": "Мастер Временной Ткани",
+      "story": "Финальная стабилизация. Агент должен понимать глубинные смыслы времени и применять их в глобальных темах.",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b2/station-1.json",
+          "title": "Анализ Аномалий (Смыслы)",
+          "type": "drag-and-drop"
+        },
+        {
+          "id": "station-2",
+          "file": "b2/station-2.json",
+          "title": "Вскрытие Архивов (Сложный Текст)",
+          "type": "cloze"
+        },
+        {
+          "id": "station-3",
+          "file": "b2/station-3.json",
+          "title": "Дипломатическая Миссия (Сложная Речь)",
+          "type": "voice-chat"
+        },
+        {
+          "id": "station-4",
+          "file": "b2/station-4.json",
+          "title": "Стабилизация Реальности (Финальный Босс)",
+          "type": "text-fix"
+        },
+        {
+          "id": "station-4-b",
+          "file": "b2/station-4-b.json",
+          "title": "Стабилизация Реальности: Монолог"
+        }
+      ]
+    }
+  ]
+}

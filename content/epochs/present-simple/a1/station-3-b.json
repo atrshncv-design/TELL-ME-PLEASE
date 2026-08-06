@@ -1,0 +1,110 @@
+{
+  "id": "a1_station_3_b",
+  "title": "Сборка Ядра: Игра 6 (+/-/?)",
+  "description": "Формирование понимания порядка слов (утверждение, отрицание, вопрос). Игра 6: построй предложения +, - и ?.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "Выбери утверждение:",
+      "options": [
+        "We like animals.",
+        "We don’t like animals.",
+        "Do we like animals?"
+      ],
+      "answer": "We like animals."
+    },
+    {
+      "question": "We ___ like animals.",
+      "options": [
+        "don’t",
+        "doesn’t"
+      ],
+      "answer": "don’t"
+    },
+    {
+      "question": "___ we like animals?",
+      "options": [
+        "Do",
+        "Does"
+      ],
+      "answer": "Do"
+    },
+    {
+      "question": "___ ___ we like animals?",
+      "options": [
+        "Why do",
+        "How do",
+        "Why does",
+        "How does"
+      ],
+      "answer": "Why do"
+    },
+    {
+      "question": "Выбери утверждение:",
+      "options": [
+        "A tiger eats meat.",
+        "A tiger doesn’t eat meat.",
+        "Does a tiger eat meat?"
+      ],
+      "answer": "A tiger eats meat."
+    },
+    {
+      "question": "A tiger ___ eat meat.",
+      "options": [
+        "doesn’t",
+        "don’t"
+      ],
+      "answer": "doesn’t"
+    },
+    {
+      "question": "___ a tiger eat meat?",
+      "options": [
+        "Does",
+        "Do"
+      ],
+      "answer": "Does"
+    },
+    {
+      "question": "What ___ a tiger eat?",
+      "options": [
+        "does",
+        "do"
+      ],
+      "answer": "does"
+    },
+    {
+      "question": "Выбери утверждение:",
+      "options": [
+        "Bears sleep in winter.",
+        "Bears don’t sleep in winter.",
+        "Do bears sleep in winter?"
+      ],
+      "answer": "Bears sleep in winter."
+    },
+    {
+      "question": "Bears ___ sleep in winter.",
+      "options": [
+        "don’t",
+        "doesn’t"
+      ],
+      "answer": "don’t"
+    },
+    {
+      "question": "___ bears sleep in winter?",
+      "options": [
+        "Do",
+        "Does"
+      ],
+      "answer": "Do"
+    },
+    {
+      "question": "When ___ bears sleep?",
+      "options": [
+        "do",
+        "does"
+      ],
+      "answer": "do"
+    }
+  ]
+}

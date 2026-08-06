@@ -1,0 +1,132 @@
+{
+  "id": "b2_station_4",
+  "title": "Стабилизация Реальности (Финальный Босс)",
+  "description": "Исправь текст (найди и исправь 8 ошибок).",
+  "category": "grammar",
+  "type": "text-fix",
+  "textFix": {
+    "instruction": "Найди и исправь 8 ошибок в тексте.",
+    "sentences": [
+      {
+        "sentence": "My family celebrate Christmas every year.",
+        "errors": [
+          {
+            "index": 2,
+            "wrong": "celebrate",
+            "right": "celebrates",
+            "options": [
+              "celebrates",
+              "celebrated",
+              "celebrating"
+            ]
+          }
+        ]
+      },
+      {
+        "sentence": "We usually goes to my grandparents’ house.",
+        "errors": [
+          {
+            "index": 2,
+            "wrong": "goes",
+            "right": "go",
+            "options": [
+              "go",
+              "went",
+              "going"
+            ]
+          }
+        ]
+      },
+      {
+        "sentence": "My mum cook a special dinner and my sister make decorations.",
+        "errors": [
+          {
+            "index": 2,
+            "wrong": "cook",
+            "right": "cooks",
+            "options": [
+              "cooks",
+              "cooked",
+              "cooking"
+            ]
+          },
+          {
+            "index": 9,
+            "wrong": "make",
+            "right": "makes",
+            "options": [
+              "makes",
+              "made",
+              "making"
+            ]
+          }
+        ]
+      },
+      {
+        "sentence": "I don’t believes in superstitions, but my grandma carry a lucky charm in her pocket.",
+        "errors": [
+          {
+            "index": 2,
+            "wrong": "believes",
+            "right": "believe",
+            "options": [
+              "believe",
+              "believed",
+              "believing"
+            ]
+          },
+          {
+            "index": 8,
+            "wrong": "carry",
+            "right": "carries",
+            "options": [
+              "carries",
+              "carried",
+              "carrying"
+            ]
+          }
+        ]
+      },
+      {
+        "sentence": "The celebration start at six o’clock and finish with fireworks.",
+        "errors": [
+          {
+            "index": 2,
+            "wrong": "start",
+            "right": "starts",
+            "options": [
+              "starts",
+              "started",
+              "starting"
+            ]
+          },
+          {
+            "index": 7,
+            "wrong": "finish",
+            "right": "finishes",
+            "options": [
+              "finishes",
+              "finished",
+              "finishing"
+            ]
+          }
+        ]
+      },
+      {
+        "sentence": "It be a wonderful evening.",
+        "errors": [
+          {
+            "index": 1,
+            "wrong": "be",
+            "right": "is",
+            "options": [
+              "is",
+              "was",
+              "are"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

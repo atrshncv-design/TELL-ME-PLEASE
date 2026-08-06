@@ -1,0 +1,20 @@
+{
+  "id": "a1_station_3",
+  "title": "Сборка Ядра (Синтаксис)",
+  "description": "Формирование понимания порядка слов (утверждение, отрицание, вопрос) и места наречий частотности.",
+  "category": "grammar",
+  "type": "build-sentence",
+  "adverbs": [
+    "always",
+    "often",
+    "usually",
+    "sometimes",
+    "hardly ever",
+    "never"
+  ],
+  "time_phrases": [
+    ""
+  ],
+  "base_verb": "play games",
+  "subject": "I"
+}

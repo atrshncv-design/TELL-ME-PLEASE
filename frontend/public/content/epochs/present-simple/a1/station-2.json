@@ -1,0 +1,111 @@
+{
+  "id": "a1_station_2",
+  "title": "Сканирование Формы (Механика)",
+  "description": "Отработка чистого рефлекса на окончание -s/-es.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "s",
+      "label": "Окончание -s",
+      "rule": "like → likes"
+    },
+    {
+      "id": "es",
+      "label": "Окончание -es",
+      "rule": "pass → passes"
+    },
+    {
+      "id": "ies",
+      "label": "y → ies",
+      "rule": "study → studies"
+    },
+    {
+      "id": "s_vowel",
+      "label": "y после гласной → -s",
+      "rule": "play → plays"
+    }
+  ],
+  "items": [
+    {
+      "verb": "like",
+      "answer": "s"
+    },
+    {
+      "verb": "live",
+      "answer": "s"
+    },
+    {
+      "verb": "learn",
+      "answer": "s"
+    },
+    {
+      "verb": "help",
+      "answer": "s"
+    },
+    {
+      "verb": "read",
+      "answer": "s"
+    },
+    {
+      "verb": "pass",
+      "answer": "es"
+    },
+    {
+      "verb": "wash",
+      "answer": "es"
+    },
+    {
+      "verb": "watch",
+      "answer": "es"
+    },
+    {
+      "verb": "go",
+      "answer": "es"
+    },
+    {
+      "verb": "do",
+      "answer": "es"
+    },
+    {
+      "verb": "study",
+      "answer": "ies"
+    },
+    {
+      "verb": "carry",
+      "answer": "ies"
+    },
+    {
+      "verb": "try",
+      "answer": "ies"
+    },
+    {
+      "verb": "cry",
+      "answer": "ies"
+    },
+    {
+      "verb": "tidy",
+      "answer": "ies"
+    },
+    {
+      "verb": "play",
+      "answer": "s_vowel"
+    },
+    {
+      "verb": "enjoy",
+      "answer": "s_vowel"
+    },
+    {
+      "verb": "stay",
+      "answer": "s_vowel"
+    },
+    {
+      "verb": "buy",
+      "answer": "s_vowel"
+    },
+    {
+      "verb": "say",
+      "answer": "s_vowel"
+    }
+  ]
+}

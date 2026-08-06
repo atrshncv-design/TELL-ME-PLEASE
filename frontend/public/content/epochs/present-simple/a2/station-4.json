@@ -1,0 +1,154 @@
+{
+  "id": "a2_station_4",
+  "title": "Протокол \"Идеальный День\" (Речь)",
+  "description": "Свободное использование времени в монологе и диалоге. Расскажи друзьям о своём идеальном дне (опоры для монолога — в панели «Сценарий»). Затем поговори со сверстником из англоговорящей страны: он задаст 10 вопросов про твой идеальный день. (Голосовой ассистент)",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль сверстника из англоговорящей страны для ученика 6–7 класса (уровень A2). Сначала попроси ученика рассказать монолог «Мой идеальный день» по опорам (они в панели «Сценарий»), а затем задавай вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ дружелюбно и коротко: хвали за старание, мягко поправляй ошибки в Present Simple и подсказывай нужные слова. Если ответ слишком короткий, вежливо попроси сказать полным предложением (например: I usually get up at nine o'clock). Говори простыми короткими английскими фразами уровня A2, на русский не переходи.",
+  "sections": [
+    {
+      "name": "Опоры для монолога «Мой идеальный день»",
+      "questions": [
+        "My perfect day is on ….",
+        "In the morning I usually … at … o'clock and I ….",
+        "In the afternoon I often … and I sometimes … with my friends.",
+        "At the weekend / On Saturdays I always … because I ….",
+        "In the evening we … at … o'clock and then I ….",
+        "As a rule, I go to bed at … o'clock at night.",
+        "This is my perfect day because …."
+      ]
+    }
+  ],
+  "checklist": [
+    {
+      "question": "What is your perfect day – on Saturday or on Sunday?",
+      "markers": [
+        "saturday",
+        "sunday",
+        "perfect day",
+        "weekend"
+      ],
+      "min": 1,
+      "hint": "Скажи: My perfect day is on Saturday. (или on Sunday)"
+    },
+    {
+      "question": "What do you usually do in the morning on your perfect day?",
+      "markers": [
+        "morning",
+        "get up",
+        "wake up",
+        "breakfast",
+        "usually",
+        "play",
+        "read",
+        "watch"
+      ],
+      "min": 1,
+      "hint": "Расскажи: In the morning I usually get up late and have breakfast."
+    },
+    {
+      "question": "What time do you get up on this day?",
+      "markers": [
+        "get up",
+        "wake up",
+        "o'clock",
+        "seven",
+        "eight",
+        "nine",
+        "ten",
+        "eleven",
+        "half past"
+      ],
+      "min": 1,
+      "hint": "Скажи: I get up at nine o'clock."
+    },
+    {
+      "question": "Do you have breakfast with your family on your perfect day?",
+      "markers": [
+        "breakfast",
+        "family",
+        "yes",
+        "no"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I have breakfast with my family. / No, I don't."
+    },
+    {
+      "question": "What do you do after breakfast?",
+      "markers": [
+        "breakfast",
+        "play",
+        "walk",
+        "read",
+        "games",
+        "music",
+        "go",
+        "computer"
+      ],
+      "min": 1,
+      "hint": "Расскажи: After breakfast I play computer games or listen to music."
+    },
+    {
+      "question": "What do you do in the afternoon – do you go to the park, the sports centre or the cinema?",
+      "markers": [
+        "park",
+        "sports centre",
+        "cinema",
+        "afternoon",
+        "go",
+        "walk"
+      ],
+      "min": 1,
+      "hint": "Ответь: In the afternoon I go to the park."
+    },
+    {
+      "question": "Do you meet your friends after school or at the weekend on your perfect day?",
+      "markers": [
+        "friends",
+        "meet",
+        "after school",
+        "weekend"
+      ],
+      "min": 1,
+      "hint": "Ответь: I meet my friends after school. (или at the weekend)"
+    },
+    {
+      "question": "What hobbies do you usually do – do you play computer games, read books or ride your bike?",
+      "markers": [
+        "computer games",
+        "read",
+        "books",
+        "ride",
+        "bike",
+        "play",
+        "hobby"
+      ],
+      "min": 1,
+      "hint": "Расскажи о хобби: I play computer games and read books."
+    },
+    {
+      "question": "Do you spend your free time at home or outside?",
+      "markers": [
+        "home",
+        "outside",
+        "free time",
+        "spend"
+      ],
+      "min": 1,
+      "hint": "Ответь: I spend my free time at home. (или outside)"
+    },
+    {
+      "question": "What do you do in the evening – do you watch TV or films with your family or friends?",
+      "markers": [
+        "watch",
+        "tv",
+        "films",
+        "evening",
+        "family",
+        "friends"
+      ],
+      "min": 1,
+      "hint": "Расскажи: In the evening I watch TV with my family."
+    }
+  ]
+}

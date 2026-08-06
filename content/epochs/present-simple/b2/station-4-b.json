@@ -1,0 +1,125 @@
+{
+  "id": "b2_station_4_b",
+  "title": "Стабилизация Реальности: Монолог",
+  "description": "Итоговая проверка навыка в формате экзамена (ОГЭ) и монолога.",
+  "category": "grammar",
+  "type": "one-minute",
+  "topic": "My favourite festival",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Фестиваль",
+      "hint": "Назови любимый праздник: My favourite festival is ...",
+      "markers": [
+        "festival",
+        "favourite",
+        "favorite",
+        "holiday"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Когда проходит",
+      "hint": "Скажи, когда праздник: It happens in February / every year.",
+      "markers": [
+        "happens",
+        "takes place",
+        "every year",
+        "in january",
+        "in february",
+        "in march",
+        "in april",
+        "in may",
+        "in june",
+        "in july",
+        "in august",
+        "in september",
+        "in october",
+        "in november",
+        "in december",
+        "in winter",
+        "in summer",
+        "in spring",
+        "in autumn",
+        "on the"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Одежда, еда и занятия",
+      "hint": "Что люди надевают, едят, делают: People wear ... eat ... dance ...",
+      "markers": [
+        "wear",
+        "eat",
+        "cook",
+        "food",
+        "dress",
+        "costume",
+        "costumes",
+        "dance",
+        "sing",
+        "parade",
+        "watch",
+        "walk",
+        "decorate"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Семья",
+      "hint": "Празднует ли семья: My family celebrates ...",
+      "markers": [
+        "family",
+        "my mum",
+        "my mom",
+        "my mother",
+        "my dad",
+        "my father",
+        "my parents",
+        "my sister",
+        "my brother",
+        "my granny",
+        "my grandparents",
+        "my aunt",
+        "my uncle",
+        "my cousin"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Суеверия",
+      "hint": "Веришь ли в приметы: I believe in ... / I don't believe in ...",
+      "markers": [
+        "believe",
+        "superstition",
+        "superstitions",
+        "lucky",
+        "unlucky"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Традиции",
+      "hint": "Важные традиции: An important tradition is ...",
+      "markers": [
+        "tradition",
+        "traditions",
+        "important"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Почему нравится",
+      "hint": "Объясни почему: I like it because ...",
+      "markers": [
+        "because",
+        "like",
+        "love",
+        "enjoy",
+        "fun",
+        "beautiful"
+      ],
+      "min": 1
+    }
+  ]
+}

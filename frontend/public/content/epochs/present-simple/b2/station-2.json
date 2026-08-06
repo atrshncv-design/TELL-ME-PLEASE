@@ -1,0 +1,79 @@
+{
+  "id": "b2_station_2",
+  "title": "Вскрытие Архивов (Сложный Текст)",
+  "description": "Автоматическое применение грамматики в аутентичном академическом тексте.",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "Venice Carnival ___ one of the most elegant and famous festivals in Italy. It ___ place every year in February. People ___ it with loud music and big street parties. Instead, they ___ it with beautiful masks, stylish costumes, and graceful traditions. The canals and squares ___ full of visitors, and the atmosphere ___ mysterious and magical. Tourists ___ to Venice to enjoy the parade and take photos. The masks ___ simple; they ___ very detailed and artistic. The performers ___ modern clothes; they ___ traditional outfits that remind people of the history of the city. The festival ___ important for local culture, and many people love it because it combines art, fashion, and tradition.",
+  "answers": [
+    [
+      "is"
+    ],
+    [
+      "takes"
+    ],
+    [
+      "don’t celebrate"
+    ],
+    [
+      "celebrate"
+    ],
+    [
+      "are"
+    ],
+    [
+      "is"
+    ],
+    [
+      "come"
+    ],
+    [
+      "aren’t"
+    ],
+    [
+      "are"
+    ],
+    [
+      "don’t wear"
+    ],
+    [
+      "wear"
+    ],
+    [
+      "is"
+    ]
+  ],
+  "word_bank": [
+    "is",
+    "is",
+    "is",
+    "are",
+    "are",
+    "aren’t",
+    "takes",
+    "don’t celebrate",
+    "celebrate",
+    "come",
+    "don’t wear",
+    "wear",
+    "do",
+    "does",
+    "don’t",
+    "doesn’t",
+    "isn’t"
+  ],
+  "hints": [
+    "(be)",
+    "(take)",
+    "(not celebrate)",
+    "(celebrate)",
+    "(be)",
+    "(be)",
+    "(come)",
+    "(not be)",
+    "(be)",
+    "(not wear)",
+    "(wear)",
+    "(be)"
+  ]
+}

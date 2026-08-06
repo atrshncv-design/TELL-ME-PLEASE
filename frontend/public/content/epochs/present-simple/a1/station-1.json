@@ -1,0 +1,224 @@
+{
+  "id": "a1_station_1",
+  "title": "Проверка Системы (To be & Have got)",
+  "description": "Автоматизировать базовый рефлекс выбора форм глагола to be (am/is/are) и have got/has got.",
+  "category": "to-be",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "am"
+    },
+    {
+      "question": "My mum",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "We",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "The ruler",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "They",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "She",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "Tom",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "You",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "The pens",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "My friend",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "It",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "The children",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "His brother",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "Mary and Jane",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "A spider",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "I ___ a dog.",
+      "options": [
+        "have",
+        "has"
+      ],
+      "answer": "have"
+    },
+    {
+      "question": "She ___ a red pen.",
+      "options": [
+        "have",
+        "has"
+      ],
+      "answer": "has"
+    },
+    {
+      "question": "We ___ a big house.",
+      "options": [
+        "have",
+        "has"
+      ],
+      "answer": "have"
+    },
+    {
+      "question": "He ___ a sister.",
+      "options": [
+        "have",
+        "has"
+      ],
+      "answer": "has"
+    },
+    {
+      "question": "They ___ new bikes.",
+      "options": [
+        "have",
+        "has"
+      ],
+      "answer": "have"
+    },
+    {
+      "question": "It ___ long ears.",
+      "options": [
+        "have",
+        "has"
+      ],
+      "answer": "has"
+    },
+    {
+      "question": "My cat ___ green eyes.",
+      "options": [
+        "have",
+        "has"
+      ],
+      "answer": "has"
+    },
+    {
+      "question": "You ___ a nice hat.",
+      "options": [
+        "have",
+        "has"
+      ],
+      "answer": "have"
+    },
+    {
+      "question": "Tom and Bob ___ skateboards.",
+      "options": [
+        "have",
+        "has"
+      ],
+      "answer": "have"
+    },
+    {
+      "question": "My mum ___ a car.",
+      "options": [
+        "have",
+        "has"
+      ],
+      "answer": "has"
+    }
+  ]
+}

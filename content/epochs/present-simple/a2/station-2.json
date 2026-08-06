@@ -1,0 +1,99 @@
+{
+  "id": "a2_station_2",
+  "title": "Допрос Свидетеля (Вопросы)",
+  "description": "Автоматизация построения специальных вопросов. Составь вопрос, используя What / Where / When / How / Why / How often / What time.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "My dad drives to work by car. (How)",
+      "options": [
+        "How does your dad drive to work?",
+        "How do your dad drive to work?",
+        "How your dad does drive to work?"
+      ],
+      "answer": "How does your dad drive to work?"
+    },
+    {
+      "question": "My family travels to the sea by train every summer. (How often)",
+      "options": [
+        "How often does your family travel to the sea by train?",
+        "How often do your family travel to the sea by train?",
+        "How often your family does travel to the sea by train?"
+      ],
+      "answer": "How often does your family travel to the sea by train?"
+    },
+    {
+      "question": "We go to school by bus. (How)",
+      "options": [
+        "How do you go to school?",
+        "How does you go to school?",
+        "How you do go to school?"
+      ],
+      "answer": "How do you go to school?"
+    },
+    {
+      "question": "My mum goes to work at 8 o’clock. (What time)",
+      "options": [
+        "What time does your mum go to work?",
+        "What time do your mum go to work?",
+        "What time your mum does go to work?"
+      ],
+      "answer": "What time does your mum go to work?"
+    },
+    {
+      "question": "My brother rides his bike in the park. (Where)",
+      "options": [
+        "Where does your brother ride his bike?",
+        "Where do your brother ride his bike?",
+        "Where your brother does ride his bike?"
+      ],
+      "answer": "Where does your brother ride his bike?"
+    },
+    {
+      "question": "My parents visit our grandparents every Sunday. (How often)",
+      "options": [
+        "How often do your parents visit your grandparents?",
+        "How often does your parents visit your grandparents?",
+        "How often your parents do visit your grandparents?"
+      ],
+      "answer": "How often do your parents visit your grandparents?"
+    },
+    {
+      "question": "Our family has dinner together at seven o’clock. (What time)",
+      "options": [
+        "What time does your family have dinner together?",
+        "What time do your family have dinner together?",
+        "What time your family does have dinner together?"
+      ],
+      "answer": "What time does your family have dinner together?"
+    },
+    {
+      "question": "My cousin lives in a big city. (Where)",
+      "options": [
+        "Where does your cousin live?",
+        "Where do your cousin live?",
+        "Where your cousin does live?"
+      ],
+      "answer": "Where does your cousin live?"
+    },
+    {
+      "question": "My friends walk to the sports centre after school. (Where)",
+      "options": [
+        "Where do your friends walk after school?",
+        "Where does your friends walk after school?",
+        "Where your friends do walk after school?"
+      ],
+      "answer": "Where do your friends walk after school?"
+    },
+    {
+      "question": "My sister takes a taxi to the city centre. (How often)",
+      "options": [
+        "How often does your sister take a taxi to the city centre?",
+        "How often do your sister take a taxi to the city centre?",
+        "How often your sister does take a taxi to the city centre?"
+      ],
+      "answer": "How often does your sister take a taxi to the city centre?"
+    }
+  ]
+}

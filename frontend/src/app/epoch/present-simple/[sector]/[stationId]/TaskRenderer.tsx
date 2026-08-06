@@ -1,5 +1,19 @@
 "use client"
 
+/**
+ * TaskRenderer станций эпохи (тикет T04) — КОПИЯ паттерна классового
+ * TaskRenderer (app/class/[grade]/sections/[section]/[taskId]/TaskRenderer.tsx),
+ * НО:
+ *  - backHref приходит пропом и ведёт на /epoch/present-simple/[sector]
+ *    (классовый жёстко зашивает /class/{grade}/sections — для новой цепочки
+ *    «Эпоха → Сектор → Станция» кнопка «← Назад» должна вести на сектор);
+ *  - grade = grade-ключ сектора (A1→"5", A2→"6", B1→"8", B2→"9") — прогресс
+ *    станций пишется стандартным saveTask в tmp_progress_grade_N, который
+ *    читает lib/epoch.ts (sectorGradeKey).
+ * Классовый TaskRenderer НЕ трогаем (это файлы T05/T06/T07 — matching/text-fix
+ * уже зарегистрированы там; сюда зеркалим новые case при необходимости).
+ */
+
 import { useState } from "react"
 import { QuizTask } from "@/components/tasks/QuizTask"
 import { DragAndDropTask } from "@/components/tasks/DragAndDropTask"
@@ -133,8 +147,15 @@ Follow the script structure but respond naturally as the character.`)
 
 const BG = "min-h-screen bg-gradient-to-br from-violet-100 via-sky-50 to-amber-50"
 
-export function TaskRenderer({ task, grade }: { task: TaskData; grade: string }) {
-  const backHref = `/class/${grade}/sections`
+export function TaskRenderer({
+  task,
+  grade,
+  backHref,
+}: {
+  task: TaskData
+  grade: string
+  backHref: string
+}) {
   const { saveTask } = useProgress(grade)
   const { track } = useAnalytics()
   // Тикет P6: панель-шпаргалка «Правила» (открывается кнопкой на voice-заданиях)

@@ -5,10 +5,12 @@ import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Confetti } from "@/components/Confetti"
+import { ResultScreen } from "@/components/ResultScreen"
 import { useChatStream, type ChatStreamMessage } from "@/lib/useChatStream"
 import { useSpeechSynthesis } from "@/lib/useSpeechSynthesis"
 import { useSpeechRecognition } from "@/lib/useSpeechRecognition"
 import { useAnalytics } from "@/lib/useAnalytics"
+import type { VoiceChecklistItem } from "@/types/task"
 
 interface VoiceChatTaskProps {
   title: string
@@ -20,6 +22,13 @@ interface VoiceChatTaskProps {
   /** id задания — уходит на бэкенд для выбора роли ИИ (промпт-роутер). */
   taskId?: string
   sessionSeconds?: number
+  /** Тикет T07: режим «вопросы из списка + оценка по маркерам» (checklist).
+   *  Если передан и непуст — бот задаёт вопросы по одному, ответы оцениваются
+   *  эвристикой маркеров; иначе — прежний свободный диалог. */
+  checklist?: VoiceChecklistItem[]
+  /** Тикет T07: результат прохождения checklist («N из M») — вызывается ровно
+   *  один раз по завершении списка. Без checklist не вызывается. */
+  onComplete?: (score: number, total: number) => void
 }
 
 /** Приветствия Verb Bot на старте сессии — ротация по hash taskId (чистый рендер, не уходит в стрим). */
@@ -47,6 +56,8 @@ function VoiceChatInner({
   grade: gradeProp,
   taskId,
   sessionSeconds = 180,
+  checklist,
+  onComplete,
 }: VoiceChatTaskProps) {
   const params = useSearchParams()
   const grade = gradeProp || params.get("grade") || "7"
@@ -67,33 +78,108 @@ function VoiceChatInner({
   // 3-мин таймер истёк — финальный запрос отправлен, ввод заблокирован
   const timeUpRef = useRef(false)
 
+  // --- Тикет T07: режим checklist (вопросы из списка + оценка по маркерам) ---
+  const checklistItems = Array.isArray(checklist) ? checklist : []
+  const checklistMode = checklistItems.length > 0
+  const [listIndex, setListIndex] = useState(0)
+  const [listScore, setListScore] = useState(0)
+  const [listAnswer, setListAnswer] = useState("")
+  const [listVerdict, setListVerdict] = useState<null | "correct" | "wrong">(null)
+  const [listFinished, setListFinished] = useState(false)
+  // onComplete должен сработать ровно один раз за прохождение списка
+  const completedRef = useRef(false)
+  // Какой вопрос уже озвучен ботом (TTS) — не повторять на ре-рендерах
+  const spokenIndexRef = useRef(-1)
+
+  /** Экранирование regex-спецсимволов (маркеры ищем как целые слова). */
+  const escapeRegex = (s: string): string => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+
+  /** Эвристика (как в one-minute): сколько маркеров вопроса встретилось в ответе. */
+  const markersMet = (item: VoiceChecklistItem, text: string): number => {
+    if (!item.markers || item.markers.length === 0) return 0
+    const lower = text.toLowerCase()
+    let count = 0
+    for (const marker of item.markers) {
+      const norm = marker.trim().toLowerCase()
+      if (!norm) continue
+      try {
+        if (new RegExp(`\\b${escapeRegex(norm)}\\b`, "i").test(lower)) count++
+      } catch {
+        /* пропускаем невалидный маркер */
+      }
+    }
+    return count
+  }
+
+  /** Ответ (голосом или текстом) → вердикт по маркерам текущего вопроса. */
+  const submitChecklistAnswer = (text: string) => {
+    if (!checklistMode || listVerdict !== null || listFinished) return
+    const item = checklistItems[listIndex]
+    if (!item) return
+    const ok = markersMet(item, text) >= (item.min ?? 1)
+    setListAnswer(text)
+    setListVerdict(ok ? "correct" : "wrong")
+    if (ok) setListScore((s) => s + 1)
+  }
+
+  /** «Следующий вопрос →» / «К результатам →» после вердикта. */
+  const advanceChecklist = () => {
+    if (listVerdict === null) return
+    if (listIndex + 1 >= checklistItems.length) {
+      setListFinished(true)
+      if (!completedRef.current) {
+        completedRef.current = true
+        onComplete?.(listScore, checklistItems.length)
+      }
+    } else {
+      setListIndex((i) => i + 1)
+      setListAnswer("")
+      setListVerdict(null)
+    }
+  }
+
+  /** Retry с ResultScreen — сброс к первому вопросу (onComplete снова один раз). */
+  const retryChecklist = () => {
+    stop()
+    spokenIndexRef.current = -1
+    completedRef.current = false
+    setListIndex(0)
+    setListScore(0)
+    setListAnswer("")
+    setListVerdict(null)
+    setListFinished(false)
+  }
+
   const { speak, stop, speaking, supported: ttsSupported, voiceName } = useSpeechSynthesis()
   // Зеркало speaking для синхронных проверок в обработчиках событий
   const speakingRef = useRef(speaking)
   speakingRef.current = speaking
 
   // 3-мин таймер СЕССИИ: отсчитывает с момента старта (как в старом бэкенде),
-  // НЕ сбрасывается при обмене репликами.
+  // НЕ сбрасывается при обмене репликами. В режиме checklist таймер не нужен —
+  // темп задаёт сам ученик (вопросы по одному).
   useEffect(() => {
-    if (sessionEnded) return
+    if (checklistMode || sessionEnded) return
     const iv = setInterval(() => {
       setTimeLeft((t) => (t <= 1 ? (clearInterval(iv), 0) : t - 1))
     }, 1000)
     return () => clearInterval(iv)
-  }, [sessionEnded])
+  }, [checklistMode, sessionEnded])
 
   // Funnel: fire once when a voice session begins (component mounts) and once
   // when it ends (server signals session_ended -> the finale screen). grade is
   // tracked so the future dashboard can break the funnel down by class.
+  // В режиме checklist бэкенд-сессии нет — событие не шлём.
   useEffect(() => {
+    if (checklistMode) return
     track({ event_type: "voice_session_started", grade: Number(grade) })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
-    if (sessionEnded) track({ event_type: "voice_session_ended", grade: Number(grade) })
+    if (checklistMode || sessionEnded) track({ event_type: "voice_session_ended", grade: Number(grade) })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sessionEnded])
+  }, [checklistMode, sessionEnded])
 
   const formatTime = (s: number) => {
     const m = Math.floor(s / 60)
@@ -153,8 +239,10 @@ function VoiceChatInner({
   })
 
   // Сессия стартует при монтировании (аналог WS-init фазы 1):
-  // «connected» = сессия готова, а не сетевое соединение.
+  // «connected» = сессия готова, а не сетевое соединение. В режиме checklist
+  // бэкенд не нужен — вопросы и оценка локальные, сессию не открываем.
   useEffect(() => {
+    if (checklistMode) return
     startSession({ branchId: grade, taskId, taskContext })
     // Бот здоровается ПЕРВЫМ — отправляем триггер-приветствие, чтобы LLM
     // ответил стартовой репликой и TTS её озвучил. Без этого пользователь
@@ -164,6 +252,18 @@ function VoiceChatInner({
     send("Hi! Please start the conversation and introduce yourself.")
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  // Тикет T07 (checklist): бот ОЗВУЧИВАЕТ текущий вопрос (TTS). Один раз на
+  // вопрос — spokenIndexRef защищает от повторной озвучки на ре-рендерах.
+  useEffect(() => {
+    if (!checklistMode || listFinished) return
+    const idx = listIndex
+    if (spokenIndexRef.current === idx) return
+    spokenIndexRef.current = idx
+    const q = checklistItems[idx]
+    if (q) speak(q.question)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [listIndex, checklistMode, listFinished])
 
   // По истечении 180с — финальный запрос с final:true (сервер сам соберёт
   // фидбек и пришлёт session_ended). Срабатывает ровно один раз.
@@ -183,9 +283,19 @@ function VoiceChatInner({
   useEffect(() => () => stop(), [stop])
 
   const { listening, supported, error, start, stop: stopListening } = useSpeechRecognition({
-    enabled: !speaking && !sessionEnded && !timeUpRef.current,
+    // В режиме checklist распознавание активно, пока нет вердикта по вопросу
+    enabled:
+      !speaking &&
+      !sessionEnded &&
+      !timeUpRef.current &&
+      (checklistMode ? listVerdict === null && !listFinished : true),
     onResult: (text) => {
       if (timeUpRef.current || sessionEndedRef.current) return
+      // Тикет T07: ответ на вопрос checklist оценивается локально по маркерам.
+      if (checklistMode) {
+        submitChecklistAnswer(text)
+        return
+      }
       setMessages((p) => [...p, { role: "user", text }])
       send(text)
       aiTextRef.current = ""
@@ -195,11 +305,20 @@ function VoiceChatInner({
 
   const toggleMic = () => (listening ? stopListening() : start())
 
+  // В режиме checklist бэкенд-сессии нет — «соединение» всегда доступно.
+  const isConnected = checklistMode || connected
+
   // Text-input fallback for browsers where Web Speech API is unavailable (e.g. Firefox).
   // Mirrors the voice `onResult` path: append the user message, send over SSE, clear any partial AI text.
+  // В режиме checklist текст — тоже ответ на текущий вопрос (оценка по маркерам).
   const handleSendText = () => {
     const text = textInput.trim()
-    if (!text || !connected || sessionEnded || timeUpRef.current) return
+    if (!text || !isConnected || sessionEnded || timeUpRef.current) return
+    if (checklistMode) {
+      submitChecklistAnswer(text)
+      setTextInput("")
+      return
+    }
     setMessages((p) => [...p, { role: "user", text }])
     send(text)
     aiTextRef.current = ""
@@ -234,6 +353,20 @@ function VoiceChatInner({
           ↻ Ещё раз
         </motion.button>
       </div>
+    )
+  }
+
+  // Тикет T07 (checklist): список вопросов пройден — «N из M» на ResultScreen.
+  // taskType="voice-chat" уже в SPEAKING_TASK_TYPES → награда «+N 🗣».
+  if (checklistMode && listFinished) {
+    return (
+      <ResultScreen
+        title={title}
+        score={listScore}
+        total={checklistItems.length}
+        onRetry={retryChecklist}
+        taskType="voice-chat"
+      />
     )
   }
 
@@ -299,7 +432,13 @@ function VoiceChatInner({
           <div>
             <div className="font-bold text-indigo-900 text-sm">{title}</div>
             <div className="text-xs text-slate-500 flex items-center gap-2">
-              {sessionEnded ? "сессия завершена" : connected ? "онлайн" : "офлайн"}
+              {checklistMode
+                ? `вопрос ${listIndex + 1} из ${checklistItems.length}`
+                : sessionEnded
+                  ? "сессия завершена"
+                  : connected
+                    ? "онлайн"
+                    : "офлайн"}
               {/* Диагностика TTS: видно, есть ли голос на устройстве */}
               {ttsSupported ? (
                 <span className="text-emerald-600" title={`Голос: ${voiceName ?? "—"}`}>
@@ -310,7 +449,7 @@ function VoiceChatInner({
                   🔇
                 </span>
               )}
-              {!connected && !sessionEnded && (
+              {!isConnected && !sessionEnded && (
                 <button onClick={reconnect} className="text-indigo-600 underline hover:text-indigo-800">
                   Переподключиться
                 </button>
@@ -325,9 +464,15 @@ function VoiceChatInner({
             </button>
           )}
           {muted && <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">🔇</span>}
-          <div className={`text-xs font-mono px-2 py-0.5 rounded-full ${timeLeft <= 30 ? "bg-red-100 text-red-700" : "bg-slate-100 text-slate-600"}`}>
-            {formatTime(timeLeft)}
-          </div>
+          {checklistMode ? (
+            <div className="text-xs font-mono px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700">
+              ✓ {listScore} · {listIndex + 1}/{checklistItems.length}
+            </div>
+          ) : (
+            <div className={`text-xs font-mono px-2 py-0.5 rounded-full ${timeLeft <= 30 ? "bg-red-100 text-red-700" : "bg-slate-100 text-slate-600"}`}>
+              {formatTime(timeLeft)}
+            </div>
+          )}
         </div>
       </div>
 
@@ -335,8 +480,72 @@ function VoiceChatInner({
         {/* Chat area */}
         <div className={`flex-1 flex flex-col ${showPanel ? "border-r border-indigo-100" : ""}`}>
           <div className="flex-1 overflow-y-auto px-4 py-3 space-y-2">
-            {/* Мем-реплика Verb Bot при старте: чистый рендер, в стрим не уходит */}
-            {!sessionEnded && messages.length === 0 && (
+            {/* Тикет T07 (checklist): текущий вопрос бота + вердикт по маркерам */}
+            {checklistMode && (
+              <>
+                <div className="rounded-2xl bg-white shadow border border-indigo-100 p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[11px] font-bold uppercase tracking-wide text-indigo-500">
+                      Вопрос {listIndex + 1} из {checklistItems.length}
+                    </span>
+                    <span className="text-xs font-bold text-indigo-700 bg-indigo-100 rounded-full px-2 py-0.5">
+                      ✓ {listScore}
+                    </span>
+                  </div>
+                  <p className="font-display text-lg font-extrabold text-slate-800 leading-snug">
+                    {checklistItems[listIndex]?.question}
+                  </p>
+                  {checklistItems[listIndex]?.hint && (
+                    <p className="mt-2 text-xs text-slate-400">💡 {checklistItems[listIndex]?.hint}</p>
+                  )}
+                </div>
+
+                {listAnswer && (
+                  <motion.div initial={{ y: 8, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="flex justify-end">
+                    <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm bg-indigo-600 text-white">
+                      {listAnswer}
+                    </div>
+                  </motion.div>
+                )}
+
+                <AnimatePresence mode="wait">
+                  {listVerdict && (
+                    <motion.div
+                      key={listIndex}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0 }}
+                      className={`rounded-2xl border-2 p-4 ${listVerdict === "correct" ? "border-emerald-200 bg-emerald-50" : "border-rose-200 bg-rose-50"}`}
+                    >
+                      <div className="flex items-center gap-2">
+                        <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-base font-black text-white ${listVerdict === "correct" ? "bg-emerald-500" : "bg-rose-500"}`}>
+                          {listVerdict === "correct" ? "✓" : "✗"}
+                        </span>
+                        <div>
+                          <div className={`text-sm font-bold ${listVerdict === "correct" ? "text-emerald-700" : "text-rose-700"}`}>
+                            {listVerdict === "correct" ? "Отлично, засчитано!" : "Почти получилось!"}
+                          </div>
+                          {listVerdict === "wrong" && (
+                            <div className="text-xs text-rose-600 mt-0.5">
+                              Подсказка — под вопросом ☝️
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      <motion.button
+                        whileTap={{ scale: 0.97 }}
+                        onClick={advanceChecklist}
+                        className="mt-3 w-full min-h-[44px] rounded-2xl bg-indigo-600 px-4 py-2.5 font-bold text-white shadow transition-colors hover:bg-indigo-700"
+                      >
+                        {listIndex + 1 >= checklistItems.length ? "К результатам →" : "Следующий вопрос →"}
+                      </motion.button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </>
+            )}
+            {/* Мем-реплика Verb Bot при старте: чистый рендер, в стрим не уходит (только свободный диалог) */}
+            {!checklistMode && !sessionEnded && messages.length === 0 && (
               <motion.div initial={{ y: 8, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="flex justify-start">
                 <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm bg-white text-slate-800 shadow border border-slate-100">
                   {pickGreeting(taskId)}
@@ -390,17 +599,20 @@ function VoiceChatInner({
           {/* Input area — three branches: mic (Chrome/Edge), text fallback (Firefox), nothing (session ended) */}
           <div className="flex flex-col items-center gap-2 px-4 py-3 border-t border-indigo-100">
             {supported && !sessionEnded && !timeUpRef.current ? (() => {
-              // Priority order: offline > muted > listening > idle.
+              // Priority order: verdict (checklist) > offline > muted > listening > idle.
               // Each state gets a distinct color + icon + native tooltip so the user
               // understands WHY the mic isn't reacting when it's disabled.
-              const micState = !connected ? "offline" : muted ? "muted" : listening ? "listening" : "idle"
+              const micState = listVerdict !== null ? "locked" : !isConnected ? "offline" : muted ? "muted" : listening ? "listening" : "idle"
               const micConfig = {
                 listening: { bg: "bg-red-500 text-white shadow-red-200", title: "Идёт запись. Нажми, чтобы остановить." },
                 muted:     { bg: "bg-amber-200 text-amber-700", title: "ИИ говорит. Микрофон на паузе." },
                 offline:   { bg: "bg-slate-300 text-slate-500 opacity-60 cursor-not-allowed", title: "Нет связи с сервером. Проверь, что сервис запущен." },
+                locked:    { bg: "bg-slate-200 text-slate-500", title: "Ответ записан. Нажми «Далее»." },
                 idle:      { bg: "bg-indigo-600 text-white shadow-indigo-200 hover:bg-indigo-700", title: "Нажми, чтобы говорить." },
               }[micState]
-              const statusLabel = !connected ? "офлайн" : muted ? "пауза (ИИ говорит)" : listening ? "слушаю..." : "готов слушать"
+              const statusLabel = listVerdict !== null
+                ? listVerdict === "correct" ? "засчитано ✓" : "не засчитано ✗"
+                : !isConnected ? "офлайн" : muted ? "пауза (ИИ говорит)" : listening ? "слушаю..." : "готов слушать"
               // Волна «живёт» при записи (красная, быстрая) и озвучке (индиго, медленнее); в idle — еле дышит
               const waveActive = micState === "listening" || micState === "muted"
               const waveColor = micState === "listening" ? "text-red-500" : micState === "muted" ? "text-indigo-500" : "text-slate-300"
@@ -502,7 +714,7 @@ function VoiceChatInner({
                         animate={micState === "idle" ? { scale: [1, 1.07, 1] } : { scale: 1 }}
                         transition={micState === "idle" ? { duration: 2.2, repeat: Infinity, ease: "easeInOut" } : {}}
                         onClick={toggleMic}
-                        disabled={muted || !connected}
+                        disabled={muted || !isConnected || listVerdict !== null}
                         title={micConfig.title}
                         className={`w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-colors ${micConfig.bg}`}
                       >
@@ -531,13 +743,13 @@ function VoiceChatInner({
                     onChange={(e) => setTextInput(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && handleSendText()}
                     placeholder="Напиши ответ на английском..."
-                    disabled={!connected}
+                    disabled={!isConnected}
                     className="flex-1 px-4 py-3 text-base rounded-xl border-2 border-indigo-200 focus:border-indigo-500 outline-none min-h-[48px] disabled:opacity-50"
                   />
                   <motion.button
                     whileTap={{ scale: 0.95 }}
                     onClick={handleSendText}
-                    disabled={!connected || !textInput.trim()}
+                    disabled={!isConnected || !textInput.trim()}
                     className="px-5 py-3 bg-indigo-600 text-white rounded-xl font-semibold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-indigo-700"
                   >
                     Отправить
@@ -550,7 +762,7 @@ function VoiceChatInner({
             )}
             {muted && (
               <div className="flex items-center gap-1 text-xs text-indigo-600">
-                <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full animate-pulse" />Озвучиваю ответ...
+                <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full animate-pulse" />Озвучиваю...
               </div>
             )}
           </div>
