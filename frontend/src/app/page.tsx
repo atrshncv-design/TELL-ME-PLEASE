@@ -69,7 +69,7 @@ export default function Home() {
           variants={item}
           className="font-display-alt text-5xl font-black leading-[1.05] tracking-tight text-primary-900 text-balance"
         >
-          time travel mission
+          Time travel mission
         </motion.h1>
 
         <motion.p variants={item} className="max-w-sm text-lg font-medium text-slate-600">
