@@ -1,0 +1,251 @@
+{
+  "epoch": "past-simple",
+  "title": "Эпоха Past Simple",
+  "subtitle": "Машина Времени",
+  "icon": "📜",
+  "theory": [
+    {
+      "title": "📜 Шаг 1: Суть времени (Что это такое?)",
+      "text": "Привет, ребята! 👋 Мы садимся в «Машину Времени» и отправляемся в прошлое. Настоящее время (Simple, Continuous, Perfect) — это про то, что происходит СЕЙЧАС. Past Simple — это «Историческая Летопись» 📜.\nЭто время рассказывает о фактах, действиях или событиях, которые начались И ЗАКОНЧИЛИСЬ в прошлом. Дверь в этот период времени уже закрыта.\nФормула (Базовый каркас):\nПодлежащее + Глагол во 2-й форме (V2)\nI played football yesterday. (Я играл в футбол вчера).\nWe went to the park. (Мы ходили в парк).\n⚠️ ГЛАВНЫЙ БОСС Past Simple: Как получить V2 (2-ю форму)?\nПравильные глаголы (Regular): Добавляем окончание -ED.\nplay -> play*ed, visit -> visited*. (Помните про орфографию: stop -> stopped, study -> studied).\nНеправильные глаголы (Irregular): Их нужно выучить! Они меняют форму целиком.\ngo -> went\nsee -> saw\nbuy -> bought"
+    },
+    {
+      "title": "🎭 Шаг 2: Когда использовать Past Simple? (Маркеры)",
+      "text": "Ваш главный компас — это слова-маркеры, которые четко привязаны к ЗАКОНЧЕННОМУ времени:\nYesterday (вчера)\nLast (week, month, year) (на прошлой неделе, в прошлом месяце)\n... ago (2 days ago, 5 years ago) (тому назад)\nIn 2010 (в определенном году в прошлом)"
+    },
+    {
+      "title": "⚙️ Шаг 3: Механика Отрицания и Вопроса (Магия DID)",
+      "text": "В Past Simple нет вспомогательных глаголов do/does. Их заменяет DID (прошедшая форма от do). ⚠️ ГЛАВНОЕ ПРАВИЛО: DID — жадина, как и DOES. Он забирает вторую форму себе, превращаясь в did, а смысловой глагол возвращает в 1-ю форму (V1 — начальную форму)!\nВопрос: Did you play football? (НЕ Did you played?)\nОтрицание: I didn't (did not) go to the park. (НЕ didn't went)\nИсключение: Глагол to be (was/were) не нуждается в did. (Was he there? He wasn't there.)"
+    },
+    {
+      "title": "⚔️ Шаг 4: Битва Past Simple vs Present Perfect (Главное правило ОГЭ)",
+      "text": "Это самая частая ошибка на экзаменах. Как не перепутать?\nPast Simple = «Историк» 📜. Период времени ЗАКОНЧЕН. Можно спросить «КОГДА ИМЕННО?».\nI lost my keys yesterday. (Я потерял ключи ВЧЕРА. Когда? — Вчера. Past Simple).\nPresent Perfect = «Детектив» 🕵️‍♂️. Период времени НЕ ЗАКОНЧЕН (today) или точное время неважно, важен СЕЙЧАС результат.\nI have lost my keys. (Я потерял ключи. Когда — неважно. Результат: я сейчас не могу открыть дверь. Present Perfect).\n💡 Лайфхак для ОГЭ: Видите yesterday, last, ago — смело пишите Past Simple (V2). Видите just, already, yet, ever, never — пишите Present Perfect (have/has + V3)."
+    }
+  ],
+  "theoryQuiz": [
+    {
+      "question": "I ___ to the cinema yesterday.",
+      "options": [
+        "went",
+        "have gone"
+      ],
+      "answer": "went"
+    },
+    {
+      "question": "She ___ tennis last week.",
+      "options": [
+        "didn't play",
+        "didn't played"
+      ],
+      "answer": "didn't play"
+    },
+    {
+      "question": "___ this film last Sunday?",
+      "options": [
+        "Did you see",
+        "Have you seen"
+      ],
+      "answer": "Did you see"
+    },
+    {
+      "question": "We ___ our project! We can rest now.",
+      "options": [
+        "have finished",
+        "finished"
+      ],
+      "answer": "have finished"
+    },
+    {
+      "question": "My dad ___ a new car two days ago.",
+      "options": [
+        "bought",
+        "has bought"
+      ],
+      "answer": "bought"
+    }
+  ],
+  "music": {
+    "title": "🎵 Музыкальная пауза (Караоке-генератор)",
+    "links": [
+      "[Ссылка на Rutube/Yandex коллекцию]"
+    ],
+    "sunoPrompt": "Придумай веселую песню про Past Simple. Объясни, что правильные глаголы добавляют -ed, а неправильные нужно учить наизусть (приведи 3 примера: go-went, see-saw, buy-bought). Напомни, что в отрицаниях и вопросах появляется DID, а глагол возвращается в 1-ю форму. Стиль: upbeat rock-n-roll, 120 bpm."
+  },
+  "sectors": [
+    {
+      "id": "a1",
+      "level": "A1",
+      "title": "Первый Полет",
+      "grade": 5,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a1/station-1.json",
+          "title": "Сортировка Артефактов (Правильные vs Неправильные)"
+        },
+        {
+          "id": "station-2",
+          "file": "a1/station-2.json",
+          "title": "Триггер: Вчера (Механика V2)"
+        },
+        {
+          "id": "station-3",
+          "file": "a1/station-3.json",
+          "title": "Жадина DID (Отрицание и Вопрос)"
+        },
+        {
+          "id": "station-4",
+          "file": "a1/station-4.json",
+          "title": "Паттерны Неправильных (Детектор)"
+        },
+        {
+          "id": "station-5",
+          "file": "a1/station-5.json",
+          "title": "Контраст Маркеров (Past vs Perfect)"
+        },
+        {
+          "id": "station-6",
+          "file": "a1/station-6.json",
+          "title": "Сборка Контекста (Текст)"
+        },
+        {
+          "id": "station-7",
+          "file": "a1/station-7.json",
+          "title": "Расскажи о Выходных (ИИ-бот)"
+        }
+      ],
+      "story": "Механика V2 (правильные/неправильные), did/didn't, базовые вопросы."
+    },
+    {
+      "id": "a2",
+      "level": "A2",
+      "title": "Хранитель Летописей",
+      "grade": 6,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a2/station-1.json",
+          "title": "Тренажер Спецвопросов (Wh- + did)"
+        },
+        {
+          "id": "station-2",
+          "file": "a2/station-2.json",
+          "title": "Перевод-Ловушка (Интерференция)"
+        },
+        {
+          "id": "station-3",
+          "file": "a2/station-3.json",
+          "title": "Виктория Времен (Past vs Perfect)"
+        },
+        {
+          "id": "station-4",
+          "file": "a2/station-4.json",
+          "title": "Детектор Ошибок (Дебаггинг)"
+        },
+        {
+          "id": "station-5",
+          "file": "a2/station-5.json",
+          "title": "Текст: Мой Отпуск (Чтение)"
+        },
+        {
+          "id": "station-6",
+          "file": "a2/station-6.json",
+          "title": "Блог: Вчерашний День (Продукт)"
+        },
+        {
+          "id": "station-7",
+          "file": "a2/station-7.json",
+          "title": "Интервью: Окончание Школы (Диалог)"
+        }
+      ],
+      "story": "Расширение лексики (Spotlight 6), Спецвопросы (Wh- questions), перевод-ловушки."
+    },
+    {
+      "id": "b1",
+      "level": "B1",
+      "title": "Мастер Повествования",
+      "grade": "7-8",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b1/station-1.json",
+          "title": "ОРФОГРАФИЯ -ED (Сложные случаи)"
+        },
+        {
+          "id": "station-2",
+          "file": "b1/station-2.json",
+          "title": "История Создания Приложения (Текст)"
+        },
+        {
+          "id": "station-3",
+          "file": "b1/station-3.json",
+          "title": "Тонкие Смыслы (Перевод-Ловушка)"
+        },
+        {
+          "id": "station-4",
+          "file": "b1/station-4.json",
+          "title": "Контраст Маркеров (Сортировка)"
+        },
+        {
+          "id": "station-5",
+          "file": "b1/station-5.json",
+          "title": "История из Жизни (Речь)"
+        },
+        {
+          "id": "station-6",
+          "file": "b1/station-6.json",
+          "title": "Интервью с Изобретателем (Диалог с ИИ)"
+        },
+        {
+          "id": "station-7",
+          "file": "b1/station-7.json",
+          "title": "Комикс \"Ошибка\" (Продукт)"
+        }
+      ],
+      "story": "Лексика технологий, истории. Связное повествование, строгий контроль Past vs Perfect."
+    },
+    {
+      "id": "b2",
+      "level": "B2",
+      "title": "Мастер Временной Ткани",
+      "grade": 9,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b2/station-1.json",
+          "title": "ОГЭ-Тренажер (Task 19: 5 Времени)"
+        },
+        {
+          "id": "station-2",
+          "file": "b2/station-2.json",
+          "title": "Ловушки со Временами (Выбор формы)"
+        },
+        {
+          "id": "station-3",
+          "file": "b2/station-3.json",
+          "title": "Текст ОГЭ: История Города (Чтение)"
+        },
+        {
+          "id": "station-4",
+          "file": "b2/station-4.json",
+          "title": "Симуляция ОГЭ (Устная часть Task 2)"
+        },
+        {
+          "id": "station-5",
+          "file": "b2/station-5.json",
+          "title": "Описание Фотографии (ОГЭ Task 3)"
+        },
+        {
+          "id": "station-6",
+          "file": "b2/station-6.json",
+          "title": "Дебаты: \"Великие Открытия\" (Монолог)"
+        },
+        {
+          "id": "station-7",
+          "file": "b2/station-7.json",
+          "title": "Финальный Босс: 5 Времен (Викторина)"
+        }
+      ],
+      "story": "Лексика общества, безупречное владение всеми 5 временами для ОГЭ."
+    }
+  ]
+}

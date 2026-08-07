@@ -1,0 +1,47 @@
+{
+  "id": "future_perfect_continuous_a2_station_6",
+  "title": "Блог: Мои Достижения (Продукт)",
+  "description": "Напиши 3 предложения о том, как долго ты будешь заниматься каким-то делом к определенному моменту в будущем. (By next year I will have been learning English for 5 years...).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши 3 предложения о том, как долго ты будешь заниматься каким-то делом к определенному моменту в будущем. (By next year I will have been learning English for 5 years...).",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Конструкция will have been",
+      "hint": "By next year I will have been learning English for 5 years.",
+      "markers": [
+        "will have been"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Маркер BY (к моменту)",
+      "hint": "By next year...",
+      "markers": [
+        "by"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Маркер FOR (в течение)",
+      "hint": "...for 5 years.",
+      "markers": [
+        "for"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Глагол с -ing",
+      "hint": "learning, studying, playing, living...",
+      "markers": [
+        "learning",
+        "studying",
+        "playing",
+        "living",
+        "training"
+      ],
+      "min": 1
+    }
+  ]
+}

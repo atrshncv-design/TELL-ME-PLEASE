@@ -1,0 +1,81 @@
+{
+  "id": "a1_station_5",
+  "title": "Визуализация Синтаксиса (Прямой порядок слов)",
+  "description": "Прочитай предложения. Найди подлежащее — это то, кто/что делает действие (одна черта), а глагол — сказуемое (две черты).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "Найди подлежащее: She wants a new bike.",
+      "options": [
+        "She",
+        "wants",
+        "bike"
+      ],
+      "answer": "She"
+    },
+    {
+      "question": "Найди подлежащее: They want new computer games.",
+      "options": [
+        "They",
+        "want",
+        "games"
+      ],
+      "answer": "They"
+    },
+    {
+      "question": "Найди подлежащее: The rabbit jumps in the garden.",
+      "options": [
+        "The rabbit",
+        "jumps",
+        "garden"
+      ],
+      "answer": "The rabbit"
+    },
+    {
+      "question": "Найди подлежащее: He tidies his room on Saturdays.",
+      "options": [
+        "He",
+        "tidies",
+        "room"
+      ],
+      "answer": "He"
+    },
+    {
+      "question": "Найди подлежащее: The dog carries the ball in its mouth.",
+      "options": [
+        "The dog",
+        "carries",
+        "ball"
+      ],
+      "answer": "The dog"
+    },
+    {
+      "question": "Найди подлежащее: My dad fixes the bike in the garage.",
+      "options": [
+        "My dad",
+        "fixes",
+        "garage"
+      ],
+      "answer": "My dad"
+    },
+    {
+      "question": "Найди подлежащее: The parrot copies my words.",
+      "options": [
+        "The parrot",
+        "copies",
+        "words"
+      ],
+      "answer": "The parrot"
+    },
+    {
+      "question": "Найди подлежащее: We stay at home on rainy days.",
+      "options": [
+        "We",
+        "stay",
+        "home"
+      ],
+      "answer": "We"
+    }
+  ]
+}

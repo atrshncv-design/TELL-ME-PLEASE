@@ -1,0 +1,22 @@
+{
+  "id": "past_continuous_b1_station_2",
+  "title": "Сложная Сцена (Текст)",
+  "description": "Текст с пропусками: странный случай за компьютером — Past Continuous (фон) + Past Simple (внезапные события).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "Yesterday at 6 PM, a strange thing happened. I ___ (surf) the Internet. My sister ___ (download) a new app. My dad ___ (work) on his computer. Suddenly, the screen ___ (go) black. We ___ (not / understand) what ___ (happen). While we ___ (try) to fix it, the lights ___ (go) out.",
+      "answer": [
+        "was surfing",
+        "was downloading",
+        "was working",
+        "went",
+        "didn't understand",
+        "happened",
+        "were trying",
+        "went"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "past_continuous_a2_station_6",
+  "title": "Текст: Несчастный Случай (Чтение)",
+  "description": "Текст-чтение: несчастный случай Тома — вставь Past Continuous (фон) и Past Simple (внезапные действия).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "Yesterday Tom ___ (ride) his bike. He ___ (go) very fast. While he ___ (look) at a bird, he ___ (hit) a tree! His bike ___ (break). Tom ___ (fall) and ___ (hurt) his leg. While he ___ (lie) on the ground, a dog ___ (come) to him.",
+      "answer": [
+        "was riding",
+        "was going",
+        "was looking",
+        "hit",
+        "broke",
+        "fell",
+        "hurt",
+        "was lying",
+        "came"
+      ]
+    }
+  ]
+}

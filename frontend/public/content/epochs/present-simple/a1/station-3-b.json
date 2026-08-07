@@ -1,7 +1,7 @@
 {
   "id": "a1_station_3_b",
   "title": "Сборка Ядра: Игра 6 (+/-/?)",
-  "description": "Формирование понимания порядка слов (утверждение, отрицание, вопрос). Игра 6: построй предложения +, - и ?.",
+  "description": "Создавай предложения: утверждение √, отрицание ×, общий вопрос, специальный вопрос. Визуально видно, как строится предложение — по аналогии строй сам.",
   "category": "grammar",
   "type": "quiz",
   "items": [
@@ -9,7 +9,7 @@
       "question": "Выбери утверждение:",
       "options": [
         "We like animals.",
-        "We don’t like animals.",
+        "We don't like animals.",
         "Do we like animals?"
       ],
       "answer": "We like animals."
@@ -17,10 +17,10 @@
     {
       "question": "We ___ like animals.",
       "options": [
-        "don’t",
-        "doesn’t"
+        "don't",
+        "doesn't"
       ],
-      "answer": "don’t"
+      "answer": "don't"
     },
     {
       "question": "___ we like animals?",
@@ -44,7 +44,7 @@
       "question": "Выбери утверждение:",
       "options": [
         "A tiger eats meat.",
-        "A tiger doesn’t eat meat.",
+        "A tiger doesn't eat meat.",
         "Does a tiger eat meat?"
       ],
       "answer": "A tiger eats meat."
@@ -52,10 +52,10 @@
     {
       "question": "A tiger ___ eat meat.",
       "options": [
-        "doesn’t",
-        "don’t"
+        "doesn't",
+        "don't"
       ],
-      "answer": "doesn’t"
+      "answer": "doesn't"
     },
     {
       "question": "___ a tiger eat meat?",
@@ -77,7 +77,7 @@
       "question": "Выбери утверждение:",
       "options": [
         "Bears sleep in winter.",
-        "Bears don’t sleep in winter.",
+        "Bears don't sleep in winter.",
         "Do bears sleep in winter?"
       ],
       "answer": "Bears sleep in winter."
@@ -85,10 +85,10 @@
     {
       "question": "Bears ___ sleep in winter.",
       "options": [
-        "don’t",
-        "doesn’t"
+        "don't",
+        "doesn't"
       ],
-      "answer": "don’t"
+      "answer": "don't"
     },
     {
       "question": "___ bears sleep in winter?",
@@ -100,6 +100,72 @@
     },
     {
       "question": "When ___ bears sleep?",
+      "options": [
+        "do",
+        "does"
+      ],
+      "answer": "do"
+    },
+    {
+      "question": "Выбери утверждение:",
+      "options": [
+        "A penguin lives in Antarctica.",
+        "A penguin doesn't live in Antarctica.",
+        "Does a penguin live in Antarctica?"
+      ],
+      "answer": "A penguin lives in Antarctica."
+    },
+    {
+      "question": "A penguin ___ live in Antarctica.",
+      "options": [
+        "doesn't",
+        "don't"
+      ],
+      "answer": "doesn't"
+    },
+    {
+      "question": "___ a penguin live in Antarctica?",
+      "options": [
+        "Does",
+        "Do"
+      ],
+      "answer": "Does"
+    },
+    {
+      "question": "Where ___ a penguin live?",
+      "options": [
+        "does",
+        "do"
+      ],
+      "answer": "does"
+    },
+    {
+      "question": "Выбери утверждение:",
+      "options": [
+        "Frogs jump high.",
+        "Frogs don't jump high.",
+        "Do frogs jump high?"
+      ],
+      "answer": "Frogs jump high."
+    },
+    {
+      "question": "Frogs ___ jump high.",
+      "options": [
+        "don't",
+        "doesn't"
+      ],
+      "answer": "don't"
+    },
+    {
+      "question": "___ frogs jump high?",
+      "options": [
+        "Do",
+        "Does"
+      ],
+      "answer": "Do"
+    },
+    {
+      "question": "How ___ frogs jump?",
       "options": [
         "do",
         "does"

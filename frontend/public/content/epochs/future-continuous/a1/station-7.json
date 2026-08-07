@@ -1,0 +1,50 @@
+{
+  "id": "future_continuous_a1_station_7",
+  "title": "Машина Времени (ИИ-бот)",
+  "description": "Ответь боту: 1. What will you be doing at 5 PM tomorrow? 2. What will you be doing at 8 PM? 3. Will you be sleeping at 10 PM?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — путешественник во времени (time traveler), прилетевший из будущего. Промпт: \"Act like a time traveler. Use A1 English. Ask me what I will be doing tomorrow at different times.\" Общайся по-английски (уровень A1, простыми словами). Задавай ученику вопросы из checklist по одному, жди ответ, реагируй дружелюбно и с удивлением, как человек из будущего, который видел, чем ученик будет заниматься завтра.",
+  "checklist": [
+    {
+      "question": "What will you be doing at 5 PM tomorrow?",
+      "markers": [
+        "will be",
+        "5 pm",
+        "playing",
+        "watching",
+        "studying",
+        "reading",
+        "cooking",
+        "doing"
+      ],
+      "min": 1,
+      "hint": "Ответь: At 5 PM I will be playing football."
+    },
+    {
+      "question": "What will you be doing at 8 PM?",
+      "markers": [
+        "will be",
+        "8 pm",
+        "watching",
+        "reading",
+        "playing",
+        "sleeping",
+        "doing"
+      ],
+      "min": 1,
+      "hint": "Ответь: At 8 PM I will be watching TV."
+    },
+    {
+      "question": "Will you be sleeping at 10 PM?",
+      "markers": [
+        "yes",
+        "no",
+        "will be",
+        "sleeping"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I will be sleeping at 10 PM."
+    }
+  ]
+}

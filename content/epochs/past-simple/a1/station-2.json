@@ -1,0 +1,81 @@
+{
+  "id": "past_simple_a1_station_2",
+  "title": "Триггер: Вчера (Механика V2)",
+  "description": "Выбери правильную 2-ю форму (V2).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "Yesterday I ___ to the park.",
+      "options": [
+        "go",
+        "went",
+        "gone"
+      ],
+      "answer": "went"
+    },
+    {
+      "question": "She ___ a big pizza last night.",
+      "options": [
+        "eat",
+        "ate",
+        "eaten"
+      ],
+      "answer": "ate"
+    },
+    {
+      "question": "He ___ a new car two days ago.",
+      "options": [
+        "buy",
+        "bought",
+        "buyed"
+      ],
+      "answer": "bought"
+    },
+    {
+      "question": "We ___ a film yesterday.",
+      "options": [
+        "see",
+        "saw",
+        "seen"
+      ],
+      "answer": "saw"
+    },
+    {
+      "question": "Tom ___ in the sea last summer.",
+      "options": [
+        "swim",
+        "swam",
+        "swum"
+      ],
+      "answer": "swam"
+    },
+    {
+      "question": "The baby ___ well last night.",
+      "options": [
+        "sleep",
+        "slept",
+        "sleeped"
+      ],
+      "answer": "slept"
+    },
+    {
+      "question": "I ___ my homework yesterday.",
+      "options": [
+        "do",
+        "did",
+        "done"
+      ],
+      "answer": "did"
+    },
+    {
+      "question": "They ___ a sandcastle.",
+      "options": [
+        "make",
+        "made",
+        "maked"
+      ],
+      "answer": "made"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "future_perfect_b1_station_1",
+  "title": "Сортировка 4-х Будущих (Сравнение)",
+  "description": "Распредели предложения по группам будущих времён (Future Simple, Future Continuous, Future Perfect, Present Continuous, Present Simple).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "items": [
+    {
+      "verb": "I think I will buy this.",
+      "answer": "simple"
+    },
+    {
+      "verb": "At 5 PM I will be flying to Rome.",
+      "answer": "cont"
+    },
+    {
+      "verb": "By 5 PM I will have finished the project.",
+      "answer": "perf"
+    },
+    {
+      "verb": "We are meeting at 8 PM.",
+      "answer": "prescont"
+    },
+    {
+      "verb": "This time next week I will be lying on the beach.",
+      "answer": "cont"
+    },
+    {
+      "verb": "I will help you with your homework.",
+      "answer": "simple"
+    },
+    {
+      "verb": "By the time you arrive, I will have cooked dinner.",
+      "answer": "perf"
+    },
+    {
+      "verb": "The train leaves at 6 PM.",
+      "answer": "pressimpl"
+    }
+  ],
+  "columns": [
+    {
+      "id": "simple",
+      "label": "Future Simple"
+    },
+    {
+      "id": "cont",
+      "label": "Future Continuous"
+    },
+    {
+      "id": "perf",
+      "label": "Future Perfect"
+    },
+    {
+      "id": "prescont",
+      "label": "Present Continuous (для будущего)"
+    },
+    {
+      "id": "pressimpl",
+      "label": "Present Simple"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "future_continuous_a1_station_2",
+  "title": "Торможение Хаоса (Отрицание и Вопрос)",
+  "description": "Собери вопросы.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "playing / you / Will / be / tennis",
+      "options": [
+        "Will you be playing tennis?",
+        "Will you playing be tennis?",
+        "You will be playing tennis?"
+      ],
+      "answer": "Will you be playing tennis?"
+    },
+    {
+      "question": "she / reading / be / Will / a book",
+      "options": [
+        "Will she be reading a book?",
+        "Will she reading be a book?",
+        "She will be reading a book?"
+      ],
+      "answer": "Will she be reading a book?"
+    },
+    {
+      "question": "TV / they / watching / be / Will",
+      "options": [
+        "Will they be watching TV?",
+        "Will they watching be TV?",
+        "They will be watching TV?"
+      ],
+      "answer": "Will they be watching TV?"
+    },
+    {
+      "question": "sleeping / be / Will / he",
+      "options": [
+        "Will he be sleeping?",
+        "Will be he sleeping?",
+        "He will be sleeping?"
+      ],
+      "answer": "Will he be sleeping?"
+    },
+    {
+      "question": "studying / they / be / Will",
+      "options": [
+        "Will they be studying?",
+        "Will they studying be?",
+        "They will be studying?"
+      ],
+      "answer": "Will they be studying?"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "past_perfect_continuous_a2_station_6",
+  "title": "Блог: Мои Хобби (Продукт)",
+  "description": "Напиши 3 предложения о том, как долго ты занимался своим хобби до того, как достиг результата.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши 3 предложения о том, как долго ты занимался своим хобби до того, как достиг результата. (I had been playing the guitar for a year before I learned my first song.)",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Форма had been + глагол с -ing (3 предложения)",
+      "hint": "I had been playing the guitar for a year before I learned my first song.",
+      "markers": [
+        "been"
+      ],
+      "min": 3
+    },
+    {
+      "label": "Маркеры for / since / before",
+      "hint": "I had been learning English for 2 years before I passed the test.",
+      "markers": [
+        "for",
+        "since",
+        "before"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Лексика хобби",
+      "hint": "playing the guitar, learning English, reading books, drawing",
+      "markers": [
+        "playing",
+        "learning",
+        "reading",
+        "drawing",
+        "dancing",
+        "singing",
+        "swimming",
+        "running",
+        "doing",
+        "collecting",
+        "painting",
+        "riding"
+      ],
+      "min": 2
+    }
+  ]
+}

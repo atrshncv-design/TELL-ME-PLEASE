@@ -1,0 +1,53 @@
+{
+  "id": "past_perfect_b1_station_5",
+  "title": "ОписаниеСитуации (Речь)",
+  "description": "Объясни, почему ситуация сложилась таким образом. Пример: I was hungry because I hadn't eaten breakfast. / The ground was wet because it had rained.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Почему так получилось? (объясни ситуацию)",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Past Perfect — причина (had + V3): что случилось раньше",
+      "hint": "I was hungry because I hadn't eaten breakfast. / The ground was wet because it had rained.",
+      "markers": [
+        "had",
+        "hadn't",
+        "eaten",
+        "rained",
+        "forgotten",
+        "lost",
+        "left",
+        "missed",
+        "broken",
+        "finished",
+        "slept"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Состояние/результат (was/were)",
+      "hint": "I was hungry. / The ground was wet.",
+      "markers": [
+        "was",
+        "were",
+        "hungry",
+        "wet",
+        "tired",
+        "angry",
+        "late",
+        "happy",
+        "sad"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Союз because (почему)",
+      "hint": "...because...",
+      "markers": [
+        "because"
+      ],
+      "min": 1
+    }
+  ]
+}

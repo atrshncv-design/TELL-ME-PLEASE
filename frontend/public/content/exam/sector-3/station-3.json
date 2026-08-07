@@ -1,0 +1,57 @@
+{
+  "id": "exam_s3_station_3",
+  "title": "Ловушка Условных (Conditionals 0/1)",
+  "description": "Выбери правильную форму (Без will после if/when!).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "If it ___, I will stay at home.",
+      "options": [
+        "will rain",
+        "rains"
+      ],
+      "answer": "rains"
+    },
+    {
+      "question": "I will call you when I ___.",
+      "options": [
+        "will arrive",
+        "arrive"
+      ],
+      "answer": "arrive"
+    },
+    {
+      "question": "If you ___ ice, it (will melt / melts).",
+      "options": [
+        "will heat",
+        "heat"
+      ],
+      "answer": "heat"
+    },
+    {
+      "question": "If you (will heat / heat) ice, it ___.",
+      "options": [
+        "will melt",
+        "melts"
+      ],
+      "answer": "melts"
+    },
+    {
+      "question": "She will be angry if we ___ late.",
+      "options": [
+        "will be",
+        "are"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "We will go to the beach if the weather ___ fine.",
+      "options": [
+        "will be",
+        "is"
+      ],
+      "answer": "is"
+    }
+  ]
+}

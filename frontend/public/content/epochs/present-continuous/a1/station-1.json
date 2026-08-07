@@ -1,0 +1,49 @@
+{
+  "id": "present_continuous_a1_station_1",
+  "title": "Запуск Реактора (Механика to be + V-ing)",
+  "description": "Автоматическое формирование формы to be + V-ing без раздумий.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I / play — ___",
+      "answer": "I am playing"
+    },
+    {
+      "sentence": "He / sleep — ___",
+      "answer": "He is sleeping"
+    },
+    {
+      "sentence": "We / run — ___",
+      "answer": "We are running"
+    },
+    {
+      "sentence": "She / sing — ___",
+      "answer": "She is singing"
+    },
+    {
+      "sentence": "They / swim — ___",
+      "answer": "They are swimming"
+    },
+    {
+      "sentence": "It / rain — ___",
+      "answer": "It is raining"
+    },
+    {
+      "sentence": "You / read — ___",
+      "answer": "You are reading"
+    },
+    {
+      "sentence": "My dog / bark — ___",
+      "answer": "My dog is barking"
+    },
+    {
+      "sentence": "The children / jump — ___",
+      "answer": "The children are jumping"
+    },
+    {
+      "sentence": "My mum / cook — ___",
+      "answer": "My mum is cooking"
+    }
+  ]
+}

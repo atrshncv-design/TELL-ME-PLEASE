@@ -1,0 +1,57 @@
+{
+  "id": "past_continuous_b2_station_6",
+  "title": "Дебаты: \"Великие События\" (Монолог)",
+  "description": "Напиши мини-выступление на тему \"Как люди жили 100 лет назад\". Используй Past Simple (факты: People lived...) и Past Continuous (фон: People were using horses...).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Как люди жили 100 лет назад",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Факты о жизни (Past Simple)",
+      "hint": "People lived in small houses and worked on farms...",
+      "markers": [
+        "lived",
+        "worked",
+        "had",
+        "wore",
+        "used",
+        "travelled",
+        "traveled",
+        "ate",
+        "drank",
+        "grew",
+        "built",
+        "made",
+        "walked"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Фон / процессы (Past Continuous)",
+      "hint": "People were using horses / working in fields...",
+      "markers": [
+        "were using",
+        "were living",
+        "were working",
+        "were travelling",
+        "were traveling",
+        "were wearing",
+        "were building",
+        "were cooking",
+        "were going",
+        "were riding"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Связки when / while",
+      "hint": "People were working in the fields when...",
+      "markers": [
+        "when",
+        "while"
+      ],
+      "min": 1
+    }
+  ]
+}

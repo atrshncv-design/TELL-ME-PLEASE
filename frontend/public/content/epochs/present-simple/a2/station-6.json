@@ -1,0 +1,171 @@
+{
+  "id": "a2_station_6",
+  "title": "Матрица Трансформации (Полный цикл)",
+  "description": "Сделай из утвердительного предложения отрицание, общий вопрос и специальный вопрос.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "My friend ___ to the sports club after school.",
+      "options": [
+        "doesn't go",
+        "don't go",
+        "doesn't gos"
+      ],
+      "answer": "doesn't go"
+    },
+    {
+      "question": "___ your friend go to the sports club after school?",
+      "options": [
+        "Does",
+        "Do",
+        "Are"
+      ],
+      "answer": "Does"
+    },
+    {
+      "question": "When ___ your friend go to the sports club after school?",
+      "options": [
+        "does",
+        "do",
+        "are"
+      ],
+      "answer": "does"
+    },
+    {
+      "question": "Teenagers ___ social media.",
+      "options": [
+        "don't use",
+        "doesn't use",
+        "don't uses"
+      ],
+      "answer": "don't use"
+    },
+    {
+      "question": "___ teenagers use social media?",
+      "options": [
+        "Do",
+        "Does",
+        "Are"
+      ],
+      "answer": "Do"
+    },
+    {
+      "question": "How often ___ teenagers use social media?",
+      "options": [
+        "do",
+        "does",
+        "are"
+      ],
+      "answer": "do"
+    },
+    {
+      "question": "My sister ___ TV.",
+      "options": [
+        "doesn't watch",
+        "don't watch",
+        "doesn't watchs"
+      ],
+      "answer": "doesn't watch"
+    },
+    {
+      "question": "___ your sister watch TV?",
+      "options": [
+        "Does",
+        "Do",
+        "Are"
+      ],
+      "answer": "Does"
+    },
+    {
+      "question": "When ___ your sister watch TV?",
+      "options": [
+        "does",
+        "do",
+        "are"
+      ],
+      "answer": "does"
+    },
+    {
+      "question": "We ___ English lessons.",
+      "options": [
+        "don't have",
+        "doesn't have",
+        "don't haves"
+      ],
+      "answer": "don't have"
+    },
+    {
+      "question": "___ you have English lessons?",
+      "options": [
+        "Do",
+        "Does",
+        "Are"
+      ],
+      "answer": "Do"
+    },
+    {
+      "question": "How often ___ you have English lessons?",
+      "options": [
+        "do",
+        "does",
+        "are"
+      ],
+      "answer": "do"
+    },
+    {
+      "question": "My parents ___ in a modern office.",
+      "options": [
+        "don't work",
+        "doesn't work",
+        "don't works"
+      ],
+      "answer": "don't work"
+    },
+    {
+      "question": "___ your parents work in a modern office?",
+      "options": [
+        "Do",
+        "Does",
+        "Are"
+      ],
+      "answer": "Do"
+    },
+    {
+      "question": "Where ___ your parents work?",
+      "options": [
+        "do",
+        "does",
+        "are"
+      ],
+      "answer": "do"
+    },
+    {
+      "question": "My cousin ___ in a big city.",
+      "options": [
+        "doesn't live",
+        "don't live",
+        "doesn't lives"
+      ],
+      "answer": "doesn't live"
+    },
+    {
+      "question": "___ your cousin live in a big city?",
+      "options": [
+        "Does",
+        "Do",
+        "Are"
+      ],
+      "answer": "Does"
+    },
+    {
+      "question": "Where ___ your cousin live?",
+      "options": [
+        "does",
+        "do",
+        "are"
+      ],
+      "answer": "does"
+    }
+  ]
+}

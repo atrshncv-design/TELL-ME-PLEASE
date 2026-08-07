@@ -1,0 +1,57 @@
+{
+  "id": "past_continuous_a1_station_5",
+  "title": "Контраст: Настоящее vs Прошлое (Cont vs PastCont)",
+  "description": "Выбери правильную форму, опираясь на маркер (now или at 5 PM).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "Look! He (is playing / was playing) football now.",
+      "options": [
+        "is playing",
+        "was playing"
+      ],
+      "answer": "is playing"
+    },
+    {
+      "question": "At 5 PM he (is playing / was playing) football.",
+      "options": [
+        "is playing",
+        "was playing"
+      ],
+      "answer": "was playing"
+    },
+    {
+      "question": "Now we (are watching / were watching) TV.",
+      "options": [
+        "are watching",
+        "were watching"
+      ],
+      "answer": "are watching"
+    },
+    {
+      "question": "Yesterday at 8 we (are watching / were watching) TV.",
+      "options": [
+        "are watching",
+        "were watching"
+      ],
+      "answer": "were watching"
+    },
+    {
+      "question": "She (is reading / was reading) a book at the moment.",
+      "options": [
+        "is reading",
+        "was reading"
+      ],
+      "answer": "is reading"
+    },
+    {
+      "question": "She (is reading / was reading) a book at noon.",
+      "options": [
+        "is reading",
+        "was reading"
+      ],
+      "answer": "was reading"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "past_simple_b1_station_3",
+  "title": "Тонкие Смыслы (Перевод-Ловушка)",
+  "description": "Переведи, выбрав Past Simple или Present Perfect.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "Я только что потерял телефон. I ___ my phone.",
+      "answer": "have just lost",
+      "hint": "(have just lost)"
+    },
+    {
+      "sentence": "Я потерял телефон вчера. I ___ my phone yesterday.",
+      "answer": "lost",
+      "hint": "(lost)"
+    },
+    {
+      "sentence": "Мы уже купили билеты. We ___ the tickets.",
+      "answer": "have already bought",
+      "hint": "(have already bought)"
+    },
+    {
+      "sentence": "Мы купили билеты на прошлой неделе. We ___ the tickets last week.",
+      "answer": "bought",
+      "hint": "(bought)"
+    },
+    {
+      "sentence": "Она еще не закончила проект. She ___ the project ___.",
+      "answer": [
+        "hasn't finished",
+        "yet"
+      ],
+      "hint": "(hasn't finished / yet)"
+    },
+    {
+      "sentence": "Она не закончила проект в пятницу. She ___ the project on Friday.",
+      "answer": "didn't finish",
+      "hint": "(didn't finish)"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "past_continuous_b1_station_5",
+  "title": "История Хакера (Речь)",
+  "description": "Расскажи историю о том, как ты сидел за компьютером, и что-то сломалось. Используй Past Continuous (что делал) и Past Simple (что случилось). Пример: I was playing a game, when the computer crashed.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "История Хакера: расскажи, как ты сидел за компьютером и что-то сломалось",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Что ты делал за компьютером (Past Continuous)",
+      "hint": "I was playing a game / chatting / downloading...",
+      "markers": [
+        "was playing",
+        "was working",
+        "was watching",
+        "was chatting",
+        "was downloading",
+        "was listening",
+        "was writing",
+        "was surfing",
+        "was reading",
+        "was talking",
+        "was searching",
+        "was doing"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Что-то сломалось (Past Simple)",
+      "hint": "The computer crashed / froze / turned off...",
+      "markers": [
+        "crashed",
+        "broke",
+        "stopped",
+        "went",
+        "shut",
+        "turned off",
+        "froze",
+        "died",
+        "disappeared",
+        "restarted",
+        "fell"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Свяжи процесс и событие (when)",
+      "hint": "I was playing a game when the computer crashed.",
+      "markers": [
+        "when"
+      ],
+      "min": 1
+    }
+  ]
+}

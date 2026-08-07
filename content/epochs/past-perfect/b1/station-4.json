@@ -1,0 +1,63 @@
+{
+  "id": "past_perfect_b1_station_4",
+  "title": "Текст: Сбой Системы (Интеграция)",
+  "description": "Вставь глаголы в нужной форме в текст о блогере.",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "Yesterday, a famous blogger ___. But before he ___ that, he ___ it for 5 hours. While he ___ the file, his computer ___. He ___ the file! He ___ so angry. He ___ to start all over again.",
+  "answers": [
+    [
+      "posted"
+    ],
+    [
+      "did"
+    ],
+    [
+      "had edited"
+    ],
+    [
+      "was uploading"
+    ],
+    [
+      "crashed"
+    ],
+    [
+      "hadn't saved"
+    ],
+    [
+      "was"
+    ],
+    [
+      "had"
+    ]
+  ],
+  "word_bank": [
+    "posted",
+    "did",
+    "had edited",
+    "was uploading",
+    "crashed",
+    "hadn't saved",
+    "was",
+    "had",
+    "posts",
+    "does",
+    "edits",
+    "uploads",
+    "crashes",
+    "didn't save",
+    "is",
+    "has",
+    "was editing"
+  ],
+  "hints": [
+    "(post)",
+    "(do)",
+    "(edit)",
+    "(upload)",
+    "(crash)",
+    "(not / save)",
+    "(be)",
+    "(have)"
+  ]
+}

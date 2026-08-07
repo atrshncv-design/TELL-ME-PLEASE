@@ -1,0 +1,81 @@
+{
+  "id": "future_continuous_a1_station_3",
+  "title": "Орфографический Щит (-ING)",
+  "description": "Выбери правильное написание глагола с -ing.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "runing / running / runnning",
+      "options": [
+        "runing",
+        "running",
+        "runnning"
+      ],
+      "answer": "running"
+    },
+    {
+      "question": "makeing / making / macking",
+      "options": [
+        "makeing",
+        "making",
+        "macking"
+      ],
+      "answer": "making"
+    },
+    {
+      "question": "swiming / swimming / swimmng",
+      "options": [
+        "swiming",
+        "swimming",
+        "swimmng"
+      ],
+      "answer": "swimming"
+    },
+    {
+      "question": "danceing / dancing / danccing",
+      "options": [
+        "danceing",
+        "dancing",
+        "danccing"
+      ],
+      "answer": "dancing"
+    },
+    {
+      "question": "siting / sitting / sittting",
+      "options": [
+        "siting",
+        "sitting",
+        "sittting"
+      ],
+      "answer": "sitting"
+    },
+    {
+      "question": "writeing / writing / writting",
+      "options": [
+        "writeing",
+        "writing",
+        "writting"
+      ],
+      "answer": "writing"
+    },
+    {
+      "question": "skiping / skipping / skippng",
+      "options": [
+        "skiping",
+        "skipping",
+        "skippng"
+      ],
+      "answer": "skipping"
+    },
+    {
+      "question": "lieing / lying / laying",
+      "options": [
+        "lieing",
+        "lying",
+        "laying"
+      ],
+      "answer": "lying"
+    }
+  ]
+}

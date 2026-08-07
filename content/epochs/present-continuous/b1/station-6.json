@@ -1,0 +1,36 @@
+{
+  "id": "present_continuous_b1_station_6",
+  "title": "Угадай по Эмодзи (Скорость)",
+  "description": "Мгновенный выбор формы по визуальному стимулу.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "🛫🛪",
+      "options": [
+        "She is fly",
+        "She is flying",
+        "She flies"
+      ],
+      "answer": "She is flying"
+    },
+    {
+      "question": "📸",
+      "options": [
+        "He is takeing",
+        "He is taking",
+        "He takes"
+      ],
+      "answer": "He is taking"
+    },
+    {
+      "question": "🎤📰",
+      "options": [
+        "They are report",
+        "They reporting",
+        "They are reporting"
+      ],
+      "answer": "They are reporting"
+    }
+  ]
+}

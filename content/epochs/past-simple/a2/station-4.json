@@ -1,0 +1,33 @@
+{
+  "id": "past_simple_a2_station_4",
+  "title": "Детектор Ошибок (Дебаггинг)",
+  "description": "Найди ошибку в каждом предложении.",
+  "category": "grammar",
+  "type": "click-mistake",
+  "items": [
+    {
+      "sentence": "I didn't went to the park.",
+      "wrong": "went"
+    },
+    {
+      "sentence": "Did she played tennis?",
+      "wrong": "played"
+    },
+    {
+      "sentence": "We buyed a new car yesterday.",
+      "wrong": "buyed"
+    },
+    {
+      "sentence": "He didn't saw the film.",
+      "wrong": "saw"
+    },
+    {
+      "sentence": "I have visited London last year.",
+      "wrong": "have"
+    },
+    {
+      "sentence": "She has finished her work yesterday.",
+      "wrong": "has"
+    }
+  ]
+}

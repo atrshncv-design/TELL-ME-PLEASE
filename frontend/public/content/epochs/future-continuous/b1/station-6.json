@@ -1,0 +1,50 @@
+{
+  "id": "future_continuous_b1_station_6",
+  "title": "Интервью с Космонавтом (Диалог с ИИ)",
+  "description": "Спроси его: 1. What will you be doing tomorrow at 5 PM? 2. Will you be sleeping at midnight? 3. What will you be eating for dinner tomorrow?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — космонавт на МКС (ISS). Промпт: \"Act like an astronaut on the ISS. Use B1 English.\" Общайся по-английски (уровень B1). Ученик берёт у тебя интервью — отвечай на его вопросы о жизни на станции подробно и интересно (например: Tomorrow at 5 PM I will be doing experiments in the lab. / Yes, I will be sleeping at midnight — in my sleeping bag on the wall!).",
+  "checklist": [
+    {
+      "question": "What will you be doing tomorrow at 5 PM?",
+      "markers": [
+        "what",
+        "will",
+        "you",
+        "be",
+        "doing",
+        "tomorrow",
+        "5 pm"
+      ],
+      "min": 1,
+      "hint": "Спроси космонавта: What will you be doing tomorrow at 5 PM?"
+    },
+    {
+      "question": "Will you be sleeping at midnight?",
+      "markers": [
+        "will",
+        "you",
+        "be",
+        "sleeping",
+        "midnight"
+      ],
+      "min": 1,
+      "hint": "Спроси космонавта: Will you be sleeping at midnight?"
+    },
+    {
+      "question": "What will you be eating for dinner tomorrow?",
+      "markers": [
+        "what",
+        "will",
+        "you",
+        "be",
+        "eating",
+        "dinner",
+        "tomorrow"
+      ],
+      "min": 1,
+      "hint": "Спроси космонавта: What will you be eating for dinner tomorrow?"
+    }
+  ]
+}

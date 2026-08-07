@@ -1,0 +1,73 @@
+{
+  "id": "present_perfect_b1_station_1",
+  "title": "Тренажер Маркеров (Уточнение времени)",
+  "description": "Различение маркеров, означающих \"законченное время\" (Past) и \"незаконченное/свежее\" (Perfect).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ this app yesterday.",
+      "options": [
+        "have downloaded",
+        "downloaded"
+      ],
+      "answer": "downloaded"
+    },
+    {
+      "question": "We ___ this documentary.",
+      "options": [
+        "have already watched",
+        "already watched"
+      ],
+      "answer": "have already watched"
+    },
+    {
+      "question": "The journalist ___ the celebrity last week.",
+      "options": [
+        "has interviewed",
+        "interviewed"
+      ],
+      "answer": "interviewed"
+    },
+    {
+      "question": "___ abroad?",
+      "options": [
+        "Have you ever travelled",
+        "Did you ever travel"
+      ],
+      "answer": "Have you ever travelled"
+    },
+    {
+      "question": "He ___ an email.",
+      "options": [
+        "has just sent",
+        "just sent"
+      ],
+      "answer": "has just sent"
+    },
+    {
+      "question": "They ___ a new gadget two days ago.",
+      "options": [
+        "have bought",
+        "bought"
+      ],
+      "answer": "bought"
+    },
+    {
+      "question": "I ___ him today.",
+      "options": [
+        "haven't seen",
+        "didn't see"
+      ],
+      "answer": "haven't seen"
+    },
+    {
+      "question": "We ___ to the cinema on Sunday.",
+      "options": [
+        "went",
+        "have gone"
+      ],
+      "answer": "went"
+    }
+  ]
+}

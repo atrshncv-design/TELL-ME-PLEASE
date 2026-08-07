@@ -1,0 +1,27 @@
+{
+  "id": "future_perfect_b1_station_5",
+  "title": "Объясни Ситуацию (Речь)",
+  "description": "Представь, что ты менеджер проекта. Расскажи, что будет готово к завтрашнему дню. Используй Future Perfect.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Представь, что ты менеджер проекта. Расскажи, что будет готово к завтрашнему дню. Используй Future Perfect.",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Результат к моменту (will have + V3)",
+      "hint": "By 5 PM tomorrow, we will have signed the contract.",
+      "markers": [
+        "will have"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Маркер времени BY",
+      "hint": "We will have started the campaign by 5 PM.",
+      "markers": [
+        "by"
+      ],
+      "min": 1
+    }
+  ]
+}

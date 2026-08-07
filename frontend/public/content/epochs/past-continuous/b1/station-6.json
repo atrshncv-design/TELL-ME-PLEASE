@@ -1,0 +1,81 @@
+{
+  "id": "past_continuous_b1_station_6",
+  "title": "Интервью с Очевидцем (Диалог с ИИ)",
+  "description": "Спроси его: 1. What were you doing at 3 PM? 2. What were the robbers wearing? 3. Did anyone try to stop them? 4. Were people scared?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "You are a witness of a bank robbery. Use B1 English. Answer the student's questions about the robbery: what you were doing at 3 PM, what the robbers were wearing, whether anyone tried to stop them, whether people were scared. Answer in full sentences with details. If the student's question is not clear, ask them to repeat it. Stay in character always: you are the witness, not an AI. Speak clear English at B1 level, do not switch to Russian.",
+  "checklist": [
+    {
+      "question": "What were you doing at 3 PM?",
+      "markers": [
+        "was",
+        "were",
+        "doing",
+        "working",
+        "shopping",
+        "walking",
+        "bank",
+        "street",
+        "3 pm",
+        "three",
+        "standing",
+        "waiting"
+      ],
+      "min": 1,
+      "hint": "Спроси, что свидетель делал в 3 часа: What were you doing at 3 PM?"
+    },
+    {
+      "question": "What were the robbers wearing?",
+      "markers": [
+        "wearing",
+        "wore",
+        "black",
+        "mask",
+        "masks",
+        "hoodie",
+        "jeans",
+        "gloves",
+        "cap",
+        "clothes",
+        "jacket"
+      ],
+      "min": 1,
+      "hint": "Спроси, во что были одеты грабители: What were the robbers wearing?"
+    },
+    {
+      "question": "Did anyone try to stop them?",
+      "markers": [
+        "no",
+        "yes",
+        "nobody",
+        "tried",
+        "security",
+        "guard",
+        "stopped",
+        "shouted",
+        "ran",
+        "police"
+      ],
+      "min": 1,
+      "hint": "Спроси, пытался ли кто-то их остановить: Did anyone try to stop them?"
+    },
+    {
+      "question": "Were people scared?",
+      "markers": [
+        "yes",
+        "no",
+        "scared",
+        "afraid",
+        "screamed",
+        "ran",
+        "cried",
+        "everyone",
+        "people",
+        "frightened"
+      ],
+      "min": 1,
+      "hint": "Спроси, испугались ли люди: Were people scared?"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "past_simple_b1_station_1",
+  "title": "ОРФОГРАФИЯ -ED (Сложные случаи)",
+  "description": "Выбери правильное написание -ed (сложные случаи).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "stop → ___",
+      "options": [
+        "stoped",
+        "stopped",
+        "stoppped"
+      ],
+      "answer": "stopped"
+    },
+    {
+      "question": "study → ___",
+      "options": [
+        "studyed",
+        "studied",
+        "studdied"
+      ],
+      "answer": "studied"
+    },
+    {
+      "question": "play → ___",
+      "options": [
+        "played",
+        "plaied",
+        "playyed"
+      ],
+      "answer": "played"
+    },
+    {
+      "question": "travel → ___",
+      "options": [
+        "traveled",
+        "travelled",
+        "travelized"
+      ],
+      "answer": "travelled"
+    },
+    {
+      "question": "prefer → ___",
+      "options": [
+        "prefered",
+        "preferred",
+        "preffered"
+      ],
+      "answer": "preferred"
+    },
+    {
+      "question": "lie → ___",
+      "options": [
+        "lied",
+        "lay",
+        "lain"
+      ],
+      "answer": "lay"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "past_continuous_b1_station_4",
+  "title": "Контраст Маркеров (Сортировка)",
+  "description": "Распредели маркеры времени по трём группам: Past Continuous, Past Simple, Present Continuous.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "past-cont",
+      "label": "Past Continuous"
+    },
+    {
+      "id": "past-simple",
+      "label": "Past Simple"
+    },
+    {
+      "id": "pres-cont",
+      "label": "Present Continuous"
+    }
+  ],
+  "items": [
+    {
+      "verb": "at 5 PM yesterday",
+      "answer": "past-cont"
+    },
+    {
+      "verb": "yesterday",
+      "answer": "past-simple"
+    },
+    {
+      "verb": "right now",
+      "answer": "pres-cont"
+    },
+    {
+      "verb": "when he came",
+      "answer": "past-cont"
+    },
+    {
+      "verb": "last week",
+      "answer": "past-simple"
+    },
+    {
+      "verb": "at the moment",
+      "answer": "pres-cont"
+    },
+    {
+      "verb": "while she was reading",
+      "answer": "past-cont"
+    },
+    {
+      "verb": "two days ago",
+      "answer": "past-simple"
+    }
+  ]
+}

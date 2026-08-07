@@ -1,0 +1,61 @@
+{
+  "id": "future_continuous_b2_station_1",
+  "title": "ОГЭ-Тренажер (Task 19: 5 Будущих)",
+  "description": "Вставь формы будущего времени в текст о визите учёного (ОГЭ Task 19).",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Next Friday, a famous scientist ___ our school. The event ___ at 10 AM. At 11 AM, while he ___, the students ___ carefully. We ___ him at the entrance at 9:45. I think it ___ very interesting. I ___ notes during the lecture.",
+      "answers": [
+        [
+          "is visiting"
+        ],
+        [
+          "starts"
+        ],
+        [
+          "is speaking"
+        ],
+        [
+          "will be listening"
+        ],
+        [
+          "are meeting"
+        ],
+        [
+          "will be"
+        ],
+        [
+          "will be taking"
+        ]
+      ],
+      "hints": [
+        "(visit)",
+        "(start)",
+        "(speak)",
+        "(listen)",
+        "(meet)",
+        "(be)",
+        "(take)"
+      ],
+      "word_bank": [
+        "is visiting",
+        "starts",
+        "is speaking",
+        "will be listening",
+        "are meeting",
+        "will be",
+        "will be taking",
+        "will visit",
+        "is going to visit",
+        "start",
+        "will speak",
+        "will listen",
+        "will meet",
+        "was",
+        "will take"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "present_perfect_continuous_a1_station_6",
+  "title": "Текст: Долгий День (Интеграция)",
+  "description": "Интеграция механики в связный текст о долгом дне.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Hi! I am very tired today. I ___ since morning. My brother is dirty. He ___ football in the park for 2 hours. My mum is in the kitchen. She ___ dinner since 5 PM. Our dog is happy. It ___ in the garden all day. We ___ a film for an hour.",
+      "answers": [
+        [
+          "have been studying"
+        ],
+        [
+          "has been playing"
+        ],
+        [
+          "has been cooking"
+        ],
+        [
+          "has been running"
+        ],
+        [
+          "have been watching"
+        ]
+      ],
+      "hints": [
+        "(study)",
+        "(play)",
+        "(cook)",
+        "(run)",
+        "(watch)"
+      ],
+      "word_bank": [
+        "have been studying",
+        "has been playing",
+        "has been cooking",
+        "has been running",
+        "have been watching",
+        "has been studying",
+        "have been playing",
+        "has been watching",
+        "is running",
+        "played",
+        "watches"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "past_perfect_a1_station_3",
+  "title": "Торможение Хаоса (Отрицание)",
+  "description": "Вставь hadn't + V3.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ (not / finish) my homework when the teacher came.",
+      "answer": "hadn't finished"
+    },
+    {
+      "sentence": "She ___ (not / clean) her room before we arrived.",
+      "answer": "hadn't cleaned"
+    },
+    {
+      "sentence": "We ___ (not / eat) dinner by 7 PM.",
+      "answer": "hadn't eaten"
+    },
+    {
+      "sentence": "He ___ (not / wash) the car.",
+      "answer": "hadn't washed"
+    },
+    {
+      "sentence": "They ___ (not / visit) the museum before they left.",
+      "answer": "hadn't visited"
+    }
+  ]
+}

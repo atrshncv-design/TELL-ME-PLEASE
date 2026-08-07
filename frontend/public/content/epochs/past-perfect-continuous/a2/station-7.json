@@ -1,0 +1,51 @@
+{
+  "id": "past_perfect_continuous_a2_station_7",
+  "title": "Скоростное Свидание (Диалог)",
+  "description": "Задай партнеру: 1. What were you doing at 5 PM yesterday? 2. How long had you been doing it before I called you? 3. Were you tired? Why?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — участник игры «Скоростное свидание»: 12-летний ученик, который хочет узнать, чем собеседник занимался вчера. Общайся по-английски простыми фразами (уровень A2). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй дружелюбно, задавай уточняющие вопросы (How long? For how many hours?), мягко поправляй ошибки в Past Perfect Continuous. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "What were you doing at 5 PM yesterday?",
+      "markers": [
+        "was",
+        "doing",
+        "playing",
+        "watching",
+        "reading",
+        "homework",
+        "5 pm",
+        "yesterday"
+      ],
+      "min": 1,
+      "hint": "Ответь: I was playing football at 5 PM yesterday."
+    },
+    {
+      "question": "How long had you been doing it before I called you?",
+      "markers": [
+        "had been",
+        "for",
+        "hours",
+        "minutes",
+        "doing",
+        "called"
+      ],
+      "min": 1,
+      "hint": "Ответь: I had been playing for an hour before you called me."
+    },
+    {
+      "question": "Were you tired? Why?",
+      "markers": [
+        "yes",
+        "no",
+        "tired",
+        "because",
+        "had been",
+        "was"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I was tired because I had been playing all day."
+    }
+  ]
+}

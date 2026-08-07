@@ -1,0 +1,43 @@
+{
+  "id": "future_perfect_continuous_b1_station_1",
+  "title": "Процесс или Результат? (Сортировка)",
+  "description": "Распредели предложения в две группы: Future Perfect (Результат/Количество) и Future Perfect Continuous (Процесс/Длительность).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "items": [
+    {
+      "verb": "I will have downloaded 5 apps by 5 PM.",
+      "answer": "future-perfect"
+    },
+    {
+      "verb": "I will have been downloading this app for an hour by 5 PM.",
+      "answer": "future-perfect-continuous"
+    },
+    {
+      "verb": "She will have written three emails by noon.",
+      "answer": "future-perfect"
+    },
+    {
+      "verb": "She will have been writing emails all morning by noon.",
+      "answer": "future-perfect-continuous"
+    },
+    {
+      "verb": "They will have played 2 matches by 6 PM.",
+      "answer": "future-perfect"
+    },
+    {
+      "verb": "They will have been playing for 2 hours by 6 PM.",
+      "answer": "future-perfect-continuous"
+    }
+  ],
+  "columns": [
+    {
+      "id": "future-perfect",
+      "label": "Future Perfect (Результат/Количество)"
+    },
+    {
+      "id": "future-perfect-continuous",
+      "label": "Future Perfect Continuous (Процесс/Длительность)"
+    }
+  ]
+}

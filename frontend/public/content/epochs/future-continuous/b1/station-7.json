@@ -1,0 +1,47 @@
+{
+  "id": "future_continuous_b1_station_7",
+  "title": "Мини-Проект: \"День из Будущего\" (Продукт)",
+  "description": "Напиши 5 предложений о том, как изменится твоя жизнь через 10 лет (процессы). (In 10 years, I will be working as a... I will be living in...).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши 5 предложений о том, как изменится твоя жизнь через 10 лет (процессы). (In 10 years, I will be working as a... I will be living in...).",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "will be (процессы)",
+      "hint": "In 10 years, I will be working as a programmer.",
+      "markers": [
+        "will be"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Глаголы с -ing (жизнь через 10 лет)",
+      "hint": "I will be living in a big city.",
+      "markers": [
+        "working",
+        "living",
+        "studying",
+        "learning",
+        "travelling",
+        "driving",
+        "using",
+        "building",
+        "playing",
+        "teaching"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Время (через 10 лет)",
+      "hint": "In 10 years, I will be living in a big city.",
+      "markers": [
+        "in 10 years",
+        "10 years",
+        "in ten years",
+        "future"
+      ],
+      "min": 1
+    }
+  ]
+}

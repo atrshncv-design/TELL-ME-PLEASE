@@ -1,20 +1,69 @@
 {
   "id": "a1_station_3",
-  "title": "Сборка Ядра (Синтаксис)",
-  "description": "Формирование понимания порядка слов (утверждение, отрицание, вопрос) и места наречий частотности.",
+  "title": "Сборка Ядра: Наречия",
+  "description": "Вставь наречие в правильное место: между подлежащим и сказуемым или в конец предложения. Упражнение 12 (наречия частотности).",
   "category": "grammar",
-  "type": "build-sentence",
-  "adverbs": [
-    "always",
-    "often",
-    "usually",
-    "sometimes",
-    "hardly ever",
-    "never"
-  ],
-  "time_phrases": [
-    ""
-  ],
-  "base_verb": "play games",
-  "subject": "I"
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "Teenagers ___ play computer games after school.",
+      "answer": "always"
+    },
+    {
+      "sentence": "My friends ___ meet in the park at the weekend.",
+      "answer": "usually"
+    },
+    {
+      "sentence": "Teenagers ___ watch videos on their phones in the evening.",
+      "answer": "often"
+    },
+    {
+      "sentence": "My brother ___ goes to the sports centre on Saturdays.",
+      "answer": "sometimes"
+    },
+    {
+      "sentence": "Teenagers ___ read books in the afternoon.",
+      "answer": "rarely"
+    },
+    {
+      "sentence": "My cousin ___ does his homework at night.",
+      "answer": "never"
+    },
+    {
+      "sentence": "Teens ___ spend their free time online.",
+      "answer": "as a rule"
+    },
+    {
+      "sentence": "Teenagers chat with their friends on social media ___.",
+      "answer": "every day"
+    },
+    {
+      "sentence": "Teens listen to music on the way to school ___.",
+      "answer": "in the morning"
+    },
+    {
+      "sentence": "Teenagers play online games with their friends ___.",
+      "answer": "in the evening"
+    },
+    {
+      "sentence": "Teenagers go out with their friends ___.",
+      "answer": "at the weekend"
+    },
+    {
+      "sentence": "Teens watch films with their families ___.",
+      "answer": "on Saturdays"
+    },
+    {
+      "sentence": "Teenagers meet their friends ___.",
+      "answer": "after school"
+    },
+    {
+      "sentence": "Teens visit the sports club ___.",
+      "answer": "once a week"
+    },
+    {
+      "sentence": "Teenagers relax and watch TV ___.",
+      "answer": "at night"
+    }
+  ]
 }

@@ -1,0 +1,49 @@
+{
+  "id": "present_perfect_continuous_a1_station_1",
+  "title": "Сборка Длинного Моста (Механика)",
+  "description": "Вставь have been или has been и добавь -ing к глаголу.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ (play) tennis for 2 hours.",
+      "answer": "have been playing"
+    },
+    {
+      "sentence": "She ___ (read) a book since morning.",
+      "answer": "has been reading"
+    },
+    {
+      "sentence": "We ___ (watch) TV all day.",
+      "answer": "have been watching"
+    },
+    {
+      "sentence": "He ___ (sleep) for 3 hours.",
+      "answer": "has been sleeping"
+    },
+    {
+      "sentence": "They ___ (study) English since 2020.",
+      "answer": "have been studying"
+    },
+    {
+      "sentence": "My mum ___ (cook) dinner for an hour.",
+      "answer": "has been cooking"
+    },
+    {
+      "sentence": "You ___ (run) very fast.",
+      "answer": "have been running"
+    },
+    {
+      "sentence": "Tom ___ (ride) his bike since morning.",
+      "answer": "has been riding"
+    },
+    {
+      "sentence": "The dog ___ (bark) all night.",
+      "answer": "has been barking"
+    },
+    {
+      "sentence": "It ___ (rain) for 2 hours.",
+      "answer": "has been raining"
+    }
+  ]
+}

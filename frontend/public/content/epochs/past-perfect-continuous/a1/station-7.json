@@ -1,0 +1,49 @@
+{
+  "id": "past_perfect_continuous_a1_station_7",
+  "title": "Интервью: Как долго? (ИИ-бот)",
+  "description": "Ответь боту: 1. How long had you been studying before you went to school? 2. How long had you been playing before your mum called you? 3. How long had you been sleeping before the alarm rang?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Промпт: \"Act like a detective. Use A1 English. Ask me how long I had been doing things before an event.\" Ты — детектив. Общайся по-английски простыми фразами (уровень A1). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй с интересом, как на допросе свидетеля: уточняй детали (how long? for how many hours?), мягко поправляй ошибки в Past Perfect Continuous. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "How long had you been studying before you went to school?",
+      "markers": [
+        "had been",
+        "for",
+        "hours",
+        "minutes",
+        "studying",
+        "school"
+      ],
+      "min": 1,
+      "hint": "Ответь: I had been studying for an hour before I went to school."
+    },
+    {
+      "question": "How long had you been playing before your mum called you?",
+      "markers": [
+        "had been",
+        "for",
+        "playing",
+        "called",
+        "mum",
+        "minutes"
+      ],
+      "min": 1,
+      "hint": "Ответь: I had been playing for 2 hours before my mum called me."
+    },
+    {
+      "question": "How long had you been sleeping before the alarm rang?",
+      "markers": [
+        "had been",
+        "for",
+        "sleeping",
+        "alarm",
+        "rang",
+        "hours"
+      ],
+      "min": 1,
+      "hint": "Ответь: I had been sleeping for 8 hours before the alarm rang."
+    }
+  ]
+}

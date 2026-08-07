@@ -1,224 +1,154 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
-import { motion } from "framer-motion"
-import {
-  type EpochProgress,
-  type EpochSector,
-  type StationProgress,
-  epochPercent,
-  epochPortalOpenedKey,
-  epochStationsDone,
-  epochStationsTotal,
-  sectorGradeKey,
-} from "@/lib/epoch"
-import { Confetti } from "@/components/Confetti"
-
-interface EpochIndexJson {
-  epoch: string
-  title: string
-  subtitle: string
-  sectors: EpochSector[]
-}
-
-type Epoch = {
-  number: number
-  title: string
-  level: string
-  tagline: string
-  focus: string
-  story: string
-  locked: boolean
-}
 
 /**
  * Карта 12 Эпох — названия, уровни и фокусы СТРОГО из документа
- * «АНГЛ КОНТЕКСТ.md», раздел 4.2 «Карта 12-ти Эпох».
+ * «АНГЛ КОНТЕКСТ.md», раздел 4.2 «Карта 12-ти Эпох». Slug и иконка — из
+ * пакета «Все Эпохи» (пак 070826): /epoch/<slug> читает index.json эпохи.
+ * Q2: ВСЕ эпохи активны сразу — никаких замков.
  */
-const EPOCHS: Epoch[] = [
+const EPOCHS: {
+  number: number
+  slug: string
+  title: string
+  level: string
+  tagline: string
+  icon: string
+  focus: string
+  story: string
+}[] = [
   {
     number: 1,
+    slug: "present-simple",
     title: "Present Simple",
     level: "A1",
     tagline: "База рутины",
+    icon: "📸",
     focus: "Habits, facts. Окончание -s. Do/Does.",
     story: "Катастрофа на космической станции. Нужно восстановить протоколы ежедневной проверки.",
-    locked: false,
   },
   {
     number: 2,
+    slug: "present-continuous",
     title: "Present Continuous",
     level: "A1+",
     tagline: "Прямой эфир",
+    icon: "🎥",
     focus: "Now, at the moment. To be + V-ing. Орфография -ing.",
     story:
       "Агент подключается к камерам наблюдения в реальном времени. Нужно описать, что происходит прямо сейчас, чтобы координаторы могли спасти людей.",
-    locked: true,
   },
   {
     number: 3,
+    slug: "past-simple",
     title: "Past Simple",
     level: "A2",
     tagline: "Архивы истории",
+    icon: "📜",
     focus: "V2, правильные/неправильные глаголы, Did/Didn't.",
     story:
       "База данных прошлого повреждена. Агент должен расшифровать логи того, что произошло вчера, чтобы найти виновника аварии.",
-    locked: true,
   },
   {
     number: 4,
+    slug: "past-continuous",
     title: "Past Continuous",
     level: "A2+",
     tagline: "Петля времени",
+    icon: "📼",
     focus: "Was/Were + V-ing. Contrast with Past Simple.",
     story:
       "Игрок застревает в моменте прошлого. Нужно описать процесс, который тянулся в тот момент, когда случился сбой.",
-    locked: true,
   },
   {
     number: 5,
+    slug: "present-perfect",
     title: "Present Perfect",
     level: "B1",
     tagline: "Сейсмическая активность",
+    icon: "🎒",
     focus: "Have/Has + V3. Just, already, yet, ever, never. Сравнение с Past Simple.",
     story: "Аномалия настоящего. Результат прошлых действий угрожает базе прямо сейчас.",
-    locked: true,
   },
   {
     number: 6,
+    slug: "present-perfect-continuous",
     title: "Present Perfect Continuous",
     level: "B1+",
     tagline: "Тлеющий провод",
+    icon: "⏱️",
     focus: "Have/has been + V-ing. Since/for. Акцент на длительность.",
     story: "Процесс начался в прошлом и всё ещё тлеет, угрожая взрывом.",
-    locked: true,
   },
   {
     number: 7,
+    slug: "future-simple",
     title: "Future Simple",
     level: "A2",
     tagline: "Прогноз катастрофы",
+    icon: "🔮",
     focus: "Will / Won't. Predictions, sudden decisions.",
     story: "ИИ предсказывает несколько вариантов развития будущего. Агент должен выбрать правильный сценарий.",
-    locked: true,
   },
   {
     number: 8,
+    slug: "future-continuous",
     title: "Future Continuous",
     level: "B1",
     tagline: "Заселение Марса",
+    icon: "⏭️",
     focus: "Will be + V-ing.",
     story:
       "Агент попадает в будущее, где люди уже летят на Марс. Нужно описать процесс, который будет происходить в определенный момент в будущем.",
-    locked: true,
   },
   {
     number: 9,
+    slug: "past-perfect",
     title: "Past Perfect",
     level: "B1+",
     tagline: "Эффект бабочки",
+    icon: "🎬",
     focus: 'Had + V3. "Past before past".',
     story:
       "Агент расследует преступление во времени. Нужно понять, что произошло до того, как сработала сигнализация.",
-    locked: true,
   },
   {
     number: 10,
+    slug: "future-perfect",
     title: "Future Perfect",
     level: "B2",
     tagline: "Точка невозврата",
+    icon: "🏁",
     focus: "Will have + V3. К концу этого года/к завтрашнему дню.",
     story: "Агент должен запустить протокол спасения до прибытия метеорита.",
-    locked: true,
   },
   {
     number: 11,
+    slug: "past-perfect-continuous",
     title: "Past Perfect Continuous",
     level: "B2",
     tagline: "Скрытый мотив",
+    icon: "🏃",
     focus: "Had been + V-ing.",
     story:
       "Расследование заговора. Выясняется, что шпион вел двойную жизнь задолго до того, как его раскрыли.",
-    locked: true,
   },
   {
     number: 12,
+    slug: "future-perfect-continuous",
     title: "Future Perfect Continuous",
     level: "C1",
     tagline: "Вечный двигатель",
+    icon: "⏱️⏭️",
     focus: "Will have been + V-ing.",
     story:
       "Финальная битва. Агент должен описать, как долго Машина Времени будет работать к определенному моменту в будущем, чтобы не взорваться.",
-    locked: true,
   },
 ]
 
 export default function MissionPage() {
   const router = useRouter()
-
-  // T12 «Геймификация эпохи»: портал-% активной эпохи (Present Simple) —
-  // прогресс станций читается из tmp_progress_grade_N по grade секторов.
-  const [epochProgress, setEpochProgress] = useState<{
-    done: number
-    total: number
-    pct: number
-  } | null>(null)
-  const [showPortalCelebration, setShowPortalCelebration] = useState(false)
-
-  useEffect(() => {
-    let cancelled = false
-    fetch("/content/epochs/present-simple/index.json")
-      .then(async (res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
-        return (await res.json()) as EpochIndexJson
-      })
-      .then((j) => {
-        if (cancelled) return
-        const sectors = j.sectors
-        const progress: EpochProgress = {}
-        for (const s of sectors) {
-          const n = sectorGradeKey(s)
-          try {
-            const raw = localStorage.getItem(`tmp_progress_grade_${n}`)
-            progress[n] = raw ? (JSON.parse(raw) as Record<string, StationProgress>) : {}
-          } catch {
-            progress[n] = {}
-          }
-        }
-        const total = epochStationsTotal(sectors)
-        const done = epochStationsDone(progress, sectors)
-        const pct = epochPercent(progress, sectors)
-        setEpochProgress({ done, total, pct })
-        // Финал «Портал открыт!» — 1 раз на эпоху (общий флаг с картой
-        // секторов: какой экран первым увидит 100%, тот и празднует).
-        if (total > 0 && done >= total) {
-          try {
-            if (!localStorage.getItem(epochPortalOpenedKey("present-simple"))) {
-              setShowPortalCelebration(true)
-            }
-          } catch {
-            /* ignore unavailable storage */
-          }
-        }
-      })
-      .catch((err) => {
-        if (cancelled) return
-        console.error("[MissionPage] Failed to load epoch index.json", err)
-      })
-    return () => {
-      cancelled = true
-    }
-  }, [])
-
-  const closePortalCelebration = () => {
-    try {
-      localStorage.setItem(epochPortalOpenedKey("present-simple"), "1")
-    } catch {
-      /* ignore unavailable storage */
-    }
-    setShowPortalCelebration(false)
-  }
 
   return (
     <div className="mx-auto flex min-h-[100dvh] w-full max-w-lg flex-col gap-5 px-4 py-4">
@@ -265,7 +195,8 @@ export default function MissionPage() {
               🤖
             </span>
             <span className="pt-0.5 text-base font-medium leading-snug text-slate-700">
-              Verb Bot — твой ИИ-навигатор (как JARVIS): брифинги, оценка.
+              Verb Bot — твой ИИ-навигатор (как JARVIS). Что тебя ждёт: Инструктаж,
+              Миссии, Общение, Квесты, Уровни сложности.
             </span>
           </li>
           <li className="flex items-start gap-3">
@@ -273,14 +204,13 @@ export default function MissionPage() {
               🚀
             </span>
             <span className="pt-0.5 text-base font-medium leading-snug text-slate-700">
-              Эпоха Present Simple: «Катастрофа на космической станции. Нужно
-              восстановить протоколы ежедневной проверки».
+              Все 12 эпох открыты сразу! Выбирай любую и начинай путешествие.
             </span>
           </li>
         </ul>
       </section>
 
-      {/* Карта 12 Эпох */}
+      {/* Карта 12 Эпох — все активны (Q2, без замков) */}
       <section className="flex flex-col gap-3">
         <h2 className="font-display text-xl font-black tracking-tight text-primary-900">
           Карта 12 Эпох
@@ -288,21 +218,22 @@ export default function MissionPage() {
         {EPOCHS.map((epoch) => (
           <article
             key={epoch.number}
-            className={`flex flex-col gap-3 rounded-2xl border-2 bg-white p-4 ${
-              epoch.locked
-                ? "border-primary-200 opacity-70"
-                : "border-primary-300 shadow-pop"
-            }`}
+            className="flex flex-col gap-3 rounded-2xl border-2 border-primary-300 bg-white p-4 shadow-pop"
           >
             <div className="flex items-start justify-between gap-3">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-wide text-primary-500">
-                  Эпоха {epoch.number}
-                </p>
-                <h3 className="font-display text-lg font-extrabold leading-tight tracking-tight text-primary-900">
-                  {epoch.title}
-                </h3>
-                <p className="text-sm font-bold text-slate-700">{epoch.tagline}</p>
+              <div className="flex items-start gap-3">
+                <span className="mt-0.5 text-3xl" aria-hidden="true">
+                  {epoch.icon}
+                </span>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wide text-primary-500">
+                    Эпоха {epoch.number}
+                  </p>
+                  <h3 className="font-display text-lg font-extrabold leading-tight tracking-tight text-primary-900">
+                    {epoch.title}
+                  </h3>
+                  <p className="text-sm font-bold text-slate-700">{epoch.tagline}</p>
+                </div>
               </div>
               <span className="shrink-0 rounded-full bg-primary-100 px-2.5 py-1 text-xs font-black text-primary-700">
                 {epoch.level}
@@ -314,73 +245,52 @@ export default function MissionPage() {
             <p className="text-sm font-medium leading-snug text-slate-600">
               <span className="font-bold text-slate-700">Сюжет:</span> {epoch.story}
             </p>
-            {epoch.locked ? (
-              <p
-                className="flex min-h-[44px] items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-primary-200 bg-primary-50 text-sm font-bold text-slate-400"
-                aria-disabled="true"
-              >
-                <span aria-hidden="true">🔒</span> скоро
-              </p>
-            ) : (
-              <>
-                {/* T12 «Геймификация эпохи»: портал-% активной эпохи — стиль
-                    карты миров классов (sections/page.tsx W1-T2). */}
-                {epochProgress && epochProgress.total > 0 && (
-                  <div className="w-full rounded-2xl border border-primary-200 bg-white/80 px-3 py-2 shadow-soft">
-                    <div className="mb-1 flex items-center justify-between gap-2 text-sm font-bold">
-                      <span className="text-primary-800">
-                        Портал восстановлен на {epochProgress.pct}%
-                      </span>
-                      <span className="text-xs font-semibold text-primary-500">
-                        {epochProgress.done}/{epochProgress.total}
-                      </span>
-                    </div>
-                    <div className="h-3 w-full overflow-hidden rounded-full bg-primary-100">
-                      <motion.div
-                        className="h-full rounded-full bg-gradient-to-r from-primary-400 to-primary-600"
-                        initial={{ width: 0 }}
-                        animate={{ width: `${epochProgress.pct}%` }}
-                        transition={{ type: "spring", stiffness: 120, damping: 20 }}
-                      />
-                    </div>
-                  </div>
-                )}
-                <button
-                  type="button"
-                  onClick={() => router.push("/epoch/present-simple")}
-                  className="min-h-[44px] w-full rounded-2xl bg-primary-600 px-4 py-2 text-base font-bold text-white transition-colors hover:bg-primary-700"
-                >
-                  Войти в эпоху →
-                </button>
-              </>
-            )}
+            <button
+              type="button"
+              onClick={() => router.push(`/epoch/${epoch.slug}`)}
+              className="min-h-[44px] w-full rounded-2xl bg-primary-600 px-4 py-2 text-base font-bold text-white transition-colors hover:bg-primary-700"
+            >
+              Войти в эпоху →
+            </button>
           </article>
         ))}
       </section>
 
-      {/* T12 «Геймификация эпохи»: финальная сцена при 100% эпохи — оверлей
-          «Портал открыт!» + конфетти, 1 раз на эпоху (общий флаг с картой
-          секторов tmp_portal_epoch_present_simple_opened). */}
-      {showPortalCelebration && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-primary-900/60 p-4 backdrop-blur-sm">
-          <div className="relative w-full max-w-sm overflow-hidden rounded-3xl bg-white px-6 py-8 text-center shadow-2xl">
-            <Confetti count={40} />
-            <div className="relative mb-2 text-6xl">🎉</div>
-            <h2 className="font-display relative text-3xl font-extrabold text-primary-900">
-              Портал открыт!
-            </h2>
-            <p className="relative mt-2 text-sm text-slate-500">
-              Ты восстановил портал эпохи — все секторы открыты для путешествий!
-            </p>
-            <button
-              onClick={closePortalCelebration}
-              className="relative mt-5 min-h-[44px] rounded-2xl bg-primary-600 px-6 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
-            >
-              Продолжить
-            </button>
+      {/* «Великий Экзамен Времен» (Q9) — карточка ведёт на /exam; страницу
+          создаёт тикет T14, до него маршрут просто ссылка. */}
+      <section className="flex flex-col gap-3">
+        <article className="flex flex-col gap-3 rounded-2xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-white p-4 shadow-pop">
+          <div className="flex items-start justify-between gap-3">
+            <div className="flex items-start gap-3">
+              <span className="mt-0.5 text-3xl" aria-hidden="true">
+                🏆
+              </span>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wide text-amber-600">
+                  Финальное испытание
+                </p>
+                <h3 className="font-display text-lg font-extrabold leading-tight tracking-tight text-amber-900">
+                  Великий Экзамен Времен
+                </h3>
+                <p className="text-sm font-bold text-slate-700">
+                  12 времён. 4 сектора. Твоя проверка.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      )}
+          <p className="text-sm font-medium leading-snug text-slate-600">
+            <span className="font-bold text-slate-700">Испытание:</span> собери все 12
+            времён в единую систему и докажи, что ты владеешь временем!
+          </p>
+          <button
+            type="button"
+            onClick={() => router.push("/exam")}
+            className="min-h-[44px] w-full rounded-2xl bg-amber-500 px-4 py-2 text-base font-bold text-white transition-colors hover:bg-amber-600"
+          >
+            К Экзамену →
+          </button>
+        </article>
+      </section>
     </div>
   )
 }

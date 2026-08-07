@@ -1,0 +1,43 @@
+{
+  "id": "future_perfect_continuous_a2_station_7",
+  "title": "Скоростное Свидание (Диалог)",
+  "description": "Спроси партнера: 1. How long will you have been studying by 5 PM tomorrow? 2. How long will you have been sleeping by 8 AM? 3. Will you be tired? Why?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — партнёр ученика по скоростному свиданию (ровесник). Общайся по-английски простыми фразами (уровень A2). Ученик будет задавать тебе вопросы о том, как долго ты будешь делать что-то к моменту в будущем (Future Perfect Continuous) — отвечай живо и дружелюбно, рассказывай о своих планах на завтра, используй will have been + V-ing в ответах. Задавай встречные вопросы, поддерживай разговор. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "How long will you have been studying by 5 PM tomorrow?",
+      "markers": [
+        "How",
+        "long",
+        "studying",
+        "5 PM",
+        "tomorrow"
+      ],
+      "min": 1,
+      "hint": "Спроси партнёра: How long will you have been studying by 5 PM tomorrow?"
+    },
+    {
+      "question": "How long will you have been sleeping by 8 AM?",
+      "markers": [
+        "How",
+        "long",
+        "sleeping",
+        "8 AM"
+      ],
+      "min": 1,
+      "hint": "Спроси партнёра: How long will you have been sleeping by 8 AM?"
+    },
+    {
+      "question": "Will you be tired? Why?",
+      "markers": [
+        "Will",
+        "tired",
+        "Why"
+      ],
+      "min": 1,
+      "hint": "Спроси партнёра: Will you be tired? Why?"
+    }
+  ]
+}

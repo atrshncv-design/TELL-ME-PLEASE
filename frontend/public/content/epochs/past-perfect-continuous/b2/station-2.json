@@ -1,0 +1,39 @@
+{
+  "id": "past_perfect_continuous_b2_station_2",
+  "title": "Тонкие Смыслы (Перевод-Ловушка)",
+  "description": "Переведи, выбрав Past Perfect или Past Perfect Continuous.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ to the teacher for 10 minutes.",
+      "answer": "had been listening",
+      "hint": "Я слушал учителя уже 10 минут (когда зазвонил звонок)."
+    },
+    {
+      "sentence": "I ___ to the teacher.",
+      "answer": "had listened",
+      "hint": "Я послушал учителя (и понял, что делать)."
+    },
+    {
+      "sentence": "We ___ the car since morning.",
+      "answer": "had been repairing",
+      "hint": "Мы ремонтировали машину с утра (еще не починили)."
+    },
+    {
+      "sentence": "We ___ the car.",
+      "answer": "had repaired",
+      "hint": "Мы починили машину (она работала)."
+    },
+    {
+      "sentence": "It ___ all day.",
+      "answer": "had been raining",
+      "hint": "Дождь шел весь день (и земля была мокрой)."
+    },
+    {
+      "sentence": "It ___.",
+      "answer": "had rained",
+      "hint": "Дождь прошел (и смыл пыль)."
+    }
+  ]
+}

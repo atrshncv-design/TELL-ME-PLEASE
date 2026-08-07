@@ -1,0 +1,67 @@
+{
+  "id": "future_perfect_continuous_a1_station_3",
+  "title": "Двойной Маркер (BY + FOR)",
+  "description": "Распредели маркеры в две корзины: \"BY\" (к моменту) или \"FOR\" (в течение).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "items": [
+    {
+      "verb": "5 PM",
+      "answer": "by"
+    },
+    {
+      "verb": "tomorrow",
+      "answer": "by"
+    },
+    {
+      "verb": "evening",
+      "answer": "by"
+    },
+    {
+      "verb": "Sunday",
+      "answer": "by"
+    },
+    {
+      "verb": "morning",
+      "answer": "by"
+    },
+    {
+      "verb": "noon",
+      "answer": "by"
+    },
+    {
+      "verb": "2 hours",
+      "answer": "for"
+    },
+    {
+      "verb": "3 days",
+      "answer": "for"
+    },
+    {
+      "verb": "a long time",
+      "answer": "for"
+    },
+    {
+      "verb": "10 years",
+      "answer": "for"
+    },
+    {
+      "verb": "a month",
+      "answer": "for"
+    },
+    {
+      "verb": "5 minutes",
+      "answer": "for"
+    }
+  ],
+  "columns": [
+    {
+      "id": "by",
+      "label": "BY (к моменту)"
+    },
+    {
+      "id": "for",
+      "label": "FOR (в течение)"
+    }
+  ]
+}

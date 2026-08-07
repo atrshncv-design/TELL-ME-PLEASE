@@ -1,0 +1,35 @@
+{
+  "id": "past_simple_a2_station_2",
+  "title": "Перевод-Ловушка (Интерференция)",
+  "description": "Переведи фразы, обращая внимание на DID.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "Мы не ходили в школу вчера. We ___ to school yesterday.",
+      "answer": "didn't go",
+      "hint": "(didn't go)"
+    },
+    {
+      "sentence": "Ты читал эту книгу на прошлой неделе? ___ you ___ this book last week?",
+      "answer": [
+        "Did",
+        "read"
+      ],
+      "hint": "(Did / read)"
+    },
+    {
+      "sentence": "Она не купила хлеб. She ___ the bread.",
+      "answer": "didn't buy",
+      "hint": "(didn't buy)"
+    },
+    {
+      "sentence": "Где они играли? Where ___ they ___?",
+      "answer": [
+        "did",
+        "play"
+      ],
+      "hint": "(did / play)"
+    }
+  ]
+}

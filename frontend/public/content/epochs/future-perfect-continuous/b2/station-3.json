@@ -1,0 +1,63 @@
+{
+  "id": "future_perfect_continuous_b2_station_3",
+  "title": "Текст ОГЭ: Космическое Будущее (Чтение)",
+  "description": "Раскрой скобки в тексте о космическом будущем (ОГЭ): пять будущих времён.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "In 2050, life ___ very different. By 2030, scientists ___ a base on the Moon. By 2040, astronauts ___ there for 10 years. At this time next year, they ___ new robots. By the end of the decade, they ___ new energy sources. While robots ___, humans ___ them from Earth. I think we ___ in a better world.",
+      "answers": [
+        [
+          "will be"
+        ],
+        [
+          "will have built"
+        ],
+        [
+          "will have been living"
+        ],
+        [
+          "will be testing"
+        ],
+        [
+          "will have discovered"
+        ],
+        [
+          "are working"
+        ],
+        [
+          "will be monitoring"
+        ],
+        [
+          "will live"
+        ]
+      ],
+      "hints": [
+        "(be)",
+        "(build)",
+        "(live)",
+        "(test)",
+        "(discover)",
+        "(work)",
+        "(monitor)",
+        "(live)"
+      ],
+      "word_bank": [
+        "will be",
+        "will have built",
+        "will have been living",
+        "will be testing",
+        "will have discovered",
+        "are working",
+        "will be monitoring",
+        "will live",
+        "will have been building",
+        "will test",
+        "will work",
+        "will be living",
+        "will discover"
+      ]
+    }
+  ]
+}

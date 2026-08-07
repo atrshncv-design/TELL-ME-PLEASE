@@ -23,6 +23,38 @@ interface FillInTaskProps {
   onComplete?: (score: number, total: number) => void
 }
 
+// Нормализация ответа fill-in (спека «Все Эпохи» §2, инструкция doc):
+// регистронезависимо + типографские апострофы = прямые + сокращения =
+// полные формы (don't = do not, hasn't = has not, ...). Правка касается
+// ТОЛЬКО сравнения — контент и флоу «Проверить»/«Далее» не меняются.
+const CONTRACTIONS: Record<string, string> = {
+  "don't": "do not",
+  "doesn't": "does not",
+  "isn't": "is not",
+  "aren't": "are not",
+  "wasn't": "was not",
+  "weren't": "were not",
+  "hasn't": "has not",
+  "haven't": "have not",
+  "can't": "cannot",
+  "couldn't": "could not",
+  "wouldn't": "would not",
+  "shouldn't": "should not",
+  "won't": "will not",
+}
+
+const normalizeFill = (s: string) => {
+  let out = String(s)
+    .trim()
+    .toLowerCase()
+    .replace(/[’‘]/g, "'")
+    .replace(/\s+/g, " ")
+  for (const [short, full] of Object.entries(CONTRACTIONS)) {
+    out = out.replace(new RegExp(`\\b${short}\\b`, "g"), full)
+  }
+  return out
+}
+
 export function FillInTask({ title, description, items, onComplete }: FillInTaskProps) {
   const [current, setCurrent] = useState(0)
   const [score, setScore] = useState(0)
@@ -66,7 +98,7 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
 
   // Вердикт по конкретному пропуску: зелёный (верно) или красный (неверно).
   const blankCorrect = (i: number) =>
-    (inputs[i] ?? "").trim().toLowerCase() === (answers[i] ?? "").toLowerCase()
+    normalizeFill(inputs[i] ?? "") === normalizeFill(answers[i] ?? "")
 
   const updateInput = (index: number, value: string) => {
     if (showResult) return
@@ -83,7 +115,7 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
   const handleCheck = () => {
     if (showResult) return
     const correct = answers.every(
-      (ans, i) => (inputs[i] ?? "").trim().toLowerCase() === ans.toLowerCase()
+      (ans, i) => normalizeFill(inputs[i] ?? "") === normalizeFill(ans)
     )
     setIsCorrect(correct)
     if (correct) setScore((s) => s + 1)

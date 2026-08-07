@@ -1,0 +1,29 @@
+{
+  "id": "past_perfect_continuous_a2_station_3",
+  "title": "Тренажер Перевода (Интерференция)",
+  "description": "Переведи фразы (фокус на \"уже ... как / в течение\").",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ for you for 2 hours when you came.",
+      "answer": "had been waiting",
+      "hint": "Я ждал тебя уже 2 часа, когда ты пришел."
+    },
+    {
+      "sentence": "We ___ English since 2010 before we went to London.",
+      "answer": "had been learning",
+      "hint": "Мы учили английский с 2010 года, прежде чем поехали в Лондон."
+    },
+    {
+      "sentence": "She ___ for 3 hours when the phone rang.",
+      "answer": "had been sleeping",
+      "hint": "Она спала уже 3 часа, когда раздался звонок."
+    },
+    {
+      "sentence": "It ___ since morning when we left the house.",
+      "answer": "had been raining",
+      "hint": "Дождь шел с самого утра, когда мы вышли из дома."
+    }
+  ]
+}

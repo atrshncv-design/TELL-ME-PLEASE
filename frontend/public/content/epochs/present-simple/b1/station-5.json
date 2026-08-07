@@ -1,0 +1,41 @@
+{
+  "id": "b1_station_5",
+  "title": "Сплетни (Трансформация в 3-е лицо)",
+  "description": "Перескажи факты о друге (He/She...): преврати предложения от I в рассказ о нём.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I don't like waking up early. → He ___.",
+      "answer": "doesn't like waking up early"
+    },
+    {
+      "sentence": "I spend all my pocket money on snacks. → He ___.",
+      "answer": "spends all his pocket money on snacks"
+    },
+    {
+      "sentence": "I always help my parents. → ___.",
+      "answer": "He always helps his parents"
+    },
+    {
+      "sentence": "I don't do my homework on Fridays. → ___.",
+      "answer": "He doesn't do his homework on Fridays"
+    },
+    {
+      "sentence": "I chat with my friends online. → ___.",
+      "answer": "He chats with his friends online"
+    },
+    {
+      "sentence": "I don't eat meat. → ___.",
+      "answer": "He doesn't eat meat"
+    },
+    {
+      "sentence": "I study English. → ___.",
+      "answer": "He studies English"
+    },
+    {
+      "sentence": "I dream of becoming a blogger. → ___.",
+      "answer": "He dreams of becoming a blogger"
+    }
+  ]
+}

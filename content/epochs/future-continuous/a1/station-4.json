@@ -1,0 +1,57 @@
+{
+  "id": "future_continuous_a1_station_4",
+  "title": "Точка во Времени (Маркеры)",
+  "description": "Выбери Future Continuous (если есть маркер процесса) или Future Simple.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "At 5 PM I ___ football.",
+      "options": [
+        "will play",
+        "will be playing"
+      ],
+      "answer": "will be playing"
+    },
+    {
+      "question": "Tomorrow I ___ to the park.",
+      "options": [
+        "will go",
+        "will be going"
+      ],
+      "answer": "will go"
+    },
+    {
+      "question": "We ___ TV at 8 PM.",
+      "options": [
+        "will watch",
+        "will be watching"
+      ],
+      "answer": "will be watching"
+    },
+    {
+      "question": "He ___ well tomorrow.",
+      "options": [
+        "will sleep",
+        "will be sleeping"
+      ],
+      "answer": "will sleep"
+    },
+    {
+      "question": "They ___ at noon.",
+      "options": [
+        "will study",
+        "will be studying"
+      ],
+      "answer": "will be studying"
+    },
+    {
+      "question": "I think I ___ a new car.",
+      "options": [
+        "will buy",
+        "will be buying"
+      ],
+      "answer": "will buy"
+    }
+  ]
+}

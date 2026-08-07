@@ -1,0 +1,44 @@
+{
+  "id": "past_perfect_a2_station_1",
+  "title": "Триггер: By the time (К тому времени как)",
+  "description": "Раскрой скобки, используя Past Simple или Past Perfect.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "By the time I (come) ___ home, my mum (cook) ___ dinner.",
+      "answer": [
+        "came",
+        "had cooked"
+      ]
+    },
+    {
+      "sentence": "By the time she (arrive) ___, the train (leave) ___.",
+      "answer": [
+        "arrived",
+        "had left"
+      ]
+    },
+    {
+      "sentence": "By the time we (finish) ___ the work, it (get) ___ dark.",
+      "answer": [
+        "finished",
+        "had got"
+      ]
+    },
+    {
+      "sentence": "By the time he (wake up) ___, his parents (go) ___ to work.",
+      "answer": [
+        "woke up",
+        "had gone"
+      ]
+    },
+    {
+      "sentence": "By the time they (call) ___, I (fall) ___ asleep.",
+      "answer": [
+        "called",
+        "had fallen"
+      ]
+    }
+  ]
+}

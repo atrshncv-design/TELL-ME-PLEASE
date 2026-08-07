@@ -1,0 +1,43 @@
+{
+  "id": "past_perfect_continuous_a1_station_6",
+  "title": "Текст: Долгий День (Интеграция)",
+  "description": "Интеграция механики в связный текст о долгом дне.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Yesterday I was very tired. I ___ for 3 hours before I went to bed. My brother was dirty. He ___ football in the park. My mum was in the kitchen. She ___ dinner since 5 PM. Our dog was happy. It ___ in the garden all day.",
+      "answers": [
+        [
+          "had been studying"
+        ],
+        [
+          "had been playing"
+        ],
+        [
+          "had been cooking"
+        ],
+        [
+          "had been running"
+        ]
+      ],
+      "hints": [
+        "(study)",
+        "(play)",
+        "(cook)",
+        "(run)"
+      ],
+      "word_bank": [
+        "had been studying",
+        "had been playing",
+        "had been cooking",
+        "had been running",
+        "was studying",
+        "has been playing",
+        "had been sleeping",
+        "is running",
+        "played"
+      ]
+    }
+  ]
+}

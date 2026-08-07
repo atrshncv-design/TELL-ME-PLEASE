@@ -1,0 +1,52 @@
+{
+  "id": "present_continuous_b2_station_6",
+  "title": "Описание Фотографии (ОГЭ Задание 3)",
+  "description": "Использование Present Continuous для описания действий на фото.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Опиши фотографию (пикник, протест или съёмка фильма) по плану ОГЭ",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "4 действия в Present Continuous",
+      "hint": "Обязательно 4 действия: am/is/are + глагол с -ing (They are cleaning the area.)",
+      "markers": [
+        "am",
+        "is",
+        "are"
+      ],
+      "min": 4
+    },
+    {
+      "label": "Глаголы действий на фото",
+      "hint": "cleaning, picking up, holding, playing, sitting, standing, talking, eating",
+      "markers": [
+        "cleaning",
+        "picking",
+        "holding",
+        "playing",
+        "sitting",
+        "standing",
+        "talking",
+        "eating",
+        "watching",
+        "taking"
+      ],
+      "min": 3
+    },
+    {
+      "label": "План ОГЭ: где / кто / что делает",
+      "hint": "The photo was taken in..., I can see..., In the background...",
+      "markers": [
+        "photo",
+        "picture",
+        "see",
+        "background",
+        "left",
+        "right",
+        "front"
+      ],
+      "min": 2
+    }
+  ]
+}

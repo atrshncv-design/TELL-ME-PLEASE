@@ -1,0 +1,46 @@
+{
+  "id": "past_simple_b1_station_5",
+  "title": "История из Жизни (Речь)",
+  "description": "Расскажи историю о том, как ты потерял какую-то вещь (телефон, ключи). Используй Past Simple (как это произошло) и Present Perfect (какой результат сейчас).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "История о том, как я потерял вещь",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Расскажи, как это произошло (Past Simple)",
+      "hint": "Yesterday I lost my keys. I looked for them everywhere…",
+      "markers": [
+        "lost",
+        "found",
+        "forgot",
+        "left",
+        "dropped",
+        "went",
+        "was",
+        "were",
+        "had",
+        "took",
+        "looked",
+        "searched",
+        "came",
+        "remembered",
+        "put"
+      ],
+      "min": 3
+    },
+    {
+      "label": "Скажи, какой результат сейчас (Present Perfect)",
+      "hint": "I have found them today under the sofa! / I have already bought new keys.",
+      "markers": [
+        "have",
+        "has",
+        "already",
+        "just",
+        "yet",
+        "today"
+      ],
+      "min": 1
+    }
+  ]
+}

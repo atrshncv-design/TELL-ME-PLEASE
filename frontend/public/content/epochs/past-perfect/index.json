@@ -1,0 +1,283 @@
+{
+  "epoch": "past-perfect",
+  "title": "Эпоха Past Perfect",
+  "subtitle": "Машина Времени: Предыстория",
+  "icon": "🎬",
+  "theory": [
+    {
+      "title": "🎬 Шаг 1: Суть времени (Что это такое?)",
+      "text": "Привет, ребята! 👋 Мы снова в Машине Времени. Вы уже знаете, что Past Simple — это «Историк» 📜 (факт в прошлом), а Past Continuous — это «Видеокамера» 📼 (процесс в прошлом). Past Perfect — это «Флешбек» 🎬 или «Предыстория».\nЭто время нужно только для одного: показать, что одно действие в прошлом произошло РАНЬШЕ другого. Это «прошлое в прошлом».\nФормула (Базовый каркас):\nПодлежащее + HAD + Глагол в 3-й форме (V3) Хорошая новость: Глагол had один для всех лиц! (I had, He had, They had). Никаких was/were или did. Просто had + V3 (или -ed для правильных)."
+    },
+    {
+      "title": "🎭 Шаг 2: Как это работает? (Правило Двух Точек)",
+      "text": "Чтобы Past Perfect заработал, в предложении (или в контексте) обязательно должно быть ДВА действия в прошлом.\nТочка 1 (Флешбек 🎬): То, что произошло РАНЬШЕ. Это Past Perfect (had + V3).\nТочка 2 (Факт 📜): То, что произошло ПОЗЖЕ. Это Past Simple (V2).\nПример: Я пришел домой (Точка 2 - Past Simple). Мама уже приготовила ужин (Точка 1 - Past Perfect).\nWhen I came home (Точка 2), my mum had already cooked dinner (Точка 1)."
+    },
+    {
+      "title": "⚔️ Шаг 3: Битва Времен (Past Simple vs Past Continuous vs Past Perfect)",
+      "text": "Как не запутаться в трех прошедших временах на ОГЭ? Задайте себе вопрос: «В каком порядке произошли события?»\nPast Continuous (Фон 📼): Длинный процесс, который тянется.\nI was reading a book at 5 PM. (Я читал книгу в 5 вечера).\nPast Simple (Факт 📜): Короткое действие, которое случилось.\nI read a book yesterday. (Я прочитал книгу вчера).\nPast Perfect (Предыстория 🎬): Действие, которое закончилось ДО другого действия в прошлом.\nI had read the book before I watched the film. (Я прочитал книгу ДО того, как посмотрел фильм).\n💡 Лайфхак для ОГЭ (Слова-спутники): Если вы видите маркеры by the time (к тому времени как), before (до того как), after (после того как), already (уже) в прошлом — это 99% сигнал, что нужно использовать Past Perfect для действия, которое было первым!"
+    },
+    {
+      "title": "🚨 Шаг 4: Топ-3 ошибки, которые нужно уничтожить",
+      "text": "Использование Past Perfect без второго действия. ❌ Yesterday I had gone to the park. (Вчера я сходил в парк. Зачем тут Past Perfect? Вчера — это просто факт). ✅ Yesterday I went to the park. (Past Simple).\nПерепутанный порядок (смысловая ошибка). ❌ The train had left when I arrived. (Поезд ушел до того, как я пришел. Логично! Но если вы перепутаете формы, получится бред). ✅ The train had left when I arrived. (Поезд ушел ПЕРВЫМ — Past Perfect. Я пришел ВТОРЫМ — Past Simple).\nИспользование Past Perfect с точным временем. ❌ I had finished my homework at 5 PM. (Если есть точное время в прошлом — at 5 PM, используем Past Simple). ✅ I finished my homework at 5 PM."
+    }
+  ],
+  "theoryQuiz": [
+    {
+      "question": "When I ___ at the station, the train (left / had left).",
+      "options": [
+        "arrived",
+        "had arrived"
+      ],
+      "answer": "arrived"
+    },
+    {
+      "question": "When I (arrived / had arrived) at the station, the train ___.",
+      "options": [
+        "left",
+        "had left"
+      ],
+      "answer": "had left"
+    },
+    {
+      "question": "I ___ my car before it (started / had started) to rain.",
+      "options": [
+        "washed",
+        "had washed"
+      ],
+      "answer": "had washed"
+    },
+    {
+      "question": "I (washed / had washed) my car before it ___ to rain.",
+      "options": [
+        "started",
+        "had started"
+      ],
+      "answer": "started"
+    },
+    {
+      "question": "By the time she ___, we (finished / had finished) the dinner.",
+      "options": [
+        "came",
+        "had come"
+      ],
+      "answer": "came"
+    },
+    {
+      "question": "By the time she (came / had come), we ___ the dinner.",
+      "options": [
+        "finished",
+        "had finished"
+      ],
+      "answer": "had finished"
+    },
+    {
+      "question": "Yesterday I ___ football with my friends.",
+      "options": [
+        "played",
+        "had played"
+      ],
+      "answer": "played"
+    },
+    {
+      "question": "While I ___ home, I (found / had found) a wallet.",
+      "options": [
+        "was walking",
+        "had walked"
+      ],
+      "answer": "was walking"
+    },
+    {
+      "question": "While I (was walking / had walked) home, I ___ a wallet.",
+      "options": [
+        "found",
+        "had found"
+      ],
+      "answer": "found"
+    }
+  ],
+  "music": {
+    "title": "🎵 Музыкальная пауза (Караоке-генератор)",
+    "links": [
+      "[Ссылка на Rutube/Yandex коллекцию]"
+    ],
+    "sunoPrompt": "Придумай эпичную песню про Past Perfect. Объясни, что это время — 'прошлое в прошлом' (Past in the past), и используется, когда одно действие произошло раньше другого. Напомни формулу: had + V3. В припеве должны быть слова: before, after, by the time, had done. Стиль: cinematic orchestral, dramatic, 120 bpm."
+  },
+  "sectors": [
+    {
+      "id": "a1",
+      "level": "A1",
+      "title": "Первый Флешбек",
+      "grade": 5,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a1/station-1.json",
+          "title": "Сборка Предыстории (Механика)"
+        },
+        {
+          "id": "station-2",
+          "file": "a1/station-2.json",
+          "title": "Две Точки (До / После)"
+        },
+        {
+          "id": "station-3",
+          "file": "a1/station-3.json",
+          "title": "Торможение Хаоса (Отрицание)"
+        },
+        {
+          "id": "station-4",
+          "file": "a1/station-4.json",
+          "title": "Вопрос о Предыстории (Синтаксис)"
+        },
+        {
+          "id": "station-5",
+          "file": "a1/station-5.json",
+          "title": "Маркеры Предыстории (Before / After)"
+        },
+        {
+          "id": "station-6",
+          "file": "a1/station-6.json",
+          "title": "Текст: Опоздание (Интеграция)"
+        },
+        {
+          "id": "station-7",
+          "file": "a1/station-7.json",
+          "title": "Расследование (ИИ-бот)"
+        }
+      ],
+      "story": "Механика had + V3, понимание последовательности (до/после)."
+    },
+    {
+      "id": "a2",
+      "level": "A2",
+      "title": "Хронология Событий",
+      "grade": 6,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a2/station-1.json",
+          "title": "Триггер: By the time (К тому времени как)"
+        },
+        {
+          "id": "station-2",
+          "file": "a2/station-2.json",
+          "title": "Сборка Сцены (Синтаксис)"
+        },
+        {
+          "id": "station-3",
+          "file": "a2/station-3.json",
+          "title": "Детектор Ошибок (Дебаггинг)"
+        },
+        {
+          "id": "station-4",
+          "file": "a2/station-4.json",
+          "title": "Контраст: Процесс vs Предыстория (Past Cont vs Past Perfect)"
+        },
+        {
+          "id": "station-5",
+          "file": "a2/station-5.json",
+          "title": "Текст: Неудачный День (Чтение)"
+        },
+        {
+          "id": "station-6",
+          "file": "a2/station-6.json",
+          "title": "Блог: Мой Вчерашний Вечер (Продукт)"
+        },
+        {
+          "id": "station-7",
+          "file": "a2/station-7.json",
+          "title": "Алиби (Речь / Ролевая игра)"
+        }
+      ],
+      "story": "Союзы (by the time, before, after), уверенное различение Past Simple и Past Perfect."
+    },
+    {
+      "id": "b1",
+      "level": "B1",
+      "title": "Мастер Сценария",
+      "grade": "7-8",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b1/station-1.json",
+          "title": "Машина Времени: 4 Прошедших Времени"
+        },
+        {
+          "id": "station-2",
+          "file": "b1/station-2.json",
+          "title": "Перевод-Ловушка (Интерференция)"
+        },
+        {
+          "id": "station-3",
+          "file": "b1/station-3.json",
+          "title": "Тонкие Смыслы (Сортировка)"
+        },
+        {
+          "id": "station-4",
+          "file": "b1/station-4.json",
+          "title": "Текст: Сбой Системы (Интеграция)"
+        },
+        {
+          "id": "station-5",
+          "file": "b1/station-5.json",
+          "title": "ОписаниеСитуации (Речь)"
+        },
+        {
+          "id": "station-6",
+          "file": "b1/station-6.json",
+          "title": "Интервью с Изобретателем (Диалог с ИИ)"
+        },
+        {
+          "id": "station-7",
+          "file": "b1/station-7.json",
+          "title": "Комикс \"Приквел\" (Продукт)"
+        }
+      ],
+      "story": "Лексика технологий, сложные истории. Строгий контроль всех 4 прошедших времен (Simple, Cont, Perfect, Past Cont)."
+    },
+    {
+      "id": "b2",
+      "level": "B2",
+      "title": "Мастер Временной Ткани",
+      "grade": 9,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b2/station-1.json",
+          "title": "ОГЭ-Тренажер (Task 19: 4 Времени)"
+        },
+        {
+          "id": "station-2",
+          "file": "b2/station-2.json",
+          "title": "Тонкие Смыслы (Перевод-Ловушка)"
+        },
+        {
+          "id": "station-3",
+          "file": "b2/station-3.json",
+          "title": "Текст ОГЭ: История Города (Чтение)"
+        },
+        {
+          "id": "station-4",
+          "file": "b2/station-4.json",
+          "title": "Симуляция ОГЭ (Устная часть Task 2)"
+        },
+        {
+          "id": "station-5",
+          "file": "b2/station-5.json",
+          "title": "Описание Фотографии (ОГЭ Task 3)"
+        },
+        {
+          "id": "station-6",
+          "file": "b2/station-6.json",
+          "title": "Дебаты: \"Великие Открытия\" (Монолог)"
+        },
+        {
+          "id": "station-7",
+          "file": "b2/station-7.json",
+          "title": "Финальный Босс: 4 Времени (Викторина)"
+        }
+      ],
+      "story": "Лексика общества, безупречное владение всеми 4 прошедшими временами для ОГЭ."
+    }
+  ]
+}

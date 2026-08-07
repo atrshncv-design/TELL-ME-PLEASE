@@ -1,0 +1,43 @@
+{
+  "id": "future_simple_b1_station_5",
+  "title": "Сравни Планы (Речь)",
+  "description": "Расскажи о трёх планах на выходные: 100% план (Present Continuous), просто план (going to), предсказание (will).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Расскажи о трёх планах на выходные: 100% план (Present Continuous), просто план (going to), предсказание (will)",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "100% план (Present Continuous)",
+      "hint": "I am meeting my friend at 5 PM.",
+      "markers": [
+        "am meeting",
+        "is meeting",
+        "are meeting",
+        "am leaving",
+        "are leaving",
+        "am flying",
+        "are flying"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Просто план (be going to)",
+      "hint": "I am going to buy a new game.",
+      "markers": [
+        "going to"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Предсказание (will)",
+      "hint": "I think the weather will be bad.",
+      "markers": [
+        "will",
+        "think",
+        "probably"
+      ],
+      "min": 1
+    }
+  ]
+}

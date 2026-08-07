@@ -1,0 +1,201 @@
+{
+  "exam": "grand-tenses",
+  "title": "Великий Экзамен Времен",
+  "icon": "👑",
+  "subtitle": "Цель этапа: Собрать все 12 времен в единую систему, проверить абсолютное понимание контекста и маркеров, подготовиться к формату ОГЭ/ЕГЭ.",
+  "intro": {
+    "panel": [
+      {
+        "title": "Настоящее (Present)",
+        "text": "📸 Факт (Simple) | 🎥 Процесс сейчас (Cont) | 🎒 Результат/Опыт (Perfect) | ⏱️ Процесс давно тянется (PerfCont)."
+      },
+      {
+        "title": "Прошлое (Past)",
+        "text": "📜 Факт (Simple) | 📼 Процесс в прошлом (Cont) | 🎬 Предыстория (Perfect) | 🏃 Длительность до события в прошлом (PerfCont)."
+      },
+      {
+        "title": "Будущее (Future)",
+        "text": "🔮 Предсказание/Спонтанность (Simple) | 🎥⏭️ Процесс в будущем (Cont) | 🏁 Результат к моменту (Perfect) | ⏱️⏭️ Длительность к моменту в будущем (PerfCont)."
+      }
+    ],
+    "principle": [
+      "Когда это происходит? (В прошлом, сейчас или в будущем?).",
+      "Это факт, процесс или результат? (Длинное действие или короткое?).",
+      "Есть ли маркер? (by, for, since, yesterday, at 5 PM, Look!). И помни: Stative Verbs (know, love, want) никогда не носят -ing!"
+    ],
+    "miniTest": [
+      {
+        "sentence": "I ___ (know) him for 5 years. We are good friends.",
+        "answer": "have known",
+        "note": "Stative + for"
+      },
+      {
+        "sentence": "Look! It ___ (rain). Take an umbrella!",
+        "answer": "is raining",
+        "note": "Процесс сейчас"
+      },
+      {
+        "sentence": "Yesterday at 5 PM I ___ (play) tennis.",
+        "answer": "was playing",
+        "note": "Процесс в прошлом"
+      },
+      {
+        "sentence": "By the time you arrive tomorrow, I ___ (finish) my homework.",
+        "answer": "will have finished",
+        "note": "Результат к моменту в будущем"
+      },
+      {
+        "sentence": "Shakespeare ___ (write) \"Hamlet\" in 1599.",
+        "answer": "wrote",
+        "note": "Факт в прошлом"
+      },
+      {
+        "sentence": "How long ___ you ___ (study) English? - Since I was 7.",
+        "answer": "have you been studying",
+        "note": "Длительность до сейчас"
+      }
+    ]
+  },
+  "sectors": [
+    {
+      "id": "sector-1",
+      "title": "Матрица Настоящего",
+      "story": "Фокус: Идеальное различение 4-х настоящих времен.",
+      "icon": "📸",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "sector-1/station-1.json",
+          "title": "Сортировка 4-х Миров (Present Tenses)",
+          "type": "drag-and-drop"
+        },
+        {
+          "id": "station-2",
+          "file": "sector-1/station-2.json",
+          "title": "Тренажер Маркеров (Present)",
+          "type": "matching"
+        },
+        {
+          "id": "station-3",
+          "file": "sector-1/station-3.json",
+          "title": "Ловушка Состояния (Stative Verbs)",
+          "type": "quiz"
+        },
+        {
+          "id": "station-4",
+          "file": "sector-1/station-4.json",
+          "title": "Текст: Мой Сумасшедший День (Интеграция)",
+          "type": "cloze"
+        }
+      ]
+    },
+    {
+      "id": "sector-2",
+      "title": "Архивы Прошлого",
+      "story": "Фокус: 4 прошедших времени (факт, процесс, предыстория, марафон).",
+      "icon": "📜",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "sector-2/station-1.json",
+          "title": "Хронология Событий (Сортировка 4 Past Tenses)",
+          "type": "drag-and-drop"
+        },
+        {
+          "id": "station-2",
+          "file": "sector-2/station-2.json",
+          "title": "Змея и Кролик (Прерывание процесса)",
+          "type": "quiz"
+        },
+        {
+          "id": "station-3",
+          "file": "sector-2/station-3.json",
+          "title": "Предыстория и Марафон (Past Perfect vs Past PerfCont)",
+          "type": "quiz"
+        },
+        {
+          "id": "station-4",
+          "file": "sector-2/station-4.json",
+          "title": "Текст: Детективная История (Интеграция)",
+          "type": "cloze"
+        }
+      ]
+    },
+    {
+      "id": "sector-3",
+      "title": "Горизонт Будущего",
+      "story": "Фокус: 4 будущих времени (предсказание, процесс, результат, марафон).",
+      "icon": "🔮",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "sector-3/station-1.json",
+          "title": "Билеты, Расписания и Предсказания (Сортировка)",
+          "type": "drag-and-drop"
+        },
+        {
+          "id": "station-2",
+          "file": "sector-3/station-2.json",
+          "title": "Двойной Маркер (By + For)",
+          "type": "quiz"
+        },
+        {
+          "id": "station-3",
+          "file": "sector-3/station-3.json",
+          "title": "Ловушка Условных (Conditionals 0/1)",
+          "type": "quiz"
+        },
+        {
+          "id": "station-4",
+          "file": "sector-3/station-4.json",
+          "title": "Текст: Космическая Миссия (Интеграция)",
+          "type": "cloze"
+        }
+      ]
+    },
+    {
+      "id": "sector-4",
+      "title": "Великий Экзамен",
+      "story": "Фокус: Формат ОГЭ/ЕГЭ. Абсолютное владение всеми 12 временами в одном тексте и речи.",
+      "icon": "👑",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "sector-4/station-1.json",
+          "title": "ОГЭ-Тренажер (Task 19: Абсолютный Микс)",
+          "type": "cloze"
+        },
+        {
+          "id": "station-2",
+          "file": "sector-4/station-2.json",
+          "title": "Перевод-Ловушка (12 Времен)",
+          "type": "fill-in"
+        },
+        {
+          "id": "station-3",
+          "file": "sector-4/station-3.json",
+          "title": "Симуляция ОГЭ (Устная часть Task 2 - 12 Времен)",
+          "type": "voice-chat"
+        },
+        {
+          "id": "station-4",
+          "file": "sector-4/station-4.json",
+          "title": "Описание Фотографии (ОГЭ Task 3 - Финал)",
+          "type": "one-minute"
+        },
+        {
+          "id": "station-5",
+          "file": "sector-4/station-5.json",
+          "title": "Финальный Босс: 12 Времен (Викторина)",
+          "type": "quiz"
+        },
+        {
+          "id": "station-6",
+          "file": "sector-4/station-6.json",
+          "title": "Эссе \"Моя Жизнь во Временах\" (Супер-Финал)",
+          "type": "one-minute"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "future_perfect_a1_station_6",
+  "title": "Текст: К Дедлайну (Интеграция)",
+  "description": "Раскрой скобки в тексте о занятом дне: will have + V3 (Future Perfect).",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Tomorrow is a busy day. By 10 AM, I ___ my homework. By noon, my brother ___ his room. By 5 PM, my mum ___ dinner. By 8 PM, we ___ all the pizza. By 10 PM, I ___ to bed.",
+      "answers": [
+        [
+          "will have finished"
+        ],
+        [
+          "will have cleaned"
+        ],
+        [
+          "will have cooked"
+        ],
+        [
+          "will have eaten"
+        ],
+        [
+          "will have gone"
+        ]
+      ],
+      "hints": [
+        "(finish)",
+        "(clean)",
+        "(cook)",
+        "(eat)",
+        "(go)"
+      ],
+      "word_bank": [
+        "will have finished",
+        "will have cleaned",
+        "will have cooked",
+        "will have eaten",
+        "will have gone",
+        "will finish",
+        "finish",
+        "will have eat",
+        "will have goed"
+      ]
+    }
+  ]
+}

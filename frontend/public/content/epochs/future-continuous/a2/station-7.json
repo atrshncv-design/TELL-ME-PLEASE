@@ -1,0 +1,50 @@
+{
+  "id": "future_continuous_a2_station_7",
+  "title": "Скоростное Свидание (Диалог)",
+  "description": "Задай партнеру вежливые вопросы о его планах: 1. Will you be using your laptop tonight? 2. Will you be going to the shop later? 3. What will you be doing at 5 PM tomorrow?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — ровесник ученика на «скоростном свидании» (speed dating). Общайся по-английски (уровень A2), короткими простыми фразами. Ученик будет задавать тебе вежливые вопросы о твоих планах на завтра — отвечай дружелюбно и естественно (например: Yes, I will be using my laptop tonight. / I will be going to the shop later. / At 5 PM tomorrow I will be doing my homework.).",
+  "checklist": [
+    {
+      "question": "Will you be using your laptop tonight?",
+      "markers": [
+        "will",
+        "you",
+        "be",
+        "using",
+        "laptop",
+        "tonight"
+      ],
+      "min": 1,
+      "hint": "Спроси партнёра: Will you be using your laptop tonight?"
+    },
+    {
+      "question": "Will you be going to the shop later?",
+      "markers": [
+        "will",
+        "you",
+        "be",
+        "going",
+        "shop",
+        "later"
+      ],
+      "min": 1,
+      "hint": "Спроси партнёра: Will you be going to the shop later?"
+    },
+    {
+      "question": "What will you be doing at 5 PM tomorrow?",
+      "markers": [
+        "what",
+        "will",
+        "you",
+        "be",
+        "doing",
+        "5 pm",
+        "tomorrow"
+      ],
+      "min": 1,
+      "hint": "Спроси партнёра: What will you be doing at 5 PM tomorrow?"
+    }
+  ]
+}

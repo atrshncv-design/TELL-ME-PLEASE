@@ -1,12 +1,12 @@
 {
   "id": "a1_station_1",
   "title": "Проверка Системы (To be & Have got)",
-  "description": "Автоматизировать базовый рефлекс выбора форм глагола to be (am/is/are) и have got/has got.",
+  "description": "Автоматизировать базовый рефлекс выбора форм глагола to be (am/is/are) и have got/has got. В конце — фильтр «To be или смысловой глагол?»: если есть смысловой глагол, to be не нужен!",
   "category": "to-be",
   "type": "quiz",
   "items": [
     {
-      "question": "I",
+      "question": "I ___ a pupil.",
       "options": [
         "am",
         "is",
@@ -15,7 +15,7 @@
       "answer": "am"
     },
     {
-      "question": "My mum",
+      "question": "She ___ my best friend.",
       "options": [
         "am",
         "is",
@@ -24,7 +24,7 @@
       "answer": "is"
     },
     {
-      "question": "We",
+      "question": "They ___ from Russia.",
       "options": [
         "am",
         "is",
@@ -33,16 +33,7 @@
       "answer": "are"
     },
     {
-      "question": "The ruler",
-      "options": [
-        "am",
-        "is",
-        "are"
-      ],
-      "answer": "is"
-    },
-    {
-      "question": "They",
+      "question": "We ___ in the classroom now.",
       "options": [
         "am",
         "is",
@@ -51,61 +42,43 @@
       "answer": "are"
     },
     {
-      "question": "She",
+      "question": "He ___ a teacher.",
       "options": [
-        "am",
-        "is",
-        "are"
+        "am not",
+        "is not",
+        "are not"
       ],
-      "answer": "is"
+      "answer": "is not"
     },
     {
-      "question": "Tom",
+      "question": "He ___ a teacher.",
       "options": [
-        "am",
-        "is",
-        "are"
+        "isn't",
+        "aren't",
+        "'m not"
       ],
-      "answer": "is"
+      "answer": "isn't"
     },
     {
-      "question": "You",
+      "question": "___ you ready?",
       "options": [
-        "am",
-        "is",
-        "are"
+        "Am",
+        "Is",
+        "Are"
       ],
-      "answer": "are"
+      "answer": "Are"
     },
     {
-      "question": "The pens",
+      "question": "___ she your sister?",
       "options": [
-        "am",
-        "is",
-        "are"
+        "Am",
+        "Is",
+        "Are"
       ],
-      "answer": "are"
+      "answer": "Is"
     },
     {
-      "question": "My friend",
-      "options": [
-        "am",
-        "is",
-        "are"
-      ],
-      "answer": "is"
-    },
-    {
-      "question": "It",
-      "options": [
-        "am",
-        "is",
-        "are"
-      ],
-      "answer": "is"
-    },
-    {
-      "question": "The children",
+      "question": "Where ___ they from?",
       "options": [
         "am",
         "is",
@@ -114,7 +87,106 @@
       "answer": "are"
     },
     {
-      "question": "His brother",
+      "question": "I ___ a new bike.",
+      "options": [
+        "have got",
+        "has got",
+        "has"
+      ],
+      "answer": "have got"
+    },
+    {
+      "question": "She ___ a big family.",
+      "options": [
+        "have got",
+        "has got",
+        "have"
+      ],
+      "answer": "has got"
+    },
+    {
+      "question": "He ___ two brothers.",
+      "options": [
+        "have got",
+        "has got",
+        "have"
+      ],
+      "answer": "has got"
+    },
+    {
+      "question": "We ___ a nice house.",
+      "options": [
+        "have got",
+        "has got",
+        "has"
+      ],
+      "answer": "have got"
+    },
+    {
+      "question": "They ___ many friends.",
+      "options": [
+        "have got",
+        "has got",
+        "has"
+      ],
+      "answer": "have got"
+    },
+    {
+      "question": "I ___ got a computer.",
+      "options": [
+        "have not",
+        "has not",
+        "has"
+      ],
+      "answer": "have not"
+    },
+    {
+      "question": "I ___ got a computer.",
+      "options": [
+        "haven't",
+        "hasn't",
+        "isn't"
+      ],
+      "answer": "haven't"
+    },
+    {
+      "question": "She ___ got a cat.",
+      "options": [
+        "have not",
+        "has not",
+        "have"
+      ],
+      "answer": "has not"
+    },
+    {
+      "question": "She ___ got a cat.",
+      "options": [
+        "haven't",
+        "hasn't",
+        "isn't"
+      ],
+      "answer": "hasn't"
+    },
+    {
+      "question": "___ you got a pen?",
+      "options": [
+        "Have",
+        "Has",
+        "Are"
+      ],
+      "answer": "Have"
+    },
+    {
+      "question": "___ he got a ball?",
+      "options": [
+        "Have",
+        "Has",
+        "Is"
+      ],
+      "answer": "Has"
+    },
+    {
+      "question": "What ___ your favourite colour?",
       "options": [
         "am",
         "is",
@@ -123,7 +195,7 @@
       "answer": "is"
     },
     {
-      "question": "Mary and Jane",
+      "question": "My parents ___ at work now.",
       "options": [
         "am",
         "is",
@@ -132,7 +204,7 @@
       "answer": "are"
     },
     {
-      "question": "A spider",
+      "question": "This ___ my new schoolbag.",
       "options": [
         "am",
         "is",
@@ -141,84 +213,232 @@
       "answer": "is"
     },
     {
-      "question": "I ___ a dog.",
+      "question": "I ___ got a new pencil case.",
       "options": [
         "have",
-        "has"
+        "has",
+        "have got"
       ],
-      "answer": "have"
+      "answer": "have got"
     },
     {
-      "question": "She ___ a red pen.",
+      "question": "He ___ a cool skateboard.",
       "options": [
-        "have",
-        "has"
+        "have got",
+        "has got",
+        "have"
       ],
-      "answer": "has"
+      "answer": "has got"
     },
     {
-      "question": "We ___ a big house.",
+      "question": "___ your brother got a dog?",
       "options": [
-        "have",
-        "has"
+        "Have",
+        "Has",
+        "Is"
       ],
-      "answer": "have"
+      "answer": "Has"
     },
     {
-      "question": "He ___ a sister.",
+      "question": "My friends ___ very kind.",
       "options": [
-        "have",
-        "has"
+        "am",
+        "is",
+        "are"
       ],
-      "answer": "has"
+      "answer": "are"
     },
     {
-      "question": "They ___ new bikes.",
+      "question": "___ they got any pets?",
       "options": [
-        "have",
-        "has"
+        "Have",
+        "Has",
+        "Are"
       ],
-      "answer": "have"
+      "answer": "Have"
     },
     {
-      "question": "It ___ long ears.",
+      "question": "They ___ in the park.",
       "options": [
-        "have",
-        "has"
+        "are not",
+        "is not",
+        "am not"
       ],
-      "answer": "has"
+      "answer": "are not"
     },
     {
-      "question": "My cat ___ green eyes.",
+      "question": "They ___ in the park.",
       "options": [
-        "have",
-        "has"
+        "aren't",
+        "isn't",
+        "'m not"
       ],
-      "answer": "has"
+      "answer": "aren't"
     },
     {
-      "question": "You ___ a nice hat.",
+      "question": "We ___ got any homework today.",
       "options": [
-        "have",
+        "have not",
+        "has not",
         "has"
       ],
-      "answer": "have"
+      "answer": "have not"
     },
     {
-      "question": "Tom and Bob ___ skateboards.",
+      "question": "We ___ got any homework today.",
       "options": [
-        "have",
-        "has"
+        "haven't",
+        "hasn't",
+        "isn't"
       ],
-      "answer": "have"
+      "answer": "haven't"
     },
     {
-      "question": "My mum ___ a car.",
+      "question": "He ___ got a bicycle.",
       "options": [
-        "have",
-        "has"
+        "have not",
+        "has not",
+        "have"
       ],
-      "answer": "has"
+      "answer": "has not"
+    },
+    {
+      "question": "He ___ got a bicycle.",
+      "options": [
+        "haven't",
+        "hasn't",
+        "isn't"
+      ],
+      "answer": "hasn't"
+    },
+    {
+      "question": "I ___ tired today.",
+      "options": [
+        "am not",
+        "is not",
+        "are not"
+      ],
+      "answer": "am not"
+    },
+    {
+      "question": "She ___ a clever girl.",
+      "options": [
+        "is",
+        "plays"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "She ___ chess every day.",
+      "options": [
+        "is",
+        "plays"
+      ],
+      "answer": "plays"
+    },
+    {
+      "question": "The water ___ cold.",
+      "options": [
+        "is",
+        "drink"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "I ___ cold water in the morning.",
+      "options": [
+        "am",
+        "drink"
+      ],
+      "answer": "drink"
+    },
+    {
+      "question": "They ___ in London now.",
+      "options": [
+        "are",
+        "go"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "They ___ to London every summer.",
+      "options": [
+        "are",
+        "go"
+      ],
+      "answer": "go"
+    },
+    {
+      "question": "We ___ students.",
+      "options": [
+        "are",
+        "do"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "We ___ our homework in the evening.",
+      "options": [
+        "are",
+        "do"
+      ],
+      "answer": "do"
+    },
+    {
+      "question": "The ruler ___ in the bag.",
+      "options": [
+        "is",
+        "use"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "I ___ the ruler every day.",
+      "options": [
+        "am",
+        "use"
+      ],
+      "answer": "use"
+    },
+    {
+      "question": "He ___ a pilot.",
+      "options": [
+        "is",
+        "flies"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "He ___ planes.",
+      "options": [
+        "is",
+        "flies"
+      ],
+      "answer": "flies"
+    },
+    {
+      "question": "You ___ hungry.",
+      "options": [
+        "are",
+        "eat"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "You ___ a sandwich for breakfast.",
+      "options": [
+        "are",
+        "eat"
+      ],
+      "answer": "eat"
+    },
+    {
+      "question": "The dog ___ funny.",
+      "options": [
+        "is",
+        "barks"
+      ],
+      "answer": "is"
     }
   ]
 }

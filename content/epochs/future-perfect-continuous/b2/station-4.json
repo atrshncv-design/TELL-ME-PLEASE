@@ -1,0 +1,52 @@
+{
+  "id": "future_perfect_continuous_b2_station_4",
+  "title": "Симуляция ОГЭ (Устная часть Task 2)",
+  "description": "Симуляция устной части ОГЭ (Task 2): ответь экзаменатору на вопросы о будущих планах и учёбе.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — экзаменатор на устной части ОГЭ по английскому языку (Task 2). Промпт: \"Act like an examiner for the Russian OGE exam (Task 2). Ask me questions about my future plans and studies.\" Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Слушай внимательно, реагируй нейтрально и доброжелательно, как настоящий экзаменатор. Если ответ неполный — мягко попроси дополнить. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "How long will you have been studying English by the end of this year?",
+      "markers": [
+        "studying",
+        "English",
+        "years"
+      ],
+      "min": 1,
+      "hint": "Ответь: I will have been studying English for ... years."
+    },
+    {
+      "question": "What will you have done by 5 PM tomorrow?",
+      "markers": [
+        "will have",
+        "done",
+        "homework",
+        "finish"
+      ],
+      "min": 1,
+      "hint": "Ответь: By 5 PM I will have finished my homework."
+    },
+    {
+      "question": "What will you be doing at 8 PM tonight?",
+      "markers": [
+        "be",
+        "doing",
+        "watching",
+        "reading"
+      ],
+      "min": 1,
+      "hint": "Ответь: At 8 PM I will be watching TV."
+    },
+    {
+      "question": "What time does your first class start tomorrow?",
+      "markers": [
+        "start",
+        "class",
+        "8"
+      ],
+      "min": 1,
+      "hint": "Ответь: My first class starts at 8 o'clock."
+    }
+  ]
+}

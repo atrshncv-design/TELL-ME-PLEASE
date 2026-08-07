@@ -1,0 +1,82 @@
+{
+  "id": "past_continuous_b1_station_7",
+  "title": "Комикс \"Катастрофа\" (Продукт)",
+  "description": "Создай комикс из 4 кадров о катастрофе (например, наводнение). Кадр 1: Past Cont (что люди делали). Кадр 2: Past Cont (фон). Кадр 3: Past Simple (что случилось внезапно). Кадр 4: Past Simple (результат).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Комикс «Катастрофа»: расскажи историю из 4 кадров (например, наводнение)",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Кадр 1: что люди делали (Past Continuous)",
+      "hint": "People were playing / walking / working...",
+      "markers": [
+        "was",
+        "were",
+        "playing",
+        "walking",
+        "working",
+        "shopping",
+        "driving",
+        "watching",
+        "sleeping",
+        "eating",
+        "talking",
+        "sitting"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Кадр 2: фон (Past Continuous)",
+      "hint": "It was raining / the water was rising...",
+      "markers": [
+        "was",
+        "were",
+        "raining",
+        "flooding",
+        "rising",
+        "coming",
+        "getting",
+        "dark",
+        "clouds",
+        "wind",
+        "water"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Кадр 3: что случилось внезапно (Past Simple)",
+      "hint": "Suddenly, the water came / the wall broke...",
+      "markers": [
+        "flooded",
+        "came",
+        "broke",
+        "started",
+        "hit",
+        "fell",
+        "stopped",
+        "suddenly",
+        "opened",
+        "cracked"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Кадр 4: результат (Past Simple)",
+      "hint": "People helped / saved / went...",
+      "markers": [
+        "helped",
+        "saved",
+        "stayed",
+        "went",
+        "built",
+        "finished",
+        "escaped",
+        "survived",
+        "called",
+        "left"
+      ],
+      "min": 1
+    }
+  ]
+}

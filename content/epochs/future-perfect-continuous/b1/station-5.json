@@ -1,0 +1,48 @@
+{
+  "id": "future_perfect_continuous_b1_station_5",
+  "title": "Объясни Ситуацию (Речь)",
+  "description": "Объясни, почему люди будут выглядеть так в будущем (используй FPC).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Объясни, почему люди будут выглядеть так в будущем (используй Future Perfect Continuous).",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Конструкция will have been",
+      "hint": "He will have been coding all day.",
+      "markers": [
+        "will have been"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Глагол с -ing",
+      "hint": "coding, planting flowers, running in the rain...",
+      "markers": [
+        "coding",
+        "planting",
+        "running",
+        "working"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Маркер к моменту (by)",
+      "hint": "By 5 PM...",
+      "markers": [
+        "by"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Состояние человека",
+      "hint": "tired, dirty, wet...",
+      "markers": [
+        "tired",
+        "dirty",
+        "wet"
+      ],
+      "min": 1
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "present_perfect_continuous_b2_station_2",
+  "title": "Тонкие Смыслы (Перевод-Ловушка)",
+  "description": "Переведи, выбрав Perfect или Perfect Continuous.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ to you for 10 minutes.",
+      "answer": "have been listening",
+      "hint": "Я слушаю тебя уже 10 минут (а ты всё говоришь)."
+    },
+    {
+      "sentence": "I ___ to your story.",
+      "answer": "have listened",
+      "hint": "Я послушал твою историю (вник в суть)."
+    },
+    {
+      "sentence": "We ___ the car since morning.",
+      "answer": "have been repairing",
+      "hint": "Мы ремонтируем машину с утра (еще не починили)."
+    },
+    {
+      "sentence": "We ___ the car.",
+      "answer": "have repaired",
+      "hint": "Мы починили машину (она работает)."
+    }
+  ]
+}

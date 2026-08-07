@@ -1,0 +1,29 @@
+{
+  "id": "present_continuous_a2_station_1",
+  "title": "Усложнение Механики (Лексика 6 класса)",
+  "description": "Автоматизм формы с лексикой повседневных дел (еда, комнаты, рутина).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "Look! The cat is ___ (drink) milk.",
+      "answer": "drinking"
+    },
+    {
+      "sentence": "My mum is ___ (make) a cake in the kitchen.",
+      "answer": "making"
+    },
+    {
+      "sentence": "They are ___ (run) in the park.",
+      "answer": "running"
+    },
+    {
+      "sentence": "We are ___ (swim) in the pool.",
+      "answer": "swimming"
+    },
+    {
+      "sentence": "The dog is ___ (sit) on the sofa.",
+      "answer": "sitting"
+    }
+  ]
+}

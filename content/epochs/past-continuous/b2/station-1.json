@@ -1,0 +1,22 @@
+{
+  "id": "past_continuous_b2_station_1",
+  "title": "ОГЭ-Тренажер (Task 19: 4 Времени)",
+  "description": "ОГЭ Task 19: раскрой скобки — 4 времени (Past Simple, Past Continuous, Present/Past Perfect).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "Last Friday, a famous scientist ___ (visit) our school. While he ___ (speak), the students ___ (listen) carefully. Suddenly, the fire alarm ___ (ring). Everyone ___ (be) surprised. The scientist ___ (already / give) his speech when the alarm ___ (start). We ___ (never / see) such a thing before.",
+      "answer": [
+        "visited",
+        "was speaking",
+        "were listening",
+        "rang",
+        "was",
+        "had already given",
+        "started",
+        "had never seen"
+      ]
+    }
+  ]
+}

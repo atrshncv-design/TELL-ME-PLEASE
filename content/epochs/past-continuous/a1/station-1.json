@@ -1,0 +1,49 @@
+{
+  "id": "past_continuous_a1_station_1",
+  "title": "Сборка Кассеты (Механика)",
+  "description": "Вставь was или were и добавь -ing к глаголу.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ (play) tennis at 5 PM.",
+      "answer": "was playing"
+    },
+    {
+      "sentence": "She ___ (read) a book yesterday.",
+      "answer": "was reading"
+    },
+    {
+      "sentence": "We ___ (watch) TV all evening.",
+      "answer": "were watching"
+    },
+    {
+      "sentence": "He ___ (sleep) at noon.",
+      "answer": "was sleeping"
+    },
+    {
+      "sentence": "They ___ (study) at 3 PM.",
+      "answer": "were studying"
+    },
+    {
+      "sentence": "My mum ___ (cook) at 6 PM.",
+      "answer": "was cooking"
+    },
+    {
+      "sentence": "You ___ (run) in the morning.",
+      "answer": "were running"
+    },
+    {
+      "sentence": "Tom ___ (ride) his bike.",
+      "answer": "was riding"
+    },
+    {
+      "sentence": "The dogs ___ (bark) all night.",
+      "answer": "were barking"
+    },
+    {
+      "sentence": "It ___ (rain) at 7 PM.",
+      "answer": "was raining"
+    }
+  ]
+}

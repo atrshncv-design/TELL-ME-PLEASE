@@ -1,0 +1,33 @@
+{
+  "id": "present_perfect_continuous_b1_station_3",
+  "title": "Визуальный Фильтр (Поиск ошибок)",
+  "description": "Найди ошибку в предложении.",
+  "category": "grammar",
+  "type": "click-mistake",
+  "items": [
+    {
+      "text": "I have been knowing him for years.",
+      "wrong": "knowing"
+    },
+    {
+      "text": "She have been working all day.",
+      "wrong": "have"
+    },
+    {
+      "text": "We has been studying since morning.",
+      "wrong": "has"
+    },
+    {
+      "text": "They have been swiming in the pool.",
+      "wrong": "swiming"
+    },
+    {
+      "text": "He has been play football for an hour.",
+      "wrong": "play"
+    },
+    {
+      "text": "I has been waiting for you!",
+      "wrong": "has"
+    }
+  ]
+}

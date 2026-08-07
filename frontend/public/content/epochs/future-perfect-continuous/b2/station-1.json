@@ -1,0 +1,64 @@
+{
+  "id": "future_perfect_continuous_b2_station_1",
+  "title": "ОГЭ-Тренажер (Task 19: 5 Будущих)",
+  "description": "Раскрой скобки (ОГЭ Task 19): пять будущих времён.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Next Friday, a famous scientist ___ our school. The event ___ at 10 AM. At 11 AM, while he ___, the students ___ carefully. By the time he ___ his speech, we ___ a lot of new things. By the end of the year, I ___ Biology for 2 years. I think I ___ a scientist too.",
+      "answers": [
+        [
+          "is visiting"
+        ],
+        [
+          "starts"
+        ],
+        [
+          "is speaking"
+        ],
+        [
+          "will be listening"
+        ],
+        [
+          "finishes"
+        ],
+        [
+          "will have learned"
+        ],
+        [
+          "will have been studying"
+        ],
+        [
+          "will become"
+        ]
+      ],
+      "hints": [
+        "(visit)",
+        "(start)",
+        "(speak)",
+        "(listen)",
+        "(finish)",
+        "(learn)",
+        "(study)",
+        "(become)"
+      ],
+      "word_bank": [
+        "is visiting",
+        "starts",
+        "is speaking",
+        "will be listening",
+        "finishes",
+        "will have learned",
+        "will have been studying",
+        "will become",
+        "will visit",
+        "will be speaking",
+        "will listen",
+        "will study",
+        "becomes",
+        "will have been learning"
+      ]
+    }
+  ]
+}

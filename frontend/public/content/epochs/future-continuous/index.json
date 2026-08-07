@@ -1,0 +1,251 @@
+{
+  "epoch": "future-continuous",
+  "title": "Эпоха Future Continuous",
+  "subtitle": "Кадр из Будущего",
+  "icon": "⏭️",
+  "theory": [
+    {
+      "title": "🎥 Шаг 1: Суть времени (Что это такое?)",
+      "text": "Привет, ребята! 👋 Мы снова отправляемся в будущее. Вы уже знаете, что Future Simple (will) — это «Хрустальный Шар» 🔮 (предсказание), а Present Continuous — это «Билеты на руки» 🎫 (100% план). Future Continuous — это «Видеокамера в Будущем» 🎥⏭️.\nВы переноситесь мысленно в завтрашний день, например, в 5 часов вечера, нажимаете кнопку REC и снимаете процесс, который тянется в этот момент.\nФормула (Базовый каркас):\nПодлежащее + WILL BE + Глагол с окончанием -ING\nAt 5 PM tomorrow I will be flying to London. (Завтра в 5 вечера я буду в процессе полета в Лондон)."
+    },
+    {
+      "title": "🎭 Шаг 2: Три жизни Future Continuous (Когда использовать?)",
+      "text": "Процесс в конкретный момент в будущем: Маркеры: at 5 PM tomorrow, at this time next week.\nThis time tomorrow I will be lying on the beach. (В это же время завтра я буду лежать на пляже — процесс).\nПараллельные процессы в будущем: Два длинных действия происходят одновременно в будущем. Маркер: while (в то время как).\nWhile you are sleeping, I will be packing. (Пока ты будешь спать, я буду собирать вещи).\nВежливый вопрос о планах: Чтобы не навязывать свою волю (в отличие от Will you...?).\nWill you be using the car tomorrow? (Вы не будете пользоваться машиной завтра? — Вежливый вопрос о планах)."
+    },
+    {
+      "title": "⚔️ Шаг 3: Битва Будущих (Future Simple vs Future Continuous)",
+      "text": "Как не запутаться? Задайте вопрос: «Это факт или процесс?»\nFuture Simple (Факт 🔮): Действие случится целиком.\nI will write a letter tomorrow. (Я напишу письмо завтра — факт, результат).\nFuture Continuous (Процесс 🎥): Действие будет тянуться в определенный момент.\nI will be writing a letter at 5 PM. (Я буду писать письмо в 5 вечера — я окажусь в середине этого процесса)."
+    },
+    {
+      "title": "🚨 Шаг 4: Топ-3 ошибки, которые нужно уничтожить",
+      "text": "Путаница с Present Continuous (план vs процесс). ❌ At 5 PM tomorrow I am playing tennis. (Present Cont. требует, чтобы план был договоренностью. Но маркер \"at 5 PM\" часто указывает на процесс). ✅ At 5 PM tomorrow I will be playing tennis. (Future Continuous — процесс в это время).\nЗабытый глагол BE. ❌ I will playing tennis. ✅ I will be playing tennis.\nИспользование Stative Verbs с -ING. ❌ I will be knowing the answer tomorrow. ✅ I will know the answer tomorrow."
+    }
+  ],
+  "theoryQuiz": [
+    {
+      "question": "At 5 PM tomorrow I ___ tennis.",
+      "options": [
+        "will play",
+        "will be playing"
+      ],
+      "answer": "will be playing"
+    },
+    {
+      "question": "I think I ___ my exam.",
+      "options": [
+        "will pass",
+        "will be passing"
+      ],
+      "answer": "will pass"
+    },
+    {
+      "question": "___ your laptop tonight?",
+      "options": [
+        "Will you use",
+        "Will you be using"
+      ],
+      "answer": "Will you be using"
+    },
+    {
+      "question": "This time next week we ___ on the beach.",
+      "options": [
+        "will lie",
+        "will be lying"
+      ],
+      "answer": "will be lying"
+    },
+    {
+      "question": "I ___ to the cinema tonight. I have tickets!",
+      "options": [
+        "will go",
+        "will be going"
+      ],
+      "answer": "will go"
+    }
+  ],
+  "music": {
+    "title": "🎵 Музыкальная пауза (Караоке-генератор)",
+    "links": [
+      "[Ссылка на Rutube/Yandex коллекцию]"
+    ],
+    "sunoPrompt": "Придумай мечтательную песню про Future Continuous. Объясни, что мы используем will be + V-ing, когда переносим себя в будущее и смотрим на процесс (at 5 PM tomorrow, this time next week). Напомни, что это 'видеокамера в будущем'. В припеве должны быть слова: at 5 PM, will be, doing, process. Стиль: dreamy synth-pop, futuristic, 120 bpm."
+  },
+  "sectors": [
+    {
+      "id": "a1",
+      "level": "A1",
+      "title": "Первый Кадр",
+      "grade": 5,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a1/station-1.json",
+          "title": "Запуск Видеокамеры (Механика)"
+        },
+        {
+          "id": "station-2",
+          "file": "a1/station-2.json",
+          "title": "Торможение Хаоса (Отрицание и Вопрос)"
+        },
+        {
+          "id": "station-3",
+          "file": "a1/station-3.json",
+          "title": "Орфографический Щит (-ING)"
+        },
+        {
+          "id": "station-4",
+          "file": "a1/station-4.json",
+          "title": "Точка во Времени (Маркеры)"
+        },
+        {
+          "id": "station-5",
+          "file": "a1/station-5.json",
+          "title": "Контраст: План vs Процесс (Pres Cont vs Fut Cont)"
+        },
+        {
+          "id": "station-6",
+          "file": "a1/station-6.json",
+          "title": "Текст: Завтрашний День (Интеграция)"
+        },
+        {
+          "id": "station-7",
+          "file": "a1/station-7.json",
+          "title": "Машина Времени (ИИ-бот)"
+        }
+      ],
+      "story": "Механика will be + V-ing, маркеры конкретного времени в будущем."
+    },
+    {
+      "id": "a2",
+      "level": "A2",
+      "title": "Параллельные Миры",
+      "grade": 6,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a2/station-1.json",
+          "title": "Параллельные Миры (Союз WHILE)"
+        },
+        {
+          "id": "station-2",
+          "file": "a2/station-2.json",
+          "title": "Вежливый Вопрос (Polite Inquiries)"
+        },
+        {
+          "id": "station-3",
+          "file": "a2/station-3.json",
+          "title": "Детектор Ошибок (Дебаггинг)"
+        },
+        {
+          "id": "station-4",
+          "file": "a2/station-4.json",
+          "title": "Вопросы о Процессе (Спецвопросы)"
+        },
+        {
+          "id": "station-5",
+          "file": "a2/station-5.json",
+          "title": "Текст: День Рождения (Чтение)"
+        },
+        {
+          "id": "station-6",
+          "file": "a2/station-6.json",
+          "title": "Блог: Мой Идеальный Завтрашний День (Продукт)"
+        },
+        {
+          "id": "station-7",
+          "file": "a2/station-7.json",
+          "title": "Скоростное Свидание (Диалог)"
+        }
+      ],
+      "story": "Союз WHILE, параллельные процессы в будущем, вежливые вопросы."
+    },
+    {
+      "id": "b1",
+      "level": "B1",
+      "title": "Мастер Сценария",
+      "grade": "7-8",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b1/station-1.json",
+          "title": "Ловушка Состояния (Stative Verbs)"
+        },
+        {
+          "id": "station-2",
+          "file": "b1/station-2.json",
+          "title": "Сортировка 4-х Будущих (Сравнение)"
+        },
+        {
+          "id": "station-3",
+          "file": "b1/station-3.json",
+          "title": "Перевод-Ловушка (Интерференция)"
+        },
+        {
+          "id": "station-4",
+          "file": "b1/station-4.json",
+          "title": "Текст: Сбой Системы (Интеграция)"
+        },
+        {
+          "id": "station-5",
+          "file": "b1/station-5.json",
+          "title": "Объясни Ситуацию (Речь)"
+        },
+        {
+          "id": "station-6",
+          "file": "b1/station-6.json",
+          "title": "Интервью с Космонавтом (Диалог с ИИ)"
+        },
+        {
+          "id": "station-7",
+          "file": "b1/station-7.json",
+          "title": "Мини-Проект: \"День из Будущего\" (Продукт)"
+        }
+      ],
+      "story": "Лексика технологий, сложные истории. Строгий контроль всех будущих времен."
+    },
+    {
+      "id": "b2",
+      "level": "B2",
+      "title": "Мастер Временной Ткани",
+      "grade": 9,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b2/station-1.json",
+          "title": "ОГЭ-Тренажер (Task 19: 5 Будущих)"
+        },
+        {
+          "id": "station-2",
+          "file": "b2/station-2.json",
+          "title": "Тонкие Смыслы (Перевод-Ловушка)"
+        },
+        {
+          "id": "station-3",
+          "file": "b2/station-3.json",
+          "title": "Текст ОГЭ: Будущее Человечества (Чтение)"
+        },
+        {
+          "id": "station-4",
+          "file": "b2/station-4.json",
+          "title": "Симуляция ОГЭ (Устная часть Task 2)"
+        },
+        {
+          "id": "station-5",
+          "file": "b2/station-5.json",
+          "title": "Описание Фотографии (ОГЭ Task 3)"
+        },
+        {
+          "id": "station-6",
+          "file": "b2/station-6.json",
+          "title": "Дебаты: \"Жизнь через 50 лет\" (Монолог)"
+        },
+        {
+          "id": "station-7",
+          "file": "b2/station-7.json",
+          "title": "Финальный Босс: 5 Будущих (Викторина)"
+        }
+      ],
+      "story": "Безупречное владение всеми 5 способами выражения будущего для формата ОГЭ/ЕГЭ."
+    }
+  ]
+}

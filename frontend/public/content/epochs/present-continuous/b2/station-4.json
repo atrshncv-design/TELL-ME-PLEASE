@@ -1,0 +1,41 @@
+{
+  "id": "present_continuous_b2_station_4",
+  "title": "Раздражение и Критика (Эмоции)",
+  "description": "Отработка конструкции is always + V-ing для выражения недовольства.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "He ___ my pens!",
+      "options": [
+        "always takes",
+        "is always taking"
+      ],
+      "answer": "is always taking"
+    },
+    {
+      "question": "She ___ about her marks!",
+      "options": [
+        "constantly complains",
+        "is constantly complaining"
+      ],
+      "answer": "is constantly complaining"
+    },
+    {
+      "question": "You ___ your keys!",
+      "options": [
+        "always lose",
+        "are always losing"
+      ],
+      "answer": "are always losing"
+    },
+    {
+      "question": "My sister ___ my clothes without asking!",
+      "options": [
+        "always borrows",
+        "is always borrowing"
+      ],
+      "answer": "is always borrowing"
+    }
+  ]
+}

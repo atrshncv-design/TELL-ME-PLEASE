@@ -1,0 +1,54 @@
+{
+  "id": "present_continuous_a1_station_3",
+  "title": "Торможение Хаоса (Отрицание и Вопрос)",
+  "description": "Отработка структурного рефлекса (инверсии to be и добавления not).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "sleeping / He / isn't",
+      "options": [
+        "He isn't sleeping.",
+        "He sleeping isn't.",
+        "Sleeping he isn't."
+      ],
+      "answer": "He isn't sleeping."
+    },
+    {
+      "question": "playing / They / aren't",
+      "options": [
+        "They aren't playing.",
+        "They playing aren't.",
+        "Playing they aren't."
+      ],
+      "answer": "They aren't playing."
+    },
+    {
+      "question": "sleeping / Is / he",
+      "options": [
+        "Is he sleeping?",
+        "He is sleeping?",
+        "Is sleeping he?"
+      ],
+      "answer": "Is he sleeping?"
+    },
+    {
+      "question": "playing / Are / they",
+      "options": [
+        "Are they playing?",
+        "They are playing?",
+        "Are playing they?"
+      ],
+      "answer": "Are they playing?"
+    },
+    {
+      "question": "reading / Am / I",
+      "options": [
+        "Am I reading?",
+        "I am reading?",
+        "Am reading I?"
+      ],
+      "answer": "Am I reading?"
+    }
+  ]
+}

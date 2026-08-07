@@ -1,0 +1,32 @@
+{
+  "id": "future_perfect_b2_station_5",
+  "title": "Описание Фотографии (ОГЭ Task 3)",
+  "description": "Опиши фото (люди на конференции/в офисе). Используй Present Continuous для фото (They are discussing a project) и Future Perfect для контекста (By the end of the week, they will have signed the contract).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Опиши фото (люди на конференции/в офисе). Используй Present Continuous для фото (They are discussing a project) и Future Perfect для контекста (By the end of the week, they will have signed the contract).",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Present Continuous для фото",
+      "hint": "They are discussing a project.",
+      "markers": [
+        "are discussing",
+        "is discussing",
+        "are talking",
+        "is working",
+        "are working"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Future Perfect для контекста",
+      "hint": "By the end of the week, they will have signed the contract.",
+      "markers": [
+        "will have",
+        "by the end"
+      ],
+      "min": 1
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "future_continuous_a2_station_2",
+  "title": "Вежливый Вопрос (Polite Inquiries)",
+  "description": "Выбери вежливый вопрос о планах (чтобы не навязывать волю).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "___ the car tonight?",
+      "options": [
+        "Will you use",
+        "Will you be using"
+      ],
+      "answer": "Will you be using"
+    },
+    {
+      "question": "___ me tomorrow?",
+      "options": [
+        "Will you help",
+        "Will you be helping"
+      ],
+      "answer": "Will you help"
+    },
+    {
+      "question": "___ to the shop later?",
+      "options": [
+        "Will you go",
+        "Will you be going"
+      ],
+      "answer": "Will you be going"
+    },
+    {
+      "question": "___ to the party?",
+      "options": [
+        "Will you come",
+        "Will you be coming"
+      ],
+      "answer": "Will you be coming"
+    },
+    {
+      "question": "___ me the salt?",
+      "options": [
+        "Will you pass",
+        "Will you be passing"
+      ],
+      "answer": "Will you pass"
+    }
+  ]
+}

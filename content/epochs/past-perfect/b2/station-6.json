@@ -1,0 +1,56 @@
+{
+  "id": "past_perfect_b2_station_6",
+  "title": "Дебаты: \"Великие Открытия\" (Монолог)",
+  "description": "Напиши мини-выступление на тему \"Изобретение, которое изменило мир\". Используй Past Perfect (что было до изобретения: People had used horses before cars were invented), Past Simple (когда изобрели), Past Cont (фон).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Изобретение, которое изменило мир",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Past Perfect — что было ДО изобретения",
+      "hint": "People had used horses before cars were invented.",
+      "markers": [
+        "had",
+        "used",
+        "been",
+        "before",
+        "were",
+        "invented",
+        "horses",
+        "cars",
+        "lived"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Past Simple — когда изобрели",
+      "hint": "Cars were invented in the 19th century.",
+      "markers": [
+        "invented",
+        "created",
+        "built",
+        "discovered",
+        "made",
+        "was",
+        "were",
+        "became"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Past Continuous — фон",
+      "hint": "People were traveling by horse.",
+      "markers": [
+        "was",
+        "were",
+        "traveling",
+        "using",
+        "living",
+        "working",
+        "going"
+      ],
+      "min": 1
+    }
+  ]
+}

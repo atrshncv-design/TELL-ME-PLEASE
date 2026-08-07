@@ -1,0 +1,45 @@
+{
+  "id": "past_perfect_a2_station_2",
+  "title": "Сборка Сцены (Синтаксис)",
+  "description": "Собери предложения из слов (Past Perfect + Past Simple, союзы before / by the time).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "left / had / before / I / arrived / They",
+      "options": [
+        "They had left before I arrived",
+        "They left had before I arrived",
+        "Had they left before I arrived?"
+      ],
+      "answer": "They had left before I arrived"
+    },
+    {
+      "question": "finished / had / We / time / By / the / he / came",
+      "options": [
+        "We had finished by the time he came",
+        "We finished had by the time he came",
+        "Had we finished by the time he came?"
+      ],
+      "answer": "We had finished by the time he came"
+    },
+    {
+      "question": "eaten / before / dinner / had / We / went / we / out",
+      "options": [
+        "We had eaten dinner before we went out",
+        "We eaten had dinner before we went out",
+        "Had we eaten dinner before we went out?"
+      ],
+      "answer": "We had eaten dinner before we went out"
+    },
+    {
+      "question": "started / had / The / film / arrived / we / before",
+      "options": [
+        "The film had started before we arrived",
+        "The film started had before we arrived",
+        "Had the film started before we arrived?"
+      ],
+      "answer": "The film had started before we arrived"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "future_simple_b2_station_5",
+  "title": "Описание Фотографии (ОГЭ Task 3)",
+  "description": "Опиши фото: люди в аэропорту (Present Continuous) + будущее для контекста (will).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Опиши фотографию: люди в аэропорту (Present Continuous для фото + будущее для контекста)",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Опиши фото (Present Continuous)",
+      "hint": "They are waiting for their flight.",
+      "markers": [
+        "waiting",
+        "standing",
+        "sitting",
+        "carrying",
+        "talking",
+        "flying"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Будущее для контекста (will)",
+      "hint": "They will probably arrive in the evening.",
+      "markers": [
+        "will",
+        "probably",
+        "arrive",
+        "going to"
+      ],
+      "min": 1
+    }
+  ]
+}

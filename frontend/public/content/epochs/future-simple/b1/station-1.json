@@ -1,0 +1,54 @@
+{
+  "id": "future_simple_b1_station_1",
+  "title": "Билеты на Руки (Pres Cont for Future)",
+  "description": "Выбери Present Continuous для 100% планов.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "We ___ to London next Monday. Our tickets are ready.",
+      "options": [
+        "are flying",
+        "fly",
+        "will fly"
+      ],
+      "answer": "are flying"
+    },
+    {
+      "question": "I ___ my dentist at 3 PM tomorrow.",
+      "options": [
+        "am meeting",
+        "will meet",
+        "meet"
+      ],
+      "answer": "am meeting"
+    },
+    {
+      "question": "The train ___ at 8 PM.",
+      "options": [
+        "leaves",
+        "is leaving",
+        "will leave"
+      ],
+      "answer": "leaves"
+    },
+    {
+      "question": "We ___ a party on Saturday. We invited everyone.",
+      "options": [
+        "are having",
+        "have",
+        "will have"
+      ],
+      "answer": "are having"
+    },
+    {
+      "question": "I think I ___ to the gym later.",
+      "options": [
+        "will go",
+        "am going",
+        "go"
+      ],
+      "answer": "will go"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "future_simple_a2_station_5",
+  "title": "Вопросы о Планах (Синтаксис)",
+  "description": "Собери вопросы о планах с going to.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "going / are / What / you / to / do",
+      "options": [
+        "What are you going to do?",
+        "What you are going to do?",
+        "What are going you to do?"
+      ],
+      "answer": "What are you going to do?"
+    },
+    {
+      "question": "to / is / she / Where / going / go",
+      "options": [
+        "Where is she going to go?",
+        "Where she is going to go?",
+        "Where is going she to go?"
+      ],
+      "answer": "Where is she going to go?"
+    },
+    {
+      "question": "they / are / What / to / going / buy",
+      "options": [
+        "What are they going to buy?",
+        "What they are going to buy?",
+        "What are going they to buy?"
+      ],
+      "answer": "What are they going to buy?"
+    },
+    {
+      "question": "is / he / When / to / going / come",
+      "options": [
+        "When is he going to come?",
+        "When he is going to come?",
+        "When is going he to come?"
+      ],
+      "answer": "When is he going to come?"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "past_perfect_b2_station_3",
+  "title": "Текст ОГЭ: История Города (Чтение)",
+  "description": "Вставь глаголы в нужной форме в текст об истории города.",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "In 2010, our town ___ its 500th anniversary. By that time, the workers ___ a new bridge. Before the mayor ___, the musicians ___ a concert. While the band ___, fireworks ___. It was amazing! We ___ such a show before.",
+  "answers": [
+    [
+      "celebrated"
+    ],
+    [
+      "had built"
+    ],
+    [
+      "arrived"
+    ],
+    [
+      "had prepared"
+    ],
+    [
+      "was playing"
+    ],
+    [
+      "started"
+    ],
+    [
+      "had never seen"
+    ]
+  ],
+  "word_bank": [
+    "celebrated",
+    "had built",
+    "arrived",
+    "had prepared",
+    "was playing",
+    "started",
+    "had never seen",
+    "celebrates",
+    "builds",
+    "arrives",
+    "prepares",
+    "plays",
+    "starts",
+    "has never seen"
+  ],
+  "hints": [
+    "(celebrate)",
+    "(build)",
+    "(arrive)",
+    "(prepare)",
+    "(play)",
+    "(start)",
+    "(never / see)"
+  ]
+}

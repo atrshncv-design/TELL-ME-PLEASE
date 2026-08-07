@@ -1,0 +1,49 @@
+{
+  "id": "past_perfect_continuous_a2_station_1",
+  "title": "Триггер: WHEN (Процесс прерван)",
+  "description": "Выбери правильную форму (Past Cont для \"when\" или Past PerfCont для \"for/since before\").",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ for an hour when the bus arrived.",
+      "options": [
+        "was waiting",
+        "had been waiting"
+      ],
+      "answer": "had been waiting"
+    },
+    {
+      "question": "When she called, I ___.",
+      "options": [
+        "was sleeping",
+        "had been sleeping"
+      ],
+      "answer": "was sleeping"
+    },
+    {
+      "question": "They ___ for 2 hours when it started to rain.",
+      "options": [
+        "were playing",
+        "had been playing"
+      ],
+      "answer": "had been playing"
+    },
+    {
+      "question": "He ___ a book when the lights went out.",
+      "options": [
+        "was reading",
+        "had been reading"
+      ],
+      "answer": "was reading"
+    },
+    {
+      "question": "We ___ since morning when the teacher came.",
+      "options": [
+        "were studying",
+        "had been studying"
+      ],
+      "answer": "had been studying"
+    }
+  ]
+}

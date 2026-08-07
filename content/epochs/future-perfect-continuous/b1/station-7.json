@@ -1,0 +1,48 @@
+{
+  "id": "future_perfect_continuous_b1_station_7",
+  "title": "Мини-Проект: \"Мой Долгий Путь\" (Продукт)",
+  "description": "Напиши 5 предложений о том, как долго ты будешь идти к своей цели к определенному моменту в будущем. (By next year I will have been learning English for 5 years. By the end of the month I will have been attending this course for 2 weeks...).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши 5 предложений о том, как долго ты будешь идти к своей цели к определенному моменту в будущем. (By next year I will have been learning English for 5 years. By the end of the month I will have been attending this course for 2 weeks...).",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Конструкция will have been",
+      "hint": "By next year I will have been learning English for 5 years.",
+      "markers": [
+        "will have been"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Маркер BY (к моменту)",
+      "hint": "By the end of the month...",
+      "markers": [
+        "by"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Маркер FOR (в течение)",
+      "hint": "...for 2 weeks.",
+      "markers": [
+        "for"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Глаголы с -ing (цель/путь)",
+      "hint": "learning, attending, studying, training...",
+      "markers": [
+        "learning",
+        "attending",
+        "studying",
+        "working",
+        "training",
+        "practising"
+      ],
+      "min": 1
+    }
+  ]
+}

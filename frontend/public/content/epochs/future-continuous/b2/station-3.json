@@ -1,0 +1,66 @@
+{
+  "id": "future_continuous_b2_station_3",
+  "title": "Текст ОГЭ: Будущее Человечества (Чтение)",
+  "description": "Вставь формы будущего времени в текст о будущем человечества.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "In 2050, life ___ very different. At this time next year, scientists ___ new robots. While robots ___ boring jobs, humans ___ new art. I think people ___ on Mars in the future. The spaceship ___ for Mars next month. While the astronauts ___, we ___ them on TV.",
+      "answers": [
+        [
+          "will be"
+        ],
+        [
+          "will be testing"
+        ],
+        [
+          "are doing"
+        ],
+        [
+          "will be creating"
+        ],
+        [
+          "will live"
+        ],
+        [
+          "leaves"
+        ],
+        [
+          "are flying"
+        ],
+        [
+          "will be watching"
+        ]
+      ],
+      "hints": [
+        "(be)",
+        "(test)",
+        "(do)",
+        "(create)",
+        "(live)",
+        "(leave)",
+        "(fly)",
+        "(watch)"
+      ],
+      "word_bank": [
+        "will be",
+        "will be testing",
+        "are doing",
+        "will be creating",
+        "will live",
+        "leaves",
+        "are flying",
+        "will be watching",
+        "is",
+        "will test",
+        "will do",
+        "will create",
+        "lives",
+        "leave",
+        "fly",
+        "will watch"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": "future_perfect_continuous_b2_station_7",
+  "title": "Финальный Босс: 5 Будущих (Викторина)",
+  "description": "Финальный Босс: выбери правильное время (FutSimpl, FutCont, FutPerf, FutPerfCont, PresCont, PresSimpl).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ English tomorrow at 5 PM. (study)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Future Perfect Continuous",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Continuous"
+    },
+    {
+      "question": "I ___ English for 2 hours by 5 PM tomorrow. (study)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Future Perfect Continuous",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Perfect Continuous"
+    },
+    {
+      "question": "I ___ 3 English books by the end of the month. (read)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Future Perfect Continuous",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Perfect"
+    },
+    {
+      "question": "I think I ___ English fluently in 5 years. (speak)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Future Perfect Continuous",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Simple"
+    },
+    {
+      "question": "We ___ to Paris next Monday. We have tickets! (fly)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Future Perfect Continuous",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Present Continuous"
+    },
+    {
+      "question": "The train ___ at 6 PM. (leave)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Future Perfect Continuous",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Present Simple"
+    },
+    {
+      "question": "— It's cold. — I ___ the window. (close)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Future Perfect Continuous",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Simple"
+    },
+    {
+      "question": "By next year I ___ this course for 3 years. (attend)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Future Perfect Continuous",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Perfect Continuous"
+    }
+  ]
+}

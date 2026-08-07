@@ -1,0 +1,57 @@
+{
+  "id": "future_continuous_a1_station_5",
+  "title": "Контраст: План vs Процесс (Pres Cont vs Fut Cont)",
+  "description": "Выбери правильную форму (План с билетами или Процесс в это время).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ to London tomorrow at 5 PM. (I have tickets).",
+      "options": [
+        "am flying",
+        "will be flying"
+      ],
+      "answer": "am flying"
+    },
+    {
+      "question": "At 5 PM tomorrow I ___ over the ocean.",
+      "options": [
+        "am flying",
+        "will be flying"
+      ],
+      "answer": "will be flying"
+    },
+    {
+      "question": "We ___ at 8 PM.",
+      "options": [
+        "are meeting",
+        "will be meeting"
+      ],
+      "answer": "are meeting"
+    },
+    {
+      "question": "At 8 PM we ___ at the cafe.",
+      "options": [
+        "are meeting",
+        "will be meeting"
+      ],
+      "answer": "will be meeting"
+    },
+    {
+      "question": "She ___ lunch at noon.",
+      "options": [
+        "is having",
+        "will be having"
+      ],
+      "answer": "is having"
+    },
+    {
+      "question": "At noon she ___ lunch.",
+      "options": [
+        "is having",
+        "will be having"
+      ],
+      "answer": "will be having"
+    }
+  ]
+}

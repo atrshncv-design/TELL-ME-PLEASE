@@ -1,0 +1,49 @@
+{
+  "id": "future_simple_a2_station_2",
+  "title": "Битва: План vs Спонтанность (Will vs Going to)",
+  "description": "Выбери правильную форму: заранее обдуманный план или спонтанное решение.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "— We don't have milk. — OK, I ___ it.",
+      "options": [
+        "will buy",
+        "am going to buy"
+      ],
+      "answer": "will buy"
+    },
+    {
+      "question": "I ___ a new phone next week. I have the money.",
+      "options": [
+        "am going to buy",
+        "will buy"
+      ],
+      "answer": "am going to buy"
+    },
+    {
+      "question": "I think it ___ tomorrow.",
+      "options": [
+        "will rain",
+        "is going to rain"
+      ],
+      "answer": "will rain"
+    },
+    {
+      "question": "Look at those black clouds! It ___.",
+      "options": [
+        "is going to rain",
+        "will rain"
+      ],
+      "answer": "is going to rain"
+    },
+    {
+      "question": "Why are you taking a coat? — I ___ it outside.",
+      "options": [
+        "am going to wear",
+        "will wear"
+      ],
+      "answer": "am going to wear"
+    }
+  ]
+}

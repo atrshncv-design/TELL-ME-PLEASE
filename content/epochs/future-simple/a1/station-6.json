@@ -1,0 +1,52 @@
+{
+  "id": "future_simple_a1_station_6",
+  "title": "Текст: Мои Планы (Интеграция)",
+  "description": "Вставь will / won't и глагол в связном тексте о планах на лето.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Next summer is going to be great! I think I ___ to the seaside. I hope the weather ___ sunny. I ___ in the sea every day. My dad ___ . We ___ a sandcastle. I promise I ___ you a postcard!",
+      "answers": [
+        [
+          "will go"
+        ],
+        [
+          "will be"
+        ],
+        [
+          "will swim"
+        ],
+        [
+          "won't work"
+        ],
+        [
+          "will build"
+        ],
+        [
+          "will send"
+        ]
+      ],
+      "hints": [
+        "(go)",
+        "(be)",
+        "(swim)",
+        "(not / work)",
+        "(build)",
+        "(send)"
+      ],
+      "word_bank": [
+        "will go",
+        "will be",
+        "will swim",
+        "won't work",
+        "will build",
+        "will send",
+        "goes",
+        "will working",
+        "is going to",
+        "swims"
+      ]
+    }
+  ]
+}

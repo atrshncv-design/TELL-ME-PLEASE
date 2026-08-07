@@ -1,0 +1,57 @@
+{
+  "id": "present_perfect_continuous_b1_station_2",
+  "title": "Виктория Перфектов (Выбор формы)",
+  "description": "Выбери правильную форму: Perfect или Perfect Continuous.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ my computer. It works now!",
+      "options": [
+        "have been fixing",
+        "have fixed"
+      ],
+      "answer": "have fixed"
+    },
+    {
+      "question": "I ___ my computer for 2 hours. I am so tired!",
+      "options": [
+        "have been fixing",
+        "have fixed"
+      ],
+      "answer": "have been fixing"
+    },
+    {
+      "question": "We ___ 3 episodes of this series.",
+      "options": [
+        "have been watching",
+        "have watched"
+      ],
+      "answer": "have watched"
+    },
+    {
+      "question": "We ___ this series all evening.",
+      "options": [
+        "have been watching",
+        "have watched"
+      ],
+      "answer": "have been watching"
+    },
+    {
+      "question": "My hands are dirty. I ___ the bike.",
+      "options": [
+        "have been repairing",
+        "have repaired"
+      ],
+      "answer": "have been repairing"
+    },
+    {
+      "question": "The bike is ready. I ___ it.",
+      "options": [
+        "have been repairing",
+        "have repaired"
+      ],
+      "answer": "have repaired"
+    }
+  ]
+}

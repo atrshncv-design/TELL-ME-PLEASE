@@ -1,0 +1,66 @@
+{
+  "id": "present_perfect_continuous_b2_station_1",
+  "title": "ОГЭ-Тренажер (Task 19: 4 Времени)",
+  "description": "ОГЭ-тренажер: Task 19, все 4 настоящих времени.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Today is a big day. I ___ for my exams for months. I ___ two tests. Right now, I ___ for the results. I ___ here since 9 AM. Usually, I ___ nervous, but today I am stressed. I ___ 3 books to get ready. My friend ___ me all week. He ___ a great support.",
+      "answers": [
+        [
+          "have been preparing"
+        ],
+        [
+          "have already passed"
+        ],
+        [
+          "am waiting"
+        ],
+        [
+          "have been sitting"
+        ],
+        [
+          "do not get"
+        ],
+        [
+          "have read"
+        ],
+        [
+          "has been helping"
+        ],
+        [
+          "has been"
+        ]
+      ],
+      "hints": [
+        "(prepare)",
+        "(already / pass)",
+        "(wait)",
+        "(sit)",
+        "(not / get)",
+        "(read)",
+        "(help)",
+        "(be)"
+      ],
+      "word_bank": [
+        "have been preparing",
+        "have already passed",
+        "am waiting",
+        "have been sitting",
+        "do not get",
+        "have read",
+        "has been helping",
+        "has been",
+        "has been preparing",
+        "have already pass",
+        "am wait",
+        "have been sat",
+        "do not got",
+        "has read",
+        "have been helping",
+        "has be"
+      ]
+    }
+  ]
+}

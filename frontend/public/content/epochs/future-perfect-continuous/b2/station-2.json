@@ -1,0 +1,39 @@
+{
+  "id": "future_perfect_continuous_b2_station_2",
+  "title": "Тонкие Смыслы (Перевод-Ловушка)",
+  "description": "Переведи, выбрав Future Perfect Continuous или Future Perfect.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "By 5 PM I ___ to the lecture for an hour.",
+      "answer": "will have been listening",
+      "hint": "К 5 вечера я буду слушать лекцию уже час (процесс)."
+    },
+    {
+      "sentence": "By 5 PM I ___ to the lecture.",
+      "answer": "will have listened",
+      "hint": "К 5 вечера я послушаю лекцию (результат)."
+    },
+    {
+      "sentence": "By tomorrow we ___ the project for a week.",
+      "answer": "will have been writing",
+      "hint": "К завтрашнему дню мы будем писать проект уже неделю (процесс)."
+    },
+    {
+      "sentence": "By tomorrow we ___ the project.",
+      "answer": "will have written",
+      "hint": "К завтрашнему дню мы напишем проект (результат)."
+    },
+    {
+      "sentence": "By morning it ___ all night.",
+      "answer": "will have been snowing",
+      "hint": "К утру снег будет идти всю ночь (процесс)."
+    },
+    {
+      "sentence": "By morning the snow ___.",
+      "answer": "will have stopped",
+      "hint": "К утру снег прекратится (результат)."
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "past_simple_b1_station_4",
+  "title": "Контраст Маркеров (Сортировка)",
+  "description": "Распредели слова-маркеры по 3 группам: Past Simple, Present Perfect, Present Simple.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "past",
+      "label": "Past Simple"
+    },
+    {
+      "id": "perfect",
+      "label": "Present Perfect"
+    },
+    {
+      "id": "present",
+      "label": "Present Simple"
+    }
+  ],
+  "items": [
+    {
+      "verb": "yesterday",
+      "answer": "past"
+    },
+    {
+      "verb": "last week",
+      "answer": "past"
+    },
+    {
+      "verb": "two days ago",
+      "answer": "past"
+    },
+    {
+      "verb": "in 2010",
+      "answer": "past"
+    },
+    {
+      "verb": "when I was 5",
+      "answer": "past"
+    },
+    {
+      "verb": "just",
+      "answer": "perfect"
+    },
+    {
+      "verb": "already",
+      "answer": "perfect"
+    },
+    {
+      "verb": "yet",
+      "answer": "perfect"
+    },
+    {
+      "verb": "ever",
+      "answer": "perfect"
+    },
+    {
+      "verb": "never",
+      "answer": "perfect"
+    },
+    {
+      "verb": "recently",
+      "answer": "perfect"
+    },
+    {
+      "verb": "today",
+      "answer": "perfect"
+    },
+    {
+      "verb": "every day",
+      "answer": "present"
+    },
+    {
+      "verb": "usually",
+      "answer": "present"
+    },
+    {
+      "verb": "often",
+      "answer": "present"
+    },
+    {
+      "verb": "sometimes",
+      "answer": "present"
+    }
+  ]
+}

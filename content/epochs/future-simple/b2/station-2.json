@@ -1,0 +1,49 @@
+{
+  "id": "future_simple_b2_station_2",
+  "title": "Ловушки ОГЭ (Первое условное / First Conditional)",
+  "description": "Выбери правильную форму: без will после if/when!",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "If it ___ , I will stay at home.",
+      "options": [
+        "rains",
+        "will rain"
+      ],
+      "answer": "rains"
+    },
+    {
+      "question": "I will call you when I ___.",
+      "options": [
+        "arrive",
+        "will arrive"
+      ],
+      "answer": "arrive"
+    },
+    {
+      "question": "She will be angry if we ___ late.",
+      "options": [
+        "are",
+        "will be"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "We will go to the beach if the weather ___ fine.",
+      "options": [
+        "is",
+        "will be"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "If he ___ , he will fail the exam.",
+      "options": [
+        "doesn't study",
+        "won't study"
+      ],
+      "answer": "doesn't study"
+    }
+  ]
+}

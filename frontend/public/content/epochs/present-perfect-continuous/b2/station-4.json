@@ -1,0 +1,69 @@
+{
+  "id": "present_perfect_continuous_b2_station_4",
+  "title": "Симуляция ОГЭ (Устная часть Task 2)",
+  "description": "Симуляция устной части ОГЭ (Task 2): вопросы экзаменатора.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Промпт: \"Act like an examiner for the Russian OGE exam (Task 2). Ask me questions about my hobbies and studies. Check my grammar.\" Ты — экзаменатор устной части ОГЭ по английскому языку (Задание 2). Общайся по-английски (уровень B1–B2). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Требуй полные ответы: если ответ слишком короткий или с грамматическими ошибками, дай подсказку и попроси ответить ещё раз. Хвали за хорошие полные ответы. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "How long have you been studying English?",
+      "markers": [
+        "for",
+        "since",
+        "years",
+        "english",
+        "studying",
+        "lessons"
+      ],
+      "min": 1,
+      "hint": "Ответь полным предложением: I have been studying English for 5 years."
+    },
+    {
+      "question": "What hobby have you been doing recently?",
+      "markers": [
+        "hobby",
+        "been",
+        "doing",
+        "recently",
+        "playing",
+        "reading",
+        "drawing",
+        "sport",
+        "dancing",
+        "singing"
+      ],
+      "min": 1,
+      "hint": "Ответь: Recently I have been doing sport."
+    },
+    {
+      "question": "How many books have you read this year?",
+      "markers": [
+        "books",
+        "read",
+        "this year",
+        "one",
+        "two",
+        "three",
+        "five",
+        "ten"
+      ],
+      "min": 1,
+      "hint": "Ответь: I have read three books this year."
+    },
+    {
+      "question": "What are you doing right now?",
+      "markers": [
+        "right now",
+        "now",
+        "doing",
+        "answering",
+        "talking",
+        "learning",
+        "am"
+      ],
+      "min": 1,
+      "hint": "Ответь: I am answering your questions right now."
+    }
+  ]
+}

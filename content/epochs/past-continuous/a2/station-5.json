@@ -1,0 +1,45 @@
+{
+  "id": "past_continuous_a2_station_5",
+  "title": "Вопросы о Прошлом (Спецвопросы)",
+  "description": "Собери специальные вопросы о прошлом (What / Where / Why / How + was / were).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "doing / you / were / What",
+      "options": [
+        "What were you doing?",
+        "What you were doing?",
+        "Were you what doing?"
+      ],
+      "answer": "What were you doing?"
+    },
+    {
+      "question": "she / was / Where / going",
+      "options": [
+        "Where was she going?",
+        "Where she was going?",
+        "Was she where going?"
+      ],
+      "answer": "Where was she going?"
+    },
+    {
+      "question": "they / were / Why / crying",
+      "options": [
+        "Why were they crying?",
+        "Why they were crying?",
+        "Were they why crying?"
+      ],
+      "answer": "Why were they crying?"
+    },
+    {
+      "question": "he / was / How / feeling",
+      "options": [
+        "How was he feeling?",
+        "How he was feeling?",
+        "Was he how feeling?"
+      ],
+      "answer": "How was he feeling?"
+    }
+  ]
+}

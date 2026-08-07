@@ -1,0 +1,41 @@
+{
+  "id": "future_simple_a1_station_5",
+  "title": "Предсказания (Хрустальный Шар)",
+  "description": "Выбери правильную форму для предсказания.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I think it ___ tomorrow.",
+      "options": [
+        "will snow",
+        "is snowing"
+      ],
+      "answer": "will snow"
+    },
+    {
+      "question": "I hope she ___ her exam.",
+      "options": [
+        "will pass",
+        "is passing"
+      ],
+      "answer": "will pass"
+    },
+    {
+      "question": "Maybe he ___ to the party.",
+      "options": [
+        "will come",
+        "is coming"
+      ],
+      "answer": "will come"
+    },
+    {
+      "question": "I don't think they ___ the game.",
+      "options": [
+        "will win",
+        "are winning"
+      ],
+      "answer": "will win"
+    }
+  ]
+}

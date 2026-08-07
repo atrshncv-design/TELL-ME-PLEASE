@@ -1,0 +1,45 @@
+{
+  "id": "past_perfect_continuous_a2_station_4",
+  "title": "Вопросы о Длительности (Синтаксис)",
+  "description": "Собери спецвопросы.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "long / How / you / been / had / studying",
+      "options": [
+        "How long had you been studying?",
+        "How long you had been studying?",
+        "How had you been long studying?"
+      ],
+      "answer": "How long had you been studying?"
+    },
+    {
+      "question": "living / had / she / How long / been / here",
+      "options": [
+        "How long had she been living here?",
+        "How long she had been living here?",
+        "How had she been living long here?"
+      ],
+      "answer": "How long had she been living here?"
+    },
+    {
+      "question": "waiting / They / been / had / How long",
+      "options": [
+        "How long had they been waiting?",
+        "How long they had been waiting?",
+        "How had they been waiting long?"
+      ],
+      "answer": "How long had they been waiting?"
+    },
+    {
+      "question": "raining / been / had / it / How long",
+      "options": [
+        "How long had it been raining?",
+        "How long it had been raining?",
+        "How had it been raining long?"
+      ],
+      "answer": "How long had it been raining?"
+    }
+  ]
+}

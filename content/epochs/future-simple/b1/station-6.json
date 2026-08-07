@@ -1,0 +1,48 @@
+{
+  "id": "future_simple_b1_station_6",
+  "title": "Интервью с Турагентом (Диалог с ИИ)",
+  "description": "Спроси турагента о поездке: расписание рейса, отель, планы и музеи.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — турагент (travel agent) из туристического агентства. Общайся по-английски (уровень B1), помогай ученику спланировать поездку. Отвечай на его вопросы о рейсе, отеле, экскурсиях. Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Говори вежливо и по-деловому, мягко поправляй ошибки в будущих временах. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "When does the flight leave?",
+      "markers": [
+        "flight",
+        "leave"
+      ],
+      "min": 1,
+      "hint": "Спроси турагента: When does the flight leave?"
+    },
+    {
+      "question": "Where are we staying?",
+      "markers": [
+        "staying",
+        "hotel"
+      ],
+      "min": 1,
+      "hint": "Спроси турагента: Where are we staying?"
+    },
+    {
+      "question": "What will we do there?",
+      "markers": [
+        "will",
+        "do",
+        "there"
+      ],
+      "min": 1,
+      "hint": "Спроси турагента: What will we do there?"
+    },
+    {
+      "question": "Are we going to visit any museums?",
+      "markers": [
+        "going to",
+        "visit",
+        "museums"
+      ],
+      "min": 1,
+      "hint": "Спроси турагента: Are we going to visit any museums?"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "exam_s3_station_2",
+  "title": "Двойной Маркер (By + For)",
+  "description": "Выбери Future Perfect или Future Perfect Continuous.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "By 5 PM I ___ my work.",
+      "options": [
+        "will finish",
+        "will have finished"
+      ],
+      "answer": "will have finished"
+    },
+    {
+      "question": "By 5 PM I ___ for 3 hours.",
+      "options": [
+        "will be working",
+        "will have been working"
+      ],
+      "answer": "will have been working"
+    },
+    {
+      "question": "By next year she ___ 1000 words.",
+      "options": [
+        "will have learned",
+        "will have been learning"
+      ],
+      "answer": "will have learned"
+    },
+    {
+      "question": "By next year she ___ English for 5 years.",
+      "options": [
+        "will have learned",
+        "will have been learning"
+      ],
+      "answer": "will have been learning"
+    },
+    {
+      "question": "By the time you come, I ___ dinner.",
+      "options": [
+        "will have cooked",
+        "will have been cooking"
+      ],
+      "answer": "will have cooked"
+    }
+  ]
+}

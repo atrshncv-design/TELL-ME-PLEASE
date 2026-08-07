@@ -1,0 +1,44 @@
+{
+  "id": "exam_s2_station_4",
+  "title": "Текст: Детективная История (Интеграция)",
+  "description": "Вставь пропущенные формы глаголов в детективную историю: 4 прошедших времени в одном тексте.",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "Yesterday, a famous painting ___ from the museum. When the police arrived, the thief ___. The guard said that he ___ when the robbery happened. He ___ for 12 hours and was exhausted. While the thief ___ away, a witness saw him. The witness said the thief ___ a bag. It was a crazy night!",
+  "answers": [
+    [
+      "disappeared"
+    ],
+    [
+      "had already escaped"
+    ],
+    [
+      "was sleeping"
+    ],
+    [
+      "had been working"
+    ],
+    [
+      "was running"
+    ],
+    [
+      "had dropped"
+    ]
+  ],
+  "word_bank": [
+    "disappeared",
+    "had already escaped",
+    "was sleeping",
+    "had been working",
+    "was running",
+    "had dropped"
+  ],
+  "hints": [
+    "(disappear)",
+    "(already / escape)",
+    "(sleep)",
+    "(work)",
+    "(run)",
+    "(drop)"
+  ]
+}

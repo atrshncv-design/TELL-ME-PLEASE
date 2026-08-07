@@ -1,0 +1,49 @@
+{
+  "id": "present_perfect_continuous_a2_station_1",
+  "title": "Контраст: Прямо сейчас vs Давно (Cont vs PerfCont)",
+  "description": "Выбери правильную форму: Continuous для now или Perfect Continuous для for/since.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I am tired because I ___ all day.",
+      "options": [
+        "am working",
+        "have been working"
+      ],
+      "answer": "have been working"
+    },
+    {
+      "question": "Look! He ___ football right now.",
+      "options": [
+        "is playing",
+        "has been playing"
+      ],
+      "answer": "is playing"
+    },
+    {
+      "question": "We ___ this film for 2 hours.",
+      "options": [
+        "are watching",
+        "have been watching"
+      ],
+      "answer": "have been watching"
+    },
+    {
+      "question": "She ___ a book at the moment.",
+      "options": [
+        "is reading",
+        "has been reading"
+      ],
+      "answer": "is reading"
+    },
+    {
+      "question": "They ___ since morning.",
+      "options": [
+        "are studying",
+        "have been studying"
+      ],
+      "answer": "have been studying"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "future_perfect_a1_station_1",
+  "title": "Сборка Результата (Механика)",
+  "description": "Вставь will have и раскрой скобки, используя V3 (добавь -ed для правильных).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "By 5 PM I ___ (finish) my homework.",
+      "answer": "will have finished"
+    },
+    {
+      "sentence": "She ___ (clean) her room by evening.",
+      "answer": "will have cleaned"
+    },
+    {
+      "sentence": "We ___ (play) tennis by 6 PM.",
+      "answer": "will have played"
+    },
+    {
+      "sentence": "He ___ (wash) the car by noon.",
+      "answer": "will have washed"
+    },
+    {
+      "sentence": "They ___ (visit) the museum by Sunday.",
+      "answer": "will have visited"
+    },
+    {
+      "sentence": "My mum ___ (cook) dinner by 7 PM.",
+      "answer": "will have cooked"
+    },
+    {
+      "sentence": "You ___ (watch) the film by 10 PM.",
+      "answer": "will have watched"
+    },
+    {
+      "sentence": "Tom ___ (paint) the wall by 5 PM.",
+      "answer": "will have painted"
+    },
+    {
+      "sentence": "The dog ___ (eat) its food by evening.",
+      "answer": "will have eaten"
+    },
+    {
+      "sentence": "It ___ (stop) raining by morning.",
+      "answer": "will have stopped"
+    }
+  ]
+}

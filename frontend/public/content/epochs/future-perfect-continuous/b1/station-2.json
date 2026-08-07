@@ -1,0 +1,57 @@
+{
+  "id": "future_perfect_continuous_b1_station_2",
+  "title": "Виктория Будущих (Выбор формы)",
+  "description": "Выбери правильную форму.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "By 5 PM I ___ my computer for 2 hours. I will be so tired!",
+      "options": [
+        "will have been fixing",
+        "will have fixed"
+      ],
+      "answer": "will have been fixing"
+    },
+    {
+      "question": "By 5 PM I ___ my computer. It will work perfectly!",
+      "options": [
+        "will have been fixing",
+        "will have fixed"
+      ],
+      "answer": "will have fixed"
+    },
+    {
+      "question": "By tomorrow we ___ 3 episodes.",
+      "options": [
+        "will have been watching",
+        "will have watched"
+      ],
+      "answer": "will have watched"
+    },
+    {
+      "question": "By tomorrow we ___ this series all week.",
+      "options": [
+        "will have been watching",
+        "will have watched"
+      ],
+      "answer": "will have been watching"
+    },
+    {
+      "question": "By 7 PM my hands will be dirty. I ___ the bike.",
+      "options": [
+        "will have been repairing",
+        "will have repaired"
+      ],
+      "answer": "will have been repairing"
+    },
+    {
+      "question": "By 7 PM the bike will be ready. I ___ it.",
+      "options": [
+        "will have been repairing",
+        "will have repaired"
+      ],
+      "answer": "will have repaired"
+    }
+  ]
+}

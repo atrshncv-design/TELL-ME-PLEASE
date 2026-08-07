@@ -1,0 +1,71 @@
+{
+  "id": "present_perfect_a1_station_7",
+  "title": "Интервью Путешественника (Речь и ИИ-бот)",
+  "description": "Вывод грамматики в спонтанную речь (опыт).",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — 12-летний путешественник, который обожает ездить по миру. Общайся по-английски простыми словами (уровень A1). Отвечай коротко и задавай ученику встречные вопросы. Системный промпт: Hello! Let's speak English. Act like a 12-year-old boy/girl who loves traveling. Use simple words (A1 level). Keep your answers short. Ask me questions back.",
+  "checklist": [
+    {
+      "question": "Have you ever been to London?",
+      "markers": [
+        "yes",
+        "no",
+        "been",
+        "london",
+        "haven't"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I have been to London / No, I haven't."
+    },
+    {
+      "question": "Have you ever flown by plane?",
+      "markers": [
+        "yes",
+        "no",
+        "flown",
+        "plane",
+        "haven't"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I have flown by plane / No, I haven't."
+    },
+    {
+      "question": "Have you ever eaten Italian pizza?",
+      "markers": [
+        "yes",
+        "no",
+        "eaten",
+        "pizza",
+        "haven't"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I have eaten Italian pizza / No, I haven't."
+    },
+    {
+      "question": "Where did you go last summer?",
+      "markers": [
+        "went",
+        "visited",
+        "summer",
+        "to",
+        "beach",
+        "sea"
+      ],
+      "min": 1,
+      "hint": "Ответь: Last summer I went to ..."
+    },
+    {
+      "question": "Did you buy any souvenirs there?",
+      "markers": [
+        "yes",
+        "no",
+        "bought",
+        "souvenirs",
+        "didn't"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I bought some souvenirs / No, I didn't."
+    }
+  ]
+}

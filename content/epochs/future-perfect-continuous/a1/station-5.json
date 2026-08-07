@@ -1,0 +1,49 @@
+{
+  "id": "future_perfect_continuous_a1_station_5",
+  "title": "Контраст: Процесс vs Длительность (Fut Cont vs Fut PerfCont)",
+  "description": "Выбери правильную форму (Процесс в момент vs Длительность к моменту).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "At 5 PM I ___ football.",
+      "options": [
+        "will be playing",
+        "will have been playing"
+      ],
+      "answer": "will be playing"
+    },
+    {
+      "question": "By 5 PM I ___ football for 2 hours.",
+      "options": [
+        "will be playing",
+        "will have been playing"
+      ],
+      "answer": "will have been playing"
+    },
+    {
+      "question": "When she comes, we ___ TV.",
+      "options": [
+        "will be watching",
+        "will have been watching"
+      ],
+      "answer": "will be watching"
+    },
+    {
+      "question": "By noon she ___ for 3 hours.",
+      "options": [
+        "will be reading",
+        "will have been reading"
+      ],
+      "answer": "will have been reading"
+    },
+    {
+      "question": "At 7 PM they ___.",
+      "options": [
+        "will be studying",
+        "will have been studying"
+      ],
+      "answer": "will be studying"
+    }
+  ]
+}

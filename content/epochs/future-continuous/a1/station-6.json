@@ -1,0 +1,49 @@
+{
+  "id": "future_continuous_a1_station_6",
+  "title": "Текст: Завтрашний День (Интеграция)",
+  "description": "Вставь формы будущего времени в текст о завтрашнем дне.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Tomorrow is a busy day. At 10 AM, I ___ at school. My brother ___ computer games at 11 AM. My mum ___ dinner at 5 PM. My dad ___ to work at 8 AM. Our dog ___ on the sofa all day.",
+      "answers": [
+        [
+          "will be studying"
+        ],
+        [
+          "will be playing"
+        ],
+        [
+          "will be cooking"
+        ],
+        [
+          "will be driving"
+        ],
+        [
+          "will be sleeping"
+        ]
+      ],
+      "hints": [
+        "(study)",
+        "(play)",
+        "(cook)",
+        "(drive)",
+        "(sleep)"
+      ],
+      "word_bank": [
+        "will be studying",
+        "will be playing",
+        "will be cooking",
+        "will be driving",
+        "will be sleeping",
+        "will study",
+        "will play",
+        "is cooking",
+        "will be cook",
+        "drives",
+        "sleeps"
+      ]
+    }
+  ]
+}

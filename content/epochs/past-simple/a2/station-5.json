@@ -1,0 +1,54 @@
+{
+  "id": "past_simple_a2_station_5",
+  "title": "Текст: Мой Отпуск (Чтение)",
+  "description": "Вставь глаголы в нужной форме в текст об отпуске.",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "Last summer, my family and I ___ to Spain. We ___ at a beautiful hotel. Every morning, we ___ in the pool. One day, my dad ___ us to a water park. It ___ amazing! I ___ to a water park before. We ___ a lot of ice cream. I ___ Spain!",
+  "answers": [
+    [
+      "went"
+    ],
+    [
+      "stayed"
+    ],
+    [
+      "swam"
+    ],
+    [
+      "took"
+    ],
+    [
+      "was"
+    ],
+    [
+      "had never been"
+    ],
+    [
+      "ate"
+    ],
+    [
+      "already miss"
+    ]
+  ],
+  "word_bank": [
+    "went",
+    "stayed",
+    "swam",
+    "took",
+    "was",
+    "had never been",
+    "ate",
+    "already miss"
+  ],
+  "hints": [
+    "(go)",
+    "(stay)",
+    "(swim)",
+    "(take)",
+    "(be)",
+    "(never / be)",
+    "(eat)",
+    "(already / miss)"
+  ]
+}

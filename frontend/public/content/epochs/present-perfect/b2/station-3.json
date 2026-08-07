@@ -1,0 +1,44 @@
+{
+  "id": "present_perfect_b2_station_3",
+  "title": "Вскрытие Архивов (Текст ОГЭ)",
+  "description": "Понимание логики повествования (вставка связующих элементов и глаголов).",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Many forests ___ in the last century. This ___ because of factories. The pollution ___ rapidly since 2000. Now, people ___ to save the environment. Last week, volunteers ___ 100 trees. They ___ the local river.",
+      "answers": [
+        "were destroyed",
+        "happened",
+        "has increased",
+        "are trying",
+        "planted",
+        "have already cleaned"
+      ],
+      "hints": [
+        "(destroy)",
+        "(happen)",
+        "(increase)",
+        "(try)",
+        "(plant)",
+        "(already / clean)"
+      ],
+      "word_bank": [
+        "were destroyed",
+        "happened",
+        "has increased",
+        "are trying",
+        "planted",
+        "have already cleaned",
+        "destroyed",
+        "happens",
+        "increased",
+        "try",
+        "plants",
+        "has cleaned",
+        "was destroyed",
+        "are destroying"
+      ]
+    }
+  ]
+}

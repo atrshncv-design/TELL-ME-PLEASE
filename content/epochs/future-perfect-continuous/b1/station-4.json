@@ -1,0 +1,57 @@
+{
+  "id": "future_perfect_continuous_b1_station_4",
+  "title": "Текст: Запуск Игры (Интеграция)",
+  "description": "Раскрой скобки в тексте о запуске игры (Future Perfect, Future Perfect Continuous и другие будущие времена).",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Tomorrow is a big day for our team! By 10 AM, we ___ on this game for 6 months. By noon, the programmers ___ all the bugs. At 3 PM, while we ___ the game, the boss ___. By 5 PM, we ___ it to the store. I think by 6 PM, thousands of people ___ it. We ___ so happy!",
+      "answers": [
+        [
+          "will have been working"
+        ],
+        [
+          "will have fixed"
+        ],
+        [
+          "are testing"
+        ],
+        [
+          "will call"
+        ],
+        [
+          "will have uploaded"
+        ],
+        [
+          "will have downloaded"
+        ],
+        [
+          "will be"
+        ]
+      ],
+      "hints": [
+        "(work)",
+        "(fix)",
+        "(test)",
+        "(call)",
+        "(upload)",
+        "(download)",
+        "(be)"
+      ],
+      "word_bank": [
+        "will have been working",
+        "will have fixed",
+        "are testing",
+        "will call",
+        "will have uploaded",
+        "will have downloaded",
+        "will be",
+        "will have been fixing",
+        "will test",
+        "will have been uploading",
+        "will be calling"
+      ]
+    }
+  ]
+}

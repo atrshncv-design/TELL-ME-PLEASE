@@ -1,0 +1,59 @@
+{
+  "id": "present_perfect_a2_station_1",
+  "title": "Расширение Базы (Новые V3)",
+  "description": "Автоматизм формы с лексикой 6 класса (еда, досуг).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "She ___ a big pizza.",
+      "answer": "has eaten",
+      "hint": "(eat)"
+    },
+    {
+      "sentence": "They ___ souvenirs.",
+      "answer": "have bought",
+      "hint": "(buy)"
+    },
+    {
+      "sentence": "We ___ all the juice.",
+      "answer": "have drunk",
+      "hint": "(drink)"
+    },
+    {
+      "sentence": "He ___ his homework.",
+      "answer": "has done",
+      "hint": "(do)"
+    },
+    {
+      "sentence": "I ___ this film.",
+      "answer": "have seen",
+      "hint": "(see)"
+    },
+    {
+      "sentence": "You ___ a taxi.",
+      "answer": "have taken",
+      "hint": "(take)"
+    },
+    {
+      "sentence": "Tom ___ in the pool.",
+      "answer": "has swum",
+      "hint": "(swim)"
+    },
+    {
+      "sentence": "My mum ___ a cake.",
+      "answer": "has made",
+      "hint": "(make)"
+    },
+    {
+      "sentence": "The dog ___ away.",
+      "answer": "has run",
+      "hint": "(run)"
+    },
+    {
+      "sentence": "We ___ a horse.",
+      "answer": "have ridden",
+      "hint": "(ride)"
+    }
+  ]
+}

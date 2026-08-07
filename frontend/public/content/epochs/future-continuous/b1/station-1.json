@@ -1,0 +1,49 @@
+{
+  "id": "future_continuous_b1_station_1",
+  "title": "Ловушка Состояния (Stative Verbs)",
+  "description": "Выбери правильную форму (Future Continuous или Future Simple для стативных).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "At 5 PM I ___ the answer.",
+      "options": [
+        "will be knowing",
+        "will know"
+      ],
+      "answer": "will know"
+    },
+    {
+      "question": "This time tomorrow she ___ the gift.",
+      "options": [
+        "will be loving",
+        "will love"
+      ],
+      "answer": "will love"
+    },
+    {
+      "question": "At noon we ___ the rule.",
+      "options": [
+        "will be understanding",
+        "will understand"
+      ],
+      "answer": "will understand"
+    },
+    {
+      "question": "They ___ a dog tomorrow.",
+      "options": [
+        "will be wanting",
+        "will want"
+      ],
+      "answer": "will want"
+    },
+    {
+      "question": "He ___ a car next year.",
+      "options": [
+        "will be having",
+        "will have"
+      ],
+      "answer": "will have"
+    }
+  ]
+}

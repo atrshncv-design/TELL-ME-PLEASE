@@ -1,0 +1,68 @@
+{
+  "id": "past_perfect_b2_station_1",
+  "title": "ОГЭ-Тренажер (Task 19: 4 Времени)",
+  "description": "Вставь глаголы в нужной форме (ОГЭ Task 19).",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "Last year, a rare painting ___ found in an old house. Before the owner ___, he ___ it behind a wall. When the workers ___ the renovation, they ___ it. While they ___ down the wall, the painting ___ out. It ___ there for over 100 years. The experts ___ anything like it before.",
+  "answers": [
+    [
+      "was"
+    ],
+    [
+      "died"
+    ],
+    [
+      "had hidden"
+    ],
+    [
+      "were doing"
+    ],
+    [
+      "found"
+    ],
+    [
+      "were tearing"
+    ],
+    [
+      "fell"
+    ],
+    [
+      "had been"
+    ],
+    [
+      "had never seen"
+    ]
+  ],
+  "word_bank": [
+    "was",
+    "died",
+    "had hidden",
+    "were doing",
+    "found",
+    "were tearing",
+    "fell",
+    "had been",
+    "had never seen",
+    "is",
+    "dies",
+    "hides",
+    "does",
+    "finds",
+    "tears",
+    "falls",
+    "has been",
+    "has never seen"
+  ],
+  "hints": [
+    "(be)",
+    "(die)",
+    "(hide)",
+    "(do)",
+    "(find)",
+    "(tear)",
+    "(fall)",
+    "(be)",
+    "(never / see)"
+  ]
+}

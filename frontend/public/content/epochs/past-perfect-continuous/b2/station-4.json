@@ -1,0 +1,70 @@
+{
+  "id": "past_perfect_continuous_b2_station_4",
+  "title": "Симуляция ОГЭ (Устная часть Task 2)",
+  "description": "Симуляция устной части ОГЭ (Task 2): ответь экзаменатору на вопросы о прошлых привычках и учебе.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Промпт: \"Act like an examiner for the Russian OGE exam (Task 2). Ask me questions about my past habits and studies. Check my grammar.\" Ты — экзаменатор устной части ОГЭ по английскому языку (Задание 2). Общайся по-английски (уровень B1–B2). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Требуй полные ответы: если ответ слишком короткий или с грамматическими ошибками, дай подсказку и попроси ответить ещё раз. Хвали за хорошие полные ответы. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "How long had you been studying English before you took your first test?",
+      "markers": [
+        "had been",
+        "for",
+        "since",
+        "years",
+        "english",
+        "studying",
+        "test"
+      ],
+      "min": 1,
+      "hint": "Ответь полным предложением: I had been studying English for 5 years before I took my first test."
+    },
+    {
+      "question": "What hobby had you been doing before you started this course?",
+      "markers": [
+        "hobby",
+        "had been",
+        "doing",
+        "started",
+        "course",
+        "playing",
+        "reading",
+        "drawing",
+        "sport"
+      ],
+      "min": 1,
+      "hint": "Ответь: I had been doing sport before I started this course."
+    },
+    {
+      "question": "How many books had you read by the end of last year?",
+      "markers": [
+        "books",
+        "read",
+        "year",
+        "one",
+        "two",
+        "three",
+        "five",
+        "ten"
+      ],
+      "min": 1,
+      "hint": "Ответь: I had read five books by the end of last year."
+    },
+    {
+      "question": "What were you doing at 5 PM yesterday?",
+      "markers": [
+        "was",
+        "doing",
+        "5 pm",
+        "yesterday",
+        "playing",
+        "watching",
+        "reading",
+        "homework"
+      ],
+      "min": 1,
+      "hint": "Ответь: I was doing my homework at 5 PM yesterday."
+    }
+  ]
+}

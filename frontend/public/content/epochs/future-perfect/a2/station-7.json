@@ -1,0 +1,43 @@
+{
+  "id": "future_perfect_a2_station_7",
+  "title": "Скоростное Свидание (Диалог)",
+  "description": "Спроси партнера: 1. What will you have done by 5 PM tomorrow? 2. Will you have eaten breakfast by 8 AM? 3. Will you have gone to bed by 10 PM?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — партнёр по скоростному свиданию (speed dating), весёлый и открытый сверстник. Общайся по-английски простыми фразами (уровень A2). Ученик будет задавать тебе вопросы о том, что ты уже сделаешь к определённому моменту в будущем (Future Perfect) — отвечай подробно и дружелюбно. Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ живо: хвали, уточняй, мягко поправляй ошибки. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "What will you have done by 5 PM tomorrow?",
+      "markers": [
+        "What",
+        "will",
+        "done",
+        "5 PM"
+      ],
+      "min": 1,
+      "hint": "Спроси партнёра: What will you have done by 5 PM tomorrow?"
+    },
+    {
+      "question": "Will you have eaten breakfast by 8 AM?",
+      "markers": [
+        "Will",
+        "eaten",
+        "breakfast",
+        "8 AM"
+      ],
+      "min": 1,
+      "hint": "Спроси партнёра: Will you have eaten breakfast by 8 AM?"
+    },
+    {
+      "question": "Will you have gone to bed by 10 PM?",
+      "markers": [
+        "Will",
+        "gone",
+        "bed",
+        "10 PM"
+      ],
+      "min": 1,
+      "hint": "Спроси партнёра: Will you have gone to bed by 10 PM?"
+    }
+  ]
+}

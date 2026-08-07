@@ -1,0 +1,53 @@
+{
+  "id": "present_perfect_continuous_a2_station_7",
+  "title": "Скоростное Свидание (Диалог)",
+  "description": "Диалог «Скоростное свидание»: что ты делаешь сейчас и как долго.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — участник игры «Скоростное свидание»: 12-летний ученик, который хочет узнать, чем занят собеседник. Общайся по-английски простыми фразами (уровень A2). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй дружелюбно, задавай уточняющие вопросы, мягко поправляй ошибки в Present Continuous и Present Perfect Continuous. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "What are you doing right now?",
+      "markers": [
+        "right now",
+        "now",
+        "doing",
+        "am",
+        "reading",
+        "watching",
+        "playing",
+        "talking",
+        "learning"
+      ],
+      "min": 1,
+      "hint": "Ответь: I am doing my homework right now."
+    },
+    {
+      "question": "How long have you been doing it?",
+      "markers": [
+        "for",
+        "since",
+        "hours",
+        "minutes",
+        "been"
+      ],
+      "min": 1,
+      "hint": "Ответь: I have been doing it for an hour."
+    },
+    {
+      "question": "Are you tired? Why?",
+      "markers": [
+        "yes",
+        "no",
+        "tired",
+        "because",
+        "been",
+        "working",
+        "studying",
+        "playing"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I am tired because I have been studying all day."
+    }
+  ]
+}

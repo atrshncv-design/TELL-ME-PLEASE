@@ -1,0 +1,49 @@
+{
+  "id": "future_perfect_continuous_a2_station_2",
+  "title": "Грамматический Босс: Stative Verbs (Ловушка)",
+  "description": "Выбери правильную форму (Fut PerfCont или Fut Perfect для стативных).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "By next year I ___ him for 5 years.",
+      "options": [
+        "will have been knowing",
+        "will have known"
+      ],
+      "answer": "will have known"
+    },
+    {
+      "question": "By tomorrow she ___ him since school.",
+      "options": [
+        "will have been loving",
+        "will have loved"
+      ],
+      "answer": "will have loved"
+    },
+    {
+      "question": "By noon we ___ the rule for an hour.",
+      "options": [
+        "will have been understanding",
+        "will have understood"
+      ],
+      "answer": "will have understood"
+    },
+    {
+      "question": "By next week they ___ a dog for a month.",
+      "options": [
+        "will have been wanting",
+        "will have wanted"
+      ],
+      "answer": "will have wanted"
+    },
+    {
+      "question": "By next month he ___ this car for a year.",
+      "options": [
+        "will have been having",
+        "will have had"
+      ],
+      "answer": "will have had"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "future_simple_a1_station_4",
+  "title": "Обещания и Просьбы (Контекст)",
+  "description": "Вставь will или won't.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I promise I ___ tell anyone your secret.",
+      "hint": "will / won't",
+      "answer": "won't"
+    },
+    {
+      "sentence": "___ you open the door, please?",
+      "hint": "will / won't",
+      "answer": "Will"
+    },
+    {
+      "sentence": "Don't worry, I ___ be late.",
+      "hint": "will / won't",
+      "answer": "won't"
+    },
+    {
+      "sentence": "I ___ love you forever.",
+      "hint": "will / won't",
+      "answer": "will"
+    },
+    {
+      "sentence": "___ you give me your pen?",
+      "hint": "will / won't",
+      "answer": "Will"
+    }
+  ]
+}

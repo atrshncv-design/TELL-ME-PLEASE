@@ -1,0 +1,51 @@
+{
+  "id": "present_perfect_b2_station_5",
+  "title": "Описание Фотографии (ОГЭ Task 3)",
+  "description": "Использование Present Continuous для фото и Present Perfect/Past для контекста.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Опиши фотографию по плану ОГЭ: место, люди, действия (Present Continuous) + что привело к этой ситуации (Perfect/Past)",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Present Continuous — что происходит на фото",
+      "hint": "Начни: In the photo, people are cleaning the park...",
+      "markers": [
+        "am",
+        "is",
+        "are",
+        "cleaning",
+        "collecting",
+        "planting",
+        "playing",
+        "working"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Present Perfect — результат",
+      "hint": "Добавь: They have collected a lot of rubbish...",
+      "markers": [
+        "have",
+        "has",
+        "collected",
+        "cleaned",
+        "done"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Past Simple — контекст",
+      "hint": "Добавь: They started 2 hours ago...",
+      "markers": [
+        "started",
+        "came",
+        "went",
+        "was",
+        "were",
+        "ago"
+      ],
+      "min": 1
+    }
+  ]
+}

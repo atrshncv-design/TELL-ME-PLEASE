@@ -1,0 +1,45 @@
+{
+  "id": "exam_s4_station_4",
+  "title": "Описание Фотографии (ОГЭ Task 3 - Финал)",
+  "description": "Опиши фото (люди в парке/на пикнике). Используй Present Continuous (They are playing...), затем добавь 1 предложение в Past Perfect (They had planned this trip before...) и 1 в Future (They will be having fun...).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Опиши фотографию: люди в парке/на пикнике",
+  "duration": 90,
+  "conditions": [
+    {
+      "label": "Present Continuous (что происходит на фото)",
+      "hint": "They are playing... / The people are having a picnic.",
+      "markers": [
+        "are playing",
+        "is playing",
+        "are having",
+        "are sitting",
+        "are smiling",
+        "are eating"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Past Perfect (что было до фото)",
+      "hint": "They had planned this trip before...",
+      "markers": [
+        "had planned",
+        "had",
+        "before"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Future (что будет дальше)",
+      "hint": "They will be having fun...",
+      "markers": [
+        "will be",
+        "will",
+        "later",
+        "tomorrow"
+      ],
+      "min": 1
+    }
+  ]
+}

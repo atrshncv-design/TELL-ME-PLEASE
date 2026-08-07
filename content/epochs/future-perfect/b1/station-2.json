@@ -1,0 +1,29 @@
+{
+  "id": "future_perfect_b1_station_2",
+  "title": "Перевод-Ловушка (Интерференция)",
+  "description": "Переведи фразы (фокус на \"к тому времени / к 5 часам\").",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ my work by 5 PM.",
+      "hint": "Я закончу работу к 5 часам.",
+      "answer": "will have finished"
+    },
+    {
+      "sentence": "We ___ the house by next year.",
+      "hint": "Мы построим дом к следующему году.",
+      "answer": "will have built"
+    },
+    {
+      "sentence": "She ___ the book by tomorrow.",
+      "hint": "Она прочитает книгу к завтрашнему дню.",
+      "answer": "will have read"
+    },
+    {
+      "sentence": "By the time you come, I ___ dinner.",
+      "hint": "К тому времени как ты придешь, я уже поужинаю.",
+      "answer": "will have had"
+    }
+  ]
+}

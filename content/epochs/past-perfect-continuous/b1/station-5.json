@@ -1,0 +1,43 @@
+{
+  "id": "past_perfect_continuous_b1_station_5",
+  "title": "Объясни Ситуацию (Речь)",
+  "description": "Объясни, почему люди выглядели так в прошлом (используй Past Perfect Continuous).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Объясни, почему люди выглядели так в прошлом (используй Past Perfect Continuous). Картинки: уставший программист (He had been coding all night), грязный садовник (She had been planting flowers), мокрый бегун (He had been running in the rain).",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Форма had been + глагол с -ing",
+      "hint": "He had been coding all night.",
+      "markers": [
+        "been"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Глаголы из картинок",
+      "hint": "coding, planting flowers, running in the rain",
+      "markers": [
+        "coding",
+        "planting",
+        "running",
+        "working",
+        "gardening",
+        "flowers"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Маркеры длительности",
+      "hint": "all night, all day, for hours",
+      "markers": [
+        "all night",
+        "all day",
+        "for",
+        "since"
+      ],
+      "min": 1
+    }
+  ]
+}

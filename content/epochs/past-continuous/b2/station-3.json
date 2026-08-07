@@ -1,0 +1,21 @@
+{
+  "id": "past_continuous_b2_station_3",
+  "title": "Текст ОГЭ: История Города (Чтение)",
+  "description": "Текст ОГЭ-чтение: история города — Past Simple (события), Past Continuous (фон), Present Perfect (результат).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "In 2010, our town ___ (change) a lot. While workers ___ (build) a new mall, they ___ (find) an old treasure! While they ___ (dig), they ___ (see) a box. The mayor ___ (say) it was from the 19th century. Since then, many tourists ___ (visit) our town.",
+      "answer": [
+        "changed",
+        "were building",
+        "found",
+        "were digging",
+        "saw",
+        "said",
+        "have visited"
+      ]
+    }
+  ]
+}

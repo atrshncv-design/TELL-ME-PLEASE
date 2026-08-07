@@ -1,0 +1,34 @@
+{
+  "id": "future_simple_a2_station_1",
+  "title": "Сборка Плана (Механика going to)",
+  "description": "Вставь am/is/are going to и глагол.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ my grandma tomorrow.",
+      "hint": "(visit)",
+      "answer": "am going to visit"
+    },
+    {
+      "sentence": "She ___ a new dress.",
+      "hint": "(buy)",
+      "answer": "is going to buy"
+    },
+    {
+      "sentence": "We ___ a film tonight.",
+      "hint": "(watch)",
+      "answer": "are going to watch"
+    },
+    {
+      "sentence": "He ___ football.",
+      "hint": "(play)",
+      "answer": "is going to play"
+    },
+    {
+      "sentence": "They ___ English next year.",
+      "hint": "(study)",
+      "answer": "are going to study"
+    }
+  ]
+}

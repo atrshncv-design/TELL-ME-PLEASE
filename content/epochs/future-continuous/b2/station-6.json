@@ -1,0 +1,51 @@
+{
+  "id": "future_continuous_b2_station_6",
+  "title": "Дебаты: \"Жизнь через 50 лет\" (Монолог)",
+  "description": "Как будет выглядеть жизнь через 50 лет (мини-выступление). Используй Future Simple (предсказания), Future Continuous (процессы), Present Simple (расписания запусков космических кораблей).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Как будет выглядеть жизнь через 50 лет (мини-выступление). Используй Future Simple (предсказания), Future Continuous (процессы), Present Simple (расписания запусков космических кораблей).",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Future Simple (предсказания)",
+      "hint": "I think people will live longer.",
+      "markers": [
+        "will",
+        "think",
+        "probably",
+        "maybe",
+        "believe"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Future Continuous (процессы)",
+      "hint": "In 50 years, people will be flying to Mars.",
+      "markers": [
+        "will be",
+        "flying",
+        "living",
+        "working",
+        "travelling",
+        "using",
+        "building",
+        "studying"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Present Simple (расписания)",
+      "hint": "The spaceship to Mars leaves every year.",
+      "markers": [
+        "leaves",
+        "starts",
+        "arrives",
+        "opens",
+        "every",
+        "schedule"
+      ],
+      "min": 1
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "past_continuous_a2_station_3",
+  "title": "Параллельные Миры (Союз WHILE)",
+  "description": "Вставь глаголы в Past Continuous.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "While I ___ (read), my mum ___ (cook).",
+      "answer": [
+        "was reading",
+        "was cooking"
+      ]
+    },
+    {
+      "sentence": "While she ___ (sleep), her brother ___ (play).",
+      "answer": [
+        "was sleeping",
+        "was playing"
+      ]
+    },
+    {
+      "sentence": "While we ___ (walk), it ___ (rain).",
+      "answer": [
+        "were walking",
+        "was raining"
+      ]
+    },
+    {
+      "sentence": "While they ___ (study), I ___ (watch) TV.",
+      "answer": [
+        "were studying",
+        "was watching"
+      ]
+    },
+    {
+      "sentence": "While he ___ (drive), the dog ___ (bark).",
+      "answer": [
+        "was driving",
+        "was barking"
+      ]
+    }
+  ]
+}

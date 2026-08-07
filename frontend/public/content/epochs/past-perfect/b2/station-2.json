@@ -1,0 +1,42 @@
+{
+  "id": "past_perfect_b2_station_2",
+  "title": "Тонкие Смыслы (Перевод-Ловушка)",
+  "description": "Переведи, выбрав Past Perfect или Past Simple.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ home, ___ off the light and ___ to bed.",
+      "answer": [
+        "came",
+        "turned",
+        "went"
+      ],
+      "hint": "Я пришел домой, выключил свет и лег спать."
+    },
+    {
+      "sentence": "I ___ home because I ___ my keys.",
+      "answer": [
+        "came",
+        "had forgotten"
+      ],
+      "hint": "Я пришел домой, потому что забыл ключи."
+    },
+    {
+      "sentence": "When I ___ home, my mum ___ dinner.",
+      "answer": [
+        "came",
+        "had cooked"
+      ],
+      "hint": "Когда я пришел домой, мама приготовила ужин. (уже готово)"
+    },
+    {
+      "sentence": "When I ___ home, my mum ___ dinner.",
+      "answer": [
+        "came",
+        "was cooking"
+      ],
+      "hint": "Когда я пришел домой, мама готовила ужин. (процесс)"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
   "type": "quiz",
   "items": [
     {
-      "question": "I (eat/eats)",
+      "question": "I ___",
       "options": [
         "eat",
         "eats"
@@ -14,7 +14,7 @@
       "answer": "eat"
     },
     {
-      "question": "You (drink/drinks)",
+      "question": "You ___",
       "options": [
         "drink",
         "drinks"
@@ -22,7 +22,7 @@
       "answer": "drink"
     },
     {
-      "question": "She (plays/play)",
+      "question": "She ___",
       "options": [
         "plays",
         "play"
@@ -30,7 +30,7 @@
       "answer": "plays"
     },
     {
-      "question": "They (watch/watches)",
+      "question": "They ___",
       "options": [
         "watch",
         "watches"
@@ -38,7 +38,7 @@
       "answer": "watch"
     },
     {
-      "question": "The dog (sleeps/sleep)",
+      "question": "The dog ___",
       "options": [
         "sleeps",
         "sleep"
@@ -46,7 +46,7 @@
       "answer": "sleeps"
     },
     {
-      "question": "My mum (cook/cooks)",
+      "question": "My mum ___",
       "options": [
         "cook",
         "cooks"
@@ -54,7 +54,7 @@
       "answer": "cooks"
     },
     {
-      "question": "We (see/sees)",
+      "question": "We ___",
       "options": [
         "see",
         "sees"
@@ -62,7 +62,7 @@
       "answer": "see"
     },
     {
-      "question": "The bird (fly/flies) to the tree.",
+      "question": "The bird ___ to the tree.",
       "options": [
         "fly",
         "flies"
@@ -70,7 +70,7 @@
       "answer": "flies"
     },
     {
-      "question": "Birds (fly/flies)",
+      "question": "Birds ___",
       "options": [
         "fly",
         "flies"
@@ -78,7 +78,7 @@
       "answer": "fly"
     },
     {
-      "question": "He (go/goes)",
+      "question": "He ___",
       "options": [
         "go",
         "goes"
@@ -86,7 +86,7 @@
       "answer": "goes"
     },
     {
-      "question": "My friends (go/goes)",
+      "question": "My friends ___",
       "options": [
         "go",
         "goes"
@@ -94,7 +94,7 @@
       "answer": "go"
     },
     {
-      "question": "The cat (stay/stays)",
+      "question": "The cat ___",
       "options": [
         "stay",
         "stays"
@@ -102,7 +102,7 @@
       "answer": "stays"
     },
     {
-      "question": "Cats (run/runs)",
+      "question": "Cats ___",
       "options": [
         "run",
         "runs"
@@ -110,7 +110,7 @@
       "answer": "run"
     },
     {
-      "question": "It (read/reads)",
+      "question": "It ___",
       "options": [
         "read",
         "reads"
@@ -118,7 +118,7 @@
       "answer": "reads"
     },
     {
-      "question": "The teachers (tell/tells)",
+      "question": "The teachers ___",
       "options": [
         "tell",
         "tells"
@@ -126,7 +126,7 @@
       "answer": "tell"
     },
     {
-      "question": "The horse (jump/jumps)",
+      "question": "The horse ___",
       "options": [
         "jump",
         "jumps"

@@ -1,0 +1,51 @@
+{
+  "id": "past_perfect_a1_station_2",
+  "title": "Две Точки (До / После)",
+  "description": "Соедини первую часть (Точка 1 - Past Perfect) со второй частью (Точка 2 - Past Simple).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "p1",
+      "label": "when she called."
+    },
+    {
+      "id": "p2",
+      "label": "before we arrived."
+    },
+    {
+      "id": "p3",
+      "label": "by the time he came."
+    },
+    {
+      "id": "p4",
+      "label": "before it started to rain."
+    },
+    {
+      "id": "p5",
+      "label": "when I woke up."
+    }
+  ],
+  "items": [
+    {
+      "verb": "I had done my homework",
+      "answer": "p1"
+    },
+    {
+      "verb": "She had cleaned the room",
+      "answer": "p2"
+    },
+    {
+      "verb": "We had eaten dinner",
+      "answer": "p3"
+    },
+    {
+      "verb": "He had washed the car",
+      "answer": "p4"
+    },
+    {
+      "verb": "They had left",
+      "answer": "p5"
+    }
+  ]
+}

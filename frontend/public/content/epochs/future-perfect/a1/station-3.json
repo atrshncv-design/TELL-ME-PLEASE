@@ -1,0 +1,59 @@
+{
+  "id": "future_perfect_a1_station_3",
+  "title": "Магия Слова \"BY\" (Маркеры)",
+  "description": "Распредели маркеры в две корзины: \"BY\" (к моменту - Future Perfect) или \"AT\" (в момент - Future Continuous).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "items": [
+    {
+      "verb": "5 PM",
+      "answer": "by"
+    },
+    {
+      "verb": "tomorrow",
+      "answer": "by"
+    },
+    {
+      "verb": "evening",
+      "answer": "by"
+    },
+    {
+      "verb": "Sunday",
+      "answer": "by"
+    },
+    {
+      "verb": "morning",
+      "answer": "by"
+    },
+    {
+      "verb": "noon",
+      "answer": "by"
+    },
+    {
+      "verb": "this time tomorrow",
+      "answer": "at"
+    },
+    {
+      "verb": "midnight",
+      "answer": "at"
+    },
+    {
+      "verb": "8 AM",
+      "answer": "at"
+    },
+    {
+      "verb": "the moment",
+      "answer": "at"
+    }
+  ],
+  "columns": [
+    {
+      "id": "by",
+      "label": "BY (к моменту - Future Perfect)"
+    },
+    {
+      "id": "at",
+      "label": "AT (в момент - Future Continuous)"
+    }
+  ]
+}

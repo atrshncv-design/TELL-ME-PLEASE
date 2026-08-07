@@ -1,0 +1,52 @@
+{
+  "id": "present_perfect_continuous_b2_station_6",
+  "title": "Дебаты: \"Жизнь сегодня\" (Монолог)",
+  "description": "Мини-выступление «Как изменилась жизнь подростков», минимум 2 раза Present Perfect Continuous.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Мини-выступление: «Как изменилась жизнь подростков»",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Минимум 2 раза Present Perfect Continuous",
+      "hint": "Teenagers have been using smartphones more often.",
+      "markers": [
+        "been"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Лексика подростков и технологий",
+      "hint": "smartphones, the Internet, social media, online",
+      "markers": [
+        "teenagers",
+        "teens",
+        "smartphones",
+        "internet",
+        "social",
+        "online",
+        "phones",
+        "media",
+        "using",
+        "spend",
+        "apps"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Сравнение жизни сейчас и раньше",
+      "hint": "Now teenagers... Before, they...",
+      "markers": [
+        "now",
+        "before",
+        "more",
+        "less",
+        "changed",
+        "different",
+        "today",
+        "often"
+      ],
+      "min": 1
+    }
+  ]
+}

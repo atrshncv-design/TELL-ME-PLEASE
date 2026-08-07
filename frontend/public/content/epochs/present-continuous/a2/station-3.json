@@ -1,0 +1,79 @@
+{
+  "id": "present_continuous_a2_station_3",
+  "title": "Сортировка Маркеров (Дифференцировка)",
+  "description": "Жесткая привязка маркера к времени.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "simple",
+      "label": "Present Simple"
+    },
+    {
+      "id": "continuous",
+      "label": "Present Continuous"
+    }
+  ],
+  "items": [
+    {
+      "verb": "now",
+      "answer": "continuous"
+    },
+    {
+      "verb": "usually",
+      "answer": "simple"
+    },
+    {
+      "verb": "at the moment",
+      "answer": "continuous"
+    },
+    {
+      "verb": "every day",
+      "answer": "simple"
+    },
+    {
+      "verb": "Look!",
+      "answer": "continuous"
+    },
+    {
+      "verb": "often",
+      "answer": "simple"
+    },
+    {
+      "verb": "today",
+      "answer": "continuous"
+    },
+    {
+      "verb": "on Sundays",
+      "answer": "simple"
+    },
+    {
+      "verb": "right now",
+      "answer": "continuous"
+    },
+    {
+      "verb": "always",
+      "answer": "simple"
+    },
+    {
+      "verb": "Listen!",
+      "answer": "continuous"
+    },
+    {
+      "verb": "sometimes",
+      "answer": "simple"
+    },
+    {
+      "verb": "at present",
+      "answer": "continuous"
+    },
+    {
+      "verb": "in the morning",
+      "answer": "simple"
+    },
+    {
+      "verb": "these days",
+      "answer": "continuous"
+    }
+  ]
+}

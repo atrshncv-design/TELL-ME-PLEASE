@@ -1,0 +1,53 @@
+{
+  "id": "a2_station_7",
+  "title": "Речевой Симулятор (Диалоги)",
+  "description": "Разыграй диалоги по ролям. Обрати внимание на ответы Do/Does.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль сверстника из англоговорящей страны для ученика 6-7 класса (уровень A2). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ дружелюбно и коротко: хвали за старание, мягко поправляй ошибки в Present Simple (Do/Does) и подсказывай нужные слова. Если ответ слишком короткий, вежливо попроси сказать полным предложением (например: Yes, I do. I go jogging three times a week). Говори простыми английскими фразами уровня A2, на русский не переходи.",
+  "checklist": [
+    {
+      "question": "Do you have an active lifestyle?",
+      "markers": [
+        "Yes, I do",
+        "No, I don't",
+        "jogging",
+        "active"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I do. I go jogging..."
+    },
+    {
+      "question": "Do you go jogging every day?",
+      "markers": [
+        "No, I don't",
+        "three times a week",
+        "twice a week",
+        "every day"
+      ],
+      "min": 1,
+      "hint": "Ответь: No, I don't. I jog three times a week."
+    },
+    {
+      "question": "Do you spend a lot of time online?",
+      "markers": [
+        "No, I don't",
+        "Yes, I do",
+        "online"
+      ],
+      "min": 1,
+      "hint": "Ответь: No, I don't. / Yes, I do."
+    },
+    {
+      "question": "Does your best friend like computer games?",
+      "markers": [
+        "Yes, he does",
+        "No, he doesn't",
+        "plays",
+        "computer games"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, he does. He plays every day."
+    }
+  ]
+}

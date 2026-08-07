@@ -1,0 +1,129 @@
+{
+  "id": "present_perfect_a1_station_4",
+  "title": "Ловушка V2 или V3? (Дебаггинг)",
+  "description": "Торможение типичной ошибки: использование 2-й формы вместо 3-й в Perfect.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I have (went / gone)",
+      "options": [
+        "went",
+        "gone"
+      ],
+      "answer": "gone"
+    },
+    {
+      "question": "She has (seen / saw)",
+      "options": [
+        "seen",
+        "saw"
+      ],
+      "answer": "seen"
+    },
+    {
+      "question": "We have (ate / eaten)",
+      "options": [
+        "ate",
+        "eaten"
+      ],
+      "answer": "eaten"
+    },
+    {
+      "question": "He has (bought / buyed)",
+      "options": [
+        "bought",
+        "buyed"
+      ],
+      "answer": "bought"
+    },
+    {
+      "question": "They have (took / taken)",
+      "options": [
+        "took",
+        "taken"
+      ],
+      "answer": "taken"
+    },
+    {
+      "question": "My dad has (flied / flown)",
+      "options": [
+        "flied",
+        "flown"
+      ],
+      "answer": "flown"
+    },
+    {
+      "question": "You have (drank / drunk)",
+      "options": [
+        "drank",
+        "drunk"
+      ],
+      "answer": "drunk"
+    },
+    {
+      "question": "Tom has (swam / swum)",
+      "options": [
+        "swam",
+        "swum"
+      ],
+      "answer": "swum"
+    },
+    {
+      "question": "The dog has (run / ran)",
+      "options": [
+        "run",
+        "ran"
+      ],
+      "answer": "run"
+    },
+    {
+      "question": "We have (rode / ridden)",
+      "options": [
+        "rode",
+        "ridden"
+      ],
+      "answer": "ridden"
+    },
+    {
+      "question": "I have (was / been)",
+      "options": [
+        "was",
+        "been"
+      ],
+      "answer": "been"
+    },
+    {
+      "question": "She has (did / done)",
+      "options": [
+        "did",
+        "done"
+      ],
+      "answer": "done"
+    },
+    {
+      "question": "He has (forgot / forgotten)",
+      "options": [
+        "forgot",
+        "forgotten"
+      ],
+      "answer": "forgotten"
+    },
+    {
+      "question": "They have (gave / given)",
+      "options": [
+        "gave",
+        "given"
+      ],
+      "answer": "given"
+    },
+    {
+      "question": "We have (found / finded)",
+      "options": [
+        "found",
+        "finded"
+      ],
+      "answer": "found"
+    }
+  ]
+}

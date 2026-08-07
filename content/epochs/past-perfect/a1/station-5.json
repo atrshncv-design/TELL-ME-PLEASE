@@ -1,0 +1,89 @@
+{
+  "id": "past_perfect_a1_station_5",
+  "title": "Маркеры Предыстории (Before / After)",
+  "description": "Выбери правильную форму (Какое действие было ПЕРВЫМ?).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ my homework before I (went / had gone) to bed.",
+      "options": [
+        "finished",
+        "had finished"
+      ],
+      "answer": "had finished"
+    },
+    {
+      "question": "I (finished / had finished) my homework before I ___ to bed.",
+      "options": [
+        "went",
+        "had gone"
+      ],
+      "answer": "went"
+    },
+    {
+      "question": "After she ___ the room, she (watched / had watched) TV.",
+      "options": [
+        "cleaned",
+        "had cleaned"
+      ],
+      "answer": "had cleaned"
+    },
+    {
+      "question": "After she (cleaned / had cleaned) the room, she ___ TV.",
+      "options": [
+        "watched",
+        "had watched"
+      ],
+      "answer": "watched"
+    },
+    {
+      "question": "We ___ dinner after we (played / had played) tennis.",
+      "options": [
+        "ate",
+        "had eaten"
+      ],
+      "answer": "ate"
+    },
+    {
+      "question": "We (ate / had eaten) dinner after we ___ tennis.",
+      "options": [
+        "played",
+        "had played"
+      ],
+      "answer": "had played"
+    },
+    {
+      "question": "When I ___ , the train (left / had left).",
+      "options": [
+        "arrived",
+        "had arrived"
+      ],
+      "answer": "arrived"
+    },
+    {
+      "question": "When I (arrived / had arrived), the train ___.",
+      "options": [
+        "left",
+        "had left"
+      ],
+      "answer": "had left"
+    },
+    {
+      "question": "By the time he ___ , we (finished / had finished) the work.",
+      "options": [
+        "came",
+        "had come"
+      ],
+      "answer": "came"
+    },
+    {
+      "question": "By the time he (came / had come), we ___ the work.",
+      "options": [
+        "finished",
+        "had finished"
+      ],
+      "answer": "had finished"
+    }
+  ]
+}

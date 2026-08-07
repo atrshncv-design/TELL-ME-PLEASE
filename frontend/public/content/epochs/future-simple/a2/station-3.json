@@ -1,0 +1,41 @@
+{
+  "id": "future_simple_a2_station_3",
+  "title": "Очевидные Предсказания (Going to)",
+  "description": "Посмотри на картинку и выбери предсказание на основе фактов.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "🌧️☁️ (Тучи) It ___ rain.",
+      "options": [
+        "is going to",
+        "will"
+      ],
+      "answer": "is going to"
+    },
+    {
+      "question": "🏃💧 (Бегун падает) He ___ fall.",
+      "options": [
+        "is going to",
+        "will"
+      ],
+      "answer": "is going to"
+    },
+    {
+      "question": "🌡️🤒 (Термометр) She ___ be sick.",
+      "options": [
+        "is going to",
+        "will"
+      ],
+      "answer": "is going to"
+    },
+    {
+      "question": "🎂🎈 (Праздник) We ___ have a party.",
+      "options": [
+        "are going to",
+        "will"
+      ],
+      "answer": "are going to"
+    }
+  ]
+}

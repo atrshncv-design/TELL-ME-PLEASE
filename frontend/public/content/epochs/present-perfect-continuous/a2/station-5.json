@@ -1,0 +1,50 @@
+{
+  "id": "present_perfect_continuous_a2_station_5",
+  "title": "Текст: Упорный Художник (Чтение)",
+  "description": "Интеграция навыка в связный текст о художнике.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "My brother is an artist. He ___ a picture for 3 weeks. He ___ since morning. He ___ well these days. He ___ very hard. I ___ him for an hour.",
+      "answers": [
+        [
+          "has been drawing"
+        ],
+        [
+          "has been painting"
+        ],
+        [
+          "hasn't been sleeping"
+        ],
+        [
+          "has been working"
+        ],
+        [
+          "have been watching"
+        ]
+      ],
+      "hints": [
+        "(draw)",
+        "(paint)",
+        "(not / sleep)",
+        "(work)",
+        "(watch)"
+      ],
+      "word_bank": [
+        "has been drawing",
+        "has been painting",
+        "hasn't been sleeping",
+        "has been working",
+        "have been watching",
+        "have been drawing",
+        "is painting",
+        "haven't been sleeping",
+        "sleeps",
+        "has watched",
+        "works",
+        "watch"
+      ]
+    }
+  ]
+}

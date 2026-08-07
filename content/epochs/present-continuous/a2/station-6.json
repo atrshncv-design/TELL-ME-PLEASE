@@ -1,0 +1,52 @@
+{
+  "id": "present_continuous_a2_station_6",
+  "title": "Описание Ситуации (Речь/Письмо)",
+  "description": "Описание динамичной картинки.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Опиши динамичную картинку (GIF): что происходит прямо сейчас",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "5–7 предложений о действиях",
+      "hint": "Напиши 5–7 предложений: кто что делает на картинке (глагол с -ing)",
+      "markers": [
+        "playing",
+        "watching",
+        "reading",
+        "doing",
+        "making",
+        "running",
+        "swimming",
+        "singing",
+        "cooking",
+        "eating",
+        "sitting",
+        "standing",
+        "walking",
+        "talking"
+      ],
+      "min": 5
+    },
+    {
+      "label": "Используй Present Continuous (am/is/are)",
+      "hint": "Каждое предложение: am/is/are + глагол с -ing",
+      "markers": [
+        "am",
+        "is",
+        "are"
+      ],
+      "min": 4
+    },
+    {
+      "label": "Упомяни маркер сейчас",
+      "hint": "Добавь now, at the moment или right now",
+      "markers": [
+        "now",
+        "moment",
+        "right"
+      ],
+      "min": 1
+    }
+  ]
+}

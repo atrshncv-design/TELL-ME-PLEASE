@@ -1,0 +1,20 @@
+{
+  "id": "past_continuous_a1_station_6",
+  "title": "Текст: Вчерашний Вечер (Интеграция)",
+  "description": "Интеграция навыка в связный текст. Прочитай рассказ о вчерашнем вечере и вставь глаголы в Past Continuous (was/were + -ing).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "Yesterday was a busy day. At 5 PM, I ___ (do) my homework. My brother ___ (play) computer games. My mum ___ (cook) dinner. My dad ___ (read) a newspaper. Our dog ___ (sleep) on the sofa. We ___ (not / watch) TV.",
+      "answer": [
+        "was doing",
+        "was playing",
+        "was cooking",
+        "was reading",
+        "was sleeping",
+        "weren't watching"
+      ]
+    }
+  ]
+}

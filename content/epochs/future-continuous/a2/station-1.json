@@ -1,0 +1,44 @@
+{
+  "id": "future_continuous_a2_station_1",
+  "title": "Параллельные Миры (Союз WHILE)",
+  "description": "Вставь глаголы в Future Continuous.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "While I ___ (read), my mum ___ (cook).",
+      "answer": [
+        "will be reading",
+        "will be cooking"
+      ]
+    },
+    {
+      "sentence": "While she ___ (sleep), her brother ___ (play).",
+      "answer": [
+        "will be sleeping",
+        "will be playing"
+      ]
+    },
+    {
+      "sentence": "While we ___ (walk), it ___ (rain).",
+      "answer": [
+        "will be walking",
+        "will be raining"
+      ]
+    },
+    {
+      "sentence": "While they ___ (study), I ___ (watch) TV.",
+      "answer": [
+        "will be studying",
+        "will be watching"
+      ]
+    },
+    {
+      "sentence": "While he ___ (drive), the dog ___ (bark).",
+      "answer": [
+        "will be driving",
+        "will be barking"
+      ]
+    }
+  ]
+}

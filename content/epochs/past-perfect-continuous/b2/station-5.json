@@ -1,0 +1,41 @@
+{
+  "id": "past_perfect_continuous_b2_station_5",
+  "title": "Описание Фотографии (ОГЭ Task 3)",
+  "description": "Опиши фото (люди работают в саду/убирают парк): Present Continuous для действий, Present Perfect Continuous для контекста, Past Perfect Continuous для предыстории.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Опиши фото (люди работают в саду/убирают парк). Используй Present Continuous для действий на фото (They are planting trees) и Present Perfect Continuous для контекста (They have been working for 2 hours). Затем скажи 1 предложение в Past Perfect Continuous (They had been planning this event for a month before they came here).",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Present Continuous для действий на фото",
+      "hint": "They are planting trees.",
+      "markers": [
+        "are",
+        "is",
+        "planting",
+        "working",
+        "cleaning",
+        "doing"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Present Perfect Continuous для контекста",
+      "hint": "They have been working for 2 hours.",
+      "markers": [
+        "have been",
+        "has been"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Past Perfect Continuous для предыстории",
+      "hint": "They had been planning this event for a month before they came here.",
+      "markers": [
+        "had been"
+      ],
+      "min": 1
+    }
+  ]
+}

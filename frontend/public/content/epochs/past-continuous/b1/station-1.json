@@ -1,0 +1,49 @@
+{
+  "id": "past_continuous_b1_station_1",
+  "title": "Ловушка Состояния (Stative Verbs)",
+  "description": "Выбери правильную форму (Past Cont или Past Simple для стативных).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I (was knowing / knew) the answer.",
+      "options": [
+        "was knowing",
+        "knew"
+      ],
+      "answer": "knew"
+    },
+    {
+      "question": "She (was loving / loved) the gift.",
+      "options": [
+        "was loving",
+        "loved"
+      ],
+      "answer": "loved"
+    },
+    {
+      "question": "We (were understanding / understood) the rule.",
+      "options": [
+        "were understanding",
+        "understood"
+      ],
+      "answer": "understood"
+    },
+    {
+      "question": "They (were wanting / wanted) a dog.",
+      "options": [
+        "were wanting",
+        "wanted"
+      ],
+      "answer": "wanted"
+    },
+    {
+      "question": "He (was having / had) a car.",
+      "options": [
+        "was having",
+        "had"
+      ],
+      "answer": "had"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "past_perfect_a2_station_4",
+  "title": "Контраст: Процесс vs Предыстория (Past Cont vs Past Perfect)",
+  "description": "Выбери правильную форму.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "When I came home, my mum ___ dinner.",
+      "options": [
+        "was cooking",
+        "had cooked"
+      ],
+      "answer": "was cooking"
+    },
+    {
+      "question": "When I came home, my mum ___ dinner. It was on the table.",
+      "options": [
+        "was cooking",
+        "had cooked"
+      ],
+      "answer": "had cooked"
+    },
+    {
+      "question": "While I ___ a book, the phone rang.",
+      "options": [
+        "was reading",
+        "had read"
+      ],
+      "answer": "was reading"
+    },
+    {
+      "question": "I ___ the book before I watched the film.",
+      "options": [
+        "was reading",
+        "had read"
+      ],
+      "answer": "had read"
+    },
+    {
+      "question": "The ground was wet. It ___.",
+      "options": [
+        "was raining",
+        "had rained"
+      ],
+      "answer": "had rained"
+    }
+  ]
+}

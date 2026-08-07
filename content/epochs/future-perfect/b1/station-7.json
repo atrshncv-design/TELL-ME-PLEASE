@@ -1,0 +1,37 @@
+{
+  "id": "future_perfect_b1_station_7",
+  "title": "Проект \"Мой Дедлайн\" (Продукт)",
+  "description": "Напиши 5 предложений о своих планах на неделю. Укажи, что будет сделано (Future Perfect) и что будет в процессе (Future Continuous) в определенные моменты. (By Friday I will have finished my project. At 5 PM tomorrow I will be writing an essay...).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши 5 предложений о своих планах на неделю. Укажи, что будет сделано (Future Perfect) и что будет в процессе (Future Continuous) в определенные моменты.",
+  "duration": 90,
+  "conditions": [
+    {
+      "label": "Результат (Future Perfect)",
+      "hint": "By Friday I will have finished my project.",
+      "markers": [
+        "will have"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Процесс (Future Continuous)",
+      "hint": "At 5 PM tomorrow I will be writing an essay.",
+      "markers": [
+        "will be"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Маркер времени",
+      "hint": "By Friday ... / At 5 PM tomorrow ...",
+      "markers": [
+        "by",
+        "at 5 pm",
+        "at 6 pm"
+      ],
+      "min": 1
+    }
+  ]
+}

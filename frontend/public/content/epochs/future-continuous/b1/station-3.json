@@ -1,0 +1,32 @@
+{
+  "id": "future_continuous_b1_station_3",
+  "title": "Перевод-Ловушка (Интерференция)",
+  "description": "Переведи фразы (фокус на \"в это время завтра / в 5 вечера\").",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "This time tomorrow I ___ to London.",
+      "hint": "В это время завтра я буду лететь в Лондон.",
+      "answer": "will be flying"
+    },
+    {
+      "sentence": "At 5 PM I ___ tennis.",
+      "hint": "В 5 вечера я буду играть в теннис.",
+      "answer": "will be playing"
+    },
+    {
+      "sentence": "What ___ you ___ at 3 PM tomorrow?",
+      "hint": "Что ты будешь делать завтра в 3 часа?",
+      "answer": [
+        "will",
+        "be doing"
+      ]
+    },
+    {
+      "sentence": "Don't call me at 8. I ___ dinner.",
+      "hint": "Не звони мне в 8. Я буду ужинать.",
+      "answer": "will be having"
+    }
+  ]
+}

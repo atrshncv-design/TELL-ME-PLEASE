@@ -1,0 +1,49 @@
+{
+  "id": "future_perfect_a2_station_4",
+  "title": "Контраст: Процесс vs Результат (Fut Cont vs Fut Perfect)",
+  "description": "Выбери правильную форму.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "At 5 PM I ___ my homework.",
+      "options": [
+        "will be doing",
+        "will have done"
+      ],
+      "answer": "will be doing"
+    },
+    {
+      "question": "By 5 PM I ___ my homework.",
+      "options": [
+        "will be doing",
+        "will have done"
+      ],
+      "answer": "will have done"
+    },
+    {
+      "question": "When you come, I ___ dinner.",
+      "options": [
+        "will be cooking",
+        "will have cooked"
+      ],
+      "answer": "will be cooking"
+    },
+    {
+      "question": "At 7 PM she ___ a book.",
+      "options": [
+        "will be reading",
+        "will have read"
+      ],
+      "answer": "will be reading"
+    },
+    {
+      "question": "By 7 PM she ___ the book.",
+      "options": [
+        "will be reading",
+        "will have read"
+      ],
+      "answer": "will have read"
+    }
+  ]
+}

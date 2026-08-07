@@ -1,0 +1,49 @@
+{
+  "id": "past_perfect_continuous_a1_station_1",
+  "title": "Сборка Марафонца (Механика)",
+  "description": "Вставь had been и добавь -ing к глаголу.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ (play) tennis for an hour.",
+      "answer": "had been playing"
+    },
+    {
+      "sentence": "She ___ (read) a book since morning.",
+      "answer": "had been reading"
+    },
+    {
+      "sentence": "We ___ (watch) TV all evening.",
+      "answer": "had been watching"
+    },
+    {
+      "sentence": "He ___ (sleep) for 3 hours.",
+      "answer": "had been sleeping"
+    },
+    {
+      "sentence": "They ___ (study) for 2 hours.",
+      "answer": "had been studying"
+    },
+    {
+      "sentence": "My mum ___ (cook) for an hour.",
+      "answer": "had been cooking"
+    },
+    {
+      "sentence": "You ___ (run) very fast.",
+      "answer": "had been running"
+    },
+    {
+      "sentence": "Tom ___ (ride) his bike since morning.",
+      "answer": "had been riding"
+    },
+    {
+      "sentence": "The dog ___ (bark) all night.",
+      "answer": "had been barking"
+    },
+    {
+      "sentence": "It ___ (rain) for 2 hours.",
+      "answer": "had been raining"
+    }
+  ]
+}

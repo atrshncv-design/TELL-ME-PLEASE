@@ -1,0 +1,47 @@
+{
+  "id": "present_perfect_b2_station_7",
+  "title": "Дебаты \"Старое vs Новое\" (Финальный Босс)",
+  "description": "Аргументированная речь с использованием всех изученных времен.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Как изменился мир за последние 10 лет (Present Perfect для изменений, Past Simple для примеров, Present Simple для текущей ситуации)",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Present Perfect — изменения",
+      "hint": "Начни: Technology has changed...",
+      "markers": [
+        "have",
+        "has",
+        "changed",
+        "become",
+        "invented"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Past Simple — примеры из прошлого",
+      "hint": "Добавь: People used to... / In 2015, ... was...",
+      "markers": [
+        "was",
+        "were",
+        "used",
+        "had",
+        "went"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Present Simple — текущая ситуация",
+      "hint": "Закончи: Now we... / Today people...",
+      "markers": [
+        "now",
+        "today",
+        "is",
+        "are",
+        "people"
+      ],
+      "min": 1
+    }
+  ]
+}

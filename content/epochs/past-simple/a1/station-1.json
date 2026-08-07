@@ -1,0 +1,91 @@
+{
+  "id": "past_simple_a1_station_1",
+  "title": "Сортировка Артефактов (Правильные vs Неправильные)",
+  "description": "Распредели глаголы в две корзины: \"Add -ed (Правильные)\" или \"Irregular (Неправильные)\".",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "regular",
+      "label": "Add -ed (Правильные)"
+    },
+    {
+      "id": "irregular",
+      "label": "Irregular (Неправильные)"
+    }
+  ],
+  "items": [
+    {
+      "verb": "play",
+      "answer": "regular"
+    },
+    {
+      "verb": "visit",
+      "answer": "regular"
+    },
+    {
+      "verb": "travel",
+      "answer": "regular"
+    },
+    {
+      "verb": "watch",
+      "answer": "regular"
+    },
+    {
+      "verb": "stay",
+      "answer": "regular"
+    },
+    {
+      "verb": "walk",
+      "answer": "regular"
+    },
+    {
+      "verb": "rent",
+      "answer": "regular"
+    },
+    {
+      "verb": "clean",
+      "answer": "regular"
+    },
+    {
+      "verb": "go",
+      "answer": "irregular"
+    },
+    {
+      "verb": "see",
+      "answer": "irregular"
+    },
+    {
+      "verb": "eat",
+      "answer": "irregular"
+    },
+    {
+      "verb": "buy",
+      "answer": "irregular"
+    },
+    {
+      "verb": "take",
+      "answer": "irregular"
+    },
+    {
+      "verb": "swim",
+      "answer": "irregular"
+    },
+    {
+      "verb": "drink",
+      "answer": "irregular"
+    },
+    {
+      "verb": "fly",
+      "answer": "irregular"
+    },
+    {
+      "verb": "run",
+      "answer": "irregular"
+    },
+    {
+      "verb": "sleep",
+      "answer": "irregular"
+    }
+  ]
+}

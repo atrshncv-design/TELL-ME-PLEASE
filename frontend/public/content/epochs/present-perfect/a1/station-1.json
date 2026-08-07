@@ -1,0 +1,69 @@
+{
+  "id": "present_perfect_a1_station_1",
+  "title": "Запуск Реактора (Механика have/has + V3)",
+  "description": "Автоматизировать выбор have/has и форму V3.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ (visit) London.",
+      "answer": "have visited"
+    },
+    {
+      "sentence": "She ___ (see) Big Ben.",
+      "answer": "has seen"
+    },
+    {
+      "sentence": "We ___ (travel) to Spain.",
+      "answer": "have travelled"
+    },
+    {
+      "sentence": "He ___ (eat) a big pizza.",
+      "answer": "has eaten"
+    },
+    {
+      "sentence": "They ___ (buy) souvenirs.",
+      "answer": "have bought"
+    },
+    {
+      "sentence": "My mum ___ (take) a photo.",
+      "answer": "has taken"
+    },
+    {
+      "sentence": "You ___ (stay) at a hotel.",
+      "answer": "have stayed"
+    },
+    {
+      "sentence": "Tom ___ (swim) in the sea.",
+      "answer": "has swum"
+    },
+    {
+      "sentence": "The dog ___ (drink) water.",
+      "answer": "has drunk"
+    },
+    {
+      "sentence": "We ___ (rent) a boat.",
+      "answer": "have rented"
+    },
+    {
+      "sentence": "He ___ (ride) a bike.",
+      "answer": "has ridden"
+    },
+    {
+      "sentence": "I ___ (walk) in the park.",
+      "answer": "have walked"
+    },
+    {
+      "sentence": "She ___ (watch) a film.",
+      "answer": "has watched"
+    },
+    {
+      "sentence": "They ___ (play) tennis.",
+      "answer": "have played"
+    },
+    {
+      "sentence": "My dad ___ (fly) to Italy.",
+      "answer": "has flown"
+    }
+  ]
+}

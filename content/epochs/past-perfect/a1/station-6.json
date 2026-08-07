@@ -1,0 +1,51 @@
+{
+  "id": "past_perfect_a1_station_6",
+  "title": "Текст: Опоздание (Интеграция)",
+  "description": "Вставь глаголы в нужной форме в текст об опоздании в школу.",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "Yesterday I was late for school. When I ___, the lesson ___. My friends ___ their books. The teacher ___ on the board. I ___ my homework! I ___ it at home.",
+  "answers": [
+    [
+      "arrived"
+    ],
+    [
+      "had already started"
+    ],
+    [
+      "had opened"
+    ],
+    [
+      "had written"
+    ],
+    [
+      "hadn't done"
+    ],
+    [
+      "had forgotten"
+    ]
+  ],
+  "word_bank": [
+    "arrived",
+    "had already started",
+    "had opened",
+    "had written",
+    "hadn't done",
+    "had forgotten",
+    "came",
+    "was",
+    "started",
+    "opened",
+    "wrote",
+    "didn't do",
+    "forgot"
+  ],
+  "hints": [
+    "(arrive)",
+    "(already / start)",
+    "(open)",
+    "(write)",
+    "(not / do)",
+    "(forget)"
+  ]
+}

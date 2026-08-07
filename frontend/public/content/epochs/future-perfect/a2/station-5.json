@@ -1,0 +1,57 @@
+{
+  "id": "future_perfect_a2_station_5",
+  "title": "Текст: Подготовка к Празднику (Чтение)",
+  "description": "Вставь пропуски в текст о подготовке к празднику.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Tomorrow is my birthday! By 5 PM, I ___ the room. By 6 PM, my mum ___ a cake. By 7 PM, all my friends ___. At 7:30, we ___ pizza. At 8 PM, while we ___ , my parents ___ photos. By 10 PM, the party ___ .",
+      "answers": [
+        [
+          "will have decorated"
+        ],
+        [
+          "will have baked"
+        ],
+        [
+          "will have arrived"
+        ],
+        [
+          "will eat"
+        ],
+        [
+          "are dancing"
+        ],
+        [
+          "will be taking"
+        ],
+        [
+          "will have finished"
+        ]
+      ],
+      "hints": [
+        "(decorate)",
+        "(bake)",
+        "(arrive)",
+        "(eat)",
+        "(dance)",
+        "(take)",
+        "(finish)"
+      ],
+      "word_bank": [
+        "will have decorated",
+        "will have baked",
+        "will have arrived",
+        "will eat",
+        "are dancing",
+        "will be taking",
+        "will have finished",
+        "will decorate",
+        "will have bake",
+        "dance",
+        "will have arrive"
+      ]
+    }
+  ]
+}

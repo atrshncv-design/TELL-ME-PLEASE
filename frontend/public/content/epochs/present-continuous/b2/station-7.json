@@ -1,0 +1,71 @@
+{
+  "id": "present_continuous_b2_station_7",
+  "title": "Экзаменатор-ИИ (Условный диалог ОГЭ Задание 2)",
+  "description": "Отработка устной части ОГЭ, спонтанные ответы на вопросы экзаменатора.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — экзаменатор устной части ОГЭ по английскому языку (Задание 2). Общайся по-английски (уровень B1–B2). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Требуй полные ответы: если ответ слишком короткий или с грамматическими ошибками, дай подсказку и попроси ответить ещё раз. Хвали за хорошие полные ответы. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "What are you doing this weekend?",
+      "markers": [
+        "weekend",
+        "going",
+        "visiting",
+        "having",
+        "playing"
+      ],
+      "min": 1,
+      "hint": "Ответь полным предложением: This weekend I am ..."
+    },
+    {
+      "question": "Are you working on any school project these days?",
+      "markers": [
+        "yes",
+        "no",
+        "project",
+        "working",
+        "these days"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I am working on a school project these days."
+    },
+    {
+      "question": "How is our town changing right now?",
+      "markers": [
+        "town",
+        "changing",
+        "growing",
+        "building",
+        "new",
+        "right now"
+      ],
+      "min": 1,
+      "hint": "Ответь: Our town is changing: they are building new houses."
+    },
+    {
+      "question": "What do you usually do in the evening, and what are you doing tonight?",
+      "markers": [
+        "usually",
+        "evening",
+        "tonight",
+        "reading",
+        "watching",
+        "doing"
+      ],
+      "min": 1,
+      "hint": "Ответь: In the evening I usually ..., and tonight I am ..."
+    },
+    {
+      "question": "Is there anything your friend is always doing that annoys you?",
+      "markers": [
+        "friend",
+        "always",
+        "annoy",
+        "bother"
+      ],
+      "min": 1,
+      "hint": "Ответь: My friend is always ... and it annoys me."
+    }
+  ]
+}

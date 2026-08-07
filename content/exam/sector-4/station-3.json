@@ -1,0 +1,86 @@
+{
+  "id": "exam_s4_station_3",
+  "title": "Симуляция ОГЭ (Устная часть Task 2 - 12 Времен)",
+  "description": "Симуляция ОГЭ Task 2: экзаменатор спрашивает о прошлом, настоящем и будущем — ответь, используя правильные времена.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Act like an examiner for the Russian OGE exam. Ask me questions about my past, present, and future. Check my grammar strictly. Ты — экзаменатор на устной части ОГЭ. Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ коротко и по-английски, мягко поправляй грамматические ошибки во временах. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "What did you do last weekend?",
+      "markers": [
+        "went",
+        "visited",
+        "played",
+        "watched",
+        "was",
+        "did",
+        "weekend"
+      ],
+      "min": 1,
+      "hint": "Ответь: Last weekend I visited my grandparents."
+    },
+    {
+      "question": "What were you doing at 5 PM yesterday?",
+      "markers": [
+        "was",
+        "were",
+        "doing",
+        "watching",
+        "playing",
+        "reading"
+      ],
+      "min": 1,
+      "hint": "Ответь: I was playing football at 5 PM yesterday."
+    },
+    {
+      "question": "How long have you been studying English?",
+      "markers": [
+        "have been",
+        "since",
+        "for",
+        "years",
+        "studying"
+      ],
+      "min": 1,
+      "hint": "Ответь: I have been studying English for 5 years."
+    },
+    {
+      "question": "What are you doing right now?",
+      "markers": [
+        "am",
+        "doing",
+        "right now",
+        "now",
+        "learning",
+        "writing"
+      ],
+      "min": 1,
+      "hint": "Ответь: I am learning English right now."
+    },
+    {
+      "question": "What will you be doing at 8 PM tonight?",
+      "markers": [
+        "will be",
+        "doing",
+        "tonight",
+        "watching",
+        "playing"
+      ],
+      "min": 1,
+      "hint": "Ответь: I will be watching TV at 8 PM tonight."
+    },
+    {
+      "question": "What will you have done by the end of this week?",
+      "markers": [
+        "will have",
+        "done",
+        "finished",
+        "by the end",
+        "week"
+      ],
+      "min": 1,
+      "hint": "Ответь: I will have finished my homework by the end of this week."
+    }
+  ]
+}

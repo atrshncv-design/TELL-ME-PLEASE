@@ -1,0 +1,54 @@
+{
+  "id": "future_perfect_continuous_a1_station_2",
+  "title": "Торможение Хаоса (Вопрос)",
+  "description": "Собери вопросы.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "playing / you / Will / have / been / tennis",
+      "options": [
+        "Will you have been playing tennis?",
+        "Will you have playing been tennis?",
+        "You will have been playing tennis?"
+      ],
+      "answer": "Will you have been playing tennis?"
+    },
+    {
+      "question": "she / been / reading / Will / have / a book",
+      "options": [
+        "Will she have been reading a book?",
+        "Will she have reading been a book?",
+        "She will have been reading a book?"
+      ],
+      "answer": "Will she have been reading a book?"
+    },
+    {
+      "question": "they / watching / been / TV / Will / have",
+      "options": [
+        "Will they have been watching TV?",
+        "Will they have watching been TV?",
+        "They will have been watching TV?"
+      ],
+      "answer": "Will they have been watching TV?"
+    },
+    {
+      "question": "been / Will / he / sleeping / have",
+      "options": [
+        "Will he have been sleeping?",
+        "Will he have sleeping been?",
+        "He will have been sleeping?"
+      ],
+      "answer": "Will he have been sleeping?"
+    },
+    {
+      "question": "studying / been / they / Will / have",
+      "options": [
+        "Will they have been studying?",
+        "Will they have studying been?",
+        "They will have been studying?"
+      ],
+      "answer": "Will they have been studying?"
+    }
+  ]
+}

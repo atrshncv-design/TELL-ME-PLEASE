@@ -1,0 +1,54 @@
+{
+  "id": "present_continuous_b1_station_4",
+  "title": "Текст с Подводными Камнями (Чтение)",
+  "description": "Интеграция всех навыков (Simple, Continuous, Stative, Future Arrangements) в связном тексте.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Hi! I ___ an email from Spain! I usually ___ holidays at home, but this year we ___ around the country. My sister ___ photography. She ___ photos of the square right now. We ___ our friends tomorrow at 5 PM.",
+      "answers": [
+        [
+          "am writing"
+        ],
+        [
+          "spend"
+        ],
+        [
+          "are traveling"
+        ],
+        [
+          "loves"
+        ],
+        [
+          "is taking"
+        ],
+        [
+          "are meeting"
+        ]
+      ],
+      "hints": [
+        "(write)",
+        "(spend)",
+        "(travel)",
+        "(love)",
+        "(take)",
+        "(meet)"
+      ],
+      "word_bank": [
+        "am writing",
+        "spend",
+        "are traveling",
+        "loves",
+        "is taking",
+        "are meeting",
+        "spends",
+        "travel",
+        "love",
+        "take",
+        "meet",
+        "is spending"
+      ]
+    }
+  ]
+}

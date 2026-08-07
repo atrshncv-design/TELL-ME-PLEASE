@@ -1,0 +1,27 @@
+{
+  "id": "future_perfect_a2_station_6",
+  "title": "Блог: Мои Планы (Продукт)",
+  "description": "Напиши 3 предложения о том, что ты уже сделаешь к определенному времени завтра. (By 5 PM I will have finished my homework. By 8 PM I will have had dinner...).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши 3 предложения о том, что ты уже сделаешь к определенному времени завтра. (By 5 PM I will have finished my homework. By 8 PM I will have had dinner...)",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Результат к моменту (will have + V3)",
+      "hint": "By 5 PM I will have finished my homework.",
+      "markers": [
+        "will have"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Маркер времени BY",
+      "hint": "By 8 PM I will have had dinner.",
+      "markers": [
+        "by"
+      ],
+      "min": 1
+    }
+  ]
+}

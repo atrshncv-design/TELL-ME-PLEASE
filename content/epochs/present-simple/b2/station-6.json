@@ -1,0 +1,29 @@
+{
+  "id": "b2_station_6",
+  "title": "Китайский Карнавал (Сложная Трансформация)",
+  "description": "Поставь предложения в отрицательную форму и сделай специальные вопросы.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "It takes place every year. → It ___ place every year.",
+      "answer": "doesn't take"
+    },
+    {
+      "sentence": "People celebrate it. → People ___ it.",
+      "answer": "don't celebrate"
+    },
+    {
+      "sentence": "Performers wear traditional clothes. → Performers ___ traditional clothes.",
+      "answer": "don't wear"
+    },
+    {
+      "sentence": "People celebrate this event with great excitement. → How ___ people celebrate this event?",
+      "answer": "do"
+    },
+    {
+      "sentence": "The dragon symbol represents strength. → What ___ the dragon symbol represent?",
+      "answer": "does"
+    }
+  ]
+}

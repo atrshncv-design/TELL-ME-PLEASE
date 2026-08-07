@@ -1,0 +1,65 @@
+{
+  "id": "past_continuous_a1_station_3",
+  "title": "Точка во Времени (Маркеры)",
+  "description": "Выбери Past Continuous (если есть маркер времени) или Past Simple.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "At 5 PM I (played / was playing) football.",
+      "options": [
+        "played",
+        "was playing"
+      ],
+      "answer": "was playing"
+    },
+    {
+      "question": "Yesterday I (went / was going) to the park.",
+      "options": [
+        "went",
+        "was going"
+      ],
+      "answer": "went"
+    },
+    {
+      "question": "We (watched / were watching) TV at 8 PM.",
+      "options": [
+        "watched",
+        "were watching"
+      ],
+      "answer": "were watching"
+    },
+    {
+      "question": "He (slept / was sleeping) well last night.",
+      "options": [
+        "slept",
+        "was sleeping"
+      ],
+      "answer": "slept"
+    },
+    {
+      "question": "They (studied / were studying) at noon.",
+      "options": [
+        "studied",
+        "were studying"
+      ],
+      "answer": "were studying"
+    },
+    {
+      "question": "My mum (cooked / was cooking) at 6 PM.",
+      "options": [
+        "cooked",
+        "was cooking"
+      ],
+      "answer": "was cooking"
+    },
+    {
+      "question": "You (ran / were running) yesterday morning.",
+      "options": [
+        "ran",
+        "were running"
+      ],
+      "answer": "ran"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "present_perfect_continuous_b1_station_1",
+  "title": "Процесс или Результат? (Сортировка)",
+  "description": "Отнеси предложения к Present Perfect (Результат) или Present Perfect Continuous (Процесс).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "perfect",
+      "label": "Present Perfect (Результат/Количество)"
+    },
+    {
+      "id": "perfect_cont",
+      "label": "Present Perfect Continuous (Процесс/Длительность)"
+    }
+  ],
+  "items": [
+    {
+      "verb": "I have downloaded 5 apps today.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "I have been downloading this app for an hour.",
+      "answer": "perfect_cont"
+    },
+    {
+      "verb": "She has written three emails.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "She has been writing emails all morning.",
+      "answer": "perfect_cont"
+    },
+    {
+      "verb": "They have played 2 matches.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "They have been playing since 5 PM.",
+      "answer": "perfect_cont"
+    },
+    {
+      "verb": "He has been reading this book for a week.",
+      "answer": "perfect_cont"
+    },
+    {
+      "verb": "He has read 50 pages.",
+      "answer": "perfect"
+    }
+  ]
+}

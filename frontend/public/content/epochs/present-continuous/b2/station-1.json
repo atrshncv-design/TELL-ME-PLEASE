@@ -1,0 +1,29 @@
+{
+  "id": "present_continuous_b2_station_1",
+  "title": "Сложные Ловушки Орфографии (ОГЭ)",
+  "description": "Безупречное владение редкими правилами (-c -> -ck, ie -> y, удвоение согласной).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "She is ___ (panic) because she lost her phone.",
+      "answer": "panicking"
+    },
+    {
+      "sentence": "They are ___ (lie) on the grass.",
+      "answer": "lying"
+    },
+    {
+      "sentence": "The scientist is ___ (investigate) the crime.",
+      "answer": "investigating"
+    },
+    {
+      "sentence": "He is ___ (die) to know the truth.",
+      "answer": "dying"
+    },
+    {
+      "sentence": "They are ___ (agree) with the verdict.",
+      "answer": "agreeing"
+    }
+  ]
+}

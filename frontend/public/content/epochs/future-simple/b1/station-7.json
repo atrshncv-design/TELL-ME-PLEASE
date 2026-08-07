@@ -1,0 +1,44 @@
+{
+  "id": "future_simple_b1_station_7",
+  "title": "Проект \"Путеводитель\" (Продукт)",
+  "description": "Напиши мини-гид для туриста в твоём городе: расписание (Present Simple), договорённости (Present Continuous) и предсказания (will).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши мини-гид для туриста в твоём городе: расписание (Present Simple), договорённости (Present Continuous) и предсказания (will)",
+  "duration": 90,
+  "conditions": [
+    {
+      "label": "Расписание (Present Simple)",
+      "hint": "The museum opens at 10 AM.",
+      "markers": [
+        "opens",
+        "closes",
+        "starts",
+        "leaves",
+        "finishes"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Договорённости (Present Continuous)",
+      "hint": "We are meeting at the station.",
+      "markers": [
+        "am meeting",
+        "is meeting",
+        "are meeting",
+        "am leaving",
+        "are going"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Предсказания (will)",
+      "hint": "You will like our city.",
+      "markers": [
+        "will",
+        "probably"
+      ],
+      "min": 1
+    }
+  ]
+}

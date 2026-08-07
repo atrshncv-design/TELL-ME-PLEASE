@@ -1,0 +1,54 @@
+{
+  "id": "past_perfect_a2_station_7",
+  "title": "Алиби (Речь / Ролевая игра)",
+  "description": "Расспроси партнера: 1. What had you done by 10 AM yesterday? 2. Had you eaten breakfast before you went to school? 3. What had you done before you went to bed?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль одноклассника ученика 6 класса (уровень A2). Задавай ученику вопросы из списка checklist по одному, строго по порядку, и жди ответа. Реагируй дружелюбно, хвали, мягко поправляй ошибки в Past Perfect и Past Simple. Подсказывай нужные слова. Говори простыми английскими фразами уровня A2, на русский не переходи.",
+  "checklist": [
+    {
+      "question": "What had you done by 10 AM yesterday?",
+      "markers": [
+        "had",
+        "done",
+        "10",
+        "am",
+        "yesterday",
+        "woke",
+        "breakfast",
+        "school",
+        "cleaned",
+        "helped"
+      ],
+      "min": 1,
+      "hint": "Скажи: By 10 AM I had woken up and had breakfast."
+    },
+    {
+      "question": "Had you eaten breakfast before you went to school?",
+      "markers": [
+        "had",
+        "eaten",
+        "breakfast",
+        "went",
+        "school"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I had. I had eaten breakfast before I went to school."
+    },
+    {
+      "question": "What had you done before you went to bed?",
+      "markers": [
+        "had",
+        "done",
+        "went",
+        "bed",
+        "homework",
+        "games",
+        "read",
+        "watched"
+      ],
+      "min": 1,
+      "hint": "Скажи: I had done my homework before I went to bed."
+    }
+  ]
+}

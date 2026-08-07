@@ -1,0 +1,42 @@
+{
+  "id": "future_perfect_continuous_a1_station_6",
+  "title": "Текст: Долгая Подготовка (Интеграция)",
+  "description": "Раскрой скобки в тексте о подготовке к экзамену (Future Perfect Continuous).",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Tomorrow is the big exam. By 10 AM, I ___ for 3 hours. My brother ___ computer games for 2 hours by noon. My mum ___ dinner for an hour by 5 PM. Our dog ___ all day by evening.",
+      "answers": [
+        [
+          "will have been studying"
+        ],
+        [
+          "will have been playing"
+        ],
+        [
+          "will have been cooking"
+        ],
+        [
+          "will have been sleeping"
+        ]
+      ],
+      "hints": [
+        "(study)",
+        "(play)",
+        "(cook)",
+        "(sleep)"
+      ],
+      "word_bank": [
+        "will have been studying",
+        "will have been playing",
+        "will have been cooking",
+        "will have been sleeping",
+        "will have studied",
+        "will have been eating",
+        "will study",
+        "will have been working"
+      ]
+    }
+  ]
+}

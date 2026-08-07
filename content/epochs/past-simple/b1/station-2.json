@@ -1,0 +1,54 @@
+{
+  "id": "past_simple_b1_station_2",
+  "title": "История Создания Приложения (Текст)",
+  "description": "Вставь глаголы в нужной форме в историю о создании приложения.",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "Two years ago, a young programmer ___ a new app. At first, nobody ___ about it. But last month, he ___ it. Since then, millions of people ___ it. Yesterday, a famous blogger ___ the app. He ___ it was brilliant. The programmer ___ a lot of money. He ___ very happy now.",
+  "answers": [
+    [
+      "created"
+    ],
+    [
+      "knew"
+    ],
+    [
+      "updated"
+    ],
+    [
+      "have downloaded"
+    ],
+    [
+      "reviewed"
+    ],
+    [
+      "said"
+    ],
+    [
+      "has already earned"
+    ],
+    [
+      "is"
+    ]
+  ],
+  "word_bank": [
+    "created",
+    "knew",
+    "updated",
+    "have downloaded",
+    "reviewed",
+    "said",
+    "has already earned",
+    "is"
+  ],
+  "hints": [
+    "(create)",
+    "(know)",
+    "(update)",
+    "(download)",
+    "(review)",
+    "(say)",
+    "(already / earn)",
+    "(be)"
+  ]
+}

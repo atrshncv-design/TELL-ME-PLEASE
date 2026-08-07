@@ -1,0 +1,35 @@
+{
+  "id": "past_perfect_b1_station_2",
+  "title": "Перевод-Ловушка (Интерференция)",
+  "description": "Переведи фразы (фокус на \"уже... как / до того как\").",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "The train ___ when we ___.",
+      "answer": [
+        "had already left",
+        "arrived"
+      ],
+      "hint": "Поезд уже ушел, когда мы пришли."
+    },
+    {
+      "sentence": "I ___ my homework before she ___.",
+      "answer": [
+        "had already done",
+        "called"
+      ],
+      "hint": "Я уже сделал домашку до того, как она позвонила."
+    },
+    {
+      "sentence": "We ___ dinner by 7 PM.",
+      "answer": "hadn't had",
+      "hint": "Мы не поужинали к 7 вечера."
+    },
+    {
+      "sentence": "She said she ___ her keys.",
+      "answer": "had lost",
+      "hint": "Она сказала, что потеряла ключи."
+    }
+  ]
+}

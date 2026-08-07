@@ -1,0 +1,33 @@
+{
+  "id": "future_perfect_continuous_b1_station_3",
+  "title": "Визуальный Фильтр (Поиск ошибок)",
+  "description": "Найди ошибку в каждом предложении (или подтверди, что её нет).",
+  "category": "grammar",
+  "type": "click-mistake",
+  "items": [
+    {
+      "text": "I will have been knowing him for years by next year.",
+      "wrong": "knowing"
+    },
+    {
+      "text": "She will have been work all day by 5 PM.",
+      "wrong": "work"
+    },
+    {
+      "text": "We will have been studying since morning by the time the teacher arrives.",
+      "wrong": null
+    },
+    {
+      "text": "They will have been swiming in the pool for an hour.",
+      "wrong": "swiming"
+    },
+    {
+      "text": "He will have been play football for 2 hours by 6 PM.",
+      "wrong": "play"
+    },
+    {
+      "text": "I will have been waiting for you for an hour!",
+      "wrong": null
+    }
+  ]
+}

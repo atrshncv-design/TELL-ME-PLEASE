@@ -1,0 +1,49 @@
+{
+  "id": "past_perfect_a1_station_1",
+  "title": "Сборка Предыстории (Механика)",
+  "description": "Вставь had и раскрой скобки, используя V3.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ (finish) my homework before dinner.",
+      "answer": "had finished"
+    },
+    {
+      "sentence": "She ___ (clean) her room.",
+      "answer": "had cleaned"
+    },
+    {
+      "sentence": "We ___ (play) tennis.",
+      "answer": "had played"
+    },
+    {
+      "sentence": "He ___ (wash) the car.",
+      "answer": "had washed"
+    },
+    {
+      "sentence": "They ___ (visit) the museum.",
+      "answer": "had visited"
+    },
+    {
+      "sentence": "My mum ___ (cook) dinner.",
+      "answer": "had cooked"
+    },
+    {
+      "sentence": "You ___ (watch) the film.",
+      "answer": "had watched"
+    },
+    {
+      "sentence": "Tom ___ (paint) the wall.",
+      "answer": "had painted"
+    },
+    {
+      "sentence": "The dog ___ (eat) its food.",
+      "answer": "had eaten"
+    },
+    {
+      "sentence": "It ___ (stop) raining.",
+      "answer": "had stopped"
+    }
+  ]
+}

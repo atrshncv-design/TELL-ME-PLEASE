@@ -1,0 +1,53 @@
+{
+  "id": "future_perfect_continuous_b2_station_6",
+  "title": "Эссе: \"Мой Путь\" (Монолог)",
+  "description": "Напиши мини-выступление о своем пути к профессии. Используй Future Perfect Continuous (By next year I will have been learning...), Future Perfect (I will have finished...), Future Continuous (This time next year I will be studying...).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши мини-выступление о своем пути к профессии. Используй Future Perfect Continuous (By next year I will have been learning...), Future Perfect (I will have finished...), Future Continuous (This time next year I will be studying...).",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Future Perfect Continuous",
+      "hint": "By next year I will have been learning...",
+      "markers": [
+        "will have been"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Future Perfect",
+      "hint": "I will have finished...",
+      "markers": [
+        "will have finished",
+        "will have completed",
+        "will have done"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Future Continuous",
+      "hint": "This time next year I will be studying...",
+      "markers": [
+        "will be studying",
+        "will be working",
+        "will be learning"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Профессия/цель",
+      "hint": "doctor, teacher, engineer, scientist...",
+      "markers": [
+        "doctor",
+        "teacher",
+        "engineer",
+        "scientist",
+        "programmer",
+        "profession",
+        "goal"
+      ],
+      "min": 1
+    }
+  ]
+}

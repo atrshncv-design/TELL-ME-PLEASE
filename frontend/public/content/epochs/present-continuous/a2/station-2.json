@@ -1,0 +1,29 @@
+{
+  "id": "present_continuous_a2_station_2",
+  "title": "Визуальный Фильтр (Поиск ошибок)",
+  "description": "Торможение типичных орфографических иллюзий (runing, makeing).",
+  "category": "grammar",
+  "type": "click-mistake",
+  "items": [
+    {
+      "text": "She is createing a new website.",
+      "wrong": "createing"
+    },
+    {
+      "text": "They are runing after the thief.",
+      "wrong": "runing"
+    },
+    {
+      "text": "The climate is changeing rapidly.",
+      "wrong": "changeing"
+    },
+    {
+      "text": "We are swiming in the pool.",
+      "wrong": "swiming"
+    },
+    {
+      "text": "He is writeing an article.",
+      "wrong": "writeing"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "future_perfect_b2_station_7",
+  "title": "Финальный Босс: 5 Будущих (Викторина)",
+  "description": "Финальный Босс: выбери правильное из 5 будущих времён (FutSimpl, FutCont, FutPerf, PresCont, PresSimpl).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ to the gym tomorrow at 5 PM. (go)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Continuous"
+    },
+    {
+      "question": "I ___ my homework by 5 PM tomorrow. (finish)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Perfect"
+    },
+    {
+      "question": "I think I ___ rich. (be)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Simple"
+    },
+    {
+      "question": "The train ___ at 6 PM. (leave)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Present Simple"
+    },
+    {
+      "question": "— It's cold. — I ___ the window. (close)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Simple"
+    },
+    {
+      "question": "We ___ to Paris next Monday. We have tickets! (fly)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Present Continuous"
+    },
+    {
+      "question": "By next year I ___ this course. (finish)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Perfect"
+    },
+    {
+      "question": "This time tomorrow I ___ on the beach. (lie)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Future Perfect",
+        "Present Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Continuous"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "epoch": "future-perfect",
+  "title": "Эпоха Future Perfect",
+  "subtitle": "Финишная Черта",
+  "icon": "🏁",
+  "theory": [
+    {
+      "title": "🏁 Шаг 1: Суть времени (Что это такое?)",
+      "text": "Привет, ребята! 👋 Мы добрались до самого «результативного» времени в английском языке. Вы уже знаете, что Future Simple — это «Хрустальный Шар» 🔮 (предсказание), а Future Continuous — это «Видеокамера» 🎥 (процесс). Future Perfect — это «Финишная Черта» 🏁.\nВы переноситесь мыслями в определенный момент в будущем (например, в завтрашний вечер) и смотрите назад: действие уже ЗАВЕРШЕНО, результат готов!\nФормула (Базовый каркас):\nПодлежащее + WILL HAVE + Глагол в 3-й форме (V3)\nBy 5 PM tomorrow I will have finished my homework. (К 5 вечера завтра я уже закончу домашку — результат готов)."
+    },
+    {
+      "title": "🎭 Шаг 2: Когда использовать Future Perfect?",
+      "text": "Это время нужно только для одного: показать, что действие завершится ДО определенного момента в будущем. Главный маркер: BY (к какому-то моменту).\nI will have cleaned my room by the time you arrive. (Я уже уберусь в комнате к тому времени, как ты придешь).\nShe will have cooked dinner by 7 PM. (Она уже приготовит ужин к 7 вечера)."
+    },
+    {
+      "title": "⚔️ Шаг 3: Битва Будущих (Simple vs Continuous vs Perfect)",
+      "text": "Как не запутаться на ОГЭ/ЕГЭ? Задайте себе вопрос: «Что меня интересует?»\nFuture Simple (Факт 🔮): Что случится?\nI will do my homework tomorrow. (Я сделаю домашку завтра — просто факт).\nFuture Continuous (Процесс 🎥): Что будет в процессе?\nAt 5 PM tomorrow I will be doing my homework. (Завтра в 5 вечера я буду в процессе).\nFuture Perfect (Результат 🏁): Что будет УЖЕ сделано?\nBy 5 PM tomorrow I will have done my homework. (К 5 вечера домашка будет УЖЕ готова).\n💡 Лайфхак для ОГЭ: Если видите маркеры by (к какому-то времени), by the time (к тому времени как) — это 99% сигнал, что нужно использовать Future Perfect (will have + V3)."
+    },
+    {
+      "title": "🚨 Шаг 4: Топ-3 ошибки, которые нужно уничтожить",
+      "text": "Использование точного времени вместо \"BY\". ❌ I will have finished my homework at 5 PM. (Если есть точное время — at 5 PM, мы используем Future Continuous: will be finishing). ✅ I will have finished my homework by 5 PM. (К 5 вечера результат будет готов).\nИспользование V2 вместо V3. ❌ I will have went to the cinema. ✅ I will have gone to the cinema.\nИспользование Future Perfect без маркера \"BY\". ❌ I will have eaten pizza. (Когда? Зачем здесь Perfect?). ✅ I will have eaten pizza by 6 PM."
+    }
+  ],
+  "theoryQuiz": [
+    {
+      "question": "I ___ my project by 5 PM tomorrow.",
+      "options": [
+        "will finish",
+        "will have finished"
+      ],
+      "answer": "will have finished"
+    },
+    {
+      "question": "At 5 PM tomorrow I ___ on my project.",
+      "options": [
+        "will work",
+        "will be working"
+      ],
+      "answer": "will be working"
+    },
+    {
+      "question": "By the time you come home, I ___ dinner.",
+      "options": [
+        "will cook",
+        "will have cooked"
+      ],
+      "answer": "will have cooked"
+    },
+    {
+      "question": "I think I ___ my exam next week.",
+      "options": [
+        "will pass",
+        "will have passed"
+      ],
+      "answer": "will pass"
+    },
+    {
+      "question": "This time next week we ___ on the beach.",
+      "options": [
+        "will lie",
+        "will be lying"
+      ],
+      "answer": "will be lying"
+    }
+  ],
+  "music": {
+    "title": "🎵 Музыкальная пауза (Караоке-генератор)",
+    "links": [
+      "[Ссылка на Rutube/Yandex коллекцию]"
+    ],
+    "sunoPrompt": "Придумай эпичную песню про Future Perfect. Объясни, что мы используем will have + V3, когда говорим о результате, который будет готов к определенному моменту в будущем (by 5 PM). Напомни, что это 'взгляд из будущего назад'. В припеве должны быть слова: by, will have, finished, done. Стиль: epic orchestral, triumphant, 120 bpm."
+  },
+  "sectors": [
+    {
+      "id": "a1",
+      "level": "A1",
+      "title": "Первая Финишная Черта",
+      "grade": 5,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a1/station-1.json",
+          "title": "Сборка Результата (Механика)"
+        },
+        {
+          "id": "station-2",
+          "file": "a1/station-2.json",
+          "title": "Торможение Хаоса (Отрицание и Вопрос)"
+        },
+        {
+          "id": "station-3",
+          "file": "a1/station-3.json",
+          "title": "Магия Слова \"BY\" (Маркеры)"
+        },
+        {
+          "id": "station-4",
+          "file": "a1/station-4.json",
+          "title": "Неправильные Результаты (V3)"
+        },
+        {
+          "id": "station-5",
+          "file": "a1/station-5.json",
+          "title": "Факт vs Результат (Fut Simple vs Fut Perfect)"
+        },
+        {
+          "id": "station-6",
+          "file": "a1/station-6.json",
+          "title": "Текст: К Дедлайну (Интеграция)"
+        },
+        {
+          "id": "station-7",
+          "file": "a1/station-7.json",
+          "title": "Предсказание Результата (ИИ-бот)"
+        }
+      ],
+      "story": "Механика will have + V3, маркер BY, базовые правильные глаголы."
+    },
+    {
+      "id": "a2",
+      "level": "A2",
+      "title": "Дедлайны",
+      "grade": 6,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a2/station-1.json",
+          "title": "Триггер: BY THE TIME (К тому времени как)"
+        },
+        {
+          "id": "station-2",
+          "file": "a2/station-2.json",
+          "title": "Сборка Сцены (Синтаксис)"
+        },
+        {
+          "id": "station-3",
+          "file": "a2/station-3.json",
+          "title": "Детектор Ошибок (Дебаггинг)"
+        },
+        {
+          "id": "station-4",
+          "file": "a2/station-4.json",
+          "title": "Контраст: Процесс vs Результат (Fut Cont vs Fut Perfect)"
+        },
+        {
+          "id": "station-5",
+          "file": "a2/station-5.json",
+          "title": "Текст: Подготовка к Празднику (Чтение)"
+        },
+        {
+          "id": "station-6",
+          "file": "a2/station-6.json",
+          "title": "Блог: Мои Планы (Продукт)"
+        },
+        {
+          "id": "station-7",
+          "file": "a2/station-7.json",
+          "title": "Скоростное Свидание (Диалог)"
+        }
+      ],
+      "story": "Союз BY THE TIME, сравнение с Future Continuous."
+    },
+    {
+      "id": "b1",
+      "level": "B1",
+      "title": "Мастер Дедлайнов",
+      "grade": "7-8",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b1/station-1.json",
+          "title": "Сортировка 4-х Будущих (Сравнение)"
+        },
+        {
+          "id": "station-2",
+          "file": "b1/station-2.json",
+          "title": "Перевод-Ловушка (Интерференция)"
+        },
+        {
+          "id": "station-3",
+          "file": "b1/station-3.json",
+          "title": "Тонкие Смыслы (Stative Verbs)"
+        },
+        {
+          "id": "station-4",
+          "file": "b1/station-4.json",
+          "title": "Текст: Запуск Приложения (Интеграция)"
+        },
+        {
+          "id": "station-5",
+          "file": "b1/station-5.json",
+          "title": "Объясни Ситуацию (Речь)"
+        },
+        {
+          "id": "station-6",
+          "file": "b1/station-6.json",
+          "title": "Интервью с Космонавтом (Диалог с ИИ)"
+        },
+        {
+          "id": "station-7",
+          "file": "b1/station-7.json",
+          "title": "Проект \"Мой Дедлайн\" (Продукт)"
+        }
+      ],
+      "story": "Лексика технологий, сложные истории. Сравнение всех будущих времен."
+    },
+    {
+      "id": "b2",
+      "level": "B2",
+      "title": "Мастер Временной Ткани",
+      "grade": 9,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b2/station-1.json",
+          "title": "ОГЭ-Тренажер (Task 19: 5 Будущих)"
+        },
+        {
+          "id": "station-2",
+          "file": "b2/station-2.json",
+          "title": "Ловушки ОГЭ (Смешанные Времена)"
+        },
+        {
+          "id": "station-3",
+          "file": "b2/station-3.json",
+          "title": "Текст ОГЭ: Космическое Будущее (Чтение)"
+        },
+        {
+          "id": "station-4",
+          "file": "b2/station-4.json",
+          "title": "Симуляция ОГЭ (Устная часть Task 2)"
+        },
+        {
+          "id": "station-5",
+          "file": "b2/station-5.json",
+          "title": "Описание Фотографии (ОГЭ Task 3)"
+        },
+        {
+          "id": "station-6",
+          "file": "b2/station-6.json",
+          "title": "Эссе: \"Мои Цели\" (Монолог)"
+        },
+        {
+          "id": "station-7",
+          "file": "b2/station-7.json",
+          "title": "Финальный Босс: 5 Будущих (Викторина)"
+        }
+      ],
+      "story": "Безупречное владение всеми 5 способами выражения будущего + смешанные тексты."
+    }
+  ]
+}

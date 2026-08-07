@@ -1,0 +1,99 @@
+{
+  "id": "present_perfect_a1_station_3",
+  "title": "Торможение Хаоса (Отрицание и Вопрос)",
+  "description": "Отработка структурного рефлекса (вынос have/has вперед, добавление not).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "visited / Have / you / London",
+      "options": [
+        "Have you visited London?",
+        "You have visited London?",
+        "Have you London visited?"
+      ],
+      "answer": "Have you visited London?"
+    },
+    {
+      "question": "seen / she / Has / Ben / Big",
+      "options": [
+        "Has she seen Big Ben?",
+        "She has seen Big Ben?",
+        "Has seen she Big Ben?"
+      ],
+      "answer": "Has she seen Big Ben?"
+    },
+    {
+      "question": "travelled / to / They / Spain / have",
+      "options": [
+        "Have they travelled to Spain?",
+        "They have travelled to Spain?",
+        "Have they to Spain travelled?"
+      ],
+      "answer": "Have they travelled to Spain?"
+    },
+    {
+      "question": "eaten / He / a / has / pizza",
+      "options": [
+        "Has he eaten a pizza?",
+        "He has eaten a pizza?",
+        "Has eaten he a pizza?"
+      ],
+      "answer": "Has he eaten a pizza?"
+    },
+    {
+      "question": "bought / souvenirs / they / Have",
+      "options": [
+        "Have they bought souvenirs?",
+        "They have bought souvenirs?",
+        "Have they souvenirs bought?"
+      ],
+      "answer": "Have they bought souvenirs?"
+    },
+    {
+      "question": "taken / mum / a / has / photo / My",
+      "options": [
+        "Has my mum taken a photo?",
+        "My mum has taken a photo?",
+        "Has taken my mum a photo?"
+      ],
+      "answer": "Has my mum taken a photo?"
+    },
+    {
+      "question": "stayed / a / You / at / have / hotel",
+      "options": [
+        "Have you stayed at a hotel?",
+        "You have stayed at a hotel?",
+        "Have you at a hotel stayed?"
+      ],
+      "answer": "Have you stayed at a hotel?"
+    },
+    {
+      "question": "swum / Tom / the / Has / in / sea",
+      "options": [
+        "Has Tom swum in the sea?",
+        "Tom has swum in the sea?",
+        "Has swum Tom in the sea?"
+      ],
+      "answer": "Has Tom swum in the sea?"
+    },
+    {
+      "question": "rented / We / a / have / boat",
+      "options": [
+        "Have we rented a boat?",
+        "We have rented a boat?",
+        "Has rented we a boat?"
+      ],
+      "answer": "Have we rented a boat?"
+    },
+    {
+      "question": "ridden / He / a / has / bike",
+      "options": [
+        "Has he ridden a bike?",
+        "He has ridden a bike?",
+        "Has ridden he a bike?"
+      ],
+      "answer": "Has he ridden a bike?"
+    }
+  ]
+}

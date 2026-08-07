@@ -1,0 +1,77 @@
+{
+  "id": "future_simple_b2_station_1",
+  "title": "ОГЭ-Тренажер (Task 19: 4 Способа + Conditionals)",
+  "description": "ОГЭ Task 19: вставь 4 способа будущего и условные предложения в текст.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Next weekend, our school ___ a science fair. The event ___ at 10 AM on Saturday. I ___ my project at 11 AM. I think the judges ___ it. If I ___ , I ___ very happy. My parents ___ to support me. They ___ it for the world. If the weather ___ good, we ___ for a walk after the fair.",
+      "answers": [
+        [
+          "is organising"
+        ],
+        [
+          "starts"
+        ],
+        [
+          "am presenting"
+        ],
+        [
+          "will like"
+        ],
+        [
+          "win"
+        ],
+        [
+          "will be"
+        ],
+        [
+          "are coming"
+        ],
+        [
+          "won't miss"
+        ],
+        [
+          "is"
+        ],
+        [
+          "will go"
+        ]
+      ],
+      "hints": [
+        "(organise)",
+        "(start)",
+        "(present)",
+        "(like)",
+        "(win)",
+        "(be)",
+        "(come)",
+        "(not / miss)",
+        "(be)",
+        "(go)"
+      ],
+      "word_bank": [
+        "is organising",
+        "starts",
+        "am presenting",
+        "will like",
+        "win",
+        "will be",
+        "are coming",
+        "won't miss",
+        "is",
+        "will go",
+        "organises",
+        "will start",
+        "will present",
+        "likes",
+        "wins",
+        "comes",
+        "will miss",
+        "goes",
+        "will going"
+      ]
+    }
+  ]
+}

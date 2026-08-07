@@ -1,0 +1,33 @@
+{
+  "id": "future_continuous_a2_station_3",
+  "title": "Детектор Ошибок (Дебаггинг)",
+  "description": "Найди и исправь ошибку в каждом предложении.",
+  "category": "grammar",
+  "type": "click-mistake",
+  "items": [
+    {
+      "text": "I will playing tennis.",
+      "wrong": "playing"
+    },
+    {
+      "text": "She will be read a book.",
+      "wrong": "read"
+    },
+    {
+      "text": "We will be watch TV.",
+      "wrong": "watch"
+    },
+    {
+      "text": "He will be sleep at noon.",
+      "wrong": "sleep"
+    },
+    {
+      "text": "They will be study at 3 PM.",
+      "wrong": "study"
+    },
+    {
+      "text": "It will be rain at 7 PM.",
+      "wrong": "rain"
+    }
+  ]
+}

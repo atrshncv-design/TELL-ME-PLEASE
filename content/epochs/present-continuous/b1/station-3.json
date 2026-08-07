@@ -1,0 +1,50 @@
+{
+  "id": "present_continuous_b1_station_3",
+  "title": "Планы на Будущее (Future Arrangements)",
+  "description": "Отработка функции Present Continuous для запланированных действий.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Мои планы на выходные: пост из 5 предложений Present Continuous для будущих планов",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "5 предложений о планах",
+      "hint": "Напиши 5 предложений: am/is/are + глагол с -ing (Tomorrow I am visiting my grandparents.)",
+      "markers": [
+        "am",
+        "is",
+        "are"
+      ],
+      "min": 5
+    },
+    {
+      "label": "Упомяни время плана",
+      "hint": "tomorrow, this weekend, on Saturday, on Sunday, in the evening, next week",
+      "markers": [
+        "tomorrow",
+        "weekend",
+        "saturday",
+        "sunday",
+        "evening",
+        "tonight",
+        "next"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Используй глаголы действий",
+      "hint": "visiting, going, having, playing, watching, meeting, doing, making",
+      "markers": [
+        "visiting",
+        "going",
+        "having",
+        "playing",
+        "watching",
+        "meeting",
+        "doing",
+        "making"
+      ],
+      "min": 3
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "exam_s2_station_3",
+  "title": "Предыстория и Марафон (Past Perfect vs Past PerfCont)",
+  "description": "Что важнее — результат или длительность в прошлом?",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "When I arrived, the train ___ .",
+      "options": [
+        "had left",
+        "had been leaving"
+      ],
+      "answer": "had left"
+    },
+    {
+      "question": "When I arrived, my mum ___ for 2 hours.",
+      "options": [
+        "had cooked",
+        "had been cooking"
+      ],
+      "answer": "had been cooking"
+    },
+    {
+      "question": "By 7 PM, she ___ 3 letters.",
+      "options": [
+        "had written",
+        "had been writing"
+      ],
+      "answer": "had written"
+    },
+    {
+      "question": "She was dirty. She ___ the car.",
+      "options": [
+        "had repaired",
+        "had been repairing"
+      ],
+      "answer": "had been repairing"
+    },
+    {
+      "question": "I ___ him for years before we became friends.",
+      "options": [
+        "had known",
+        "had been knowing"
+      ],
+      "answer": "had known"
+    }
+  ]
+}

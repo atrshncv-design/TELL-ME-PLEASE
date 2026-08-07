@@ -1,0 +1,72 @@
+{
+  "id": "present_perfect_a2_station_7",
+  "title": "Скоростное Свидание (Диалог)",
+  "description": "Снятие языкового барьера в смешанном диалоге.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — весёлый сверстник ученика 6 класса. Общайся по-английски (уровень A2). Задавай вопросы из списка checklist по одному, жди ответ, реагируй дружелюбно и коротко, мягко поправляй ошибки во временах (Simple, Continuous, Perfect, Past). Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "Do you like traveling?",
+      "markers": [
+        "yes",
+        "no",
+        "like",
+        "traveling",
+        "travel"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I like traveling / No, I don't."
+    },
+    {
+      "question": "Are you traveling right now?",
+      "markers": [
+        "am",
+        "is",
+        "are",
+        "now",
+        "right"
+      ],
+      "min": 1,
+      "hint": "Ответь: I am not traveling right now."
+    },
+    {
+      "question": "Where are you going this summer?",
+      "markers": [
+        "going",
+        "summer",
+        "to",
+        "beach",
+        "sea",
+        "camp"
+      ],
+      "min": 1,
+      "hint": "Ответь: I am going to ... this summer."
+    },
+    {
+      "question": "Have you ever been to London?",
+      "markers": [
+        "yes",
+        "no",
+        "been",
+        "london",
+        "haven't"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I have been to London / No, I haven't."
+    },
+    {
+      "question": "Where did you go last summer?",
+      "markers": [
+        "went",
+        "visited",
+        "summer",
+        "to",
+        "beach",
+        "sea"
+      ],
+      "min": 1,
+      "hint": "Ответь: Last summer I went to ..."
+    }
+  ]
+}

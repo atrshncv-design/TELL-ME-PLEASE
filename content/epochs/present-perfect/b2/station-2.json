@@ -1,0 +1,49 @@
+{
+  "id": "present_perfect_b2_station_2",
+  "title": "Ловушки со Стативными Глаголами (For/Since)",
+  "description": "Отработка перфектных конструкций с глаголами состояния (know, be, have).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ him for 5 years.",
+      "options": [
+        "have known",
+        "am knowing"
+      ],
+      "answer": "have known"
+    },
+    {
+      "question": "How long ___ here?",
+      "options": [
+        "have you been",
+        "are you"
+      ],
+      "answer": "have you been"
+    },
+    {
+      "question": "She ___ this car since 2020.",
+      "options": [
+        "has had",
+        "is having"
+      ],
+      "answer": "has had"
+    },
+    {
+      "question": "They ___ in this theory for a long time.",
+      "options": [
+        "have believed",
+        "are believing"
+      ],
+      "answer": "have believed"
+    },
+    {
+      "question": "We ___ the rules since morning.",
+      "options": [
+        "have understood",
+        "are understanding"
+      ],
+      "answer": "have understood"
+    }
+  ]
+}

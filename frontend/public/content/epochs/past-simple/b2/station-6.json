@@ -1,0 +1,53 @@
+{
+  "id": "past_simple_b2_station_6",
+  "title": "Дебаты: \"Великие Открытия\" (Монолог)",
+  "description": "Напиши мини-выступление на тему \"Самое важное изобретение\": Past Simple (когда изобрели), Present Perfect (как это изменило нашу жизнь до сих пор), Present Simple (как мы используем это сейчас).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Самое важное изобретение",
+  "duration": 90,
+  "conditions": [
+    {
+      "label": "Скажи, когда изобрели (Past Simple)",
+      "hint": "The Internet was invented in the 1960s. / Alexander Bell invented the telephone.",
+      "markers": [
+        "invented",
+        "was",
+        "were",
+        "created",
+        "made",
+        "discovered",
+        "in",
+        "years"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Скажи, как это изменило жизнь до сих пор (Present Perfect)",
+      "hint": "It has changed our life completely.",
+      "markers": [
+        "has",
+        "have",
+        "changed",
+        "already",
+        "just",
+        "made"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Скажи, как мы используем это сейчас (Present Simple)",
+      "hint": "We use it every day for work and study.",
+      "markers": [
+        "use",
+        "uses",
+        "every day",
+        "today",
+        "now",
+        "usually",
+        "always"
+      ],
+      "min": 1
+    }
+  ]
+}

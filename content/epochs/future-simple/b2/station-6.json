@@ -1,0 +1,53 @@
+{
+  "id": "future_simple_b2_station_6",
+  "title": "Эссе: \"Мое Будущее\" (Монолог)",
+  "description": "Мини-выступление о планах на жизнь: will, going to, Present Continuous, Present Simple.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Моё будущее: мини-выступление о планах на жизнь (will, going to, Present Continuous, Present Simple)",
+  "duration": 90,
+  "conditions": [
+    {
+      "label": "Предсказания (will)",
+      "hint": "I think I will become a doctor.",
+      "markers": [
+        "will",
+        "think",
+        "probably"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Намерения (going to)",
+      "hint": "I am going to enter university.",
+      "markers": [
+        "going to"
+      ],
+      "min": 1
+    },
+    {
+      "label": "100% договорённости (Present Continuous)",
+      "hint": "I am meeting my friends on Sunday.",
+      "markers": [
+        "am meeting",
+        "is meeting",
+        "are meeting",
+        "am leaving",
+        "are flying"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Расписания (Present Simple)",
+      "hint": "My school day starts at 8 AM.",
+      "markers": [
+        "starts",
+        "opens",
+        "closes",
+        "leaves",
+        "finishes"
+      ],
+      "min": 1
+    }
+  ]
+}

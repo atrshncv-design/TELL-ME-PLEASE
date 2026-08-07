@@ -1,0 +1,41 @@
+{
+  "id": "b2_station_7",
+  "title": "Трудности Перевода (Лексико-грамматический синтез)",
+  "description": "Переведи на английский язык, используя Present Simple.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "Моя семья каждый год празднует Рождество. → My family ___ every year.",
+      "answer": "celebrates Christmas"
+    },
+    {
+      "sentence": "Люди надевают костюмы на карнавал. → People ___ at the carnival.",
+      "answer": "wear costumes"
+    },
+    {
+      "sentence": "Она не верит в суеверия. → She ___ in superstitions.",
+      "answer": "doesn't believe"
+    },
+    {
+      "sentence": "Парад начинается в полдень. → The parade ___ at noon.",
+      "answer": "starts"
+    },
+    {
+      "sentence": "Мы украшаем дом перед праздником. → We ___ the house before the festival.",
+      "answer": "decorate"
+    },
+    {
+      "sentence": "Мой дедушка носит счастливую монету. → My grandpa ___ a lucky coin.",
+      "answer": "carries"
+    },
+    {
+      "sentence": "В конце праздника есть фейерверк. → There ___ fireworks at the end.",
+      "answer": "are"
+    },
+    {
+      "sentence": "Наш город организует большие празднования летом. → Our town ___ big celebrations in summer.",
+      "answer": "organises"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "future_perfect_a1_station_2",
+  "title": "Торможение Хаоса (Отрицание и Вопрос)",
+  "description": "Собери вопросы и отрицания.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "finished / Will / you / have / your homework",
+      "options": [
+        "Will you have finished your homework?",
+        "Will you have your homework finished?",
+        "You will have finished your homework?"
+      ],
+      "answer": "Will you have finished your homework?"
+    },
+    {
+      "question": "she / Will / room / cleaned / have / the",
+      "options": [
+        "Will she have cleaned the room?",
+        "Will she have the room cleaned?",
+        "She will have cleaned the room?"
+      ],
+      "answer": "Will she have cleaned the room?"
+    },
+    {
+      "question": "eaten / Will / they / have / dinner",
+      "options": [
+        "Will they have eaten dinner?",
+        "Will they have dinner eaten?",
+        "They will have eaten dinner?"
+      ],
+      "answer": "Will they have eaten dinner?"
+    },
+    {
+      "question": "car / he / washed / Will / have / the",
+      "options": [
+        "Will he have washed the car?",
+        "Will he have the car washed?",
+        "He will have washed the car?"
+      ],
+      "answer": "Will he have washed the car?"
+    },
+    {
+      "question": "left / will / have / They / by / 5 PM",
+      "options": [
+        "They will have left by 5 PM.",
+        "Will they have left by 5 PM?",
+        "They have will left by 5 PM."
+      ],
+      "answer": "They will have left by 5 PM."
+    }
+  ]
+}

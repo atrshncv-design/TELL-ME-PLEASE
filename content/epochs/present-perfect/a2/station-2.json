@@ -1,0 +1,83 @@
+{
+  "id": "present_perfect_a2_station_2",
+  "title": "Трехсторонняя Битва (Simple vs Cont vs Perfect)",
+  "description": "Мозг должен анализировать контекст: рутина, процесс сейчас, или результат/опыт.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "simple",
+      "label": "Present Simple"
+    },
+    {
+      "id": "continuous",
+      "label": "Present Continuous"
+    },
+    {
+      "id": "perfect",
+      "label": "Present Perfect"
+    }
+  ],
+  "items": [
+    {
+      "verb": "I play tennis every Sunday.",
+      "answer": "simple"
+    },
+    {
+      "verb": "I am playing tennis right now.",
+      "answer": "continuous"
+    },
+    {
+      "verb": "I have played tennis today.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "She usually travels to Spain.",
+      "answer": "simple"
+    },
+    {
+      "verb": "She is travelling to Spain now.",
+      "answer": "continuous"
+    },
+    {
+      "verb": "She has just travelled to Spain.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "We always stay at a hotel.",
+      "answer": "simple"
+    },
+    {
+      "verb": "We are staying at a hotel at the moment.",
+      "answer": "continuous"
+    },
+    {
+      "verb": "We have stayed at this hotel before.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "He often eats pizza.",
+      "answer": "simple"
+    },
+    {
+      "verb": "He is eating a pizza now.",
+      "answer": "continuous"
+    },
+    {
+      "verb": "He has already eaten his pizza.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "They never buy souvenirs.",
+      "answer": "simple"
+    },
+    {
+      "verb": "They are buying souvenirs right now.",
+      "answer": "continuous"
+    },
+    {
+      "verb": "They have just bought a souvenir.",
+      "answer": "perfect"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "future_continuous_a2_station_4",
+  "title": "Вопросы о Процессе (Спецвопросы)",
+  "description": "Собери специальные вопросы о процессе.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "doing / you / will / What / be",
+      "options": [
+        "What will you be doing?",
+        "What you will be doing?",
+        "What will be you doing?"
+      ],
+      "answer": "What will you be doing?"
+    },
+    {
+      "question": "she / be / Where / will / going",
+      "options": [
+        "Where will she be going?",
+        "Where she will be going?",
+        "Where will be she going?"
+      ],
+      "answer": "Where will she be going?"
+    },
+    {
+      "question": "they / be / Why / will / crying",
+      "options": [
+        "Why will they be crying?",
+        "Why they will be crying?",
+        "Why will be they crying?"
+      ],
+      "answer": "Why will they be crying?"
+    },
+    {
+      "question": "he / be / How / will / feeling",
+      "options": [
+        "How will he be feeling?",
+        "How he will be feeling?",
+        "How will be he feeling?"
+      ],
+      "answer": "How will he be feeling?"
+    }
+  ]
+}

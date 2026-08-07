@@ -1,0 +1,62 @@
+{
+  "id": "past_perfect_a2_station_5",
+  "title": "Текст: Неудачный День (Чтение)",
+  "description": "Вставь глаголы в нужной форме в текст о неудачном дне.",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "Yesterday was a terrible day. When I ___, I realized that I ___ to set my alarm. I ___ my homework. When I ___ at school, the teacher ___ the lesson. While I ___ the test, my pen ___. I ___ so embarrassed!",
+  "answers": [
+    [
+      "woke up"
+    ],
+    [
+      "had forgotten"
+    ],
+    [
+      "hadn't done"
+    ],
+    [
+      "arrived"
+    ],
+    [
+      "had already started"
+    ],
+    [
+      "was writing"
+    ],
+    [
+      "broke"
+    ],
+    [
+      "had never been"
+    ]
+  ],
+  "word_bank": [
+    "woke up",
+    "had forgotten",
+    "hadn't done",
+    "arrived",
+    "had already started",
+    "was writing",
+    "broke",
+    "had never been",
+    "got up",
+    "forgot",
+    "didn't do",
+    "came",
+    "started",
+    "wrote",
+    "was",
+    "had been"
+  ],
+  "hints": [
+    "(wake up)",
+    "(forget)",
+    "(not / do)",
+    "(arrive)",
+    "(already / start)",
+    "(write)",
+    "(break)",
+    "(never / be)"
+  ]
+}

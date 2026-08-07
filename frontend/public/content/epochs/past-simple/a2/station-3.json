@@ -1,0 +1,57 @@
+{
+  "id": "past_simple_a2_station_3",
+  "title": "Виктория Времен (Past vs Perfect)",
+  "description": "Выбери правильную форму: Past Simple или Present Perfect.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ London last year.",
+      "options": [
+        "visited",
+        "have visited"
+      ],
+      "answer": "visited"
+    },
+    {
+      "question": "She ___ her homework.",
+      "options": [
+        "has just finished",
+        "just finished"
+      ],
+      "answer": "has just finished"
+    },
+    {
+      "question": "We ___ to Spain yesterday.",
+      "options": [
+        "travelled",
+        "have travelled"
+      ],
+      "answer": "travelled"
+    },
+    {
+      "question": "He ___ his lunch.",
+      "options": [
+        "has already eaten",
+        "already ate"
+      ],
+      "answer": "has already eaten"
+    },
+    {
+      "question": "They ___ souvenirs two days ago.",
+      "options": [
+        "bought",
+        "have bought"
+      ],
+      "answer": "bought"
+    },
+    {
+      "question": "My mum ___ a photo today.",
+      "options": [
+        "has taken",
+        "took"
+      ],
+      "answer": "has taken"
+    }
+  ]
+}

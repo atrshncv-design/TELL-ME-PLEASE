@@ -1,0 +1,51 @@
+{
+  "id": "present_continuous_a2_station_5",
+  "title": "Два Мира (Синтез Simple/Continuous)",
+  "description": "Объединение двух времен в одном предложении (противопоставление рутины и текущего момента).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "c1",
+      "label": "but today I am wearing a skirt"
+    },
+    {
+      "id": "c2",
+      "label": "but now we are watching TV"
+    },
+    {
+      "id": "c3",
+      "label": "but at the moment she is sleeping"
+    },
+    {
+      "id": "c4",
+      "label": "but today he is staying at home"
+    },
+    {
+      "id": "c5",
+      "label": "but now it is barking"
+    }
+  ],
+  "items": [
+    {
+      "verb": "I usually wear jeans",
+      "answer": "c1"
+    },
+    {
+      "verb": "We usually play football",
+      "answer": "c2"
+    },
+    {
+      "verb": "She usually reads books",
+      "answer": "c3"
+    },
+    {
+      "verb": "He usually goes to school",
+      "answer": "c4"
+    },
+    {
+      "verb": "My dog usually sleeps",
+      "answer": "c5"
+    }
+  ]
+}

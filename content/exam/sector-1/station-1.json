@@ -1,0 +1,67 @@
+{
+  "id": "exam_s1_station_1",
+  "title": "Сортировка 4-х Миров (Present Tenses)",
+  "description": "Распредели предложения по 4 группам настоящих времён: Simple, Continuous, Perfect, Perfect Continuous.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "simple",
+      "label": "Present Simple"
+    },
+    {
+      "id": "continuous",
+      "label": "Present Continuous"
+    },
+    {
+      "id": "perfect",
+      "label": "Present Perfect"
+    },
+    {
+      "id": "perfcont",
+      "label": "Present Perfect Continuous"
+    }
+  ],
+  "items": [
+    {
+      "verb": "I play tennis every Sunday.",
+      "answer": "simple"
+    },
+    {
+      "verb": "I am playing tennis right now.",
+      "answer": "continuous"
+    },
+    {
+      "verb": "I have played tennis today.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "I have been playing tennis for 2 hours.",
+      "answer": "perfcont"
+    },
+    {
+      "verb": "She usually wears jeans.",
+      "answer": "simple"
+    },
+    {
+      "verb": "She is wearing a dress today.",
+      "answer": "continuous"
+    },
+    {
+      "verb": "She has bought a new dress.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "He is tired. He has been working all day.",
+      "answer": "perfcont"
+    },
+    {
+      "verb": "Water boils at 100 degrees.",
+      "answer": "simple"
+    },
+    {
+      "verb": "Look! The water is boiling!",
+      "answer": "continuous"
+    }
+  ]
+}

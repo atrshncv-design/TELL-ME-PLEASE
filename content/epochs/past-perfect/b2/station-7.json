@@ -1,0 +1,89 @@
+{
+  "id": "past_perfect_b2_station_7",
+  "title": "Финальный Босс: 4 Времени (Викторина)",
+  "description": "Выбери правильное время из 4: Past Simple, Past Continuous, Past Perfect, Present Perfect.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ my keys yesterday. (lose)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Present Perfect"
+      ],
+      "answer": "Past Simple"
+    },
+    {
+      "question": "I ___ my keys! I can't find them. (lose)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Present Perfect"
+      ],
+      "answer": "Present Perfect"
+    },
+    {
+      "question": "I ___ my keys before I left home. (lose)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Present Perfect"
+      ],
+      "answer": "Past Perfect"
+    },
+    {
+      "question": "I ___ for my keys when the phone rang. (look)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Present Perfect"
+      ],
+      "answer": "Past Continuous"
+    },
+    {
+      "question": "By the time the police ___ , the thief (escape).",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Present Perfect"
+      ],
+      "answer": "Past Simple"
+    },
+    {
+      "question": "By the time the police (arrive), the thief ___.",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Present Perfect"
+      ],
+      "answer": "Past Perfect"
+    },
+    {
+      "question": "I ___ never ___ such a beautiful place before I visited Paris. (see)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Present Perfect"
+      ],
+      "answer": "Past Perfect"
+    },
+    {
+      "question": "While I ___ home, it started to rain. (walk)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Present Perfect"
+      ],
+      "answer": "Past Continuous"
+    }
+  ]
+}

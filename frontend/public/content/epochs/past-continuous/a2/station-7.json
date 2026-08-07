@@ -1,0 +1,64 @@
+{
+  "id": "past_continuous_a2_station_7",
+  "title": "Алиби (Речь / Ролевая игра)",
+  "description": "Расспроси партнера: 1. What were you doing yesterday at 5 PM? 2. Were you watching TV at 8 PM? 3. What were you doing when I called you?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "You are a police detective checking the student's alibi. Use A2 English. Ask the questions from the checklist one by one, in order, and wait for the answer. React to each answer like a detective: show interest, ask one short follow-up question sometimes, gently correct mistakes with was/were + -ing. If the answer is too short, politely ask to say a full sentence (for example: I was watching TV at 8 pm). Speak simple clear English at A2 level, do not switch to Russian.",
+  "checklist": [
+    {
+      "question": "What were you doing yesterday at 5 PM?",
+      "markers": [
+        "was",
+        "were",
+        "playing",
+        "reading",
+        "watching",
+        "walking",
+        "doing",
+        "studying",
+        "cooking",
+        "helping",
+        "5 pm",
+        "five"
+      ],
+      "min": 1,
+      "hint": "Скажи, что ты делал вчера в 5 часов: I was playing football."
+    },
+    {
+      "question": "Were you watching TV at 8 PM?",
+      "markers": [
+        "yes",
+        "no",
+        "was",
+        "wasn't",
+        "were",
+        "weren't",
+        "watching",
+        "tv",
+        "8 pm",
+        "eight"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I was watching TV. / No, I wasn't watching TV."
+    },
+    {
+      "question": "What were you doing when I called you?",
+      "markers": [
+        "was",
+        "were",
+        "doing",
+        "playing",
+        "reading",
+        "watching",
+        "eating",
+        "sleeping",
+        "came",
+        "called",
+        "when"
+      ],
+      "min": 1,
+      "hint": "Скажи, что ты делал, когда я позвонил: I was doing my homework when you called."
+    }
+  ]
+}

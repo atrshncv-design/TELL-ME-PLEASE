@@ -1,0 +1,89 @@
+{
+  "id": "past_continuous_a2_station_1",
+  "title": "Змея и Кролик (Введение контраста)",
+  "description": "Выбери правильную форму (Процесс или Внезапное действие).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ when I (was seeing / saw) a cat.",
+      "options": [
+        "was walking",
+        "walked"
+      ],
+      "answer": "was walking"
+    },
+    {
+      "question": "I (was walking / walked) when I ___ a cat.",
+      "options": [
+        "was seeing",
+        "saw"
+      ],
+      "answer": "saw"
+    },
+    {
+      "question": "She ___ when the phone (was ringing / rang).",
+      "options": [
+        "was reading",
+        "read"
+      ],
+      "answer": "was reading"
+    },
+    {
+      "question": "She (was reading / read) when the phone ___.",
+      "options": [
+        "was ringing",
+        "rang"
+      ],
+      "answer": "rang"
+    },
+    {
+      "question": "We ___ when it (was starting / started) to rain.",
+      "options": [
+        "were playing",
+        "played"
+      ],
+      "answer": "were playing"
+    },
+    {
+      "question": "We (were playing / played) when it ___ to rain.",
+      "options": [
+        "was starting",
+        "started"
+      ],
+      "answer": "started"
+    },
+    {
+      "question": "He ___ while he (was running / ran).",
+      "options": [
+        "was falling",
+        "fell"
+      ],
+      "answer": "fell"
+    },
+    {
+      "question": "He (was falling / fell) while he ___.",
+      "options": [
+        "was running",
+        "ran"
+      ],
+      "answer": "was running"
+    },
+    {
+      "question": "They ___ dinner when I (was coming / came).",
+      "options": [
+        "were having",
+        "had"
+      ],
+      "answer": "were having"
+    },
+    {
+      "question": "They (were having / had) dinner when I ___.",
+      "options": [
+        "was coming",
+        "came"
+      ],
+      "answer": "came"
+    }
+  ]
+}

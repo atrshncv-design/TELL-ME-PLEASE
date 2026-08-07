@@ -1,0 +1,83 @@
+{
+  "id": "present_continuous_a1_station_2",
+  "title": "Орфографический Щит (Правила -ing)",
+  "description": "Визуальный рефлекс на конечные буквы глагола при добавлении -ing.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "add",
+      "label": "Just add -ing"
+    },
+    {
+      "id": "drop",
+      "label": "Drop -e, add -ing"
+    },
+    {
+      "id": "double",
+      "label": "Double the consonant"
+    }
+  ],
+  "items": [
+    {
+      "verb": "play",
+      "answer": "add"
+    },
+    {
+      "verb": "read",
+      "answer": "add"
+    },
+    {
+      "verb": "jump",
+      "answer": "add"
+    },
+    {
+      "verb": "sing",
+      "answer": "add"
+    },
+    {
+      "verb": "sleep",
+      "answer": "add"
+    },
+    {
+      "verb": "make",
+      "answer": "drop"
+    },
+    {
+      "verb": "dance",
+      "answer": "drop"
+    },
+    {
+      "verb": "write",
+      "answer": "drop"
+    },
+    {
+      "verb": "ride",
+      "answer": "drop"
+    },
+    {
+      "verb": "take",
+      "answer": "drop"
+    },
+    {
+      "verb": "run",
+      "answer": "double"
+    },
+    {
+      "verb": "swim",
+      "answer": "double"
+    },
+    {
+      "verb": "sit",
+      "answer": "double"
+    },
+    {
+      "verb": "hop",
+      "answer": "double"
+    },
+    {
+      "verb": "skip",
+      "answer": "double"
+    }
+  ]
+}

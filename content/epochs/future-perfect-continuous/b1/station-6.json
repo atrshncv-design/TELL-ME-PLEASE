@@ -1,0 +1,55 @@
+{
+  "id": "future_perfect_continuous_b1_station_6",
+  "title": "Интервью с Разработчиком Игр (Диалог с ИИ)",
+  "description": "Спроси его: 1. How long will you have been working on this game by next month? 2. How many levels will you have created by Friday? 3. Will you be tired? Why? 4. What will you be doing at 5 PM tomorrow?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — профессиональный разработчик игр (game developer). Промпт: \"Act like a professional game developer. Use B1 English.\" Общайся по-английски (уровень B1). Ученик берёт у тебя интервью и задаёт вопросы о твоей работе над игрой — отвечай подробно и увлечённо, используй Future Perfect Continuous (will have been + V-ing) про длительность работы, Future Perfect про результаты и Future Continuous про планы. Хвали ученика, мягко поправляй ошибки. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "How long will you have been working on this game by next month?",
+      "markers": [
+        "How",
+        "long",
+        "working",
+        "game",
+        "next month"
+      ],
+      "min": 1,
+      "hint": "Спроси его: How long will you have been working on this game by next month?"
+    },
+    {
+      "question": "How many levels will you have created by Friday?",
+      "markers": [
+        "How",
+        "many",
+        "levels",
+        "created",
+        "Friday"
+      ],
+      "min": 1,
+      "hint": "Спроси его: How many levels will you have created by Friday?"
+    },
+    {
+      "question": "Will you be tired? Why?",
+      "markers": [
+        "Will",
+        "tired",
+        "Why"
+      ],
+      "min": 1,
+      "hint": "Спроси его: Will you be tired? Why?"
+    },
+    {
+      "question": "What will you be doing at 5 PM tomorrow?",
+      "markers": [
+        "What",
+        "doing",
+        "5 PM",
+        "tomorrow"
+      ],
+      "min": 1,
+      "hint": "Спроси его: What will you be doing at 5 PM tomorrow?"
+    }
+  ]
+}

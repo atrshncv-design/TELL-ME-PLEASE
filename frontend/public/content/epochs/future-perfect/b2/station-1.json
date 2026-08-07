@@ -1,0 +1,67 @@
+{
+  "id": "future_perfect_b2_station_1",
+  "title": "ОГЭ-Тренажер (Task 19: 5 Будущих)",
+  "description": "Текст ОГЭ Task 19: раскрой скобки (все 5 способов выражения будущего).",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Next Friday, a famous scientist ___ our school. The event ___ at 10 AM. At 11 AM, while he ___ , the students ___ carefully. By the time he ___ his speech, we ___ a lot of new things. I think we ___ him questions after the lecture. Our teacher ___ him at the entrance at 9:45. By the end of the day, we ___ a group photo.",
+      "answers": [
+        [
+          "is visiting"
+        ],
+        [
+          "starts"
+        ],
+        [
+          "is speaking"
+        ],
+        [
+          "will be listening"
+        ],
+        [
+          "finishes"
+        ],
+        [
+          "will have learned"
+        ],
+        [
+          "will ask"
+        ],
+        [
+          "is meeting"
+        ],
+        [
+          "will have taken"
+        ]
+      ],
+      "hints": [
+        "(visit)",
+        "(start)",
+        "(speak)",
+        "(listen)",
+        "(finish)",
+        "(learn)",
+        "(ask)",
+        "(meet)",
+        "(take)"
+      ],
+      "word_bank": [
+        "is visiting",
+        "starts",
+        "is speaking",
+        "will be listening",
+        "finishes",
+        "will have learned",
+        "will ask",
+        "is meeting",
+        "will have taken",
+        "visits",
+        "will speak",
+        "will listen",
+        "will have take"
+      ]
+    }
+  ]
+}

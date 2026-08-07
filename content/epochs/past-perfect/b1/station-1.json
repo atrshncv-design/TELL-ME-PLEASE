@@ -1,0 +1,99 @@
+{
+  "id": "past_perfect_b1_station_1",
+  "title": "Машина Времени: 4 Прошедших Времени",
+  "description": "Выбери правильную форму (Past Simple, Past Cont, Past Perfect).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ a game when the computer (crashed / was crashing / had crashed).",
+      "options": [
+        "played",
+        "was playing",
+        "had played"
+      ],
+      "answer": "was playing"
+    },
+    {
+      "question": "I (played / was playing / had played) a game when the computer ___.",
+      "options": [
+        "crashed",
+        "was crashing",
+        "had crashed"
+      ],
+      "answer": "crashed"
+    },
+    {
+      "question": "When I ___ , they (played / were playing / had played) football.",
+      "options": [
+        "arrived",
+        "was arriving",
+        "had arrived"
+      ],
+      "answer": "arrived"
+    },
+    {
+      "question": "When I (arrived / was arriving / had arrived), they ___ football.",
+      "options": [
+        "played",
+        "were playing",
+        "had played"
+      ],
+      "answer": "were playing"
+    },
+    {
+      "question": "I ___ the project before I (went / was going / had gone) out.",
+      "options": [
+        "finished",
+        "was finishing",
+        "had finished"
+      ],
+      "answer": "had finished"
+    },
+    {
+      "question": "I (finished / was finishing / had finished) the project before I ___ out.",
+      "options": [
+        "went",
+        "was going",
+        "had gone"
+      ],
+      "answer": "went"
+    },
+    {
+      "question": "While we ___ home, it (started / was starting / had started) to rain.",
+      "options": [
+        "walked",
+        "were walking",
+        "had walked"
+      ],
+      "answer": "were walking"
+    },
+    {
+      "question": "While we (walked / were walking / had walked) home, it ___ to rain.",
+      "options": [
+        "started",
+        "was starting",
+        "had started"
+      ],
+      "answer": "started"
+    },
+    {
+      "question": "She ___ me after she (heard / was hearing / had heard) the news.",
+      "options": [
+        "called",
+        "was calling",
+        "had called"
+      ],
+      "answer": "called"
+    },
+    {
+      "question": "She (called / was calling / had called) me after she ___ the news.",
+      "options": [
+        "heard",
+        "was hearing",
+        "had heard"
+      ],
+      "answer": "had heard"
+    }
+  ]
+}

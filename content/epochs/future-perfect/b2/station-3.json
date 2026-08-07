@@ -1,0 +1,62 @@
+{
+  "id": "future_perfect_b2_station_3",
+  "title": "Текст ОГЭ: Космическое Будущее (Чтение)",
+  "description": "Вставь пропуски в текст о космическом будущем (ОГЭ).",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "In 2050, life ___ very different. By 2030, scientists ___ a base on the Moon. By 2040, people ___ flying to Mars for holidays. At this time next year, astronauts ___ new robots on the Moon. While robots ___ , humans ___ them from Earth. By 2050, we ___ new energy sources. I think we ___ in a better world.",
+      "answers": [
+        [
+          "will be"
+        ],
+        [
+          "will have built"
+        ],
+        [
+          "will have started"
+        ],
+        [
+          "will be testing"
+        ],
+        [
+          "are working"
+        ],
+        [
+          "will be monitoring"
+        ],
+        [
+          "will have discovered"
+        ],
+        [
+          "will live"
+        ]
+      ],
+      "hints": [
+        "(be)",
+        "(build)",
+        "(start)",
+        "(test)",
+        "(work)",
+        "(monitor)",
+        "(discover)",
+        "(live)"
+      ],
+      "word_bank": [
+        "will be",
+        "will have built",
+        "will have started",
+        "will be testing",
+        "are working",
+        "will be monitoring",
+        "will have discovered",
+        "will live",
+        "will build",
+        "will start",
+        "will working",
+        "will have discover"
+      ]
+    }
+  ]
+}

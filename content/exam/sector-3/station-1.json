@@ -1,0 +1,59 @@
+{
+  "id": "exam_s3_station_1",
+  "title": "Билеты, Расписания и Предсказания (Сортировка)",
+  "description": "Распредели предложения по 4 группам: Future Simple, Future Continuous, Future Perfect и Present Continuous (для будущего).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "simple",
+      "label": "Future Simple"
+    },
+    {
+      "id": "continuous",
+      "label": "Future Continuous"
+    },
+    {
+      "id": "perfect",
+      "label": "Future Perfect"
+    },
+    {
+      "id": "prescont",
+      "label": "Present Continuous (для будущего)"
+    }
+  ],
+  "items": [
+    {
+      "verb": "I think it will rain tomorrow.",
+      "answer": "simple"
+    },
+    {
+      "verb": "At 5 PM I will be flying to Rome.",
+      "answer": "continuous"
+    },
+    {
+      "verb": "By 5 PM I will have finished my work.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "We are meeting at 8 PM. We have tickets.",
+      "answer": "prescont"
+    },
+    {
+      "verb": "This time next week I will be lying on the beach.",
+      "answer": "continuous"
+    },
+    {
+      "verb": "I will help you with your homework.",
+      "answer": "simple"
+    },
+    {
+      "verb": "By next year I will have graduated.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "We are flying to London tomorrow.",
+      "answer": "prescont"
+    }
+  ]
+}

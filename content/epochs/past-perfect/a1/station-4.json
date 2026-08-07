@@ -1,0 +1,54 @@
+{
+  "id": "past_perfect_a1_station_4",
+  "title": "Вопрос о Предыстории (Синтаксис)",
+  "description": "Собери вопросы (вынос Had вперед).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "finished / Had / you / your homework",
+      "options": [
+        "Had you finished your homework?",
+        "You had finished your homework?",
+        "Had finished you your homework?"
+      ],
+      "answer": "Had you finished your homework?"
+    },
+    {
+      "question": "she / Had / room / cleaned / the",
+      "options": [
+        "Had she cleaned the room?",
+        "She had cleaned the room?",
+        "Had cleaned she the room?"
+      ],
+      "answer": "Had she cleaned the room?"
+    },
+    {
+      "question": "eaten / Had / we / dinner",
+      "options": [
+        "Had we eaten dinner?",
+        "We had eaten dinner?",
+        "Had eaten we dinner?"
+      ],
+      "answer": "Had we eaten dinner?"
+    },
+    {
+      "question": "he / car / washed / Had / the",
+      "options": [
+        "Had he washed the car?",
+        "He had washed the car?",
+        "Had washed he the car?"
+      ],
+      "answer": "Had he washed the car?"
+    },
+    {
+      "question": "left / Had / they",
+      "options": [
+        "Had they left?",
+        "They had left?",
+        "Had left they?"
+      ],
+      "answer": "Had they left?"
+    }
+  ]
+}

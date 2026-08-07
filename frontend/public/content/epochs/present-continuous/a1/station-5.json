@@ -1,0 +1,49 @@
+{
+  "id": "present_continuous_a1_station_5",
+  "title": "Рефлекс Ответа (Короткие ответы)",
+  "description": "Автоматизм коротких ответов в диалоге.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "Are you reading?",
+      "options": [
+        "Yes, I am",
+        "Yes, I do"
+      ],
+      "answer": "Yes, I am"
+    },
+    {
+      "question": "Is he sleeping?",
+      "options": [
+        "No, he isn't",
+        "No, he doesn't"
+      ],
+      "answer": "No, he isn't"
+    },
+    {
+      "question": "Are they playing?",
+      "options": [
+        "Yes, they are",
+        "Yes, they do"
+      ],
+      "answer": "Yes, they are"
+    },
+    {
+      "question": "Is she dancing?",
+      "options": [
+        "Yes, she is",
+        "Yes, she does"
+      ],
+      "answer": "Yes, she is"
+    },
+    {
+      "question": "Is it raining?",
+      "options": [
+        "Yes, it is",
+        "Yes, it does"
+      ],
+      "answer": "Yes, it is"
+    }
+  ]
+}

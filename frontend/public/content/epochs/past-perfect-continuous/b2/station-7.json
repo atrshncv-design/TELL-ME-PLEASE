@@ -1,0 +1,89 @@
+{
+  "id": "past_perfect_continuous_b2_station_7",
+  "title": "Финальный Босс: 4 Времени (Викторина)",
+  "description": "Финальный Босс: выбери правильное из 4 прошедших времён (Past Simple, Past Continuous, Past Perfect, Past Perfect Continuous).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ English yesterday. (study)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Past Perfect Continuous"
+      ],
+      "answer": "Past Simple"
+    },
+    {
+      "question": "I ___ English at 5 PM yesterday. (study)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Past Perfect Continuous"
+      ],
+      "answer": "Past Continuous"
+    },
+    {
+      "question": "I ___ English for 2 hours before my friend came. (study)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Past Perfect Continuous"
+      ],
+      "answer": "Past Perfect Continuous"
+    },
+    {
+      "question": "I ___ 3 English books by the end of the month. (read)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Past Perfect Continuous"
+      ],
+      "answer": "Past Perfect"
+    },
+    {
+      "question": "I ___ my keys yesterday! (lose)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Past Perfect Continuous"
+      ],
+      "answer": "Past Simple"
+    },
+    {
+      "question": "I ___ for my keys for an hour when I found them. (look)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Past Perfect Continuous"
+      ],
+      "answer": "Past Perfect Continuous"
+    },
+    {
+      "question": "When I came home, my mum ___ dinner. (cook)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Past Perfect Continuous"
+      ],
+      "answer": "Past Continuous"
+    },
+    {
+      "question": "When I came home, my mum ___ dinner. It was on the table. (cook)",
+      "options": [
+        "Past Simple",
+        "Past Continuous",
+        "Past Perfect",
+        "Past Perfect Continuous"
+      ],
+      "answer": "Past Perfect"
+    }
+  ]
+}

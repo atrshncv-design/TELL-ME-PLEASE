@@ -1,0 +1,89 @@
+{
+  "id": "present_perfect_continuous_b2_station_7",
+  "title": "Финальный Босс: 4 Времени (Викторина)",
+  "description": "Финальный босс: выбери правильное из 4 настоящих времён.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ English every day. (study)",
+      "options": [
+        "Present Simple",
+        "Present Continuous",
+        "Present Perfect",
+        "Present Perfect Continuous"
+      ],
+      "answer": "Present Simple"
+    },
+    {
+      "question": "I ___ English right now. (study)",
+      "options": [
+        "Present Simple",
+        "Present Continuous",
+        "Present Perfect",
+        "Present Perfect Continuous"
+      ],
+      "answer": "Present Continuous"
+    },
+    {
+      "question": "I ___ English for 5 years. (study)",
+      "options": [
+        "Present Simple",
+        "Present Continuous",
+        "Present Perfect",
+        "Present Perfect Continuous"
+      ],
+      "answer": "Present Perfect Continuous"
+    },
+    {
+      "question": "I ___ 3 English books this month. (read)",
+      "options": [
+        "Present Simple",
+        "Present Continuous",
+        "Present Perfect",
+        "Present Perfect Continuous"
+      ],
+      "answer": "Present Perfect"
+    },
+    {
+      "question": "Look! It ___! (rain)",
+      "options": [
+        "Present Simple",
+        "Present Continuous",
+        "Present Perfect",
+        "Present Perfect Continuous"
+      ],
+      "answer": "Present Continuous"
+    },
+    {
+      "question": "It ___ since morning. (rain)",
+      "options": [
+        "Present Simple",
+        "Present Continuous",
+        "Present Perfect",
+        "Present Perfect Continuous"
+      ],
+      "answer": "Present Perfect Continuous"
+    },
+    {
+      "question": "It often ___ in London. (rain)",
+      "options": [
+        "Present Simple",
+        "Present Continuous",
+        "Present Perfect",
+        "Present Perfect Continuous"
+      ],
+      "answer": "Present Simple"
+    },
+    {
+      "question": "We ___ to Paris. (be)",
+      "options": [
+        "Present Simple",
+        "Present Continuous",
+        "Present Perfect",
+        "Present Perfect Continuous"
+      ],
+      "answer": "Present Perfect"
+    }
+  ]
+}

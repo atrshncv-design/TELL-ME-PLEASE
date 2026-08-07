@@ -1,0 +1,41 @@
+{
+  "id": "future_simple_a2_station_7",
+  "title": "Интервью о Планах (Диалог)",
+  "description": "Спроси партнёра о его планах: going to, will и условное предложение.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — 12-летний школьник, друг ученика. Общайся по-английски простыми фразами (уровень A2). Ученик будет задавать тебе вопросы о твоих планах (going to / will). Отвечай коротко и по-дружески, расспрашивай в ответ. Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Хвали за старание, мягко поправляй ошибки. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "What are you going to do this weekend?",
+      "markers": [
+        "going to",
+        "weekend",
+        "do"
+      ],
+      "min": 1,
+      "hint": "Спроси партнёра: What are you going to do this weekend?"
+    },
+    {
+      "question": "Are you going to travel this summer?",
+      "markers": [
+        "going to",
+        "travel",
+        "summer"
+      ],
+      "min": 1,
+      "hint": "Спроси партнёра: Are you going to travel this summer?"
+    },
+    {
+      "question": "What will you do if it rains tomorrow?",
+      "markers": [
+        "will",
+        "if",
+        "rains",
+        "tomorrow"
+      ],
+      "min": 1,
+      "hint": "Спроси партнёра: What will you do if it rains tomorrow?"
+    }
+  ]
+}

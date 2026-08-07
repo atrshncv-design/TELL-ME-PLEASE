@@ -1,0 +1,29 @@
+{
+  "id": "future_perfect_continuous_a2_station_1",
+  "title": "Триггер: Причина и Следствие",
+  "description": "Раскрой скобки, используя Future Perfect Continuous.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I will be tired because I (work) ___ all day.",
+      "answer": "will have been working"
+    },
+    {
+      "sentence": "She will be hungry because she (not / eat) ___ for hours.",
+      "answer": "won't have been eating"
+    },
+    {
+      "sentence": "They will be dirty because they (play) ___ in the garden.",
+      "answer": "will have been playing"
+    },
+    {
+      "sentence": "The ground will be wet because it (rain) ___.",
+      "answer": "will have been raining"
+    },
+    {
+      "sentence": "He will be out of breath because he (run) ___.",
+      "answer": "will have been running"
+    }
+  ]
+}

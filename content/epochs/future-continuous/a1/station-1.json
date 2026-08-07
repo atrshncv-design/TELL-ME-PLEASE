@@ -1,0 +1,59 @@
+{
+  "id": "future_continuous_a1_station_1",
+  "title": "Запуск Видеокамеры (Механика)",
+  "description": "Вставь will be и добавь -ing к глаголу.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "At 5 PM I ___ (play) tennis.",
+      "hint": "(play)",
+      "answer": "will be playing"
+    },
+    {
+      "sentence": "She ___ (read) a book tomorrow.",
+      "hint": "(read)",
+      "answer": "will be reading"
+    },
+    {
+      "sentence": "We ___ (watch) TV all evening.",
+      "hint": "(watch)",
+      "answer": "will be watching"
+    },
+    {
+      "sentence": "He ___ (sleep) at noon.",
+      "hint": "(sleep)",
+      "answer": "will be sleeping"
+    },
+    {
+      "sentence": "They ___ (study) at 3 PM.",
+      "hint": "(study)",
+      "answer": "will be studying"
+    },
+    {
+      "sentence": "My mum ___ (cook) at 6 PM.",
+      "hint": "(cook)",
+      "answer": "will be cooking"
+    },
+    {
+      "sentence": "You ___ (run) in the morning.",
+      "hint": "(run)",
+      "answer": "will be running"
+    },
+    {
+      "sentence": "Tom ___ (ride) his bike.",
+      "hint": "(ride)",
+      "answer": "will be riding"
+    },
+    {
+      "sentence": "The dogs ___ (bark) all night.",
+      "hint": "(bark)",
+      "answer": "will be barking"
+    },
+    {
+      "sentence": "It ___ (rain) at 7 PM.",
+      "hint": "(rain)",
+      "answer": "will be raining"
+    }
+  ]
+}

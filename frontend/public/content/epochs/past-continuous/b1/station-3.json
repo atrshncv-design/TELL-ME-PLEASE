@@ -1,0 +1,33 @@
+{
+  "id": "past_continuous_b1_station_3",
+  "title": "Перевод-Ловушка (Интерференция)",
+  "description": "Переведи фразы (фокус на \"когда я пришел...\").",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ home when it ___ to rain.",
+      "answer": [
+        "was walking",
+        "started"
+      ],
+      "hint": "Я шёл домой, когда пошёл дождь."
+    },
+    {
+      "sentence": "She ___ when the phone ___.",
+      "answer": [
+        "was reading",
+        "rang"
+      ],
+      "hint": "Она читала, когда зазвонил телефон."
+    },
+    {
+      "sentence": "We ___ dinner when you ___.",
+      "answer": [
+        "were having",
+        "called"
+      ],
+      "hint": "Мы ужинали, когда ты позвонил."
+    }
+  ]
+}

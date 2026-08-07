@@ -1,0 +1,65 @@
+{
+  "id": "past_continuous_a1_station_7",
+  "title": "Аудио-Детектив (ИИ-бот)",
+  "description": "Ответь боту на вопросы: 1. What were you doing at 5 PM? 2. What were you doing at 8 PM? 3. Were you sleeping at 10 PM?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "You are a detective. Use A1 English. Ask the student what he or she was doing yesterday at different times. Ask the questions from the checklist one by one, in order, and wait for the answer. React to each answer in a friendly, short way: praise the effort, gently correct mistakes with was/were + -ing, and suggest words if the student is stuck. If the answer is too short, politely ask to say a full sentence (for example: I was playing football at 5 pm). Speak simple short English at A1 level, do not switch to Russian.",
+  "checklist": [
+    {
+      "question": "What were you doing at 5 PM?",
+      "markers": [
+        "was",
+        "were",
+        "playing",
+        "reading",
+        "watching",
+        "walking",
+        "doing",
+        "studying",
+        "cooking",
+        "helping",
+        "5 pm",
+        "five"
+      ],
+      "min": 1,
+      "hint": "Скажи, что ты делал в 5 часов: I was playing football at 5 pm."
+    },
+    {
+      "question": "What were you doing at 8 PM?",
+      "markers": [
+        "was",
+        "were",
+        "watching",
+        "reading",
+        "eating",
+        "dinner",
+        "having",
+        "playing",
+        "doing",
+        "8 pm",
+        "eight",
+        "tv"
+      ],
+      "min": 1,
+      "hint": "Скажи, что ты делал в 8 часов: I was watching TV at 8 pm."
+    },
+    {
+      "question": "Were you sleeping at 10 PM?",
+      "markers": [
+        "yes",
+        "no",
+        "was",
+        "wasn't",
+        "were",
+        "weren't",
+        "sleeping",
+        "10 pm",
+        "ten",
+        "bed"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I was sleeping. / No, I wasn't sleeping at 10 pm."
+    }
+  ]
+}

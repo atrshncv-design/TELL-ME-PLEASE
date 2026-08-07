@@ -1,0 +1,33 @@
+{
+  "id": "past_perfect_continuous_b1_station_3",
+  "title": "Визуальный Фильтр (Поиск ошибок)",
+  "description": "Найди ошибку в предложении.",
+  "category": "grammar",
+  "type": "click-mistake",
+  "items": [
+    {
+      "text": "I had been knowing him for years before we met.",
+      "wrong": "knowing"
+    },
+    {
+      "text": "She had been work all day.",
+      "wrong": "work"
+    },
+    {
+      "text": "We had been studying since morning when the teacher arrived.",
+      "wrong": null
+    },
+    {
+      "text": "They had been swiming in the pool.",
+      "wrong": "swiming"
+    },
+    {
+      "text": "He had been play football for an hour when it rained.",
+      "wrong": "play"
+    },
+    {
+      "text": "I had been waiting for you!",
+      "wrong": null
+    }
+  ]
+}

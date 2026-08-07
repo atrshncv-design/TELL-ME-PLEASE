@@ -1,0 +1,51 @@
+{
+  "id": "future_perfect_b2_station_4",
+  "title": "Симуляция ОГЭ (Устная часть Task 2)",
+  "description": "Симуляция устной части ОГЭ (Task 2): ответь экзаменатору на вопросы о планах и сроках.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — экзаменатор на устной части ОГЭ по английскому языку (Task 2). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Слушай внимательно, реагируй нейтрально и доброжелательно, как настоящий экзаменатор. Если ответ неполный — мягко попроси дополнить. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "What will you have done by 5 PM tomorrow?",
+      "markers": [
+        "will have",
+        "done",
+        "homework",
+        "by 5 pm"
+      ],
+      "min": 1,
+      "hint": "Ответь: By 5 PM I will have finished my homework."
+    },
+    {
+      "question": "What are you going to do after you finish school?",
+      "markers": [
+        "going to",
+        "study",
+        "school"
+      ],
+      "min": 1,
+      "hint": "Ответь: I am going to study at university."
+    },
+    {
+      "question": "Will you be using your computer tonight?",
+      "markers": [
+        "will",
+        "computer",
+        "tonight"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I will be using my computer tonight."
+    },
+    {
+      "question": "What time does your first class start tomorrow?",
+      "markers": [
+        "start",
+        "class",
+        "8"
+      ],
+      "min": 1,
+      "hint": "Ответь: My first class starts at 8 o'clock."
+    }
+  ]
+}

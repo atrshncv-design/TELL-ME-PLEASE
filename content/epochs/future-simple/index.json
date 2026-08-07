@@ -1,0 +1,251 @@
+{
+  "epoch": "future-simple",
+  "title": "Эпоха Future Simple",
+  "subtitle": "Хроники Будущего",
+  "icon": "🔮",
+  "theory": [
+    {
+      "title": "🔮 Шаг 1: Суть времени (Что это такое?)",
+      "text": "Привет, ребята! 👋 Мы добрались до будущего! В русском языке мы говорим «Я пойду» для всего. В английском будущее можно выразить 4-мя разными способами, в зависимости от того, ЧТО ИМЕННО вы хотите сказать.\nБазовый Future Simple (простое будущее) — это «Хрустальный Шар» 🔮 или «Спонтанное Решение».\nФормула (Базовый каркас):\nПодлежащее + WILL + Глагол в 1-й форме (V1) Хорошая новость: Глагол will один для всех лиц! (I will, He will, They will). Никаких am/is/are или окончаний -s. Просто will + V1.\nI will call you. (Я позвоню тебе)."
+    },
+    {
+      "title": "🎭 Шаг 2: Когда используем WILL? (Future Simple)",
+      "text": "Спонтанное решение: Вы решили прямо в момент речи, на ходу.\n— We don't have milk. — Oh, I will buy it! (— Нет молока. — О, я куплю!).\nПредсказание (Хрустальный шар): Вы гадаете, думаете, надеетесь. Маркеры: I think, I hope, probably, maybe.\nI think it will rain tomorrow. (Думаю, завтра пойдет дождь).\nОбещание: Даете слово.\nI will help you with your homework. (Я помогу тебе с домашкой).\nПросьба: (в форме вопроса).\nWill you open the window, please? (Откройте окно, пожалуйста?)."
+    },
+    {
+      "title": "🚀 Шаг 3: Главный Босс — 4 способа в Будущее (Сравнение)",
+      "text": "Как не запутаться? Смотрите на контекст!\nWILL (Спонтанность / Предсказание 🔮): Нет плана. Решили только что.\nI think I will go to the cinema.\nTO BE GOING TO (План / Намерение 📋): Вы заранее обдумали и решили это сделать. Или предсказание на основе ОЧЕВИДНЫХ фактов (черные тучи).\nLook at those clouds! It is going to rain. (Собирается дождь — видно по тучам).\nI am going to buy a new car next month. (Планирую купить машину).\nPRESENT CONTINUOUS (Договоренность 🎫): 100% план, где есть время и место, куплены билеты или договорились с человеком.\nI am leaving for London tomorrow at 5 PM. (Я уезжаю в Лондон завтра в 5 — билеты на руках).\nPRESENT SIMPLE (Расписание 🚆): Поезда, автобусы, фильмы, уроки. Официальное расписание.\nThe train leaves at 8 AM tomorrow. (Поезд отправляется в 8)."
+    },
+    {
+      "title": "🚨 Шаг 4: Топ-3 ошибки, которые нужно уничтожить",
+      "text": "Путаница Will и Going To. ❌ I am going to answer the phone. (Если телефон зазвонил СЕЙЧАС, вы не планировали отвечать, вы решили только что!). ✅ I will answer the phone. (Спонтанное решение).\nДвойное будущее. В русском «если пойдет дождь, я останусь». В английском нельзя использовать will после if/when! ❌ If it will rain, I will stay at home. ✅ If it rains, I will stay at home. (Условие — Present Simple, результат — Future Simple).\nИспользование will для расписаний. ❌ The film will start at 7 PM. ✅ The film starts at 7 PM."
+    }
+  ],
+  "theoryQuiz": [
+    {
+      "question": "— We have no bread! — OK, I ___ some.",
+      "options": [
+        "will buy",
+        "am going to buy"
+      ],
+      "answer": "will buy"
+    },
+    {
+      "question": "Look at the black clouds! It ___.",
+      "options": [
+        "will rain",
+        "is going to rain"
+      ],
+      "answer": "is going to rain"
+    },
+    {
+      "question": "The train ___ at 9 AM tomorrow.",
+      "options": [
+        "will leave",
+        "leaves"
+      ],
+      "answer": "leaves"
+    },
+    {
+      "question": "We ___ to Paris next Monday. We have tickets!",
+      "options": [
+        "will fly",
+        "are flying"
+      ],
+      "answer": "are flying"
+    },
+    {
+      "question": "I think he ___ the exam.",
+      "options": [
+        "will pass",
+        "is passing"
+      ],
+      "answer": "will pass"
+    }
+  ],
+  "music": {
+    "title": "🎵 Музыкальная пауза (Караоке-генератор)",
+    "links": [
+      "[Ссылка на Rutube/Yandex коллекцию]"
+    ],
+    "sunoPrompt": "Придумай веселую песню про Future Simple и способы выразить будущее. Объясни, что 'will' — это для спонтанных решений и обещаний, а 'be going to' — для планов. Напомни, что для расписаний мы используем Present Simple. В припеве должны быть слова: will, going to, tomorrow, plan. Стиль: futuristic synth-pop, energetic, 120 bpm."
+  },
+  "sectors": [
+    {
+      "id": "a1",
+      "level": "A1",
+      "title": "Первый Полет в Будущее",
+      "grade": 5,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a1/station-1.json",
+          "title": "Запуск Хрустального Шара (Механика)"
+        },
+        {
+          "id": "station-2",
+          "file": "a1/station-2.json",
+          "title": "Торможение Хаоса (Отрицание и Вопрос)"
+        },
+        {
+          "id": "station-3",
+          "file": "a1/station-3.json",
+          "title": "Спонтанные Решения (Речь)"
+        },
+        {
+          "id": "station-4",
+          "file": "a1/station-4.json",
+          "title": "Обещания и Просьбы (Контекст)"
+        },
+        {
+          "id": "station-5",
+          "file": "a1/station-5.json",
+          "title": "Предсказания (Хрустальный Шар)"
+        },
+        {
+          "id": "station-6",
+          "file": "a1/station-6.json",
+          "title": "Текст: Мои Планы (Интеграция)"
+        },
+        {
+          "id": "station-7",
+          "file": "a1/station-7.json",
+          "title": "Гадалка (ИИ-бот)"
+        }
+      ],
+      "story": "Механика will + V1, обещания, предсказания."
+    },
+    {
+      "id": "a2",
+      "level": "A2",
+      "title": "Хроники Планов",
+      "grade": 6,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a2/station-1.json",
+          "title": "Сборка Плана (Механика going to)"
+        },
+        {
+          "id": "station-2",
+          "file": "a2/station-2.json",
+          "title": "Битва: План vs Спонтанность (Will vs Going to)"
+        },
+        {
+          "id": "station-3",
+          "file": "a2/station-3.json",
+          "title": "Очевидные Предсказания (Going to)"
+        },
+        {
+          "id": "station-4",
+          "file": "a2/station-4.json",
+          "title": "Детектор Ошибок (Дебаггинг)"
+        },
+        {
+          "id": "station-5",
+          "file": "a2/station-5.json",
+          "title": "Вопросы о Планах (Синтаксис)"
+        },
+        {
+          "id": "station-6",
+          "file": "a2/station-6.json",
+          "title": "Текст: Выходные (Чтение)"
+        },
+        {
+          "id": "station-7",
+          "file": "a2/station-7.json",
+          "title": "Интервью о Планах (Диалог)"
+        }
+      ],
+      "story": "Введение TO BE GOING TO. Сравнение планов (going to) и спонтанности (will)."
+    },
+    {
+      "id": "b1",
+      "level": "B1",
+      "title": "Мастер Договоренностей",
+      "grade": "7-8",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b1/station-1.json",
+          "title": "Билеты на Руки (Pres Cont for Future)"
+        },
+        {
+          "id": "station-2",
+          "file": "b1/station-2.json",
+          "title": "Сортировка 3-х Миров (Will vs Going to vs PresCont)"
+        },
+        {
+          "id": "station-3",
+          "file": "b1/station-3.json",
+          "title": "Перевод-Ловушка (Интерференция)"
+        },
+        {
+          "id": "station-4",
+          "file": "b1/station-4.json",
+          "title": "Текст: Путешествие (Интеграция)"
+        },
+        {
+          "id": "station-5",
+          "file": "b1/station-5.json",
+          "title": "Сравни Планы (Речь)"
+        },
+        {
+          "id": "station-6",
+          "file": "b1/station-6.json",
+          "title": "Интервью с Турагентом (Диалог с ИИ)"
+        },
+        {
+          "id": "station-7",
+          "file": "b1/station-7.json",
+          "title": "Проект \"Путеводитель\" (Продукт)"
+        }
+      ],
+      "story": "Введение Present Continuous для будущего. Сравнение 3-х способов."
+    },
+    {
+      "id": "b2",
+      "level": "B2",
+      "title": "Мастер Временной Ткани",
+      "grade": 9,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b2/station-1.json",
+          "title": "ОГЭ-Тренажер (Task 19: 4 Способа + Conditionals)"
+        },
+        {
+          "id": "station-2",
+          "file": "b2/station-2.json",
+          "title": "Ловушки ОГЭ (Первое условное / First Conditional)"
+        },
+        {
+          "id": "station-3",
+          "file": "b2/station-3.json",
+          "title": "Тонкие Смыслы (Сортировка всех 4-х форм)"
+        },
+        {
+          "id": "station-4",
+          "file": "b2/station-4.json",
+          "title": "Симуляция ОГЭ (Устная часть Task 2)"
+        },
+        {
+          "id": "station-5",
+          "file": "b2/station-5.json",
+          "title": "Описание Фотографии (ОГЭ Task 3)"
+        },
+        {
+          "id": "station-6",
+          "file": "b2/station-6.json",
+          "title": "Эссе: \"Мое Будущее\" (Монолог)"
+        },
+        {
+          "id": "station-7",
+          "file": "b2/station-7.json",
+          "title": "Финальный Босс: 4 Времени Будущего (Викторина)"
+        }
+      ],
+      "story": "Все 4 способа + Conditionals (Условные предложения). Безупречное владение для ОГЭ."
+    }
+  ]
+}

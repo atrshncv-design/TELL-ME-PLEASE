@@ -1,0 +1,44 @@
+{
+  "id": "future_perfect_a2_station_1",
+  "title": "Триггер: BY THE TIME (К тому времени как)",
+  "description": "Раскрой скобки, используя Future Perfect или Future Simple (в главном предложении).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "By the time you (come) ___, I (finish) ___ my homework.",
+      "answer": [
+        "come",
+        "will have finished"
+      ]
+    },
+    {
+      "sentence": "By the time she (arrive) ___, the train (leave) ___.",
+      "answer": [
+        "arrives",
+        "will have left"
+      ]
+    },
+    {
+      "sentence": "By the time we (finish) ___ the work, it (get) ___ dark.",
+      "answer": [
+        "finish",
+        "will have got"
+      ]
+    },
+    {
+      "sentence": "By the time he (wake up) ___, his parents (go) ___ to work.",
+      "answer": [
+        "wakes up",
+        "will have gone"
+      ]
+    },
+    {
+      "sentence": "By the time they (call) ___, I (fall) ___ asleep.",
+      "answer": [
+        "call",
+        "will have fallen"
+      ]
+    }
+  ]
+}

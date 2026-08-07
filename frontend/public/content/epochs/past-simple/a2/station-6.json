@@ -1,0 +1,52 @@
+{
+  "id": "past_simple_a2_station_6",
+  "title": "Блог: Вчерашний День (Продукт)",
+  "description": "Напиши 5 предложений о том, что ты делал вчера (Past Simple), и 1 предложение о том, какой у тебя есть результат сейчас (Present Perfect).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Мой вчерашний день",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Используй 5 глаголов в Past Simple (что ты делал вчера)",
+      "hint": "went, played, watched, visited, ate, had, did, made, saw, read, wrote…",
+      "markers": [
+        "went",
+        "played",
+        "watched",
+        "visited",
+        "ate",
+        "had",
+        "did",
+        "made",
+        "saw",
+        "read",
+        "wrote",
+        "walked",
+        "talked",
+        "helped",
+        "studied",
+        "cooked",
+        "cleaned",
+        "met",
+        "bought",
+        "took",
+        "swam",
+        "ran"
+      ],
+      "min": 5
+    },
+    {
+      "label": "Добавь 1 предложение в Present Perfect (результат сейчас)",
+      "hint": "I have already done my homework. / I have made a drawing.",
+      "markers": [
+        "have",
+        "has",
+        "already",
+        "just",
+        "yet"
+      ],
+      "min": 1
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "present_perfect_b1_station_5",
+  "title": "Проблема и Результат (Речь)",
+  "description": "Использование Present Perfect для описания текущих проблем (результат прошлого действия).",
+  "category": "speaking",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "He ___ his phone.",
+      "answer": [
+        "has dropped"
+      ],
+      "hint": "разбитый телефон"
+    },
+    {
+      "sentence": "Someone ___ all the milk.",
+      "answer": [
+        "has drunk"
+      ],
+      "hint": "пустой пакет молока"
+    },
+    {
+      "sentence": "He ___ his knee.",
+      "answer": [
+        "has cut"
+      ],
+      "hint": "мальчик плачет"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "future_continuous_b2_station_7",
+  "title": "Финальный Босс: 5 Будущих (Викторина)",
+  "description": "Выбери правильное время из 5 способов выражения будущего.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ to the gym tomorrow at 5 PM. (go)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Present Continuous",
+        "Present Simple",
+        "Going to"
+      ],
+      "answer": "Future Continuous"
+    },
+    {
+      "question": "I think I ___ rich. (be)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Present Continuous",
+        "Present Simple",
+        "Going to"
+      ],
+      "answer": "Future Simple"
+    },
+    {
+      "question": "The train ___ at 6 PM. (leave)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Present Continuous",
+        "Present Simple",
+        "Going to"
+      ],
+      "answer": "Present Simple"
+    },
+    {
+      "question": "— It's cold. — I ___ the window. (close)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Present Continuous",
+        "Present Simple",
+        "Going to"
+      ],
+      "answer": "Future Simple"
+    },
+    {
+      "question": "We ___ to Paris next Monday. We have tickets! (fly)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Present Continuous",
+        "Present Simple",
+        "Going to"
+      ],
+      "answer": "Present Continuous"
+    },
+    {
+      "question": "Look at the clouds! It ___ rain. (rain)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Present Continuous",
+        "Present Simple",
+        "Going to"
+      ],
+      "answer": "Going to"
+    },
+    {
+      "question": "This time tomorrow I ___ on the beach. (lie)",
+      "options": [
+        "Future Simple",
+        "Future Continuous",
+        "Present Continuous",
+        "Present Simple",
+        "Going to"
+      ],
+      "answer": "Future Continuous"
+    }
+  ]
+}

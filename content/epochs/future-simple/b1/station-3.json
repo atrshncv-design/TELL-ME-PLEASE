@@ -1,0 +1,29 @@
+{
+  "id": "future_simple_b1_station_3",
+  "title": "Перевод-Ловушка (Интерференция)",
+  "description": "Переведи фразы, выбирая правильную форму будущего времени.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "We ___ to Moscow tomorrow.",
+      "hint": "Мы уезжаем в Москву завтра (билеты куплены)",
+      "answer": "are leaving"
+    },
+    {
+      "sentence": "I ___ a new car.",
+      "hint": "Я собираюсь купить новую машину (планирую)",
+      "answer": "am going to buy"
+    },
+    {
+      "sentence": "I ___ you with your homework.",
+      "hint": "Я помогу тебе с уроками (обещаю)",
+      "answer": "will help"
+    },
+    {
+      "sentence": "The train ___ at 5 PM.",
+      "hint": "Поезд отправляется в 5 вечера (расписание)",
+      "answer": "leaves"
+    }
+  ]
+}

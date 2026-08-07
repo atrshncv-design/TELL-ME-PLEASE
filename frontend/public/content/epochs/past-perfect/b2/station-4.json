@@ -1,0 +1,65 @@
+{
+  "id": "past_perfect_b2_station_4",
+  "title": "Симуляция ОГЭ (Устная часть Task 2)",
+  "description": "Ответь на вопросы экзаменатора (ОГЭ Task 2).",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль экзаменатора на устной части ОГЭ. Act like an examiner for the Russian OGE exam (Task 2). Ask me questions about my past experiences and events. Задавай вопросы из списка checklist по одному, строго по порядку, и жди ответа ученика. Реагируй нейтрально, как экзаменатор: хвали за полные ответы, мягко проси сказать полным предложением, если ответ слишком короткий. Говори простыми английскими фразами уровня B1, на русский не переходи.",
+  "checklist": [
+    {
+      "question": "What had you done by the time you went to school yesterday?",
+      "markers": [
+        "had",
+        "done",
+        "school",
+        "yesterday",
+        "woke",
+        "breakfast",
+        "homework",
+        "washed",
+        "dressed"
+      ],
+      "min": 1,
+      "hint": "Ответь: By the time I went to school, I had woken up and had breakfast."
+    },
+    {
+      "question": "Had you finished your homework before you went for a walk last weekend?",
+      "markers": [
+        "had",
+        "finished",
+        "homework",
+        "walk",
+        "weekend"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I had finished my homework before I went for a walk."
+    },
+    {
+      "question": "What were you doing at 5 PM yesterday?",
+      "markers": [
+        "was",
+        "doing",
+        "watching",
+        "playing",
+        "reading",
+        "5",
+        "pm"
+      ],
+      "min": 1,
+      "hint": "Скажи: At 5 PM I was watching TV."
+    },
+    {
+      "question": "What did you do last Sunday?",
+      "markers": [
+        "went",
+        "played",
+        "visited",
+        "watched",
+        "sunday",
+        "park"
+      ],
+      "min": 1,
+      "hint": "Скажи: Last Sunday I went to the park."
+    }
+  ]
+}

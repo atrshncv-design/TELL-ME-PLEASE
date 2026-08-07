@@ -1,0 +1,48 @@
+{
+  "id": "present_perfect_continuous_a2_station_6",
+  "title": "Блог: Мои Хобби (Продукт)",
+  "description": "Напиши 3 предложения о том, как долго ты занимаешься своими хобби.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши 3 предложения о том, как долго ты занимаешься своими хобби",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Форма have/has been + глагол с -ing (3 предложения)",
+      "hint": "I have been playing the guitar for 2 years.",
+      "markers": [
+        "been"
+      ],
+      "min": 3
+    },
+    {
+      "label": "Маркеры for / since",
+      "hint": "I have been learning English since 2019.",
+      "markers": [
+        "for",
+        "since"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Лексика хобби",
+      "hint": "playing the guitar, learning English, reading books, watching films",
+      "markers": [
+        "playing",
+        "learning",
+        "reading",
+        "watching",
+        "studying",
+        "listening",
+        "drawing",
+        "dancing",
+        "singing",
+        "swimming",
+        "running",
+        "doing",
+        "collecting"
+      ],
+      "min": 2
+    }
+  ]
+}

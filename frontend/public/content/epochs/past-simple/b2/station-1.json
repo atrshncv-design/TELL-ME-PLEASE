@@ -1,0 +1,54 @@
+{
+  "id": "past_simple_b2_station_1",
+  "title": "ОГЭ-Тренажер (Task 19: 5 Времени)",
+  "description": "Вставь глаголы в нужной форме: все 5 времён для ОГЭ.",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "Last year, a famous scientist ___ a new species of frog. Since then, biologists ___ it carefully. Right now, a team of researchers ___ to the Amazon to find more. They ___ a lot of data. Usually, these frogs ___ near rivers. The scientist ___ a book about them two months ago. I ___ it recently, and it is fascinating. I ___ such a strange animal before.",
+  "answers": [
+    [
+      "discovered"
+    ],
+    [
+      "have been studying"
+    ],
+    [
+      "are travelling"
+    ],
+    [
+      "have already collected"
+    ],
+    [
+      "live"
+    ],
+    [
+      "wrote"
+    ],
+    [
+      "have read"
+    ],
+    [
+      "have never seen"
+    ]
+  ],
+  "word_bank": [
+    "discovered",
+    "have been studying",
+    "are travelling",
+    "have already collected",
+    "live",
+    "wrote",
+    "have read",
+    "have never seen"
+  ],
+  "hints": [
+    "(discover)",
+    "(study)",
+    "(travel)",
+    "(already / collect)",
+    "(live)",
+    "(write)",
+    "(read)",
+    "(never / see)"
+  ]
+}

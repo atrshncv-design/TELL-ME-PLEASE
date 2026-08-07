@@ -1,0 +1,75 @@
+{
+  "id": "exam_s4_station_6",
+  "title": "Эссе \"Моя Жизнь во Временах\" (Супер-Финал)",
+  "description": "Напиши мини-выступление о своей жизни, используя МИНИМУМ 6 разных времён.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Моя Жизнь во Временах",
+  "duration": 120,
+  "conditions": [
+    {
+      "label": "Present Perfect Continuous (I have been studying English for 5 years)",
+      "hint": "I (1) ___ (study) English for 5 years.",
+      "markers": [
+        "have been",
+        "has been",
+        "been studying"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Past Simple (Yesterday I passed my test)",
+      "hint": "Yesterday I (2) ___ (pass) my test.",
+      "markers": [
+        "yesterday",
+        "passed",
+        "last",
+        "ago",
+        "did"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Past Continuous (While I was writing it, my phone rang)",
+      "hint": "While I (3) ___ (write) it, my phone rang.",
+      "markers": [
+        "while",
+        "was writing",
+        "was doing",
+        "was playing"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Future Simple (Next year I will travel to London)",
+      "hint": "Next year I (4) ___ (travel) to London.",
+      "markers": [
+        "will",
+        "next year",
+        "tomorrow"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Future Perfect (By the summer I will have finished this course)",
+      "hint": "By the summer, I (5) ___ (finish) this course.",
+      "markers": [
+        "will have",
+        "by the summer",
+        "by next"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Future (I think I will speak English fluently in the future)",
+      "hint": "I think I (6) ___ (speak) English fluently in the future.",
+      "markers": [
+        "will speak",
+        "fluently",
+        "in the future",
+        "think"
+      ],
+      "min": 1
+    }
+  ]
+}

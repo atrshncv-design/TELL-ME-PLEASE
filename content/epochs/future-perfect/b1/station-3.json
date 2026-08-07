@@ -1,0 +1,49 @@
+{
+  "id": "future_perfect_b1_station_3",
+  "title": "Тонкие Смыслы (Stative Verbs)",
+  "description": "Выбери правильную форму (Future Perfect или Future Simple для стативных).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "By 5 PM I ___ the answer.",
+      "options": [
+        "will have known",
+        "will know"
+      ],
+      "answer": "will know"
+    },
+    {
+      "question": "By next year she ___ him more.",
+      "options": [
+        "will have loved",
+        "will love"
+      ],
+      "answer": "will love"
+    },
+    {
+      "question": "By noon we ___ the rule.",
+      "options": [
+        "will have understood",
+        "will understand"
+      ],
+      "answer": "will understand"
+    },
+    {
+      "question": "By tomorrow they ___ a dog.",
+      "options": [
+        "will have wanted",
+        "will want"
+      ],
+      "answer": "will want"
+    },
+    {
+      "question": "By next month he ___ a car.",
+      "options": [
+        "will have had",
+        "will have"
+      ],
+      "answer": "will have"
+    }
+  ]
+}

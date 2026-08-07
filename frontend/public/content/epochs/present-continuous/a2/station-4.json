@@ -1,0 +1,29 @@
+{
+  "id": "present_continuous_a2_station_4",
+  "title": "Детектор Лжи (Смешанные ошибки)",
+  "description": "Поиск грамматических ошибок (пропуск to be, отсутствие -ing, путаница времен).",
+  "category": "grammar",
+  "type": "click-mistake",
+  "items": [
+    {
+      "text": "He playing football now.",
+      "wrong": "playing"
+    },
+    {
+      "text": "I am play tennis every day.",
+      "wrong": "am"
+    },
+    {
+      "text": "She is read a book at the moment.",
+      "wrong": "read"
+    },
+    {
+      "text": "They are swim now.",
+      "wrong": "swim"
+    },
+    {
+      "text": "I am sleeping every night.",
+      "wrong": "am"
+    }
+  ]
+}

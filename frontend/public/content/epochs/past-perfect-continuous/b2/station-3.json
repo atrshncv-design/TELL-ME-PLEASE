@@ -1,0 +1,60 @@
+{
+  "id": "past_perfect_continuous_b2_station_3",
+  "title": "Текст ОГЭ: Экология (Чтение)",
+  "description": "Заполни пропуски в тексте об экологии (ОГЭ).",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Our planet is in danger. The climate ___ rapidly for the last 50 years before scientists finally warned us. People ___ the air for decades. However, they ___ enough. We ___ many forests before the government took action. Right now, volunteers ___ trees in the park. They ___ since morning. They ___ 100 trees today.",
+      "answers": [
+        [
+          "had been changing"
+        ],
+        [
+          "had been polluting"
+        ],
+        [
+          "had not done"
+        ],
+        [
+          "had destroyed"
+        ],
+        [
+          "are planting"
+        ],
+        [
+          "have been working"
+        ],
+        [
+          "have already planted"
+        ]
+      ],
+      "hints": [
+        "(change)",
+        "(pollute)",
+        "(not / do)",
+        "(destroy)",
+        "(plant)",
+        "(work)",
+        "(already / plant)"
+      ],
+      "word_bank": [
+        "had been changing",
+        "had been polluting",
+        "had not done",
+        "had destroyed",
+        "are planting",
+        "have been working",
+        "have already planted",
+        "has been changing",
+        "has been polluting",
+        "hadn't done",
+        "has destroyed",
+        "were planting",
+        "have been planting",
+        "has already planted"
+      ]
+    }
+  ]
+}

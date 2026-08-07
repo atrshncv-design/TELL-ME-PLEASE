@@ -1,0 +1,49 @@
+{
+  "id": "past_simple_a1_station_6",
+  "title": "Сборка Контекста (Текст)",
+  "description": "Вставь глаголы в нужной форме в текст о дне в Лондоне.",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "Hi! I am in London now, but yesterday ___ a crazy day! I ___ at 6 AM. We ___ the British Museum. My dad ___ a funny souvenir. Last night we ___ fish and chips. I ___ such a big city before this trip! I ___ 100 photos today.",
+  "answers": [
+    [
+      "was"
+    ],
+    [
+      "woke up"
+    ],
+    [
+      "visited"
+    ],
+    [
+      "bought"
+    ],
+    [
+      "ate"
+    ],
+    [
+      "had never seen"
+    ],
+    [
+      "have already taken"
+    ]
+  ],
+  "word_bank": [
+    "was",
+    "woke up",
+    "visited",
+    "bought",
+    "ate",
+    "had never seen",
+    "have already taken"
+  ],
+  "hints": [
+    "(be)",
+    "(wake up)",
+    "(visit)",
+    "(buy)",
+    "(eat)",
+    "(never / see)",
+    "(already / take)"
+  ]
+}

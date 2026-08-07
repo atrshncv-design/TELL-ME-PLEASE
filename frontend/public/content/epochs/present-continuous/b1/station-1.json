@@ -1,0 +1,29 @@
+{
+  "id": "present_continuous_b1_station_1",
+  "title": "Сложная Орфография (Исключения)",
+  "description": "Отработка орфографии на лексике 7 класса (СМИ, путешествия) + правило ie->y.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "They are ___ (chat) online.",
+      "answer": "chatting"
+    },
+    {
+      "sentence": "I am ___ (explore) the virtual museum.",
+      "answer": "exploring"
+    },
+    {
+      "sentence": "She is ___ (lie) on the grass. (ie -> y)",
+      "answer": "lying"
+    },
+    {
+      "sentence": "We are ___ (travel) around Spain. (BrE - удвоение l)",
+      "answer": "travelling"
+    },
+    {
+      "sentence": "He is ___ (tie) his shoelaces. (ie -> y)",
+      "answer": "tying"
+    }
+  ]
+}

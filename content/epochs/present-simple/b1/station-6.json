@@ -1,0 +1,99 @@
+{
+  "id": "b1_station_6",
+  "title": "Тест на совместимость (Вопросы)",
+  "description": "Составь вопросы с Do you...?",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "listen / to loud music",
+      "options": [
+        "Do you listen to loud music?",
+        "Does you listen to loud music?",
+        "Do you listens to loud music?"
+      ],
+      "answer": "Do you listen to loud music?"
+    },
+    {
+      "question": "leave / things on the floor",
+      "options": [
+        "Do you leave things on the floor?",
+        "Does you leave things on the floor?",
+        "Do you leaves things on the floor?"
+      ],
+      "answer": "Do you leave things on the floor?"
+    },
+    {
+      "question": "snore / at night",
+      "options": [
+        "Do you snore at night?",
+        "Does you snore at night?",
+        "Do you snores at night?"
+      ],
+      "answer": "Do you snore at night?"
+    },
+    {
+      "question": "play / computer games till 3 AM",
+      "options": [
+        "Do you play computer games till 3 AM?",
+        "Does you play computer games till 3 AM?",
+        "Do you plays computer games till 3 AM?"
+      ],
+      "answer": "Do you play computer games till 3 AM?"
+    },
+    {
+      "question": "wash / the dishes",
+      "options": [
+        "Do you wash the dishes?",
+        "Does you wash the dishes?",
+        "Do you washs the dishes?"
+      ],
+      "answer": "Do you wash the dishes?"
+    },
+    {
+      "question": "eat / junk food in bed",
+      "options": [
+        "Do you eat junk food in bed?",
+        "Does you eat junk food in bed?",
+        "Do you eats junk food in bed?"
+      ],
+      "answer": "Do you eat junk food in bed?"
+    },
+    {
+      "question": "talk / on the phone for hours",
+      "options": [
+        "Do you talk on the phone for hours?",
+        "Does you talk on the phone for hours?",
+        "Do you talks on the phone for hours?"
+      ],
+      "answer": "Do you talk on the phone for hours?"
+    },
+    {
+      "question": "keep / your room tidy",
+      "options": [
+        "Do you keep your room tidy?",
+        "Does you keep your room tidy?",
+        "Do you keeps your room tidy?"
+      ],
+      "answer": "Do you keep your room tidy?"
+    },
+    {
+      "question": "watch / horror films",
+      "options": [
+        "Do you watch horror films?",
+        "Does you watch horror films?",
+        "Do you watchs horror films?"
+      ],
+      "answer": "Do you watch horror films?"
+    },
+    {
+      "question": "drink / too much coffee",
+      "options": [
+        "Do you drink too much coffee?",
+        "Does you drink too much coffee?",
+        "Do you drinks too much coffee?"
+      ],
+      "answer": "Do you drink too much coffee?"
+    }
+  ]
+}

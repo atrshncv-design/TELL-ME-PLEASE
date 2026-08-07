@@ -1,0 +1,51 @@
+{
+  "id": "present_continuous_b2_station_2",
+  "title": "Архитектор Смыслов (Все 7 функций)",
+  "description": "Понимание всех функциональных значений Present Continuous.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "action",
+      "label": "Action now"
+    },
+    {
+      "id": "temporary",
+      "label": "Temporary"
+    },
+    {
+      "id": "future",
+      "label": "Future arrangement"
+    },
+    {
+      "id": "trends",
+      "label": "Changing trends"
+    },
+    {
+      "id": "irritation",
+      "label": "Irritation"
+    }
+  ],
+  "items": [
+    {
+      "verb": "The Earth is getting hotter.",
+      "answer": "trends"
+    },
+    {
+      "verb": "I am living with my aunt this week.",
+      "answer": "temporary"
+    },
+    {
+      "verb": "He is always leaving his rubbish on my desk!",
+      "answer": "irritation"
+    },
+    {
+      "verb": "We are meeting Tom at 5 PM.",
+      "answer": "future"
+    },
+    {
+      "verb": "Look! The journalist is broadcasting live.",
+      "answer": "action"
+    }
+  ]
+}

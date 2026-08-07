@@ -1,0 +1,73 @@
+{
+  "id": "present_continuous_a1_station_7",
+  "title": "Полевой Агент (Речь и ИИ-бот)",
+  "description": "Вывод грамматики в спонтанную речь, сравнение двух настоящих времен.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — цифровой друг ученика 5 класса. Общайся по-английски простыми фразами (уровень A1). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ дружелюбно и коротко: хвали за старание, мягко поправляй ошибки в Present Simple и Present Continuous и подсказывай нужные слова. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "What do you usually do in the morning?",
+      "markers": [
+        "get up",
+        "breakfast",
+        "brush",
+        "school",
+        "usually",
+        "morning"
+      ],
+      "min": 1,
+      "hint": "Ответь: I usually get up at seven o'clock and have breakfast."
+    },
+    {
+      "question": "Do you sleep at night?",
+      "markers": [
+        "yes",
+        "no",
+        "sleep",
+        "night",
+        "eight",
+        "hours"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I sleep at night / No, I don't."
+    },
+    {
+      "question": "What are you doing right now?",
+      "markers": [
+        "right now",
+        "now",
+        "learning",
+        "talking",
+        "writing",
+        "reading",
+        "speaking"
+      ],
+      "min": 1,
+      "hint": "Ответь: I am talking to you right now."
+    },
+    {
+      "question": "Are you listening to music?",
+      "markers": [
+        "yes",
+        "no",
+        "music",
+        "listening"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I am listening to music / No, I am not."
+    },
+    {
+      "question": "Do you usually read books, or are you reading my messages now?",
+      "markers": [
+        "read",
+        "books",
+        "messages",
+        "usually",
+        "now"
+      ],
+      "min": 1,
+      "hint": "Ответь: I usually read books, but now I am reading your messages."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "present_perfect_continuous_a2_station_2",
+  "title": "Грамматический Босс: Stative Verbs (Ловушка)",
+  "description": "Выбери правильную форму: обычный Present Perfect для стативных глаголов.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ him for 5 years.",
+      "options": [
+        "have been knowing",
+        "have known"
+      ],
+      "answer": "have known"
+    },
+    {
+      "question": "She ___ him since school.",
+      "options": [
+        "has been loving",
+        "has loved"
+      ],
+      "answer": "has loved"
+    },
+    {
+      "question": "We ___ the rule since morning.",
+      "options": [
+        "have been understanding",
+        "have understood"
+      ],
+      "answer": "have understood"
+    },
+    {
+      "question": "They ___ a dog for a long time.",
+      "options": [
+        "have been wanting",
+        "have wanted"
+      ],
+      "answer": "have wanted"
+    },
+    {
+      "question": "He ___ this car since 2020.",
+      "options": [
+        "has been having",
+        "has had"
+      ],
+      "answer": "has had"
+    }
+  ]
+}

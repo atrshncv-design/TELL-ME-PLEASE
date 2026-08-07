@@ -1,0 +1,38 @@
+{
+  "id": "future_perfect_b2_station_6",
+  "title": "Эссе: \"Мои Цели\" (Монолог)",
+  "description": "Напиши мини-выступление на тему \"Мои цели на ближайшие 5 лет\". Используй Future Perfect (результаты), Future Continuous (процессы), Future Simple (предсказания).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши мини-выступление на тему \"Мои цели на ближайшие 5 лет\". Используй Future Perfect (результаты), Future Continuous (процессы), Future Simple (предсказания).",
+  "duration": 90,
+  "conditions": [
+    {
+      "label": "Результаты (Future Perfect)",
+      "hint": "By the time I am 20, I will have entered university.",
+      "markers": [
+        "will have"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Процессы (Future Continuous)",
+      "hint": "This time next year I will be studying hard.",
+      "markers": [
+        "will be",
+        "this time next year"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Предсказания (Future Simple)",
+      "hint": "I think I will become a programmer.",
+      "markers": [
+        "will",
+        "think",
+        "probably"
+      ],
+      "min": 1
+    }
+  ]
+}

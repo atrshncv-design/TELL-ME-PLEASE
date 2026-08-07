@@ -1,0 +1,61 @@
+{
+  "id": "present_perfect_b1_station_7",
+  "title": "Комикс \"Несчастный случай\" (Продукт)",
+  "description": "Творческий продукт с использованием всех времен.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Несчастный случай: комикс из 4 кадров (что случилось, что ты делал, какой результат, что обычно делаешь)",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Кадр 1: Past Simple — что случилось",
+      "hint": "Начни: I fell / I broke...",
+      "markers": [
+        "fell",
+        "broke",
+        "went",
+        "happened",
+        "was",
+        "were"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Кадр 2: Past Continuous — что ты делал в этот момент",
+      "hint": "Добавь: I was playing / I was walking...",
+      "markers": [
+        "doing",
+        "playing",
+        "walking",
+        "riding",
+        "watching",
+        "going"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Кадр 3: Present Perfect — какой результат сейчас",
+      "hint": "Добавь: I have broken / I have hurt...",
+      "markers": [
+        "have",
+        "has",
+        "broken",
+        "hurt",
+        "cut",
+        "done"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Кадр 4: Present Simple — что ты обычно делаешь",
+      "hint": "Закончи: I usually...",
+      "markers": [
+        "usually",
+        "always",
+        "often",
+        "every"
+      ],
+      "min": 1
+    }
+  ]
+}

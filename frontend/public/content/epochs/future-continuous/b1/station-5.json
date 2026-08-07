@@ -1,0 +1,49 @@
+{
+  "id": "future_continuous_b1_station_5",
+  "title": "Объясни Ситуацию (Речь)",
+  "description": "Представь, что ты эстрадная звезда. Расскажи о своем завтрашнем дне. Используй Future Continuous. Пример: At 10 AM I will be recording a new song. At 3 PM I will be giving an interview...",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Представь, что ты эстрадная звезда. Расскажи о своем завтрашнем дне. Используй Future Continuous. Пример: At 10 AM I will be recording a new song. At 3 PM I will be giving an interview...",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Формула will be + V-ing",
+      "hint": "At 10 AM I will be recording a new song.",
+      "markers": [
+        "will be"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Глаголы с -ing (звезда)",
+      "hint": "At 3 PM I will be giving an interview.",
+      "markers": [
+        "recording",
+        "giving",
+        "singing",
+        "performing",
+        "playing",
+        "rehearsing",
+        "talking",
+        "signing",
+        "dancing"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Время завтрашнего дня",
+      "hint": "At 10 AM I will be recording a new song.",
+      "markers": [
+        "10 am",
+        "3 pm",
+        "tomorrow",
+        "5 pm",
+        "in the morning",
+        "in the afternoon",
+        "in the evening"
+      ],
+      "min": 1
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "future_perfect_b1_station_6",
+  "title": "Интервью с Космонавтом (Диалог с ИИ)",
+  "description": "Спроси его: 1. What will you have done by 5 PM tomorrow? 2. Will you have finished your training by Friday? 3. What will you be doing at 10 AM tomorrow? 4. Will you have launched by next week?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — космонавт, готовящийся к запуску (astronaut preparing for a launch). Общайся по-английски (уровень B1), рассказывай о подготовке к полёту. Ученик будет задавать тебе вопросы о твоих планах и дедлайнах (Future Perfect, Future Continuous) — отвечай увлечённо и подробно. Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ живо, хвали за старание, мягко поправляй ошибки. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "What will you have done by 5 PM tomorrow?",
+      "markers": [
+        "What",
+        "will",
+        "done",
+        "5 PM"
+      ],
+      "min": 1,
+      "hint": "Спроси космонавта: What will you have done by 5 PM tomorrow?"
+    },
+    {
+      "question": "Will you have finished your training by Friday?",
+      "markers": [
+        "Will",
+        "finished",
+        "training",
+        "Friday"
+      ],
+      "min": 1,
+      "hint": "Спроси космонавта: Will you have finished your training by Friday?"
+    },
+    {
+      "question": "What will you be doing at 10 AM tomorrow?",
+      "markers": [
+        "What",
+        "will",
+        "doing",
+        "10 AM"
+      ],
+      "min": 1,
+      "hint": "Спроси космонавта: What will you be doing at 10 AM tomorrow?"
+    },
+    {
+      "question": "Will you have launched by next week?",
+      "markers": [
+        "Will",
+        "launched",
+        "next week"
+      ],
+      "min": 1,
+      "hint": "Спроси космонавта: Will you have launched by next week?"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "future_perfect_a2_station_2",
+  "title": "Сборка Сцены (Синтаксис)",
+  "description": "Собери предложения из слов (синтаксис Future Perfect).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "left / will / by / 5 PM / have / They",
+      "options": [
+        "They will have left by 5 PM.",
+        "Will they have left by 5 PM?",
+        "They have will left by 5 PM."
+      ],
+      "answer": "They will have left by 5 PM."
+    },
+    {
+      "question": "finished / will / We / time / By / the / he / have / comes",
+      "options": [
+        "By the time he comes we will have finished.",
+        "By the time he will comes we have finished.",
+        "By the time comes he we will have finished."
+      ],
+      "answer": "By the time he comes we will have finished."
+    },
+    {
+      "question": "eaten / by / dinner / have / will / We / 7 PM",
+      "options": [
+        "We will have eaten dinner by 7 PM.",
+        "Will we have eaten dinner by 7 PM?",
+        "We have will eaten dinner by 7 PM."
+      ],
+      "answer": "We will have eaten dinner by 7 PM."
+    },
+    {
+      "question": "started / will / The / film / have / we / before / arrive",
+      "options": [
+        "The film will have started before we arrive.",
+        "Will the film have started before we arrive?",
+        "The film have will started before we arrive."
+      ],
+      "answer": "The film will have started before we arrive."
+    }
+  ]
+}

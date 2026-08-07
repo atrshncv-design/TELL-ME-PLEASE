@@ -1,0 +1,54 @@
+{
+  "id": "future_continuous_a2_station_5",
+  "title": "Текст: День Рождения (Чтение)",
+  "description": "Вставь формы будущего времени в текст о дне рождения.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Tomorrow is my birthday! At 5 PM, all my friends ___ to my house. At 6 PM, we ___ a big cake. While we ___, my mum ___ photos. At 8 PM, we ___. I think we ___ a great time!",
+      "answers": [
+        [
+          "will be coming"
+        ],
+        [
+          "will be eating"
+        ],
+        [
+          "are eating"
+        ],
+        [
+          "will be taking"
+        ],
+        [
+          "will be dancing"
+        ],
+        [
+          "will have"
+        ]
+      ],
+      "hints": [
+        "(come)",
+        "(eat)",
+        "(eat)",
+        "(take)",
+        "(dance)",
+        "(have)"
+      ],
+      "word_bank": [
+        "will be coming",
+        "will be eating",
+        "are eating",
+        "will be taking",
+        "will be dancing",
+        "will have",
+        "will come",
+        "will be eat",
+        "are taking",
+        "will dance",
+        "has",
+        "will be have"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "present_continuous_b1_station_5",
+  "title": "Репортаж из Реальности (Речь)",
+  "description": "Описание динамичного сюжета с использованием сложной лексики.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Опиши динамичную сцену: журналист в прямом эфире, туристы в горах",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Опиши действия (Present Continuous)",
+      "hint": "am/is/are + глагол с -ing (A journalist is reporting the news.)",
+      "markers": [
+        "is",
+        "are",
+        "am"
+      ],
+      "min": 3
+    },
+    {
+      "label": "Назови героев сцены",
+      "hint": "journalist, tourists, dog, wind, people, reporter...",
+      "markers": [
+        "journalist",
+        "tourists",
+        "dog",
+        "wind",
+        "people",
+        "man",
+        "woman",
+        "boy",
+        "girl",
+        "reporter"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Используй глаголы с -ing",
+      "hint": "reporting, blowing, running, walking, climbing, taking, talking, standing, looking",
+      "markers": [
+        "reporting",
+        "blowing",
+        "running",
+        "walking",
+        "climbing",
+        "taking",
+        "talking",
+        "standing",
+        "looking"
+      ],
+      "min": 3
+    }
+  ]
+}

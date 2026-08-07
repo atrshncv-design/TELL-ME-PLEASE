@@ -1,0 +1,55 @@
+{
+  "id": "past_simple_b2_station_5",
+  "title": "Описание Фотографии (ОГЭ Task 3)",
+  "description": "Опиши фото по плану ОГЭ. В контексте скажи 1 предложение в Past Simple (что привело к ситуации на фото) и 1 в Present Perfect (какой результат).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Описание фотографии",
+  "duration": 90,
+  "conditions": [
+    {
+      "label": "Начни описание фото (план ОГЭ)",
+      "hint": "In the photo I can see… / The photo shows…",
+      "markers": [
+        "in the photo",
+        "the photo",
+        "picture",
+        "i can see",
+        "shows",
+        "there is",
+        "there are"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Скажи 1 предложение в Past Simple (что привело к ситуации)",
+      "hint": "Yesterday, there was a storm. / We went to the beach in the morning.",
+      "markers": [
+        "yesterday",
+        "was",
+        "were",
+        "went",
+        "came",
+        "had",
+        "happened",
+        "last",
+        "ago"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Скажи 1 предложение в Present Perfect (какой результат)",
+      "hint": "They have already collected a lot of rubbish.",
+      "markers": [
+        "have",
+        "has",
+        "already",
+        "just",
+        "collected",
+        "cleaned",
+        "done"
+      ],
+      "min": 1
+    }
+  ]
+}

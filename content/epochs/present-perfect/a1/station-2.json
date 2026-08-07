@@ -1,0 +1,79 @@
+{
+  "id": "present_perfect_a1_station_2",
+  "title": "Орфографический Щит и Детектор (Формы V3)",
+  "description": "Визуальный рефлекс: правильный (add -ed) или неправильный (Irregular V3).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "add",
+      "label": "Add -ed (Правильные)"
+    },
+    {
+      "id": "irregular",
+      "label": "Irregular (Неправильные)"
+    }
+  ],
+  "items": [
+    {
+      "verb": "play",
+      "answer": "add"
+    },
+    {
+      "verb": "visit",
+      "answer": "add"
+    },
+    {
+      "verb": "travel",
+      "answer": "add"
+    },
+    {
+      "verb": "watch",
+      "answer": "add"
+    },
+    {
+      "verb": "stay",
+      "answer": "add"
+    },
+    {
+      "verb": "walk",
+      "answer": "add"
+    },
+    {
+      "verb": "rent",
+      "answer": "add"
+    },
+    {
+      "verb": "go",
+      "answer": "irregular"
+    },
+    {
+      "verb": "see",
+      "answer": "irregular"
+    },
+    {
+      "verb": "eat",
+      "answer": "irregular"
+    },
+    {
+      "verb": "buy",
+      "answer": "irregular"
+    },
+    {
+      "verb": "take",
+      "answer": "irregular"
+    },
+    {
+      "verb": "swim",
+      "answer": "irregular"
+    },
+    {
+      "verb": "drink",
+      "answer": "irregular"
+    },
+    {
+      "verb": "fly",
+      "answer": "irregular"
+    }
+  ]
+}

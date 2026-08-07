@@ -1,0 +1,42 @@
+{
+  "id": "past_perfect_continuous_b2_station_6",
+  "title": "Дебаты: \"Жизнь сегодня\" (Монолог)",
+  "description": "Напиши мини-выступление на тему «Как изменилась жизнь подростков»: Past Perfect Continuous + Past Continuous (фон) + Past Simple (факт).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши мини-выступление на тему «Как изменилась жизнь подростков». Используй Past Perfect Continuous (Teenagers had been using smartphones for years before...), Past Continuous (фон), Past Simple (факт).",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Past Perfect Continuous (had been + -ing)",
+      "hint": "Teenagers had been using smartphones for years before they started spending less time outdoors.",
+      "markers": [
+        "had been"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Past Continuous (фон, was/were + -ing)",
+      "hint": "They were chatting online when I called.",
+      "markers": [
+        "was",
+        "were"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Past Simple (факт)",
+      "hint": "Life changed a lot in the last decade.",
+      "markers": [
+        "changed",
+        "became",
+        "started",
+        "spent",
+        "yesterday",
+        "ago",
+        "last"
+      ],
+      "min": 1
+    }
+  ]
+}

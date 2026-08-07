@@ -1,0 +1,45 @@
+{
+  "id": "future_perfect_continuous_a2_station_4",
+  "title": "Вопросы о Длительности (Синтаксис)",
+  "description": "Собери спецвопросы.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "long / How / you / been / will / have / studying",
+      "options": [
+        "How long will you have been studying?",
+        "How long will you have studying been?",
+        "How long you will have been studying?"
+      ],
+      "answer": "How long will you have been studying?"
+    },
+    {
+      "question": "living / will / she / How long / been / have / here",
+      "options": [
+        "How long will she have been living here?",
+        "How long will she have living been here?",
+        "How long she will have been living here?"
+      ],
+      "answer": "How long will she have been living here?"
+    },
+    {
+      "question": "waiting / They / been / will / How long / have",
+      "options": [
+        "How long will they have been waiting?",
+        "How long will they have waiting been?",
+        "How long they will have been waiting?"
+      ],
+      "answer": "How long will they have been waiting?"
+    },
+    {
+      "question": "raining / been / will / it / How long / have",
+      "options": [
+        "How long will it have been raining?",
+        "How long will it have raining been?",
+        "How long it will have been raining?"
+      ],
+      "answer": "How long will it have been raining?"
+    }
+  ]
+}

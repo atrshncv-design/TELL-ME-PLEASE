@@ -1,0 +1,67 @@
+{
+  "id": "past_simple_a2_station_7",
+  "title": "Интервью: Окончание Школы (Диалог)",
+  "description": "Спроси партнера о его вчерашнем дне, детстве и любимой еде.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль одноклассника ученика 6 класса (уровень A2). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ дружелюбно и коротко: хвали за старание, мягко поправляй ошибки в Past Simple и Present Perfect, подсказывай нужные слова. Если ответ слишком короткий, вежливо попроси сказать полным предложением. Говори простыми английскими фразами уровня A2, на русский не переходи.",
+  "checklist": [
+    {
+      "question": "What did you do yesterday?",
+      "markers": [
+        "went",
+        "played",
+        "watched",
+        "visited",
+        "did",
+        "homework",
+        "school",
+        "friends",
+        "walked"
+      ],
+      "min": 1,
+      "hint": "Скажи: I went to school and did my homework."
+    },
+    {
+      "question": "Did you watch TV last night?",
+      "markers": [
+        "yes",
+        "no",
+        "watched",
+        "tv",
+        "film",
+        "cartoon"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I did. I watched a film. / No, I didn't."
+    },
+    {
+      "question": "Have you done your homework yet?",
+      "markers": [
+        "yes",
+        "no",
+        "done",
+        "homework",
+        "already",
+        "yet"
+      ],
+      "min": 1,
+      "hint": "Скажи: Yes, I have already done it. / Not yet."
+    },
+    {
+      "question": "What was your favorite food when you were 5?",
+      "markers": [
+        "pizza",
+        "ice cream",
+        "porridge",
+        "soup",
+        "pasta",
+        "cake",
+        "chocolate",
+        "was"
+      ],
+      "min": 1,
+      "hint": "Скажи: My favorite food was pizza (моей любимой едой была пицца)."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "present_perfect_b1_station_6",
+  "title": "Интервью с Блогером (Диалог)",
+  "description": "Свободное использование опыта и прошлого времени.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — известный техно-блогер, у тебя свой YouTube-канал. Общайся по-английски (уровень A2/B1). Задавай вопросы из списка checklist по одному, жди ответ, реагируй как блогер: интересно, с примерами из своей практики. Системный промпт: Act like a famous tech blogger. Use A2/B1 English.",
+  "checklist": [
+    {
+      "question": "Have you ever reviewed a bad gadget?",
+      "markers": [
+        "yes",
+        "no",
+        "reviewed",
+        "gadget",
+        "haven't"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I have reviewed a bad gadget / No, I haven't."
+    },
+    {
+      "question": "When did you start your channel?",
+      "markers": [
+        "started",
+        "channel",
+        "ago",
+        "year",
+        "in"
+      ],
+      "min": 1,
+      "hint": "Ответь: I started my channel ... years ago."
+    },
+    {
+      "question": "Have you bought any new equipment recently?",
+      "markers": [
+        "yes",
+        "no",
+        "bought",
+        "equipment",
+        "recently",
+        "camera"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I have bought a new camera / No, I haven't."
+    },
+    {
+      "question": "What did you do yesterday?",
+      "markers": [
+        "went",
+        "watched",
+        "played",
+        "was",
+        "did",
+        "worked"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yesterday I ..."
+    }
+  ]
+}

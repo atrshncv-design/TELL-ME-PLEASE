@@ -1,0 +1,45 @@
+{
+  "id": "past_continuous_b2_station_2",
+  "title": "Тонкие Смыслы (Перевод-Ловушка)",
+  "description": "Переведи, выбрав Past Cont или Past Simple.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ a book.",
+      "answer": "was reading",
+      "hint": "Я читал книгу (процесс)."
+    },
+    {
+      "sentence": "I ___ a book.",
+      "answer": "read",
+      "hint": "Я прочитал книгу (результат)."
+    },
+    {
+      "sentence": "I ___ when it ___ to rain.",
+      "answer": [
+        "was walking",
+        "started"
+      ],
+      "hint": "Я гулял, когда пошёл дождь."
+    },
+    {
+      "sentence": "I ___ and went home.",
+      "answer": "walked",
+      "hint": "Я погулял и пошёл домой."
+    },
+    {
+      "sentence": "She ___ dinner when I ___.",
+      "answer": [
+        "was cooking",
+        "came"
+      ],
+      "hint": "Она готовила ужин, когда я пришёл."
+    },
+    {
+      "sentence": "She ___ dinner and we ate.",
+      "answer": "cooked",
+      "hint": "Она приготовила ужин, и мы поели."
+    }
+  ]
+}

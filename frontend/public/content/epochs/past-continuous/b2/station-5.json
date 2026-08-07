@@ -1,0 +1,62 @@
+{
+  "id": "past_continuous_b2_station_5",
+  "title": "Описание Фотографии (ОГЭ Task 3)",
+  "description": "Опиши фото (люди на пикнике/в парке). Используй Present Continuous для фото (They are playing), а в контексте скажи 1 предложение в Past Continuous (They were playing when it started to rain).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Опиши фотографию: люди на пикнике в парке (ОГЭ Task 3)",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Что происходит на фото (Present Continuous)",
+      "hint": "They are playing / having a picnic / sitting...",
+      "markers": [
+        "are",
+        "is",
+        "playing",
+        "having",
+        "eating",
+        "sitting",
+        "talking",
+        "laughing",
+        "picnic",
+        "park",
+        "smiling",
+        "standing",
+        "running"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Контекст до фото (Past Continuous)",
+      "hint": "They were playing when it started to rain.",
+      "markers": [
+        "were",
+        "was",
+        "playing",
+        "having",
+        "sitting",
+        "walking",
+        "when",
+        "before",
+        "earlier"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Что случилось потом (Past Simple)",
+      "hint": "It started to rain / they went home...",
+      "markers": [
+        "started",
+        "rained",
+        "came",
+        "went",
+        "stopped",
+        "decided",
+        "took",
+        "left"
+      ],
+      "min": 1
+    }
+  ]
+}

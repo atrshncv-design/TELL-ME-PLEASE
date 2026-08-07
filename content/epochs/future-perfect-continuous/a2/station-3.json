@@ -1,0 +1,29 @@
+{
+  "id": "future_perfect_continuous_a2_station_3",
+  "title": "Тренажер Перевода (Интерференция)",
+  "description": "Переведи фразы (фокус на \"к ... я буду делать это уже ...\").",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "By 5 PM I ___ tennis for 2 hours.",
+      "answer": "will have been playing",
+      "hint": "К 5 вечера я буду играть в теннис уже 2 часа."
+    },
+    {
+      "sentence": "By tomorrow we ___ English for 5 years.",
+      "answer": "will have been learning",
+      "hint": "К завтрашнему дню мы будем учить английский уже 5 лет."
+    },
+    {
+      "sentence": "By the time you come, she ___ for 3 hours.",
+      "answer": "will have been sleeping",
+      "hint": "К тому времени как ты придешь, она будет спать уже 3 часа."
+    },
+    {
+      "sentence": "By morning it ___ for 5 hours.",
+      "answer": "will have been raining",
+      "hint": "К утру дождь будет идти уже 5 часов."
+    }
+  ]
+}

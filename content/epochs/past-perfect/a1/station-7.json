@@ -1,0 +1,50 @@
+{
+  "id": "past_perfect_a1_station_7",
+  "title": "Расследование (ИИ-бот)",
+  "description": "Ответь боту: 1. What had you done before you went to bed? 2. Had you eaten breakfast before you left home? 3. Had you done your homework before you played games?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль полицейского детектива. Act like a police detective. Use A1 English. Ask me what I had done before an event. Задавай вопросы по одному из списка checklist, строго по порядку, и жди ответа ученика. Реагируй дружелюбно, хвали, мягко поправляй ошибки в Past Perfect (had + V3). Говори простыми английскими фразами уровня A1, на русский не переходи.",
+  "checklist": [
+    {
+      "question": "What had you done before you went to bed?",
+      "markers": [
+        "had",
+        "done",
+        "went",
+        "bed",
+        "homework",
+        "games",
+        "brushed",
+        "read",
+        "watched"
+      ],
+      "min": 1,
+      "hint": "Скажи: I had done my homework before I went to bed."
+    },
+    {
+      "question": "Had you eaten breakfast before you left home?",
+      "markers": [
+        "had",
+        "eaten",
+        "breakfast",
+        "left",
+        "home"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I had. I had eaten breakfast before I left home."
+    },
+    {
+      "question": "Had you done your homework before you played games?",
+      "markers": [
+        "had",
+        "done",
+        "homework",
+        "played",
+        "games"
+      ],
+      "min": 1,
+      "hint": "Скажи: Yes, I had. I had done my homework before I played games."
+    }
+  ]
+}

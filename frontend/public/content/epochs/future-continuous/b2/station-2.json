@@ -1,0 +1,39 @@
+{
+  "id": "future_continuous_b2_station_2",
+  "title": "Тонкие Смыслы (Перевод-Ловушка)",
+  "description": "Переведи, выбрав Future Continuous или Future Simple.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ tennis.",
+      "hint": "Я буду играть в теннис (факт).",
+      "answer": "will play"
+    },
+    {
+      "sentence": "I ___ tennis at 5 PM.",
+      "hint": "Я буду играть в теннис в 5 вечера (процесс).",
+      "answer": "will be playing"
+    },
+    {
+      "sentence": "I ___ a book when you come.",
+      "hint": "Я буду читать книгу (процесс), когда ты придешь.",
+      "answer": "will be reading"
+    },
+    {
+      "sentence": "I ___ the book by tomorrow.",
+      "hint": "Я прочитаю книгу (результат) к завтрашнему дню.",
+      "answer": "will have read"
+    },
+    {
+      "sentence": "Don't call me at 8. I ___ dinner.",
+      "hint": "Не звони мне в 8. Я буду ужинать.",
+      "answer": "will be having"
+    },
+    {
+      "sentence": "I ___ you with dinner.",
+      "hint": "Я помогу тебе с ужином (обещание).",
+      "answer": "will help"
+    }
+  ]
+}

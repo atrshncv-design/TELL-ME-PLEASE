@@ -1,0 +1,49 @@
+{
+  "id": "present_continuous_b1_station_2",
+  "title": "Ловушка Состояния (Stative Verbs)",
+  "description": "Внутренний тормоз: глаголы чувств и мышления (know, love, understand) НЕ используются в Continuous.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ this song! It's my favorite.",
+      "options": [
+        "love",
+        "am loving"
+      ],
+      "answer": "love"
+    },
+    {
+      "question": "Shh! I ___ to the news.",
+      "options": [
+        "listen",
+        "am listening"
+      ],
+      "answer": "am listening"
+    },
+    {
+      "question": "I ___ what you mean.",
+      "options": [
+        "understand",
+        "am understanding"
+      ],
+      "answer": "understand"
+    },
+    {
+      "question": "She ___ to become a doctor.",
+      "options": [
+        "wants",
+        "is wanting"
+      ],
+      "answer": "wants"
+    },
+    {
+      "question": "We ___ a great time at the party!",
+      "options": [
+        "have",
+        "are having"
+      ],
+      "answer": "are having"
+    }
+  ]
+}

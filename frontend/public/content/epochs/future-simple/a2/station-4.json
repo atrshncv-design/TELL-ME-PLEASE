@@ -1,0 +1,29 @@
+{
+  "id": "future_simple_a2_station_4",
+  "title": "Детектор Ошибок (Дебаггинг)",
+  "description": "Найди ошибку в каждом предложении.",
+  "category": "grammar",
+  "type": "click-mistake",
+  "items": [
+    {
+      "text": "I will to buy a car.",
+      "wrong": "to"
+    },
+    {
+      "text": "She is go to visit us.",
+      "wrong": "go"
+    },
+    {
+      "text": "Look! It will rain.",
+      "wrong": "will"
+    },
+    {
+      "text": "We are going to will play.",
+      "wrong": "will"
+    },
+    {
+      "text": "He won't goes to school.",
+      "wrong": "goes"
+    }
+  ]
+}

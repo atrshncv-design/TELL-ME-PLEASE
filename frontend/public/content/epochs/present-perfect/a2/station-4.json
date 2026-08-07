@@ -1,0 +1,69 @@
+{
+  "id": "present_perfect_a2_station_4",
+  "title": "Детектор Лжи (Поиск ошибок)",
+  "description": "Торможение неверных реакций (смешение структур).",
+  "category": "grammar",
+  "type": "click-mistake",
+  "items": [
+    {
+      "text": "I am play tennis every day.",
+      "wrong": "am"
+    },
+    {
+      "text": "She is has a souvenir.",
+      "wrong": "is"
+    },
+    {
+      "text": "We have went to Spain.",
+      "wrong": "went"
+    },
+    {
+      "text": "Look! He ride a bike.",
+      "wrong": "ride"
+    },
+    {
+      "text": "I have eat my pizza.",
+      "wrong": "eat"
+    },
+    {
+      "text": "They plays tennis now.",
+      "wrong": "plays"
+    },
+    {
+      "text": "He has took a photo.",
+      "wrong": "took"
+    },
+    {
+      "text": "We are travel to London.",
+      "wrong": "travel"
+    },
+    {
+      "text": "I has finished my homework.",
+      "wrong": "has"
+    },
+    {
+      "text": "She is swim in the sea.",
+      "wrong": "swim"
+    },
+    {
+      "text": "They have buyed a new car.",
+      "wrong": "buyed"
+    },
+    {
+      "text": "He have visited the museum.",
+      "wrong": "have"
+    },
+    {
+      "text": "We going to the park now.",
+      "wrong": "going"
+    },
+    {
+      "text": "I have saw this film.",
+      "wrong": "saw"
+    },
+    {
+      "text": "She is reads a book.",
+      "wrong": "is"
+    }
+  ]
+}

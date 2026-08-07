@@ -35,18 +35,44 @@ export function DragAndDropTask({
   const [placed, setPlaced] = useState<Record<string, DragItem[]>>(() =>
     Object.fromEntries(columns.map((c) => [c.id, []]))
   )
-  const [dragging, setDragging] = useState<DragItem | null>(null)
+  // from: null = чип из пула, иначе id столбика, из которого тащат.
+  const [dragging, setDragging] = useState<{ item: DragItem; from: string | null } | null>(null)
   const [checked, setChecked] = useState(false)
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
   const { play } = useSound()
 
-  const handleDragStart = (item: DragItem) => setDragging(item)
+  const handleDragStart = (item: DragItem, from: string | null) => {
+    if (checked) return
+    setDragging({ item, from })
+  }
+
+  // Убирает чип из пула И из всех столбиков — так drag поддерживает перенос
+  // между столбиками и возврат в пул (аддитивно, старые задания не ломаются).
+  const removeEverywhere = (verb: string) => {
+    setPool((p) => p.filter((i) => i.verb !== verb))
+    setPlaced((prev) => {
+      const next = { ...prev }
+      for (const c of columns) {
+        next[c.id] = next[c.id].filter((i) => i.verb !== verb)
+      }
+      return next
+    })
+  }
 
   const handleDrop = (colId: string) => {
     if (!dragging) return
-    setPool((p) => p.filter((i) => i.verb !== dragging.verb))
-    setPlaced((prev) => ({ ...prev, [colId]: [...prev[colId], dragging] }))
+    const { item } = dragging
+    removeEverywhere(item.verb)
+    setPlaced((prev) => ({ ...prev, [colId]: [...prev[colId], item] }))
+    setDragging(null)
+  }
+
+  const handleDropToPool = () => {
+    if (!dragging) return
+    const { item } = dragging
+    removeEverywhere(item.verb)
+    setPool((p) => [...p, item])
     setDragging(null)
   }
 
@@ -97,8 +123,12 @@ export function DragAndDropTask({
       <h2 className="text-xl font-bold text-indigo-900">{title}</h2>
       <p className="text-sm text-slate-500">{description}</p>
 
-      {/* Pool */}
-      <div className="flex flex-wrap gap-2 min-h-[60px] p-3 bg-slate-50 rounded-xl border-2 border-dashed border-slate-200">
+      {/* Pool (сюда можно вернуть чип из столбика) */}
+      <div
+        onDragOver={(e) => e.preventDefault()}
+        onDrop={handleDropToPool}
+        className="flex flex-wrap gap-2 min-h-[60px] p-3 bg-slate-50 rounded-xl border-2 border-dashed border-slate-200"
+      >
         <AnimatePresence>
           {pool.map((item) => (
             <motion.div
@@ -107,8 +137,8 @@ export function DragAndDropTask({
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}
-              draggable
-              onDragStart={() => handleDragStart(item)}
+              draggable={!checked}
+              onDragStart={() => handleDragStart(item, null)}
               onDragEnd={() => setDragging(null)}
               className="px-3 py-2 bg-white rounded-lg border border-indigo-200 cursor-grab active:cursor-grabbing text-sm font-medium shadow-sm hover:shadow-md select-none"
             >
@@ -143,6 +173,9 @@ export function DragAndDropTask({
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       exit={{ scale: 0 }}
+                      draggable={!checked}
+                      onDragStart={() => handleDragStart(item, col.id)}
+                      onDragEnd={() => setDragging(null)}
                       onClick={() => handleReturn(col.id, idx)}
                       className={`px-2 py-1 rounded text-xs font-medium border cursor-pointer ${border}`}
                     >
@@ -156,7 +189,9 @@ export function DragAndDropTask({
         ))}
       </div>
 
-      {!checked && pool.length === 0 && (
+      {/* «Проверить» доступна в ЛЮБОЙ момент (не только когда пул пуст):
+          проверяются размещённые чипы, неразмещённые — мимо. */}
+      {!checked && (
         <motion.button
           whileTap={{ scale: 0.95 }}
           onClick={checkAnswers}

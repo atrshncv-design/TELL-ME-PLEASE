@@ -1,0 +1,79 @@
+{
+  "id": "present_perfect_a1_station_5",
+  "title": "Сортировка Маркеров (Perfect vs Past)",
+  "description": "Жесткая привязка маркера к времени.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "perfect",
+      "label": "Present Perfect"
+    },
+    {
+      "id": "past",
+      "label": "Past Simple"
+    }
+  ],
+  "items": [
+    {
+      "verb": "just",
+      "answer": "perfect"
+    },
+    {
+      "verb": "already",
+      "answer": "perfect"
+    },
+    {
+      "verb": "yet",
+      "answer": "perfect"
+    },
+    {
+      "verb": "ever",
+      "answer": "perfect"
+    },
+    {
+      "verb": "never",
+      "answer": "perfect"
+    },
+    {
+      "verb": "recently",
+      "answer": "perfect"
+    },
+    {
+      "verb": "today",
+      "answer": "perfect"
+    },
+    {
+      "verb": "this week",
+      "answer": "perfect"
+    },
+    {
+      "verb": "yesterday",
+      "answer": "past"
+    },
+    {
+      "verb": "last week",
+      "answer": "past"
+    },
+    {
+      "verb": "two days ago",
+      "answer": "past"
+    },
+    {
+      "verb": "in 2010",
+      "answer": "past"
+    },
+    {
+      "verb": "last summer",
+      "answer": "past"
+    },
+    {
+      "verb": "when I was 5",
+      "answer": "past"
+    },
+    {
+      "verb": "yesterday morning",
+      "answer": "past"
+    }
+  ]
+}

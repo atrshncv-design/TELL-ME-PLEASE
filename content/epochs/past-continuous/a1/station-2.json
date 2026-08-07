@@ -1,0 +1,54 @@
+{
+  "id": "past_continuous_a1_station_2",
+  "title": "Торможение Хаоса (Отрицание и Вопрос)",
+  "description": "Собери вопросы.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "playing / Were / you / tennis",
+      "options": [
+        "Were you playing tennis?",
+        "You were playing tennis?",
+        "Were playing you tennis?"
+      ],
+      "answer": "Were you playing tennis?"
+    },
+    {
+      "question": "she / Was / reading / a book",
+      "options": [
+        "Was she reading a book?",
+        "She was reading a book?",
+        "Was reading she a book?"
+      ],
+      "answer": "Was she reading a book?"
+    },
+    {
+      "question": "TV / they / watching / Were",
+      "options": [
+        "Were they watching TV?",
+        "They were watching TV?",
+        "Were watching they TV?"
+      ],
+      "answer": "Were they watching TV?"
+    },
+    {
+      "question": "sleeping / Was / he",
+      "options": [
+        "Was he sleeping?",
+        "He was sleeping?",
+        "Was sleeping he?"
+      ],
+      "answer": "Was he sleeping?"
+    },
+    {
+      "question": "studying / they / Were",
+      "options": [
+        "Were they studying?",
+        "They were studying?",
+        "Were studying they?"
+      ],
+      "answer": "Were they studying?"
+    }
+  ]
+}

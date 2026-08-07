@@ -1,0 +1,54 @@
+{
+  "id": "exam_s1_station_4",
+  "title": "Текст: Мой Сумасшедший День (Интеграция)",
+  "description": "Вставь пропущенные формы глаголов в текст «Мой Сумасшедший День»: интеграция 4 настоящих времён.",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "Hi! I ___ this email to you right now. I ___ so tired. I ___ for my exams for 3 weeks! Usually, I ___ nervous, but today I am stressed. Yesterday I ___ my Math test, but I still have History tomorrow. Right now, my brother ___ guitar. He always ___ so loudly! I ___ how I will survive this week.",
+  "answers": [
+    [
+      "am writing"
+    ],
+    [
+      "am"
+    ],
+    [
+      "have been studying"
+    ],
+    [
+      "do not get"
+    ],
+    [
+      "have already passed"
+    ],
+    [
+      "is playing"
+    ],
+    [
+      "plays"
+    ],
+    [
+      "do not know"
+    ]
+  ],
+  "word_bank": [
+    "am writing",
+    "am",
+    "have been studying",
+    "do not get",
+    "have already passed",
+    "is playing",
+    "plays",
+    "do not know"
+  ],
+  "hints": [
+    "(write)",
+    "(be)",
+    "(study)",
+    "(not / get)",
+    "(already / pass)",
+    "(play)",
+    "(play)",
+    "(not / know)"
+  ]
+}

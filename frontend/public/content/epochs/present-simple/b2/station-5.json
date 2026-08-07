@@ -1,0 +1,67 @@
+{
+  "id": "b2_station_5",
+  "title": "Сортировка Смыслов (Аналитика)",
+  "description": "Распредели предложения по значениям Present Simple.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "situation",
+      "label": "Постоянная ситуация"
+    },
+    {
+      "id": "schedule",
+      "label": "Расписание"
+    },
+    {
+      "id": "routine",
+      "label": "Повторяющееся действие"
+    },
+    {
+      "id": "fact",
+      "label": "Факт"
+    },
+    {
+      "id": "stative",
+      "label": "Стативный глагол"
+    }
+  ],
+  "items": [
+    {
+      "verb": "My parents work in a hotel.",
+      "answer": "situation"
+    },
+    {
+      "verb": "The bus arrives at 8:00.",
+      "answer": "schedule"
+    },
+    {
+      "verb": "Children often wear costumes at carnival.",
+      "answer": "routine"
+    },
+    {
+      "verb": "The sun rises in the east.",
+      "answer": "fact"
+    },
+    {
+      "verb": "I know this festival very well.",
+      "answer": "stative"
+    },
+    {
+      "verb": "We go to the countryside every summer.",
+      "answer": "routine"
+    },
+    {
+      "verb": "The concert begins at 9 p.m.",
+      "answer": "schedule"
+    },
+    {
+      "verb": "She understands the rules.",
+      "answer": "stative"
+    },
+    {
+      "verb": "My brother works in tourism.",
+      "answer": "situation"
+    }
+  ]
+}

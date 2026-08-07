@@ -1,0 +1,66 @@
+{
+  "id": "past_simple_a1_station_7",
+  "title": "Расскажи о Выходных (ИИ-бот)",
+  "description": "Расспроси бота о его выходных и ответь на его встречные вопросы.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль 12-летнего англоговорящего сверстника для ученика 5 класса (уровень A1). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ дружелюбно и коротко: хвали за старание, мягко поправляй ошибки в Past Simple и подсказывай нужные слова. Если ответ слишком короткий, вежливо попроси сказать полным предложением (например: I went to the park). Говори простыми короткими английскими фразами уровня A1, на русский не переходи.",
+  "checklist": [
+    {
+      "question": "What did you do last weekend?",
+      "markers": [
+        "went",
+        "played",
+        "watched",
+        "visited",
+        "met",
+        "stayed",
+        "walked"
+      ],
+      "min": 1,
+      "hint": "Скажи: I went to the park. / I played football."
+    },
+    {
+      "question": "Where did you go?",
+      "markers": [
+        "park",
+        "cinema",
+        "zoo",
+        "school",
+        "shop",
+        "home",
+        "museum",
+        "beach"
+      ],
+      "min": 1,
+      "hint": "Назови место: I went to the park (в парк), to the cinema (в кино)."
+    },
+    {
+      "question": "Did you play any games?",
+      "markers": [
+        "yes",
+        "no",
+        "played",
+        "games",
+        "football",
+        "computer"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I did. I played computer games. / No, I didn't."
+    },
+    {
+      "question": "What did you eat?",
+      "markers": [
+        "ate",
+        "pizza",
+        "ice cream",
+        "cake",
+        "sandwich",
+        "pasta",
+        "chocolate"
+      ],
+      "min": 1,
+      "hint": "Скажи: I ate pizza (я ел пиццу) / ice cream (мороженое)."
+    }
+  ]
+}

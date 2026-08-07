@@ -1,0 +1,59 @@
+{
+  "id": "future_simple_a1_station_1",
+  "title": "Запуск Хрустального Шара (Механика)",
+  "description": "Вставь will и раскрой скобки (V1).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ you with your homework.",
+      "hint": "(help)",
+      "answer": "will help"
+    },
+    {
+      "sentence": "She ___ you tomorrow.",
+      "hint": "(call)",
+      "answer": "will call"
+    },
+    {
+      "sentence": "We ___ to the park.",
+      "hint": "(go)",
+      "answer": "will go"
+    },
+    {
+      "sentence": "He ___ a new car.",
+      "hint": "(buy)",
+      "answer": "will buy"
+    },
+    {
+      "sentence": "They ___ tennis.",
+      "hint": "(play)",
+      "answer": "will play"
+    },
+    {
+      "sentence": "My mum ___ dinner.",
+      "hint": "(cook)",
+      "answer": "will cook"
+    },
+    {
+      "sentence": "You ___ a good mark.",
+      "hint": "(get)",
+      "answer": "will get"
+    },
+    {
+      "sentence": "Tom ___ his bike.",
+      "hint": "(ride)",
+      "answer": "will ride"
+    },
+    {
+      "sentence": "The dog ___.",
+      "hint": "(bark)",
+      "answer": "will bark"
+    },
+    {
+      "sentence": "It ___ tomorrow.",
+      "hint": "(rain)",
+      "answer": "will rain"
+    }
+  ]
+}

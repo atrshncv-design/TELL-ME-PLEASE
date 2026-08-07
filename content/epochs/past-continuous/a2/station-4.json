@@ -1,0 +1,33 @@
+{
+  "id": "past_continuous_a2_station_4",
+  "title": "Детектор Ошибок (Дебаггинг)",
+  "description": "Найди ошибку в каждом предложении: неправильный выбор was / were.",
+  "category": "grammar",
+  "type": "click-mistake",
+  "items": [
+    {
+      "text": "I were walking.",
+      "wrong": "were"
+    },
+    {
+      "text": "She were reading.",
+      "wrong": "were"
+    },
+    {
+      "text": "We was playing.",
+      "wrong": "was"
+    },
+    {
+      "text": "He were sleeping.",
+      "wrong": "were"
+    },
+    {
+      "text": "They was studying.",
+      "wrong": "was"
+    },
+    {
+      "text": "It were raining.",
+      "wrong": "were"
+    }
+  ]
+}

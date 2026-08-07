@@ -1,0 +1,44 @@
+{
+  "id": "future_perfect_a1_station_7",
+  "title": "Предсказание Результата (ИИ-бот)",
+  "description": "Спроси бота: 1. What will I have done by 5 PM tomorrow? 2. Will I have finished my homework by 8 PM? 3. Will I have gone to bed by 10 PM?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — путешественник во времени из будущего (time traveler). Общайся по-английски простыми фразами (уровень A1). Ученик будет задавать тебе вопросы о том, что он уже сделает к определённому моменту в будущем (Future Perfect: will have + V3) — отвечай дружелюбно, удивлённо и загадочно, рассказывай о будущем. Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ коротко и весело: хвали за старание, мягко поправляй ошибки в Future Perfect. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "What will I have done by 5 PM tomorrow?",
+      "markers": [
+        "What",
+        "will",
+        "have",
+        "done",
+        "5 PM"
+      ],
+      "min": 1,
+      "hint": "Спроси бота: What will I have done by 5 PM tomorrow?"
+    },
+    {
+      "question": "Will I have finished my homework by 8 PM?",
+      "markers": [
+        "Will",
+        "finished",
+        "homework",
+        "8 PM"
+      ],
+      "min": 1,
+      "hint": "Спроси бота: Will I have finished my homework by 8 PM?"
+    },
+    {
+      "question": "Will I have gone to bed by 10 PM?",
+      "markers": [
+        "Will",
+        "gone",
+        "bed",
+        "10 PM"
+      ],
+      "min": 1,
+      "hint": "Спроси бота: Will I have gone to bed by 10 PM?"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "present_perfect_b1_station_3",
+  "title": "Машина Времени (Перевод-Ловушка)",
+  "description": "Преодоление русской интерференции (когда \"уже\" и \"только что\" тянут использовать Past Simple).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ my project.",
+      "answer": [
+        "have just finished"
+      ],
+      "hint": "Я только что закончил проект."
+    },
+    {
+      "sentence": "We ___ the tickets.",
+      "answer": [
+        "have already bought"
+      ],
+      "hint": "Мы уже купили билеты."
+    },
+    {
+      "sentence": "She ___ the article ___.",
+      "answer": [
+        "hasn't read",
+        "yet"
+      ],
+      "hint": "Она еще не прочитала статью."
+    },
+    {
+      "sentence": "___ you ever ___ by plane?",
+      "answer": [
+        "Have",
+        "flown"
+      ],
+      "hint": "Ты когда-нибудь летал на самолете?"
+    },
+    {
+      "sentence": "He ___ never ___ this film.",
+      "answer": [
+        "has",
+        "seen"
+      ],
+      "hint": "Он никогда не видел этого фильма."
+    }
+  ]
+}

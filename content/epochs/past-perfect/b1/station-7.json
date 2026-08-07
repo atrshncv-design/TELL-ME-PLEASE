@@ -1,0 +1,58 @@
+{
+  "id": "past_perfect_b1_station_7",
+  "title": "Комикс \"Приквел\" (Продукт)",
+  "description": "Создай комикс из 4 кадров. Кадр 1: Past Perfect (Что было ДО проблемы). Кадр 2: Past Cont (Что происходило). Кадр 3: Past Simple (Что случилось). Кадр 4: Past Simple (Итог).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Комикс «Приквел»: 4 кадра",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Кадр 1: Past Perfect — что было ДО проблемы",
+      "hint": "Before the problem, the hero had lost his map.",
+      "markers": [
+        "had",
+        "lost",
+        "forgotten",
+        "broken",
+        "left",
+        "finished",
+        "seen",
+        "done",
+        "bought"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Кадр 2: Past Continuous — что происходило",
+      "hint": "The hero was walking through the forest.",
+      "markers": [
+        "was",
+        "were",
+        "walking",
+        "running",
+        "looking",
+        "trying",
+        "playing",
+        "going"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Кадры 3-4: Past Simple — что случилось и итог",
+      "hint": "Suddenly he found the treasure. The story ended happily.",
+      "markers": [
+        "found",
+        "went",
+        "came",
+        "saw",
+        "started",
+        "stopped",
+        "ended",
+        "was",
+        "happened"
+      ],
+      "min": 2
+    }
+  ]
+}

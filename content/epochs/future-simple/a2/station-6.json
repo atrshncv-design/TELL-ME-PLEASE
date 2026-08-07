@@ -1,0 +1,52 @@
+{
+  "id": "future_simple_a2_station_6",
+  "title": "Текст: Выходные (Чтение)",
+  "description": "Вставь going to / will в текст о выходных.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Tomorrow is Saturday. I ___ to the cinema with my friends. We ___ a new superhero movie. My mum ___ with us. She ___ at home. On Sunday, I think I ___ my homework. If I have time, I promise I ___ my dad in the garden.",
+      "answers": [
+        [
+          "am going to go"
+        ],
+        [
+          "are going to watch"
+        ],
+        [
+          "isn't going to go"
+        ],
+        [
+          "is going to stay"
+        ],
+        [
+          "will do"
+        ],
+        [
+          "will help"
+        ]
+      ],
+      "hints": [
+        "(go)",
+        "(watch)",
+        "(not / go)",
+        "(stay)",
+        "(do)",
+        "(help)"
+      ],
+      "word_bank": [
+        "am going to go",
+        "are going to watch",
+        "isn't going to go",
+        "is going to stay",
+        "will do",
+        "will help",
+        "goes",
+        "will watch",
+        "is going",
+        "helped"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "future_continuous_a2_station_6",
+  "title": "Блог: Мой Идеальный Завтрашний День (Продукт)",
+  "description": "Напиши 3 предложения о том, что ты будешь делать в разное время завтра (At 10 AM I will be... At 2 PM I will be... At 8 PM I will be...).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши 3 предложения о том, что ты будешь делать в разное время завтра (At 10 AM I will be... At 2 PM I will be... At 8 PM I will be...).",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Формула will be + V-ing",
+      "hint": "At 10 AM I will be studying.",
+      "markers": [
+        "will be"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Глаголы с -ing (занятия)",
+      "hint": "At 10 AM I will be playing football.",
+      "markers": [
+        "studying",
+        "playing",
+        "reading",
+        "watching",
+        "cooking",
+        "walking",
+        "doing",
+        "having",
+        "sleeping",
+        "working",
+        "meeting"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Время завтра",
+      "hint": "At 2 PM I will be playing football.",
+      "markers": [
+        "10 am",
+        "2 pm",
+        "8 pm",
+        "tomorrow",
+        "5 pm"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Три разных времени",
+      "hint": "At 10 AM I will be... At 2 PM I will be... At 8 PM I will be...",
+      "markers": [
+        "10 am",
+        "2 pm",
+        "8 pm"
+      ],
+      "min": 3
+    }
+  ]
+}

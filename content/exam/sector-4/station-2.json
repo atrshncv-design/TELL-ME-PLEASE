@@ -1,0 +1,59 @@
+{
+  "id": "exam_s4_station_2",
+  "title": "Перевод-Ловушка (12 Времен)",
+  "description": "Переведи фразы, выбирая правильное время.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ tennis every day.",
+      "answer": "play",
+      "hint": "Я играю в теннис каждый день."
+    },
+    {
+      "sentence": "I ___ tennis right now.",
+      "answer": "am playing",
+      "hint": "Я играю в теннис прямо сейчас."
+    },
+    {
+      "sentence": "I ___ tennis yesterday.",
+      "answer": "played",
+      "hint": "Я играл в теннис вчера."
+    },
+    {
+      "sentence": "I ___ tennis at 5 PM yesterday.",
+      "answer": "was playing",
+      "hint": "Я играл в теннис в 5 вечера вчера."
+    },
+    {
+      "sentence": "I ___ 3 games today.",
+      "answer": "have played",
+      "hint": "Я уже сыграл 3 партии сегодня."
+    },
+    {
+      "sentence": "I ___ tennis for 2 hours.",
+      "answer": "have been playing",
+      "hint": "Я играю в теннис уже 2 часа."
+    },
+    {
+      "sentence": "I ___ tennis tomorrow.",
+      "answer": "will play",
+      "hint": "Я сыграю в теннис завтра."
+    },
+    {
+      "sentence": "I ___ tennis at 5 PM tomorrow.",
+      "answer": "will be playing",
+      "hint": "Я буду играть в теннис завтра в 5 вечера."
+    },
+    {
+      "sentence": "I ___ tennis by 5 PM tomorrow.",
+      "answer": "will have played",
+      "hint": "Я уже сыграю в теннис к 5 вечера завтра."
+    },
+    {
+      "sentence": "I ___ tennis for 2 hours by 5 PM tomorrow.",
+      "answer": "will have been playing",
+      "hint": "Я буду играть в теннис уже 2 часа к 5 вечера завтра."
+    }
+  ]
+}

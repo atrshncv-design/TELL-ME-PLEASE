@@ -1,0 +1,41 @@
+{
+  "id": "future_simple_a1_station_3",
+  "title": "Спонтанные Решения (Речь)",
+  "description": "Прочитай ситуацию и выбери спонтанное решение.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "You are hungry.",
+      "options": [
+        "I will eat an apple",
+        "I am eating an apple"
+      ],
+      "answer": "I will eat an apple"
+    },
+    {
+      "question": "The phone is ringing.",
+      "options": [
+        "I will answer it",
+        "I am answering"
+      ],
+      "answer": "I will answer it"
+    },
+    {
+      "question": "It's cold.",
+      "options": [
+        "I will close the window",
+        "I close the window"
+      ],
+      "answer": "I will close the window"
+    },
+    {
+      "question": "You broke a cup.",
+      "options": [
+        "I will buy a new one",
+        "I buy a new one"
+      ],
+      "answer": "I will buy a new one"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "present_perfect_a1_station_3_b",
+  "title": "Торможение Хаоса (Отрицание)",
+  "description": "Отработка отрицаний haven't/hasn't + V3.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ (visit) London.",
+      "answer": "haven't visited"
+    },
+    {
+      "sentence": "She ___ (see) Big Ben.",
+      "answer": "hasn't seen"
+    },
+    {
+      "sentence": "We ___ (travel) to Spain.",
+      "answer": "haven't travelled"
+    },
+    {
+      "sentence": "He ___ (eat) a pizza.",
+      "answer": "hasn't eaten"
+    },
+    {
+      "sentence": "They ___ (buy) souvenirs.",
+      "answer": "haven't bought"
+    },
+    {
+      "sentence": "My mum ___ (take) a photo.",
+      "answer": "hasn't taken"
+    },
+    {
+      "sentence": "You ___ (stay) at a hotel.",
+      "answer": "haven't stayed"
+    },
+    {
+      "sentence": "Tom ___ (swim) in the sea.",
+      "answer": "hasn't swum"
+    },
+    {
+      "sentence": "We ___ (rent) a boat.",
+      "answer": "haven't rented"
+    },
+    {
+      "sentence": "He ___ (ride) a bike.",
+      "answer": "hasn't ridden"
+    },
+    {
+      "sentence": "I ___ (walk) in the park.",
+      "answer": "haven't walked"
+    },
+    {
+      "sentence": "She ___ (watch) a film.",
+      "answer": "hasn't watched"
+    },
+    {
+      "sentence": "They ___ (play) tennis.",
+      "answer": "haven't played"
+    },
+    {
+      "sentence": "My dad ___ (fly) to Italy.",
+      "answer": "hasn't flown"
+    },
+    {
+      "sentence": "You ___ (drink) all the juice.",
+      "answer": "haven't drunk"
+    }
+  ]
+}

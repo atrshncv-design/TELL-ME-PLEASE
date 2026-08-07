@@ -1,0 +1,57 @@
+{
+  "id": "past_simple_b2_station_2",
+  "title": "Ловушки со Временами (Выбор формы)",
+  "description": "Выбери правильную форму времени в предложении.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ my keys yesterday, so I couldn't open the door.",
+      "options": [
+        "have lost",
+        "lost"
+      ],
+      "answer": "lost"
+    },
+    {
+      "question": "I ___ my keys! I can't open the door now.",
+      "options": [
+        "have lost",
+        "lost"
+      ],
+      "answer": "have lost"
+    },
+    {
+      "question": "When ___ your best friend?",
+      "options": [
+        "did you meet",
+        "have you met"
+      ],
+      "answer": "did you meet"
+    },
+    {
+      "question": "We ___ each other since 2015.",
+      "options": [
+        "didn't see",
+        "haven't seen"
+      ],
+      "answer": "haven't seen"
+    },
+    {
+      "question": "Shakespeare ___ many plays.",
+      "options": [
+        "wrote",
+        "has written"
+      ],
+      "answer": "wrote"
+    },
+    {
+      "question": "I ___ two books this month.",
+      "options": [
+        "read",
+        "have read"
+      ],
+      "answer": "have read"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "present_perfect_continuous_b2_station_5",
+  "title": "Описание Фотографии (ОГЭ Task 3)",
+  "description": "Опиши фото: Present Continuous для действий на фото, Present Perfect Continuous для контекста.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Опиши фотографию (люди работают в саду / убирают парк) — ОГЭ Задание 3",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Present Continuous для действий на фото",
+      "hint": "They are planting trees.",
+      "markers": [
+        "am",
+        "is",
+        "are"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Present Perfect Continuous для контекста",
+      "hint": "They have been working for 2 hours.",
+      "markers": [
+        "have",
+        "has",
+        "been"
+      ],
+      "min": 2
+    },
+    {
+      "label": "План ОГЭ: где / кто / что делает",
+      "hint": "The photo shows... In the background...",
+      "markers": [
+        "photo",
+        "picture",
+        "see",
+        "background",
+        "left",
+        "right",
+        "front",
+        "park",
+        "garden",
+        "trees"
+      ],
+      "min": 2
+    }
+  ]
+}

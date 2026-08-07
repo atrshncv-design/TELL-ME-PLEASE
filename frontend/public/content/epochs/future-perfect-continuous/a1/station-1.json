@@ -1,0 +1,49 @@
+{
+  "id": "future_perfect_continuous_a1_station_1",
+  "title": "Сборка Марафонца (Механика)",
+  "description": "Вставь will have been и добавь -ing к глаголу.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "By 5 PM I ___ (play) tennis for 2 hours.",
+      "answer": "will have been playing"
+    },
+    {
+      "sentence": "She ___ (read) a book for an hour by noon.",
+      "answer": "will have been reading"
+    },
+    {
+      "sentence": "We ___ (watch) TV for 3 hours by evening.",
+      "answer": "will have been watching"
+    },
+    {
+      "sentence": "He ___ (sleep) for 4 hours by 6 PM.",
+      "answer": "will have been sleeping"
+    },
+    {
+      "sentence": "They ___ (study) for 2 hours by the time you come.",
+      "answer": "will have been studying"
+    },
+    {
+      "sentence": "My mum ___ (cook) for an hour by 7 PM.",
+      "answer": "will have been cooking"
+    },
+    {
+      "sentence": "You ___ (run) for 30 minutes by 5 PM.",
+      "answer": "will have been running"
+    },
+    {
+      "sentence": "Tom ___ (ride) his bike for 2 hours by evening.",
+      "answer": "will have been riding"
+    },
+    {
+      "sentence": "The dog ___ (bark) all day by night.",
+      "answer": "will have been barking"
+    },
+    {
+      "sentence": "It ___ (rain) for 3 hours by morning.",
+      "answer": "will have been raining"
+    }
+  ]
+}

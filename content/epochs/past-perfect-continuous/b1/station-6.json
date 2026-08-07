@@ -1,0 +1,62 @@
+{
+  "id": "past_perfect_continuous_b1_station_6",
+  "title": "Интервью с Геймером (Диалог с ИИ)",
+  "description": "Спроси его: 1. How long had you been playing before you won your first tournament? 2. How many matches had you won before you became famous? 3. Had you been streaming before you got popular? 4. How long had you been using this keyboard before it broke?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Промпт: \"Act like a professional gamer. Use B1 English.\" Ты — профессиональный киберспортсмен и известный стример. Общайся по-английски (уровень B1). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй живо, как на интервью: комментируй ответы, задавай уточняющие вопросы, мягко поправляй ошибки в Past Perfect и Past Perfect Continuous. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "How long had you been playing before you won your first tournament?",
+      "markers": [
+        "had been",
+        "for",
+        "years",
+        "playing",
+        "won",
+        "tournament"
+      ],
+      "min": 1,
+      "hint": "Ответь: I had been playing for 2 years before I won my first tournament."
+    },
+    {
+      "question": "How many matches had you won before you became famous?",
+      "markers": [
+        "matches",
+        "won",
+        "famous",
+        "two",
+        "three",
+        "five",
+        "ten"
+      ],
+      "min": 1,
+      "hint": "Ответь: I had won ten matches before I became famous."
+    },
+    {
+      "question": "Had you been streaming before you got popular?",
+      "markers": [
+        "yes",
+        "no",
+        "streaming",
+        "popular",
+        "had been"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I had been streaming for a year before I got popular."
+    },
+    {
+      "question": "How long had you been using this keyboard before it broke?",
+      "markers": [
+        "had been",
+        "for",
+        "keyboard",
+        "using",
+        "broke",
+        "years"
+      ],
+      "min": 1,
+      "hint": "Ответь: I had been using it for a year before it broke."
+    }
+  ]
+}

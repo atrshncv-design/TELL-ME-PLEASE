@@ -1,0 +1,57 @@
+{
+  "id": "future_perfect_b1_station_4",
+  "title": "Текст: Запуск Приложения (Интеграция)",
+  "description": "Раскрой скобки в тексте о запуске приложения.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Tomorrow is a big day for our team! By 10 AM, we ___ the design. By noon, the programmers ___ all the bugs. At 3 PM, while we ___ the app, the boss ___. By 5 PM, we ___ it to the store. I think by 6 PM, thousands of people ___ it. We ___ so happy!",
+      "answers": [
+        [
+          "will have finished"
+        ],
+        [
+          "will have fixed"
+        ],
+        [
+          "are testing"
+        ],
+        [
+          "will call"
+        ],
+        [
+          "will have uploaded"
+        ],
+        [
+          "will have downloaded"
+        ],
+        [
+          "will be"
+        ]
+      ],
+      "hints": [
+        "(finish)",
+        "(fix)",
+        "(test)",
+        "(call)",
+        "(upload)",
+        "(download)",
+        "(be)"
+      ],
+      "word_bank": [
+        "will have finished",
+        "will have fixed",
+        "are testing",
+        "will call",
+        "will have uploaded",
+        "will have downloaded",
+        "will be",
+        "will have fix",
+        "will testing",
+        "will have upload",
+        "will have download"
+      ]
+    }
+  ]
+}

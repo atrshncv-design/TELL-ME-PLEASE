@@ -1,0 +1,251 @@
+{
+  "epoch": "present-perfect",
+  "title": "Эпоха Present Perfect",
+  "subtitle": "Рюкзак Опыта",
+  "icon": "🎒",
+  "theory": [
+    {
+      "title": "🎒 Шаг 1: Суть времени (Что это такое?)",
+      "text": "Привет, ребята! 👋 Мы начинаем покорение самого коварного, но безумно логичного времени — Present Perfect (Настоящее совершенное).\nВ русском языке мы говорим: «Я уже сделал домашку» или «Я никогда не видел океан». В английском для этого есть Present Perfect. Представьте, что Present Perfect — это «Рюкзак вашего Жизненного Опыта» 🎒 или «Мостик» 🌉 между прошлым и настоящим.\nВас интересует НЕ точное время в прошлом (когда именно это было).\nВас интересует РЕЗУЛЬТАТ прямо сейчас: действие закончилось, но след от него остался. (Я потерял ключи ➡️ результат: я сейчас не могу войти в дом).\nФормула (Базовый каркас):\nПодлежащее + HAVE / HAS + Глагол в 3-й форме (V3)\nI have visited London. (Я посетил Лондон ➡️ результат: я знаю, какой он).\nHe has lost his keys. (Он потерял ключи ➡️ результат: он стоит у закрытой двери).\n⚠️ ГЛАВНЫЙ БОСС Present Perfect: Выбор HAVE или HAS.\nДля I, You, We, They ➡️ HAVE.\nДля He, She, It ➡️ HAS. (Лайфхак: HAS забирает букву -s у смыслового глагола себе!)"
+    },
+    {
+      "title": "🎭 Шаг 2: Все 4 жизни Present Perfect (Когда использовать?)",
+      "text": "Жизненный опыт (Experience): То, что вы делали (или не делали) хоть раз в жизни. Маркеры: ever (когда-либо), never (никогда).\nHave you ever eaten sushi? (Ты когда-нибудь ел суши?)\nСвежий результат (Recent actions): Действие только что завершилось, и мы видим его результат сейчас. Маркеры: just (только что), already (уже), yet (еще не).\nShe has just finished her work. (Она только что закончила работу ➡️ сейчас свободна).\nНезаконченный период (Unfinished time): Действие произошло в период времени, который ЕЩЕ не закончился (сегодня, на этой неделе, в этом году). Маркеры: today, this week, this month.\nWe have bought a new car this week. (Мы купили машину на этой неделе ➡️ неделя еще идет).\nНачалось в прошлом, длится до сих пор: (С предлогами for/since, часто со стативными глаголами).\nI have known him for 5 years. (Я знаю его уже 5 лет)."
+    },
+    {
+      "title": "🎓 Шаг 3: Секреты формы V3 (Третья форма глагола)",
+      "text": "Как получить V3? У вас есть 2 пути:\nПравильные глаголы (Regular): Просто добавляем окончание -ED (как в Past Simple).\nplay -> play*ed, visit -> visited*. (Важно помнить про орфографию: stop -> stopped, study -> studied).\nНеправильные глаголы (Irregular): Их нужно выучить! Третья форма — это последняя колонка в таблице неправильных глаголов.\ngo -> went -> gone\nsee -> saw -> seen\nbuy -> bought -> bought (У некоторых глаголов 2-я и 3-я формы совпадают)."
+    },
+    {
+      "title": "⚔️ Шаг 4: Битва Present Perfect vs Past Simple (Главное правило ОГЭ)",
+      "text": "Это битва десятилетий! Как не перепутать?\nPast Simple — это «Историк» 📜. Он всегда называет ТОЧНОЕ ВРЕМЯ в прошлом (законченный период). Маркеры: yesterday, last week, two days ago, in 2010.\nI lost my keys yesterday. (Я потерял ключи ВЧЕРА. Мы говорим о факте из прошлого. Используем V2: lose -> lost).\nPresent Perfect — это «Детектив» 🕵️‍♂️. Его не волнует, КОГДА это было. Его волнует РЕЗУЛЬТАТ СЕЙЧАС. Период времени еще НЕ закончился. Маркеры: just, already, yet, ever, never, today.\nI have lost my keys! (Я потерял ключи! Результат: я не могу открыть дверь сейчас. Используем V3: lose -> lost, но с have: have lost).\n💡 Лайфхак для ОГЭ: Если можете задать вопрос «КОГДА ИМЕННО?» (When exactly?) и ответить «Вчера/в 5 часов» — смело пиши Past Simple (V2). Если вопрос «Когда?» бессмысленен (I have bought a car — когда? неважно, я просто сейчас на ней езжу) — пиши Present Perfect (have + V3)."
+    }
+  ],
+  "theoryQuiz": [
+    {
+      "question": "I ___ London last year.",
+      "options": [
+        "have visited",
+        "visited"
+      ],
+      "answer": "visited"
+    },
+    {
+      "question": "She ___ her homework.",
+      "options": [
+        "has just finished",
+        "just finished"
+      ],
+      "answer": "has just finished"
+    },
+    {
+      "question": "We ___ sushi.",
+      "options": [
+        "have never eaten",
+        "never ate"
+      ],
+      "answer": "have never eaten"
+    },
+    {
+      "question": "___ this film yesterday?",
+      "options": [
+        "Have you seen",
+        "Did you see"
+      ],
+      "answer": "Did you see"
+    },
+    {
+      "question": "My dad ___ a new car! We can go for a drive now.",
+      "options": [
+        "has bought",
+        "bought"
+      ],
+      "answer": "has bought"
+    }
+  ],
+  "music": {
+    "title": "🎵 Музыкальная пауза (Караоке-генератор)",
+    "links": [
+      "[Ссылка на Rutube/Yandex коллекцию песен по Present Perfect]"
+    ],
+    "sunoPrompt": "Придумай веселую песню про Present Perfect. В песне объясни, что мы используем have/has + 3-ю форму глагола (V3), когда говорим о жизненном опыте (ever/never) или свежем результате (just/already). Напомни, что если есть слово yesterday, то нужно использовать Past Simple. Стиль: upbeat pop-rock, 120 bpm, educational song."
+  },
+  "sectors": [
+    {
+      "id": "a1",
+      "level": "A1",
+      "title": "Первый Контакт",
+      "grade": 5,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a1/station-1.json",
+          "title": "Запуск Реактора (Механика have/has + V3)"
+        },
+        {
+          "id": "station-2",
+          "file": "a1/station-2.json",
+          "title": "Орфографический Щит и Детектор (Формы V3)"
+        },
+        {
+          "id": "station-3",
+          "file": "a1/station-3.json",
+          "title": "Торможение Хаоса (Отрицание и Вопрос)"
+        },
+        {
+          "id": "station-4",
+          "file": "a1/station-4.json",
+          "title": "Ловушка V2 или V3? (Дебаггинг)"
+        },
+        {
+          "id": "station-5",
+          "file": "a1/station-5.json",
+          "title": "Сортировка Маркеров (Perfect vs Past)"
+        },
+        {
+          "id": "station-6",
+          "file": "a1/station-6.json",
+          "title": "Письмо из Отпуска (Интеграция в текст)"
+        },
+        {
+          "id": "station-7",
+          "file": "a1/station-7.json",
+          "title": "Интервью Путешественника (Речь и ИИ-бот)"
+        }
+      ],
+      "story": "Знакомство с V3, have/has, базовый опыт (модуль Travel)."
+    },
+    {
+      "id": "a2",
+      "level": "A2",
+      "title": "Накопитель Опыта",
+      "grade": 6,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a2/station-1.json",
+          "title": "Расширение Базы (Новые V3)"
+        },
+        {
+          "id": "station-2",
+          "file": "a2/station-2.json",
+          "title": "Трехсторонняя Битва (Simple vs Cont vs Perfect)"
+        },
+        {
+          "id": "station-3",
+          "file": "a2/station-3.json",
+          "title": "Викторина Трех Миров (Выбор формы)"
+        },
+        {
+          "id": "station-4",
+          "file": "a2/station-4.json",
+          "title": "Детектор Лжи (Поиск ошибок)"
+        },
+        {
+          "id": "station-5",
+          "file": "a2/station-5.json",
+          "title": "Опыт с маркерами (Сборка)"
+        },
+        {
+          "id": "station-6",
+          "file": "a2/station-6.json",
+          "title": "Блог \"Мой Отпуск\" (Продукт)"
+        },
+        {
+          "id": "station-7",
+          "file": "a2/station-7.json",
+          "title": "Скоростное Свидание (Диалог)"
+        }
+      ],
+      "story": "Лексика еды, хобби, рутины (Spotlight 6). Сравнение трех настоящих времен."
+    },
+    {
+      "id": "b1",
+      "level": "B1",
+      "title": "Мастер Перехода",
+      "grade": "7-8",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b1/station-1.json",
+          "title": "Тренажер Маркеров (Уточнение времени)"
+        },
+        {
+          "id": "station-2",
+          "file": "b1/station-2.json",
+          "title": "Ловушка \"To Be\" (Been vs Gone)"
+        },
+        {
+          "id": "station-3",
+          "file": "b1/station-3.json",
+          "title": "Машина Времени (Перевод-Ловушка)"
+        },
+        {
+          "id": "station-4",
+          "file": "b1/station-4.json",
+          "title": "Рекордер Событий (Текст с пропусками)"
+        },
+        {
+          "id": "station-5",
+          "file": "b1/station-5.json",
+          "title": "Проблема и Результат (Речь)"
+        },
+        {
+          "id": "station-6",
+          "file": "b1/station-6.json",
+          "title": "Интервью с Блогером (Диалог)"
+        },
+        {
+          "id": "station-7",
+          "file": "b1/station-7.json",
+          "title": "Комикс \"Несчастный случай\" (Продукт)"
+        }
+      ],
+      "story": "Лексика технологий, медиа, окружения (Spotlight 7/8). Глубокое对比ление Present Perfect и Past Simple."
+    },
+    {
+      "id": "b2",
+      "level": "B2",
+      "title": "Мастер Временной Ткани",
+      "grade": 9,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b2/station-1.json",
+          "title": "ОГЭ-Тренажер (Task 19)"
+        },
+        {
+          "id": "station-2",
+          "file": "b2/station-2.json",
+          "title": "Ловушки со Стативными Глаголами (For/Since)"
+        },
+        {
+          "id": "station-3",
+          "file": "b2/station-3.json",
+          "title": "Вскрытие Архивов (Текст ОГЭ)"
+        },
+        {
+          "id": "station-4",
+          "file": "b2/station-4.json",
+          "title": "Симуляция ОГЭ (Устная часть Task 2)"
+        },
+        {
+          "id": "station-5",
+          "file": "b2/station-5.json",
+          "title": "Описание Фотографии (ОГЭ Task 3)"
+        },
+        {
+          "id": "station-6",
+          "file": "b2/station-6.json",
+          "title": "Перевод-Ловушка (Подготовка к письменной части)"
+        },
+        {
+          "id": "station-7",
+          "file": "b2/station-7.json",
+          "title": "Дебаты \"Старое vs Новое\" (Финальный Босс)"
+        }
+      ],
+      "story": "Лексика общества, закона, профессий (Spotlight 9). Безупречное владение Perfect vs Past для ОГЭ."
+    }
+  ]
+}

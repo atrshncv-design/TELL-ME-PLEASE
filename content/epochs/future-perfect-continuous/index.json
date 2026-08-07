@@ -1,0 +1,251 @@
+{
+  "epoch": "future-perfect-continuous",
+  "title": "Эпоха Future Perfect Continuous",
+  "subtitle": "Марафон в Будущем",
+  "icon": "⏱️⏭️",
+  "theory": [
+    {
+      "title": "⏱️ Шаг 1: Суть времени (Что это такое?)",
+      "text": "Привет, ребята! 👋 Мы добрались до вершины английской грамматики. Вы уже знаете, что Future Continuous — это «Видеокамера» 🎥 (процесс в 5 вечера), а Future Perfect — это «Финишная черта» 🏁 (результат готов к 5 вечера). Future Perfect Continuous — это «Секундомер на Финише» ⏱️🏃‍♂️.\nВы переноситесь в будущее, смотрите на часовой механизм и понимаете: к этому моменту какое-то действие будет длиться уже определенное время. Вас интересует не результат (сколько штук сделано), а КАК ДОЛГО это длилось!\nФормула (Самая длинная в английском):\nПодлежащее + WILL HAVE BEEN + Глагол с окончанием -ING\nBy 5 PM tomorrow I will have been studying for 3 hours. (Завтра к 5 вечера я буду учиться уже 3 часа — процесс длился 3 часа к моменту в будущем)."
+    },
+    {
+      "title": "🎭 Шаг 2: Когда использовать Future Perfect Continuous?",
+      "text": "Длительность до момента в будущем: Процесс начался в прошлом/настоящем и будет длиться до определенной точки в будущем. Маркеры: by (к моменту), for (в течение).\nBy next year I will have been living here for 10 years. (К следующему году я буду жить здесь уже 10 лет).\nПричина и следствие в будущем: Длинный процесс к моменту в будущем станет причиной видимого состояния (усталость, грязь).\nWhen you arrive, I will be tired because I will have been working all day. (Когда ты приедешь, я буду уставшей, потому что буду работать весь день)."
+    },
+    {
+      "title": "⚔️ Шаг 3: Битва Будущих (Сравнение 4-х времен)",
+      "text": "Как не запутаться на ОГЭ/ЕГЭ? Задайте вопрос: «Что меня интересует?»\nFuture Simple (Факт 🔮): Что случится? I will work tomorrow.\nFuture Continuous (Процесс 🎥): Что будет в процессе в момент? At 5 PM I will be working.\nFuture Perfect (Результат 🏁): Что будет УЖЕ сделано к моменту? By 5 PM I will have finished the report. (Сколько штук?).\nFuture Perfect Continuous (Длительность ⏱️): Как долго это будет длиться к моменту? By 5 PM I will have been working for 3 hours.\n💡 Лайфхак для ОГЭ: Если вы видите двойной маркер: by (к моменту) + for (в течение) — это 100% сигнал для Future Perfect Continuous!"
+    },
+    {
+      "title": "🚨 Шаг 4: ГЛАВНАЯ ЛОВУШКА: Stative Verbs (Глаголы состояния)",
+      "text": "Как и во всех Continuous, глаголы чувств и мышления (love, know, want, understand) НЕЛЬЗЯ использовать с -ING! Если нужно показать, что вы будете знать кого-то долго к моменту в будущем, используем Future Perfect (без -ing).\n❌ By next year I will have been knowing him for 5 years.\n✅ By next year I will have known him for 5 years."
+    }
+  ],
+  "theoryQuiz": [
+    {
+      "question": "By 5 PM tomorrow I ___ tennis for 2 hours.",
+      "options": [
+        "will play",
+        "will have been playing"
+      ],
+      "answer": "will have been playing"
+    },
+    {
+      "question": "At 5 PM tomorrow I ___ tennis.",
+      "options": [
+        "will be playing",
+        "will have been playing"
+      ],
+      "answer": "will be playing"
+    },
+    {
+      "question": "By next year she ___ him for 10 years.",
+      "options": [
+        "will have been knowing",
+        "will have known"
+      ],
+      "answer": "will have known"
+    },
+    {
+      "question": "When you come home, I ___ for 3 hours. I'll be tired!",
+      "options": [
+        "will be cooking",
+        "will have been cooking"
+      ],
+      "answer": "will have been cooking"
+    },
+    {
+      "question": "By 7 PM we ___ the project.",
+      "options": [
+        "will have finished",
+        "will have been finishing"
+      ],
+      "answer": "will have finished"
+    }
+  ],
+  "music": {
+    "title": "🎵 Музыкальная пауза (Караоке-генератор)",
+    "links": [
+      "[Ссылка на Rutube/Yandex коллекцию]"
+    ],
+    "sunoPrompt": "Придумай ритмичную и эпичную песню про Future Perfect Continuous. Объясни, что мы используем will have been + V-ing с маркерами by и for, когда говорим о длительности процесса к моменту в будущем. Напомни, что глаголы состояния (know, love) не используют -ing. В припеве должны быть слова: by, for, will have been, doing. Стиль: epic synth-wave, energetic, 120 bpm."
+  },
+  "sectors": [
+    {
+      "id": "a1",
+      "level": "A1",
+      "title": "Первый Секундомер",
+      "grade": 5,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a1/station-1.json",
+          "title": "Сборка Марафонца (Механика)"
+        },
+        {
+          "id": "station-2",
+          "file": "a1/station-2.json",
+          "title": "Торможение Хаоса (Вопрос)"
+        },
+        {
+          "id": "station-3",
+          "file": "a1/station-3.json",
+          "title": "Двойной Маркер (BY + FOR)"
+        },
+        {
+          "id": "station-4",
+          "file": "a1/station-4.json",
+          "title": "Орфографический Щит (-ING)"
+        },
+        {
+          "id": "station-5",
+          "file": "a1/station-5.json",
+          "title": "Контраст: Процесс vs Длительность (Fut Cont vs Fut PerfCont)"
+        },
+        {
+          "id": "station-6",
+          "file": "a1/station-6.json",
+          "title": "Текст: Долгая Подготовка (Интеграция)"
+        },
+        {
+          "id": "station-7",
+          "file": "a1/station-7.json",
+          "title": "Предсказание Длительности (ИИ-бот)"
+        }
+      ],
+      "story": "Механика will have been + V-ing, маркеры BY и FOR."
+    },
+    {
+      "id": "a2",
+      "level": "A2",
+      "title": "Хроники Процессов",
+      "grade": 6,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a2/station-1.json",
+          "title": "Триггер: Причина и Следствие"
+        },
+        {
+          "id": "station-2",
+          "file": "a2/station-2.json",
+          "title": "Грамматический Босс: Stative Verbs (Ловушка)"
+        },
+        {
+          "id": "station-3",
+          "file": "a2/station-3.json",
+          "title": "Тренажер Перевода (Интерференция)"
+        },
+        {
+          "id": "station-4",
+          "file": "a2/station-4.json",
+          "title": "Вопросы о Длительности (Синтаксис)"
+        },
+        {
+          "id": "station-5",
+          "file": "a2/station-5.json",
+          "title": "Текст: Долгий Рабочий День (Чтение)"
+        },
+        {
+          "id": "station-6",
+          "file": "a2/station-6.json",
+          "title": "Блог: Мои Достижения (Продукт)"
+        },
+        {
+          "id": "station-7",
+          "file": "a2/station-7.json",
+          "title": "Скоростное Свидание (Диалог)"
+        }
+      ],
+      "story": "Причина и следствие в будущем, вопросы о длительности."
+    },
+    {
+      "id": "b1",
+      "level": "B1",
+      "title": "Битва Будущих Перфектов",
+      "grade": "7-8",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b1/station-1.json",
+          "title": "Процесс или Результат? (Сортировка)"
+        },
+        {
+          "id": "station-2",
+          "file": "b1/station-2.json",
+          "title": "Виктория Будущих (Выбор формы)"
+        },
+        {
+          "id": "station-3",
+          "file": "b1/station-3.json",
+          "title": "Визуальный Фильтр (Поиск ошибок)"
+        },
+        {
+          "id": "station-4",
+          "file": "b1/station-4.json",
+          "title": "Текст: Запуск Игры (Интеграция)"
+        },
+        {
+          "id": "station-5",
+          "file": "b1/station-5.json",
+          "title": "Объясни Ситуацию (Речь)"
+        },
+        {
+          "id": "station-6",
+          "file": "b1/station-6.json",
+          "title": "Интервью с Разработчиком Игр (Диалог с ИИ)"
+        },
+        {
+          "id": "station-7",
+          "file": "b1/station-7.json",
+          "title": "Мини-Проект: \"Мой Долгий Путь\" (Продукт)"
+        }
+      ],
+      "story": "Лексика технологий, проектов. Глубокое сравнение Future Perfect vs Future Perfect Continuous."
+    },
+    {
+      "id": "b2",
+      "level": "B2",
+      "title": "Мастер Временной Ткани",
+      "grade": 9,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b2/station-1.json",
+          "title": "ОГЭ-Тренажер (Task 19: 5 Будущих)"
+        },
+        {
+          "id": "station-2",
+          "file": "b2/station-2.json",
+          "title": "Тонкие Смыслы (Перевод-Ловушка)"
+        },
+        {
+          "id": "station-3",
+          "file": "b2/station-3.json",
+          "title": "Текст ОГЭ: Космическое Будущее (Чтение)"
+        },
+        {
+          "id": "station-4",
+          "file": "b2/station-4.json",
+          "title": "Симуляция ОГЭ (Устная часть Task 2)"
+        },
+        {
+          "id": "station-5",
+          "file": "b2/station-5.json",
+          "title": "Описание Фотографии (ОГЭ Task 3)"
+        },
+        {
+          "id": "station-6",
+          "file": "b2/station-6.json",
+          "title": "Эссе: \"Мой Путь\" (Монолог)"
+        },
+        {
+          "id": "station-7",
+          "file": "b2/station-7.json",
+          "title": "Финальный Босс: 5 Будущих (Викторина)"
+        }
+      ],
+      "story": "Безупречное владение всеми 5 будущими временами для формата ОГЭ/ЕГЭ."
+    }
+  ]
+}

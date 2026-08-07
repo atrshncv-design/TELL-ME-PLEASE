@@ -1,0 +1,65 @@
+{
+  "id": "future_perfect_b2_station_2",
+  "title": "Ловушки ОГЭ (Смешанные Времена)",
+  "description": "Выбери правильную форму.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "By the time you ___ , I will have finished my homework.",
+      "options": [
+        "come",
+        "will come"
+      ],
+      "answer": "come"
+    },
+    {
+      "question": "By the time you come, I ___ my homework.",
+      "options": [
+        "will have finished",
+        "will finish"
+      ],
+      "answer": "will have finished"
+    },
+    {
+      "question": "At 5 PM tomorrow I ___ tennis.",
+      "options": [
+        "will be playing",
+        "will have played"
+      ],
+      "answer": "will be playing"
+    },
+    {
+      "question": "I think I ___ my exam next week.",
+      "options": [
+        "will pass",
+        "will have passed"
+      ],
+      "answer": "will pass"
+    },
+    {
+      "question": "This time next week we ___ on the beach.",
+      "options": [
+        "will lie",
+        "will be lying"
+      ],
+      "answer": "will be lying"
+    },
+    {
+      "question": "By next year I ___ from school.",
+      "options": [
+        "will have graduated",
+        "will graduate"
+      ],
+      "answer": "will have graduated"
+    },
+    {
+      "question": "If it ___ , we will stay at home.",
+      "options": [
+        "will rain",
+        "rains"
+      ],
+      "answer": "rains"
+    }
+  ]
+}

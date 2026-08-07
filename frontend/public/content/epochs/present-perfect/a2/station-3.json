@@ -1,0 +1,99 @@
+{
+  "id": "present_perfect_a2_station_3",
+  "title": "Викторина Трех Миров (Выбор формы)",
+  "description": "Скоростной выбор из 3 вариантов.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "Look! He ___ a bike.",
+      "options": [
+        "rides",
+        "is riding",
+        "has ridden"
+      ],
+      "answer": "is riding"
+    },
+    {
+      "question": "We ___ to Spain every summer.",
+      "options": [
+        "travel",
+        "are travelling",
+        "have travelled"
+      ],
+      "answer": "travel"
+    },
+    {
+      "question": "I ___ my homework. I can go out!",
+      "options": [
+        "do",
+        "am doing",
+        "have done"
+      ],
+      "answer": "have done"
+    },
+    {
+      "question": "She usually ___ a photo.",
+      "options": [
+        "takes",
+        "is taking",
+        "has taken"
+      ],
+      "answer": "takes"
+    },
+    {
+      "question": "Be quiet! The baby ___.",
+      "options": [
+        "sleeps",
+        "is sleeping",
+        "has slept"
+      ],
+      "answer": "is sleeping"
+    },
+    {
+      "question": "They ___ their dinner. The plates are empty!",
+      "options": [
+        "eat",
+        "are eating",
+        "have eaten"
+      ],
+      "answer": "have eaten"
+    },
+    {
+      "question": "I ___ a book every evening.",
+      "options": [
+        "read",
+        "am reading",
+        "have read"
+      ],
+      "answer": "read"
+    },
+    {
+      "question": "We ___ at a hotel now.",
+      "options": [
+        "stay",
+        "are staying",
+        "have stayed"
+      ],
+      "answer": "are staying"
+    },
+    {
+      "question": "He ___ his key. He can't open the door!",
+      "options": [
+        "loses",
+        "is losing",
+        "has lost"
+      ],
+      "answer": "has lost"
+    },
+    {
+      "question": "My dad often ___ to Italy.",
+      "options": [
+        "flies",
+        "is flying",
+        "has flown"
+      ],
+      "answer": "flies"
+    }
+  ]
+}

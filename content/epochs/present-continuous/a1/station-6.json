@@ -1,0 +1,62 @@
+{
+  "id": "present_continuous_a1_station_6",
+  "title": "Сборка Контекста (Текст)",
+  "description": "Интеграция навыка в связный текст с чередованием времен.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Hi! My name ___ Jane. I ___ a letter to you now. I usually ___ emails on Sundays. My brother, Tom, ___ football in the garden now. He ___ football every day. My mother ___ dinner in the kitchen. She always ___ dinner at 6 PM. What ___ doing now?",
+      "answers": [
+        [
+          "is"
+        ],
+        [
+          "am writing"
+        ],
+        [
+          "write"
+        ],
+        [
+          "is playing"
+        ],
+        [
+          "plays"
+        ],
+        [
+          "is cooking"
+        ],
+        [
+          "cooks"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "hints": [
+        "(be)",
+        "(write)",
+        "(write)",
+        "(play)",
+        "(play)",
+        "(cook)",
+        "(cook)",
+        "(you / do)"
+      ],
+      "word_bank": [
+        "is",
+        "am writing",
+        "write",
+        "is playing",
+        "plays",
+        "is cooking",
+        "cooks",
+        "are",
+        "am",
+        "play",
+        "writes",
+        "cook"
+      ]
+    }
+  ]
+}

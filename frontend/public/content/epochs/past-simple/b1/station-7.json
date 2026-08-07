@@ -1,0 +1,74 @@
+{
+  "id": "past_simple_b1_station_7",
+  "title": "Комикс \"Ошибка\" (Продукт)",
+  "description": "Создай комикс из 4 кадров о технической ошибке (например, удалил важный файл): Кадр 1 — Past Simple (что сделал), Кадр 2 — Past Simple (что случилось потом), Кадр 3 — Present Perfect (какой результат), Кадр 4 — Present Continuous (что делаешь прямо сейчас, чтобы исправить).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Комикс \"Ошибка\" — 4 кадра",
+  "duration": 90,
+  "conditions": [
+    {
+      "label": "Кадр 1: что ты сделал (Past Simple)",
+      "hint": "I deleted an important file. / I pressed the wrong button.",
+      "markers": [
+        "deleted",
+        "removed",
+        "pressed",
+        "clicked",
+        "saved",
+        "closed",
+        "lost",
+        "broke",
+        "made",
+        "did"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Кадр 2: что случилось потом (Past Simple)",
+      "hint": "The file disappeared. / Everything stopped working.",
+      "markers": [
+        "disappeared",
+        "stopped",
+        "broke",
+        "crashed",
+        "failed",
+        "went",
+        "was",
+        "were",
+        "lost"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Кадр 3: какой результат (Present Perfect)",
+      "hint": "I have lost all my work. / The computer has stopped.",
+      "markers": [
+        "have",
+        "has",
+        "already",
+        "just",
+        "lost",
+        "stopped",
+        "broken"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Кадр 4: что делаешь сейчас (Present Continuous)",
+      "hint": "I am trying to restore it. / I am looking for a solution.",
+      "markers": [
+        "am",
+        "is",
+        "are",
+        "trying",
+        "restoring",
+        "looking",
+        "fixing",
+        "searching",
+        "calling"
+      ],
+      "min": 1
+    }
+  ]
+}

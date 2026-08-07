@@ -1,0 +1,55 @@
+{
+  "id": "future_continuous_b1_station_2",
+  "title": "Сортировка 4-х Будущих (Сравнение)",
+  "description": "Распредели предложения по 4 группам: Future Simple, Future Continuous, Present Continuous, Present Simple.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "future-simple",
+      "label": "Future Simple"
+    },
+    {
+      "id": "future-continuous",
+      "label": "Future Continuous"
+    },
+    {
+      "id": "present-continuous",
+      "label": "Present Continuous"
+    },
+    {
+      "id": "present-simple",
+      "label": "Present Simple"
+    }
+  ],
+  "items": [
+    {
+      "verb": "I think I will buy this.",
+      "answer": "future-simple"
+    },
+    {
+      "verb": "At 5 PM I will be flying to Rome.",
+      "answer": "future-continuous"
+    },
+    {
+      "verb": "We are meeting at 8 PM.",
+      "answer": "present-continuous"
+    },
+    {
+      "verb": "The train leaves at 6 PM.",
+      "answer": "present-simple"
+    },
+    {
+      "verb": "This time next week I will be lying on the beach.",
+      "answer": "future-continuous"
+    },
+    {
+      "verb": "I will help you with your homework.",
+      "answer": "future-simple"
+    },
+    {
+      "verb": "We are flying to London tomorrow. We have tickets.",
+      "answer": "present-continuous"
+    }
+  ]
+}

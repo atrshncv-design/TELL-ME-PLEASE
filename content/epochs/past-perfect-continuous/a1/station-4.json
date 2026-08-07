@@ -1,0 +1,49 @@
+{
+  "id": "past_perfect_continuous_a1_station_4",
+  "title": "Контраст: Фон vs Длительность (Past Cont vs Past PerfCont)",
+  "description": "Выбери правильную форму (Процесс в момент vs Процесс ДО момента).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "At 5 PM I ___ football.",
+      "options": [
+        "was playing",
+        "had been playing"
+      ],
+      "answer": "was playing"
+    },
+    {
+      "question": "I ___ football for an hour when it started to rain.",
+      "options": [
+        "was playing",
+        "had been playing"
+      ],
+      "answer": "had been playing"
+    },
+    {
+      "question": "When she came, we ___ TV.",
+      "options": [
+        "were watching",
+        "had been watching"
+      ],
+      "answer": "had been watching"
+    },
+    {
+      "question": "She ___ a book at 5 PM.",
+      "options": [
+        "was reading",
+        "had been reading"
+      ],
+      "answer": "was reading"
+    },
+    {
+      "question": "They ___ for 3 hours before the exam.",
+      "options": [
+        "were studying",
+        "had been studying"
+      ],
+      "answer": "had been studying"
+    }
+  ]
+}

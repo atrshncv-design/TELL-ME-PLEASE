@@ -1,0 +1,50 @@
+{
+  "id": "present_perfect_continuous_a1_station_7",
+  "title": "Интервью: Как долго? (ИИ-бот)",
+  "description": "Тренировка вопросов How long have you been...? в живом диалоге с ботом.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Промпт: \"Act like a 12-year-old who is very busy. Use A1 English.\" Ты — 12-летний школьник, который очень занят: учёба, кружки, игры. Общайся по-английски простыми фразами (уровень A1). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй живо и дружелюбно: хвали за старание, мягко поправляй ошибки в Present Perfect Continuous и подсказывай нужные слова. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "How long have you been studying English?",
+      "markers": [
+        "for",
+        "since",
+        "years",
+        "english",
+        "studying",
+        "lessons",
+        "school"
+      ],
+      "min": 1,
+      "hint": "Ответь: I have been studying English for 5 years."
+    },
+    {
+      "question": "How long have you been living in your house?",
+      "markers": [
+        "for",
+        "since",
+        "years",
+        "living",
+        "house",
+        "born"
+      ],
+      "min": 1,
+      "hint": "Ответь: I have been living in my house for 10 years."
+    },
+    {
+      "question": "How long have you been playing computer games today?",
+      "markers": [
+        "for",
+        "since",
+        "hours",
+        "playing",
+        "computer",
+        "games"
+      ],
+      "min": 1,
+      "hint": "Ответь: I have been playing computer games for 2 hours."
+    }
+  ]
+}

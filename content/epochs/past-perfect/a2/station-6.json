@@ -1,0 +1,48 @@
+{
+  "id": "past_perfect_a2_station_6",
+  "title": "Блог: Мой Вчерашний Вечер (Продукт)",
+  "description": "Напиши 3 предложения о том, что ты сделал ДО того, как лег спать. (I had finished my homework before I went to bed. I had brushed my teeth...).",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Мой вчерашний вечер: что я сделал до того, как лег спать",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Используй Past Perfect (had + V3) — 3 предложения о том, что ты сделал ДО сна",
+      "hint": "I had finished my homework before I went to bed. / I had brushed my teeth.",
+      "markers": [
+        "had",
+        "finished",
+        "brushed",
+        "done",
+        "watched",
+        "read",
+        "eaten",
+        "played",
+        "cleaned",
+        "washed",
+        "wrote",
+        "said",
+        "met",
+        "bought",
+        "took"
+      ],
+      "min": 3
+    },
+    {
+      "label": "Покажи второе действие (Past Simple): before / when",
+      "hint": "...before I went to bed. / ...when my mum came home.",
+      "markers": [
+        "before",
+        "went",
+        "bed",
+        "when",
+        "came",
+        "watched",
+        "played",
+        "read"
+      ],
+      "min": 1
+    }
+  ]
+}

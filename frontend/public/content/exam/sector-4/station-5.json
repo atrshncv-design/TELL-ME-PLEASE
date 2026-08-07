@@ -1,0 +1,89 @@
+{
+  "id": "exam_s4_station_5",
+  "title": "Финальный Босс: 12 Времен (Викторина)",
+  "description": "Финальный босс: выбери правильное время из 4 вариантов.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ a book every day. (read)",
+      "options": [
+        "Present Simple",
+        "Present Continuous",
+        "Present Perfect",
+        "Present Perfect Continuous"
+      ],
+      "answer": "Present Simple"
+    },
+    {
+      "question": "I ___ a book at 5 PM yesterday. (read)",
+      "options": [
+        "Present Simple",
+        "Present Continuous",
+        "Present Perfect",
+        "Past Continuous"
+      ],
+      "answer": "Past Continuous"
+    },
+    {
+      "question": "I ___ a book by 5 PM tomorrow. (read)",
+      "options": [
+        "Present Continuous",
+        "Present Perfect",
+        "Future Perfect",
+        "Present Simple"
+      ],
+      "answer": "Future Perfect"
+    },
+    {
+      "question": "I ___ a book for 2 hours. (read)",
+      "options": [
+        "Present Perfect",
+        "Present Perfect Continuous",
+        "Present Simple",
+        "Present Continuous"
+      ],
+      "answer": "Present Perfect Continuous"
+    },
+    {
+      "question": "I ___ a book yesterday. (read)",
+      "options": [
+        "Past Simple",
+        "Present Simple",
+        "Present Continuous",
+        "Present Perfect"
+      ],
+      "answer": "Past Simple"
+    },
+    {
+      "question": "I ___ a book right now. (read)",
+      "options": [
+        "Present Simple",
+        "Present Perfect",
+        "Present Perfect Continuous",
+        "Present Continuous"
+      ],
+      "answer": "Present Continuous"
+    },
+    {
+      "question": "I ___ a book tomorrow at 5 PM. (read)",
+      "options": [
+        "Present Continuous",
+        "Present Perfect",
+        "Future Continuous",
+        "Present Simple"
+      ],
+      "answer": "Future Continuous"
+    },
+    {
+      "question": "I ___ a book before you came. (read)",
+      "options": [
+        "Present Perfect",
+        "Past Perfect",
+        "Present Simple",
+        "Present Continuous"
+      ],
+      "answer": "Past Perfect"
+    }
+  ]
+}

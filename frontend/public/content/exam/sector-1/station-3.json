@@ -1,0 +1,57 @@
+{
+  "id": "exam_s1_station_3",
+  "title": "Ловушка Состояния (Stative Verbs)",
+  "description": "Выбери правильную форму (помни, что стативные не используют -ing).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ the answer.",
+      "options": [
+        "am knowing",
+        "know"
+      ],
+      "answer": "know"
+    },
+    {
+      "question": "Why ___ the milk? Is it bad?",
+      "options": [
+        "are you smelling",
+        "do you smell"
+      ],
+      "answer": "are you smelling"
+    },
+    {
+      "question": "This soup ___ delicious.",
+      "options": [
+        "is tasting",
+        "tastes"
+      ],
+      "answer": "tastes"
+    },
+    {
+      "question": "I ___ about my holidays right now.",
+      "options": [
+        "am thinking",
+        "think"
+      ],
+      "answer": "am thinking"
+    },
+    {
+      "question": "She ___ a shower at the moment.",
+      "options": [
+        "is having",
+        "has"
+      ],
+      "answer": "is having"
+    },
+    {
+      "question": "We ___ a beautiful house.",
+      "options": [
+        "are having",
+        "have"
+      ],
+      "answer": "have"
+    }
+  ]
+}

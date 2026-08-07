@@ -1,0 +1,57 @@
+{
+  "id": "past_perfect_continuous_b1_station_2",
+  "title": "Виктория Перфектов (Выбор формы)",
+  "description": "Выбери правильную форму.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ my computer for 2 hours. I was so tired!",
+      "options": [
+        "had been fixing",
+        "had fixed"
+      ],
+      "answer": "had been fixing"
+    },
+    {
+      "question": "I ___ my computer. It worked perfectly!",
+      "options": [
+        "had been fixing",
+        "had fixed"
+      ],
+      "answer": "had fixed"
+    },
+    {
+      "question": "We ___ 3 episodes of this series before he joined us.",
+      "options": [
+        "had been watching",
+        "had watched"
+      ],
+      "answer": "had watched"
+    },
+    {
+      "question": "We ___ this series all evening when the lights went out.",
+      "options": [
+        "had been watching",
+        "had watched"
+      ],
+      "answer": "had been watching"
+    },
+    {
+      "question": "My hands were dirty. I ___ the bike.",
+      "options": [
+        "had been repairing",
+        "had repaired"
+      ],
+      "answer": "had been repairing"
+    },
+    {
+      "question": "The bike was ready. I ___ it.",
+      "options": [
+        "had been repairing",
+        "had repaired"
+      ],
+      "answer": "had repaired"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "epoch": "present-continuous",
+  "title": "Эпоха Present Continuous",
+  "subtitle": "Прямой эфир",
+  "icon": "🎥",
+  "theory": [
+    {
+      "title": "📸 Шаг 1: Суть времени (Что это такое?)",
+      "text": "Привет, ребята! 👋 Я — ваш AI-наставник по английскому. Знаю, что грамматика иногда кажется скучной зубрежкой, но сегодня мы сделаем невозможное: разберем Present Continuous так, что он отложится в мозгу навсегда! Готовы? Поехали! 🚀\nPresent Continuous (Настоящее длительное) — это время «Видео-камеры». 🎥 В отличие от Present Simple, которое работает как фотография (делает один снимок: Я играю в теннис по субботам), Present Continuous записывает видео. Это процесс, который тянется во времени. Вы прямо сейчас находитесь внутри этого действия.\nФормула (Волшебное зелье): Чтобы сварить Present Continuous, вам нужны два ингредиента:\nПодлежащее + глагол TO BE (am / is / are) + Смысловой глагол с окончанием -ING\nI am reading a book now. (Я сейчас в процессе чтения).\nHe is playing football. (Он в процессе игры).\nЛайфхак: Окончание -ING — это моторчик, который заставляет действие крутиться, как колесо! 🛞"
+    },
+    {
+      "title": "🎭 Шаг 2: Все 7 жизней Present Continuous (Когда использовать?)",
+      "text": "Это время хитрое. У него есть 7 ситуаций, где оно работает:\nДействие прямо сейчас (Right now): Look! The dog is running after the cat! (Смотри! Собака бежит за котом!).\nВременная ситуация (Temporary): I am living with my grandma this week. (Я живу у бабушки на этой неделе — временно).\nПланы на будущее (Future Arrangements): We are flying to London tomorrow. (Мы летим в Лондон завтра — билеты уже куплены).\nТенденции и перемены (Changing trends): The climate is changing rapidly. (Климат меняется быстро).\nОписание картинок (Description): In this photo, a boy is riding a bike. (На фото мальчик катается на велосипеде — идеально для ОГЭ!).\nРаздражение (Irritation): My brother is always taking my phone! (Мой брат вечно берет мой телефон! 😡).\n⚠️ ГЛАВНАЯ ЛОВУШКА: Stative Verbs (Глаголы состояния). Они отказываются принимать -ING! Это глаголы чувств, мышления и владения. ❌ I am knowing. ✅ I know. (Запомните: know, understand, believe, love, hate, want, have got)."
+    },
+    {
+      "title": "🎓 Шаг 3: Секреты орфографии (Как добавить -ING)",
+      "text": "Чтобы моторчик работал без ошибок, помните 4 правила:\nПросто добавляем: play -> playing, read -> reading.\nУбегающая \"E\": если глагол кончается на немую \"e\", она убегает! make -> making, write -> writing.\nУдвоение согласной: если глагол короткий и кончается на согласную после краткой гласной, мы её удваиваем. run -> running, swim -> swimming.\nИсключение \"IE\": глаголы lie (лежать), die (умирать), tie (завязывать) меняют ie на y: lying, dying, tying.\n\n⚔️ БОНУС: Битва Present Simple vs Present Continuous\nСколько раз у вас в голове мелькала мысль: \"Так, я играю... это every day или right now?\" Давайте раз и навсегда расставим точки над «i».\n🤝 Сходства (Что у них общего?)\nОба живут в Настоящем! (Не в прошлом, не в будущем).\nОба зависят от подлежащего (смотрим на I, He, We).\nОба используются для Будущего! (Simple: My train leaves at 5 PM tomorrow — по расписанию. Continuous: I am leaving tomorrow — личный план).\n⚔️ Различия (Где они кардинально разные?)\nСмысл: Simple — факты, рутина, расписание. Continuous — процесс прямо сейчас или временная ситуация.\nФормула: Simple — глагол (+s для he/she/it). Continuous — to be + глагол + -ing.\nМаркеры времени (Ваш компас!):\nSimple: always, usually, often, sometimes, never, every day.\nContinuous: now, right now, at the moment, Look!, Listen!, today, this week.\nОтношение к раздражению:\nSimple: He always leaves his clothes on the floor. (Факт: он всегда оставляет одежду на полу).\nContinuous: He is always leaving his clothes on the floor! (Эмоция: он вечно оставляет одежду, меня это бесит! 😡).\n💡 Лайфхак: Как не ошибиться? Задайте себе вопрос: Это факт/рутина или процесс прямо сейчас? Есть ли слово-маркер? Если есть every day — смело пиши Present Simple. Если есть now или Look! — пиши Present Continuous. Помните: Present Simple — это скучная энциклопедия, а Present Continuous — это сериал, который ты смотришь прямо сейчас! 🍿"
+    }
+  ],
+  "theoryQuiz": [
+    {
+      "question": "I usually ___ to school by bus, but today I (walk / am walking).",
+      "options": [
+        "go",
+        "am going"
+      ],
+      "answer": "go"
+    },
+    {
+      "question": "I usually (go / am going) to school by bus, but today I ___.",
+      "options": [
+        "walk",
+        "am walking"
+      ],
+      "answer": "am walking"
+    },
+    {
+      "question": "Look! It ___.",
+      "options": [
+        "rains",
+        "is raining"
+      ],
+      "answer": "is raining"
+    },
+    {
+      "question": "She ___ a doctor. She is very clever. (Ловушка на to be!)",
+      "options": [
+        "is",
+        "is being"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "We ___ to Moscow next Monday. Tickets are ready!",
+      "options": [
+        "are flying",
+        "fly"
+      ],
+      "answer": "are flying"
+    },
+    {
+      "question": "This soup ___ delicious. (Ловушка на Stative verb!)",
+      "options": [
+        "tastes",
+        "is tasting"
+      ],
+      "answer": "tastes"
+    }
+  ],
+  "music": {
+    "title": "🎵 Музыкальная пауза (Караоке-генератор)",
+    "links": [
+      "[Ссылка на Rutube/Yandex коллекцию песен]"
+    ],
+    "sunoPrompt": "Придумай весёлую песню для учеников на тему Present Simple vs Present Continuous. Объясни, что Present Simple — это то, что мы делаем каждый день (I play every day), а Present Continuous — то, что происходит прямо сейчас (I am playing now). В припеве должны быть слова: now, every day, am, is, are, V-ing. Стиль: upbeat children pop, 120 bpm."
+  },
+  "sectors": [
+    {
+      "id": "a1",
+      "level": "A1",
+      "title": "Калибровка Движения",
+      "grade": 5,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a1/station-1.json",
+          "title": "Запуск Реактора (Механика to be + V-ing)"
+        },
+        {
+          "id": "station-2",
+          "file": "a1/station-2.json",
+          "title": "Орфографический Щит (Правила -ing)"
+        },
+        {
+          "id": "station-3",
+          "file": "a1/station-3.json",
+          "title": "Торможение Хаоса (Отрицание и Вопрос)"
+        },
+        {
+          "id": "station-4",
+          "file": "a1/station-4.json",
+          "title": "Битва Времен (Simple vs Continuous)"
+        },
+        {
+          "id": "station-5",
+          "file": "a1/station-5.json",
+          "title": "Рефлекс Ответа (Короткие ответы)"
+        },
+        {
+          "id": "station-6",
+          "file": "a1/station-6.json",
+          "title": "Сборка Контекста (Текст)"
+        },
+        {
+          "id": "station-7",
+          "file": "a1/station-7.json",
+          "title": "Полевой Агент (Речь и ИИ-бот)"
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "level": "A2",
+      "title": "Стабилизация Оператора",
+      "grade": 6,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a2/station-1.json",
+          "title": "Усложнение Механики (Лексика 6 класса)"
+        },
+        {
+          "id": "station-2",
+          "file": "a2/station-2.json",
+          "title": "Визуальный Фильтр (Поиск ошибок)"
+        },
+        {
+          "id": "station-3",
+          "file": "a2/station-3.json",
+          "title": "Сортировка Маркеров (Дифференцировка)"
+        },
+        {
+          "id": "station-4",
+          "file": "a2/station-4.json",
+          "title": "Детектор Лжи (Смешанные ошибки)"
+        },
+        {
+          "id": "station-5",
+          "file": "a2/station-5.json",
+          "title": "Два Мира (Синтез Simple/Continuous)"
+        },
+        {
+          "id": "station-6",
+          "file": "a2/station-6.json",
+          "title": "Описание Ситуации (Речь/Письмо)"
+        },
+        {
+          "id": "station-7",
+          "file": "a2/station-7.json",
+          "title": "Цифровой Друг (Диалог с ИИ)"
+        }
+      ]
+    },
+    {
+      "id": "b1",
+      "level": "B1",
+      "title": "Агент в Динамике",
+      "grade": 7,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b1/station-1.json",
+          "title": "Сложная Орфография (Исключения)"
+        },
+        {
+          "id": "station-2",
+          "file": "b1/station-2.json",
+          "title": "Ловушка Состояния (Stative Verbs)"
+        },
+        {
+          "id": "station-3",
+          "file": "b1/station-3.json",
+          "title": "Планы на Будущее (Future Arrangements)"
+        },
+        {
+          "id": "station-4",
+          "file": "b1/station-4.json",
+          "title": "Текст с Подводными Камнями (Чтение)"
+        },
+        {
+          "id": "station-5",
+          "file": "b1/station-5.json",
+          "title": "Репортаж из Реальности (Речь)"
+        },
+        {
+          "id": "station-6",
+          "file": "b1/station-6.json",
+          "title": "Угадай по Эмодзи (Скорость)"
+        },
+        {
+          "id": "station-7",
+          "file": "b1/station-7.json",
+          "title": "Кибер-Блогер (Диалог с ИИ)"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "level": "B2",
+      "title": "Мастер Контекста",
+      "grade": "8-9 и ОГЭ",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b2/station-1.json",
+          "title": "Сложные Ловушки Орфографии (ОГЭ)"
+        },
+        {
+          "id": "station-2",
+          "file": "b2/station-2.json",
+          "title": "Архитектор Смыслов (Все 7 функций)"
+        },
+        {
+          "id": "station-3",
+          "file": "b2/station-3.json",
+          "title": "Тенденции и Перемены (Аналитика)"
+        },
+        {
+          "id": "station-4",
+          "file": "b2/station-4.json",
+          "title": "Раздражение и Критика (Эмоции)"
+        },
+        {
+          "id": "station-5",
+          "file": "b2/station-5.json",
+          "title": "Симуляция ОГЭ (Текст Задание 19)"
+        },
+        {
+          "id": "station-6",
+          "file": "b2/station-6.json",
+          "title": "Описание Фотографии (ОГЭ Задание 3)"
+        },
+        {
+          "id": "station-7",
+          "file": "b2/station-7.json",
+          "title": "Экзаменатор-ИИ (Условный диалог ОГЭ Задание 2)"
+        }
+      ]
+    }
+  ]
+}

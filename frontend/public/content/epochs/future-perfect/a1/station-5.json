@@ -1,0 +1,57 @@
+{
+  "id": "future_perfect_a1_station_5",
+  "title": "Факт vs Результат (Fut Simple vs Fut Perfect)",
+  "description": "Выбери правильную форму (Просто факт или Результат к моменту).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I think I ___ my homework tomorrow.",
+      "options": [
+        "will finish",
+        "will have finished"
+      ],
+      "answer": "will finish"
+    },
+    {
+      "question": "I ___ my homework by 5 PM.",
+      "options": [
+        "will finish",
+        "will have finished"
+      ],
+      "answer": "will have finished"
+    },
+    {
+      "question": "She ___ dinner tomorrow.",
+      "options": [
+        "will cook",
+        "will have cooked"
+      ],
+      "answer": "will cook"
+    },
+    {
+      "question": "She ___ dinner by 7 PM.",
+      "options": [
+        "will cook",
+        "will have cooked"
+      ],
+      "answer": "will have cooked"
+    },
+    {
+      "question": "We ___ football tomorrow.",
+      "options": [
+        "will play",
+        "will have played"
+      ],
+      "answer": "will play"
+    },
+    {
+      "question": "We ___ football by 6 PM.",
+      "options": [
+        "will play",
+        "will have played"
+      ],
+      "answer": "will have played"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "future_continuous_b2_station_4",
+  "title": "Симуляция ОГЭ (Устная часть Task 2)",
+  "description": "Ответь экзаменатору на вопросы ОГЭ Task 2 о планах и учёбе.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — экзаменатор на устной части ОГЭ (Task 2). Промпт: \"Act like an examiner for the Russian OGE exam (Task 2). Ask me questions about my future plans and studies.\" Общайся по-английски (уровень B1-B2), строго по сценарию экзамена: задавай вопросы из checklist по одному и жди ответа. Оценивай ответы как на экзамене: за полный развёрнутый ответ — похвала, за короткий — вежливая просьба ответить подробнее.",
+  "checklist": [
+    {
+      "question": "What will you be doing at 5 PM tomorrow?",
+      "markers": [
+        "will be",
+        "going to",
+        "studying",
+        "playing",
+        "homework",
+        "reading",
+        "5 pm",
+        "watching"
+      ],
+      "min": 1,
+      "hint": "Ответь: At 5 PM I will be doing my homework."
+    },
+    {
+      "question": "What are you going to do after you finish school?",
+      "markers": [
+        "going to",
+        "study",
+        "university",
+        "work",
+        "college",
+        "school"
+      ],
+      "min": 1,
+      "hint": "Ответь: I am going to study at university."
+    },
+    {
+      "question": "Will you be using your computer tonight?",
+      "markers": [
+        "yes",
+        "no",
+        "will be using",
+        "computer",
+        "tonight",
+        "playing"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I will be using my computer tonight."
+    },
+    {
+      "question": "What time does your first class start tomorrow?",
+      "markers": [
+        "8",
+        "9",
+        "am",
+        "o'clock",
+        "starts",
+        "first class",
+        "in the morning"
+      ],
+      "min": 1,
+      "hint": "Ответь: My first class starts at 9 AM."
+    }
+  ]
+}

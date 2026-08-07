@@ -1,0 +1,59 @@
+{
+  "id": "future_simple_b2_station_3",
+  "title": "Тонкие Смыслы (Сортировка всех 4-х форм)",
+  "description": "Распредели предложения по 4 группам: Will, Going to, Present Continuous, Present Simple.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "will",
+      "label": "Will"
+    },
+    {
+      "id": "going-to",
+      "label": "Going to"
+    },
+    {
+      "id": "pres-cont",
+      "label": "Present Continuous"
+    },
+    {
+      "id": "pres-simpl",
+      "label": "Present Simple"
+    }
+  ],
+  "items": [
+    {
+      "verb": "I think it will snow.",
+      "answer": "will"
+    },
+    {
+      "verb": "I am going to learn Spanish.",
+      "answer": "going-to"
+    },
+    {
+      "verb": "We are meeting at 5 PM.",
+      "answer": "pres-cont"
+    },
+    {
+      "verb": "The bus leaves at 6 PM.",
+      "answer": "pres-simpl"
+    },
+    {
+      "verb": "— We have no sugar. — I will buy it!",
+      "answer": "will"
+    },
+    {
+      "verb": "Look at the car! It is going to crash!",
+      "answer": "going-to"
+    },
+    {
+      "verb": "My flight arrives at noon.",
+      "answer": "pres-simpl"
+    },
+    {
+      "verb": "I am seeing the doctor tomorrow at 3.",
+      "answer": "pres-cont"
+    }
+  ]
+}

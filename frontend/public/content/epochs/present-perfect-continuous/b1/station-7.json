@@ -1,0 +1,45 @@
+{
+  "id": "present_perfect_continuous_b1_station_7",
+  "title": "Мини-Проект: \"Мой Трудный День\" (Продукт)",
+  "description": "Напиши 5 предложений о том, что ты делал долго, и какой у тебя результат сейчас.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши 5 предложений о том, что ты делал долго, и какой у тебя результат сейчас",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Present Perfect Continuous (have/has been + V-ing)",
+      "hint": "I have been doing homework for 3 hours.",
+      "markers": [
+        "been"
+      ],
+      "min": 3
+    },
+    {
+      "label": "Результат сейчас (Present Perfect)",
+      "hint": "I have finished 4 tasks.",
+      "markers": [
+        "finished",
+        "done",
+        "written",
+        "completed",
+        "made",
+        "read",
+        "learned",
+        "watched",
+        "sent",
+        "cleaned"
+      ],
+      "min": 1
+    },
+    {
+      "label": "Маркеры for / since",
+      "hint": "for 3 hours, since 5 PM",
+      "markers": [
+        "for",
+        "since"
+      ],
+      "min": 2
+    }
+  ]
+}

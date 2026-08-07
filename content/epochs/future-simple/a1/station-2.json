@@ -1,0 +1,54 @@
+{
+  "id": "future_simple_a1_station_2",
+  "title": "Торможение Хаоса (Отрицание и Вопрос)",
+  "description": "Собери предложения с won't и вопросы.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "go / I / won't / to / school",
+      "options": [
+        "I won't go to school",
+        "I won't to go school",
+        "I to go won't school"
+      ],
+      "answer": "I won't go to school"
+    },
+    {
+      "question": "won't / She / help / us",
+      "options": [
+        "She won't help us",
+        "She help won't us",
+        "Us she won't help"
+      ],
+      "answer": "She won't help us"
+    },
+    {
+      "question": "Will / you / me / help?",
+      "options": [
+        "Will you help me?",
+        "Will you me help?",
+        "You will help me?"
+      ],
+      "answer": "Will you help me?"
+    },
+    {
+      "question": "they / play / Will / football?",
+      "options": [
+        "Will they play football?",
+        "Will they football play?",
+        "They will play football?"
+      ],
+      "answer": "Will they play football?"
+    },
+    {
+      "question": "won't / It / rain",
+      "options": [
+        "It won't rain",
+        "It rain won't",
+        "Rain it won't"
+      ],
+      "answer": "It won't rain"
+    }
+  ]
+}

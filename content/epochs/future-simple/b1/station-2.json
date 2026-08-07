@@ -1,0 +1,51 @@
+{
+  "id": "future_simple_b1_station_2",
+  "title": "Сортировка 3-х Миров (Will vs Going to vs PresCont)",
+  "description": "Распредели предложения по группам: Will, Be going to, Present Continuous.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "will",
+      "label": "Will"
+    },
+    {
+      "id": "going-to",
+      "label": "Be going to"
+    },
+    {
+      "id": "pres-cont",
+      "label": "Present Continuous"
+    }
+  ],
+  "items": [
+    {
+      "verb": "I think I will buy this book.",
+      "answer": "will"
+    },
+    {
+      "verb": "I am going to buy this book next week.",
+      "answer": "going-to"
+    },
+    {
+      "verb": "I am buying this book tomorrow. I ordered it.",
+      "answer": "pres-cont"
+    },
+    {
+      "verb": "Look at the clouds! It is going to rain.",
+      "answer": "going-to"
+    },
+    {
+      "verb": "— The phone is ringing. — I will answer it!",
+      "answer": "will"
+    },
+    {
+      "verb": "We are flying to Paris tomorrow at 5 PM.",
+      "answer": "pres-cont"
+    },
+    {
+      "verb": "I hope she will come.",
+      "answer": "will"
+    }
+  ]
+}

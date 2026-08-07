@@ -1,0 +1,48 @@
+{
+  "id": "present_perfect_b2_station_6",
+  "title": "Перевод-Ловушка (Подготовка к письменной части)",
+  "description": "Точный перевод сложных русских конструкций.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ never ___ such a beautiful city.",
+      "answer": [
+        "have",
+        "seen"
+      ],
+      "hint": "Я никогда не видел такого красивого города."
+    },
+    {
+      "sentence": "We ___ this problem ___.",
+      "answer": [
+        "haven't solved",
+        "yet"
+      ],
+      "hint": "Мы еще не решили эту проблему."
+    },
+    {
+      "sentence": "He ___ an article.",
+      "answer": [
+        "has just published"
+      ],
+      "hint": "Он только что опубликовал статью."
+    },
+    {
+      "sentence": "___ you ever ___ to Moscow?",
+      "answer": [
+        "Have",
+        "been"
+      ],
+      "hint": "Ты когда-нибудь бывал в Москве?"
+    },
+    {
+      "sentence": "They ___ already ___.",
+      "answer": [
+        "have",
+        "left"
+      ],
+      "hint": "Они уже ушли."
+    }
+  ]
+}

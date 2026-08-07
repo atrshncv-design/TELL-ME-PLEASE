@@ -1,0 +1,81 @@
+{
+  "id": "past_continuous_b2_station_4",
+  "title": "Симуляция ОГЭ (Устная часть Task 2)",
+  "description": "Вопросы на экране: What were you doing at 5 PM yesterday? What did you do last weekend? Were you studying when I called you? What were you doing when the electricity went out?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "You are an examiner for the Russian OGE exam (Task 2). Use B2 English. Ask the student the questions from the checklist about their past weekend, one by one, in order, and wait for the answer. Listen carefully, react briefly (I see, OK, interesting) and evaluate the answer: if it is too short, ask to speak in full sentences. Do not help with the answer — this is an exam. Speak clear neutral English at B2 level, do not switch to Russian.",
+  "checklist": [
+    {
+      "question": "What were you doing at 5 PM yesterday?",
+      "markers": [
+        "was",
+        "were",
+        "doing",
+        "playing",
+        "reading",
+        "watching",
+        "walking",
+        "studying",
+        "cooking",
+        "helping",
+        "5 pm",
+        "five"
+      ],
+      "min": 1,
+      "hint": "Ответь полным предложением: I was doing my homework at 5 PM yesterday."
+    },
+    {
+      "question": "What did you do last weekend?",
+      "markers": [
+        "went",
+        "visited",
+        "played",
+        "watched",
+        "walked",
+        "met",
+        "helped",
+        "did",
+        "had",
+        "saw",
+        "weekend"
+      ],
+      "min": 1,
+      "hint": "Ответь полным предложением: Last weekend I went to the park with my friends."
+    },
+    {
+      "question": "Were you studying when I called you?",
+      "markers": [
+        "yes",
+        "no",
+        "was",
+        "wasn't",
+        "were",
+        "weren't",
+        "studying",
+        "doing",
+        "called"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I was studying when you called. / No, I wasn't studying."
+    },
+    {
+      "question": "What were you doing when the electricity went out?",
+      "markers": [
+        "was",
+        "were",
+        "doing",
+        "watching",
+        "reading",
+        "playing",
+        "eating",
+        "sleeping",
+        "went out",
+        "electricity",
+        "when"
+      ],
+      "min": 1,
+      "hint": "Ответь: I was watching TV when the electricity went out."
+    }
+  ]
+}

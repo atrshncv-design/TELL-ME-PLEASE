@@ -1,0 +1,73 @@
+{
+  "id": "future_perfect_a1_station_4",
+  "title": "Неправильные Результаты (V3)",
+  "description": "Выбери правильную 3-ю форму для Future Perfect.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I will have ___ to the beach.",
+      "options": [
+        "went",
+        "gone"
+      ],
+      "answer": "gone"
+    },
+    {
+      "question": "She will have ___ a shark.",
+      "options": [
+        "seen",
+        "saw"
+      ],
+      "answer": "seen"
+    },
+    {
+      "question": "We will have ___ ice cream.",
+      "options": [
+        "ate",
+        "eaten"
+      ],
+      "answer": "eaten"
+    },
+    {
+      "question": "He will have ___ a souvenir.",
+      "options": [
+        "bought",
+        "buyed"
+      ],
+      "answer": "bought"
+    },
+    {
+      "question": "They will have ___ a taxi.",
+      "options": [
+        "took",
+        "taken"
+      ],
+      "answer": "taken"
+    },
+    {
+      "question": "My dad will have ___ to Rome.",
+      "options": [
+        "flied",
+        "flown"
+      ],
+      "answer": "flown"
+    },
+    {
+      "question": "You will have ___ all the juice.",
+      "options": [
+        "drank",
+        "drunk"
+      ],
+      "answer": "drunk"
+    },
+    {
+      "question": "Tom will have ___ in the pool.",
+      "options": [
+        "swam",
+        "swum"
+      ],
+      "answer": "swum"
+    }
+  ]
+}

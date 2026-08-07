@@ -1,0 +1,79 @@
+{
+  "id": "future_simple_b2_station_7",
+  "title": "Финальный Босс: 4 Времени Будущего (Викторина)",
+  "description": "Выбери правильную форму из 4 способов будущего времени.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ to the gym tomorrow.",
+      "options": [
+        "am going",
+        "will go",
+        "go",
+        "am going to go"
+      ],
+      "answer": "am going"
+    },
+    {
+      "question": "I think I ___ rich.",
+      "options": [
+        "will be",
+        "am",
+        "am being",
+        "will"
+      ],
+      "answer": "will be"
+    },
+    {
+      "question": "The train ___ at 5 PM.",
+      "options": [
+        "leaves",
+        "will leave",
+        "is leaving",
+        "left"
+      ],
+      "answer": "leaves"
+    },
+    {
+      "question": "— It's cold. — I ___ the window.",
+      "options": [
+        "will close",
+        "close",
+        "am closing",
+        "will closing"
+      ],
+      "answer": "will close"
+    },
+    {
+      "question": "Look! He ___ fall!",
+      "options": [
+        "is going to fall",
+        "will fall",
+        "falls",
+        "is falling"
+      ],
+      "answer": "is going to fall"
+    },
+    {
+      "question": "If it ___ raining, we will go out.",
+      "options": [
+        "stops",
+        "will stop",
+        "stop",
+        "stopped"
+      ],
+      "answer": "stops"
+    },
+    {
+      "question": "We ___ to Paris next Monday.",
+      "options": [
+        "are flying",
+        "fly",
+        "will fly",
+        "are going to fly"
+      ],
+      "answer": "are flying"
+    }
+  ]
+}

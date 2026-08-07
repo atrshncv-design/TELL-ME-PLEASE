@@ -1,0 +1,59 @@
+{
+  "id": "present_perfect_a2_station_5",
+  "title": "Опыт с маркерами (Сборка)",
+  "description": "Отработка маркеров just, already, yet, never.",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "She ___ her pizza.",
+      "answer": "has just eaten",
+      "hint": "(just / eat)"
+    },
+    {
+      "sentence": "We ___ the museum.",
+      "answer": "have already visited",
+      "hint": "(already / visit)"
+    },
+    {
+      "sentence": "I ___ a souvenir yet.",
+      "answer": "haven't bought",
+      "hint": "(not / buy)"
+    },
+    {
+      "sentence": "He ___ by plane.",
+      "answer": "has never flown",
+      "hint": "(never / fly)"
+    },
+    {
+      "sentence": "They ___ at the hotel.",
+      "answer": "have just arrived",
+      "hint": "(just / arrive)"
+    },
+    {
+      "sentence": "My dad ___ a taxi.",
+      "answer": "has already taken",
+      "hint": "(already / take)"
+    },
+    {
+      "sentence": "You ___ the beach yet.",
+      "answer": "haven't seen",
+      "hint": "(not / see)"
+    },
+    {
+      "sentence": "Tom ___ in the pool.",
+      "answer": "has just swum",
+      "hint": "(just / swim)"
+    },
+    {
+      "sentence": "We ___ a car.",
+      "answer": "have never rented",
+      "hint": "(never / rent)"
+    },
+    {
+      "sentence": "She ___ to the park.",
+      "answer": "has already walked",
+      "hint": "(already / walk)"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "exam_s1_station_2",
+  "title": "Тренажер Маркеров (Present)",
+  "description": "Соедини маркер с правильным временем.",
+  "category": "grammar",
+  "type": "matching",
+  "matching": {
+    "items": [
+      {
+        "text": "every day",
+        "options": [
+          "Present Simple",
+          "Present Continuous",
+          "Present Perfect",
+          "Present Perfect Continuous"
+        ],
+        "answer": "Present Simple"
+      },
+      {
+        "text": "usually",
+        "options": [
+          "Present Continuous",
+          "Present Perfect",
+          "Present Perfect Continuous",
+          "Present Simple"
+        ],
+        "answer": "Present Simple"
+      },
+      {
+        "text": "rarely",
+        "options": [
+          "Present Perfect",
+          "Present Perfect Continuous",
+          "Present Simple",
+          "Present Continuous"
+        ],
+        "answer": "Present Simple"
+      },
+      {
+        "text": "now",
+        "options": [
+          "Present Perfect Continuous",
+          "Present Simple",
+          "Present Continuous",
+          "Present Perfect"
+        ],
+        "answer": "Present Continuous"
+      },
+      {
+        "text": "Look!",
+        "options": [
+          "Present Simple",
+          "Present Continuous",
+          "Present Perfect",
+          "Present Perfect Continuous"
+        ],
+        "answer": "Present Continuous"
+      },
+      {
+        "text": "just",
+        "options": [
+          "Present Continuous",
+          "Present Perfect",
+          "Present Perfect Continuous",
+          "Present Simple"
+        ],
+        "answer": "Present Perfect"
+      },
+      {
+        "text": "ever",
+        "options": [
+          "Present Perfect",
+          "Present Perfect Continuous",
+          "Present Simple",
+          "Present Continuous"
+        ],
+        "answer": "Present Perfect"
+      },
+      {
+        "text": "already",
+        "options": [
+          "Present Perfect Continuous",
+          "Present Simple",
+          "Present Continuous",
+          "Present Perfect"
+        ],
+        "answer": "Present Perfect"
+      },
+      {
+        "text": "for 2 hours",
+        "options": [
+          "Present Simple",
+          "Present Continuous",
+          "Present Perfect",
+          "Present Perfect Continuous"
+        ],
+        "answer": "Present Perfect Continuous"
+      },
+      {
+        "text": "since morning",
+        "options": [
+          "Present Continuous",
+          "Present Perfect",
+          "Present Perfect Continuous",
+          "Present Simple"
+        ],
+        "answer": "Present Perfect Continuous"
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "present_perfect_continuous_b1_station_4",
+  "title": "Текст: Технологии (Интеграция)",
+  "description": "Интеграция навыка в связный текст о технологиях.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Technology is amazing! I ___ my new smartphone all day. I ___ 50 photos already. My brother ___ a new video game for 3 hours. He ___ it yet. My dad ___ on his computer since morning. He ___ two reports today. We ___ our gadgets!",
+      "answers": [
+        [
+          "have been using"
+        ],
+        [
+          "have taken"
+        ],
+        [
+          "has been playing"
+        ],
+        [
+          "hasn't finished"
+        ],
+        [
+          "has been working"
+        ],
+        [
+          "has written"
+        ],
+        [
+          "love"
+        ]
+      ],
+      "hints": [
+        "(use)",
+        "(take)",
+        "(play)",
+        "(not / finish)",
+        "(work)",
+        "(write)",
+        "(love)"
+      ],
+      "word_bank": [
+        "have been using",
+        "have taken",
+        "has been playing",
+        "hasn't finished",
+        "has been working",
+        "has written",
+        "love",
+        "has been using",
+        "have took",
+        "has been played",
+        "hasn't finish",
+        "has been worked",
+        "has wrote",
+        "loves",
+        "are loving"
+      ]
+    }
+  ]
+}

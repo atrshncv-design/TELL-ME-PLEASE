@@ -1,0 +1,61 @@
+{
+  "id": "present_perfect_continuous_b2_station_3",
+  "title": "Текст ОГЭ: Экология (Чтение)",
+  "description": "Интеграция навыка в текст ОГЭ об экологии.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Our planet is in danger. The climate ___ rapidly for the last 50 years. Scientists ___ us about this since the 1990s. However, people ___ enough. We ___ many forests already. Right now, volunteers ___ trees in the park. They ___ since morning. They ___ 100 trees today.",
+      "answers": [
+        [
+          "has been changing"
+        ],
+        [
+          "have been warning"
+        ],
+        [
+          "have not done"
+        ],
+        [
+          "have destroyed"
+        ],
+        [
+          "are planting"
+        ],
+        [
+          "have been working"
+        ],
+        [
+          "have planted"
+        ]
+      ],
+      "hints": [
+        "(change)",
+        "(warn)",
+        "(not / do)",
+        "(destroy)",
+        "(plant)",
+        "(work)",
+        "(plant)"
+      ],
+      "word_bank": [
+        "has been changing",
+        "have been warning",
+        "have not done",
+        "have destroyed",
+        "are planting",
+        "have been working",
+        "have planted",
+        "have been changing",
+        "has warned",
+        "have not do",
+        "has destroyed",
+        "is planting",
+        "have been worked",
+        "has planted",
+        "plant"
+      ]
+    }
+  ]
+}

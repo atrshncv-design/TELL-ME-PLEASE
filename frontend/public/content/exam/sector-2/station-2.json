@@ -1,0 +1,73 @@
+{
+  "id": "exam_s2_station_2",
+  "title": "Змея и Кролик (Прерывание процесса)",
+  "description": "Выбери правильную пару (Длинный процесс + Внезапное действие).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ when I (saw / was seeing) a dog.",
+      "options": [
+        "walked",
+        "was walking"
+      ],
+      "answer": "was walking"
+    },
+    {
+      "question": "I (walked / was walking) when I ___ a dog.",
+      "options": [
+        "saw",
+        "was seeing"
+      ],
+      "answer": "saw"
+    },
+    {
+      "question": "While she ___, the phone (rang / was ringing).",
+      "options": [
+        "read",
+        "was reading"
+      ],
+      "answer": "was reading"
+    },
+    {
+      "question": "While she (read / was reading), the phone ___.",
+      "options": [
+        "rang",
+        "was ringing"
+      ],
+      "answer": "rang"
+    },
+    {
+      "question": "We ___ dinner when the lights (went / were going) out.",
+      "options": [
+        "had",
+        "were having"
+      ],
+      "answer": "were having"
+    },
+    {
+      "question": "We (had / were having) dinner when the lights ___ out.",
+      "options": [
+        "went",
+        "were going"
+      ],
+      "answer": "went"
+    },
+    {
+      "question": "He ___ while he (ran / was running).",
+      "options": [
+        "fell",
+        "was falling"
+      ],
+      "answer": "fell"
+    },
+    {
+      "question": "He (fell / was falling) while he ___.",
+      "options": [
+        "ran",
+        "was running"
+      ],
+      "answer": "was running"
+    }
+  ]
+}

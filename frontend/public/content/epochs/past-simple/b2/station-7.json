@@ -1,0 +1,97 @@
+{
+  "id": "past_simple_b2_station_7",
+  "title": "Финальный Босс: 5 Времен (Викторина)",
+  "description": "Выбери правильную форму из 5 времён: Present Simple, Present Continuous, Present Perfect, Present Perfect Continuous, Past Simple.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ to the gym every Monday.",
+      "options": [
+        "go",
+        "am going",
+        "went",
+        "have gone",
+        "have been going"
+      ],
+      "answer": "go"
+    },
+    {
+      "question": "I ___ to the gym right now.",
+      "options": [
+        "go",
+        "am going",
+        "went",
+        "have gone",
+        "have been going"
+      ],
+      "answer": "am going"
+    },
+    {
+      "question": "I ___ to the gym yesterday.",
+      "options": [
+        "go",
+        "am going",
+        "went",
+        "have gone",
+        "have been going"
+      ],
+      "answer": "went"
+    },
+    {
+      "question": "I ___ to the gym for 2 hours. I am tired.",
+      "options": [
+        "go",
+        "am going",
+        "went",
+        "have gone",
+        "have been going"
+      ],
+      "answer": "have been going"
+    },
+    {
+      "question": "I ___ to the gym 3 times this week.",
+      "options": [
+        "go",
+        "am going",
+        "went",
+        "have gone",
+        "have been going"
+      ],
+      "answer": "have gone"
+    },
+    {
+      "question": "I ___ my keys! I can't get in.",
+      "options": [
+        "lose",
+        "am losing",
+        "lost",
+        "have lost",
+        "have been losing"
+      ],
+      "answer": "have lost"
+    },
+    {
+      "question": "I ___ my keys yesterday.",
+      "options": [
+        "lose",
+        "am losing",
+        "lost",
+        "have lost",
+        "have been losing"
+      ],
+      "answer": "lost"
+    },
+    {
+      "question": "I ___ 3 books this month.",
+      "options": [
+        "have read",
+        "read",
+        "am reading",
+        "have been reading",
+        "was reading"
+      ],
+      "answer": "have read"
+    }
+  ]
+}

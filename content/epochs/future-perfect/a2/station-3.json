@@ -1,0 +1,29 @@
+{
+  "id": "future_perfect_a2_station_3",
+  "title": "Детектор Ошибок (Дебаггинг)",
+  "description": "Найди ошибку в каждом предложении.",
+  "category": "grammar",
+  "type": "click-mistake",
+  "items": [
+    {
+      "text": "I will had gone to the park.",
+      "wrong": "had"
+    },
+    {
+      "text": "She will have cleaned the room by you arrive.",
+      "wrong": "by"
+    },
+    {
+      "text": "We will have ate dinner by 7 PM.",
+      "wrong": "ate"
+    },
+    {
+      "text": "He will not have washed the car.",
+      "wrong": null
+    },
+    {
+      "text": "Will you have finished your homework before you went?",
+      "wrong": "went"
+    }
+  ]
+}

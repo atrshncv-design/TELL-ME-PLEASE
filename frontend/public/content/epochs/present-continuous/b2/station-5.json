@@ -1,0 +1,72 @@
+{
+  "id": "present_continuous_b2_station_5",
+  "title": "Симуляция ОГЭ (Текст Задание 19)",
+  "description": "Автоматическое применение грамматики в экзаменационном формате.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Hi! I usually ___ to school, but today I ___ at home because I feel sick. My mum ___ from home today too. Right now, she ___ soup. I ___ a great book about ecology these days. It says the climate ___ fast. My brother ___ the lights on, and it drives me crazy! I ___ we must save energy. Tomorrow, I ___ the doctor.",
+      "answers": [
+        [
+          "go"
+        ],
+        [
+          "am staying"
+        ],
+        [
+          "is working"
+        ],
+        [
+          "is making"
+        ],
+        [
+          "am reading"
+        ],
+        [
+          "is changing"
+        ],
+        [
+          "is always leaving"
+        ],
+        [
+          "think"
+        ],
+        [
+          "am visiting"
+        ]
+      ],
+      "hints": [
+        "(go)",
+        "(stay)",
+        "(work)",
+        "(make)",
+        "(read)",
+        "(change)",
+        "(always / leave)",
+        "(think)",
+        "(visit)"
+      ],
+      "word_bank": [
+        "go",
+        "am staying",
+        "is working",
+        "is making",
+        "am reading",
+        "is changing",
+        "is always leaving",
+        "think",
+        "am visiting",
+        "goes",
+        "stays",
+        "works",
+        "makes",
+        "reads",
+        "changes",
+        "visits",
+        "am",
+        "is"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "a2_station_5",
+  "title": "Перевод-Ловушка (Контраст)",
+  "description": "Соедини русский перевод с правильным английским предложением.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "pair1",
+      "label": "My friend uses the Internet every day."
+    },
+    {
+      "id": "pair2",
+      "label": "My sister sometimes watches films in the evenings."
+    },
+    {
+      "id": "pair3",
+      "label": "I never play computer games at night."
+    },
+    {
+      "id": "pair4",
+      "label": "The teacher always gives homework."
+    },
+    {
+      "id": "pair5",
+      "label": "Teenagers often listen to music on headphones."
+    },
+    {
+      "id": "pair6",
+      "label": "My dad always reads the newspaper in the morning."
+    }
+  ],
+  "items": [
+    {
+      "verb": "Мой друг каждый день пользуется интернетом.",
+      "answer": "pair1"
+    },
+    {
+      "verb": "Моя сестра иногда смотрит фильмы по вечерам.",
+      "answer": "pair2"
+    },
+    {
+      "verb": "Я никогда не играю в компьютерные игры ночью.",
+      "answer": "pair3"
+    },
+    {
+      "verb": "Учитель всегда задаёт домашнее задание.",
+      "answer": "pair4"
+    },
+    {
+      "verb": "Подростки часто слушают музыку в наушниках.",
+      "answer": "pair5"
+    },
+    {
+      "verb": "Папа всегда читает газету утром.",
+      "answer": "pair6"
+    }
+  ]
+}

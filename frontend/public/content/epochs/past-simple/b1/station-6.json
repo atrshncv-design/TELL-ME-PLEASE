@@ -1,0 +1,67 @@
+{
+  "id": "past_simple_b1_station_6",
+  "title": "Интервью с Изобретателем (Диалог с ИИ)",
+  "description": "Расспроси изобретателя о его гаджетах и опыте.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль изобретателя для ученика 7-8 класса (уровень B1). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ заинтересованно и коротко: хвали за идеи, мягко поправляй ошибки в Past Simple и Present Perfect, подсказывай нужные слова. Если ответ слишком короткий, вежливо попроси сказать полным предложением. Говори простыми английскими фразами уровня B1, на русский не переходи.",
+  "checklist": [
+    {
+      "question": "When did you invent your first gadget?",
+      "markers": [
+        "invented",
+        "first",
+        "gadget",
+        "years ago",
+        "when",
+        "was",
+        "made",
+        "created"
+      ],
+      "min": 1,
+      "hint": "Скажи: I invented my first gadget two years ago."
+    },
+    {
+      "question": "How long did it take?",
+      "markers": [
+        "took",
+        "months",
+        "years",
+        "days",
+        "long",
+        "weeks"
+      ],
+      "min": 1,
+      "hint": "Скажи: It took me three months."
+    },
+    {
+      "question": "Have you ever failed?",
+      "markers": [
+        "failed",
+        "yes",
+        "no",
+        "mistake",
+        "tried again",
+        "error",
+        "wrong"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I have failed many times. / No, I haven't."
+    },
+    {
+      "question": "What have you created recently?",
+      "markers": [
+        "created",
+        "recently",
+        "new",
+        "app",
+        "robot",
+        "device",
+        "made",
+        "invented"
+      ],
+      "min": 1,
+      "hint": "Скажи: I have recently created a new app."
+    }
+  ]
+}

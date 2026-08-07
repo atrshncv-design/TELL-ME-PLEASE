@@ -1,0 +1,99 @@
+{
+  "id": "b1_station_7",
+  "title": "Репортаж пришельца (Сложный Синтаксис)",
+  "description": "Собери 10 предложений: расположи слова в правильном порядке.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "do / where / live / teenagers / usually ?",
+      "options": [
+        "Where do teenagers usually live?",
+        "Where does teenagers usually live?",
+        "Where teenagers do usually live?"
+      ],
+      "answer": "Where do teenagers usually live?"
+    },
+    {
+      "question": "don't / humans / sleep / in / the / daytime.",
+      "options": [
+        "Humans don't sleep in the daytime.",
+        "Humans doesn't sleep in the daytime.",
+        "Humans sleep don't in the daytime."
+      ],
+      "answer": "Humans don't sleep in the daytime."
+    },
+    {
+      "question": "why / people / do / use / smartphones ?",
+      "options": [
+        "Why do people use smartphones?",
+        "Why does people use smartphones?",
+        "Why people do use smartphones?"
+      ],
+      "answer": "Why do people use smartphones?"
+    },
+    {
+      "question": "doesn't / the / teacher / shout / at / good / students.",
+      "options": [
+        "The teacher doesn't shout at good students.",
+        "The teacher don't shout at good students.",
+        "The teacher doesn't shouts at good students."
+      ],
+      "answer": "The teacher doesn't shout at good students."
+    },
+    {
+      "question": "what / your / does / friend / study / at / university ?",
+      "options": [
+        "What does your friend study at university?",
+        "What do your friend study at university?",
+        "What your friend does study at university?"
+      ],
+      "answer": "What does your friend study at university?"
+    },
+    {
+      "question": "we / don't / understand / this / strange / behavior.",
+      "options": [
+        "We don't understand this strange behavior.",
+        "We doesn't understand this strange behavior.",
+        "We understand don't this strange behavior."
+      ],
+      "answer": "We don't understand this strange behavior."
+    },
+    {
+      "question": "do / eat / often / how / you / junk / food ?",
+      "options": [
+        "How often do you eat junk food?",
+        "How often does you eat junk food?",
+        "How do often you eat junk food?"
+      ],
+      "answer": "How often do you eat junk food?"
+    },
+    {
+      "question": "doesn't / my / mother / play / video / games.",
+      "options": [
+        "My mother doesn't play video games.",
+        "My mother don't play video games.",
+        "My mother doesn't plays video games."
+      ],
+      "answer": "My mother doesn't play video games."
+    },
+    {
+      "question": "do / not / I / like / this / boring / film.",
+      "options": [
+        "I do not like this boring film.",
+        "I does not like this boring film.",
+        "I not do like this boring film."
+      ],
+      "answer": "I do not like this boring film."
+    },
+    {
+      "question": "when / the / shop / does / open ?",
+      "options": [
+        "When does the shop open?",
+        "When do the shop open?",
+        "When the shop does open?"
+      ],
+      "answer": "When does the shop open?"
+    }
+  ]
+}

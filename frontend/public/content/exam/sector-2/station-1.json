@@ -1,0 +1,59 @@
+{
+  "id": "exam_s2_station_1",
+  "title": "Хронология Событий (Сортировка 4 Past Tenses)",
+  "description": "Распредели предложения по 4 группам прошедших времён: Simple, Continuous, Perfect, Perfect Continuous.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "simple",
+      "label": "Past Simple"
+    },
+    {
+      "id": "continuous",
+      "label": "Past Continuous"
+    },
+    {
+      "id": "perfect",
+      "label": "Past Perfect"
+    },
+    {
+      "id": "perfcont",
+      "label": "Past Perfect Continuous"
+    }
+  ],
+  "items": [
+    {
+      "verb": "I read a book yesterday.",
+      "answer": "simple"
+    },
+    {
+      "verb": "I was reading at 5 PM.",
+      "answer": "continuous"
+    },
+    {
+      "verb": "I had read the book before I watched the film.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "I had been reading for 2 hours when she came.",
+      "answer": "perfcont"
+    },
+    {
+      "verb": "The ground was wet. It had rained.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "It was raining when we left.",
+      "answer": "continuous"
+    },
+    {
+      "verb": "She was tired because she had been working all day.",
+      "answer": "perfcont"
+    },
+    {
+      "verb": "He bought a car last week.",
+      "answer": "simple"
+    }
+  ]
+}

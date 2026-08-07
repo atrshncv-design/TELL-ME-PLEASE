@@ -1,0 +1,51 @@
+{
+  "id": "past_perfect_continuous_b1_station_1",
+  "title": "Процесс или Результат? (Сортировка)",
+  "description": "Отнеси предложения к Past Perfect (Результат/Количество) или Past Perfect Continuous (Процесс/Длительность).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "perfect",
+      "label": "Past Perfect (Результат/Количество)"
+    },
+    {
+      "id": "perfect_cont",
+      "label": "Past Perfect Continuous (Процесс/Длительность)"
+    }
+  ],
+  "items": [
+    {
+      "verb": "I had downloaded 5 apps by 5 PM.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "I had been downloading this app for an hour when the computer crashed.",
+      "answer": "perfect_cont"
+    },
+    {
+      "verb": "She had written three emails before the boss came.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "She had been writing emails all morning when her computer broke.",
+      "answer": "perfect_cont"
+    },
+    {
+      "verb": "They had played 2 matches before it rained.",
+      "answer": "perfect"
+    },
+    {
+      "verb": "They had been playing for 2 hours when it started to rain.",
+      "answer": "perfect_cont"
+    },
+    {
+      "verb": "He had been reading this book for a week before he returned it.",
+      "answer": "perfect_cont"
+    },
+    {
+      "verb": "He had read 50 pages by 5 PM.",
+      "answer": "perfect"
+    }
+  ]
+}

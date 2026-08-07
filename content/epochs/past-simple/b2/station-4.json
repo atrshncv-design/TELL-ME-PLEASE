@@ -1,0 +1,67 @@
+{
+  "id": "past_simple_b2_station_4",
+  "title": "Симуляция ОГЭ (Устная часть Task 2)",
+  "description": "Симуляция устной части ОГЭ Task 2: ответь на вопросы экзаменатора о своём прошлом и опыте.",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль экзаменатора на устной части ОГЭ по английскому языку (Task 2) для ученика 9 класса (уровень B2). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ нейтрально и вежливо, как на экзамене: не исправляй настойчиво, но мягко отметь явные ошибки в Past Simple и Present Perfect. Если ответ слишком короткий, попроси ответить полным предложением. Говори на английском языке, на русский не переходи.",
+  "checklist": [
+    {
+      "question": "What did you do last weekend?",
+      "markers": [
+        "went",
+        "played",
+        "watched",
+        "visited",
+        "stayed",
+        "met",
+        "read",
+        "walked",
+        "did"
+      ],
+      "min": 1,
+      "hint": "Скажи: I went to the cinema with my friends."
+    },
+    {
+      "question": "Have you ever travelled abroad?",
+      "markers": [
+        "yes",
+        "no",
+        "travelled",
+        "abroad",
+        "been to",
+        "country",
+        "visited"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I have travelled abroad. / No, I haven't."
+    },
+    {
+      "question": "When did you start learning English?",
+      "markers": [
+        "started",
+        "learning",
+        "english",
+        "years ago",
+        "was",
+        "in",
+        "first"
+      ],
+      "min": 1,
+      "hint": "Скажи: I started learning English when I was 8."
+    },
+    {
+      "question": "How long have you been studying it?",
+      "markers": [
+        "years",
+        "months",
+        "since",
+        "for",
+        "studying",
+        "long"
+      ],
+      "min": 1,
+      "hint": "Скажи: I have been studying it for 6 years."
+    }
+  ]
+}

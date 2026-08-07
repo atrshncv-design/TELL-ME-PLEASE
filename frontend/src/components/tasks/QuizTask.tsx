@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useVerbBot } from "@/components/VerbBot"
 import { useSound } from "@/lib/useSound"
@@ -62,55 +62,65 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
 
   const display = item.question || item.sentence || item.subject || ""
 
-  // Клик по варианту только ВЫБИРАЕТ ответ (highlight) — проверка отложена до
-  // кнопки «Проверить». Повторный клик по другому варианту меняет выбор.
-  const handleSelect = (option: string) => {
-    if (showResult) return
-    setSelected(option)
+  // Мгновенная проверка (Q5, пакет «Все Эпохи»): клик по варианту СРАЗУ даёт
+  // вердикт (✓/✗ подсветка + звук + say + стикер-реакция) и через ~900 мс
+  // авто-переход к следующему вопросу. Кнопки «Проверить»/«Далее» для quiz
+  // убраны; review-навигация (история, ←/→, goTo) остаётся READ-ONLY.
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const clearTimer = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current)
+      timerRef.current = null
+    }
   }
 
-  // «Проверить»: вердикт (подсветка правильного/неправильного), звук, say,
-  // стикер-реакция; ответ сохраняется в историю для read-only review.
-  // Авто-перехода больше нет — дальше ученик идёт кнопкой «Далее».
-  const handleCheck = () => {
-    if (showResult || selected === null) return
-    const correct = selected === item.answer
-    if (correct) setScore((s) => s + 1)
+  // Очистка таймера авто-перехода при размонтировании (уход со страницы).
+  useEffect(() => clearTimer, [])
+
+  const handleSelect = (option: string) => {
+    if (showResult || finished) return
+    clearTimer()
+    const correct = option === item.answer
+    const nextScore = score + (correct ? 1 : 0)
+    setScore(nextScore)
     say(correct ? "correct" : "wrong")
     play(correct ? "correct" : "wrong")
-    // Тикет 05: стикер-реакция + «+1» на ответ (правило реш. 7 — один на экран).
+    // Стикер-реакция на ответ (+XP-вспышка). Ключ = номер вопроса, чтобы
+    // AnimatePresence перезапускал анимацию на каждом ответе.
     setReaction({ key: current, correct })
 
     // Persist this answer for read-only review.
     setHistory((prev) => {
       const next = [...prev]
-      next[current] = { selected, showResult: true }
+      next[current] = { selected: option, showResult: true }
       return next
     })
     setShowResult(true)
-  }
 
-  // «Далее»: переход к следующему вопросу без авто-таймера (или ResultScreen
-  // в конце — onComplete(score, total) вызывается ровно один раз).
-  const advance = () => {
-    setReaction(null)
-    if (current + 1 < items.length) {
-      const nextIndex = current + 1
-      setCurrent(nextIndex)
-      // Restore any previously-saved state for the next question, or reset.
-      const nextEntry = history[nextIndex]
-      setSelected(nextEntry ? nextEntry.selected : null)
-      setShowResult(nextEntry ? nextEntry.showResult : false)
-    } else {
-      setFinished(true)
-      onComplete?.(score, items.length)
-      say("finish")
-      play("fanfare")
-    }
+    // Авто-переход: вердикт виден ~900 мс, затем следующий вопрос (или
+    // ResultScreen в конце — onComplete(score, total) вызывается ровно один раз).
+    timerRef.current = setTimeout(() => {
+      timerRef.current = null
+      if (current + 1 < items.length) {
+        const nextIndex = current + 1
+        setCurrent(nextIndex)
+        // Restore any previously-saved state for the next question, or reset.
+        const nextEntry = history[nextIndex]
+        setSelected(nextEntry ? nextEntry.selected : null)
+        setShowResult(nextEntry ? nextEntry.showResult : false)
+      } else {
+        setFinished(true)
+        onComplete?.(nextScore, items.length)
+        say("finish")
+        play("fanfare")
+      }
+    }, 900)
   }
 
   // Read-only navigation: jump to a question index and restore its saved state.
   const goTo = (index: number) => {
+    clearTimer()
     setCurrent(index)
     setReaction(null)
     const entry = history[index]
@@ -119,6 +129,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
   }
 
   const retry = () => {
+    clearTimer()
     setCurrent(0)
     setScore(0)
     setSelected(null)
@@ -289,28 +300,8 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
         )}
       </AnimatePresence>
 
-      {/* CTA: «Проверить» (только когда вариант выбран) → после вердикта «Далее». */}
-      <div className="mt-1">
-        {!showResult ? (
-          selected !== null && (
-            <motion.button
-              whileTap={{ scale: 0.97 }}
-              onClick={handleCheck}
-              className="w-full min-h-[44px] rounded-2xl bg-primary-600 px-6 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
-            >
-              Проверить
-            </motion.button>
-          )
-        ) : (
-          <motion.button
-            whileTap={{ scale: 0.97 }}
-            onClick={advance}
-            className="w-full min-h-[44px] rounded-2xl bg-primary-600 px-6 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
-          >
-            Далее
-          </motion.button>
-        )}
-      </div>
+      {/* Мгновенная проверка (Q5): кнопок «Проверить»/«Далее» у quiz больше нет —
+          клик по варианту сразу даёт вердикт и авто-переход через ~900 мс. */}
     </div>
   )
 }

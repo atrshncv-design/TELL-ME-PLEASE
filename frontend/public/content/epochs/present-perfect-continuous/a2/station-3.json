@@ -1,0 +1,29 @@
+{
+  "id": "present_perfect_continuous_a2_station_3",
+  "title": "Тренажер Перевода (Интерференция)",
+  "description": "Переведи фразы (фокус на \"уже ... как\").",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "I ___ for you for 2 hours.",
+      "answer": "have been waiting",
+      "hint": "Я жду тебя уже 2 часа."
+    },
+    {
+      "sentence": "We ___ English since 2010.",
+      "answer": "have been learning",
+      "hint": "Мы учим английский с 2010 года."
+    },
+    {
+      "sentence": "She ___ for 3 hours.",
+      "answer": "has been sleeping",
+      "hint": "Она спит уже 3 часа."
+    },
+    {
+      "sentence": "It ___ since morning.",
+      "answer": "has been raining",
+      "hint": "Дождь идет с самого утра."
+    }
+  ]
+}

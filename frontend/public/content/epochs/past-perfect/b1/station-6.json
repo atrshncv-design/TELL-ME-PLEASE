@@ -1,0 +1,53 @@
+{
+  "id": "past_perfect_b1_station_6",
+  "title": "Интервью с Изобретателем (Диалог с ИИ)",
+  "description": "Спроси его: 1. What had you done before you invented this? 2. Had you failed before you succeeded? 3. What were you doing when the idea came to you? 4. How long had you been working on it before it worked? (Ожидается ответ без PPC, просто с Past Perfect).",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль изобретателя. Act like an inventor. Use B1 English. Ученик будет задавать тебе вопросы из списка checklist — отвечай на каждый простым английским уровня B1, одним-двумя предложениями, используя Past Perfect (had + V3) для того, что было ДО, и Past Simple для того, что случилось ПОТОМ (без Present Perfect Continuous — ожидается ответ без PPC, просто с Past Perfect). Оставайся в роли изобретателя, на русский не переходи.",
+  "checklist": [
+    {
+      "question": "What had you done before you invented this?",
+      "markers": [
+        "had",
+        "done",
+        "invented",
+        "before"
+      ],
+      "min": 1,
+      "hint": "Спроси изобретателя: What had you done before you invented this?"
+    },
+    {
+      "question": "Had you failed before you succeeded?",
+      "markers": [
+        "had",
+        "failed",
+        "succeeded"
+      ],
+      "min": 1,
+      "hint": "Спроси: Had you failed before you succeeded?"
+    },
+    {
+      "question": "What were you doing when the idea came to you?",
+      "markers": [
+        "were",
+        "doing",
+        "idea",
+        "came"
+      ],
+      "min": 1,
+      "hint": "Спроси: What were you doing when the idea came to you?"
+    },
+    {
+      "question": "How long had you been working on it before it worked?",
+      "markers": [
+        "had",
+        "been",
+        "working",
+        "worked"
+      ],
+      "min": 1,
+      "hint": "Спроси: How long had you been working on it before it worked?"
+    }
+  ]
+}

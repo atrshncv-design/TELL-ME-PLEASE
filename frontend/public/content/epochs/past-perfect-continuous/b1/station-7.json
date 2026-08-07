@@ -1,0 +1,42 @@
+{
+  "id": "past_perfect_continuous_b1_station_7",
+  "title": "Мини-Проект: \"Мой Трудный День\" (Продукт)",
+  "description": "Напиши 5 предложений о том, как долго ты что-то делал вчера, и какой у тебя был результат.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Напиши 5 предложений о том, как долго ты что-то делал вчера, и какой у тебя был результат. (I had been doing homework for 3 hours before I went for a walk. I was very tired.)",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "Форма had been + глагол с -ing",
+      "hint": "I had been doing homework for 3 hours before I went for a walk.",
+      "markers": [
+        "been"
+      ],
+      "min": 3
+    },
+    {
+      "label": "Маркеры for / since / before",
+      "hint": "for 3 hours, since morning, before I went for a walk",
+      "markers": [
+        "for",
+        "since",
+        "before"
+      ],
+      "min": 2
+    },
+    {
+      "label": "Результат (состояние)",
+      "hint": "I was very tired.",
+      "markers": [
+        "tired",
+        "happy",
+        "angry",
+        "hungry",
+        "was",
+        "were"
+      ],
+      "min": 1
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "past_perfect_continuous_a1_station_2",
+  "title": "Торможение Хаоса (Отрицание и Вопрос)",
+  "description": "Собери вопросы.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "playing / Had / you / been / tennis",
+      "options": [
+        "Had you been playing tennis?",
+        "Had you playing been tennis?",
+        "You had been playing tennis?"
+      ],
+      "answer": "Had you been playing tennis?"
+    },
+    {
+      "question": "reading / she / been / Had / a book",
+      "options": [
+        "Had she been reading a book?",
+        "Had she reading been a book?",
+        "She had been reading a book?"
+      ],
+      "answer": "Had she been reading a book?"
+    },
+    {
+      "question": "TV / they / watching / been / Had",
+      "options": [
+        "Had they been watching TV?",
+        "Had they watching been TV?",
+        "They had been watching TV?"
+      ],
+      "answer": "Had they been watching TV?"
+    },
+    {
+      "question": "sleeping / been / Had / he",
+      "options": [
+        "Had he been sleeping?",
+        "Had he sleeping been?",
+        "He had been sleeping?"
+      ],
+      "answer": "Had he been sleeping?"
+    },
+    {
+      "question": "studying / been / they / Had",
+      "options": [
+        "Had they been studying?",
+        "Had they studying been?",
+        "They had been studying?"
+      ],
+      "answer": "Had they been studying?"
+    }
+  ]
+}

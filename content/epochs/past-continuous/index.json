@@ -1,0 +1,267 @@
+{
+  "epoch": "past-continuous",
+  "title": "Эпоха Past Continuous",
+  "subtitle": "Видеокамера в Прошлом",
+  "icon": "📼",
+  "theory": [
+    {
+      "title": "📼 Шаг 1: Суть времени (Что это такое?)",
+      "text": "Привет, ребята! 👋 Мы снова садимся в «Машину Времени». Вы уже знаете, что Present Continuous — это 🎥 Видеокамера, которая снимает прямо сейчас. Past Continuous — это старая кассета VHS 📼, которая записывала процесс в прошлом.\nЭто время отвечает за ПРОЦЕСС, который длился в определенный момент в прошлом. Вас не интересует, когда он начался и чем закончился. Вы просто смотрите на кусок пленки, где действие тянется.\nФормула (Базовый каркас):\nПодлежащее + WAS / WERE + Глагол с окончанием -ING\nI was reading a book at 5 PM. (Я читал книгу в 5 вечера — процесс шел).\nThey were playing football. (Они играли в футбол — процесс).\n⚠️ ГЛАВНЫЙ БОСС Past Continuous: Выбор WAS или WERE.\nДля I, He, She, It ➡️ WAS (I was sleeping).\nДля We, You, They ➡️ WERE (We were sleeping)."
+    },
+    {
+      "title": "🎭 Шаг 2: Три жизни Past Continuous (Когда использовать?)",
+      "text": "Процесс в конкретный момент в прошлом: Маркеры: at 5 PM, at that time, yesterday at noon.\nAt 5 PM yesterday I was watching TV. (Вчера в 5 вечера я смотрел телевизор).\nФоновое действие (Сцена): Длинное действие, на фоне которого произошло короткое. Это самая частая ситуация в сказках и рассказах!\nIt was raining. (Шел дождь — фон).\nПараллельные процессы: Два длинных действия происходили одновременно. Маркер: while (в то время как).\nWhile I was reading, my mum was cooking. (Пока я читал, мама готовила — оба процесса шли)."
+    },
+    {
+      "title": "⚔️ Шаг 3: Битва Past Continuous vs Past Simple (Главное правило ОГЭ)",
+      "text": "Это битва «Длинного процесса» и «Внезапного факта». Запомните метафору: Змея и Кролик.\nPast Continuous — это «Змея» 🐍. Длинный, тянущийся процесс.\nI was walking in the park. (Я гулял в парке — долго).\nPast Simple — это «Кролик» 🐰. Короткое, резкое действие, которое ВПРЫГНУЛО в процесс и прервало его.\nI met my friend. (Я встретил друга — внезапно).\nКак они работают вместе (Союз WHEN / WHILE):\nI was walking (Змея) in the park when I met (Кролик) my friend. (Я гулял в парке, когда внезапно встретил друга).\nWhile обычно запускает Змею (процесс): While I was walking...\n💡 Лайфхак для ОГЭ: Если видите at 5 PM yesterday — смело пиши Past Continuous (was/were + V-ing). Если видите when + внезапное действие — сначала пишите процесс (Past Cont.), а потом резкий факт (Past Simple)."
+    },
+    {
+      "title": "🚨 Шаг 4: ГЛАВНАЯ ЛОВУШКА: Stative Verbs (Глаголы состояния)",
+      "text": "Как и в Present Continuous, глаголы чувств и мышления (love, know, want, understand) НЕЛЬЗЯ использовать с -ING! Даже если это фон в прошлом, используем Past Simple.\n❌ I was knowing the answer.\n✅ I knew the answer."
+    }
+  ],
+  "theoryQuiz": [
+    {
+      "question": "I ___ tennis at 5 PM yesterday.",
+      "options": [
+        "played",
+        "was playing"
+      ],
+      "answer": "was playing"
+    },
+    {
+      "question": "She ___ a book when the phone (rang / was ringing).",
+      "options": [
+        "read",
+        "was reading"
+      ],
+      "answer": "was reading"
+    },
+    {
+      "question": "She (read / was reading) a book when the phone ___.",
+      "options": [
+        "rang",
+        "was ringing"
+      ],
+      "answer": "rang"
+    },
+    {
+      "question": "While we ___, it (started / was starting) to rain.",
+      "options": [
+        "walked",
+        "were walking"
+      ],
+      "answer": "were walking"
+    },
+    {
+      "question": "While we (walked / were walking), it ___ to rain.",
+      "options": [
+        "started",
+        "was starting"
+      ],
+      "answer": "started"
+    },
+    {
+      "question": "They ___ the truth.",
+      "options": [
+        "were knowing",
+        "knew"
+      ],
+      "answer": "knew"
+    },
+    {
+      "question": "At 9 AM I ___ breakfast.",
+      "options": [
+        "had",
+        "was having"
+      ],
+      "answer": "was having"
+    }
+  ],
+  "music": {
+    "title": "🎵 Музыкальная пауза (Караоке-генератор)",
+    "links": [
+      "[Ссылка на Rutube/Yandex коллекцию]"
+    ],
+    "sunoPrompt": "Придумай ритмичную песню про Past Continuous. Объясни, что мы используем was/were + V-ing, когда говорим о процессе в прошлом (at 5 PM). Напомни правило 'Змеи и Кролика': длинный процесс (Past Cont) прерывается коротким действием (Past Simple) с союзом when. В припеве должны быть слова: was, were, V-ing, when, process. Стиль: 80s synth-pop, retro, 120 bpm."
+  },
+  "sectors": [
+    {
+      "id": "a1",
+      "level": "A1",
+      "title": "Запись Прошлого",
+      "grade": 5,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a1/station-1.json",
+          "title": "Сборка Кассеты (Механика)"
+        },
+        {
+          "id": "station-2",
+          "file": "a1/station-2.json",
+          "title": "Торможение Хаоса (Отрицание и Вопрос)"
+        },
+        {
+          "id": "station-3",
+          "file": "a1/station-3.json",
+          "title": "Точка во Времени (Маркеры)"
+        },
+        {
+          "id": "station-4",
+          "file": "a1/station-4.json",
+          "title": "Орфологический Щит (-ING)"
+        },
+        {
+          "id": "station-5",
+          "file": "a1/station-5.json",
+          "title": "Контраст: Настоящее vs Прошлое (Cont vs PastCont)"
+        },
+        {
+          "id": "station-6",
+          "file": "a1/station-6.json",
+          "title": "Текст: Вчерашний Вечер (Интеграция)"
+        },
+        {
+          "id": "station-7",
+          "file": "a1/station-7.json",
+          "title": "Аудио-Детектив (ИИ-бот)"
+        }
+      ],
+      "story": "Механика was/were + V-ing, конкретное время в прошлом."
+    },
+    {
+      "id": "a2",
+      "level": "A2",
+      "title": "Фон и Прерывание",
+      "grade": 6,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a2/station-1.json",
+          "title": "Змея и Кролик (Введение контраста)"
+        },
+        {
+          "id": "station-2",
+          "file": "a2/station-2.json",
+          "title": "Сборка Сцены (Синтаксис с WHEN)"
+        },
+        {
+          "id": "station-3",
+          "file": "a2/station-3.json",
+          "title": "Параллельные Миры (Союз WHILE)"
+        },
+        {
+          "id": "station-4",
+          "file": "a2/station-4.json",
+          "title": "Детектор Ошибок (Дебаггинг)"
+        },
+        {
+          "id": "station-5",
+          "file": "a2/station-5.json",
+          "title": "Вопросы о Прошлом (Спецвопросы)"
+        },
+        {
+          "id": "station-6",
+          "file": "a2/station-6.json",
+          "title": "Текст: Несчастный Случай (Чтение)"
+        },
+        {
+          "id": "station-7",
+          "file": "a2/station-7.json",
+          "title": "Алиби (Речь / Ролевая игра)"
+        }
+      ],
+      "story": "Союз WHEN, прерывание процесса (Past Cont + Past Simple)."
+    },
+    {
+      "id": "b1",
+      "level": "B1",
+      "title": "Мастер Сценария",
+      "grade": "7-8",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b1/station-1.json",
+          "title": "Ловушка Состояния (Stative Verbs)"
+        },
+        {
+          "id": "station-2",
+          "file": "b1/station-2.json",
+          "title": "Сложная Сцена (Текст)"
+        },
+        {
+          "id": "station-3",
+          "file": "b1/station-3.json",
+          "title": "Перевод-Ловушка (Интерференция)"
+        },
+        {
+          "id": "station-4",
+          "file": "b1/station-4.json",
+          "title": "Контраст Маркеров (Сортировка)"
+        },
+        {
+          "id": "station-5",
+          "file": "b1/station-5.json",
+          "title": "История Хакера (Речь)"
+        },
+        {
+          "id": "station-6",
+          "file": "b1/station-6.json",
+          "title": "Интервью с Очевидцем (Диалог с ИИ)"
+        },
+        {
+          "id": "station-7",
+          "file": "b1/station-7.json",
+          "title": "Комикс \"Катастрофа\" (Продукт)"
+        }
+      ],
+      "story": "Лексика технологий, сложные истории. Строгий контроль Stative Verbs и всех прошлых времен."
+    },
+    {
+      "id": "b2",
+      "level": "B2",
+      "title": "Мастер Временной Ткани",
+      "grade": 9,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b2/station-1.json",
+          "title": "ОГЭ-Тренажер (Task 19: 4 Времени)"
+        },
+        {
+          "id": "station-2",
+          "file": "b2/station-2.json",
+          "title": "Тонкие Смыслы (Перевод-Ловушка)"
+        },
+        {
+          "id": "station-3",
+          "file": "b2/station-3.json",
+          "title": "Текст ОГЭ: История Города (Чтение)"
+        },
+        {
+          "id": "station-4",
+          "file": "b2/station-4.json",
+          "title": "Симуляция ОГЭ (Устная часть Task 2)"
+        },
+        {
+          "id": "station-5",
+          "file": "b2/station-5.json",
+          "title": "Описание Фотографии (ОГЭ Task 3)"
+        },
+        {
+          "id": "station-6",
+          "file": "b2/station-6.json",
+          "title": "Дебаты: \"Великие События\" (Монолог)"
+        },
+        {
+          "id": "station-7",
+          "file": "b2/station-7.json",
+          "title": "Финальный Босс: 4 Времени (Викторина)"
+        }
+      ],
+      "story": "Лексика общества, безупречное владение всеми временами (включая Perfect) для ОГЭ."
+    }
+  ]
+}

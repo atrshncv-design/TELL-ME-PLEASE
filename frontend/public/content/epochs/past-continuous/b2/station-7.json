@@ -1,0 +1,89 @@
+{
+  "id": "past_continuous_b2_station_7",
+  "title": "Финальный Босс: 4 Времени (Викторина)",
+  "description": "Финальный босс: выбери правильное время из 4 (Past Simple, Past Continuous, Present Perfect, Present Continuous).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "I ___ (go) to the gym yesterday.",
+      "options": [
+        "went",
+        "was going",
+        "have been",
+        "am going"
+      ],
+      "answer": "went"
+    },
+    {
+      "question": "I ___ (go) to the gym at 5 PM yesterday.",
+      "options": [
+        "went",
+        "was going",
+        "have been",
+        "am going"
+      ],
+      "answer": "was going"
+    },
+    {
+      "question": "I ___ (go) to the gym 3 times this week.",
+      "options": [
+        "went",
+        "was going",
+        "have been",
+        "am going"
+      ],
+      "answer": "have been"
+    },
+    {
+      "question": "Look! I ___ (go) to the gym right now!",
+      "options": [
+        "went",
+        "was going",
+        "have been",
+        "am going"
+      ],
+      "answer": "am going"
+    },
+    {
+      "question": "I ___ home when it started to rain.",
+      "options": [
+        "was walking",
+        "walked",
+        "have walked",
+        "am walking"
+      ],
+      "answer": "was walking"
+    },
+    {
+      "question": "I was walking home when it ___ to rain.",
+      "options": [
+        "started",
+        "was starting",
+        "has started",
+        "is starting"
+      ],
+      "answer": "started"
+    },
+    {
+      "question": "I ___ (lose) my keys! I can't find them.",
+      "options": [
+        "lost",
+        "have lost",
+        "was losing",
+        "am losing"
+      ],
+      "answer": "have lost"
+    },
+    {
+      "question": "I ___ (lose) my keys yesterday.",
+      "options": [
+        "lost",
+        "have lost",
+        "was losing",
+        "am losing"
+      ],
+      "answer": "lost"
+    }
+  ]
+}

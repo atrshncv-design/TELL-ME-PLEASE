@@ -1,0 +1,45 @@
+{
+  "id": "past_continuous_a2_station_2",
+  "title": "Сборка Сцены (Синтаксис с WHEN)",
+  "description": "Собери предложения о сцене: длинный процесс (Past Continuous) прерывается внезапным действием (Past Simple) с союзом when.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "walking / I / was / when / saw / I / a dog",
+      "options": [
+        "I was walking when I saw a dog.",
+        "I was walking when saw I a dog.",
+        "I was walking when I a dog saw."
+      ],
+      "answer": "I was walking when I saw a dog."
+    },
+    {
+      "question": "reading / was / She / phone / when / rang / the",
+      "options": [
+        "She was reading when the phone rang.",
+        "She was reading when rang the phone.",
+        "She reading was when the phone rang."
+      ],
+      "answer": "She was reading when the phone rang."
+    },
+    {
+      "question": "started / We / playing / when / it / were / to rain",
+      "options": [
+        "We were playing when it started to rain.",
+        "We were playing when it to rain started.",
+        "We playing were when it started to rain."
+      ],
+      "answer": "We were playing when it started to rain."
+    },
+    {
+      "question": "came / They / having / when / I / were / dinner",
+      "options": [
+        "They were having dinner when I came.",
+        "They were having dinner when came I.",
+        "They having were dinner when I came."
+      ],
+      "answer": "They were having dinner when I came."
+    }
+  ]
+}

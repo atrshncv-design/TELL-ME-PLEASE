@@ -1,0 +1,59 @@
+{
+  "id": "past_simple_a1_station_4",
+  "title": "Паттерны Неправильных (Детектор)",
+  "description": "Распредели неправильные глаголы по 4 группам паттернов: все формы разные, 2-я и 3-я одинаковые, 1-я и 3-я одинаковые, все одинаковые.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "abc",
+      "label": "1. All different (A-B-C)"
+    },
+    {
+      "id": "abb",
+      "label": "2. 2nd and 3rd same (A-B-B)"
+    },
+    {
+      "id": "aba",
+      "label": "3. 1st and 3rd same (A-B-A)"
+    },
+    {
+      "id": "aaa",
+      "label": "4. All the same (A-A-A)"
+    }
+  ],
+  "items": [
+    {
+      "verb": "go (went/gone)",
+      "answer": "abc"
+    },
+    {
+      "verb": "buy (bought/bought)",
+      "answer": "abb"
+    },
+    {
+      "verb": "come (came/come)",
+      "answer": "aba"
+    },
+    {
+      "verb": "read (read/read)",
+      "answer": "aaa"
+    },
+    {
+      "verb": "see (saw/seen)",
+      "answer": "abc"
+    },
+    {
+      "verb": "have (had/had)",
+      "answer": "abb"
+    },
+    {
+      "verb": "run (ran/run)",
+      "answer": "aba"
+    },
+    {
+      "verb": "put (put/put)",
+      "answer": "aaa"
+    }
+  ]
+}

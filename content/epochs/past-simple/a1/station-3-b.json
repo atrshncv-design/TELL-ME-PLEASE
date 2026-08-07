@@ -1,0 +1,54 @@
+{
+  "id": "past_simple_a1_station_3_b",
+  "title": "Жадина DID (Вопрос)",
+  "description": "Расположи слова, чтобы получился вопрос.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "you / Did / play / tennis",
+      "options": [
+        "Did you play tennis?",
+        "You did play tennis?",
+        "Did play you tennis?"
+      ],
+      "answer": "Did you play tennis?"
+    },
+    {
+      "question": "she / Did / go / school / to",
+      "options": [
+        "Did she go to school?",
+        "She did go to school?",
+        "Did go she to school?"
+      ],
+      "answer": "Did she go to school?"
+    },
+    {
+      "question": "film / they / the / Did / see",
+      "options": [
+        "Did they see the film?",
+        "They did see the film?",
+        "Did see they the film?"
+      ],
+      "answer": "Did they see the film?"
+    },
+    {
+      "question": "pizza / he / eat / Did",
+      "options": [
+        "Did he eat pizza?",
+        "He did eat pizza?",
+        "Did eat he pizza?"
+      ],
+      "answer": "Did he eat pizza?"
+    },
+    {
+      "question": "car / they / a / buy / Did",
+      "options": [
+        "Did they buy a car?",
+        "They did buy a car?",
+        "Did buy they a car?"
+      ],
+      "answer": "Did they buy a car?"
+    }
+  ]
+}

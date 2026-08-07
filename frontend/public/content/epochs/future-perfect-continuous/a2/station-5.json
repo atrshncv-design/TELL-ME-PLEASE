@@ -1,0 +1,47 @@
+{
+  "id": "future_perfect_continuous_a2_station_5",
+  "title": "Текст: Долгий Рабочий День (Чтение)",
+  "description": "Раскрой скобки в тексте о долгом рабочем дне (Future Perfect Continuous).",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Tomorrow is a big day for my dad. By 5 PM, he ___ for 8 hours. By 6 PM, he ___ for an hour to get home. By 7 PM, he ___ at all. When we see him, he will be very tired because he ___ all day. I ___ for him for hours!",
+      "answers": [
+        [
+          "will have been working"
+        ],
+        [
+          "will have been driving"
+        ],
+        [
+          "won't have been resting"
+        ],
+        [
+          "will have been working"
+        ],
+        [
+          "will have been waiting"
+        ]
+      ],
+      "hints": [
+        "(work)",
+        "(drive)",
+        "(not / rest)",
+        "(work)",
+        "(wait)"
+      ],
+      "word_bank": [
+        "will have been working",
+        "will have been driving",
+        "won't have been resting",
+        "will have been working",
+        "will have been waiting",
+        "will have worked",
+        "was resting",
+        "will wait",
+        "will have been resting"
+      ]
+    }
+  ]
+}

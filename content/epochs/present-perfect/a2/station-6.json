@@ -1,0 +1,49 @@
+{
+  "id": "present_perfect_a2_station_6",
+  "title": "Блог \"Мой Отпуск\" (Продукт)",
+  "description": "Создание собственного речевого продукта.",
+  "category": "speaking",
+  "type": "one-minute",
+  "topic": "Мой Отпуск: что я уже сделал(а), чего не сделал(а) ещё, и что делаю прямо сейчас",
+  "duration": 60,
+  "conditions": [
+    {
+      "label": "5 предложений о том, что уже сделал(а) (Present Perfect)",
+      "hint": "Напиши 5 предложений: I have visited..., I have seen..., I have bought...",
+      "markers": [
+        "have",
+        "has",
+        "visited",
+        "seen",
+        "bought",
+        "eaten",
+        "taken",
+        "been",
+        "done"
+      ],
+      "min": 5
+    },
+    {
+      "label": "2 предложения о том, чего не сделал(а) ещё (yet)",
+      "hint": "Напиши 2 предложения: I haven't ... yet",
+      "markers": [
+        "yet",
+        "haven't",
+        "hasn't"
+      ],
+      "min": 2
+    },
+    {
+      "label": "1 предложение о том, что делаешь прямо сейчас (Present Continuous)",
+      "hint": "Напиши 1 предложение: I am doing ... right now",
+      "markers": [
+        "am",
+        "is",
+        "are",
+        "now",
+        "right"
+      ],
+      "min": 1
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "present_perfect_b1_station_2",
+  "title": "Ловушка \"To Be\" (Been vs Gone)",
+  "description": "Разница между \"он уехал и вернулся\" (been) и \"он уехал и там\" (gone).",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "My dad isn't here. He has ___ to Rome.",
+      "options": [
+        "been",
+        "gone"
+      ],
+      "answer": "gone"
+    },
+    {
+      "question": "I know London well. I have ___ there twice.",
+      "options": [
+        "been",
+        "gone"
+      ],
+      "answer": "been"
+    },
+    {
+      "question": "Mary is on holiday. She has ___ to Spain.",
+      "options": [
+        "been",
+        "gone"
+      ],
+      "answer": "gone"
+    },
+    {
+      "question": "We have ___ to this museum before, let's go somewhere else.",
+      "options": [
+        "been",
+        "gone"
+      ],
+      "answer": "been"
+    },
+    {
+      "question": "Where is Tom? He has ___ to the bank.",
+      "options": [
+        "been",
+        "gone"
+      ],
+      "answer": "gone"
+    }
+  ]
+}

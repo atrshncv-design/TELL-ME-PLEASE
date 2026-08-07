@@ -1,0 +1,47 @@
+{
+  "id": "past_perfect_b1_station_3",
+  "title": "Тонкие Смыслы (Сортировка)",
+  "description": "Распредели предложения по группам: Past Simple (Факт), Past Continuous (Процесс), Past Perfect (Предыстория).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "past-simple",
+      "label": "Past Simple (Факт)"
+    },
+    {
+      "id": "past-continuous",
+      "label": "Past Continuous (Процесс)"
+    },
+    {
+      "id": "past-perfect",
+      "label": "Past Perfect (Предыстория)"
+    }
+  ],
+  "items": [
+    {
+      "verb": "I watched a film yesterday.",
+      "answer": "past-simple"
+    },
+    {
+      "verb": "I was watching a film at 5 PM.",
+      "answer": "past-continuous"
+    },
+    {
+      "verb": "I had watched a film before she came.",
+      "answer": "past-perfect"
+    },
+    {
+      "verb": "He read the book last week.",
+      "answer": "past-simple"
+    },
+    {
+      "verb": "He was reading when I called.",
+      "answer": "past-continuous"
+    },
+    {
+      "verb": "He had read the book before the exam.",
+      "answer": "past-perfect"
+    }
+  ]
+}

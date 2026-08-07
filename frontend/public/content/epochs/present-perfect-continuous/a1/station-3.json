@@ -1,0 +1,67 @@
+{
+  "id": "present_perfect_continuous_a1_station_3",
+  "title": "Маркеры Длительности (Since vs For)",
+  "description": "Распредели маркеры времени в две корзины: FOR (период времени) или SINCE (точка отсчета).",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "for",
+      "label": "FOR (период времени)"
+    },
+    {
+      "id": "since",
+      "label": "SINCE (точка отсчета)"
+    }
+  ],
+  "items": [
+    {
+      "verb": "2 hours",
+      "answer": "for"
+    },
+    {
+      "verb": "3 days",
+      "answer": "for"
+    },
+    {
+      "verb": "a long time",
+      "answer": "for"
+    },
+    {
+      "verb": "10 years",
+      "answer": "for"
+    },
+    {
+      "verb": "a month",
+      "answer": "for"
+    },
+    {
+      "verb": "5 minutes",
+      "answer": "for"
+    },
+    {
+      "verb": "morning",
+      "answer": "since"
+    },
+    {
+      "verb": "Monday",
+      "answer": "since"
+    },
+    {
+      "verb": "2010",
+      "answer": "since"
+    },
+    {
+      "verb": "5 PM",
+      "answer": "since"
+    },
+    {
+      "verb": "I was 5",
+      "answer": "since"
+    },
+    {
+      "verb": "summer",
+      "answer": "since"
+    }
+  ]
+}

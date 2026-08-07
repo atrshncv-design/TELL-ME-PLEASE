@@ -1,0 +1,58 @@
+{
+  "id": "future_simple_b1_station_4",
+  "title": "Текст: Путешествие (Интеграция)",
+  "description": "Вставь формы будущего времени в текст о путешествии в Японию.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Next month, my family ___ to Japan. We ___ on August 10th. Our tickets ___ at 10 AM. We ___ in Tokyo for a week. I think we ___ a lot of temples. I ___ hundreds of photos! I promise I ___ them to you.",
+      "answers": [
+        [
+          "are travelling"
+        ],
+        [
+          "are flying"
+        ],
+        [
+          "leave"
+        ],
+        [
+          "are staying"
+        ],
+        [
+          "will visit"
+        ],
+        [
+          "will take"
+        ],
+        [
+          "will show"
+        ]
+      ],
+      "hints": [
+        "(travel)",
+        "(fly)",
+        "(leave)",
+        "(stay)",
+        "(visit)",
+        "(take)",
+        "(show)"
+      ],
+      "word_bank": [
+        "are travelling",
+        "are flying",
+        "leave",
+        "are staying",
+        "will visit",
+        "will take",
+        "will show",
+        "travel",
+        "leaves",
+        "are going to travel",
+        "will visiting",
+        "took"
+      ]
+    }
+  ]
+}

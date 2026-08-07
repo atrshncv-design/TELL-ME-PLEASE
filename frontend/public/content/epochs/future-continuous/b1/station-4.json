@@ -1,0 +1,66 @@
+{
+  "id": "future_continuous_b1_station_4",
+  "title": "Текст: Сбой Системы (Интеграция)",
+  "description": "Вставь формы будущего времени в текст о сбое системы у блогера.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Tomorrow at 10 AM, a famous blogger ___ a new video. He ___ a new game. At 11 AM, while he ___, the internet ___ down! He ___ what ___. While he ___ to fix it, his fans ___ in the chat.",
+      "answers": [
+        [
+          "will be streaming"
+        ],
+        [
+          "will be playing"
+        ],
+        [
+          "is playing"
+        ],
+        [
+          "will go"
+        ],
+        [
+          "will not understand"
+        ],
+        [
+          "is happening"
+        ],
+        [
+          "is trying"
+        ],
+        [
+          "will be waiting"
+        ]
+      ],
+      "hints": [
+        "(stream)",
+        "(play)",
+        "(play)",
+        "(go)",
+        "(not / understand)",
+        "(happen)",
+        "(try)",
+        "(wait)"
+      ],
+      "word_bank": [
+        "will be streaming",
+        "will be playing",
+        "is playing",
+        "will go",
+        "will not understand",
+        "is happening",
+        "is trying",
+        "will be waiting",
+        "will stream",
+        "plays",
+        "will be play",
+        "will goes",
+        "won't understand",
+        "is happen",
+        "tries",
+        "will wait"
+      ]
+    }
+  ]
+}

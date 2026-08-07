@@ -1,0 +1,51 @@
+{
+  "id": "future_perfect_continuous_a1_station_7",
+  "title": "Предсказание Длительности (ИИ-бот)",
+  "description": "Спроси бота: 1. How long will I have been sleeping by 8 AM? 2. How long will I have been studying by 5 PM? 3. Will I have been playing games for 2 hours by evening?",
+  "category": "speaking",
+  "type": "voice-chat",
+  "task_context": "Ты — путешественник во времени (time traveler) из будущего. Общайся по-английски простыми фразами (уровень A1). Ученик будет задавать тебе вопросы о том, как долго он будет делать что-то к определённому моменту в будущем (Future Perfect Continuous: will have been + V-ing) — отвечай дружелюбно и загадочно, рассказывай, что ждёт его в будущем, и используй конструкцию will have been + V-ing в ответах. Хвали ученика за вопросы, мягко поправляй ошибки. Никогда не говори, что ты ИИ.",
+  "checklist": [
+    {
+      "question": "How long will I have been sleeping by 8 AM?",
+      "markers": [
+        "How",
+        "long",
+        "will",
+        "have",
+        "been",
+        "sleeping",
+        "8 AM"
+      ],
+      "min": 1,
+      "hint": "Спроси бота: How long will I have been sleeping by 8 AM?"
+    },
+    {
+      "question": "How long will I have been studying by 5 PM?",
+      "markers": [
+        "How",
+        "long",
+        "will",
+        "have",
+        "been",
+        "studying",
+        "5 PM"
+      ],
+      "min": 1,
+      "hint": "Спроси бота: How long will I have been studying by 5 PM?"
+    },
+    {
+      "question": "Will I have been playing games for 2 hours by evening?",
+      "markers": [
+        "Will",
+        "have",
+        "been",
+        "playing",
+        "games",
+        "evening"
+      ],
+      "min": 1,
+      "hint": "Спроси бота: Will I have been playing games for 2 hours by evening?"
+    }
+  ]
+}

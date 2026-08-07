@@ -1,0 +1,54 @@
+{
+  "id": "past_simple_a2_station_1",
+  "title": "Тренажер Спецвопросов (Wh- + did)",
+  "description": "Составь специальные вопросы (Wh- + did) из слов.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "did / Where / go / you / yesterday",
+      "options": [
+        "Where did you go yesterday?",
+        "Where you did go yesterday?",
+        "Where did go you yesterday?"
+      ],
+      "answer": "Where did you go yesterday?"
+    },
+    {
+      "question": "she / What / eat / did / last night",
+      "options": [
+        "What did she eat last night?",
+        "What she did eat last night?",
+        "What did eat she last night?"
+      ],
+      "answer": "What did she eat last night?"
+    },
+    {
+      "question": "film / see / they / did / When / the",
+      "options": [
+        "When did they see the film?",
+        "When they did see the film?",
+        "When did see they the film?"
+      ],
+      "answer": "When did they see the film?"
+    },
+    {
+      "question": "buy / did / a car / Who",
+      "options": [
+        "Who did buy a car?",
+        "Who buy did a car?",
+        "Who did a car buy?"
+      ],
+      "answer": "Who did buy a car?"
+    },
+    {
+      "question": "How / play / did / tennis / you",
+      "options": [
+        "How did you play tennis?",
+        "How you did play tennis?",
+        "How did play you tennis?"
+      ],
+      "answer": "How did you play tennis?"
+    }
+  ]
+}

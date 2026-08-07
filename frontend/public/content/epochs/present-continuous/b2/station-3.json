@@ -1,0 +1,29 @@
+{
+  "id": "present_continuous_b2_station_3",
+  "title": "Тенденции и Перемены (Аналитика)",
+  "description": "Отработка маркеров изменений (rapidly, increasingly).",
+  "category": "grammar",
+  "type": "fill-in",
+  "items": [
+    {
+      "sentence": "The climate ___ (change) rapidly.",
+      "answer": "is changing"
+    },
+    {
+      "sentence": "Technology ___ (develop) very fast.",
+      "answer": "is developing"
+    },
+    {
+      "sentence": "Traditional newspapers ___ (disappear) slowly.",
+      "answer": "are disappearing"
+    },
+    {
+      "sentence": "The sea level ___ (rise).",
+      "answer": "is rising"
+    },
+    {
+      "sentence": "Robots ___ (replace) factory workers.",
+      "answer": "are replacing"
+    }
+  ]
+}

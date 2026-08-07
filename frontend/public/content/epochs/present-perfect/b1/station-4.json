@@ -1,0 +1,52 @@
+{
+  "id": "present_perfect_b1_station_4",
+  "title": "Рекордер Событий (Текст с пропусками)",
+  "description": "Интеграция 4 времен (Simple, Cont, Perfect, Past) в текст о технологиях.",
+  "category": "grammar",
+  "type": "cloze",
+  "rounds": [
+    {
+      "text": "Technology ___ a lot recently. People ___ smartphones every day now. Yesterday, I ___ a new app. I ___ it to my friends. When I ___ home, my brother ___ video games. He ___ his homework yet. Last week, we ___ a modern factory.",
+      "answers": [
+        "has changed",
+        "use",
+        "downloaded",
+        "have already shown",
+        "came",
+        "was playing",
+        "hasn't done",
+        "visited"
+      ],
+      "hints": [
+        "(change)",
+        "(use)",
+        "(download)",
+        "(already / show)",
+        "(come)",
+        "(play)",
+        "(not / do)",
+        "(visit)"
+      ],
+      "word_bank": [
+        "has changed",
+        "use",
+        "downloaded",
+        "have already shown",
+        "came",
+        "was playing",
+        "hasn't done",
+        "visited",
+        "changed",
+        "uses",
+        "downloads",
+        "show",
+        "comes",
+        "plays",
+        "has done",
+        "visits",
+        "is playing",
+        "are using"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "past_continuous_a1_station_4",
+  "title": "Орфологический Щит (-ING)",
+  "description": "Выбери правильное написание глагола с -ing.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "Выбери правильное написание: (runing / running / runnning)",
+      "options": [
+        "runing",
+        "running",
+        "runnning"
+      ],
+      "answer": "running"
+    },
+    {
+      "question": "Выбери правильное написание: (makeing / making / macking)",
+      "options": [
+        "makeing",
+        "making",
+        "macking"
+      ],
+      "answer": "making"
+    },
+    {
+      "question": "Выбери правильное написание: (swiming / swimming / swimmng)",
+      "options": [
+        "swiming",
+        "swimming",
+        "swimmng"
+      ],
+      "answer": "swimming"
+    },
+    {
+      "question": "Выбери правильное написание: (danceing / dancing / danccing)",
+      "options": [
+        "danceing",
+        "dancing",
+        "danccing"
+      ],
+      "answer": "dancing"
+    },
+    {
+      "question": "Выбери правильное написание: (siting / sitting / sittting)",
+      "options": [
+        "siting",
+        "sitting",
+        "sittting"
+      ],
+      "answer": "sitting"
+    },
+    {
+      "question": "Выбери правильное написание: (writeing / writing / writting)",
+      "options": [
+        "writeing",
+        "writing",
+        "writting"
+      ],
+      "answer": "writing"
+    },
+    {
+      "question": "Выбери правильное написание: (skiping / skipping / skippng)",
+      "options": [
+        "skiping",
+        "skipping",
+        "skippng"
+      ],
+      "answer": "skipping"
+    },
+    {
+      "question": "Выбери правильное написание: (lieing / lying / laying)",
+      "options": [
+        "lieing",
+        "lying",
+        "laying"
+      ],
+      "answer": "lying"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "epoch": "present-perfect-continuous",
+  "title": "Эпоха Present Perfect Continuous",
+  "subtitle": "Секундомер и Процесс",
+  "icon": "⏱️",
+  "theory": [
+    {
+      "title": "⏱️ Шаг 1: Суть времени (Что это такое?)",
+      "text": "Привет, ребята! 👋 Мы подошли к самому «длинному» времени в английском языке — Present Perfect Continuous.\nЕсли Present Simple — это 📸 Фотография, а Present Continuous — это 🎥 Видеокамера (прямо сейчас), то Present Perfect Continuous — это Секундомер ⏱️, который запустили в прошлом, и он до сих пор тикает у вас в руках!\nЭто время отвечает за ПРОЦЕСС, который начался в прошлом, длился какое-то время и всё ещё продолжается в настоящем (или только что закончился, но мы видим его свежий результат). Вас интересует не что вы сделали, а как долго вы это делали!\nФормула (Длинный мост):\nПодлежащее + HAVE / HAS + BEEN + Глагол с окончанием -ING\nI have been reading for 2 hours. (Я читаю уже 2 часа — начал 2 часа назад и всё еще читаю).\nShe has been crying. (Она плакала — по глазам видно, процесс только что завершился, есть результат)."
+    },
+    {
+      "title": "🎭 Шаг 2: Две жизни Present Perfect Continuous (Когда использовать?)",
+      "text": "Процесс, который длится до сих пор: Действие началось в прошлом и продолжается в момент речи. Маркеры: for (в течение), since (с тех пор как), all day, how long (как долго?).\nWe have been living here since 2010. (Мы живем здесь с 2010 года и живем сейчас).\nСвежий результат действия: Действие недавно закончилось, и налицо его очевидный результат прямо сейчас.\nLook at her hands! She has been painting the wall. (Посмотри на ее руки! Она красила стену — процесс закончился, но руки грязные).\nI am tired because I have been working all day. (Я устал, потому что работал весь день)."
+    },
+    {
+      "title": "⚔️ Шаг 3: Битва Perfect vs Perfect Continuous (Главное правило ОГЭ)",
+      "text": "Как не путать эти два времени? Задайте вопрос: «Что важнее — процесс или результат?»\nPresent Perfect (Результат/Количество 🎒): Важно сколько штук вы сделали или доведено ли дело до конца.\nI have read 3 books. (Я прочитал 3 книги — важен результат: 3 штуки).\nI have painted the wall. (Я покрасил стену — стена готова).\nPresent Perfect Continuous (Процесс/Длительность ⏱️): Важно, как долго вы занимались этим делом. Само действие может быть не закончено.\nI have been reading for 2 hours. (Я читаю уже 2 часа — важен процесс).\nI have been painting the wall. (Я красил стену — могу быть в краске, но стена еще не докрашена).\n💡 Лайфхак для ОГЭ: Если перед глаголом можно подставить «как долго?» (How long?) или слова for/since — смело пиши Perfect Continuous. Если есть конкретный результат (нарисовал, съел, купил) — пиши Perfect."
+    },
+    {
+      "title": "🚨 Шаг 4: ГЛАВНАЯ ЛОВУШКА: Stative Verbs (Глаголы состояния)",
+      "text": "⚠️ Глаголы чувств, мышления и владения (love, know, want, understand, have) НЕЛЬЗЯ использовать с -ING! Даже если действие длится давно, мы используем обычный Present Perfect.\n❌ I have been knowing him for 5 years. (ОШИБКА!)\n✅ I have known him for 5 years. (Правильно)."
+    }
+  ],
+  "theoryQuiz": [
+    {
+      "question": "I ___ this book since morning. I am on page 50.",
+      "options": [
+        "have been reading",
+        "have read"
+      ],
+      "answer": "have been reading"
+    },
+    {
+      "question": "She ___ three letters today. They are ready to send.",
+      "options": [
+        "has been writing",
+        "has written"
+      ],
+      "answer": "has written"
+    },
+    {
+      "question": "We ___ each other for 10 years.",
+      "options": [
+        "have been knowing",
+        "have known"
+      ],
+      "answer": "have known"
+    },
+    {
+      "question": "Look! It ___. The ground is wet.",
+      "options": [
+        "has been raining",
+        "has rained"
+      ],
+      "answer": "has been raining"
+    },
+    {
+      "question": "They ___ football for 2 hours and they are very tired.",
+      "options": [
+        "have been playing",
+        "have played"
+      ],
+      "answer": "have been playing"
+    }
+  ],
+  "music": {
+    "title": "🎵 Музыкальная пауза (Караоке-генератор)",
+    "links": [
+      "[Ссылка на Rutube/Yandex коллекцию]"
+    ],
+    "sunoPrompt": "Придумай ритмичную песню про Present Perfect Continuous. Объясни, что мы используем have/has + been + V-ing, когда говорим о длительности процесса (for/since). Напомни, что глаголы состояния (know, love) не используют -ing. В припеве должны быть слова: How long, since, for, been doing. Стиль: upbeat pop, 120 bpm."
+  },
+  "sectors": [
+    {
+      "id": "a1",
+      "level": "A1",
+      "title": "Запуск Секундомера",
+      "grade": 5,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a1/station-1.json",
+          "title": "Сборка Длинного Моста (Механика)"
+        },
+        {
+          "id": "station-2",
+          "file": "a1/station-2.json",
+          "title": "Торможение Хаоса (Отрицание и Вопрос)"
+        },
+        {
+          "id": "station-3",
+          "file": "a1/station-3.json",
+          "title": "Маркеры Длительности (Since vs For)"
+        },
+        {
+          "id": "station-4",
+          "file": "a1/station-4.json",
+          "title": "Ловушка Орфографии (Удвоение и -e)"
+        },
+        {
+          "id": "station-5",
+          "file": "a1/station-5.json",
+          "title": "Свежий Результат (Визуализация)"
+        },
+        {
+          "id": "station-6",
+          "file": "a1/station-6.json",
+          "title": "Текст: Долгий День (Интеграция)"
+        },
+        {
+          "id": "station-7",
+          "file": "a1/station-7.json",
+          "title": "Интервью: Как долго? (ИИ-бот)"
+        }
+      ],
+      "story": "Механика have/has been + V-ing. Базовая лексика действий."
+    },
+    {
+      "id": "a2",
+      "level": "A2",
+      "title": "Накопитель Процесса",
+      "grade": 6,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "a2/station-1.json",
+          "title": "Контраст: Прямо сейчас vs Давно (Cont vs PerfCont)"
+        },
+        {
+          "id": "station-2",
+          "file": "a2/station-2.json",
+          "title": "Грамматический Босс: Stative Verbs (Ловушка)"
+        },
+        {
+          "id": "station-3",
+          "file": "a2/station-3.json",
+          "title": "Тренажер Перевода (Интерференция)"
+        },
+        {
+          "id": "station-4",
+          "file": "a2/station-4.json",
+          "title": "Вопросы о Длительности (Синтаксис)"
+        },
+        {
+          "id": "station-5",
+          "file": "a2/station-5.json",
+          "title": "Текст: Упорный Художник (Чтение)"
+        },
+        {
+          "id": "station-6",
+          "file": "a2/station-6.json",
+          "title": "Блог: Мои Хобби (Продукт)"
+        },
+        {
+          "id": "station-7",
+          "file": "a2/station-7.json",
+          "title": "Скоростное Свидание (Диалог)"
+        }
+      ],
+      "story": "Лексика хобби и рутины. Сравнение с Present Continuous."
+    },
+    {
+      "id": "b1",
+      "level": "B1",
+      "title": "Битва Перфектов",
+      "grade": "7-8",
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b1/station-1.json",
+          "title": "Процесс или Результат? (Сортировка)"
+        },
+        {
+          "id": "station-2",
+          "file": "b1/station-2.json",
+          "title": "Виктория Перфектов (Выбор формы)"
+        },
+        {
+          "id": "station-3",
+          "file": "b1/station-3.json",
+          "title": "Визуальный Фильтр (Поиск ошибок)"
+        },
+        {
+          "id": "station-4",
+          "file": "b1/station-4.json",
+          "title": "Текст: Технологии (Интеграция)"
+        },
+        {
+          "id": "station-5",
+          "file": "b1/station-5.json",
+          "title": "Объясни Ситуацию (Речь)"
+        },
+        {
+          "id": "station-6",
+          "file": "b1/station-6.json",
+          "title": "Интервью с Геймером (Диалог с ИИ)"
+        },
+        {
+          "id": "station-7",
+          "file": "b1/station-7.json",
+          "title": "Мини-Проект: \"Мой Трудный День\" (Продукт)"
+        }
+      ],
+      "story": "Лексика технологий, медиа. Глубокое сравнение Present Perfect vs Present Perfect Continuous."
+    },
+    {
+      "id": "b2",
+      "level": "B2",
+      "title": "Мастер Контекста",
+      "grade": 9,
+      "stations": [
+        {
+          "id": "station-1",
+          "file": "b2/station-1.json",
+          "title": "ОГЭ-Тренажер (Task 19: 4 Времени)"
+        },
+        {
+          "id": "station-2",
+          "file": "b2/station-2.json",
+          "title": "Тонкие Смыслы (Перевод-Ловушка)"
+        },
+        {
+          "id": "station-3",
+          "file": "b2/station-3.json",
+          "title": "Текст ОГЭ: Экология (Чтение)"
+        },
+        {
+          "id": "station-4",
+          "file": "b2/station-4.json",
+          "title": "Симуляция ОГЭ (Устная часть Task 2)"
+        },
+        {
+          "id": "station-5",
+          "file": "b2/station-5.json",
+          "title": "Описание Фотографии (ОГЭ Task 3)"
+        },
+        {
+          "id": "station-6",
+          "file": "b2/station-6.json",
+          "title": "Дебаты: \"Жизнь сегодня\" (Монолог)"
+        },
+        {
+          "id": "station-7",
+          "file": "b2/station-7.json",
+          "title": "Финальный Босс: 4 Времени (Викторина)"
+        }
+      ],
+      "story": "Безупречное владение всеми 4 настоящими временами для формата ОГЭ."
+    }
+  ]
+}

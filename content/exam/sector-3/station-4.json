@@ -1,0 +1,54 @@
+{
+  "id": "exam_s3_station_4",
+  "title": "Текст: Космическая Миссия (Интеграция)",
+  "description": "Вставь пропущенные формы глаголов в текст космической миссии: 4 будущих времени.",
+  "category": "grammar",
+  "type": "cloze",
+  "text": "Tomorrow at 10 AM, the astronauts ___ a new spaceship. The launch ___ exactly at 10:00. At 10:15, they ___ over Europe. By the time they reach the Moon, they ___ for 3 days. While they ___ on the station, scientists on Earth ___ them. I think they ___ new minerals. By next month, they ___ to Earth.",
+  "answers": [
+    [
+      "are launching"
+    ],
+    [
+      "starts"
+    ],
+    [
+      "will be flying"
+    ],
+    [
+      "will have been travelling"
+    ],
+    [
+      "are working"
+    ],
+    [
+      "will be monitoring"
+    ],
+    [
+      "will find"
+    ],
+    [
+      "will have returned"
+    ]
+  ],
+  "word_bank": [
+    "are launching",
+    "starts",
+    "will be flying",
+    "will have been travelling",
+    "are working",
+    "will be monitoring",
+    "will find",
+    "will have returned"
+  ],
+  "hints": [
+    "(launch)",
+    "(start)",
+    "(fly)",
+    "(travel)",
+    "(work)",
+    "(monitor)",
+    "(find)",
+    "(return)"
+  ]
+}
