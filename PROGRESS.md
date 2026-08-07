@@ -19,7 +19,7 @@
 | 12 | Эпоха Past Perfect Continuous (28 станций) | done |
 | 13 | Эпоха Future Perfect Continuous (28 станций) | done |
 | 14 | Финальный экзамен «Великий Экзамен Времен» (/exam, 18 станций + экран достижения) | done |
-| 15 | Финал: verify + tsc + build + смоук + коммит + DEPLOY-PROMPT v6 | in progress |
+| 15 | Финал: verify + tsc + build + смоук + коммит + DEPLOY-PROMPT v6 | done |
 | 16 | Инструктаж в формате презентации (слайды EpochTheory) — пожелание клиентки | done |
 
 ## Волны (коммит после каждой, «ок» оркестратора)
