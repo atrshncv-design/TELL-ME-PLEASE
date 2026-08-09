@@ -25,7 +25,7 @@
  * обложку: M = slides.length + 1). На слайдах теории — крупная
  * эмодзи-метафора (первый эмодзи из theory[].title) в плашке слева от
  * заголовка (на узких экранах — над ним), из заголовка эмодзи убран.
- * dark:-варианты плашек добавлены по спеке (в проекте dark-темы нет,
+ * плашек добавлены по спеке (в проекте dark-темы нет,
  * сработают только при prefers-color-scheme: dark).
  */
 import { useEffect, useState } from "react"
@@ -333,25 +333,25 @@ export default function EpochTheory({
                           /* ——— Обложка (титульный слайд, W1-T02) ——— */
                           <div className="flex flex-col items-center gap-4 py-2 text-center">
                             <div
-                              className="flex h-24 w-24 items-center justify-center rounded-2xl border border-primary-300 bg-primary-500/15 shadow-soft dark:border-primary-700 dark:bg-primary-500/25"
+                              className="flex h-24 w-24 items-center justify-center rounded-2xl border border-primary-300 bg-primary-500/15 shadow-soft"
                               aria-hidden="true"
                             >
                               <span className={`leading-none ${coverEmojiSize}`}>
                                 {coverEmoji || "🕰️"}
                               </span>
                             </div>
-                            <h3 className="font-display text-3xl font-black leading-tight tracking-tight text-primary-900 dark:text-primary-100">
+                            <h3 className="font-display text-3xl font-black leading-tight tracking-tight text-primary-900">
                               {title || "Эпоха"}
                             </h3>
                             {subtitle && (
-                              <p className="text-base font-semibold leading-snug text-slate-600 dark:text-slate-400">
+                              <p className="text-base font-semibold leading-snug text-slate-600">
                                 {subtitle}
                               </p>
                             )}
                             <button
                               type="button"
                               onClick={() => setSlide(1)}
-                              className="mt-1 flex min-h-[44px] items-center justify-center gap-2 rounded-2xl bg-primary-100 px-8 py-2 text-base font-bold text-primary-700 transition-colors hover:bg-primary-200 dark:bg-primary-900/40 dark:text-primary-100 dark:hover:bg-primary-900/60"
+                              className="mt-1 flex min-h-[44px] items-center justify-center gap-2 rounded-2xl bg-primary-100 px-8 py-2 text-base font-bold text-primary-700 transition-colors hover:bg-primary-200"
                             >
                               Начать →
                             </button>
@@ -361,7 +361,7 @@ export default function EpochTheory({
                           <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
                             {slideEmoji && (
                               <div
-                                className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-primary-300 bg-primary-500/15 shadow-soft dark:border-primary-700 dark:bg-primary-500/25"
+                                className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-primary-300 bg-primary-500/15 shadow-soft"
                                 aria-hidden="true"
                               >
                                 <span className="text-6xl leading-none">
@@ -370,10 +370,10 @@ export default function EpochTheory({
                               </div>
                             )}
                             <div className="min-w-0 flex-1">
-                              <h3 className="font-display mb-3 text-2xl font-black leading-tight tracking-tight text-primary-900 dark:text-primary-100 sm:text-3xl">
+                              <h3 className="font-display mb-3 text-2xl font-black leading-tight tracking-tight text-primary-900 sm:text-3xl">
                                 {slideTitle}
                               </h3>
-                              <p className="whitespace-pre-line text-base font-medium leading-relaxed text-slate-600 dark:text-slate-400">
+                              <p className="whitespace-pre-line text-base font-medium leading-relaxed text-slate-600">
                                 {slides[slide - 1].text}
                               </p>
                             </div>
