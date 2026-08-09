@@ -333,7 +333,7 @@ export default function EpochTheory({
                           /* ——— Обложка (титульный слайд, W1-T02) ——— */
                           <div className="flex flex-col items-center gap-4 py-2 text-center">
                             <div
-                              className="flex h-24 w-24 items-center justify-center rounded-2xl border border-primary-200 bg-primary-100 shadow-soft dark:border-primary-800 dark:bg-primary-900/40"
+                              className="flex h-24 w-24 items-center justify-center rounded-2xl border border-primary-300 bg-primary-500/15 shadow-soft dark:border-primary-700 dark:bg-primary-500/25"
                               aria-hidden="true"
                             >
                               <span className={`leading-none ${coverEmojiSize}`}>
@@ -361,7 +361,7 @@ export default function EpochTheory({
                           <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
                             {slideEmoji && (
                               <div
-                                className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-primary-200 bg-primary-100 shadow-soft dark:border-primary-800 dark:bg-primary-900/40"
+                                className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-primary-300 bg-primary-500/15 shadow-soft dark:border-primary-700 dark:bg-primary-500/25"
                                 aria-hidden="true"
                               >
                                 <span className="text-6xl leading-none">
