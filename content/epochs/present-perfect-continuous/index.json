@@ -191,14 +191,14 @@
           "title": "Объясни Ситуацию (Речь)"
         },
         {
-          "id": "station-6",
-          "file": "b1/station-6.json",
-          "title": "Интервью с Геймером (Диалог с ИИ)"
-        },
-        {
           "id": "station-7",
           "file": "b1/station-7.json",
           "title": "Мини-Проект: \"Мой Трудный День\" (Продукт)"
+        },
+        {
+          "id": "station-6",
+          "file": "b1/station-6.json",
+          "title": "Интервью с Геймером (Диалог с ИИ)"
         }
       ],
       "story": "Лексика технологий, медиа. Глубокое сравнение Present Perfect vs Present Perfect Continuous."
@@ -225,11 +225,6 @@
           "title": "Текст ОГЭ: Экология (Чтение)"
         },
         {
-          "id": "station-4",
-          "file": "b2/station-4.json",
-          "title": "Симуляция ОГЭ (Устная часть Task 2)"
-        },
-        {
           "id": "station-5",
           "file": "b2/station-5.json",
           "title": "Описание Фотографии (ОГЭ Task 3)"
@@ -243,6 +238,11 @@
           "id": "station-7",
           "file": "b2/station-7.json",
           "title": "Финальный Босс: 4 Времени (Викторина)"
+        },
+        {
+          "id": "station-4",
+          "file": "b2/station-4.json",
+          "title": "Симуляция ОГЭ (Устная часть Task 2)"
         }
       ],
       "story": "Безупречное владение всеми 4 настоящими временами для формата ОГЭ."

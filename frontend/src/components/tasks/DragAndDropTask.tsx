@@ -21,6 +21,13 @@ interface DragAndDropTaskProps {
   description: string
   columns: Column[]
   items: DragItem[]
+  /**
+   * W3-T03 (client-fixes-0808): review: true — после «Проверить» НЕ завершать
+   * упражнение автоматически. Остаёмся на экране разбора ошибок (верные
+   * зелёные, ошибочные красные) и ждём кнопку «Далее» → ResultScreen.
+   * Без флага (undefined/false) — прежнее поведение: авто-финиш через 1.2 с.
+   */
+  review?: boolean
   onComplete?: (score: number, total: number) => void
 }
 
@@ -29,6 +36,7 @@ export function DragAndDropTask({
   description,
   columns,
   items,
+  review,
   onComplete,
 }: DragAndDropTaskProps) {
   const [pool, setPool] = useState<DragItem[]>(() => [...items].sort(() => Math.random() - 0.5))
@@ -98,7 +106,11 @@ export function DragAndDropTask({
     setScore(score)
     // One-shot task: the check IS the finish — fanfare on perfect, else wrong.
     play(score === items.length ? "fanfare" : "wrong")
-    // Короткая пауза, чтобы показать зелёные/красные рамки, затем ResultScreen.
+    // W3-T03 (client-fixes-0808): review-режим (разбор ошибок) — НЕ завершаем
+    // автоматически: остаёмся на экране с зелёными/красными рамками, ученик
+    // смотрит ошибки и идёт дальше кнопкой «Далее». Без review — как раньше:
+    // короткая пауза, затем ResultScreen.
+    if (review) return
     setTimeout(() => {
       setFinished(true)
       onComplete?.(score, items.length)
@@ -212,6 +224,23 @@ export function DragAndDropTask({
             return col && i.answer === col.id
           }).length} / {items.length}
         </motion.div>
+      )}
+
+      {/* W3-T03 (client-fixes-0808): review-режим — после «Проверить» не
+          завершаем упражнение, а даём посмотреть ошибки и идём кнопкой
+          «Далее» → ResultScreen (onComplete при этом срабатывает один раз). */}
+      {checked && review && (
+        <motion.button
+          whileTap={{ scale: 0.95 }}
+          onClick={() => {
+            if (finished) return
+            setFinished(true)
+            onComplete?.(score, items.length)
+          }}
+          className="w-full py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700"
+        >
+          Далее
+        </motion.button>
       )}
     </div>
   )

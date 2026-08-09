@@ -1,7 +1,7 @@
 {
   "id": "a2_station_3",
   "title": "Расшифровка Сценария (Текст)",
-  "description": "Интеграция навыка в связный текст. Распорядок дня друзей Гарри Поттера: вставь глагол в нужную форму (два текста — Гермиона Грейнджер и Рон Уизли).",
+  "description": "Интеграция навыка в связный текст. Распорядок дня друзей Гарри Поттера: текст Гермионы — собери слова по смыслу (выбор чипов); текст Рона — напечатай форму глагола сам (станция «Рон (вручную)»).",
   "category": "grammar",
   "type": "cloze",
   "rounds": [
@@ -117,120 +117,6 @@
         "(play)",
         "(show)",
         "(be)"
-      ]
-    },
-    {
-      "text": "Ron Weasley ___ a funny and friendly schoolboy at Hogwarts. He ___ in the Gryffindor tower and ___ his friends and his big family. In the morning Ron ___, ___ his cloak, ___ his school bag and ___ to breakfast with Harry. Then they ___ to their lessons together. At school Ron ___ to the teachers, ___ in his notebook and ___ his exercises. At break time he ___ with his friends and ___ funny stories. After school he often ___ to the Quidditch pitch with Harry or ___ games in the common room. In the evening Ron ___ dinner, ___ time with Harry and Hermione and ___ about their day. He ___ that it ___ important to be kind, support your friends, enjoy games and still ___ about homework.",
-      "answers": [
-        [
-          "is"
-        ],
-        [
-          "lives"
-        ],
-        [
-          "loves"
-        ],
-        [
-          "gets up"
-        ],
-        [
-          "puts on"
-        ],
-        [
-          "takes"
-        ],
-        [
-          "goes"
-        ],
-        [
-          "go"
-        ],
-        [
-          "listens"
-        ],
-        [
-          "writes"
-        ],
-        [
-          "does"
-        ],
-        [
-          "talks"
-        ],
-        [
-          "tells"
-        ],
-        [
-          "goes"
-        ],
-        [
-          "plays"
-        ],
-        [
-          "has"
-        ],
-        [
-          "spends"
-        ],
-        [
-          "talks"
-        ],
-        [
-          "shows"
-        ],
-        [
-          "is"
-        ],
-        [
-          "remembers"
-        ]
-      ],
-      "word_bank": [
-        "is",
-        "lives",
-        "loves",
-        "gets up",
-        "puts on",
-        "takes",
-        "goes",
-        "go",
-        "listens",
-        "writes",
-        "does",
-        "talks",
-        "tells",
-        "plays",
-        "has",
-        "spends",
-        "shows",
-        "remembers",
-        "is",
-        "goes",
-        "talks"
-      ],
-      "hints": [
-        "(be)",
-        "(live)",
-        "(love)",
-        "(get up)",
-        "(put on)",
-        "(take)",
-        "(go)",
-        "(go)",
-        "(listen)",
-        "(write)",
-        "(do)",
-        "(talk)",
-        "(tell)",
-        "(go)",
-        "(play)",
-        "(have)",
-        "(spend)",
-        "(talk)",
-        "(show)",
-        "(be)",
-        "(remember)"
       ]
     }
   ]

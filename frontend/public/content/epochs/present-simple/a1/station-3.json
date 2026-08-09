@@ -1,68 +1,143 @@
 {
   "id": "a1_station_3",
   "title": "Сборка Ядра: Наречия",
-  "description": "Вставь наречие в правильное место: между подлежащим и сказуемым или в конец предложения. Упражнение 12 (наречия частотности).",
+  "description": "Выбери наречие: оно стоит между подлежащим и сказуемым или в конце предложения. Упражнение 12 (наречия частотности).",
   "category": "grammar",
-  "type": "fill-in",
+  "type": "quiz",
   "items": [
     {
-      "sentence": "Teenagers ___ play computer games after school.",
+      "question": "Teenagers ___ play computer games after school.",
+      "options": [
+        "always",
+        "never",
+        "rarely"
+      ],
       "answer": "always"
     },
     {
-      "sentence": "My friends ___ meet in the park at the weekend.",
+      "question": "My friends ___ meet in the park at the weekend.",
+      "options": [
+        "usually",
+        "often",
+        "sometimes"
+      ],
       "answer": "usually"
     },
     {
-      "sentence": "Teenagers ___ watch videos on their phones in the evening.",
+      "question": "Teenagers ___ watch videos on their phones in the evening.",
+      "options": [
+        "often",
+        "usually",
+        "always"
+      ],
       "answer": "often"
     },
     {
-      "sentence": "My brother ___ goes to the sports centre on Saturdays.",
+      "question": "My brother ___ goes to the sports centre on Saturdays.",
+      "options": [
+        "sometimes",
+        "always",
+        "never"
+      ],
       "answer": "sometimes"
     },
     {
-      "sentence": "Teenagers ___ read books in the afternoon.",
+      "question": "Teenagers ___ read books in the afternoon.",
+      "options": [
+        "rarely",
+        "usually",
+        "often"
+      ],
       "answer": "rarely"
     },
     {
-      "sentence": "My cousin ___ does his homework at night.",
+      "question": "My cousin ___ does his homework at night.",
+      "options": [
+        "never",
+        "always",
+        "sometimes"
+      ],
       "answer": "never"
     },
     {
-      "sentence": "Teens ___ spend their free time online.",
+      "question": "Teens ___ spend their free time online.",
+      "options": [
+        "as a rule",
+        "never",
+        "rarely"
+      ],
       "answer": "as a rule"
     },
     {
-      "sentence": "Teenagers chat with their friends on social media ___.",
+      "question": "Teenagers chat with their friends on social media ___.",
+      "options": [
+        "every day",
+        "in the morning",
+        "at night"
+      ],
       "answer": "every day"
     },
     {
-      "sentence": "Teens listen to music on the way to school ___.",
+      "question": "Teens listen to music on the way to school ___.",
+      "options": [
+        "in the morning",
+        "at night",
+        "in the evening"
+      ],
       "answer": "in the morning"
     },
     {
-      "sentence": "Teenagers play online games with their friends ___.",
+      "question": "Teenagers play online games with their friends ___.",
+      "options": [
+        "in the evening",
+        "in the morning",
+        "at night"
+      ],
       "answer": "in the evening"
     },
     {
-      "sentence": "Teenagers go out with their friends ___.",
+      "question": "Teenagers go out with their friends ___.",
+      "options": [
+        "at the weekend",
+        "after school",
+        "in the evening"
+      ],
       "answer": "at the weekend"
     },
     {
-      "sentence": "Teens watch films with their families ___.",
+      "question": "Teens watch films with their families ___.",
+      "options": [
+        "on Saturdays",
+        "at night",
+        "every day"
+      ],
       "answer": "on Saturdays"
     },
     {
-      "sentence": "Teenagers meet their friends ___.",
+      "question": "Teenagers meet their friends ___.",
+      "options": [
+        "after school",
+        "at night",
+        "on Saturdays"
+      ],
       "answer": "after school"
     },
     {
-      "sentence": "Teens visit the sports club ___.",
+      "question": "Teens visit the sports club ___.",
+      "options": [
+        "once a week",
+        "every day",
+        "in the morning"
+      ],
       "answer": "once a week"
     },
     {
-      "sentence": "Teenagers relax and watch TV ___.",
+      "question": "Teenagers relax and watch TV ___.",
+      "options": [
+        "at night",
+        "in the morning",
+        "after school"
+      ],
       "answer": "at night"
     }
   ]

@@ -235,9 +235,6 @@ export default function MissionPage() {
                   <p className="text-sm font-bold text-slate-700">{epoch.tagline}</p>
                 </div>
               </div>
-              <span className="shrink-0 rounded-full bg-primary-100 px-2.5 py-1 text-xs font-black text-primary-700">
-                {epoch.level}
-              </span>
             </div>
             <p className="text-sm font-medium leading-snug text-slate-600">
               <span className="font-bold text-slate-700">Фокус:</span> {epoch.focus}

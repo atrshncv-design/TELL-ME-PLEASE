@@ -195,6 +195,11 @@ export default function SectorStationsPage({
                   <span className="min-w-0 flex-1 text-base font-bold text-primary-900">
                     {station.title}
                   </span>
+                  {/* Q7 (клиентские правки 08.08.2026): уровень — ТОЛЬКО внутри
+                      карточки станции (с карт/шапок бейджи убраны). */}
+                  <span className="shrink-0 rounded-full bg-primary-50 px-2 py-0.5 text-[10px] font-black text-primary-400">
+                    {current.level}
+                  </span>
                   {passed && (
                     <span className="shrink-0 rounded-full bg-success/10 px-2.5 py-1 text-sm font-black text-success">
                       {entry ? `${entry.score}/${entry.total}` : "✓"}

@@ -52,7 +52,12 @@ const normalizeFill = (s: string) => {
   for (const [short, full] of Object.entries(CONTRACTIONS)) {
     out = out.replace(new RegExp(`\\b${short}\\b`, "g"), full)
   }
-  return out
+  // W3-T03 (client-fixes-0808): срезаем краевую пунктуацию (точку, ? ! и
+  // т.п.) — ученик печатает «He doesn't like waking up early.» с точкой, а
+  // ключ в JSON без неё: без срезания ввод с пунктуацией «всегда неверен».
+  // Сравнение становится строже-лояльнее, обратных регрессий нет (если
+  // строки равны, их срезанные версии тоже равны).
+  return out.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, "")
 }
 
 export function FillInTask({ title, description, items, onComplete }: FillInTaskProps) {

@@ -83,7 +83,22 @@ export default function EpochTheory({
   /** Открытие презентации — сброс к началу (слайд 1, тест с нуля). */
   const openPresentation = () => {
     setSlide(0)
-    setPhase("slides")
+    // Если теории нет (только тест/музыка) — стартуем не с пустых слайдов.
+    setPhase(slides.length > 0 ? "slides" : hasQuiz ? "quiz" : "music")
+    setQuizIndex(0)
+    setSelected(null)
+    setChecked(false)
+    setScore(0)
+    setQuizDone(false)
+    setCopied(false)
+    setOpen(true)
+  }
+
+  /** G4 (клиентские правки 08.08.2026): музыка доступна СРАЗУ, без
+   *  прохождения мини-теста — открываем презентацию на музыкальном блоке. */
+  const openMusic = () => {
+    setSlide(0)
+    setPhase("music")
     setQuizIndex(0)
     setSelected(null)
     setChecked(false)
@@ -188,14 +203,26 @@ export default function EpochTheory({
 
   return (
     <>
-      {/* ——— Кнопка в шапке эпохи (НЕ автоматическое открытие) ——— */}
-      <button
-        type="button"
-        onClick={openPresentation}
-        className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-2xl bg-primary-600 px-4 py-3 text-base font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
-      >
-        <span aria-hidden="true">▶</span> Смотреть инструктаж
-      </button>
+      {/* ——— Кнопки в шапке эпохи (НЕ автоматическое открытие) ———
+          G4: «🎵 Музыка эпохи» — музыка доступна СРАЗУ, без мини-теста. */}
+      <div className="flex flex-col gap-2">
+        <button
+          type="button"
+          onClick={openPresentation}
+          className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-2xl bg-primary-600 px-4 py-3 text-base font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
+        >
+          <span aria-hidden="true">▶</span> Смотреть инструктаж
+        </button>
+        {hasMusic && (
+          <button
+            type="button"
+            onClick={openMusic}
+            className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-2xl border-2 border-violet-200 bg-violet-50 px-4 py-3 text-base font-bold text-violet-700 transition-colors hover:bg-violet-100"
+          >
+            <span aria-hidden="true">🎵</span> Музыка эпохи
+          </button>
+        )}
+      </div>
 
       {/* ——— Полноэкранная презентация поверх карты эпохи ——— */}
       <AnimatePresence>

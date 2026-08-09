@@ -6,36 +6,36 @@
   "type": "fill-in",
   "items": [
     {
-      "sentence": "I don't like waking up early. → He ___.",
-      "answer": "doesn't like waking up early"
+      "sentence": "I don't like waking up early. → He ___ waking up early.",
+      "answer": "doesn't like"
     },
     {
-      "sentence": "I spend all my pocket money on snacks. → He ___.",
-      "answer": "spends all his pocket money on snacks"
+      "sentence": "I spend all my pocket money on snacks. → He ___ all his pocket money on snacks.",
+      "answer": "spends"
     },
     {
-      "sentence": "I always help my parents. → ___.",
-      "answer": "He always helps his parents"
+      "sentence": "I always help my parents. → He always ___ his parents.",
+      "answer": "helps"
     },
     {
-      "sentence": "I don't do my homework on Fridays. → ___.",
-      "answer": "He doesn't do his homework on Fridays"
+      "sentence": "I don't do my homework on Fridays. → He ___ his homework on Fridays.",
+      "answer": "doesn't do"
     },
     {
-      "sentence": "I chat with my friends online. → ___.",
-      "answer": "He chats with his friends online"
+      "sentence": "I chat with my friends online. → He ___ with his friends online.",
+      "answer": "chats"
     },
     {
-      "sentence": "I don't eat meat. → ___.",
-      "answer": "He doesn't eat meat"
+      "sentence": "I don't eat meat. → He ___ meat.",
+      "answer": "doesn't eat"
     },
     {
-      "sentence": "I study English. → ___.",
-      "answer": "He studies English"
+      "sentence": "I study English. → He ___ English.",
+      "answer": "studies"
     },
     {
-      "sentence": "I dream of becoming a blogger. → ___.",
-      "answer": "He dreams of becoming a blogger"
+      "sentence": "I dream of becoming a blogger. → He ___ of becoming a blogger.",
+      "answer": "dreams"
     }
   ]
 }

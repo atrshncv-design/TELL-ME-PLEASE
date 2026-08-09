@@ -106,6 +106,9 @@ interface TaskData {
   // voice-chat checklist (тикет T07, станции Речи): бот задаёт вопросы из
   // списка по одному, ответ оценивается по маркерам (эвристика one-minute).
   checklist?: { question: string; markers: string[]; min?: number; hint?: string }[]
+  // drag-and-drop (W3-T03 client-fixes-0808): review: true — разбор ошибок
+  // после «Проверить» (зелёные верные / красные ошибочные + «Далее»).
+  review?: boolean
 }
 
 function serializeContext(task: TaskData): string {
@@ -175,7 +178,7 @@ export function TaskRenderer({
     case "quiz":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><QuizTask title={task.title} description={task.description} items={task.items || []} onComplete={onScored} /></div>
     case "drag-and-drop":
-      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><DragAndDropTask title={task.title} description={task.description} columns={task.columns || []} items={task.items || []} onComplete={onScored} /></div>
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><DragAndDropTask title={task.title} description={task.description} columns={task.columns || []} items={task.items || []} review={task.review} onComplete={onScored} /></div>
     case "fill-in":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><FillInTask title={task.title} description={task.description} items={task.items || []} onComplete={onScored} /></div>
     case "build-sentence":
@@ -225,14 +228,18 @@ export function TaskRenderer({
           <div className="relative mx-auto max-w-lg">
             {/* Кнопка «Правила» (тикет P6): плавающая, над voice-экраном.
                 Не съедает высоту (VoiceChatTask = h-[100dvh]) и не перекрывает
-                шапку — позиция top-16 ниже строки заголовка. */}
-            <button
-              onClick={() => setRulesOpen(true)}
-              className="absolute right-3 top-16 z-20 flex items-center gap-1 rounded-full border border-indigo-200 bg-white/95 px-3 py-1.5 text-xs font-semibold text-indigo-700 shadow-sm transition-colors hover:bg-indigo-50"
-            >
-              📖 Правила
-            </button>
-            <VoiceChatTask title={task.title} description={task.description} dialogue={task.dialogue} sections={task.sections} taskContext={serializeContext(task)} grade={grade} taskId={task.id} checklist={task.checklist} onComplete={onScored} />
+                шапку — позиция top-16 ниже строки заголовка.
+                G7 (клиентские правки 08.08.2026): у voice-chat кнопки НЕТ —
+                только role-play / fill-in-and-speak. */}
+            {task.type !== "voice-chat" && (
+              <button
+                onClick={() => setRulesOpen(true)}
+                className="absolute right-3 top-16 z-20 flex items-center gap-1 rounded-full border border-indigo-200 bg-white/95 px-3 py-1.5 text-xs font-semibold text-indigo-700 shadow-sm transition-colors hover:bg-indigo-50"
+              >
+                📖 Правила
+              </button>
+            )}
+            <VoiceChatTask title={task.title} description={task.description} dialogue={task.dialogue} sections={task.sections} taskContext={serializeContext(task)} grade={grade} taskId={task.id} checklist={task.checklist} backHref={backHref} onComplete={onScored} />
           </div>
           <RulesPanel open={rulesOpen} onClose={() => setRulesOpen(false)} />
         </div>

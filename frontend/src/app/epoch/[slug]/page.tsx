@@ -219,6 +219,11 @@ export default function EpochPage({
     return () => clearTimeout(t)
   }, [toastAch])
 
+  // Q8 (клиентские правки 08.08.2026): открытый тултип достижения (клик по
+  // значку) — «что это и как получить»; серые значки подписаны «ещё не
+  // получено».
+  const [achTip, setAchTip] = useState<string | null>(null)
+
   // Активный класс — grade сектора с максимальным числом пройденных станций.
   const gradeKeys = Object.keys(progress).filter(
     (g) => Object.keys(progress[g] ?? {}).length > 0
@@ -319,27 +324,59 @@ export default function EpochPage({
         </div>
       )}
 
-      {/* T12 «Достижения»: ряд значков под порталом (активный класс). */}
+      {/* T12 «Достижения»: ряд значков под порталом (активный класс).
+          Q8: тултип по клику/наведению «что это и как получить»; серые
+          значки подписаны «ещё не получено». */}
       <div className="mb-6 w-full rounded-2xl border border-amber-200 bg-white/80 px-3 py-2 shadow-soft">
         <div className="mb-1.5 flex items-center justify-between gap-2 text-sm font-bold">
           <span className="text-amber-700">Достижения</span>
           <span className="text-xs font-semibold text-amber-500/70">{activeGrade} класс</span>
         </div>
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex items-start justify-center gap-3 pt-1">
           {ACHIEVEMENTS.map((a) => {
             const isUnlocked = activeUnlocked.some((u) => u.id === a.id)
+            const tipOpen = achTip === a.id
             return (
-              <div
-                key={a.id}
-                title={`${a.title} — ${a.description}`}
-                aria-label={`${a.title} — ${a.description}`}
-                className={`flex h-11 w-11 items-center justify-center rounded-2xl border-2 text-xl transition-colors ${
-                  isUnlocked
-                    ? "border-amber-300 bg-amber-100 shadow-soft"
-                    : "border-slate-200 bg-slate-100 opacity-50 grayscale"
-                }`}
-              >
-                {a.emoji}
+              <div key={a.id} className="relative flex flex-col items-center gap-1">
+                <button
+                  type="button"
+                  onClick={() => setAchTip(tipOpen ? null : a.id)}
+                  onMouseEnter={() => setAchTip(a.id)}
+                  onMouseLeave={() => setAchTip(null)}
+                  aria-label={`${a.title}. Как получить: ${a.description}. ${
+                    isUnlocked ? "Получено" : "Ещё не получено"
+                  }`}
+                  title={`${a.title} — ${a.description}`}
+                  className={`flex h-11 w-11 items-center justify-center rounded-2xl border-2 text-xl transition-colors ${
+                    isUnlocked
+                      ? "border-amber-300 bg-amber-100 shadow-soft"
+                      : "border-slate-200 bg-slate-100 opacity-50 grayscale"
+                  }`}
+                >
+                  {a.emoji}
+                </button>
+                <span
+                  className={`text-center text-[10px] font-bold leading-tight ${
+                    isUnlocked ? "text-amber-600" : "text-slate-400"
+                  }`}
+                >
+                  {isUnlocked ? "получено" : "ещё не получено"}
+                </span>
+                {/* Тултип «что это и как получить» (клик/наведение). */}
+                {tipOpen && (
+                  <div
+                    role="tooltip"
+                    className="absolute bottom-full left-1/2 z-30 mb-2 w-44 -translate-x-1/2 rounded-2xl border border-amber-200 bg-white px-3 py-2 text-center shadow-xl"
+                  >
+                    <p className="text-xs font-extrabold text-amber-800">{a.title}</p>
+                    <p className="mt-0.5 text-[11px] font-medium leading-snug text-slate-600">
+                      Как получить: {a.description}
+                    </p>
+                    <p className="mt-0.5 text-[10px] font-semibold text-slate-400">
+                      {isUnlocked ? "✅ Получено" : "🔒 Ещё не получено"}
+                    </p>
+                  </div>
+                )}
               </div>
             )
           })}
@@ -368,9 +405,6 @@ export default function EpochPage({
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-full bg-primary-100 px-2.5 py-0.5 text-xs font-black text-primary-700">
-                    {sector.level}
-                  </span>
                   <span className="font-display text-lg font-extrabold text-primary-900">
                     {sector.title}
                   </span>

@@ -29,7 +29,7 @@ function splitSentences(text: string): string[] {
  * пытается «произносить» смайлики (например «🤖» как «робот»), что путает
  * ребёнка. В чате эмодзи остаются — фильтр только для речи.
  */
-function stripEmoji(text: string): string {
+export function stripEmoji(text: string): string {
   return text
     .replace(
       /[\u{1F000}-\u{1F0FF}\u{1F100}-\u{1F64F}\u{1F680}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{1FA70}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}\u{200D}\u{1F1E6}-\u{1F1FF}]/gu,
@@ -80,10 +80,21 @@ export function useSpeechSynthesis() {
   const warmedRef = useRef(false)
 
   // Голоса могут загрузиться асинхронно (Chrome: первый getVoices() пустой) —
-  // слушаем voiceschanged. Без найденного en-голоса озвучка не включается.
+  // слушаем voiceschanged. Без найденного en-голоса озвучка не включается
+  // (supported=false → клиент переходит на серверный TTS /api/tts).
   const loadVoices = useCallback(() => {
-    if (typeof window === "undefined" || !("speechSynthesis" in window)) return
-    const picked = pickVoice(window.speechSynthesis.getVoices())
+    if (typeof window === "undefined") return
+    const synth = window.speechSynthesis
+    // Яндекс-браузер/приватный режим: свойство может существовать, но API
+    // не работать — честно сообщаем supported=false (серверный фолбэк).
+    if (!synth || typeof synth.getVoices !== "function" || typeof synth.speak !== "function") {
+      voiceRef.current = null
+      supportedRef.current = false
+      setSupported(false)
+      setVoiceName(null)
+      return
+    }
+    const picked = pickVoice(synth.getVoices())
     voiceRef.current = picked
     supportedRef.current = picked !== null
     setSupported(picked !== null)
@@ -98,19 +109,31 @@ export function useSpeechSynthesis() {
   }, [])
 
   useEffect(() => {
-    if (typeof window === "undefined" || !("speechSynthesis" in window)) return
+    if (typeof window === "undefined") return
     const synth = window.speechSynthesis
+    if (!synth || typeof synth.addEventListener !== "function") {
+      // API нет — фиксируем supported=false (серверный TTS)
+      loadVoices()
+      return
+    }
     loadVoices()
+    // Chrome/Яндекс: голоса грузятся асинхронно, voiceschanged может прийти
+    // позже или не прийти вовсе — однократная перепроверка через 1с.
+    const recheck = setTimeout(loadVoices, 1000)
     synth.addEventListener?.("voiceschanged", loadVoices)
-    return () => synth.removeEventListener?.("voiceschanged", loadVoices)
+    return () => {
+      clearTimeout(recheck)
+      synth.removeEventListener?.("voiceschanged", loadVoices)
+    }
   }, [loadVoices])
 
   // iOS Safari блокирует speechSynthesis без user gesture (жест «протухает»
   // к моменту SSE-done через 5-10с). Стандартный фикс: «прогреть» движок
   // пустым utterance на первом жесте пользователя (тап/клик/клавиша).
   useEffect(() => {
-    if (typeof window === "undefined" || !("speechSynthesis" in window)) return
+    if (typeof window === "undefined") return
     const synth = window.speechSynthesis
+    if (!synth || typeof synth.speak !== "function") return
     const warm = () => {
       if (warmedRef.current) return
       warmedRef.current = true
@@ -138,6 +161,12 @@ export function useSpeechSynthesis() {
     }
     const text = queueRef.current.shift()!
     const synth = window.speechSynthesis
+    // API мог исчезнуть/сломаться после старта очереди — корректно завершаем
+    if (!synth || typeof synth.speak !== "function") {
+      speakingRef.current = false
+      setSpeaking(false)
+      return
+    }
     const utterance = new SpeechSynthesisUtterance(text)
     if (voiceRef.current) {
       utterance.voice = voiceRef.current
@@ -180,6 +209,9 @@ export function useSpeechSynthesis() {
       if (typeof window === "undefined") return
       if (!text.trim()) return
       const synth = window.speechSynthesis
+      // API нет/сломан (Яндекс, приватный режим) — молча сдаёмся, клиент
+      // уходит на серверный TTS (useServerTts /api/tts)
+      if (!synth || typeof synth.speak !== "function" || typeof synth.cancel !== "function") return
       // Голоса могли подгрузиться позже (voiceschanged ещё не пришёл) —
       // пробуем перечитать список перед тем, как сдаться.
       if (!supportedRef.current) {
@@ -214,7 +246,9 @@ export function useSpeechSynthesis() {
   /** Остановить озвучку (кнопка/размонтирование). */
   const stop = useCallback(() => {
     if (typeof window === "undefined") return
-    window.speechSynthesis.cancel()
+    const synth = window.speechSynthesis
+    // Стоп вызывается и при размонтировании (stopAll) — API может отсутствовать
+    if (synth && typeof synth.cancel === "function") synth.cancel()
     queueRef.current = []
     speakingRef.current = false
     setSpeaking(false)
@@ -225,6 +259,7 @@ export function useSpeechSynthesis() {
   useEffect(() => {
     if (!speaking) return
     const synth = window.speechSynthesis
+    if (!synth || typeof synth.pause !== "function") return
     const iv = setInterval(() => {
       if (synth.speaking && !synth.paused) {
         synth.pause()

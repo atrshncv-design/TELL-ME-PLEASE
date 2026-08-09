@@ -32,7 +32,7 @@
           "id": "station-3",
           "file": "a1/station-3.json",
           "title": "Сборка Ядра (Синтаксис)",
-          "type": "fill-in"
+          "type": "quiz"
         },
         {
           "id": "station-3-b",
@@ -51,12 +51,6 @@
           "file": "a1/station-6.json",
           "title": "Юмор-Контроль (Автоматизм)",
           "type": "quiz"
-        },
-        {
-          "id": "station-7",
-          "file": "a1/station-7.json",
-          "title": "Полевой Агент (Логика и Контекст)",
-          "type": "fill-in"
         },
         {
           "id": "station-4",
@@ -92,40 +86,22 @@
           "type": "cloze"
         },
         {
+          "id": "station-3-b",
+          "file": "a2/station-3-b.json",
+          "title": "Расшифровка Сценария: Рон (вручную)",
+          "type": "fill-in"
+        },
+        {
+          "id": "station-5",
+          "file": "a2/station-5.json",
+          "title": "Перевод-Ловушка (Контраст)",
+          "type": "drag-and-drop"
+        },
+        {
           "id": "station-4",
           "file": "a2/station-4.json",
           "title": "Протокол \"Идеальный День\" (Речь)",
           "type": "voice-chat"
-        },
-        {
-          "id": "station-5",
-          "file": "a2/station-5.json",
-          "title": "Перевод-Ловушка (Контраст)",
-          "type": "drag-and-drop"
-        },
-        {
-          "id": "station-6",
-          "file": "a2/station-6.json",
-          "title": "Матрица Трансформации (Полный цикл)",
-          "type": "quiz"
-        },
-        {
-          "id": "station-7",
-          "file": "a2/station-7.json",
-          "title": "Речевой Симулятор (Диалоги)",
-          "type": "voice-chat"
-        },
-        {
-          "id": "station-5",
-          "file": "a2/station-5.json",
-          "title": "Перевод-Ловушка (Контраст)",
-          "type": "drag-and-drop"
-        },
-        {
-          "id": "station-6",
-          "file": "a2/station-6.json",
-          "title": "Матрица Трансформации (Полный цикл)",
-          "type": "quiz"
         },
         {
           "id": "station-7",
@@ -155,12 +131,6 @@
           "type": "matching"
         },
         {
-          "id": "station-3",
-          "file": "b1/station-3.json",
-          "title": "Полевое Задание (Коммуникация)",
-          "type": "voice-chat"
-        },
-        {
           "id": "station-4",
           "file": "b1/station-4.json",
           "title": "Отчет о Наблюдении (Продукт)",
@@ -185,22 +155,10 @@
           "type": "quiz"
         },
         {
-          "id": "station-5",
-          "file": "b1/station-5.json",
-          "title": "Сплетни (Трансформация в 3-е лицо)",
-          "type": "fill-in"
-        },
-        {
-          "id": "station-6",
-          "file": "b1/station-6.json",
-          "title": "Тест на совместимость (Вопросы)",
-          "type": "quiz"
-        },
-        {
-          "id": "station-7",
-          "file": "b1/station-7.json",
-          "title": "Репортаж пришельца (Сложный Синтаксис)",
-          "type": "quiz"
+          "id": "station-3",
+          "file": "b1/station-3.json",
+          "title": "Полевое Задание (Коммуникация)",
+          "type": "voice-chat"
         }
       ]
     },
@@ -222,12 +180,6 @@
           "file": "b2/station-2.json",
           "title": "Вскрытие Архивов (Сложный Текст)",
           "type": "cloze"
-        },
-        {
-          "id": "station-3",
-          "file": "b2/station-3.json",
-          "title": "Дипломатическая Миссия (Сложная Речь)",
-          "type": "voice-chat"
         },
         {
           "id": "station-4",
@@ -260,22 +212,10 @@
           "type": "fill-in"
         },
         {
-          "id": "station-5",
-          "file": "b2/station-5.json",
-          "title": "Сортировка Смыслов (Аналитика)",
-          "type": "drag-and-drop"
-        },
-        {
-          "id": "station-6",
-          "file": "b2/station-6.json",
-          "title": "Китайский Карнавал (Сложная Трансформация)",
-          "type": "fill-in"
-        },
-        {
-          "id": "station-7",
-          "file": "b2/station-7.json",
-          "title": "Трудности Перевода (Лексико-грамматический синтез)",
-          "type": "fill-in"
+          "id": "station-3",
+          "file": "b2/station-3.json",
+          "title": "Дипломатическая Миссия (Сложная Речь)",
+          "type": "voice-chat"
         }
       ]
     }

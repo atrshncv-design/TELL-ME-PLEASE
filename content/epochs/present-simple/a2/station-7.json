@@ -9,21 +9,22 @@
     {
       "question": "Do you have an active lifestyle?",
       "markers": [
-        "Yes, I do",
-        "No, I don't",
+        "yes",
+        "no",
+        "do",
         "jogging",
         "active"
       ],
-      "min": 1,
+      "min": 2,
       "hint": "Ответь: Yes, I do. I go jogging..."
     },
     {
       "question": "Do you go jogging every day?",
       "markers": [
-        "No, I don't",
-        "three times a week",
-        "twice a week",
-        "every day"
+        "no",
+        "don't",
+        "three times",
+        "week"
       ],
       "min": 1,
       "hint": "Ответь: No, I don't. I jog three times a week."
@@ -31,8 +32,10 @@
     {
       "question": "Do you spend a lot of time online?",
       "markers": [
-        "No, I don't",
-        "Yes, I do",
+        "no",
+        "don't",
+        "yes",
+        "do",
         "online"
       ],
       "min": 1,
@@ -41,12 +44,14 @@
     {
       "question": "Does your best friend like computer games?",
       "markers": [
-        "Yes, he does",
-        "No, he doesn't",
+        "yes",
+        "does",
+        "he",
         "plays",
-        "computer games"
+        "computer games",
+        "every day"
       ],
-      "min": 1,
+      "min": 2,
       "hint": "Ответь: Yes, he does. He plays every day."
     }
   ]

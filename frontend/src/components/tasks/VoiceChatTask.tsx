@@ -8,6 +8,7 @@ import { Confetti } from "@/components/Confetti"
 import { ResultScreen } from "@/components/ResultScreen"
 import { useChatStream, type ChatStreamMessage } from "@/lib/useChatStream"
 import { useSpeechSynthesis } from "@/lib/useSpeechSynthesis"
+import { useServerTts } from "@/lib/useServerTts"
 import { useSpeechRecognition } from "@/lib/useSpeechRecognition"
 import { useAnalytics } from "@/lib/useAnalytics"
 import type { VoiceChecklistItem } from "@/types/task"
@@ -21,6 +22,10 @@ interface VoiceChatTaskProps {
   grade?: string
   /** id задания — уходит на бэкенд для выбора роли ИИ (промпт-роутер). */
   taskId?: string
+  /** G8 (клиентские правки 08.08.2026): «←» ведёт сюда. В эпохальном фаннеле
+   *  TaskRenderer передаёт /epoch/<slug>/<sector>; фолбэк — старый классовый
+   *  путь (прямые /class URL работают как раньше). */
+  backHref?: string
   sessionSeconds?: number
   /** Тикет T07: режим «вопросы из списка + оценка по маркерам» (checklist).
    *  Если передан и непуст — бот задаёт вопросы по одному, ответы оцениваются
@@ -55,6 +60,7 @@ function VoiceChatInner({
   taskContext,
   grade: gradeProp,
   taskId,
+  backHref,
   sessionSeconds = 180,
   checklist,
   onComplete,
@@ -116,7 +122,22 @@ function VoiceChatInner({
     if (!checklistMode || listVerdict !== null || listFinished) return
     const item = checklistItems[listIndex]
     if (!item) return
-    const ok = markersMet(item, text) >= (item.min ?? 1)
+    // W3-T03 (client-fixes-0808): «нулевой» ответ НЕ засчитывается — пустой
+    // текст, либо дословное повторение вопроса бота (ученик прочитал вопрос
+    // вслух, или микрофон подхватил TTS-озвучку — распознанный текст = сам
+    // вопрос, а в нём есть все маркеры). Такой ответ → ✗, как обычный промах.
+    const clean = text.trim()
+    const norm = (s: string) => s.toLowerCase().replace(/\s+/g, " ").trim()
+    const q = norm(item.question)
+    const a = norm(clean)
+    const repeatsQuestion =
+      q.length > 0 &&
+      a.length > 0 &&
+      (a === q || a.includes(q) || (a.length < q.length && q.includes(a)))
+    const ok =
+      clean.length > 0 &&
+      !repeatsQuestion &&
+      markersMet(item, clean) >= (item.min ?? 1)
     setListAnswer(text)
     setListVerdict(ok ? "correct" : "wrong")
     if (ok) setListScore((s) => s + 1)
@@ -140,7 +161,7 @@ function VoiceChatInner({
 
   /** Retry с ResultScreen — сброс к первому вопросу (onComplete снова один раз). */
   const retryChecklist = () => {
-    stop()
+    stopAll()
     spokenIndexRef.current = -1
     completedRef.current = false
     setListIndex(0)
@@ -151,9 +172,26 @@ function VoiceChatInner({
   }
 
   const { speak, stop, speaking, supported: ttsSupported, voiceName } = useSpeechSynthesis()
-  // Зеркало speaking для синхронных проверок в обработчиках событий
-  const speakingRef = useRef(speaking)
-  speakingRef.current = speaking
+  // Серверный TTS-фолбэк (Q6, W4-T04): когда Web Speech недоступен или не
+  // даёт en-голосов (Яндекс-браузер и т.п.) — озвучка через /api/tts.
+  const serverTts = useServerTts()
+  /** Гибридная озвучка: Web Speech если есть en-голос, иначе серверный TTS. */
+  const say = useCallback(
+    (text: string) => {
+      if (ttsSupported) speak(text)
+      else serverTts.speak(text)
+    },
+    [ttsSupported, speak, serverTts.speak],
+  )
+  /** Гибридный стоп: прерывает и Web Speech, и серверный audio. */
+  const stopAll = useCallback(() => {
+    stop()
+    serverTts.stop()
+  }, [stop, serverTts.stop])
+  // Зеркало speaking (любой из двух провайдеров) для синхронных проверок
+  const ttsSpeaking = speaking || serverTts.speaking
+  const speakingRef = useRef(ttsSpeaking)
+  speakingRef.current = ttsSpeaking
 
   // 3-мин таймер СЕССИИ: отсчитывает с момента старта (как в старом бэкенде),
   // НЕ сбрасывается при обмене репликами. В режиме checklist таймер не нужен —
@@ -205,7 +243,7 @@ function VoiceChatInner({
           const full = msg.content || aiTextRef.current
           if (full) {
             setMessages((p) => [...p, { role: "ai", text: full }])
-            speak(full)
+            say(full)
           }
           aiTextRef.current = ""
           setAiText("")
@@ -231,7 +269,7 @@ function VoiceChatInner({
           break
       }
     },
-    [speak],
+    [say],
   )
 
   const { connected, sending, startSession, send, sendFinal, reconnect } = useChatStream({
@@ -261,7 +299,7 @@ function VoiceChatInner({
     if (spokenIndexRef.current === idx) return
     spokenIndexRef.current = idx
     const q = checklistItems[idx]
-    if (q) speak(q.question)
+    if (q) say(q.question)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [listIndex, checklistMode, listFinished])
 
@@ -276,16 +314,16 @@ function VoiceChatInner({
 
   // Озвучка фидбека закончилась (и сессия завершена) — показываем финальный экран
   useEffect(() => {
-    if (!speaking && sessionEndedRef.current) setLastAudioPlayed(true)
-  }, [speaking])
+    if (!ttsSpeaking && sessionEndedRef.current) setLastAudioPlayed(true)
+  }, [ttsSpeaking])
 
   // Стоп озвучки при размонтировании
-  useEffect(() => () => stop(), [stop])
+  useEffect(() => () => stopAll(), [stopAll])
 
   const { listening, supported, error, start, stop: stopListening } = useSpeechRecognition({
     // В режиме checklist распознавание активно, пока нет вердикта по вопросу
     enabled:
-      !speaking &&
+      !ttsSpeaking &&
       !sessionEnded &&
       !timeUpRef.current &&
       (checklistMode ? listVerdict === null && !listFinished : true),
@@ -372,7 +410,7 @@ function VoiceChatInner({
 
   const hasPanel = (dialogue && dialogue.length > 0) || (sections && sections.length > 0)
   // «muted» (микрофон на паузе) = ИИ говорит или ждёт слот в очереди
-  const muted = speaking || queued !== null
+  const muted = ttsSpeaking || queued !== null
 
   return (
     // 100dvh so the mic button stays visible when the mobile address bar
@@ -424,7 +462,8 @@ function VoiceChatInner({
       <div className="flex items-center justify-between px-4 py-2 border-b border-indigo-100 bg-white/80">
         <div className="flex items-center gap-2">
           <Link
-            href={`/class/${grade}/sections`}
+            href={backHref ?? `/class/${grade}/sections`}
+            aria-label="Назад"
             className="flex items-center justify-center min-h-[44px] min-w-[44px] px-2 py-1 rounded-xl bg-indigo-100 text-indigo-700 font-semibold text-sm hover:bg-indigo-200 transition-colors"
           >
             ←
@@ -445,8 +484,8 @@ function VoiceChatInner({
                   🔊
                 </span>
               ) : (
-                <span className="text-rose-500" title="На этом устройстве нет английского голоса — ответы будут только текстом">
-                  🔇
+                <span className="text-amber-500" title="Озвучка через серверный TTS (/api/tts)">
+                  🔊
                 </span>
               )}
               {!isConnected && !sessionEnded && (

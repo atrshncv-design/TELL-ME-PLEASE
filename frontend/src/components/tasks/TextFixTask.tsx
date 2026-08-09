@@ -197,7 +197,19 @@ export function TextFixTask({ title, description, data, onComplete }: TextFixTas
         }`}
         aria-pressed={isActive || isFixed}
       >
-        {token}
+        {/* W3-T03 (client-fixes-0808): выбранный вариант «встаёт в поле» —
+            ошибочное слово зачёркивается, рядом показывается выбранное
+            исправление (до этого в тексте оставался исходный токен, и было
+            непонятно, применился ли выбор). */}
+        {isFixed ? (
+          <span className="inline-flex items-center gap-1">
+            <s className="font-normal opacity-60">{err.wrong}</s>
+            <span>→</span>
+            <span>{chosen}</span>
+          </span>
+        ) : (
+          token
+        )}
       </button>
     )
   }

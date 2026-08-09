@@ -4,18 +4,18 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { motion } from "framer-motion"
 import AdminLoginModal from "@/components/AdminLoginModal"
-import { WorldIcon, type WorldId } from "@/components/WorldIcon"
 
 /**
- * World preview chips (design/opendesign) — the five worlds of the map,
- * each with its own SVG icon and accent colors (Bright Kids Palette).
+ * «Что тебя ждёт» (клиентские правки 08.08.2026, G3) — 5 опций клиентки:
+ * Инструктаж, Миссии, Общение, Квесты, Уровни сложности. Чипы-подписи
+ * (не кнопки): главный CTA — «Начать играть →».
  */
-const WORLDS: { id: WorldId; name: string; chip: string }[] = [
-  { id: "grammar", name: "Грамматика", chip: "bg-grammar-100 text-grammar-800 border-grammar-200" },
-  { id: "to-be", name: "Глагол to be", chip: "bg-tobe-100 text-tobe-800 border-tobe-200" },
-  { id: "vocabulary", name: "Словарный запас", chip: "bg-vocabulary-100 text-vocabulary-800 border-vocabulary-200" },
-  { id: "listening", name: "Аудирование", chip: "bg-listening-100 text-listening-800 border-listening-200" },
-  { id: "speaking", name: "Общение", chip: "bg-speaking-100 text-speaking-800 border-speaking-200" },
+const WHATS_AHEAD: { name: string; emoji: string; chip: string }[] = [
+  { name: "Инструктаж", emoji: "🎓", chip: "bg-grammar-100 text-grammar-800 border-grammar-200" },
+  { name: "Миссии", emoji: "🚀", chip: "bg-primary-100 text-primary-800 border-primary-200" },
+  { name: "Общение", emoji: "💬", chip: "bg-speaking-100 text-speaking-800 border-speaking-200" },
+  { name: "Квесты", emoji: "🧩", chip: "bg-vocabulary-100 text-vocabulary-800 border-vocabulary-200" },
+  { name: "Уровни сложности", emoji: "📈", chip: "bg-tobe-100 text-tobe-800 border-tobe-200" },
 ]
 
 const container = {
@@ -86,23 +86,21 @@ export default function Home() {
           Начать играть →
         </motion.button>
 
-        {/* World preview — what awaits inside the map. */}
+        {/* «Что тебя ждёт» — 5 опций клиентки (G3): Инструктаж, Миссии,
+            Общение, Квесты, Уровни сложности. */}
         <motion.div variants={item} className="mt-4 flex flex-col items-center gap-3">
           <p className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
             Что тебя ждёт
           </p>
           <div className="flex flex-wrap justify-center gap-2">
-            {WORLDS.map((w) => (
-              <motion.button
-                key={w.id}
-                whileHover={{ scale: 1.06 }}
-                whileTap={{ scale: 0.92 }}
-                onClick={() => router.push("/class")}
-                className={`flex min-h-[44px] items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-bold shadow-soft transition-shadow hover:shadow-pop ${w.chip}`}
+            {WHATS_AHEAD.map((w) => (
+              <span
+                key={w.name}
+                className={`flex min-h-[44px] items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-bold shadow-soft ${w.chip}`}
               >
-                <WorldIcon world={w.id} className="h-5 w-5" />
+                <span aria-hidden="true">{w.emoji}</span>
                 {w.name}
-              </motion.button>
+              </span>
             ))}
           </div>
         </motion.div>

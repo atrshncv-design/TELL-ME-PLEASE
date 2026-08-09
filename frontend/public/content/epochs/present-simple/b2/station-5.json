@@ -48,20 +48,12 @@
       "answer": "stative"
     },
     {
-      "verb": "We go to the countryside every summer.",
-      "answer": "routine"
-    },
-    {
       "verb": "The concert begins at 9 p.m.",
       "answer": "schedule"
     },
     {
       "verb": "She understands the rules.",
       "answer": "stative"
-    },
-    {
-      "verb": "My brother works in tourism.",
-      "answer": "situation"
     }
   ]
 }

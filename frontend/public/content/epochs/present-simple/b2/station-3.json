@@ -16,7 +16,7 @@
         "new year"
       ],
       "min": 1,
-      "hint": "Назови самые популярные праздники: The most popular festivals in my country are New Year and Victory Day."
+      "hint": "The most popular festivals in my country are New Year and Victory Day. People celebrate them with their families. We also like Maslenitsa and City Day."
     },
     {
       "question": "Which festival do you like best and why?",
@@ -28,7 +28,7 @@
         "favourite"
       ],
       "min": 1,
-      "hint": "Назови любимый праздник и объясни почему: My favourite festival is New Year because I like fireworks."
+      "hint": "My favourite festival is New Year because I like fireworks and presents. My family always gathers together and we watch TV. I also enjoy the long holidays after it."
     },
     {
       "question": "Do people wear special clothes at festivals in your country?",
@@ -40,7 +40,7 @@
         "dress"
       ],
       "min": 1,
-      "hint": "Ответь: Yes, people wear special clothes / No, they don't."
+      "hint": "Yes, people wear special clothes at festivals. For example, girls wear bright dresses and boys wear suits. At carnival people wear masks and colourful costumes."
     },
     {
       "question": "Do families usually celebrate festivals together?",
@@ -52,7 +52,7 @@
         "don't"
       ],
       "min": 1,
-      "hint": "Ответь: Yes, families celebrate festivals together / No, they don't."
+      "hint": "Yes, families usually celebrate festivals together. They cook dinner, decorate the house and sit at one big table. I think it is the best part of any holiday."
     },
     {
       "question": "What food do people usually eat on holidays?",
@@ -65,7 +65,7 @@
         "pancakes"
       ],
       "min": 1,
-      "hint": "Расскажи о праздничной еде: People usually eat cake and salads."
+      "hint": "People usually eat traditional food on holidays. We cook salads, cakes and pancakes. My family always makes a big dinner with meat and vegetables."
     },
     {
       "question": "Do you have carnivals in your country?",
@@ -77,7 +77,7 @@
         "don't"
       ],
       "min": 1,
-      "hint": "Ответь: Yes, we have carnivals / No, we don't."
+      "hint": "Yes, we have carnivals in big cities. People walk in the streets, wear costumes and sing songs. The most famous carnival takes place in our capital."
     },
     {
       "question": "What do people usually do at a carnival?",
@@ -90,7 +90,7 @@
         "costumes"
       ],
       "min": 1,
-      "hint": "Расскажи: People dance, sing and watch the parade."
+      "hint": "People dance, sing and watch the parade. They wear bright costumes and masks. Children like to take pictures with funny characters."
     },
     {
       "question": "Do people dance, sing or watch parades at festivals?",
@@ -103,7 +103,7 @@
         "music"
       ],
       "min": 1,
-      "hint": "Ответь: Yes, people dance, sing and watch parades."
+      "hint": "Yes, people dance, sing and watch parades at festivals. There is always loud music and colourful decorations. Everyone has a lot of fun."
     },
     {
       "question": "Are fireworks common at celebrations in your country?",
@@ -115,7 +115,7 @@
         "celebration"
       ],
       "min": 1,
-      "hint": "Ответь: Yes, fireworks are common / No, they aren't."
+      "hint": "Yes, fireworks are very common in my country. People watch fireworks on New Year's Eve and on Victory Day. Families go outside to see the sky full of lights."
     },
     {
       "question": "Do children take part in festivals and parades?",
@@ -128,7 +128,7 @@
         "no"
       ],
       "min": 1,
-      "hint": "Ответь: Yes, children take part in festivals and parades."
+      "hint": "Yes, children take part in festivals and parades. They wear costumes, dance and carry flags. It is a very happy time for them."
     },
     {
       "question": "What traditions are important in your country?",
@@ -138,7 +138,7 @@
         "important"
       ],
       "min": 1,
-      "hint": "Назови традиции: An important tradition in my country is ..."
+      "hint": "An important tradition in my country is celebrating New Year with the family. People also bake pancakes for Maslenitsa. We think traditions bring the family together."
     },
     {
       "question": "Do you believe in any superstitions connected with holidays?",
@@ -149,7 +149,7 @@
         "lucky"
       ],
       "min": 1,
-      "hint": "Ответь: Yes, I believe in superstitions / No, I don't."
+      "hint": "No, I don't believe in superstitions. But my grandma believes that a lucky coin brings good luck. I think traditions are more important than superstitions."
     },
     {
       "question": "Are there any lucky things or symbols people use on special days?",
@@ -160,7 +160,7 @@
         "special days"
       ],
       "min": 1,
-      "hint": "Назови символы: People use lucky symbols like ..."
+      "hint": "Yes, people use lucky symbols on special days. For example, a horseshoe brings luck and a lucky coin is a popular present. Many people also believe in lucky numbers."
     },
     {
       "question": "Do you think old traditions are still important for teenagers?",
@@ -173,7 +173,7 @@
         "think"
       ],
       "min": 1,
-      "hint": "Вырази мнение: I think old traditions are important for teenagers."
+      "hint": "I think old traditions are still important for teenagers. They help us remember our culture and history. Many teenagers celebrate festivals with their families."
     },
     {
       "question": "What festival from another country would you like to visit?",
@@ -184,7 +184,7 @@
         "would like"
       ],
       "min": 1,
-      "hint": "Назови праздник другой страны: I would like to visit the Venice Carnival in Italy."
+      "hint": "I would like to visit the Venice Carnival in Italy. People wear beautiful masks and costumes there. I also want to see the carnival in Rio de Janeiro."
     }
   ]
 }

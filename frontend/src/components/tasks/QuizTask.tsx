@@ -7,6 +7,7 @@ import { useSound } from "@/lib/useSound"
 import { ResultScreen } from "@/components/ResultScreen"
 import { StickerReaction } from "@/components/StickerReaction"
 import { hintFor } from "@/lib/hints"
+import { hashString, seededShuffle } from "@/lib/shuffle"
 
 interface QuizItem {
   question?: string
@@ -61,6 +62,16 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
   }
 
   const display = item.question || item.sentence || item.subject || ""
+
+  // G1 (клиентские правки 08.08.2026): детерминированный шаффл вариантов.
+  // Seed = заголовок + номер вопроса + текст вопроса → для одного вопроса
+  // порядок всегда одинаковый (SSR = клиент, без hydration mismatch), а
+  // между вопросами позиция правильного ответа меняется («не всегда первый»).
+  // Проверка по значению (option === item.answer) — шаффл на неё не влияет.
+  const options = seededShuffle(
+    item.options,
+    hashString(`${title}|${current}|${display}`)
+  )
 
   // Мгновенная проверка (Q5, пакет «Все Эпохи»): клик по варианту СРАЗУ даёт
   // вердикт (✓/✗ подсветка + звук + say + стикер-реакция) и через ~900 мс
@@ -221,7 +232,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
             />
           )}
         </AnimatePresence>
-        {item.options.map((opt, oi) => {
+        {options.map((opt, oi) => {
           const isCorrect = opt === item.answer
           const isSelected = opt === selected
           let bg = "bg-white border-2 border-primary-200 hover:border-primary-400"

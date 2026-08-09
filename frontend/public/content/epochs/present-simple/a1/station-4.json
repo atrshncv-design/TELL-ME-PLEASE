@@ -8,51 +8,110 @@
   "checklist": [
     {
       "question": "What time do you wake up?",
-      "markers": ["wake up", "get up", "seven", "eight", "o'clock", "half past"],
+      "markers": [
+        "wake up",
+        "get up",
+        "seven",
+        "eight",
+        "o'clock",
+        "half past"
+      ],
       "min": 1,
       "hint": "Скажи, во сколько ты просыпаешься: I wake up at seven o'clock."
     },
     {
       "question": "Do you get up quickly or slowly?",
-      "markers": ["quickly", "slowly", "get up"],
+      "markers": [
+        "quickly",
+        "slowly",
+        "get up"
+      ],
       "min": 1,
       "hint": "Ответь: I get up quickly (быстро) или I get up slowly (медленно)."
     },
     {
       "question": "What do you do first in the morning?",
-      "markers": ["brush", "teeth", "wash", "face", "breakfast", "get dressed"],
+      "markers": [
+        "brush",
+        "teeth",
+        "wash",
+        "face",
+        "breakfast",
+        "get dressed"
+      ],
       "min": 2,
       "hint": "Расскажи, что ты делаешь первым делом: I brush my teeth and wash my face."
     },
     {
       "question": "Do you have breakfast at home or at school?",
-      "markers": ["breakfast", "home", "school"],
+      "markers": [
+        "breakfast",
+        "home",
+        "school"
+      ],
       "min": 1,
       "hint": "Ответь: I have breakfast at home (дома) или at school (в школе)."
     },
     {
       "question": "What time do you go to school?",
-      "markers": ["go to school", "eight", "o'clock", "half past"],
+      "markers": [
+        "go to school",
+        "eight",
+        "o'clock",
+        "half past"
+      ],
       "min": 1,
       "hint": "Скажи: I go to school at eight o'clock."
     },
     {
       "question": "How do you go to school? (by bus, by car, on foot?)",
-      "markers": ["bus", "car", "foot", "walk", "bike"],
+      "markers": [
+        "bus",
+        "car",
+        "foot",
+        "walk",
+        "bike"
+      ],
       "min": 1,
       "hint": "Ответь, как ты добираешься: I go to school by bus / by car / on foot."
     },
     {
       "question": "What lessons do you like?",
-      "markers": ["english", "math", "russian", "pe", "art", "music", "lessons", "like"],
+      "markers": [
+        "english",
+        "math",
+        "russian",
+        "pe",
+        "art",
+        "music",
+        "lessons",
+        "like"
+      ],
       "min": 1,
       "hint": "Назови любимые уроки: I like English and Maths."
     },
     {
       "question": "What do you do after school?",
-      "markers": ["homework", "play", "walk", "football", "games", "friends"],
+      "markers": [
+        "homework",
+        "play",
+        "walk",
+        "football",
+        "games",
+        "friends"
+      ],
       "min": 1,
       "hint": "Расскажи: I do my homework and play football with my friends."
     }
-  ]
+  ],
+  "sections": [
+    {
+      "name": "Промпт для внешнего чата",
+      "questions": [
+        "Ты — мой сверстник из англоговорящей страны. Познакомься со мной: спроси, как меня зовут, сколько мне лет, откуда я, что я люблю. Отвечай на мои вопросы и задавай свои. Используй Present Simple."
+      ],
+      "copyable": true
+    }
+  ],
+  "copyable_prompt": "Ты — мой сверстник из англоговорящей страны. Познакомься со мной: спроси, как меня зовут, сколько мне лет, откуда я, что я люблю. Отвечай на мои вопросы и задавай свои. Используй Present Simple."
 }
