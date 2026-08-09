@@ -300,6 +300,9 @@ export default function EpochPage({
             music={
               data.music ?? { title: "🎵 Музыкальная пауза", links: [], sunoPrompt: "" }
             }
+            icon={data.icon}
+            title={data.title}
+            subtitle={data.subtitle}
           />
         </div>
       )}

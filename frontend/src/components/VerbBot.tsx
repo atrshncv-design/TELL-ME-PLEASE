@@ -59,6 +59,17 @@ const MOOD_FOR: Record<BotEventType, BotMood> = {
 }
 
 /**
+ * W1-T01 «Verb Bot — карточка-бейдж»: цвет индикатора эмоции на бейдже.
+ * happy/cheer → зелёный, think → жёлтый, sad → красный, неизвестный → голубой.
+ */
+const MOOD_DOT: Record<BotMood, string> = {
+  happy: "bg-green-500",
+  think: "bg-amber-400",
+  sad: "bg-red-500",
+  cheer: "bg-green-500",
+}
+
+/**
  * W1-T2 «Сюжет портала»: реплики бота при росте прогресса (после завершения
  * задания). Русские, как приветствия миров на карте. {N} подставляется
  * динамически (сколько заданий осталось до 100%).
@@ -245,6 +256,8 @@ function VerbBotFloating({
     position === "bottom-center"
       ? "fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-2 pointer-events-none"
       : "fixed bottom-4 right-4 z-50 flex flex-col items-end gap-2 pointer-events-none"
+  // W1-T01: фото битое/недоступное → скрыть и показать 🤖 (fallback сохранён).
+  const [imgFailed, setImgFailed] = useState(false)
   return (
     <div className={containerClass}>
       <AnimatePresence>
@@ -259,17 +272,39 @@ function VerbBotFloating({
           </motion.div>
         )}
       </AnimatePresence>
-      <motion.img
-        src={`/mascot/${mood}.jpg`}
-        alt="Verb Bot"
-        className="w-16 h-16 rounded-full object-cover shadow-lg border-2 border-white bg-white"
-        animate={{ y: [0, -4, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        onError={(e) => {
-          // Fallback if image missing — hide broken image, show emoji
-          ;(e.target as HTMLImageElement).style.display = "none"
-        }}
-      />
+      {/* W1-T01 «Verb Bot — карточка-бейдж»: фото с ореолом акцента (ring-2
+          ring-primary-300), подпись «Verb Bot» + цветной индикатор эмоции
+          (точка по mood). Покачивание y [0,-4,0] и fallback 🤖 сохранены;
+          пузырь речи и позиционирование флоата не менялись. */}
+      <div className="flex w-[90px] flex-col items-center">
+        {imgFailed ? (
+          <div
+            className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white bg-white text-2xl shadow-lg ring-2 ring-primary-300"
+            role="img"
+            aria-label="Verb Bot"
+          >
+            🤖
+          </div>
+        ) : (
+          <motion.img
+            src={`/mascot/${mood}.jpg`}
+            alt="Verb Bot"
+            className="h-16 w-16 rounded-full border-2 border-white bg-white object-cover shadow-lg ring-2 ring-primary-300"
+            animate={{ y: [0, -4, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            onError={() => setImgFailed(true)}
+          />
+        )}
+        <div className="mt-0.5 inline-flex items-center gap-1">
+          <span
+            className={`h-2 w-2 animate-pulse rounded-full ${MOOD_DOT[mood] ?? "bg-sky-400"}`}
+            aria-hidden="true"
+          />
+          <span className="whitespace-nowrap text-[10px] font-bold text-primary-900">
+            Verb Bot
+          </span>
+        </div>
+      </div>
     </div>
   )
 }

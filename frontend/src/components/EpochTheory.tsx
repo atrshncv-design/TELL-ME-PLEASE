@@ -17,8 +17,16 @@
  *   3) music{} — «Музыкальная пауза»: ссылки на песни + промпт Suno с кнопкой
  *      «Скопировать промпт».
  * Закрытие — «✕» в шапке (и Escape на десктопе).
- * Контент СТРОГО из doc (пак 070826), эмодзи сохранены. Токены primary-*,
- * светлая тема по конвенциям проекта (dark:-классов в проекте нет).
+ * Контент СТРОГО из doc (пак 070826), эмодзи сохранены. Токены primary-*.
+ *
+ * W1-T02 (мини-пакет verb-bot-badge): титульная обложка — крупный эмодзи
+ * icon эпохи (96px-плашка) + название + subtitle + кнопка «Начать →»
+ * (обложка = слайд 1, теория со слайда 2; счётчик «слайд N из M» включает
+ * обложку: M = slides.length + 1). На слайдах теории — крупная
+ * эмодзи-метафора (первый эмодзи из theory[].title) в плашке слева от
+ * заголовка (на узких экранах — над ним), из заголовка эмодзи убран.
+ * dark:-варианты плашек добавлены по спеке (в проекте dark-темы нет,
+ * сработают только при prefers-color-scheme: dark).
  */
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -42,14 +50,31 @@ interface EpochMusic {
 
 type Phase = "slides" | "quiz" | "music"
 
+/** Первый эмодзи строки (с VS16/ZWJ-хвостами) или null, если эмодзи нет. */
+function firstEmoji(s: string): string | null {
+  const m = s.match(
+    /\p{Extended_Pictographic}(?:\uFE0F|\u200D\p{Extended_Pictographic})*/u
+  )
+  return m ? m[0] : null
+}
+
 export default function EpochTheory({
   theory,
   theoryQuiz,
   music,
+  icon,
+  title,
+  subtitle,
 }: {
   theory: TheoryStep[]
   theoryQuiz: TheoryQuizItem[]
   music: EpochMusic
+  /** Эмодзи эпохи из index.json (обложка). */
+  icon?: string
+  /** Название эпохи (обложка). */
+  title?: string
+  /** Подзаголовок эпохи (обложка). */
+  subtitle?: string
 }) {
   // Презентация: открыта ли, текущая фаза (слайды → тест → музыка), слайд.
   const [open, setOpen] = useState(false)
@@ -112,9 +137,9 @@ export default function EpochTheory({
     setOpen(false)
   }
 
-  /** «Вперёд →» в фазе слайдов: следующий слайд → тест → музыка. */
+  /** «Вперёд →» в фазе слайдов: следующий слайд (0 — обложка) → тест → музыка. */
   const nextSlide = () => {
-    if (slide + 1 < slides.length) {
+    if (slide < slides.length) {
       setSlide((s) => s + 1)
     } else if (phase === "slides") {
       setPhase(hasQuiz ? "quiz" : "music")
@@ -199,7 +224,27 @@ export default function EpochTheory({
     setSlide(0)
   }
 
-  const isLastSlide = slide + 1 >= slides.length
+  const isLastSlide = slide >= slides.length
+
+  // W1-T02: обложка (слайд 0) — эмодзи icon эпохи; фолбэк — первый эмодзи
+  // первого слайда теории (у present-simple icon нет в контенте → 📸).
+  const coverEmoji =
+    (icon && icon.trim()) || firstEmoji(slides[0]?.title ?? "") || ""
+  // Двойной эмодзи (⏱️⏭️) не влезет в плашку 96px в text-6xl — уменьшаем.
+  const coverEmojiSize =
+    (coverEmoji.match(/\p{Extended_Pictographic}/gu) || []).length > 1
+      ? "text-4xl"
+      : "text-6xl"
+  // Слайд теории: первый эмодзи из theory[].title — в плашку слева,
+  // из заголовка убрать (не дублировать). Слайд 0 — обложка, слайд i>0 —
+  // theory[i-1].
+  const slideEmoji = slide > 0 ? firstEmoji(slides[slide - 1].title) : null
+  const slideTitle =
+    slide > 0
+      ? slideEmoji
+        ? slides[slide - 1].title.replace(slideEmoji, "").trim()
+        : slides[slide - 1].title
+      : ""
 
   return (
     <>
@@ -272,7 +317,7 @@ export default function EpochTheory({
                 </button>
               </div>
 
-              {/* ——— Фаза 1: слайды теории ——— */}
+              {/* ——— Фаза 1: слайды (0 — обложка, 1..N — теория) ——— */}
               {phase === "slides" && slides.length > 0 && (
                 <div className="flex min-h-0 flex-1 flex-col">
                   <div className="min-h-0 flex-1 overflow-y-auto px-5 py-5">
@@ -284,60 +329,108 @@ export default function EpochTheory({
                         exit={{ opacity: 0, x: -28 }}
                         transition={{ duration: 0.18 }}
                       >
-                        <h3 className="font-display mb-3 text-2xl font-black leading-tight tracking-tight text-primary-900 sm:text-3xl">
-                          {slides[slide].title}
-                        </h3>
-                        <p className="whitespace-pre-line text-base font-medium leading-relaxed text-slate-600">
-                          {slides[slide].text}
-                        </p>
+                        {slide === 0 ? (
+                          /* ——— Обложка (титульный слайд, W1-T02) ——— */
+                          <div className="flex flex-col items-center gap-4 py-2 text-center">
+                            <div
+                              className="flex h-24 w-24 items-center justify-center rounded-2xl border border-primary-200 bg-primary-100 shadow-soft dark:border-primary-800 dark:bg-primary-900/40"
+                              aria-hidden="true"
+                            >
+                              <span className={`leading-none ${coverEmojiSize}`}>
+                                {coverEmoji || "🕰️"}
+                              </span>
+                            </div>
+                            <h3 className="font-display text-3xl font-black leading-tight tracking-tight text-primary-900 dark:text-primary-100">
+                              {title || "Эпоха"}
+                            </h3>
+                            {subtitle && (
+                              <p className="text-base font-semibold leading-snug text-slate-600 dark:text-slate-400">
+                                {subtitle}
+                              </p>
+                            )}
+                            <button
+                              type="button"
+                              onClick={() => setSlide(1)}
+                              className="mt-1 flex min-h-[44px] items-center justify-center gap-2 rounded-2xl bg-primary-100 px-8 py-2 text-base font-bold text-primary-700 transition-colors hover:bg-primary-200 dark:bg-primary-900/40 dark:text-primary-100 dark:hover:bg-primary-900/60"
+                            >
+                              Начать →
+                            </button>
+                          </div>
+                        ) : (
+                          /* ——— Слайд теории: эмодзи-плашка + заголовок без эмодзи ——— */
+                          <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
+                            {slideEmoji && (
+                              <div
+                                className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-primary-200 bg-primary-100 shadow-soft dark:border-primary-800 dark:bg-primary-900/40"
+                                aria-hidden="true"
+                              >
+                                <span className="text-6xl leading-none">
+                                  {slideEmoji}
+                                </span>
+                              </div>
+                            )}
+                            <div className="min-w-0 flex-1">
+                              <h3 className="font-display mb-3 text-2xl font-black leading-tight tracking-tight text-primary-900 dark:text-primary-100 sm:text-3xl">
+                                {slideTitle}
+                              </h3>
+                              <p className="whitespace-pre-line text-base font-medium leading-relaxed text-slate-600 dark:text-slate-400">
+                                {slides[slide - 1].text}
+                              </p>
+                            </div>
+                          </div>
+                        )}
                       </motion.div>
                     </AnimatePresence>
                   </div>
 
-                  {/* Прогресс: точки + счётчик «слайд N из M» */}
+                  {/* Прогресс: точки + счётчик «слайд N из M» (обложка = слайд 1) */}
                   <div className="flex shrink-0 flex-col items-center gap-2 border-t border-primary-100 px-4 pb-3 pt-3">
                     <div className="flex items-center gap-1.5">
-                      {slides.map((_, i) => (
-                        <button
-                          key={i}
-                          type="button"
-                          aria-label={`Слайд ${i + 1} из ${slides.length}`}
-                          onClick={() => setSlide(i)}
-                          className={`h-2.5 rounded-full transition-all ${
-                            i === slide
-                              ? "w-6 bg-primary-600"
-                              : "w-2.5 bg-primary-200 hover:bg-primary-300"
-                          }`}
-                        />
-                      ))}
+                      {Array.from({ length: slides.length + 1 }, (_, i) => i).map(
+                        (i) => (
+                          <button
+                            key={i}
+                            type="button"
+                            aria-label={`Слайд ${i + 1} из ${slides.length + 1}`}
+                            onClick={() => setSlide(i)}
+                            className={`h-2.5 rounded-full transition-all ${
+                              i === slide
+                                ? "w-6 bg-primary-600"
+                                : "w-2.5 bg-primary-200 hover:bg-primary-300"
+                            }`}
+                          />
+                        )
+                      )}
                     </div>
                     <p className="text-xs font-bold uppercase tracking-wide text-slate-400">
-                      слайд {slide + 1} из {slides.length}
+                      слайд {slide + 1} из {slides.length + 1}
                     </p>
                   </div>
 
-                  {/* Навигация: «← Назад» / «Вперёд →» */}
-                  <div className="flex shrink-0 items-center justify-between gap-2 border-t border-primary-100 px-4 pb-4 pt-3">
-                    <button
-                      type="button"
-                      onClick={prevSlide}
-                      disabled={slide === 0}
-                      className="flex min-h-[44px] items-center justify-center rounded-2xl bg-primary-100 px-4 py-2 text-base font-bold text-primary-700 transition-colors hover:bg-primary-200 disabled:cursor-not-allowed disabled:opacity-40"
-                    >
-                      ← Назад
-                    </button>
-                    <button
-                      type="button"
-                      onClick={nextSlide}
-                      className="flex min-h-[44px] items-center justify-center rounded-2xl bg-primary-600 px-6 py-2 text-base font-bold text-white transition-colors hover:bg-primary-700"
-                    >
-                      {isLastSlide
-                        ? hasQuiz
-                          ? "К тесту →"
-                          : "К музыке →"
-                        : "Вперёд →"}
-                    </button>
-                  </div>
+                  {/* Навигация: на обложке её заменяет кнопка «Начать →» */}
+                  {slide > 0 && (
+                    <div className="flex shrink-0 items-center justify-between gap-2 border-t border-primary-100 px-4 pb-4 pt-3">
+                      <button
+                        type="button"
+                        onClick={prevSlide}
+                        disabled={slide === 0}
+                        className="flex min-h-[44px] items-center justify-center rounded-2xl bg-primary-100 px-4 py-2 text-base font-bold text-primary-700 transition-colors hover:bg-primary-200 disabled:cursor-not-allowed disabled:opacity-40"
+                      >
+                        ← Назад
+                      </button>
+                      <button
+                        type="button"
+                        onClick={nextSlide}
+                        className="flex min-h-[44px] items-center justify-center rounded-2xl bg-primary-600 px-6 py-2 text-base font-bold text-white transition-colors hover:bg-primary-700"
+                      >
+                        {isLastSlide
+                          ? hasQuiz
+                            ? "К тесту →"
+                            : "К музыке →"
+                          : "Вперёд →"}
+                      </button>
+                    </div>
+                  )}
                 </div>
               )}
 
