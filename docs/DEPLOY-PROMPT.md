@@ -16,11 +16,11 @@ _Уроки прошлых попыток учтены: см. «КРИТИЧЕС
   (nvm use 22), pnpm 10, флаг Node `--experimental-webpack-build-worker` (см. ниже).
 - Текущая версия: пакет «Все Эпохи» (build «Хроно-Агентство 806d024 + 12 эпох») —
   полная платформа time travel mission: 12 эпох времён + финальный экзамен.
-- HEAD-коммит для этого деплоя: **`5d761c6`** — пакет «Правки клиентки
-  12.08.2026» (epoch-fixes-1208: 4 эпохи — Present Simple, Present Continuous,
-  Past Simple, Past Continuous). Поверх `8d40b55` (fix-коммит пакета) +
-  `7f4dd05` (README) + `358c99c` (фикс инструктажа).
-  Пакет: `.scratch/epoch-fixes-1208/`.
+- HEAD-коммит для этого деплоя: **`5ec6b04`** — docs(deploy): DEPLOY-PROMPT v10
+  (HEAD после rebase), пакет «Правки клиентки 12.08.2026» (epoch-fixes-1208:
+  4 эпохи — Present Simple, Present Continuous, Past Simple, Past Continuous)
+  в коммитах `8d40b55` (fix) + `5d761c6` (docs v10). Поверх `7f4dd05` (README)
+  + `358c99c` (фикс инструктажа). Пакет: `.scratch/epoch-fixes-1208/`.
 - Что нового в этой версии (для понимания, не менять):
   - Вердикт красно/зелёный (неверный — красным, правильный — зелёным) во
     всех проверяемых заданиях; подсветка правильного после ошибки в
