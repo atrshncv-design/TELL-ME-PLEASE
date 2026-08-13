@@ -83,6 +83,12 @@
           "title": "Сортировка Артефактов (Правильные vs Неправильные)"
         },
         {
+          "id": "station-2-b",
+          "title": "Домики Звуков (-ed: [d]/[t]/[ɪd])",
+          "type": "drag-and-drop",
+          "file": "a1/station-2-b.json"
+        },
+        {
           "id": "station-2",
           "file": "a1/station-2.json",
           "title": "Триггер: Вчера (Механика V2)"

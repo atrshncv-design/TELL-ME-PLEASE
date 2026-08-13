@@ -38,6 +38,8 @@ interface OneMinuteTaskProps {
   topic: string
   duration?: number
   conditions: OneMinuteCondition[]
+  /** Сценарий-текст (правки 12.08): описание ситуации + готовые предложения для чтения вслух. */
+  script?: { description?: string; sentences?: string[] }
   onComplete?: (score: number, total: number) => void
 }
 
@@ -71,6 +73,7 @@ export function OneMinuteTask({
   topic,
   duration = 60,
   conditions,
+  script,
   onComplete,
 }: OneMinuteTaskProps) {
   const { say } = useVerbBot()
@@ -149,6 +152,15 @@ export function OneMinuteTask({
     setPhase("verdict")
   }
 
+  // G5 (правки 12.08): «Готово» — ученик проговорил раньше времени и не хочет
+  // ждать окончания минуты. Завершает раунд СРАЗУ (таймер остаётся как
+  // подсказка, авто-окончание по таймеру тоже работает).
+  const handleDone = () => {
+    if (phase !== "speaking") return
+    stop()
+    setPhase("checking")
+  }
+
   // «Далее» после вердикта → ResultScreen; onComplete ровно один раз.
   const handleNext = () => {
     if (phase !== "verdict") return
@@ -190,6 +202,27 @@ export function OneMinuteTask({
       <h2 className="font-display text-2xl font-extrabold tracking-tight text-primary-900">{title}</h2>
       <p className="text-sm text-slate-500">{description}</p>
 
+      {/* Сценарий-текст (правки 12.08): что читать вслух — крупным шрифтом (G6) */}
+      {script && (script.description || (script.sentences && script.sentences.length > 0)) && (
+        <div className="rounded-2xl border-2 border-primary-200 bg-primary-50/60 p-4">
+          <div className="mb-2 text-[11px] font-bold uppercase tracking-wide text-primary-500">
+            📖 Сценарий — прочитай вслух
+          </div>
+          {script.description && (
+            <p className="mb-3 text-sm font-medium leading-relaxed text-slate-600">{script.description}</p>
+          )}
+          {script.sentences && script.sentences.length > 0 && (
+            <ul className="flex flex-col gap-1.5">
+              {script.sentences.map((s, i) => (
+                <li key={i} className="font-display text-lg font-bold leading-snug text-primary-900">
+                  {s}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
+
       {/* Тема из JSON */}
       {topic && (
         <div className="flex items-center gap-2.5 rounded-2xl border-2 border-primary-200 bg-primary-100/60 px-4 py-3">
@@ -206,7 +239,11 @@ export function OneMinuteTask({
       {/* Таймер 60 секунд */}
       <div className="rounded-2xl bg-white border-2 border-primary-100 p-4 text-center shadow-soft">
         <div className="mb-1 text-[11px] font-bold uppercase tracking-wide text-slate-400">
-          {phase === "ready" ? "Время на рассказ" : phase === "speaking" ? "Осталось" : "Время вышло!"}
+          {phase === "ready"
+            ? "Время на рассказ"
+            : phase === "speaking"
+              ? "Осталось"
+              : "Готово! Проверяем…"}
         </div>
         <motion.div
           animate={timerDanger ? { scale: [1, 1.06, 1] } : {}}
@@ -419,6 +456,16 @@ export function OneMinuteTask({
           className="w-full min-h-[44px] rounded-2xl bg-primary-600 px-6 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
         >
           🚀 Начать говорить
+        </motion.button>
+      )}
+      {/* G5 (правки 12.08): «Готово» — завершает раунд сразу, не ждёт таймер. */}
+      {phase === "speaking" && (
+        <motion.button
+          whileTap={{ scale: 0.97 }}
+          onClick={handleDone}
+          className="w-full min-h-[44px] rounded-2xl bg-primary-600 px-6 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
+        >
+          ✅ Готово
         </motion.button>
       )}
       {phase === "checking" && (

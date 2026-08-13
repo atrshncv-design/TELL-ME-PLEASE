@@ -1,7 +1,7 @@
 {
   "id": "a1_station_3",
   "title": "Сборка Ядра: Наречия",
-  "description": "Выбери наречие: оно стоит между подлежащим и сказуемым или в конце предложения. Упражнение 12 (наречия частотности).",
+  "description": "Выбери верное наречие из трёх вариантов (оно стоит между подлежащим и сказуемым или в конце предложения). Упражнение 12 (наречия частотности).",
   "category": "grammar",
   "type": "quiz",
   "items": [
@@ -9,8 +9,8 @@
       "question": "Teenagers ___ play computer games after school.",
       "options": [
         "always",
-        "never",
-        "rarely"
+        "every day",
+        "in the evening"
       ],
       "answer": "always"
     },
@@ -18,8 +18,8 @@
       "question": "My friends ___ meet in the park at the weekend.",
       "options": [
         "usually",
-        "often",
-        "sometimes"
+        "in the afternoon",
+        "on Saturdays"
       ],
       "answer": "usually"
     },
@@ -27,8 +27,8 @@
       "question": "Teenagers ___ watch videos on their phones in the evening.",
       "options": [
         "often",
-        "usually",
-        "always"
+        "after school",
+        "every day"
       ],
       "answer": "often"
     },
@@ -36,8 +36,8 @@
       "question": "My brother ___ goes to the sports centre on Saturdays.",
       "options": [
         "sometimes",
-        "always",
-        "never"
+        "every night",
+        "after school"
       ],
       "answer": "sometimes"
     },
@@ -45,8 +45,8 @@
       "question": "Teenagers ___ read books in the afternoon.",
       "options": [
         "rarely",
-        "usually",
-        "often"
+        "on Wednsdays",
+        "in the morning"
       ],
       "answer": "rarely"
     },
@@ -54,8 +54,9 @@
       "question": "My cousin ___ does his homework at night.",
       "options": [
         "never",
-        "always",
-        "sometimes"
+        "in the afternoon",
+        "on Mondays",
+        "in winter"
       ],
       "answer": "never"
     },
@@ -63,8 +64,8 @@
       "question": "Teens ___ spend their free time online.",
       "options": [
         "as a rule",
-        "never",
-        "rarely"
+        "on Tuesdays",
+        "during the week"
       ],
       "answer": "as a rule"
     },
@@ -72,8 +73,8 @@
       "question": "Teenagers chat with their friends on social media ___.",
       "options": [
         "every day",
-        "in the morning",
-        "at night"
+        "hardly ever",
+        "sometimes"
       ],
       "answer": "every day"
     },
@@ -81,8 +82,8 @@
       "question": "Teens listen to music on the way to school ___.",
       "options": [
         "in the morning",
-        "at night",
-        "in the evening"
+        "always",
+        "often"
       ],
       "answer": "in the morning"
     },
@@ -90,8 +91,8 @@
       "question": "Teenagers play online games with their friends ___.",
       "options": [
         "in the evening",
-        "in the morning",
-        "at night"
+        "rarely",
+        "never"
       ],
       "answer": "in the evening"
     },
@@ -99,8 +100,8 @@
       "question": "Teenagers go out with their friends ___.",
       "options": [
         "at the weekend",
-        "after school",
-        "in the evening"
+        "usually",
+        "often"
       ],
       "answer": "at the weekend"
     },
@@ -108,8 +109,8 @@
       "question": "Teens watch films with their families ___.",
       "options": [
         "on Saturdays",
-        "at night",
-        "every day"
+        "always",
+        "never"
       ],
       "answer": "on Saturdays"
     },
@@ -117,8 +118,8 @@
       "question": "Teenagers meet their friends ___.",
       "options": [
         "after school",
-        "at night",
-        "on Saturdays"
+        "sometimes",
+        "rarely"
       ],
       "answer": "after school"
     },
@@ -126,8 +127,8 @@
       "question": "Teens visit the sports club ___.",
       "options": [
         "once a week",
-        "every day",
-        "in the morning"
+        "always",
+        "never"
       ],
       "answer": "once a week"
     },
@@ -135,8 +136,8 @@
       "question": "Teenagers relax and watch TV ___.",
       "options": [
         "at night",
-        "in the morning",
-        "after school"
+        "usually",
+        "often"
       ],
       "answer": "at night"
     }

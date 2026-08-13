@@ -201,47 +201,46 @@ export function DragAndDropTask({
         ))}
       </div>
 
-      {/* «Проверить» доступна в ЛЮБОЙ момент (не только когда пул пуст):
-          проверяются размещённые чипы, неразмещённые — мимо. */}
-      {!checked && (
-        <motion.button
-          whileTap={{ scale: 0.95 }}
-          onClick={checkAnswers}
-          className="w-full py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700"
-        >
-          Проверить
-        </motion.button>
-      )}
+      {/* G3 (правки 12.08): «Проверить» в зоне видимости — sticky-бар снизу
+          (жалоба «Анализ профилей»: кнопка уезжала за экран, приходилось
+          мотать). Содержит вердикт + кнопку Проверить/Далее. */}
+      <div className="sticky bottom-0 z-10 -mx-4 -mb-4 mt-1 border-t-2 border-slate-100 bg-white/95 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur">
+        {checked && (
+          <div className="mb-2 text-center text-lg font-semibold text-indigo-800">
+            Правильных: {Object.values(placed).flat().filter((i) => {
+              const col = columns.find((c) => placed[c.id].includes(i))
+              return col && i.answer === col.id
+            }).length} / {items.length}
+          </div>
+        )}
 
-      {checked && (
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center text-lg font-semibold text-indigo-800"
-        >
-          Правильных: {Object.values(placed).flat().filter((i) => {
-            const col = columns.find((c) => placed[c.id].includes(i))
-            return col && i.answer === col.id
-          }).length} / {items.length}
-        </motion.div>
-      )}
-
-      {/* W3-T03 (client-fixes-0808): review-режим — после «Проверить» не
-          завершаем упражнение, а даём посмотреть ошибки и идём кнопкой
-          «Далее» → ResultScreen (onComplete при этом срабатывает один раз). */}
-      {checked && review && (
-        <motion.button
-          whileTap={{ scale: 0.95 }}
-          onClick={() => {
-            if (finished) return
-            setFinished(true)
-            onComplete?.(score, items.length)
-          }}
-          className="w-full py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700"
-        >
-          Далее
-        </motion.button>
-      )}
+        {/* «Проверить» доступна в ЛЮБОЙ момент (не только когда пул пуст):
+            проверяются размещённые чипы, неразмещённые — мимо. */}
+        {!checked ? (
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={checkAnswers}
+            className="w-full py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700"
+          >
+            Проверить
+          </motion.button>
+        ) : review ? (
+          /* W3-T03 (client-fixes-0808): review-режим — после «Проверить» не
+              завершаем упражнение, а даём посмотреть ошибки и идём кнопкой
+              «Далее» → ResultScreen (onComplete при этом срабатывает один раз). */
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              if (finished) return
+              setFinished(true)
+              onComplete?.(score, items.length)
+            }}
+            className="w-full py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700"
+          >
+            Далее
+          </motion.button>
+        ) : null}
+      </div>
     </div>
   )
 }

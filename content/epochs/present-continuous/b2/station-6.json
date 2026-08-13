@@ -1,11 +1,24 @@
 {
   "id": "present_continuous_b2_station_6",
   "title": "Описание Фотографии (ОГЭ Задание 3)",
-  "description": "Использование Present Continuous для описания действий на фото.",
+  "description": "Опиши фотографию по плану ОГЭ: где сделано фото, кто на нём, что происходит. Прочитай готовое описание вслух — бот проверит, все ли пункты плана ты назвал.",
   "category": "speaking",
   "type": "one-minute",
-  "topic": "Опиши фотографию (пикник, протест или съёмка фильма) по плану ОГЭ",
+  "topic": "Опиши фотографию (семья на пикнике в парке) по плану ОГЭ",
   "duration": 60,
+  "script": {
+    "description": "Ситуация: на экране фотография — семья на пикнике в парке. Опиши её по плану ОГЭ: где и когда сделано фото, кто на нём, что происходит, какие действия видны. Прочитай готовое описание вслух — бот проверит, все ли пункты плана ты назвал.",
+    "sentences": [
+      "I took this photo last weekend in the park.",
+      "In the picture I can see my family having a picnic.",
+      "We are sitting on a green blanket under a big tree.",
+      "My mum is putting food on the table.",
+      "My dad is playing with our dog.",
+      "My little sister is eating an apple and smiling.",
+      "The weather is sunny, and everybody is having a good time.",
+      "I am happy because I am spending the day with my family."
+    ]
+  },
   "conditions": [
     {
       "label": "4 действия в Present Continuous",
@@ -15,7 +28,7 @@
         "is",
         "are"
       ],
-      "min": 4
+      "min": 3
     },
     {
       "label": "Глаголы действий на фото",

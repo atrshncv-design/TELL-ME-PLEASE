@@ -6,7 +6,7 @@
   "type": "fill-in",
   "items": [
     {
-      "sentence": "I ___ home when it ___ to rain.",
+      "sentence": "I ___ (walk) home when it (start) to rain.",
       "answer": [
         "was walking",
         "started"
@@ -14,7 +14,7 @@
       "hint": "Я шёл домой, когда пошёл дождь."
     },
     {
-      "sentence": "She ___ when the phone ___.",
+      "sentence": "She ___ (read) when the phone ___ (ring).",
       "answer": [
         "was reading",
         "rang"
@@ -22,7 +22,7 @@
       "hint": "Она читала, когда зазвонил телефон."
     },
     {
-      "sentence": "We ___ dinner when you ___.",
+      "sentence": "We ___ (have dinner) when you ___ (call).",
       "answer": [
         "were having",
         "called"

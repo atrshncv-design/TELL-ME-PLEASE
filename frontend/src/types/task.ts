@@ -156,6 +156,8 @@ export interface TaskData {
   topic?: string;
   duration?: number;
   conditions?: OneMinuteCondition[];
+  // one-minute (правки 12.08): сценарий-текст — описание ситуации + предложения для чтения вслух.
+  script?: { description?: string; sentences?: string[] };
   // build-chat (тикет W2-T3): чат с пропусками + неожиданное событие.
   chat?: BuildChatMessage[];
   event?: BuildChatEvent;

@@ -1,0 +1,144 @@
+{
+  "id": "present_continuous_a1_station_2_b",
+  "title": "To Be + ING (Проверка to be)",
+  "description": "Выбери правильную форму to be (am/is/are) для каждого предложения. Обрати внимание: глагол действия всегда с окончанием -ing.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "Look! The cat ___ drinking milk.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "My mum ___ making a cake in the kitchen.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "They ___ running in the park.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "She ___ dancing to music.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "We ___ swimming in the pool.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "He ___ writing a test.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "The dog ___ sitting on the sofa.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "I ___ cleaning my room.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "am"
+    },
+    {
+      "question": "You ___ driving a car.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "The girls ___ skipping rope.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "We ___ watching a film.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "He ___ hopping on one leg.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "The baby ___ sleeping.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "I ___ baking bread.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "am"
+    },
+    {
+      "question": "She ___ eating an apple.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "is"
+    }
+  ]
+}

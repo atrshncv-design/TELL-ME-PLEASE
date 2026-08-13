@@ -49,6 +49,51 @@
         "Were studying they?"
       ],
       "answer": "Were they studying?"
+    },
+    {
+      "question": "playing / wasn't / I / tennis",
+      "options": [
+        "I wasn't playing tennis.",
+        "Wasn't playing I tennis.",
+        "I playing wasn't tennis."
+      ],
+      "answer": "I wasn't playing tennis."
+    },
+    {
+      "question": "watching / weren't / They / TV",
+      "options": [
+        "Weren't watching they TV.",
+        "They weren't watching TV.",
+        "They watching weren't TV."
+      ],
+      "answer": "They weren't watching TV."
+    },
+    {
+      "question": "reading / wasn't / Kate / a book",
+      "options": [
+        "Kate wasn't reading a book.",
+        "Wasn't reading Kate a book.",
+        "Kate reading wasn't a book."
+      ],
+      "answer": "Kate wasn't reading a book."
+    },
+    {
+      "question": "doing / weren't / We / our homework",
+      "options": [
+        "Weren't doing we our homework.",
+        "We doing weren't our homework.",
+        "We weren't doing our homework."
+      ],
+      "answer": "We weren't doing our homework."
+    },
+    {
+      "question": "listening / wasn't / Tom / to music",
+      "options": [
+        "Tom listening wasn't to music.",
+        "Wasn't listening Tom to music.",
+        "Tom wasn't listening to music."
+      ],
+      "answer": "Tom wasn't listening to music."
     }
   ]
 }

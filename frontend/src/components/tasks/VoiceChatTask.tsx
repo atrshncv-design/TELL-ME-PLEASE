@@ -534,8 +534,13 @@ function VoiceChatInner({
                   <p className="font-display text-lg font-extrabold text-slate-800 leading-snug">
                     {checklistItems[listIndex]?.question}
                   </p>
+                  {/* G6 (правки 12.08): «что сказать ученику» (hint/примерный
+                      ответ) — КРУПНЫЙ и ЖИРНЫЙ, тёмный (контраст для доски),
+                      чтобы ученику было легко прочитать фразу для озвучки. */}
                   {checklistItems[listIndex]?.hint && (
-                    <p className="mt-2 text-xs text-slate-400">💡 {checklistItems[listIndex]?.hint}</p>
+                    <p className="mt-3 rounded-xl border-2 border-primary-100 bg-primary-50 px-3 py-2.5 text-lg font-bold leading-snug text-slate-800">
+                      💡 {checklistItems[listIndex]?.hint}
+                    </p>
                   )}
                 </div>
 
@@ -807,16 +812,17 @@ function VoiceChatInner({
           </div>
         </div>
 
-        {/* Scenario panel */}
+        {/* Scenario panel — G6 (правки 12.08): реплики для чтения ученику
+            крупнее (text-base), подсказки — text-sm; было text-xs «мелко». */}
         <AnimatePresence>
           {showPanel && hasPanel && (
             <motion.div initial={{ width: 0, opacity: 0 }} animate={{ width: 280, opacity: 1 }} exit={{ width: 0, opacity: 0 }}
-              className="overflow-y-auto bg-slate-50 p-3 text-xs">
+              className="overflow-y-auto bg-slate-50 p-3 text-sm">
               <div className="font-bold text-indigo-800 mb-2">Сценарий</div>
               {dialogue && dialogue.length > 0 && (
                 <div className="space-y-1 mb-3">
                   {dialogue.map((d, i) => (
-                    <div key={i} className={`${d.speaker === "interviewer" ? "text-indigo-600" : "text-green-700"}`}>
+                    <div key={i} className={`text-base leading-snug ${d.speaker === "interviewer" ? "text-indigo-600" : "text-green-700"}`}>
                       <b>{d.speaker === "interviewer" ? "Журналист" : d.speaker}:</b> {d.text}
                     </div>
                   ))}
@@ -828,7 +834,7 @@ function VoiceChatInner({
                     <div key={i}>
                       <div className="font-semibold text-indigo-700">{s.name}</div>
                       <ul className="ml-2 space-y-0.5">
-                        {s.questions.map((q, qi) => <li key={qi} className="text-slate-600">• {q}</li>)}
+                        {s.questions.map((q, qi) => <li key={qi} className="text-slate-700">• {q}</li>)}
                       </ul>
                     </div>
                   ))}

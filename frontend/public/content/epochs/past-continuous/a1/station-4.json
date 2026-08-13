@@ -69,13 +69,13 @@
       "answer": "skipping"
     },
     {
-      "question": "Выбери правильное написание: (lieing / lying / laying)",
+      "prompt": "do",
       "options": [
-        "lieing",
-        "lying",
-        "laying"
+        "doing",
+        "dooing",
+        "doiing"
       ],
-      "answer": "lying"
+      "answer": "doing"
     }
   ]
 }

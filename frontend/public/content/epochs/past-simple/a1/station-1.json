@@ -4,6 +4,7 @@
   "description": "Распредели глаголы в две корзины: \"Add -ed (Правильные)\" или \"Irregular (Неправильные)\".",
   "category": "grammar",
   "type": "drag-and-drop",
+  "review": true,
   "columns": [
     {
       "id": "regular",
@@ -16,76 +17,104 @@
   ],
   "items": [
     {
-      "verb": "play",
-      "answer": "regular"
-    },
-    {
-      "verb": "visit",
-      "answer": "regular"
-    },
-    {
       "verb": "travel",
-      "answer": "regular"
-    },
-    {
-      "verb": "watch",
-      "answer": "regular"
-    },
-    {
-      "verb": "stay",
-      "answer": "regular"
-    },
-    {
-      "verb": "walk",
-      "answer": "regular"
+      "answer": "regular",
+      "form2": "travelled"
     },
     {
       "verb": "rent",
-      "answer": "regular"
+      "answer": "regular",
+      "form2": "rented"
+    },
+    {
+      "verb": "stay",
+      "answer": "regular",
+      "form2": "stayed"
+    },
+    {
+      "verb": "visit",
+      "answer": "regular",
+      "form2": "visited"
+    },
+    {
+      "verb": "play",
+      "answer": "regular",
+      "form2": "played"
+    },
+    {
+      "verb": "watch",
+      "answer": "regular",
+      "form2": "watched"
+    },
+    {
+      "verb": "walk",
+      "answer": "regular",
+      "form2": "walked"
     },
     {
       "verb": "clean",
-      "answer": "regular"
-    },
-    {
-      "verb": "go",
-      "answer": "irregular"
-    },
-    {
-      "verb": "see",
-      "answer": "irregular"
-    },
-    {
-      "verb": "eat",
-      "answer": "irregular"
-    },
-    {
-      "verb": "buy",
-      "answer": "irregular"
+      "answer": "regular",
+      "form2": "cleaned"
     },
     {
       "verb": "take",
-      "answer": "irregular"
-    },
-    {
-      "verb": "swim",
-      "answer": "irregular"
-    },
-    {
-      "verb": "drink",
-      "answer": "irregular"
+      "answer": "irregular",
+      "form2": "took",
+      "form3": "taken"
     },
     {
       "verb": "fly",
-      "answer": "irregular"
-    },
-    {
-      "verb": "run",
-      "answer": "irregular"
+      "answer": "irregular",
+      "form2": "flew",
+      "form3": "flown"
     },
     {
       "verb": "sleep",
-      "answer": "irregular"
+      "answer": "irregular",
+      "form2": "slept",
+      "form3": "slept"
+    },
+    {
+      "verb": "drink",
+      "answer": "irregular",
+      "form2": "drank",
+      "form3": "drunk"
+    },
+    {
+      "verb": "go",
+      "answer": "irregular",
+      "form2": "went",
+      "form3": "gone"
+    },
+    {
+      "verb": "run",
+      "answer": "irregular",
+      "form2": "ran",
+      "form3": "run"
+    },
+    {
+      "verb": "eat",
+      "answer": "irregular",
+      "form2": "ate",
+      "form3": "eaten"
+    },
+    {
+      "verb": "see",
+      "answer": "irregular",
+      "form2": "saw",
+      "form3": "seen"
+    },
+    {
+      "verb": "buy",
+      "answer": "irregular",
+      "form2": "bought",
+      "form3": "bought"
+    },
+    {
+      "verb": "swim",
+      "answer": "irregular",
+      "form2": "swam",
+      "form3": "swum"
     }
   ]
 }

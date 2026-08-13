@@ -52,5 +52,17 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Расскажи, что ты делал за компьютером, когда что-то пошло не так. Прочитай эти предложения вслух — по одному, не торопясь. Бот проверит, все ли действия ты назвал.",
+    "sentences": [
+      "I was playing an online game when the internet stopped working.",
+      "My brother was downloading a film, and the computer crashed.",
+      "I was chatting with my friend when the screen went black.",
+      "The music was playing loudly, and suddenly everything froze.",
+      "I was writing an essay when the computer turned off.",
+      "My sister was watching a video, and the laptop made a strange noise.",
+      "We were listening to music when the power went out."
+    ]
+  }
 }

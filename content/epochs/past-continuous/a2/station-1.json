@@ -6,20 +6,20 @@
   "type": "quiz",
   "items": [
     {
-      "question": "I ___ when I (was seeing / saw) a cat.",
-      "options": [
-        "was walking",
-        "walked"
-      ],
-      "answer": "was walking"
-    },
-    {
       "question": "I (was walking / walked) when I ___ a cat.",
       "options": [
         "was seeing",
         "saw"
       ],
       "answer": "saw"
+    },
+    {
+      "question": "I ___ when I (was seeing / saw) a cat.",
+      "options": [
+        "was walking",
+        "walked"
+      ],
+      "answer": "was walking"
     },
     {
       "question": "She ___ when the phone (was ringing / rang).",

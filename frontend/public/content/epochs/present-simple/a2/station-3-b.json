@@ -1,12 +1,12 @@
 {
   "id": "a2_station_3_b",
   "title": "Расшифровка Сценария: Рон (вручную)",
-  "description": "Прочитай текст про Рона Уизли и напечатай правильную форму глагола в каждый пропуск. Без подсказок-вариантов: вспомни правило Present Simple (he/she/it + -s/-es, do/does).",
+  "description": "Прочитай текст про Рона Уизли. В каждом пропуске в скобках дан глагол — впиши его правильную форму прямо в текст (he/she/it + -s/-es, do/does).",
   "category": "grammar",
   "type": "fill-in",
   "items": [
     {
-      "sentence": "Ron Weasley ___ a funny and friendly schoolboy at Hogwarts. He ___ in the Gryffindor tower and ___ his friends and his big family. In the morning Ron ___, ___ his cloak, ___ his school bag and ___ to breakfast with Harry. Then they ___ to their lessons together. At school Ron ___ to the teachers, ___ in his notebook and ___ his exercises. At break time he ___ with his friends and ___ funny stories. After school he often ___ to the Quidditch pitch with Harry or ___ games in the common room. In the evening Ron ___ dinner, ___ time with Harry and Hermione and ___ about their day. He ___ that it ___ important to be kind, support your friends, enjoy games and still ___ about homework.",
+      "sentence": "Ron Weasley ___ (be) a funny and friendly schoolboy at Hogwarts. He ___ (live) in the Gryffindor tower and ___ (love) his friends and his big family. In the morning Ron ___ (get up), ___ (put on) his cloak, ___ (take) his school bag and ___ (go) to breakfast with Harry. Then they ___ (go) to their lessons together. At school Ron ___ (listen) to the teachers, ___ (write) in his notebook and ___ (do) his exercises. At break time he ___ (talk) with his friends and ___ (tell) funny stories. After school he often ___ (go) to the Quidditch pitch with Harry or ___ (play) games in the common room. In the evening Ron ___ (have) dinner, ___ (spend) time with Harry and Hermione and ___ (talk) about their day. He ___ (show) that it ___ (be) important to be kind, support your friends, enjoy games and still ___ (remember) about homework.",
       "answer": [
         "is",
         "lives",

@@ -6,17 +6,17 @@
   "type": "fill-in",
   "items": [
     {
-      "sentence": "I ___ a book.",
+      "sentence": "I ___ (read) a book.",
       "answer": "was reading",
       "hint": "Я читал книгу (процесс)."
     },
     {
-      "sentence": "I ___ a book.",
-      "answer": "read",
+      "sentence": "I ___ (read) a book.",
+      "answer": "have read",
       "hint": "Я прочитал книгу (результат)."
     },
     {
-      "sentence": "I ___ when it ___ to rain.",
+      "sentence": "I ___ (walk) when it ___ (start) to rain.",
       "answer": [
         "was walking",
         "started"
@@ -24,12 +24,12 @@
       "hint": "Я гулял, когда пошёл дождь."
     },
     {
-      "sentence": "I ___ and went home.",
+      "sentence": "I ___ (walk) and went home.",
       "answer": "walked",
       "hint": "Я погулял и пошёл домой."
     },
     {
-      "sentence": "She ___ dinner when I ___.",
+      "sentence": "She ___ (cook) dinner when I ___ (come).",
       "answer": [
         "was cooking",
         "came"
@@ -37,7 +37,7 @@
       "hint": "Она готовила ужин, когда я пришёл."
     },
     {
-      "sentence": "She ___ dinner and we ate.",
+      "sentence": "She ___ (cook) dinner and we ate.",
       "answer": "cooked",
       "hint": "Она приготовила ужин, и мы поели."
     }

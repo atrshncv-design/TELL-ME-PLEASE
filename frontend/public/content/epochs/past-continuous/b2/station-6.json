@@ -1,57 +1,52 @@
 {
   "id": "past_continuous_b2_station_6",
-  "title": "Дебаты: \"Великие События\" (Монолог)",
-  "description": "Напиши мини-выступление на тему \"Как люди жили 100 лет назад\". Используй Past Simple (факты: People lived...) и Past Continuous (фон: People were using horses...).",
+  "title": "Дебаты: «Великие События» (Диалог с ИИ)",
+  "description": "Диалог о великих событиях прошлого: экзаменатор задаёт вопрос, на экране — готовый ответ, прочитай его вслух. Бот оценит по маркерам.",
   "category": "speaking",
-  "type": "one-minute",
-  "topic": "Как люди жили 100 лет назад",
-  "duration": 60,
-  "conditions": [
+  "type": "voice-chat",
+  "task_context": "You are a debate moderator. Ask me about great historical events and discoveries, one question at a time.",
+  "checklist": [
     {
-      "label": "Факты о жизни (Past Simple)",
-      "hint": "People lived in small houses and worked on farms...",
+      "question": "What were you doing when you heard about the first man on the Moon?",
       "markers": [
-        "lived",
-        "worked",
-        "had",
-        "wore",
-        "used",
-        "travelled",
-        "traveled",
-        "ate",
-        "drank",
-        "grew",
-        "built",
-        "made",
-        "walked"
+        "was",
+        "watching",
+        "tv",
+        "news"
       ],
-      "min": 2
+      "min": 1,
+      "hint": "I was watching TV when I heard the news about the first man on the Moon."
     },
     {
-      "label": "Фон / процессы (Past Continuous)",
-      "hint": "People were using horses / working in fields...",
+      "question": "What was happening in the world when the Internet appeared?",
       "markers": [
-        "were using",
-        "were living",
-        "were working",
-        "were travelling",
-        "were traveling",
-        "were wearing",
-        "were building",
-        "were cooking",
-        "were going",
-        "were riding"
+        "people",
+        "using",
+        "computers",
+        "new"
       ],
-      "min": 1
+      "min": 1,
+      "hint": "People were using computers, and the Internet was a new amazing thing."
     },
     {
-      "label": "Связки when / while",
-      "hint": "People were working in the fields when...",
+      "question": "What were scientists doing when they discovered penicillin?",
       "markers": [
-        "when",
-        "while"
+        "working",
+        "laboratory",
+        "experiment"
       ],
-      "min": 1
+      "min": 1,
+      "hint": "Scientists were working in the laboratory when they discovered penicillin."
+    },
+    {
+      "question": "What were people doing when the first plane flew?",
+      "markers": [
+        "watching",
+        "sky",
+        "flying"
+      ],
+      "min": 1,
+      "hint": "People were watching the sky and seeing a plane flying for the first time."
     }
   ]
 }

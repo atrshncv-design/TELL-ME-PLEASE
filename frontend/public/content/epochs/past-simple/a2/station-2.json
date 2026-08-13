@@ -8,7 +8,7 @@
     {
       "sentence": "Мы не ходили в школу вчера. We ___ to school yesterday.",
       "answer": "didn't go",
-      "hint": "(didn't go)"
+      "hint": "(go — отрицание)"
     },
     {
       "sentence": "Ты читал эту книгу на прошлой неделе? ___ you ___ this book last week?",
@@ -16,12 +16,12 @@
         "Did",
         "read"
       ],
-      "hint": "(Did / read)"
+      "hint": "(read — вопрос)"
     },
     {
       "sentence": "Она не купила хлеб. She ___ the bread.",
       "answer": "didn't buy",
-      "hint": "(didn't buy)"
+      "hint": "(buy — отрицание)"
     },
     {
       "sentence": "Где они играли? Where ___ they ___?",
@@ -29,7 +29,7 @@
         "did",
         "play"
       ],
-      "hint": "(did / play)"
+      "hint": "(play — вопрос)"
     }
   ]
 }

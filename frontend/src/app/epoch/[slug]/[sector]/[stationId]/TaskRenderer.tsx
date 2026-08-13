@@ -80,6 +80,8 @@ interface TaskData {
   topic?: string
   duration?: number
   conditions?: { label: string; hint: string; markers: string[]; min?: number }[]
+  // one-minute (правки 12.08): сценарий-текст — описание + предложения для чтения вслух
+  script?: { description?: string; sentences?: string[] }
   // build-chat (тикет W2-T3): чат с пропусками + неожиданное событие
   chat?: any[]
   event?: any
@@ -196,7 +198,7 @@ export function TaskRenderer({
     case "choose-story":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><ChooseStoryTask title={task.title} description={task.description} scaffold={task.scaffold || "full"} characters={task.characters || []} places={task.places || []} problems={task.problems || []} sentencePatterns={task.sentencePatterns || []} keywords={task.keywords || []} onComplete={onScored} /></div>
     case "one-minute":
-      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><OneMinuteTask title={task.title} description={task.description} topic={task.topic || ""} duration={task.duration} conditions={task.conditions || []} onComplete={onScored} /></div>
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><OneMinuteTask title={task.title} description={task.description} topic={task.topic || ""} duration={task.duration} conditions={task.conditions || []} script={task.script} onComplete={onScored} /></div>
     case "build-chat":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><BuildChatTask title={task.title} description={task.description} chat={task.chat || []} event={task.event} onComplete={onScored} /></div>
     case "survival-island":

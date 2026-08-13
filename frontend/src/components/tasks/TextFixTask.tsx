@@ -6,6 +6,7 @@ import { useVerbBot } from "@/components/VerbBot"
 import { useSound } from "@/lib/useSound"
 import { ResultScreen } from "@/components/ResultScreen"
 import { StickerReaction } from "@/components/StickerReaction"
+import { hashString, seededShuffle } from "@/lib/shuffle"
 import type { TextFixData, TextFixError } from "@/types/task"
 
 interface TextFixTaskProps {
@@ -94,9 +95,16 @@ export function TextFixTask({ title, description, data, onComplete }: TextFixTas
   const activeEntry = active ? errors.find((e) => e.key === active) : null
   const activeError = activeEntry?.error || null
   const activeOptions = activeError
-    ? activeError.options && activeError.options.length > 0
-      ? activeError.options
-      : defaultOptions(activeError)
+    ? // G7 (правки 12.08): варианты исправления — детерминированный шаффл
+      // (seededShuffle из lib/shuffle, как в QuizTask): правильный вариант
+      // НЕ всегда первый/верхний-левый. Seed стабилен по заданию+ошибке →
+      // SSR = клиент, без hydration mismatch.
+      seededShuffle(
+        activeError.options && activeError.options.length > 0
+          ? activeError.options
+          : defaultOptions(activeError),
+        hashString(`${title}|${activeEntry?.key ?? ""}|${activeError.wrong}`),
+      )
     : []
 
   /** Клик по ошибочному слову — подсветка + открытие picker-а (повторный клик закрывает). */
@@ -319,7 +327,9 @@ export function TextFixTask({ title, description, data, onComplete }: TextFixTas
         )}
       </AnimatePresence>
 
-      <div className="mt-1">
+      {/* G3 (правки 12.08): «Проверить»/«Далее» в зоне видимости — sticky-бар
+          снизу (текст длинный, кнопка не должна уезжать за экран). */}
+      <div className="sticky bottom-0 z-10 -mx-4 -mb-4 mt-1 border-t-2 border-slate-100 bg-white/95 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur">
         {!checked ? (
           fixedCount > 0 && (
             <motion.button

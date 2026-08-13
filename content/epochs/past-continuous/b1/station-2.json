@@ -6,7 +6,7 @@
   "type": "fill-in",
   "items": [
     {
-      "sentence": "Yesterday at 6 PM, a strange thing happened. I ___ (surf) the Internet. My sister ___ (download) a new app. My dad ___ (work) on his computer. Suddenly, the screen ___ (go) black. We ___ (not / understand) what ___ (happen). While we ___ (try) to fix it, the lights ___ (go) out.",
+      "sentence": "Yesterday at 6 PM, a strange thing happened. I ___ (1. surf) the Internet. My sister ___ (2. download) a new app. My dad ___ (3. work) on his computer. Suddenly, the screen ___ (4. go) black. We ___ (5. not / understand) what ___ (6. happen). While we ___ (7. try) to fix it, the lights ___ (8. go) out.",
       "answer": [
         "was surfing",
         "was downloading",

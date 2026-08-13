@@ -30,7 +30,7 @@
           "cooks"
         ],
         [
-          "are"
+          "are you"
         ]
       ],
       "hints": [
@@ -55,7 +55,8 @@
         "am",
         "play",
         "writes",
-        "cook"
+        "cook",
+        "are you"
       ]
     }
   ]

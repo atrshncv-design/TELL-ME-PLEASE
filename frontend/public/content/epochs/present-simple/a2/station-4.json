@@ -1,13 +1,13 @@
 {
   "id": "a2_station_4",
   "title": "Протокол \"Идеальный День\" (Речь)",
-  "description": "А теперь Ты расскажи о своём любимом дне! Расскажи монолог по опорам из панели «Сценарий» (My perfect day is on…, In the morning I usually…). Затем поговори со сверстником из англоговорящей страны: он задаст 10 вопросов про твой идеальный день. (Голосовой ассистент)",
+  "description": "Шаг 1: расскажи монолог «Мой идеальный день» по опорам из панели «Сценарий». Шаг 2: ответь на вопросы бота про твой идеальный день. (Голосовой ассистент)",
   "category": "speaking",
   "type": "voice-chat",
   "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль сверстника из англоговорящей страны для ученика 6–7 класса (уровень A2). Сначала попроси ученика рассказать монолог «Мой идеальный день» по опорам (они в панели «Сценарий»), а затем задавай вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ дружелюбно и коротко: хвали за старание, мягко поправляй ошибки в Present Simple и подсказывай нужные слова. Если ответ слишком короткий, вежливо попроси сказать полным предложением (например: I usually get up at nine o'clock). Говори простыми короткими английскими фразами уровня A2, на русский не переходи.",
   "sections": [
     {
-      "name": "Опоры для монолога «Мой идеальный день»",
+      "name": "Сценарий: Мой идеальный день (опоры)",
       "questions": [
         "My perfect day is on ….",
         "In the morning I usually … at … o'clock and I ….",
@@ -20,6 +20,27 @@
     }
   ],
   "checklist": [
+    {
+      "question": "А теперь расскажи о своём любимом дне!",
+      "markers": [
+        "usually",
+        "often",
+        "always",
+        "morning",
+        "afternoon",
+        "evening",
+        "night",
+        "weekend",
+        "saturday",
+        "sunday",
+        "friends",
+        "family",
+        "breakfast",
+        "go to bed"
+      ],
+      "min": 2,
+      "hint": "Расскажи: My perfect day is on Saturday. In the morning I usually get up late and have breakfast. In the afternoon I often play with my friends. In the evening I watch TV with my family."
+    },
     {
       "question": "What is your perfect day – on Saturday or on Sunday?",
       "markers": [

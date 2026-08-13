@@ -3,40 +3,55 @@
   "title": "Тонкие Смыслы (Перевод-Ловушка)",
   "description": "Переведи, выбрав Past Simple или Present Perfect.",
   "category": "grammar",
-  "type": "fill-in",
+  "type": "quiz",
   "items": [
     {
-      "sentence": "Я только что потерял телефон. I ___ my phone.",
-      "answer": "have just lost",
-      "hint": "(have just lost)"
-    },
-    {
-      "sentence": "Я потерял телефон вчера. I ___ my phone yesterday.",
-      "answer": "lost",
-      "hint": "(lost)"
-    },
-    {
-      "sentence": "Мы уже купили билеты. We ___ the tickets.",
-      "answer": "have already bought",
-      "hint": "(have already bought)"
-    },
-    {
-      "sentence": "Мы купили билеты на прошлой неделе. We ___ the tickets last week.",
-      "answer": "bought",
-      "hint": "(bought)"
-    },
-    {
-      "sentence": "Она еще не закончила проект. She ___ the project ___.",
-      "answer": [
-        "hasn't finished",
-        "yet"
+      "question": "Я только что потерял телефон. I ___ my phone.",
+      "options": [
+        "I have just lost my phone.",
+        "I lost my phone."
       ],
-      "hint": "(hasn't finished / yet)"
+      "answer": "I have just lost my phone."
     },
     {
-      "sentence": "Она не закончила проект в пятницу. She ___ the project on Friday.",
-      "answer": "didn't finish",
-      "hint": "(didn't finish)"
+      "question": "Я потерял телефон вчера. I ___ my phone yesterday.",
+      "options": [
+        "I lost my phone yesterday.",
+        "I have lost my phone yesterday."
+      ],
+      "answer": "I lost my phone yesterday."
+    },
+    {
+      "question": "Мы уже купили билеты. We ___ the tickets.",
+      "options": [
+        "We have already bought the tickets.",
+        "We bought the tickets."
+      ],
+      "answer": "We have already bought the tickets."
+    },
+    {
+      "question": "Мы купили билеты на прошлой неделе. We ___ the tickets last week.",
+      "options": [
+        "We bought the tickets last week.",
+        "We have bought the tickets last week."
+      ],
+      "answer": "We bought the tickets last week."
+    },
+    {
+      "question": "Она еще не закончила проект. She ___ the project ___.",
+      "options": [
+        "She hasn't finished the project yet.",
+        "She didn't finish the project yet."
+      ],
+      "answer": "She hasn't finished the project yet."
+    },
+    {
+      "question": "Она не закончила проект в пятницу. She ___ the project on Friday.",
+      "options": [
+        "She didn't finish the project on Friday.",
+        "She hasn't finished the project on Friday."
+      ],
+      "answer": "She didn't finish the project on Friday."
     }
   ]
 }

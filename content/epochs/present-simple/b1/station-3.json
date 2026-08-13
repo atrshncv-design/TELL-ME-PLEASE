@@ -11,7 +11,8 @@
       "markers": [
         "green tea",
         "tea",
-        "morning"
+        "morning",
+        "yes"
       ],
       "min": 1,
       "hint": "Ответь полным предложением: Yes, I do. I drink green tea every morning."
@@ -30,7 +31,8 @@
       "question": "Do you go to the gym three times a week?",
       "markers": [
         "gym",
-        "three times"
+        "three times",
+        "yes"
       ],
       "min": 1,
       "hint": "Скажи: I go to the gym three times a week."
@@ -41,7 +43,8 @@
         "8",
         "eight",
         "hours",
-        "sleep"
+        "sleep",
+        "yes"
       ],
       "min": 1,
       "hint": "Ответь: I sleep more than 8 hours."
@@ -50,7 +53,8 @@
       "question": "Do you take cold showers?",
       "markers": [
         "cold showers",
-        "shower"
+        "shower",
+        "yes"
       ],
       "min": 1,
       "hint": "Скажи: Yes, I take cold showers."
@@ -69,7 +73,8 @@
       "question": "Do you ride a bike to school?",
       "markers": [
         "bike",
-        "bicycle"
+        "bicycle",
+        "yes"
       ],
       "min": 1,
       "hint": "Скажи: I ride a bike to school."
@@ -78,7 +83,8 @@
       "question": "Do you do yoga or meditation?",
       "markers": [
         "yoga",
-        "meditation"
+        "meditation",
+        "yes"
       ],
       "min": 1,
       "hint": "Ответь: I do yoga / I do meditation."
@@ -88,7 +94,8 @@
       "markers": [
         "vegetables",
         "garden",
-        "grow"
+        "grow",
+        "yes"
       ],
       "min": 1,
       "hint": "Скажи: I grow vegetables in the garden."
@@ -107,7 +114,9 @@
       "question": "Do you wake up early?",
       "markers": [
         "wake up",
-        "early"
+        "early",
+        "yes",
+        "no"
       ],
       "min": 1,
       "hint": "Ответь: Yes, I do. I wake up early / No, I don't."
@@ -136,7 +145,8 @@
         "play",
         "guitar",
         "piano",
-        "instrument"
+        "instrument",
+        "yes"
       ],
       "min": 1,
       "hint": "Скажи: I play the guitar / the piano."
@@ -156,7 +166,9 @@
       "question": "Do you go to parties?",
       "markers": [
         "parties",
-        "party"
+        "party",
+        "yes",
+        "no"
       ],
       "min": 1,
       "hint": "Ответь: Yes, I do. I go to parties / No, I don't."
@@ -178,7 +190,9 @@
       "markers": [
         "pet",
         "cat",
-        "dog"
+        "dog",
+        "yes",
+        "no"
       ],
       "min": 1,
       "hint": "Ответь: Yes, I have a cat / a dog. / No, I don't."
@@ -188,7 +202,9 @@
       "markers": [
         "travel",
         "travelling",
-        "trips"
+        "trips",
+        "yes",
+        "no"
       ],
       "min": 1,
       "hint": "Скажи: Yes, I travel a lot / No, I don't travel much."

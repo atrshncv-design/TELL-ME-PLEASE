@@ -1,83 +1,49 @@
 {
   "id": "present_continuous_a1_station_2",
-  "title": "Орфографический Щит (Правила -ing)",
-  "description": "Визуальный рефлекс на конечные буквы глагола при добавлении -ing.",
+  "title": "Запуск Реактора (Механика to be + V-ing)",
+  "description": "Автоматическое формирование формы to be + V-ing без раздумий.",
   "category": "grammar",
-  "type": "drag-and-drop",
-  "columns": [
-    {
-      "id": "add",
-      "label": "Just add -ing"
-    },
-    {
-      "id": "drop",
-      "label": "Drop -e, add -ing"
-    },
-    {
-      "id": "double",
-      "label": "Double the consonant"
-    }
-  ],
+  "type": "fill-in",
   "items": [
     {
-      "verb": "play",
-      "answer": "add"
+      "sentence": "I / play — ___",
+      "answer": "I am playing"
     },
     {
-      "verb": "read",
-      "answer": "add"
+      "sentence": "He / sleep — ___",
+      "answer": "He is sleeping"
     },
     {
-      "verb": "jump",
-      "answer": "add"
+      "sentence": "We / run — ___",
+      "answer": "We are running"
     },
     {
-      "verb": "sing",
-      "answer": "add"
+      "sentence": "She / sing — ___",
+      "answer": "She is singing"
     },
     {
-      "verb": "sleep",
-      "answer": "add"
+      "sentence": "They / swim — ___",
+      "answer": "They are swimming"
     },
     {
-      "verb": "make",
-      "answer": "drop"
+      "sentence": "It / rain — ___",
+      "answer": "It is raining"
     },
     {
-      "verb": "dance",
-      "answer": "drop"
+      "sentence": "You / read — ___",
+      "answer": "You are reading"
     },
     {
-      "verb": "write",
-      "answer": "drop"
+      "sentence": "My dog / bark — ___",
+      "answer": "My dog is barking"
     },
     {
-      "verb": "ride",
-      "answer": "drop"
+      "sentence": "The children / jump — ___",
+      "answer": "The children are jumping"
     },
     {
-      "verb": "take",
-      "answer": "drop"
-    },
-    {
-      "verb": "run",
-      "answer": "double"
-    },
-    {
-      "verb": "swim",
-      "answer": "double"
-    },
-    {
-      "verb": "sit",
-      "answer": "double"
-    },
-    {
-      "verb": "hop",
-      "answer": "double"
-    },
-    {
-      "verb": "skip",
-      "answer": "double"
+      "sentence": "My mum / cook — ___",
+      "answer": "My mum is cooking"
     }
   ]
 }

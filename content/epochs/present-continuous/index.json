@@ -84,12 +84,18 @@
         {
           "id": "station-1",
           "file": "a1/station-1.json",
-          "title": "Запуск Реактора (Механика to be + V-ing)"
+          "title": "Орфографический Щит (Правила -ing)"
+        },
+        {
+          "id": "station-2-b",
+          "title": "To Be + ING (Проверка to be)",
+          "type": "quiz",
+          "file": "a1/station-2-b.json"
         },
         {
           "id": "station-2",
           "file": "a1/station-2.json",
-          "title": "Орфографический Щит (Правила -ing)"
+          "title": "Запуск Реактора (Механика to be + V-ing)"
         },
         {
           "id": "station-3",
@@ -200,7 +206,7 @@
         {
           "id": "station-7",
           "file": "b1/station-7.json",
-          "title": "Кибер-Блогер (Диалог с ИИ)"
+          "title": "Кибер-Блогер (Рассказ о выходных)"
         }
       ]
     },

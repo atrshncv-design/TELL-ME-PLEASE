@@ -1,112 +1,59 @@
 {
   "id": "present_continuous_b1_station_7",
-  "title": "Кибер-Блогер (Диалог с ИИ)",
-  "description": "Свободная беседа с акцентом на будущие планы и стативные глаголы.",
+  "title": "Кибер-Блогер (Рассказ о выходных)",
+  "description": "Блогер спросил: «What are you doing this weekend?». Прочитай готовый рассказ о своих планах на выходные вслух — бот проверит, как ты используешь Present Continuous.",
   "category": "speaking",
-  "type": "voice-chat",
-  "task_context": "Ты — 13-летний блогер, который любит путешествовать и снимать TikTok-видео. Общайся по-английски (уровень B1). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй живо и дружелюбно: хвали, задавай уточняющие вопросы, мягко поправляй ошибки. Обращай внимание на стативные глаголы (understand, love, know — без -ing). Никогда не говори, что ты ИИ.",
-  "checklist": [
+  "type": "one-minute",
+  "topic": "This weekend: расскажи блогеру о своих планах на выходные (Present Continuous)",
+  "duration": 60,
+  "script": {
+    "description": "Ситуация: ты в гостях у 13-летнего блогера. Он спросил: «What are you doing this weekend?». Не придумывай на ходу — прочитай готовый рассказ вслух, по одному предложению. Бот проверит, все ли планы ты назвал.",
+    "sentences": [
+      "This weekend I am doing a lot of things.",
+      "On Saturday I am visiting my grandma.",
+      "We are cooking pizza together in the evening.",
+      "On Sunday I am playing football with my friends.",
+      "My mum is taking us to the cinema in the afternoon.",
+      "I am watching a new film there.",
+      "We are having a great time this weekend."
+    ]
+  },
+  "conditions": [
     {
-      "question": "What do you usually do after school?",
+      "label": "Расскажи о планах (Present Continuous)",
+      "hint": "am/is/are + глагол с -ing: I am visiting my grandma.",
       "markers": [
-        "after school",
-        "homework",
-        "games",
-        "usually"
+        "am",
+        "is",
+        "are"
       ],
-      "min": 1,
-      "hint": "Ответь о своих привычках: After school I usually ..."
+      "min": 3
     },
     {
-      "question": "Do you play computer games every day?",
+      "label": "Назови занятия (глаголы с -ing)",
+      "hint": "doing, visiting, cooking, playing, taking, watching, having",
       "markers": [
-        "yes",
-        "no",
-        "computer games",
-        "every day"
-      ],
-      "min": 1,
-      "hint": "Ответь: Yes, I do / No, I don't."
-    },
-    {
-      "question": "What do you like doing in your free time?",
-      "markers": [
-        "like",
-        "free time",
-        "playing",
-        "watching",
-        "making"
-      ],
-      "min": 1,
-      "hint": "Ответь: I like making TikTok videos."
-    },
-    {
-      "question": "What are you doing right now?",
-      "markers": [
-        "right now",
-        "now",
-        "talking",
-        "making",
-        "recording"
-      ],
-      "min": 1,
-      "hint": "Ответь: I am talking to you right now."
-    },
-    {
-      "question": "Are you making a TikTok video?",
-      "markers": [
-        "yes",
-        "no",
-        "tiktok",
-        "video",
-        "making"
-      ],
-      "min": 1,
-      "hint": "Ответь: Yes, I am making a TikTok video."
-    },
-    {
-      "question": "Is your phone recording?",
-      "markers": [
-        "yes",
-        "no",
-        "phone",
-        "recording"
-      ],
-      "min": 1,
-      "hint": "Ответь: Yes, it is recording."
-    },
-    {
-      "question": "What are you doing this weekend?",
-      "markers": [
-        "weekend",
+        "doing",
         "visiting",
-        "going",
+        "cooking",
         "playing",
+        "taking",
+        "watching",
         "having"
       ],
-      "min": 1,
-      "hint": "Ответь: This weekend I am visiting my friends."
+      "min": 5
     },
     {
-      "question": "Are you visiting any new place soon?",
+      "label": "Упомяни время выходных",
+      "hint": "weekend, Saturday, Sunday, evening, afternoon",
       "markers": [
-        "yes",
-        "no",
-        "visiting",
-        "soon",
-        "place"
+        "weekend",
+        "saturday",
+        "sunday",
+        "evening",
+        "afternoon"
       ],
-      "min": 1,
-      "hint": "Ответь: Yes, I am visiting ..."
-    },
-    {
-      "question": "Do you understand me?",
-      "markers": [
-        "yes",
-        "understand"
-      ],
-      "min": 1,
-      "hint": "Ответь: Yes, I understand you. (understand — stative, без -ing)"
+      "min": 2
     }
   ]
 }

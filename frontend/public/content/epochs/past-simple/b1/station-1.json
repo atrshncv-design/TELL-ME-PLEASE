@@ -51,13 +51,13 @@
       "answer": "preferred"
     },
     {
-      "question": "lie → ___",
+      "question": "lie (лгать) → ___",
       "options": [
         "lied",
         "lay",
         "lain"
       ],
-      "answer": "lay"
+      "answer": "lied"
     }
   ]
 }

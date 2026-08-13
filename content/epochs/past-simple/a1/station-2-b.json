@@ -1,0 +1,118 @@
+{
+  "id": "past_simple_a1_station_2_b",
+  "title": "Домики Звуков (-ed: [d] / [t] / [ɪd])",
+  "description": "Разложи слова по трём домикам: [d] (после звонкого звука и гласного), [t] (после глухого звука), [ɪd] (после t и d). Нажми на значок 🔊, чтобы услышать слово.",
+  "category": "grammar",
+  "type": "drag-and-drop",
+  "columns": [
+    {
+      "id": "d",
+      "label": "[d]",
+      "rule": "после звонкого звука и гласного"
+    },
+    {
+      "id": "t",
+      "label": "[t]",
+      "rule": "после глухого звука"
+    },
+    {
+      "id": "id",
+      "label": "[ɪd]",
+      "rule": "после t и d"
+    }
+  ],
+  "items": [
+    {
+      "verb": "played",
+      "answer": "d"
+    },
+    {
+      "verb": "cleaned",
+      "answer": "d"
+    },
+    {
+      "verb": "opened",
+      "answer": "d"
+    },
+    {
+      "verb": "listened",
+      "answer": "d"
+    },
+    {
+      "verb": "called",
+      "answer": "d"
+    },
+    {
+      "verb": "arrived",
+      "answer": "d"
+    },
+    {
+      "verb": "loved",
+      "answer": "d"
+    },
+    {
+      "verb": "watched",
+      "answer": "t"
+    },
+    {
+      "verb": "washed",
+      "answer": "t"
+    },
+    {
+      "verb": "helped",
+      "answer": "t"
+    },
+    {
+      "verb": "looked",
+      "answer": "t"
+    },
+    {
+      "verb": "laughed",
+      "answer": "t"
+    },
+    {
+      "verb": "danced",
+      "answer": "t"
+    },
+    {
+      "verb": "kissed",
+      "answer": "t"
+    },
+    {
+      "verb": "finished",
+      "answer": "t"
+    },
+    {
+      "verb": "wanted",
+      "answer": "id"
+    },
+    {
+      "verb": "needed",
+      "answer": "id"
+    },
+    {
+      "verb": "started",
+      "answer": "id"
+    },
+    {
+      "verb": "visited",
+      "answer": "id"
+    },
+    {
+      "verb": "painted",
+      "answer": "id"
+    },
+    {
+      "verb": "decided",
+      "answer": "id"
+    },
+    {
+      "verb": "invited",
+      "answer": "id"
+    },
+    {
+      "verb": "waited",
+      "answer": "id"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "id": "b2_station_1",
   "title": "Анализ Аномалий (Смыслы)",
-  "description": "Понимание функциональных значений Present Simple (факт, рутина, расписание, стативные глаголы).",
+  "description": "Понимание функциональных значений Present Simple (факт, рутина, расписание, статичные глаголы).",
   "category": "grammar",
   "type": "drag-and-drop",
   "columns": [
@@ -15,7 +15,7 @@
     },
     {
       "id": "fact",
-      "label": "Общеизвестный факт"
+      "label": "Общеизвестный факт / Закон природы"
     },
     {
       "id": "situation",
@@ -24,10 +24,6 @@
     {
       "id": "narration",
       "label": "Повествование"
-    },
-    {
-      "id": "nature",
-      "label": "Закон природы"
     },
     {
       "id": "stative",
@@ -57,7 +53,7 @@
     },
     {
       "verb": "Birds fly south in winter.",
-      "answer": "nature"
+      "answer": "fact"
     },
     {
       "verb": "I usually spend holidays at the seaside.",

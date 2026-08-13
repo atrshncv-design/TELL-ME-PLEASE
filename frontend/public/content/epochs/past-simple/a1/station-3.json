@@ -1,7 +1,7 @@
 {
   "id": "past_simple_a1_station_3",
   "title": "Жадина DID (Отрицание и Вопрос)",
-  "description": "Вставь didn't и глагол в 1-й форме.",
+  "description": "Вставь didn't и глагол в 1-й форме (отрицание) или Did и глагол в 1-й форме (вопрос).",
   "category": "grammar",
   "type": "fill-in",
   "items": [
@@ -29,6 +29,46 @@
       "sentence": "They ___ a car.",
       "answer": "didn't buy",
       "hint": "(not / buy)"
+    },
+    {
+      "sentence": "___ you ___ tennis?",
+      "answer": [
+        "Did",
+        "play"
+      ],
+      "hint": "(Did / play)"
+    },
+    {
+      "sentence": "___ she ___ to school?",
+      "answer": [
+        "Did",
+        "go"
+      ],
+      "hint": "(Did / go)"
+    },
+    {
+      "sentence": "___ they ___ the film?",
+      "answer": [
+        "Did",
+        "see"
+      ],
+      "hint": "(Did / see)"
+    },
+    {
+      "sentence": "___ he ___ pizza?",
+      "answer": [
+        "Did",
+        "eat"
+      ],
+      "hint": "(Did / eat)"
+    },
+    {
+      "sentence": "___ they ___ a car?",
+      "answer": [
+        "Did",
+        "buy"
+      ],
+      "hint": "(Did / buy)"
     }
   ]
 }

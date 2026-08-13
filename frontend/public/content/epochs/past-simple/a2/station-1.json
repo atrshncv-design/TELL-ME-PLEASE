@@ -33,13 +33,13 @@
       "answer": "When did they see the film?"
     },
     {
-      "question": "buy / did / a car / Who",
+      "question": "Where / did / you / buy / a car",
       "options": [
-        "Who did buy a car?",
-        "Who buy did a car?",
-        "Who did a car buy?"
+        "Where car did you buy?",
+        "Where did you bought a car?",
+        "Where did you buy a car?"
       ],
-      "answer": "Who did buy a car?"
+      "answer": "Where did you buy a car?"
     },
     {
       "question": "How / play / did / tennis / you",

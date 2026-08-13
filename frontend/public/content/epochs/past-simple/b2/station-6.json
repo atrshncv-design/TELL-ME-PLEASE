@@ -1,53 +1,58 @@
 {
   "id": "past_simple_b2_station_6",
-  "title": "Дебаты: \"Великие Открытия\" (Монолог)",
-  "description": "Напиши мини-выступление на тему \"Самое важное изобретение\": Past Simple (когда изобрели), Present Perfect (как это изменило нашу жизнь до сих пор), Present Simple (как мы используем это сейчас).",
+  "title": "Дебаты: \"Великие Открытия\" (Диалог с ИИ)",
+  "description": "Диалог с ботом о великих открытиях: бот задаёт вопрос, на экране — готовый ответ, озвучь его.",
   "category": "speaking",
-  "type": "one-minute",
-  "topic": "Самое важное изобретение",
-  "duration": 90,
-  "conditions": [
+  "type": "voice-chat",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль собеседника-эксперта по великим открытиям для ученика 9 класса (уровень B2). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ заинтересованно и коротко, мягко поправляй ошибки в Past Simple и Present Perfect. Если ответ слишком короткий, вежливо попроси сказать полным предложением. Говори простыми английскими фразами уровня B2, на русский не переходи.",
+  "checklist": [
     {
-      "label": "Скажи, когда изобрели (Past Simple)",
-      "hint": "The Internet was invented in the 1960s. / Alexander Bell invented the telephone.",
+      "question": "What is the most important invention in your opinion?",
       "markers": [
-        "invented",
-        "was",
-        "were",
-        "created",
+        "internet",
+        "telephone",
+        "think",
+        "phone",
+        "computer"
+      ],
+      "min": 1,
+      "hint": "Скажи: In my opinion, the most important invention is the Internet. / I think the telephone is the most important invention."
+    },
+    {
+      "question": "When was it invented?",
+      "markers": [
+        "1960s",
+        "long",
+        "ago",
+        "years",
+        "century"
+      ],
+      "min": 1,
+      "hint": "Скажи: It was invented in the 1960s. / It was invented a long time ago."
+    },
+    {
+      "question": "How has it changed our life?",
+      "markers": [
+        "completely",
         "made",
-        "discovered",
-        "in",
-        "years"
+        "easier",
+        "better",
+        "communication"
       ],
-      "min": 1
+      "min": 1,
+      "hint": "Скажи: It has changed our life completely. / It has made our life easier."
     },
     {
-      "label": "Скажи, как это изменило жизнь до сих пор (Present Perfect)",
-      "hint": "It has changed our life completely.",
+      "question": "How do we use it every day?",
       "markers": [
-        "has",
-        "have",
-        "changed",
-        "already",
-        "just",
-        "made"
+        "work",
+        "study",
+        "talk",
+        "friends",
+        "school"
       ],
-      "min": 1
-    },
-    {
-      "label": "Скажи, как мы используем это сейчас (Present Simple)",
-      "hint": "We use it every day for work and study.",
-      "markers": [
-        "use",
-        "uses",
-        "every day",
-        "today",
-        "now",
-        "usually",
-        "always"
-      ],
-      "min": 1
+      "min": 1,
+      "hint": "Скажи: We use it every day for work and study. / We use it to talk to our friends."
     }
   ]
 }

@@ -6,28 +6,28 @@
   "type": "click-mistake",
   "items": [
     {
-      "sentence": "I didn't went to the park.",
-      "wrong": "went"
+      "wrong": "went",
+      "text": "I didn't went to the park."
     },
     {
-      "sentence": "Did she played tennis?",
-      "wrong": "played"
+      "wrong": "played",
+      "text": "Did she played tennis?"
     },
     {
-      "sentence": "We buyed a new car yesterday.",
-      "wrong": "buyed"
+      "wrong": "buyed",
+      "text": "We buyed a new car yesterday."
     },
     {
-      "sentence": "He didn't saw the film.",
-      "wrong": "saw"
+      "wrong": "saw",
+      "text": "He didn't saw the film."
     },
     {
-      "sentence": "I have visited London last year.",
-      "wrong": "have"
+      "wrong": "have",
+      "text": "I have visited London last year."
     },
     {
-      "sentence": "She has finished her work yesterday.",
-      "wrong": "has"
+      "wrong": "has",
+      "text": "She has finished her work yesterday."
     }
   ]
 }

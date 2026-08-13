@@ -41,6 +41,7 @@ const CONTRACTIONS: Record<string, string> = {
   "wouldn't": "would not",
   "shouldn't": "should not",
   "won't": "will not",
+  "didn't": "did not",
 }
 
 const normalizeFill = (s: string) => {
@@ -250,21 +251,53 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
           exit={{ x: -30, opacity: 0 }}
           className="text-center py-4"
         >
-          <p className="text-lg text-slate-800">
+          {/* G4 (правки 12.08): ввод ПРЯМО В ПРОПУСКЕ текста (inline-инпуты в
+              предложении), НЕ отдельной «портянкой» внизу. После «Проверить»
+              пропуск превращается в вердикт (G1): верно — зелёный с ответом,
+              неверно — красный: зачёркнутый ввод ученика → правильный ответ. */}
+          <p className="text-lg leading-relaxed text-slate-800">
             {parts.map((part, i) => (
               <span key={i}>
                 {part}
-                {i < blankCount && (
+                {i < blankCount && !showResult && (
+                  <input
+                    key={i}
+                    type="text"
+                    value={inputs[i] ?? ""}
+                    onChange={(e) => updateInput(i, e.target.value)}
+                    onKeyDown={(e) =>
+                      e.key === "Enter" &&
+                      i === blankCount - 1 &&
+                      allFilled &&
+                      handleCheck()
+                    }
+                    placeholder="…"
+                    aria-label={`Пропуск ${i + 1}`}
+                    autoFocus={i === 0}
+                    className="mx-1 inline-block w-32 rounded-lg border-b-2 border-indigo-400 bg-indigo-50/60 px-2 py-0.5 text-center text-lg font-semibold text-indigo-700 outline-none transition-colors focus:border-indigo-600 focus:bg-white"
+                  />
+                )}
+                {i < blankCount && showResult && (
                   <span
-                    className={`inline-block min-w-[80px] border-b-2 mx-1 font-semibold rounded px-1 ${
-                      showResult
-                        ? blankCorrect(i)
-                          ? "border-success bg-success/10 text-success"
-                          : "border-danger bg-danger/10 text-danger"
-                        : "border-indigo-400 text-indigo-600"
+                    key={i}
+                    className={`mx-1 inline-block min-w-[80px] rounded-lg border-2 px-1.5 py-0.5 text-center font-bold ${
+                      blankCorrect(i)
+                        ? "border-success bg-success/10 text-success"
+                        : "border-danger bg-danger/10 text-danger"
                     }`}
                   >
-                    {showResult ? (answers[i] ?? "?") : " ? "}
+                    {blankCorrect(i) ? (
+                      <>
+                        {answers[i]} <span aria-hidden>✓</span>
+                      </>
+                    ) : (
+                      <>
+                        <s className="font-normal opacity-60">{inputs[i] || "…"}</s>
+                        <span className="whitespace-nowrap">
+                          {" "}→ {answers[i]} <span aria-hidden>✗</span>
+                        </span>
+                      </>
+                    )}
                   </span>
                 )}
               </span>
@@ -274,38 +307,17 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
         </motion.div>
       </AnimatePresence>
 
-      {!showResult ? (
-        <div className="flex flex-col gap-2">
-          {answers.map((_, i) => (
-            <input
-              key={i}
-              type="text"
-              value={inputs[i] ?? ""}
-              onChange={(e) => updateInput(i, e.target.value)}
-              onKeyDown={(e) =>
-                e.key === "Enter" &&
-                i === blankCount - 1 &&
-                allFilled &&
-                handleCheck()
-              }
-              placeholder={`Пропуск ${i + 1}...`}
-              className="flex-1 px-4 py-3 text-lg rounded-xl border-2 border-indigo-200 focus:border-indigo-500 outline-none text-center min-h-[52px]"
-              autoFocus={i === 0}
-            />
-          ))}
-          {/* CTA: «Проверить» (только когда все пропуски заполнены) → после
-              вердикта «Далее». */}
-          {allFilled && (
-            <motion.button
-              whileTap={{ scale: 0.97 }}
-              onClick={handleCheck}
-              className="w-full min-h-[44px] rounded-2xl bg-primary-600 px-6 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
-            >
-              Проверить
-            </motion.button>
-          )}
-        </div>
-      ) : (
+      {!showResult && allFilled && (
+        <motion.button
+          whileTap={{ scale: 0.97 }}
+          onClick={handleCheck}
+          className="w-full min-h-[44px] rounded-2xl bg-primary-600 px-6 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
+        >
+          Проверить
+        </motion.button>
+      )}
+
+      {showResult && (
         <motion.div
           initial={{ scale: 0.8 }}
           animate={{ scale: 1 }}

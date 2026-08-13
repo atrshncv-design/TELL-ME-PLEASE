@@ -1,107 +1,144 @@
 {
   "id": "a1_station_4",
   "title": "Первый Контакт (Речь)",
-  "description": "Поговори со сверстником из англоговорящей страны: он задаст тебе вопросы о твоём утре и школьном дне, а ты ответишь голосом. (Голосовой ассистент)",
+  "description": "Сыграй по ролям «Интервью с Гарри Поттером»: бот задаёт вопросы, а ты озвучиваешь реплики Гарри — они появляются на экране. (Голосовой ассистент)",
   "category": "speaking",
   "type": "voice-chat",
-  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль сверстника из англоговорящей страны для ученика 5 класса (уровень A1). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ дружелюбно и коротко: хвали за старание, мягко поправляй ошибки в Present Simple и подсказывай нужные слова. Если ответ слишком короткий, вежливо попроси сказать полным предложением (например: I wake up at seven o'clock). Говори простыми короткими английскими фразами уровня A1, на русский не переходи.",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль журналиста, который берёт интервью у Гарри Поттера. Ученик играет роль Гарри Поттера: на экране появляются его готовые реплики, и ученик читает их вслух. Задавай вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ дружелюбно и коротко: хвали за старание, мягко поправляй произношение и подсказывай нужные слова. Если ответ слишком короткий, вежливо попроси прочитать полную реплику. Говори простыми короткими английскими фразами уровня A1, на русский не переходи.",
   "checklist": [
     {
-      "question": "What time do you wake up?",
+      "question": "When do you wake up?",
       "markers": [
         "wake up",
+        "morning",
+        "gryffindor",
+        "tower"
+      ],
+      "min": 1,
+      "hint": "Скажи: I wake up in the morning in the Gryffindor tower."
+    },
+    {
+      "question": "Do you get up quickly after you wake up?",
+      "markers": [
+        "yes",
         "get up",
-        "seven",
-        "eight",
-        "o'clock",
-        "half past"
-      ],
-      "min": 1,
-      "hint": "Скажи, во сколько ты просыпаешься: I wake up at seven o'clock."
-    },
-    {
-      "question": "Do you get up quickly or slowly?",
-      "markers": [
         "quickly",
-        "slowly",
-        "get up"
+        "cloak"
       ],
       "min": 1,
-      "hint": "Ответь: I get up quickly (быстро) или I get up slowly (медленно)."
+      "hint": "Скажи: Yes, I do. I get up quickly and put on my cloak."
     },
     {
-      "question": "What do you do first in the morning?",
+      "question": "Do you have breakfast with Ron and Hermione?",
       "markers": [
-        "brush",
-        "teeth",
-        "wash",
-        "face",
+        "yes",
         "breakfast",
-        "get dressed"
-      ],
-      "min": 2,
-      "hint": "Расскажи, что ты делаешь первым делом: I brush my teeth and wash my face."
-    },
-    {
-      "question": "Do you have breakfast at home or at school?",
-      "markers": [
-        "breakfast",
-        "home",
-        "school"
+        "together",
+        "ron",
+        "hermione"
       ],
       "min": 1,
-      "hint": "Ответь: I have breakfast at home (дома) или at school (в школе)."
+      "hint": "Скажи: Yes, we usually have breakfast together."
     },
     {
-      "question": "What time do you go to school?",
+      "question": "What do you do after breakfast?",
       "markers": [
-        "go to school",
-        "eight",
-        "o'clock",
-        "half past"
+        "go",
+        "classes"
       ],
       "min": 1,
-      "hint": "Скажи: I go to school at eight o'clock."
+      "hint": "Скажи: I go to my classes."
     },
     {
-      "question": "How do you go to school? (by bus, by car, on foot?)",
+      "question": "Do you study many magic tricks?",
       "markers": [
-        "bus",
-        "car",
-        "foot",
-        "walk",
-        "bike"
+        "yes",
+        "study",
+        "sometimes",
+        "potions",
+        "transfiguration"
       ],
       "min": 1,
-      "hint": "Ответь, как ты добираешься: I go to school by bus / by car / on foot."
+      "hint": "Скажи: Yes, I do. We sometimes study Potions and Transfiguration."
     },
     {
-      "question": "What lessons do you like?",
+      "question": "What do you do in class?",
       "markers": [
-        "english",
-        "math",
-        "russian",
-        "pe",
-        "art",
-        "music",
-        "lessons",
-        "like"
+        "listen",
+        "teachers",
+        "write",
+        "exercise"
       ],
       "min": 1,
-      "hint": "Назови любимые уроки: I like English and Maths."
+      "hint": "Скажи: I listen to the teachers and write in my exercise book."
     },
     {
-      "question": "What do you do after school?",
+      "question": "Do you talk with your friends at break time?",
+      "markers": [
+        "yes",
+        "talk",
+        "friends",
+        "often",
+        "corridor"
+      ],
+      "min": 1,
+      "hint": "Скажи: Yes, I do. We often talk with friends and walk in the corridor."
+    },
+    {
+      "question": "Where do you go after school?",
+      "markers": [
+        "go",
+        "sometimes",
+        "quidditch",
+        "pitch"
+      ],
+      "min": 1,
+      "hint": "Скажи: I sometimes go to the Quidditch pitch."
+    },
+    {
+      "question": "Do you fly on your broom there?",
+      "markers": [
+        "yes",
+        "fly",
+        "broom",
+        "practice",
+        "quidditch"
+      ],
+      "min": 1,
+      "hint": "Скажи: Yes, I fly on my broom and practice Quidditch."
+    },
+    {
+      "question": "What do you do in the afternoon?",
       "markers": [
         "homework",
-        "play",
-        "walk",
-        "football",
-        "games",
-        "friends"
+        "common room",
+        "read",
+        "books"
       ],
       "min": 1,
-      "hint": "Расскажи: I do my homework and play football with my friends."
+      "hint": "Скажи: I do my homework in the common room and read books."
+    },
+    {
+      "question": "Do you have dinner in the Great Hall in the evening?",
+      "markers": [
+        "yes",
+        "dinner",
+        "great hall"
+      ],
+      "min": 1,
+      "hint": "Скажи: Yes, I have dinner in the Great Hall."
+    },
+    {
+      "question": "What do you do at night?",
+      "markers": [
+        "gryffindor",
+        "tower",
+        "bed",
+        "dream",
+        "adventures"
+      ],
+      "min": 1,
+      "hint": "Скажи: I go back to the Gryffindor tower, go to bed and dream about new adventures."
     }
   ],
   "sections": [
@@ -111,6 +148,24 @@
         "Ты — мой сверстник из англоговорящей страны. Познакомься со мной: спроси, как меня зовут, сколько мне лет, откуда я, что я люблю. Отвечай на мои вопросы и задавай свои. Используй Present Simple."
       ],
       "copyable": true
+    },
+    {
+      "name": "Сценарий: Интервью с Гарри Поттером",
+      "questions": [
+        "- Hi, Harry! — Hi!",
+        "— When do you wake up? — I wake up in the morning in the Gryffindor tower.",
+        "— Do you get up quickly after you wake up? — Yes, I do. I get up quickly and put on my cloak.",
+        "— Do you have breakfast with Ron and Hermione? — Yes, we usually have breakfast together.",
+        "— What do you do after breakfast? — I go to my classes.",
+        "— Do you study many magic tricks? — Yes, I do. We sometimes study Potions and Transfiguration.",
+        "— What do you do in class? — I listen to the teachers and write in my exercise book.",
+        "— Do you talk with your friends at break time? — Yes, I do. We often talk with friends and walk in the corridor.",
+        "— Where do you go after school? — I sometimes go to the Quidditch pitch.",
+        "— Do you fly on your broom there? — Yes, I fly on my broom and practice Quidditch.",
+        "— What do you do in the afternoon? — I do my homework in the common room and read books.",
+        "— Do you have dinner in the Great Hall in the evening? — Yes, I have dinner in the Great Hall.",
+        "— What do you do at night? — I go back to the Gryffindor tower, go to bed and dream about new adventures."
+      ]
     }
   ],
   "copyable_prompt": "Ты — мой сверстник из англоговорящей страны. Познакомься со мной: спроси, как меня зовут, сколько мне лет, откуда я, что я люблю. Отвечай на мои вопросы и задавай свои. Используй Present Simple."

@@ -15,7 +15,14 @@
         "visited",
         "met",
         "stayed",
-        "walked"
+        "walked",
+        "go",
+        "play",
+        "watch",
+        "visit",
+        "meet",
+        "stay",
+        "walk"
       ],
       "min": 1,
       "hint": "Скажи: I went to the park. / I played football."
@@ -43,7 +50,10 @@
         "played",
         "games",
         "football",
-        "computer"
+        "computer",
+        "play",
+        "didn't",
+        "did"
       ],
       "min": 1,
       "hint": "Ответь: Yes, I did. I played computer games. / No, I didn't."
@@ -57,7 +67,10 @@
         "cake",
         "sandwich",
         "pasta",
-        "chocolate"
+        "chocolate",
+        "eat",
+        "eaten",
+        "food"
       ],
       "min": 1,
       "hint": "Скажи: I ate pizza (я ел пиццу) / ice cream (мороженое)."

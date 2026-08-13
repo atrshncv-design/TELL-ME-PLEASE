@@ -10,12 +10,15 @@
  *   1) theory[]  — слайды: крупный заголовок font-display, текст, эмодзи-
  *      метафоры из doc сохранены; навигация «← Назад» / «Вперёд →»
  *      (min-h-[44px], стиль TaskHeader/primary) + точки-прогресс и счётчик
- *      «слайд N из M»;
+ *      «слайд N из M»; на слайдах — кнопка «🔊 Послушай!» (озвучка правила
+ *      голосом Verb Bot, гибрид Web Speech + серверный /api/tts) и примеры
+ *      с новой строки (G8, правки 12.08);
  *   2) theoryQuiz[] — мини-тест «Проверь себя» (выбрал → Проверить → вердикт →
  *      Далее; мгновенную проверку глобально добавит тикет T02 — сейчас QuizTask
  *      тоже на кнопке «Проверить», паттерн согласован);
- *   3) music{} — «Музыкальная пауза»: ссылки на песни + промпт Suno с кнопкой
- *      «Скопировать промпт».
+ * Музыка НЕ входит в инструктаж (G10, правки 12.08): из флоу слайды→тест она
+ * убрана, доступна только по кнопке «🎵 Музыка эпохи» на странице эпохи и на
+ * /music. Фаза music осталась в компоненте как цель этой кнопки.
  * Закрытие — «✕» в шапке (и Escape на десктопе).
  * Контент СТРОГО из doc (пак 070826), эмодзи сохранены. Токены primary-*.
  *
@@ -25,11 +28,11 @@
  * обложку: M = slides.length + 1). На слайдах теории — крупная
  * эмодзи-метафора (первый эмодзи из theory[].title) в плашке слева от
  * заголовка (на узких экранах — над ним), из заголовка эмодзи убран.
- * плашек добавлены по спеке (в проекте dark-темы нет,
- * сработают только при prefers-color-scheme: dark).
  */
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useSpeechSynthesis } from "@/lib/useSpeechSynthesis"
+import { useServerTts } from "@/lib/useServerTts"
 
 interface TheoryStep {
   title: string
@@ -56,6 +59,16 @@ function firstEmoji(s: string): string | null {
     /\p{Extended_Pictographic}(?:\uFE0F|\u200D\p{Extended_Pictographic})*/u
   )
   return m ? m[0] : null
+}
+
+/** G8 (правки 12.08): предложения-примеры в тексте теории — с новой строки.
+ *  Контент НЕ трогаем (зона T02–T05) — это рендер-трансформация: каждый
+ *  пример (после маркеров ❌/✅ и связки ИЛИ) получает свою строку; исходные
+ *  \n в тексте сохраняются (whitespace-pre-line на <p>). */
+function theoryTextToLines(text: string): string {
+  return text
+    .replace(/([.!?…])\s+(?=[❌✅])/g, "$1\n")
+    .replace(/([.!?…])\s+(?=ИЛИ\s)/g, "$1\n")
 }
 
 export default function EpochTheory({
@@ -90,6 +103,39 @@ export default function EpochTheory({
 
   // Копирование Suno-промпта в буфер обмена.
   const [copied, setCopied] = useState(false)
+
+  // G8 (правки 12.08): озвучка правила на слайде теории — кнопка «Послушай!».
+  // Гибрид как в VoiceChatTask: Web Speech (если есть en-голос) → серверный
+  // /api/tts (Яндекс-браузер и т.п.). Хуки вызываются ДО ранних return —
+  // правила хуков.
+  const { speak, stop, speaking: wsSpeaking, supported: ttsSupported } = useSpeechSynthesis()
+  const serverTts = useServerTts()
+  const stopAll = useCallback(() => {
+    stop()
+    serverTts.stop()
+  }, [stop, serverTts.stop])
+  const speaking = wsSpeaking || serverTts.speaking
+
+  /** Озвучить/остановить текст текущего слайда теории. */
+  const speakSlide = () => {
+    if (slide === 0) return
+    const text = slides[slide - 1]?.text
+    if (!text) return
+    if (speaking) {
+      stopAll()
+      return
+    }
+    if (ttsSupported) speak(text)
+    else serverTts.speak(text)
+  }
+
+  // Стоп озвучки при смене слайда/фазы и при закрытии презентации.
+  useEffect(() => {
+    stopAll()
+  }, [slide, phase, open, stopAll])
+
+  // Стоп озвучки при размонтировании (уход со страницы эпохи).
+  useEffect(() => () => stopAll(), [stopAll])
 
   const slides = Array.isArray(theory) ? theory : []
   const quiz = Array.isArray(theoryQuiz) ? theoryQuiz : []
@@ -137,13 +183,19 @@ export default function EpochTheory({
     setOpen(false)
   }
 
-  /** «Вперёд →» в фазе слайдов: следующий слайд (0 — обложка) → тест → музыка. */
+  /** «Вперёд →» в фазе слайдов: следующий слайд (0 — обложка) → тест → закрыть.
+   *  G10 (правки 12.08): музыка больше НЕ продолжение инструктажа — после
+   *  слайдов идём только к мини-тесту (если он есть), иначе закрываем. */
   const nextSlide = () => {
     if (slide < slides.length) {
       setSlide((s) => s + 1)
     } else if (phase === "slides") {
-      setPhase(hasQuiz ? "quiz" : "music")
-      setSlide(0)
+      if (hasQuiz) {
+        setPhase("quiz")
+        setSlide(0)
+      } else {
+        closePresentation()
+      }
     }
   }
 
@@ -213,10 +265,6 @@ export default function EpochTheory({
     setChecked(false)
     setScore(0)
     setQuizDone(false)
-  }
-
-  const toMusic = () => {
-    setPhase("music")
   }
 
   const goBackToSlides = () => {
@@ -370,11 +418,29 @@ export default function EpochTheory({
                               </div>
                             )}
                             <div className="min-w-0 flex-1">
-                              <h3 className="font-display mb-3 text-2xl font-black leading-tight tracking-tight text-primary-900 sm:text-3xl">
-                                {slideTitle}
-                              </h3>
+                              {/* G8 (правки 12.08): кнопка «Послушай!» рядом
+                                  с заголовком слайда — озвучка текста правила
+                                  голосом Verb Bot (гибрид Web Speech + /api/tts). */}
+                              <div className="mb-3 flex items-start justify-between gap-3">
+                                <h3 className="font-display text-2xl font-black leading-tight tracking-tight text-primary-900 sm:text-3xl">
+                                  {slideTitle}
+                                </h3>
+                                <button
+                                  type="button"
+                                  onClick={speakSlide}
+                                  aria-pressed={speaking}
+                                  aria-label={speaking ? "Остановить озвучку" : "Послушать правило"}
+                                  className={`flex min-h-[44px] shrink-0 items-center gap-1.5 rounded-2xl border-2 px-4 py-2 text-base font-bold transition-colors ${
+                                    speaking
+                                      ? "border-danger bg-danger/10 text-danger"
+                                      : "border-primary-200 bg-white text-primary-700 hover:bg-primary-50"
+                                  }`}
+                                >
+                                  {speaking ? "⏹ Стоп" : "🔊 Послушай!"}
+                                </button>
+                              </div>
                               <p className="whitespace-pre-line text-base font-medium leading-relaxed text-slate-600">
-                                {slides[slide - 1].text}
+                                {theoryTextToLines(slides[slide - 1].text)}
                               </p>
                             </div>
                           </div>
@@ -426,7 +492,7 @@ export default function EpochTheory({
                         {isLastSlide
                           ? hasQuiz
                             ? "К тесту →"
-                            : "К музыке →"
+                            : "Завершить ✕"
                           : "Вперёд →"}
                       </button>
                     </div>
@@ -458,24 +524,16 @@ export default function EpochTheory({
                         >
                           ↻ Ещё раз
                         </button>
-                        {hasMusic && (
-                          <button
-                            type="button"
-                            onClick={toMusic}
-                            className="min-h-[44px] w-full rounded-2xl bg-primary-600 px-6 py-2 text-base font-bold text-white transition-colors hover:bg-primary-700"
-                          >
-                            К музыке →
-                          </button>
-                        )}
-                        {!hasMusic && (
-                          <button
-                            type="button"
-                            onClick={closePresentation}
-                            className="min-h-[44px] w-full rounded-2xl bg-primary-600 px-6 py-2 text-base font-bold text-white transition-colors hover:bg-primary-700"
-                          >
-                            Завершить ✕
-                          </button>
-                        )}
+                        {/* G10 (правки 12.08): музыка вынесена из инструктажа —
+                            после мини-теста инструктаж завершается (кнопка
+                            «🎵 Музыка эпохи» на странице эпохи + /music). */}
+                        <button
+                          type="button"
+                          onClick={closePresentation}
+                          className="min-h-[44px] w-full rounded-2xl bg-primary-600 px-6 py-2 text-base font-bold text-white transition-colors hover:bg-primary-700"
+                        >
+                          Завершить ✕
+                        </button>
                       </div>
                     </div>
                   ) : (

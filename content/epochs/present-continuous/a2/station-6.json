@@ -1,15 +1,28 @@
 {
   "id": "present_continuous_a2_station_6",
   "title": "Описание Ситуации (Речь/Письмо)",
-  "description": "Описание динамичной картинки.",
+  "description": "Ты смотришь из окна на оживлённую улицу: дети играют, собака бежит, люди идут. Прочитай готовое описание вслух — бот проверит, как ты используешь Present Continuous.",
   "category": "speaking",
   "type": "one-minute",
-  "topic": "Опиши динамичную картинку (GIF): что происходит прямо сейчас",
+  "topic": "Опиши, что происходит прямо сейчас на оживлённой улице",
   "duration": 60,
+  "script": {
+    "description": "Ситуация: ты стоишь у окна и смотришь на оживлённую улицу. Вокруг всё движется: дети играют, собака бежит за мячом, люди идут по тротуару. Прочитай эти предложения вслух — по одному, не торопясь. Бот проверит, все ли действия ты назвал.",
+    "sentences": [
+      "Look! A boy is playing football in the park.",
+      "A girl is reading a book on the bench.",
+      "Two men are talking near the shop.",
+      "A dog is running after a ball.",
+      "The sun is shining in the sky.",
+      "People are walking along the street.",
+      "A car is driving slowly.",
+      "I am watching everything from the window now."
+    ]
+  },
   "conditions": [
     {
       "label": "5–7 предложений о действиях",
-      "hint": "Напиши 5–7 предложений: кто что делает на картинке (глагол с -ing)",
+      "hint": "Прочитай 5–7 предложений: кто что делает (глагол с -ing)",
       "markers": [
         "playing",
         "watching",
@@ -36,7 +49,7 @@
         "is",
         "are"
       ],
-      "min": 4
+      "min": 3
     },
     {
       "label": "Упомяни маркер сейчас",
