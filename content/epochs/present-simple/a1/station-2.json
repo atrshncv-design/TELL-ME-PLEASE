@@ -4,6 +4,7 @@
   "description": "Отработка чистого рефлекса на окончание -s/-es.",
   "category": "grammar",
   "type": "drag-and-drop",
+  "review": true,
   "columns": [
     {
       "id": "s",

@@ -61,14 +61,17 @@ function firstEmoji(s: string): string | null {
   return m ? m[0] : null
 }
 
-/** G8 (правки 12.08): предложения-примеры в тексте теории — с новой строки.
- *  Контент НЕ трогаем (зона T02–T05) — это рендер-трансформация: каждый
- *  пример (после маркеров ❌/✅ и связки ИЛИ) получает свою строку; исходные
- *  \n в тексте сохраняются (whitespace-pre-line на <p>). */
+/** G8 (правки 12.08) + T02 (правки 13–14.08): предложения-примеры в тексте
+ *  теории — с новой строки. Контент НЕ трогаем (зона T02–T05) — это
+ *  рендер-трансформация: каждый пример (после маркеров ❌/✅ и связки ИЛИ)
+ *  получает свою строку; исходные \n в тексте сохраняются
+ *  (whitespace-pre-line на <p>). T02: в класс завершающих знаков добавлена
+ *  скобка «)» — реальные примеры слайдов часто заканчиваются на
+ *  «(…ошибка!) ✅ …» / «(Действие) ИЛИ …». */
 function theoryTextToLines(text: string): string {
   return text
-    .replace(/([.!?…])\s+(?=[❌✅])/g, "$1\n")
-    .replace(/([.!?…])\s+(?=ИЛИ\s)/g, "$1\n")
+    .replace(/([.!?…)])\s+(?=[❌✅])/g, "$1\n")
+    .replace(/([.!?…)])\s+(?=ИЛИ\s)/g, "$1\n")
 }
 
 export default function EpochTheory({
@@ -438,6 +441,31 @@ export default function EpochTheory({
                                 >
                                   {speaking ? "⏹ Стоп" : "🔊 Послушай!"}
                                 </button>
+                              </div>
+                              {/* T02 (правки 13–14.08): маскот инструктажа
+                                  НАД текстом слайда — «как будто это он
+                                  говорит» (картинка клиентки, /mascot/
+                                  instruct.jpg, круглая обрезка). Иконка
+                                  рупора рядом визуально связывает маскота
+                                  с кнопкой «🔊 Послушай!» выше. */}
+                              <div className="mb-3 flex items-center gap-3">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                  src="/mascot/instruct.jpg"
+                                  alt="Verb Bot — инструктаж"
+                                  className="h-20 w-20 shrink-0 rounded-full border-2 border-primary-200 object-cover shadow-soft"
+                                />
+                                <div className="flex items-center gap-2 rounded-2xl border-2 border-primary-200 bg-white px-3 py-2 shadow-soft">
+                                  <span
+                                    className="text-2xl leading-none"
+                                    aria-hidden="true"
+                                  >
+                                    📢
+                                  </span>
+                                  <p className="text-sm font-bold text-primary-700">
+                                    Слушай меня — жми «🔊 Послушай!»
+                                  </p>
+                                </div>
                               </div>
                               <p className="whitespace-pre-line text-base font-medium leading-relaxed text-slate-600">
                                 {theoryTextToLines(slides[slide - 1].text)}

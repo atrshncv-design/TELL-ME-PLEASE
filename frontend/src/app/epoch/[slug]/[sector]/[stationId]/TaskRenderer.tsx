@@ -34,6 +34,9 @@ import { GrammarBattleTask, type GrammarBattleRound } from "@/components/tasks/G
 import { BossBattleTask } from "@/components/tasks/BossBattleTask"
 import { MatchingTask } from "@/components/tasks/MatchingTask"
 import { TextFixTask } from "@/components/tasks/TextFixTask"
+import { SentenceBuilderTask } from "@/components/tasks/SentenceBuilderTask"
+import type { SentenceBuilderItem } from "@/types/task"
+import { PromptCardTask } from "@/components/tasks/PromptCardTask"
 import { TaskHeader } from "@/components/tasks/TaskHeader"
 import { RulesPanel } from "@/components/RulesPanel"
 import { useProgress } from "@/lib/useProgress"
@@ -95,6 +98,15 @@ interface TaskData {
   // matching (тикет T05, станция B1.2 «Анализ Профилей»): сопоставление
   // описаний с профессиями — «Угадай профессию».
   matching?: { items: { text: string; options: string[]; answer: string }[]; columns?: string[] }
+  // sentence-builder (тикет T05, станция A1.5 «Визуализация Синтаксиса»):
+  // построй предложение, выбрав слова из 4 столбиков-банков
+  // (Подлежащее / Сказуемое / Дополнение / Обстоятельство).
+  sentenceBuilder?: {
+    items: {
+      columns: { role: string; label: string; hint?: string; words: string[] }[]
+      answer: string
+    }[]
+  }
   // text-fix (тикет T06, станция B2.4 «Стабилизация Реальности»): найди и
   // исправь ошибки в тексте — клик по ошибочному слову → варианты исправления.
   textFix?: {
@@ -104,6 +116,12 @@ interface TaskData {
       hint?: string
     }[]
     instruction?: string
+  }
+  // prompt-card (тикет T06, станции-промпта A1/A2/B1/B2): карточка «Промпт
+  // для внешнего чата» — текст дословно + кнопка «Скопировать» + «Я поговорил».
+  promptCard?: {
+    prompt: string
+    extra?: { title: string; lines: string[] }[]
   }
   // voice-chat checklist (тикет T07, станции Речи): бот задаёт вопросы из
   // списка по одному, ответ оценивается по маркерам (эвристика one-minute).
@@ -218,10 +236,23 @@ export function TaskRenderer({
       // T05 Matching: сопоставление описаний с профессиями («Угадай профессию»,
       // станция B1.2). Валюта ⚡ — тип НЕ в SPEAKING_TASK_TYPES.
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><MatchingTask title={task.title} description={task.description} items={task.matching?.items || []} columns={task.matching?.columns} onComplete={onScored} /></div>
+    case "sentence-builder":
+      // T05 Sentence Builder: построй предложение, выбрав слова из 4
+      // столбиков-банков (станция A1.5 «Визуализация Синтаксиса»). Валюта ⚡ —
+      // тип НЕ в SPEAKING_TASK_TYPES. Локальный интерфейс TaskData описывает
+      // sentenceBuilder.items с role: string — приводим к строгому контракту
+      // компонента на СВОЕЙ строке рендера (аддитивно-безопасный паттерн
+      // matching/text-fix, shared-union не расширяем).
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><SentenceBuilderTask title={task.title} description={task.description} items={(task.sentenceBuilder?.items ?? []) as unknown as SentenceBuilderItem[]} onComplete={onScored} /></div>
     case "text-fix":
       // T06 TextFix: найди и исправь ошибки в тексте (станция B2.4
       // «Стабилизация Реальности»). Валюта ⚡ — тип НЕ в SPEAKING_TASK_TYPES.
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><TextFixTask title={task.title} description={task.description} data={task.textFix || { sentences: [] }} onComplete={onScored} /></div>
+    case "prompt-card":
+      // T06 PromptCard: карточка-промпт «для внешнего чата» (станции A1.6/
+      // A2.8/B1.8/B2.8). Текст дословно + «Скопировать» + «Я поговорил» →
+      // зачёт по факту. Валюта ⚡ — тип НЕ в SPEAKING_TASK_TYPES.
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><PromptCardTask title={task.title} description={task.description} prompt={task.promptCard?.prompt || ""} extra={task.promptCard?.extra} onComplete={onScored} /></div>
     case "role-play":
     case "voice-chat":
     case "fill-in-and-speak":

@@ -1,0 +1,37 @@
+{
+  "id": "b1_station_8",
+  "title": "Выход в космос: Проблемы вселенной (Промпт)",
+  "description": "Скопируй промпт в чат с ИИ и обсуди проблемы вселенной по пяти темам. Станция засчитывается, когда ты реально поговорил.",
+  "category": "speaking",
+  "type": "prompt-card",
+  "promptCard": {
+    "prompt": "Ты — мой сверстник из англоговорящей страны. Мне ____ лет.  Давай обсудим на английском языке проблемы вселенной по темам Технологии и Соцсети, Хобби и Свободное время, Здоровье и Образ жизни, Школа и Будущая профессия, Окружающая среда и Город.   Отвечай на мои вопросы и задавай свои на эти темы. Используй Present Simple. Исправь меня, если я ошибусь, но только  в конце нашего диалога и в очень дружеской форме)",
+    "extra": [
+      {
+        "title": "Примерные вопросы для разговора",
+        "lines": [
+          "Блок 1: Технологии и Соцсети (Module 1)",
+          "Do you spend much time on social media every day? (Ты проводишь много времени в соцсетях каждый день?)",
+          "What kind of apps do you usually download on your smartphone? (Какие приложения ты обычно скачиваешь на свой смартфон?)",
+          "Do you prefer texting your friends or calling them? (Ты предпочитаешь писать друзьям сообщения или звонить им?)",
+          "How often do you check your notifications? (Как часто ты проверяешь свои уведомления?)",
+          "🎮 Блок 2: Хобби и Свободное время (Module 4)",
+          "What do you usually do in your free time after school? (Что ты обычно делаешь в свободное время после школы?)",
+          "Do you play any computer games or do you prefer active sports? (Ты играешь в компьютерные игры или предпочитаешь активный спорт?)",
+          "Do you listen to music when you do your homework? (Ты слушаешь музыку, когда делаешь домашнее задание?)",
+          "Does your school have a drama or an art club? (В твоей школе есть драматический или художественный кружок?)",
+          "🍔 Блок 3: Здоровье и Образ жизни (Module 2)",
+          "Do you eat a lot of junk food or do you try to keep a healthy diet? (Ты ешь много фаст-фуда или пытаешься придерживаться здорового питания?)",
+          "How much water do you drink during the day? (Сколько воды ты выпиваешь в течение дня?)",
+          "Do you often feel stressed before exams at school? (Ты часто чувствуешь стресс перед экзаменами в школе?)",
+          "💼 Блок 4: Школа и Будущая профессия (Module 5)",
+          "What subjects do you study at school? (Какие предметы ты изучаешь в школе?)",
+          "Do you have a part-time job on weekends or holidays? (У тебя есть подработка по выходным или на каникулах?)",
+          "What do you want to be when you finish school? (Кем ты хочешь стать, когда закончишь школу?)",
+          "🌍 Блок 5: Окружающая среда и Город (Module 8)",
+          "Do you and your family recycle paper, plastic, and glass? (Ты и твоя семья перерабатываете бумагу, пластик и стекло?)"
+        ]
+      }
+    ]
+  }
+}

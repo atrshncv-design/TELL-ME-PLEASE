@@ -1,0 +1,48 @@
+{
+  "id": "b2_station_8",
+  "title": "Выход в космос: Праздники (Промпт)",
+  "description": "Скопируй промпт в чат с ИИ и поговори о праздниках и фестивалях. Станция засчитывается, когда ты реально поговорил.",
+  "category": "speaking",
+  "type": "prompt-card",
+  "promptCard": {
+    "prompt": "Ты — мой сверстник из англоговорящей страны _________. Мне ____ лет. Давай поговорим на английском языке какие праздники или фестивали вы отмечаете в твоей стране. Отвечай на мои вопросы и задавай свои на эту тему. Используй Present Simple. Исправь меня, если я ошибусь, но только  в конце нашего диалога и в очень дружеской форме)",
+    "extra": [
+      {
+        "title": "Страны и праздники",
+        "lines": [
+          "Russia — New Year, Victory Day, Maslenitsa, Russia Day.",
+          "USA — Independence Day, Thanksgiving, Halloween, Christmas.",
+          "United Kingdom — Christmas, Boxing Day, Bonfire Night, Easter.",
+          "France — Bastille Day, Christmas, Easter, Carnival season.",
+          "Germany — Oktoberfest, Christmas markets, Christmas, New Year.",
+          "Spain — La Tomatina, Semana Santa, San Fermín, Christmas.",
+          "Italy — Carnival of Venice, Easter, Christmas, Ferragosto.",
+          "Brazil — Carnival in Rio, New Year, Festa Junina, Christmas.",
+          "Mexico — Day of the Dead, Independence Day, Christmas, Holy Week.",
+          "India — Diwali, Holi, Eid, Navratri, Independence Day.",
+          "China — Chinese New Year, Mid-Autumn Festival, Dragon Boat Festival.",
+          "Japan — Hanami, New Year, Obon, Children's Day.",
+          "South Korea — Chuseok, Lunar New Year, Buddha’s Birthday.",
+          "Thailand — Songkran, Loy Krathong, New Year.",
+          "Australia — Australia Day, ANZAC Day, Christmas, New Year.",
+          "Canada — Canada Day, Thanksgiving, Christmas, New Year."
+        ]
+      },
+      {
+        "title": "Примерные вопросы для разговора",
+        "lines": [
+          "1.Are festivals in your country similar to festivals in Russia?",
+          "2.What festival from another country would you like to visit?",
+          "3.Do young people in your country enjoy national holidays?",
+          "4.Which country do you think has the most interesting celebrations?",
+          "5.If you could join one festival in another country, which one would you choose?",
+          "6.What is the most exciting part of a festival for you?",
+          "7.Do festivals bring people together in your country?",
+          "8.How do people usually prepare for a big celebration?",
+          "9.Do you prefer big public festivals or small family celebrations?",
+          "10.What would you show a tourist about your country’s holidays?"
+        ]
+      }
+    ]
+  }
+}

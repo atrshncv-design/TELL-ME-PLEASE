@@ -402,6 +402,10 @@ export default function EpochPage({
             transition={{ delay: si * 0.08 }}
             className="relative mb-4 w-full overflow-hidden rounded-3xl border border-primary-200 bg-gradient-to-br from-primary-50/80 via-white to-white px-4 py-4 shadow-sm"
           >
+            {/* T01: бейдж уровня сложности в правом верхнем углу (A1/A2/B1/B2). */}
+            <span className="absolute right-3 top-3 rounded-full bg-primary-600 px-3 py-1 text-xs font-black text-white shadow-soft">
+              {sector.level}
+            </span>
             <div className="mb-3 flex items-start gap-3">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-primary-200 bg-primary-50 text-2xl shadow-soft">
                 {emoji}
