@@ -383,62 +383,6 @@
         "do"
       ],
       "answer": "do"
-    },
-    {
-      "question": "The ruler ___ in the bag.",
-      "options": [
-        "is",
-        "use"
-      ],
-      "answer": "is"
-    },
-    {
-      "question": "I ___ the ruler every day.",
-      "options": [
-        "am",
-        "use"
-      ],
-      "answer": "use"
-    },
-    {
-      "question": "He ___ a pilot.",
-      "options": [
-        "is",
-        "flies"
-      ],
-      "answer": "is"
-    },
-    {
-      "question": "He ___ planes.",
-      "options": [
-        "is",
-        "flies"
-      ],
-      "answer": "flies"
-    },
-    {
-      "question": "You ___ hungry.",
-      "options": [
-        "are",
-        "eat"
-      ],
-      "answer": "are"
-    },
-    {
-      "question": "You ___ a sandwich for breakfast.",
-      "options": [
-        "are",
-        "eat"
-      ],
-      "answer": "eat"
-    },
-    {
-      "question": "The dog ___ funny.",
-      "options": [
-        "is",
-        "barks"
-      ],
-      "answer": "is"
     }
   ]
 }
