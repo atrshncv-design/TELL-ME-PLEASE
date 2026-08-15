@@ -77,5 +77,39 @@
       "min": 1,
       "hint": "Спроси, испугались ли люди: Were people scared?"
     }
+  ],
+  "dialogue": [
+    {
+      "speaker": "You",
+      "text": "Excuse me, I need to ask you some questions about the bank robbery. What were you doing at 3 PM yesterday?"
+    },
+    {
+      "speaker": "Witness",
+      "text": "At 3 PM? I was standing near the ATM machine. I was waiting for my turn to get some money. Everything was normal, and then suddenly I heard loud noises."
+    },
+    {
+      "speaker": "You",
+      "text": "What were the robbers wearing? Did you see them clearly?"
+    },
+    {
+      "speaker": "Witness",
+      "text": "Yes, I saw two men. They were wearing black jackets and dark jeans. One of them was wearing a red cap, and the other one had a black mask over his face. They were both wearing gloves."
+    },
+    {
+      "speaker": "You",
+      "text": "Did anyone try to stop them?"
+    },
+    {
+      "speaker": "Witness",
+      "text": "No, nobody tried to stop them. The security guard was calling the police, but he wasn’t moving. Everyone was just standing still. The robbers were shouting, so people were too scared to do anything."
+    },
+    {
+      "speaker": "You",
+      "text": "Were people scared?"
+    },
+    {
+      "speaker": "Witness",
+      "text": "Yes, everyone was very scared. Some people were crying, and others were hiding under tables or behind counters. A woman next to me was shaking and holding her child tightly. It was a terrible moment."
+    }
   ]
 }

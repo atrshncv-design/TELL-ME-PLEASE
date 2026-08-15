@@ -5,20 +5,24 @@
   "icon": "📼",
   "theory": [
     {
-      "title": "📼 Шаг 1: Суть времени (Что это такое?)",
-      "text": "Привет, ребята! 👋 Мы снова садимся в «Машину Времени». Вы уже знаете, что Present Continuous — это 🎥 Видеокамера, которая снимает прямо сейчас. Past Continuous — это старая кассета VHS 📼, которая записывала процесс в прошлом.\nЭто время отвечает за ПРОЦЕСС, который длился в определенный момент в прошлом. Вас не интересует, когда он начался и чем закончился. Вы просто смотрите на кусок пленки, где действие тянется.\nФормула (Базовый каркас):\nПодлежащее + WAS / WERE + Глагол с окончанием -ING\nI was reading a book at 5 PM. (Я читал книгу в 5 вечера — процесс шел).\nThey were playing football. (Они играли в футбол — процесс).\n⚠️ ГЛАВНЫЙ БОСС Past Continuous: Выбор WAS или WERE.\nДля I, He, She, It ➡️ WAS (I was sleeping).\nДля We, You, They ➡️ WERE (We were sleeping)."
+      "title": "📼 Шаг 1: Суть времени",
+      "text": "Past Continuous — это видеокамера в прошлом.\nОна показывает процесс в определённый момент.\nФормула:\nПодлежащее + WAS / WERE + глагол с окончанием -ING.\nI was reading a book at 5 PM.\nThey were playing football.\nI, He, She, It → WAS.\nI was sleeping.\nWe, You, They → WERE.\nWe were sleeping."
     },
     {
-      "title": "🎭 Шаг 2: Три жизни Past Continuous (Когда использовать?)",
-      "text": "Процесс в конкретный момент в прошлом: Маркеры: at 5 PM, at that time, yesterday at noon.\nAt 5 PM yesterday I was watching TV. (Вчера в 5 вечера я смотрел телевизор).\nФоновое действие (Сцена): Длинное действие, на фоне которого произошло короткое. Это самая частая ситуация в сказках и рассказах!\nIt was raining. (Шел дождь — фон).\nПараллельные процессы: Два длинных действия происходили одновременно. Маркер: while (в то время как).\nWhile I was reading, my mum was cooking. (Пока я читал, мама готовила — оба процесса шли)."
+      "title": "🎭 Шаг 2: Когда используем Past Continuous",
+      "text": "Процесс в конкретный момент.\nМаркеры: at 5 PM, at that time, yesterday at noon.\nAt 5 PM yesterday I was watching TV.\nФоновое действие.\nIt was raining.\nПараллельные процессы.\nМаркер: while.\nWhile I was reading, my mum was cooking."
     },
     {
-      "title": "⚔️ Шаг 3: Битва Past Continuous vs Past Simple (Главное правило ОГЭ)",
-      "text": "Это битва «Длинного процесса» и «Внезапного факта». Запомните метафору: Змея и Кролик.\nPast Continuous — это «Змея» 🐍. Длинный, тянущийся процесс.\nI was walking in the park. (Я гулял в парке — долго).\nPast Simple — это «Кролик» 🐰. Короткое, резкое действие, которое ВПРЫГНУЛО в процесс и прервало его.\nI met my friend. (Я встретил друга — внезапно).\nКак они работают вместе (Союз WHEN / WHILE):\nI was walking (Змея) in the park when I met (Кролик) my friend. (Я гулял в парке, когда внезапно встретил друга).\nWhile обычно запускает Змею (процесс): While I was walking...\n💡 Лайфхак для ОГЭ: Если видите at 5 PM yesterday — смело пиши Past Continuous (was/were + V-ing). Если видите when + внезапное действие — сначала пишите процесс (Past Cont.), а потом резкий факт (Past Simple)."
+      "title": "⚔️ Шаг 3: Змея и Кролик",
+      "text": "Past Continuous — это Змея 🐍.\nЗмея — длинный процесс.\nI was walking in the park.\nPast Simple — это Кролик 🐰.\nКролик — короткое внезапное действие.\nI met my friend.\nI was walking in the park when I met my friend.\nWhile обычно запускает Змею.\nWhile I was walking..."
     },
     {
-      "title": "🚨 Шаг 4: ГЛАВНАЯ ЛОВУШКА: Stative Verbs (Глаголы состояния)",
-      "text": "Как и в Present Continuous, глаголы чувств и мышления (love, know, want, understand) НЕЛЬЗЯ использовать с -ING! Даже если это фон в прошлом, используем Past Simple.\n❌ I was knowing the answer.\n✅ I knew the answer."
+      "title": "🚨 Шаг 4: Глаголы состояния",
+      "text": "Глаголы чувств и мышления не используют -ING.\nПримеры: love, know, want, understand.\nI was knowing the answer.\nТак нельзя.\nI knew the answer.\nТак правильно."
+    },
+    {
+      "title": "✅ Шаг 5: Проверь себя",
+      "text": "at 5 PM yesterday → Past Continuous.\nwas / were + V-ing.\nwhen + внезапное действие → сначала процесс.\nПотом — Past Simple.\nНе используй -ING с глаголами состояния."
     }
   ],
   "theoryQuiz": [
@@ -94,6 +98,11 @@
       "grade": 5,
       "stations": [
         {
+          "id": "station-4",
+          "file": "a1/station-4.json",
+          "title": "Морфологический Щит (-ING)"
+        },
+        {
           "id": "station-1",
           "file": "a1/station-1.json",
           "title": "Сборка Кассеты (Механика)"
@@ -107,11 +116,6 @@
           "id": "station-3",
           "file": "a1/station-3.json",
           "title": "Точка во Времени (Маркеры)"
-        },
-        {
-          "id": "station-4",
-          "file": "a1/station-4.json",
-          "title": "Орфологический Щит (-ING)"
         },
         {
           "id": "station-5",
@@ -239,11 +243,6 @@
           "id": "station-3",
           "file": "b2/station-3.json",
           "title": "Текст ОГЭ: История Города (Чтение)"
-        },
-        {
-          "id": "station-5",
-          "file": "b2/station-5.json",
-          "title": "Описание Фотографии (ОГЭ Task 3)"
         },
         {
           "id": "station-6",

@@ -1,70 +1,71 @@
 {
   "id": "present_continuous_a2_station_7",
-  "title": "Цифровой Друг (Диалог с ИИ)",
-  "description": "Снятие языкового барьера, тренировка переключения Simple/Continuous.",
+  "title": "Умный дом (Диалог с ИИ)",
+  "description": "Поговори с ровесником, который живёт в smart house. Используй Present Simple и Present Continuous.",
   "category": "speaking",
   "type": "voice-chat",
-  "task_context": "Ты — 12-летний школьник, который живёт в умном доме (smart house). Общайся по-английски простыми фразами (уровень A2). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Расскажи о своих привычках и о том, что делаешь прямо сейчас. Реагируй дружелюбно: хвали за старание и мягко поправляй ошибки. Никогда не говори, что ты ИИ.",
+  "task_context": "Ты — 12-летний школьник, который живёт в smart house. Ты любишь гаджеты, пиццу и компьютерные игры. Говори простыми фразами уровня A2 и задавай ученику встречные вопросы. Никогда не говори, что ты ИИ.",
   "checklist": [
-    {
-      "question": "What do you usually do after school?",
-      "markers": [
-        "after school",
-        "homework",
-        "play",
-        "games",
-        "walk",
-        "usually"
-      ],
-      "min": 1,
-      "hint": "Ответь: After school I usually do my homework and play games."
-    },
-    {
-      "question": "Do you eat fast food every day?",
-      "markers": [
-        "yes",
-        "no",
-        "fast food",
-        "every day",
-        "don't"
-      ],
-      "min": 1,
-      "hint": "Ответь: No, I don't eat fast food every day."
-    },
     {
       "question": "What are you doing right now?",
       "markers": [
         "right now",
         "now",
+        "doing",
         "talking",
         "sitting",
         "writing"
       ],
       "min": 1,
-      "hint": "Ответь: I am sitting in my bedroom right now."
+      "hint": "Ответь: I am talking to you right now."
     },
     {
-      "question": "Are you sitting in your bedroom?",
+      "question": "Are you sitting in your bedroom at the moment?",
       "markers": [
         "yes",
         "no",
+        "sitting",
         "bedroom",
-        "sitting"
+        "moment"
       ],
       "min": 1,
-      "hint": "Ответь: Yes, I am sitting in my bedroom."
+      "hint": "Ответь: Yes, I am sitting in my bedroom at the moment."
     },
     {
-      "question": "Do you usually drink cola, or are you drinking water right now?",
+      "question": "Are you listening to music while talking to me?",
       "markers": [
-        "cola",
-        "water",
-        "drink",
-        "usually",
+        "yes",
+        "no",
+        "listening",
+        "music",
+        "talking"
+      ],
+      "min": 1,
+      "hint": "Ответь: Yes, I am listening to music."
+    },
+    {
+      "question": "What are you eating right now?",
+      "markers": [
+        "eating",
+        "pizza",
+        "food",
+        "right now",
         "now"
       ],
       "min": 1,
-      "hint": "Ответь: I usually drink cola, but right now I am drinking water."
+      "hint": "Ответь: I am eating pizza right now."
+    },
+    {
+      "question": "Are you wearing a school uniform now?",
+      "markers": [
+        "yes",
+        "no",
+        "wearing",
+        "uniform",
+        "now"
+      ],
+      "min": 1,
+      "hint": "Ответь: No, I am not wearing a school uniform now."
     }
   ]
 }

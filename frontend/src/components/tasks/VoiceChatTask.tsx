@@ -31,6 +31,8 @@ interface VoiceChatTaskProps {
    *  Если передан и непуст — бот задаёт вопросы по одному, ответы оцениваются
    *  эвристикой маркеров; иначе — прежний свободный диалог. */
   checklist?: VoiceChecklistItem[]
+  /** Explicit content opt-in: bypass local STT marker verdicts for this station. */
+  alwaysPass?: boolean
   /** Тикет T07: результат прохождения checklist («N из M») — вызывается ровно
    *  один раз по завершении списка. Без checklist не вызывается. */
   onComplete?: (score: number, total: number) => void
@@ -63,6 +65,7 @@ function VoiceChatInner({
   backHref,
   sessionSeconds = 180,
   checklist,
+  alwaysPass = false,
   onComplete,
 }: VoiceChatTaskProps) {
   const params = useSearchParams()
@@ -134,10 +137,11 @@ function VoiceChatInner({
       q.length > 0 &&
       a.length > 0 &&
       (a === q || a.includes(q) || (a.length < q.length && q.includes(a)))
-    const ok =
+    const ok = alwaysPass || (
       clean.length > 0 &&
       !repeatsQuestion &&
       markersMet(item, clean) >= (item.min ?? 1)
+    )
     setListAnswer(text)
     setListVerdict(ok ? "correct" : "wrong")
     if (ok) setListScore((s) => s + 1)
@@ -150,7 +154,7 @@ function VoiceChatInner({
       setListFinished(true)
       if (!completedRef.current) {
         completedRef.current = true
-        onComplete?.(listScore, checklistItems.length)
+        onComplete?.(alwaysPass ? checklistItems.length : listScore, checklistItems.length)
       }
     } else {
       setListIndex((i) => i + 1)

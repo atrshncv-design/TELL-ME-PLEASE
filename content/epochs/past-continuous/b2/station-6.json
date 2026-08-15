@@ -1,52 +1,103 @@
 {
   "id": "past_continuous_b2_station_6",
-  "title": "Дебаты: «Великие События» (Диалог с ИИ)",
-  "description": "Диалог о великих событиях прошлого: экзаменатор задаёт вопрос, на экране — готовый ответ, прочитай его вслух. Бот оценит по маркерам.",
+  "title": "Дебаты: \"Великие События\" (Монолог)",
+  "description": "Прочитай текст о первом полёте человека в космос, затем монолог-образец о жизни 100 лет назад — и создай свой монолог о великом событии по образцу.",
   "category": "speaking",
-  "type": "voice-chat",
-  "task_context": "You are a debate moderator. Ask me about great historical events and discoveries, one question at a time.",
-  "checklist": [
+  "type": "one-minute",
+  "topic": "Великое событие: создай свой монолог по образцу",
+  "duration": 90,
+  "script": {
+    "description": "Сначала прочитай текст вслух, затем монолог-образец — и создай свой монолог о великом событии по образцу.",
+    "sentences": [
+      "The Day the World Changed: April 12, 1961",
+      "It was a clear spring morning in 1961. People were walking to work as usual. Nobody knew that this day would change history.",
+      "At the radio station, the phone suddenly rang. While the director was reading the telegram, his hands were shaking.",
+      "“Yuri Gagarin is in space!” he shouted.",
+      "Everything changed. While announcers were preparing the broadcast, people in the streets were stopping and listening. Workers were turning off machines. Schoolchildren were sitting quietly in classrooms.",
+      "At 10 a.m., the announcement came. While the announcer was speaking, millions were standing still. Some were crying, others were hugging. In Red Square, students were celebrating and waving flags.",
+      "That evening, families were sitting around radios, talking about Gagarin. Outside, the stars were appearing, but then they looked different. People knew a human was flying near them. Life was changing, and everyone was feeling it.",
+      "— Монолог-образец —",
+      "Good morning. Today I would like to talk about life 100 years ago.",
+      "People lived in smaller towns and villages. Many families lived on farms and grew their own food. Just imagine! At that time, most people were using horses and carts every day because cars were rare and expensive.",
+      "At home, people used oil lamps and cooked on wood stoves. In the evenings, families were sitting together, talking, reading or playing games. There was no TV or internet, so life was slower.",
+      "Children walked to school and helped their parents after classes. People didn’t have phones, so they were communicating face to face or by letter.",
+      "Life was harder, but people were building strong communities. They were creating the world we live in today.",
+      "Thank you."
+    ]
+  },
+  "conditions": [
     {
-      "question": "What were you doing when you heard about the first man on the Moon?",
+      "label": "Фон: Past Continuous (was/were + -ing)",
+      "hint": "People were walking to work as usual.",
       "markers": [
         "was",
-        "watching",
-        "tv",
-        "news"
-      ],
-      "min": 1,
-      "hint": "I was watching TV when I heard the news about the first man on the Moon."
-    },
-    {
-      "question": "What was happening in the world when the Internet appeared?",
-      "markers": [
-        "people",
+        "were",
+        "walking",
+        "reading",
+        "shaking",
+        "preparing",
+        "stopping",
+        "turning",
+        "sitting",
+        "speaking",
+        "standing",
+        "crying",
+        "hugging",
+        "celebrating",
+        "waving",
+        "appearing",
+        "flying",
+        "changing",
+        "feeling",
         "using",
-        "computers",
-        "new"
+        "communicating",
+        "building",
+        "creating",
+        "talking"
       ],
-      "min": 1,
-      "hint": "People were using computers, and the Internet was a new amazing thing."
+      "min": 3
     },
     {
-      "question": "What were scientists doing when they discovered penicillin?",
+      "label": "Событие: Past Simple",
+      "hint": "The phone rang. He shouted. The announcement came.",
       "markers": [
-        "working",
-        "laboratory",
-        "experiment"
+        "rang",
+        "shouted",
+        "knew",
+        "changed",
+        "came",
+        "looked",
+        "walked",
+        "lived",
+        "grew",
+        "used",
+        "cooked",
+        "helped",
+        "had"
       ],
-      "min": 1,
-      "hint": "Scientists were working in the laboratory when they discovered penicillin."
+      "min": 2
     },
     {
-      "question": "What were people doing when the first plane flew?",
+      "label": "Связка when / while",
+      "hint": "While the director was reading the telegram...",
       "markers": [
-        "watching",
-        "sky",
-        "flying"
+        "when",
+        "while"
       ],
-      "min": 1,
-      "hint": "People were watching the sky and seeing a plane flying for the first time."
+      "min": 1
+    },
+    {
+      "label": "Тема: космос и Гагарин",
+      "hint": "Gagarin, space, radio, broadcast...",
+      "markers": [
+        "gagarin",
+        "space",
+        "radio",
+        "broadcast",
+        "stars",
+        "cosmonaut"
+      ],
+      "min": 1
     }
   ]
 }

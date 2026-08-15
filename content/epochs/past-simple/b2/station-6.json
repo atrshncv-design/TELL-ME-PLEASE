@@ -1,58 +1,27 @@
 {
   "id": "past_simple_b2_station_6",
-  "title": "Дебаты: \"Великие Открытия\" (Диалог с ИИ)",
-  "description": "Диалог с ботом о великих открытиях: бот задаёт вопрос, на экране — готовый ответ, озвучь его.",
+  "title": "Дебаты: \"Великие Открытия\" (Промпт)",
+  "description": "Скопируй промпт во внешний чат и поговори о том, как изобретения повлияли на жизнь людей.",
   "category": "speaking",
-  "type": "voice-chat",
-  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль собеседника-эксперта по великим открытиям для ученика 9 класса (уровень B2). Задавай ученику вопросы из списка checklist по одному, строго в порядке списка, и жди ответа. Реагируй на каждый ответ заинтересованно и коротко, мягко поправляй ошибки в Past Simple и Present Perfect. Если ответ слишком короткий, вежливо попроси сказать полным предложением. Говори простыми английскими фразами уровня B2, на русский не переходи.",
-  "checklist": [
-    {
-      "question": "What is the most important invention in your opinion?",
-      "markers": [
-        "internet",
-        "telephone",
-        "think",
-        "phone",
-        "computer"
-      ],
-      "min": 1,
-      "hint": "Скажи: In my opinion, the most important invention is the Internet. / I think the telephone is the most important invention."
-    },
-    {
-      "question": "When was it invented?",
-      "markers": [
-        "1960s",
-        "long",
-        "ago",
-        "years",
-        "century"
-      ],
-      "min": 1,
-      "hint": "Скажи: It was invented in the 1960s. / It was invented a long time ago."
-    },
-    {
-      "question": "How has it changed our life?",
-      "markers": [
-        "completely",
-        "made",
-        "easier",
-        "better",
-        "communication"
-      ],
-      "min": 1,
-      "hint": "Скажи: It has changed our life completely. / It has made our life easier."
-    },
-    {
-      "question": "How do we use it every day?",
-      "markers": [
-        "work",
-        "study",
-        "talk",
-        "friends",
-        "school"
-      ],
-      "min": 1,
-      "hint": "Скажи: We use it every day for work and study. / We use it to talk to our friends."
-    }
-  ]
+  "type": "prompt-card",
+  "promptCard": {
+    "prompt": "Ты — мой сверстник из англоговорящей страны _________. Мне ____ лет. Давай поговорим на английском языке как изобретения повлияли на жизни людей. Отвечай на мои вопросы и задавай свои на эту тему. Используй Past Simple, Present Perfect, Present Simple. Исправь меня, если я ошибусь, но только  в конце нашего диалога и в очень дружеской форме)",
+    "extra": [
+      {
+        "title": "Примерные вопросы для обсуждения",
+        "lines": [
+          "What invention do you think has changed the world the most in the last 100 years?",
+          "How has the internet changed the way people communicate and learn?",
+          "Why do you think the invention of electricity was so important for modern life?",
+          "In what ways have smartphones made people’s lives easier or better?",
+          "Which medical invention do you believe has saved the most lives, and why?",
+          "How did the invention of the printing press change education and knowledge?",
+          "Do you think cars have had a mostly positive or negative effect on society? Why?",
+          "What role have renewable energy technologies (like solar panels) played in improving the environment?",
+          "How has modern transport (planes, trains, etc.) changed the way people travel and work?",
+          "If you could invent something to improve people’s lives, what would it be and how would it help?"
+        ]
+      }
+    ]
+  }
 }

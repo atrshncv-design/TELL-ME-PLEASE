@@ -1,7 +1,7 @@
 {
   "id": "past_continuous_b1_station_4",
   "title": "Контраст Маркеров (Сортировка)",
-  "description": "Распредели маркеры времени по трём группам: Past Continuous, Past Simple, Present Continuous.",
+  "description": "Распредели маркеры по группам. Маркер never подходит и для Past Continuous, и для Past Simple в этом упражнении.",
   "category": "grammar",
   "type": "drag-and-drop",
   "columns": [
@@ -36,6 +36,10 @@
       "answer": "past-cont"
     },
     {
+      "verb": "when he came ",
+      "answer": "past-simple"
+    },
+    {
       "verb": "last week",
       "answer": "past-simple"
     },
@@ -49,6 +53,14 @@
     },
     {
       "verb": "two days ago",
+      "answer": "past-simple"
+    },
+    {
+      "verb": "never",
+      "answer": "past-cont"
+    },
+    {
+      "verb": "never ",
       "answer": "past-simple"
     }
   ]

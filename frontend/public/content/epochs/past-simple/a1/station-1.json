@@ -116,5 +116,6 @@
       "form2": "swam",
       "form3": "swum"
     }
-  ]
+  ],
+  "instantCheck": true
 }

@@ -61,5 +61,6 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "alwaysPass": true
 }

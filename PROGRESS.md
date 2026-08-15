@@ -1,32 +1,9 @@
-# PROGRESS — пакет «Правки 13.08 + чат 14.08» (pravki-140826)
+# Progress — ПАК 150826
 
-| # | Тикет | Статус |
-|---|-------|--------|
-| 01 | Уровни сложности секторов (бейдж в правом верхнем углу) | done |
-| 02 | Инструктаж: маскот на слайдах + слайд 7 (убрать Шаг 7/Шаг 8) + форматирование примеров | done |
-| 03 | Музыкальная пауза: 6 ссылок + заголовок «16 Пой песни…» | done |
-| 04 | Станции A1: review Сканирования Формы, инструкция Наречий, Игра 6 блоки, формулировка Гарри | done |
-| 05 | Визуализация Синтаксиса → механика «Построй предложение» (sentence-builder) | done |
-| 06 | 4 станции-промпта: «Контакт с пришельцем» + «Выход в космос» ×3 | done |
-| 07 | Финальная проверка: tsc/build/verify/смоук | done |
-
-Гейт: карта времён 3×4 / QR — ждём ответ клиентки (не тикетировано).
-
-## Сводка по пакету (T07, финальная проверка 14.08.2026)
-
-Все 7 тикетов done. Сквозная проверка зелёная:
-
-- **Зеркала**: `diff -rq content/epochs/present-simple frontend/public/content/epochs/present-simple` — чисто (exit 0).
-- **verify-epoch**: `node scripts/verify-epoch.mjs` — ✅ ALL PASSED (13 эпох; present-simple: 4 сектора, 33 станции, 33/33 файлов на месте).
-- **tsc**: `npx tsc --noEmit` — 0 ошибок (exit 0).
-- **build**: `npm run build` — зелёная (✓ Compiled, TypeScript чист, 10/10 статических страниц).
-- **Смоук** (Playwright, chrome headless, `next start -p 3131`, 26/26 PASS):
-  - `/epoch/present-simple` — бейджи уровней A1/A2/B1/B2 у 4 секторов (T01), кнопки «Смотреть инструктаж» и «Музыка эпохи»;
-  - инструктаж — маскот `/mascot/instruct.jpg` на слайде теории (T02), по всем 6 слайдам нет «Шаг 7»/«Шаг 8» (T02);
-  - музыка — заголовок «16 Пой песни и легко запоминай грамматику! Выбирай любую!», ровно 6 ссылок rutube/yandex (T03);
-  - `a1/station-2` — review-режим DnD: «Проверить» → экран разбора «Правильных: N/20», НЕ авто-финиш, «Далее» → ResultScreen +N ⚡ (T04);
-  - `a1/station-5` — sentence-builder: 15/15 предложений собрано из чипов, «Проверить» → ✓, «Далее» → ResultScreen «Идеально!» +15 ⚡ (T05);
-  - 4 промпт-станции (`a1/station-6`, `a2/station-8`, `b1/station-8`, `b2/station-8`) — текст промпта + «📋 Скопировать промпт» + «Я поговорил — отметить выполненным» → ResultScreen +1 ⚡ (T06); копирование проверено реально (clipboard-write → «✓ Скопировано!», текст промпта в буфере).
-- **Что сделано по тикетам**: T01 бейджи уровней; T02 маскот в инструктаже + убран Шаг 7/8 + форматирование примеров; T03 музыкальная пауза 6 ссылок; T04 review-режим DnD + формулировки станций A1; T05 механика sentence-builder (15 предложений из doc); T06 4 карточки-промпта (внешний чат).
-- **Что осталось (вне пакета)**: карта времён 3×4 / QR — гейт клиентки (не тикетировано). Коммит/пуш — по отдельному согласованию.
-
+- [x] 01 — Проверка системы эпохи 1 и `have got/has got` — done
+- [x] 02 — Present Continuous: инструктаж и станции — done (14 TTS-safe theory slides; A1 «Выход в космос»; A2 smart house; B1 stations 3/5 `alwaysPass`; JSON/index/mirror audit PASS)
+- [x] 03 — Past Simple: инструктаж и станции — done (теория разбита на 8 непустых слайдов без изменения текста; A2 interview/blog placement + prompt-card; B1 comic flags; B2 OGE title + inventions prompt; mirrors/verify PASS)
+- [x] 04 — Past Continuous: инструктаж и станции — done-with-blocker (JSON/индексы/mirrors PASS; «Комикс Катастрофа» BLOCKED: точный клиентский блок не извлечён)
+- [x] 05 — Общие механики `alwaysPass`, `instantCheck` и TTS — done (`npx tsc --noEmit` exit 0; `node scripts/verify-epoch.mjs` `✅ ALL PASSED`; JSON/mirror audit `JSON=358 bad=0`; comic content blocker remains ticket 04)
+- [x] 06 — Финальная проверка пакета — done (`JSON=358 mirrors=358 errors=0`; duplicate/index audit PASS; `node scripts/verify-epoch.mjs` `✅ ALL PASSED`; `npx tsc --noEmit` exit 0; `npm run build` exit 0, 10/10 static pages; SSR smoke 4 representative routes HTTP 200; `git diff --check` PASS; existing Turbopack NFT-tracing warning only; ticket 04 content blocker remains documented)
+- [x] 07 — Добить правки по PDF-версии документа — done (10 правок: PS A1 фильтр 15/15 вопросов; PS B1 Комикс Ошибка alwaysPass; PCt B1 Комикс Катастрофа alwaysPass; PC A2 Описание Ситуации alwaysPass; PC A1 Выход в космос — документный промпт + банк «Жизнь внутри компьютера» (6 вопросов), title → «Выход в космос (Проблемы вселенной)»; PCt B1 Перевод-Ловушка 2 бланка; PCt B1 Контраст Маркеров when-he-came в обеих колонках (хвостовой пробел); PCt B2 клон station-5 убран из индекса; PS B2 station-4 → «Диалог с Экзаменатором (ОГЭ Task 2)»; PCt B2 Дебаты — чтение текста про Гагарина + монолог-образец (one-minute). Факт-чек 6 пунктов PASS. `node scripts/verify-epoch.mjs` `✅ ALL PASSED`; `npx tsc --noEmit` exit 0; python-аудит 12 файлов JSON-валидны + зеркала побайтово идентичны; `diff -rq` чист; без коммита)

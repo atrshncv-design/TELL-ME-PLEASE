@@ -1,74 +1,27 @@
 {
   "id": "past_simple_a2_station_6",
-  "title": "Блог: Вчерашний День (Продукт)",
-  "description": "Напиши 5 предложений о том, что ты делал вчера (Past Simple), и 1 предложение о том, какой у тебя есть результат сейчас (Present Perfect).",
+  "title": "Блог: Вчерашний День (Промпт)",
+  "description": "Скопируй промпт во внешний чат и поговори со сверстником о вчерашнем дне.",
   "category": "speaking",
-  "type": "one-minute",
-  "topic": "Мой вчерашний день",
-  "duration": 60,
-  "conditions": [
-    {
-      "label": "Используй 5 глаголов в Past Simple (что ты делал вчера)",
-      "hint": "went, played, watched, visited, ate, had, did, made, saw, read, wrote…",
-      "markers": [
-        "went",
-        "played",
-        "watched",
-        "visited",
-        "ate",
-        "had",
-        "did",
-        "made",
-        "saw",
-        "read",
-        "wrote",
-        "walked",
-        "talked",
-        "helped",
-        "studied",
-        "cooked",
-        "cleaned",
-        "met",
-        "bought",
-        "took",
-        "swam",
-        "ran",
-        "go",
-        "play",
-        "watch",
-        "visit",
-        "eat",
-        "have",
-        "do",
-        "make",
-        "see",
-        "read",
-        "write",
-        "walk",
-        "talk",
-        "help",
-        "study",
-        "cook",
-        "clean",
-        "meet",
-        "buy",
-        "take",
-        "swim",
-        "run"
-      ],
-      "min": 5
-    },
-    {
-      "label": "Добавь 1 предложение в Present Perfect (результат сейчас)",
-      "hint": "I have already done my homework. / I have made a drawing.",
-      "markers": [
-        "have",
-        "has",
-        "already",
-        "just",
-        "yet"
-      ],
-      "min": 1
-    }
-  ]
+  "type": "prompt-card",
+  "promptCard": {
+    "prompt": "Ты — мой сверстник из англоговорящей страны _________. Мне ____ лет. Давай поговорим на английском языке как ты провел вчерашний день. Отвечай на мои вопросы и задавай свои на эту тему. Используй Past Simple. Исправь меня, если я ошибусь, но только  в конце нашего диалога и в очень дружеской форме)",
+    "extra": [
+      {
+        "title": "Примерные вопросы для обсуждения",
+        "lines": [
+          "What did you do yesterday?",
+          "What time did you wake up yesterday morning?",
+          "Did you have breakfast at home or at school?",
+          "What did you have for lunch yesterday?",
+          "Did you go to school yesterday? What did you do there?",
+          "Did you play any games or sports after school?",
+          "What did you do in the evening yesterday?",
+          "Did you watch any films or videos yesterday? What did you watch?",
+          "Did you talk to your friends yesterday? How did you talk (in person, by phone, online)?",
+          "What time did you go to bed last night?"
+        ]
+      }
+    ]
+  }
 }

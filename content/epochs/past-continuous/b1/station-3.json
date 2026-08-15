@@ -1,12 +1,12 @@
 {
   "id": "past_continuous_b1_station_3",
   "title": "Перевод-Ловушка (Интерференция)",
-  "description": "Переведи фразы (фокус на \"когда я пришел...\").",
+  "description": "Переведи фразы. В каждом пропуске указан глагол, который нужно поставить в Past Continuous или Past Simple.",
   "category": "grammar",
   "type": "fill-in",
   "items": [
     {
-      "sentence": "I ___ (walk) home when it (start) to rain.",
+      "sentence": "I ___ (walk) home when it ___ (start) to rain.",
       "answer": [
         "was walking",
         "started"

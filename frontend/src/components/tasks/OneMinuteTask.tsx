@@ -40,6 +40,8 @@ interface OneMinuteTaskProps {
   conditions: OneMinuteCondition[]
   /** Сценарий-текст (правки 12.08): описание ситуации + готовые предложения для чтения вслух. */
   script?: { description?: string; sentences?: string[] }
+  largeText?: boolean
+  alwaysPass?: boolean
   onComplete?: (score: number, total: number) => void
 }
 
@@ -74,6 +76,8 @@ export function OneMinuteTask({
   duration = 60,
   conditions,
   script,
+  largeText = false,
+  alwaysPass = false,
   onComplete,
 }: OneMinuteTaskProps) {
   const { say } = useVerbBot()
@@ -145,7 +149,7 @@ export function OneMinuteTask({
   const handleCheck = () => {
     if (phase !== "checking") return
     stop()
-    const correct = metCount >= Math.ceil(total / 2)
+    const correct = alwaysPass || metCount >= Math.ceil(total / 2)
     setReaction({ key: 1, correct })
     say(correct ? "correct" : "wrong")
     play(correct ? "correct" : "wrong")
@@ -165,7 +169,7 @@ export function OneMinuteTask({
   const handleNext = () => {
     if (phase !== "verdict") return
     setPhase("finished")
-    onComplete?.(metCount, total)
+    onComplete?.(alwaysPass ? total : metCount, total)
     say("finish")
     play("fanfare")
   }
@@ -199,8 +203,8 @@ export function OneMinuteTask({
 
   return (
     <div className="flex flex-col gap-4 p-4 max-w-lg mx-auto">
-      <h2 className="font-display text-2xl font-extrabold tracking-tight text-primary-900">{title}</h2>
-      <p className="text-sm text-slate-500">{description}</p>
+      <h2 className={`font-display font-extrabold tracking-tight text-primary-900 ${largeText ? "text-3xl" : "text-2xl"}`}>{title}</h2>
+      <p className={largeText ? "text-base text-slate-600" : "text-sm text-slate-500"}>{description}</p>
 
       {/* Сценарий-текст (правки 12.08): что читать вслух — крупным шрифтом (G6) */}
       {script && (script.description || (script.sentences && script.sentences.length > 0)) && (

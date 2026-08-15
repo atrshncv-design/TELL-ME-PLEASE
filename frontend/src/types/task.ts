@@ -17,6 +17,8 @@ export interface FillItem {
 export interface DragItem {
   verb: string;
   answer: string;
+  form2?: string;
+  form3?: string;
 }
 
 export interface Column {
@@ -189,6 +191,9 @@ export interface TaskData {
   // показать разбор ошибок (зелёные верные / красные ошибочные) и кнопку
   // «Далее» → ResultScreen. Без флага — старое поведение (авто-финиш).
   review?: boolean;
+  instantCheck?: boolean;
+  alwaysPass?: boolean;
+  largeText?: boolean;
 }
 
 /** Одно предложение задания «Кликни на ошибку» (click-mistake). */

@@ -3,6 +3,8 @@
 import { useState, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useSound } from "@/lib/useSound"
+import { useSpeechSynthesis } from "@/lib/useSpeechSynthesis"
+import { useServerTts } from "@/lib/useServerTts"
 import { ResultScreen } from "@/components/ResultScreen"
 
 interface Column {
@@ -14,6 +16,8 @@ interface Column {
 interface DragItem {
   verb: string
   answer: string
+  form2?: string
+  form3?: string
 }
 
 interface DragAndDropTaskProps {
@@ -28,6 +32,8 @@ interface DragAndDropTaskProps {
    * Без флага (undefined/false) — прежнее поведение: авто-финиш через 1.2 с.
    */
   review?: boolean
+  /** Check each drop immediately; omitted keeps the legacy Check flow. */
+  instantCheck?: boolean
   onComplete?: (score: number, total: number) => void
 }
 
@@ -37,6 +43,7 @@ export function DragAndDropTask({
   columns,
   items,
   review,
+  instantCheck,
   onComplete,
 }: DragAndDropTaskProps) {
   const [pool, setPool] = useState<DragItem[]>(() => [...items].sort(() => Math.random() - 0.5))
@@ -48,7 +55,11 @@ export function DragAndDropTask({
   const [checked, setChecked] = useState(false)
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
+  const [instantVerdicts, setInstantVerdicts] = useState<Record<string, boolean>>({})
   const { play } = useSound()
+  const { speak, supported } = useSpeechSynthesis()
+  const serverTts = useServerTts()
+  const hasWordAudio = description.includes("🔊")
 
   const handleDragStart = (item: DragItem, from: string | null) => {
     if (checked) return
@@ -73,6 +84,11 @@ export function DragAndDropTask({
     const { item } = dragging
     removeEverywhere(item.verb)
     setPlaced((prev) => ({ ...prev, [colId]: [...prev[colId], item] }))
+    if (instantCheck) {
+      const correct = item.answer === colId
+      setInstantVerdicts((prev) => ({ ...prev, [item.verb]: correct }))
+      play(correct ? "correct" : "wrong")
+    }
     setDragging(null)
   }
 
@@ -122,6 +138,7 @@ export function DragAndDropTask({
     setPlaced(Object.fromEntries(columns.map((c) => [c.id, []])))
     setDragging(null)
     setChecked(false)
+    setInstantVerdicts({})
     setScore(0)
     setFinished(false)
   }
@@ -154,7 +171,20 @@ export function DragAndDropTask({
               onDragEnd={() => setDragging(null)}
               className="px-3 py-2 bg-white rounded-lg border border-indigo-200 cursor-grab active:cursor-grabbing text-sm font-medium shadow-sm hover:shadow-md select-none"
             >
-              {item.verb}
+              <span>{item.verb}</span>
+              {hasWordAudio && (
+                <button
+                  type="button"
+                  draggable={false}
+                  aria-label={`Услышать ${item.verb}`}
+                  className="ml-1 cursor-pointer text-base"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    if (supported) speak(item.verb)
+                    else serverTts.speak(item.verb)
+                  }}
+                >🔊</button>
+              )}
             </motion.div>
           ))}
         </AnimatePresence>
@@ -175,8 +205,9 @@ export function DragAndDropTask({
               <AnimatePresence>
                 {placed[col.id].map((item, idx) => {
                   let border = "border-slate-200"
-                  if (checked) {
-                    border = item.answer === col.id ? "border-green-500 bg-green-50" : "border-red-500 bg-red-50"
+                  if (checked || instantCheck) {
+                    const correct = instantCheck ? instantVerdicts[item.verb] : item.answer === col.id
+                    if (correct !== undefined) border = correct ? "border-green-500 bg-green-50" : "border-red-500 bg-red-50"
                   }
                   return (
                     <motion.div
@@ -191,7 +222,21 @@ export function DragAndDropTask({
                       onClick={() => handleReturn(col.id, idx)}
                       className={`px-2 py-1 rounded text-xs font-medium border cursor-pointer ${border}`}
                     >
-                      {item.verb}
+                      <span>{item.verb}</span>
+                      {instantCheck && item.form2 && <span className="ml-1 text-slate-500">→ {item.form2}</span>}
+                      {hasWordAudio && (
+                        <button
+                          type="button"
+                          draggable={false}
+                          aria-label={`Услышать ${item.verb}`}
+                          className="ml-1 cursor-pointer text-base"
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            if (supported) speak(item.verb)
+                            else serverTts.speak(item.verb)
+                          }}
+                        >🔊</button>
+                      )}
                     </motion.div>
                   )
                 })}

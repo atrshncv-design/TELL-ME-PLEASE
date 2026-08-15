@@ -50,5 +50,6 @@
       ],
       "min": 3
     }
-  ]
+  ],
+  "alwaysPass": true
 }

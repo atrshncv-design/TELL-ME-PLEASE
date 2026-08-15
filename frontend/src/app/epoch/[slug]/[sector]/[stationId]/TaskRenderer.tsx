@@ -129,6 +129,9 @@ interface TaskData {
   // drag-and-drop (W3-T03 client-fixes-0808): review: true — разбор ошибок
   // после «Проверить» (зелёные верные / красные ошибочные + «Далее»).
   review?: boolean
+  instantCheck?: boolean
+  alwaysPass?: boolean
+  largeText?: boolean
 }
 
 function serializeContext(task: TaskData): string {
@@ -198,7 +201,7 @@ export function TaskRenderer({
     case "quiz":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><QuizTask title={task.title} description={task.description} items={task.items || []} onComplete={onScored} /></div>
     case "drag-and-drop":
-      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><DragAndDropTask title={task.title} description={task.description} columns={task.columns || []} items={task.items || []} review={task.review} onComplete={onScored} /></div>
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><DragAndDropTask title={task.title} description={task.description} columns={task.columns || []} items={task.items || []} review={task.review} instantCheck={task.instantCheck} onComplete={onScored} /></div>
     case "fill-in":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><FillInTask title={task.title} description={task.description} items={task.items || []} onComplete={onScored} /></div>
     case "build-sentence":
@@ -216,7 +219,7 @@ export function TaskRenderer({
     case "choose-story":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><ChooseStoryTask title={task.title} description={task.description} scaffold={task.scaffold || "full"} characters={task.characters || []} places={task.places || []} problems={task.problems || []} sentencePatterns={task.sentencePatterns || []} keywords={task.keywords || []} onComplete={onScored} /></div>
     case "one-minute":
-      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><OneMinuteTask title={task.title} description={task.description} topic={task.topic || ""} duration={task.duration} conditions={task.conditions || []} script={task.script} onComplete={onScored} /></div>
+      return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><OneMinuteTask title={task.title} description={task.description} topic={task.topic || ""} duration={task.duration} conditions={task.conditions || []} script={task.script} largeText={task.largeText} alwaysPass={task.alwaysPass} onComplete={onScored} /></div>
     case "build-chat":
       return <div className={BG}><TaskHeader title={task.title} backHref={backHref} /><BuildChatTask title={task.title} description={task.description} chat={task.chat || []} event={task.event} onComplete={onScored} /></div>
     case "survival-island":
@@ -272,7 +275,7 @@ export function TaskRenderer({
                 📖 Правила
               </button>
             )}
-            <VoiceChatTask title={task.title} description={task.description} dialogue={task.dialogue} sections={task.sections} taskContext={serializeContext(task)} grade={grade} taskId={task.id} checklist={task.checklist} backHref={backHref} onComplete={onScored} />
+            <VoiceChatTask title={task.title} description={task.description} dialogue={task.dialogue} sections={task.sections} taskContext={serializeContext(task)} grade={grade} taskId={task.id} checklist={task.checklist} alwaysPass={task.alwaysPass} backHref={backHref} onComplete={onScored} />
           </div>
           <RulesPanel open={rulesOpen} onClose={() => setRulesOpen(false)} />
         </div>

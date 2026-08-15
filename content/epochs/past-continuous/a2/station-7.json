@@ -1,10 +1,10 @@
 {
   "id": "past_continuous_a2_station_7",
   "title": "Алиби (Речь / Ролевая игра)",
-  "description": "Расспроси партнера: 1. What were you doing yesterday at 5 PM? 2. Were you watching TV at 8 PM? 3. What were you doing when I called you?",
+  "description": "Финальный диалог: прочитай и разыграй разговор Алекса и Тома о пропущенной встрече.",
   "category": "speaking",
   "type": "voice-chat",
-  "task_context": "You are a police detective checking the student's alibi. Use A2 English. Ask the questions from the checklist one by one, in order, and wait for the answer. React to each answer like a detective: show interest, ask one short follow-up question sometimes, gently correct mistakes with was/were + -ing. If the answer is too short, politely ask to say a full sentence (for example: I was watching TV at 8 pm). Speak simple clear English at A2 level, do not switch to Russian.",
+  "task_context": "You are Tom in the final A2 dialogue. Stay in character and follow this exact scenario. Speak short, clear A2 English. Do not switch to Russian. Alex: Hey, Tom! Where were you yesterday? I was calling and texting you all evening! Tom: Oh no! I’m sorry, Alex. I didn’t see your messages. What were you doing? Alex: I was waiting for you at the café. We were planning to meet at 6 p.m., remember? Tom: Yes, I remember! But I was studying at the library yesterday. My phone was in my bag, and I wasn’t checking it. Alex: Oh! I was thinking you were ignoring me. I was walking around the café and looking for you for an hour! Tom: Really? I’m so sorry! What were you doing after the café? Alex: I was going home and feeling really upset. I was wondering why you weren’t answering. Tom: I wasn’t ignoring you, I promise! I was preparing for a big test, so I wasn’t using my phone. Alex: OK, I understand now. Next time, please check your phone more often! Tom: I will! Let’s meet again tomorrow. I won’t be studying then. Alex: Great! What time? Tom: How about 5 p.m.? I won’t be busy then. Alex: Perfect! See you tomorrow! Tom: See you!",
   "checklist": [
     {
       "question": "What were you doing yesterday at 5 PM?",
@@ -59,6 +59,64 @@
       ],
       "min": 1,
       "hint": "Скажи, что ты делал, когда я позвонил: I was doing my homework when you called."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "Alex",
+      "text": "Hey, Tom! Where were you yesterday? I was calling and texting you all evening!"
+    },
+    {
+      "speaker": "Tom",
+      "text": "Oh no! I’m sorry, Alex. I didn’t see your messages. What were you doing?"
+    },
+    {
+      "speaker": "Alex",
+      "text": "I was waiting for you at the café. We were planning to meet at 6 p.m., remember?"
+    },
+    {
+      "speaker": "Tom",
+      "text": "Yes, I remember! But I was studying at the library yesterday. My phone was in my bag, and I wasn’t checking it."
+    },
+    {
+      "speaker": "Alex",
+      "text": "Oh! I was thinking you were ignoring me. I was walking around the café and looking for you for an hour!"
+    },
+    {
+      "speaker": "Tom",
+      "text": "Really? I’m so sorry! What were you doing after the café?"
+    },
+    {
+      "speaker": "Alex",
+      "text": "I was going home and feeling really upset. I was wondering why you weren’t answering."
+    },
+    {
+      "speaker": "Tom",
+      "text": "I wasn’t ignoring you, I promise! I was preparing for a big test, so I wasn’t using my phone."
+    },
+    {
+      "speaker": "Alex",
+      "text": "OK, I understand now. Next time, please check your phone more often!"
+    },
+    {
+      "speaker": "Tom",
+      "text": "I will! Let’s meet again tomorrow. I won’t be studying then."
+    },
+    {
+      "speaker": "Alex",
+      "text": "Great! What time?"
+    },
+    {
+      "speaker": "Tom",
+      "text": "How about 5 p.m.? I won’t be busy then."
+    },
+    {
+      "speaker": "Alex",
+      "text": "Perfect! See you tomorrow!"
+    },
+    {
+      "speaker": "Tom",
+      "text": "See you!"
     }
   ]
 }
