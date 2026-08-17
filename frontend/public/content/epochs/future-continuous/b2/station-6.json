@@ -6,6 +6,15 @@
   "type": "one-minute",
   "topic": "Как будет выглядеть жизнь через 50 лет (мини-выступление). Используй Future Simple (предсказания), Future Continuous (процессы), Present Simple (расписания запусков космических кораблей).",
   "duration": 60,
+  "script": {
+    "description": "Монолог-образец «Life in 50 Years»:",
+    "sentences": [
+      "In my opinion, life in 50 years will be completely different. Technology will change almost every part of our daily routine.",
+      "People will live in smarter cities. Most houses will have AI systems that control everything from temperature to security. Robots will do most of the housework, so people will have more free time. At this time in 50 years, many people will be working from virtual offices, and some will be collaborating with colleagues from different countries or even space stations.",
+      "Transport will also transform. Electric and self-driving cars will replace traditional vehicles. Space tourism will be common. Space ships will leave Earth every day according to a fixed schedule: the first launch takes off at 6 a.m., the second one departs at noon, and the last flight leaves at 8 p.m.",
+      "Education will change too. Students will attend holographic classes, and teachers will guide them from anywhere in the world. Children will learn history by visiting ancient civilisations in virtual reality. Of course, there will be challenges, but I believe life in 50 years will be faster, more connected and more exciting. We will be living in a world that today seems like science fiction."
+    ]
+  },
   "conditions": [
     {
       "label": "Future Simple (предсказания)",

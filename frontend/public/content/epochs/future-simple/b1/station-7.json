@@ -6,6 +6,7 @@
   "type": "one-minute",
   "topic": "Напиши мини-гид для туриста в твоём городе: расписание (Present Simple), договорённости (Present Continuous) и предсказания (will)",
   "duration": 90,
+  "script": {"description": "Пример, как может выглядеть мини-гид для туриста — «Mini Guide for Tourists in My City (B1)»:", "sentences": ["Timetable (Present Simple): The main museum opens at 10 a.m. and closes at 6 p.m. every day except Monday. The city bus runs every 15 minutes from the central station. Most cafes start serving breakfast at 8 a.m., and the park closes at 10 p.m.", "Arrangements (Present Continuous): This week we are meeting tourists at the main square at 11 a.m. On Saturday I am showing my friends the old town, and in the evening we are having dinner in a traditional restaurant. Tomorrow morning I am visiting the art gallery with a group, so you can join us if you want.", "Predictions (will): You will like our city because it is friendly and beautiful. You will enjoy the views from the hill, and you will love the local food. Don't worry about the language – people will help you if you ask. I'm sure you will have a great time here!"]},
   "conditions": [
     {
       "label": "Расписание (Present Simple)",

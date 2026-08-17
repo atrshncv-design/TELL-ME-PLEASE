@@ -1,10 +1,10 @@
 {
   "id": "future_simple_b1_station_5",
   "title": "Сравни Планы (Речь)",
-  "description": "Расскажи о трёх планах на выходные: 100% план (Present Continuous), просто план (going to), предсказание (will).",
+  "description": "Расскажи о трёх планах на выходные: 100% план (Present Continuous), намерения 50/50 (going to), предсказания (will).",
   "category": "speaking",
   "type": "one-minute",
-  "topic": "Расскажи о трёх планах на выходные: 100% план (Present Continuous), просто план (going to), предсказание (will)",
+  "topic": "Расскажи о трёх планах на выходные: 100% план (Present Continuous), намерения 50/50 (going to), предсказания (will)",
   "duration": 60,
   "conditions": [
     {
@@ -22,7 +22,7 @@
       "min": 1
     },
     {
-      "label": "Просто план (be going to)",
+      "label": "Намерения 50/50 (going to)",
       "hint": "I am going to buy a new game.",
       "markers": [
         "going to"
@@ -30,7 +30,7 @@
       "min": 1
     },
     {
-      "label": "Предсказание (will)",
+      "label": "Предсказания (will)",
       "hint": "I think the weather will be bad.",
       "markers": [
         "will",

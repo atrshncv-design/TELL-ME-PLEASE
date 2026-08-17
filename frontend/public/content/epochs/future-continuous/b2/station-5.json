@@ -6,6 +6,14 @@
   "type": "one-minute",
   "topic": "Опиши фото (люди в аэропорту/на конференции). Используй Present Continuous для фото (They are waiting for their flight) и Future Continuous для контекста (At this time tomorrow, they will be lying on the beach).",
   "duration": 60,
+  "script": {
+    "description": "Пример описания фото (образец):",
+    "sentences": [
+      "In the photo I can see people at the airport. They are standing near the gate with their suitcases. Some passengers are sitting on chairs and looking at their phones. A family is talking to an airport worker, and a woman is checking the time on her watch. Everyone looks a bit tired but excited.",
+      "I think these people are going on holiday. At this time tomorrow, they will be lying on the beach and enjoying the sun. Some of them will be swimming in the sea, and others will be drinking cold drinks in a café near the hotel. Children will be playing in the sand and building big castles.",
+      "Maybe in the evening they will be walking along the promenade and taking photos. I'm sure they will be having a great time together."
+    ]
+  },
   "conditions": [
     {
       "label": "Present Continuous для фото",

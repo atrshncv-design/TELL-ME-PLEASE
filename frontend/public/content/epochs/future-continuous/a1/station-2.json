@@ -49,6 +49,51 @@
         "They will be studying?"
       ],
       "answer": "Will they be studying?"
+    },
+    {
+      "question": "not / be / playing / tennis / will / you",
+      "options": [
+        "You will not be playing tennis.",
+        "You will be not playing tennis.",
+        "You not will be playing tennis."
+      ],
+      "answer": "You will not be playing tennis."
+    },
+    {
+      "question": "she / a book / reading / be / not / will",
+      "options": [
+        "She will not be reading a book.",
+        "She will be not reading a book.",
+        "She not will be reading a book."
+      ],
+      "answer": "She will not be reading a book."
+    },
+    {
+      "question": "TV / watching / be / not / they / will",
+      "options": [
+        "They will not be watching TV.",
+        "They will be not watching TV.",
+        "They not will be watching TV."
+      ],
+      "answer": "They will not be watching TV."
+    },
+    {
+      "question": "not / be / sleeping / he / will",
+      "options": [
+        "He will not be sleeping.",
+        "He will be not sleeping.",
+        "He not will be sleeping."
+      ],
+      "answer": "He will not be sleeping."
+    },
+    {
+      "question": "studying / be / not / they / will",
+      "options": [
+        "They will not be studying.",
+        "They will be not studying.",
+        "They not will be studying."
+      ],
+      "answer": "They will not be studying."
     }
   ]
 }

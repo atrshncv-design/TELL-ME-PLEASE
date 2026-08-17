@@ -6,19 +6,51 @@
   "theory": [
     {
       "title": "⏱️ Шаг 1: Суть времени (Что это такое?)",
-      "text": "Привет, ребята! 👋 Мы подошли к самому «длинному» времени в английском языке — Present Perfect Continuous.\nЕсли Present Simple — это 📸 Фотография, а Present Continuous — это 🎥 Видеокамера (прямо сейчас), то Present Perfect Continuous — это Секундомер ⏱️, который запустили в прошлом, и он до сих пор тикает у вас в руках!\nЭто время отвечает за ПРОЦЕСС, который начался в прошлом, длился какое-то время и всё ещё продолжается в настоящем (или только что закончился, но мы видим его свежий результат). Вас интересует не что вы сделали, а как долго вы это делали!\nФормула (Длинный мост):\nПодлежащее + HAVE / HAS + BEEN + Глагол с окончанием -ING\nI have been reading for 2 hours. (Я читаю уже 2 часа — начал 2 часа назад и всё еще читаю).\nShe has been crying. (Она плакала — по глазам видно, процесс только что завершился, есть результат)."
+      "text": "Привет, ребята! 👋 Мы подошли к самому «длинному» времени в английском языке — Present Perfect Continuous.\nЕсли Present Simple — это 📸 Фотография, а Present Continuous — это 🎥 Видеокамера (прямо сейчас), то Present Perfect Continuous — это Секундомер ⏱️, который запустили в прошлом, и он до сих пор тикает у вас в руках!"
     },
     {
-      "title": "🎭 Шаг 2: Две жизни Present Perfect Continuous (Когда использовать?)",
-      "text": "Процесс, который длится до сих пор: Действие началось в прошлом и продолжается в момент речи. Маркеры: for (в течение), since (с тех пор как), all day, how long (как долго?).\nWe have been living here since 2010. (Мы живем здесь с 2010 года и живем сейчас).\nСвежий результат действия: Действие недавно закончилось, и налицо его очевидный результат прямо сейчас.\nLook at her hands! She has been painting the wall. (Посмотри на ее руки! Она красила стену — процесс закончился, но руки грязные).\nI am tired because I have been working all day. (Я устал, потому что работал весь день)."
+      "title": "⏱️ Шаг 1: Суть времени — Формула (Длинный мост)",
+      "text": "Это время отвечает за ПРОЦЕСС, который начался в прошлом, длился какое-то время и всё ещё продолжается в настоящем (или только что закончился, но мы видим его свежий результат). Вас интересует не что вы сделали, а как долго вы это делали!\nФормула (Длинный мост):\nПодлежащее + HAVE / HAS + BEEN + Глагол с окончанием -ING"
+    },
+    {
+      "title": "⏱️ Шаг 1: Суть времени — Примеры",
+      "text": "I have been reading for 2 hours. (Я читаю уже 2 часа — начал 2 часа назад и всё еще читаю).\nShe has been crying. (Она плакала — по глазам видно, процесс только что завершился, есть результат)."
+    },
+    {
+      "title": "🎭 Шаг 2: Процесс, который длится до сих пор",
+      "text": "Процесс, который длится до сих пор: Действие началось в прошлом и продолжается в момент речи. Маркеры: for (в течение), since (с тех пор как), all day, how long (как долго?).\nWe have been living here since 2010. (Мы живем здесь с 2010 года и живем сейчас)."
+    },
+    {
+      "title": "🎭 Шаг 2: Свежий результат действия",
+      "text": "Свежий результат действия: Действие недавно закончилось, и налицо его очевидный результат прямо сейчас.\nLook at her hands! She has been painting the wall. (Посмотри на ее руки! Она красила стену — процесс закончился, но руки грязные).\nI am tired because I have been working all day. (Я устал, потому что работал весь день)."
     },
     {
       "title": "⚔️ Шаг 3: Битва Perfect vs Perfect Continuous (Главное правило ОГЭ)",
-      "text": "Как не путать эти два времени? Задайте вопрос: «Что важнее — процесс или результат?»\nPresent Perfect (Результат/Количество 🎒): Важно сколько штук вы сделали или доведено ли дело до конца.\nI have read 3 books. (Я прочитал 3 книги — важен результат: 3 штуки).\nI have painted the wall. (Я покрасил стену — стена готова).\nPresent Perfect Continuous (Процесс/Длительность ⏱️): Важно, как долго вы занимались этим делом. Само действие может быть не закончено.\nI have been reading for 2 hours. (Я читаю уже 2 часа — важен процесс).\nI have been painting the wall. (Я красил стену — могу быть в краске, но стена еще не докрашена).\n💡 Лайфхак для ОГЭ: Если перед глаголом можно подставить «как долго?» (How long?) или слова for/since — смело пиши Perfect Continuous. Если есть конкретный результат (нарисовал, съел, купил) — пиши Perfect."
+      "text": "Как не путать эти два времени? Задайте вопрос: «Что важнее — процесс или результат?»\nPresent Perfect (Результат/Количество 🎒): Важно сколько штук вы сделали или доведено ли дело до конца.\nI have read 3 books. (Я прочитал 3 книги — важен результат: 3 штуки).\nI have painted the wall. (Я покрасил стену — стена готова)."
+    },
+    {
+      "title": "⚔️ Шаг 3: Perfect Continuous — Процесс/Длительность ⏱️",
+      "text": "Present Perfect Continuous (Процесс/Длительность ⏱️): Важно, как долго вы занимались этим делом. Само действие может быть не закончено.\nI have been reading for 2 hours. (Я читаю уже 2 часа — важен процесс).\nI have been painting the wall. (Я красил стену — могу быть в краске, но стена еще не докрашена)."
+    },
+    {
+      "title": "⚔️ Шаг 3: Лайфхак для ОГЭ 💡",
+      "text": "💡 Лайфхак для ОГЭ: Если перед глаголом можно подставить «как долго?» (How long?) или слова for/since — смело пиши Perfect Continuous. Если есть конкретный результат (нарисовал, съел, купил) — пиши Perfect."
     },
     {
       "title": "🚨 Шаг 4: ГЛАВНАЯ ЛОВУШКА: Stative Verbs (Глаголы состояния)",
       "text": "⚠️ Глаголы чувств, мышления и владения (love, know, want, understand, have) НЕЛЬЗЯ использовать с -ING! Даже если действие длится давно, мы используем обычный Present Perfect.\n❌ I have been knowing him for 5 years. (ОШИБКА!)\n✅ I have known him for 5 years. (Правильно)."
+    },
+    {
+      "title": "🎮 Шаг 5: Проверь себя (Мини-тест)",
+      "text": "Выберите правильную форму:\n1. I (have been reading / have read) this book since morning. I am on page 50.\n2. She (has been writing / has written) three letters today. They are ready to send.\n3. We (have been knowing / have known) each other for 10 years."
+    },
+    {
+      "title": "🎮 Шаг 5: Проверь себя (вопросы 4-5)",
+      "text": "4. Look! It (has been raining / has rained). The ground is wet.\n5. They (have been playing / have played) football for 2 hours and they are very tired."
+    },
+    {
+      "title": "✅ Шаг 5: Ответы для самопроверки",
+      "text": "1. have been reading (процесс с since). 2. has written (результат: 3 письма). 3. have known (ловушка: stative verb). 4. has been raining (свежий результат: мокрая земля). 5. have been playing (процесс + усталость)."
     }
   ],
   "theoryQuiz": [
@@ -68,7 +100,7 @@
     "links": [
       "[Ссылка на Rutube/Yandex коллекцию]"
     ],
-    "sunoPrompt": "Придумай ритмичную песню про Present Perfect Continuous. Объясни, что мы используем have/has + been + V-ing, когда говорим о длительности процесса (for/since). Напомни, что глаголы состояния (know, love) не используют -ing. В припеве должны быть слова: How long, since, for, been doing. Стиль: upbeat pop, 120 bpm."
+    "sunoPrompt": "Write a catchy, rhythmic song for kids that teaches Present Perfect Continuous. ALL lyrics MUST be in English. Explain that we use have/has + been + V-ing when talking about how long something has been happening (for/since). Remind that state verbs like know and love do not use -ing. Include the words How long, since, for, been doing in the chorus. Use simple A1-A2 vocabulary. Upbeat pop style, 120 bpm."
   },
   "sectors": [
     {
@@ -155,6 +187,11 @@
           "id": "station-7",
           "file": "a2/station-7.json",
           "title": "Скоростное Свидание (Диалог)"
+        },
+        {
+          "id": "a2_station_8",
+          "file": "a2/station-8.json",
+          "title": "Новенький в классе (Промпт)"
         }
       ],
       "story": "Лексика хобби и рутины. Сравнение с Present Continuous."
@@ -199,6 +236,11 @@
           "id": "station-6",
           "file": "b1/station-6.json",
           "title": "Интервью с Геймером (Диалог с ИИ)"
+        },
+        {
+          "id": "b1_station_8",
+          "file": "b1/station-8.json",
+          "title": "Компьютерные игры (Промпт)"
         }
       ],
       "story": "Лексика технологий, медиа. Глубокое сравнение Present Perfect vs Present Perfect Continuous."
@@ -243,6 +285,11 @@
           "id": "station-4",
           "file": "b2/station-4.json",
           "title": "Симуляция ОГЭ (Устная часть Task 2)"
+        },
+        {
+          "id": "b2_station_8",
+          "file": "b2/station-8.json",
+          "title": "Жизнь тогда и сейчас (Промпт)"
         }
       ],
       "story": "Безупречное владение всеми 4 настоящими временами для формата ОГЭ."

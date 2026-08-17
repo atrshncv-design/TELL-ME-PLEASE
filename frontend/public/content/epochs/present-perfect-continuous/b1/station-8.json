@@ -1,0 +1,31 @@
+{
+  "id": "b1_station_8",
+  "title": "Компьютерные игры (Промпт)",
+  "description": "Скопируй промпт в чат с ИИ и обсуди компьютерные игры. Станция засчитывается, когда ты реально поговорил.",
+  "category": "speaking",
+  "type": "prompt-card",
+  "promptCard": {
+    "prompt": "Ты — мой сверстник из англоговорящей страны. Мне ___ лет. Давай познакомимся. Узнаем друг у друга в какие компьютерные игры мы сейчас играем, как долго это происходит и что уже успели выиграть). Отвечай на мои вопросы и задавай свои на эту тему. Используй Present Perfect Continuous и Present Perfect. Исправь меня, если я ошибусь, но только в конце нашего диалога и в очень дружеской форме)",
+    "extra": [
+      {
+        "title": "Dialogue: “Let's talk about games!”",
+        "lines": [
+          "You: Hi! I'm Alex. I'm 14 years old. How old are you?",
+          "Friend: Hi Alex! I'm Jamie, I'm 14 too. Nice to meet you! What computer games are you playing now?",
+          "You: I'm playing Minecraft and Roblox. What about you?",
+          "Friend: I've been playing Minecraft for three years, and I've also been playing Fortnite since last summer. How long have you been playing Minecraft?",
+          "You: I have been playing Minecraft for two years. I have built a big castle and a farm.",
+          "Friend: Wow, that's cool! I've been building a huge city in Minecraft, and I've already finished the school and the hospital. What have you won in Roblox?",
+          "You: I have won many small games, but I haven't got the big prize yet. Have you won anything in Fortnite?",
+          "Friend: I've been playing Fortnite for one year, and I've won three tournaments! But I haven't got the first place yet.",
+          "You: Nice! I have been trying to win a tournament for two months, but I haven't succeeded yet.",
+          "Friend: Don't worry! You've been improving a lot, I'm sure you'll win soon. By the way, how long have you been playing computer games in general?",
+          "You: I think I have been playing games since I was six. So… for eight years!",
+          "Friend: Same here! I've been playing games since I was six too. We've been gamers for a long time!",
+          "You: Yes! It's been fun talking to you!",
+          "Friend: Me too! Let's play together sometime!"
+        ]
+      }
+    ]
+  }
+}

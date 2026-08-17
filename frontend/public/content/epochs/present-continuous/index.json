@@ -116,7 +116,7 @@
     "links": [
       "[Ссылка на Rutube/Yandex коллекцию песен]"
     ],
-    "sunoPrompt": "Придумай весёлую песню для учеников на тему Present Simple vs Present Continuous. Объясни, что Present Simple — это то, что мы делаем каждый день (I play every day), а Present Continuous — то, что происходит прямо сейчас (I am playing now). В припеве должны быть слова: now, every day, am, is, are, V-ing. Стиль: upbeat children pop, 120 bpm."
+    "sunoPrompt": "Write a fun song for kids comparing Present Simple vs Present Continuous. ALL lyrics MUST be in English. Explain that Present Simple is for habits (I play every day) and Present Continuous is for things happening right now (I am playing now). Include the words now, every day, am, is, are, V-ing in the chorus. Use simple A1 vocabulary. Upbeat children pop, 120 bpm."
   },
   "sectors": [
     {

@@ -1,0 +1,29 @@
+{
+  "id": "a2_station_8",
+  "title": "Планы на компьютер (Промпт)",
+  "description": "Скопируй промпт в чат с ИИ и обсуди планы. Станция засчитывается, когда ты реально поговорил.",
+  "category": "speaking",
+  "type": "prompt-card",
+  "promptCard": {
+    "prompt": "Ты — мой сверстник из англоговорящей страны. Мне ___ лет. Давай поговорим о планах. Отвечай на мои вопросы и задавай свои на эту тему. Используй Future Simple и be going to do smth. Исправь меня, если я ошибусь, но только в конце нашего диалога и в очень дружеской форме)",
+    "extra": [
+      {
+        "title": "Dialogue: “New Computer Plans”",
+        "lines": [
+          "Alex: Hey, Jamie! What are you going to do with your old computer?",
+          "Jamie: Hi Alex! I'm going to buy a new one. My old computer is too slow for games. What about you?",
+          "Alex: I'm not sure yet. Maybe I'll ask my parents for a new keyboard.",
+          "Jamie: That's a good idea. Will you get a gaming keyboard with lights?",
+          "Alex: Yes, I think I'll get a blue one. It will look cool in my room.",
+          "Jamie: Nice! I'm going to install new games on my new computer. I'll play every day after school!",
+          "Alex: Don't forget about homework! Will you study first?",
+          "Jamie: Hmm… I'm going to try, but games are more interesting! What games will you play?",
+          "Alex: I'll probably play Roblox and Minecraft. They're always fun.",
+          "Jamie: Me too! I'm going to build a huge castle in Minecraft. You'll come and visit, OK?",
+          "Alex: Deal! I'll bring my new keyboard, and we'll play together.",
+          "Jamie: Awesome! It'll be the best gaming session ever!"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "b2_station_8",
+  "title": "Наше будущее (Промпт)",
+  "description": "Скопируй промпт в чат с ИИ и обсуди будущее и планы. Станция засчитывается, когда ты реально поговорил.",
+  "category": "speaking",
+  "type": "prompt-card",
+  "promptCard": {
+    "prompt": "Ты — мой сверстник из англоговорящей страны. Мне ___ лет. Давай поговорим о том, как мы видим нашу жизнь в будущем и какие у нас планы. Отвечай на мои вопросы и задавай свои на эту тему. Используй Present Simple (расписания), Present Continuous (100% планы), going to (намерения), Future Simple (предсказания). Исправь меня, если я ошибусь, но только в конце нашего диалога и в очень дружеской форме)",
+    "extra": [
+      {
+        "title": "Dialogue: “Our Future Plans”",
+        "lines": [
+          "Liza: Hey, Masha! Have you thought about your future? What do you think you will do after school?",
+          "Masha: Hi Liza! Yes, I have. I think I will become a doctor. I really want to help people. What about you?",
+          "Liza: I'm not sure yet, but I think I will work with children, maybe as a teacher or a paediatrician. What are you going to do next year?",
+          "Masha: I'm going to enter medical university. I'm already studying hard for the exams. Are you going to go to university too?",
+          "Liza: Yes, I'm going to study education. I'm really interested in how children learn. By the way, what are you doing this weekend?",
+          "Masha: I'm meeting my cousin on Saturday morning, and I'm having coffee with my best friend on Sunday. What about you?",
+          "Liza: I'm visiting my grandparents on Saturday, and I'm dancing in a competition on Sunday afternoon. Our performance starts at 2 p.m. every Sunday during the season.",
+          "Masha: Nice! By the way, the new school term starts on September 1st, right?",
+          "Liza: Yes, it does. Lessons begin at 8:30 a.m., so I will need to wake up early again!",
+          "Masha: Haha, same here! But I think we will manage. Our future is going to be amazing!",
+          "Liza: Definitely! We will achieve our goals, for sure!"
+        ]
+      }
+    ]
+  }
+}

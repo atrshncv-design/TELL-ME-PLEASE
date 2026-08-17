@@ -1,0 +1,27 @@
+{
+  "id": "b2_station_8",
+  "title": "Жизнь тогда и сейчас (Промпт)",
+  "description": "Скопируй промпт в чат с ИИ и обсуди, как изменилась жизнь подростков. Станция засчитывается, когда ты реально поговорил.",
+  "category": "speaking",
+  "type": "prompt-card",
+  "promptCard": {
+    "prompt": "Ты — мой сверстник из англоговорящей страны. Мне ___ лет. Давай поговорим о том, как изменилась жизнь за последние годы. Что нового появилось и как подростки сейчас живут. Отвечай на мои вопросы и задавай свои на эту тему. Используй Present Perfect Continuous и Present Perfect, Past Simple. Исправь меня, если я ошибусь, но только в конце нашего диалога и в очень дружеской форме)",
+    "extra": [
+      {
+        "title": "Dialogue: “Life Then and Now”",
+        "lines": [
+          "Alex: Hey, Jamie! Our teacher asked us to think about how teenagers' life has changed. What's your opinion?",
+          "Jamie: Hi Alex! Well, it's totally different now. Teens have been growing up with gadgets everywhere.",
+          "Alex: Yeah, before, they hung out in parks, rode bikes and just talked. Now many prefer gaming or streaming videos.",
+          "Jamie: Exactly. And they have been sharing almost everything on TikTok or Snapchat. Some people care more about likes than real conversations.",
+          "Alex: True. But there are good sides too. Teens have been discovering new hobbies online, like drawing, coding or music.",
+          "Jamie: For sure. Before, they joined local clubs or sports teams. Now you can learn anything from YouTube or special apps.",
+          "Alex: I think life is more fun now, but also more distracting.",
+          "Jamie: I agree. Before, there were fewer choices, but also less pressure. Now we can do more, but we also feel we must always be active online.",
+          "Alex: So, both advantages and disadvantages?",
+          "Jamie: Definitely. It's all about how you balance your time."
+        ]
+      }
+    ]
+  }
+}

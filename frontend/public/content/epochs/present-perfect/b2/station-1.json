@@ -8,14 +8,30 @@
     {
       "text": "Last year, the police ___ a dangerous criminal. Since then, the crime rate in our town ___ significantly. Right now, the officers ___ the streets. They ___ five cases this month. Usually, criminals ___ mistakes, and the police ___ them. I ___ an article about this criminal yesterday. I ___ such a dangerous person before.",
       "answers": [
-        "caught",
-        "has fallen",
-        "are patrolling",
-        "have already solved",
-        "make",
-        "find",
-        "read",
-        "have never seen"
+        [
+          "caught"
+        ],
+        [
+          "has fallen"
+        ],
+        [
+          "are patrolling"
+        ],
+        [
+          "have already solved"
+        ],
+        [
+          "make"
+        ],
+        [
+          "find"
+        ],
+        [
+          "read"
+        ],
+        [
+          "have never seen"
+        ]
       ],
       "hints": [
         "(catch)",

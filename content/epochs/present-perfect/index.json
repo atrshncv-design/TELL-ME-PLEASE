@@ -68,7 +68,7 @@
     "links": [
       "[Ссылка на Rutube/Yandex коллекцию песен по Present Perfect]"
     ],
-    "sunoPrompt": "Придумай веселую песню про Present Perfect. В песне объясни, что мы используем have/has + 3-ю форму глагола (V3), когда говорим о жизненном опыте (ever/never) или свежем результате (just/already). Напомни, что если есть слово yesterday, то нужно использовать Past Simple. Стиль: upbeat pop-rock, 120 bpm, educational song."
+    "sunoPrompt": "Write a fun, catchy song for kids that teaches Present Perfect. ALL lyrics MUST be in English. Explain that we use have/has + V3 when talking about life experience (ever/never) or recent results (just/already). Remind that if you see yesterday or last week, use Past Simple instead. Use simple A1-A2 vocabulary. Upbeat pop-rock, educational song, 120 bpm."
   },
   "sectors": [
     {
@@ -78,14 +78,14 @@
       "grade": 5,
       "stations": [
         {
-          "id": "station-1",
-          "file": "a1/station-1.json",
-          "title": "Запуск Реактора (Механика have/has + V3)"
-        },
-        {
           "id": "station-2",
           "file": "a1/station-2.json",
           "title": "Орфографический Щит и Детектор (Формы V3)"
+        },
+        {
+          "id": "station-1",
+          "file": "a1/station-1.json",
+          "title": "Запуск Реактора (Механика have/has + V3)"
         },
         {
           "id": "station-3",

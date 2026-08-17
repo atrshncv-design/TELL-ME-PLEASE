@@ -44,5 +44,6 @@
       ],
       "min": 2
     }
-  ]
+  ],
+  "alwaysPass": true
 }

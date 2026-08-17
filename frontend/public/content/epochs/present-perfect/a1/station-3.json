@@ -94,6 +94,69 @@
         "Has ridden he a bike?"
       ],
       "answer": "Has he ridden a bike?"
+    },
+    {
+      "question": "I ___ my homework yet.",
+      "options": [
+        "haven't done",
+        "haven't did",
+        "didn't do"
+      ],
+      "answer": "haven't done"
+    },
+    {
+      "question": "She ___ to London so far.",
+      "options": [
+        "hasn't been",
+        "hasn't went",
+        "didn't go"
+      ],
+      "answer": "hasn't been"
+    },
+    {
+      "question": "They ___ the film yet.",
+      "options": [
+        "haven't seen",
+        "haven't saw",
+        "didn't see"
+      ],
+      "answer": "haven't seen"
+    },
+    {
+      "question": "He ___ his keys yet.",
+      "options": [
+        "hasn't found",
+        "hasn't finded",
+        "didn't find"
+      ],
+      "answer": "hasn't found"
+    },
+    {
+      "question": "We ___ this book yet.",
+      "options": [
+        "haven't read",
+        "haven't readed",
+        "didn't read"
+      ],
+      "answer": "haven't read"
+    },
+    {
+      "question": "My friend ___ me yet.",
+      "options": [
+        "hasn't called",
+        "hasn't call",
+        "didn't call"
+      ],
+      "answer": "hasn't called"
+    },
+    {
+      "question": "I ___ my room yet.",
+      "options": [
+        "haven't cleaned",
+        "haven't clean",
+        "didn't clean"
+      ],
+      "answer": "haven't cleaned"
     }
   ]
 }

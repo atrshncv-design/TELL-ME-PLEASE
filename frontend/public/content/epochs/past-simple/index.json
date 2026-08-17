@@ -84,7 +84,7 @@
     "links": [
       "[Ссылка на Rutube/Yandex коллекцию]"
     ],
-    "sunoPrompt": "Придумай веселую песню про Past Simple. Объясни, что правильные глаголы добавляют -ed, а неправильные нужно учить наизусть (приведи 3 примера: go-went, see-saw, buy-bought). Напомни, что в отрицаниях и вопросах появляется DID, а глагол возвращается в 1-ю форму. Стиль: upbeat rock-n-roll, 120 bpm."
+    "sunoPrompt": "Write a fun, catchy song for kids that teaches Past Simple. ALL lyrics MUST be in English. Explain that regular verbs add -ed, and irregular verbs must be memorized. Give 3 examples: go-went, see-saw, buy-bought. Explain that DID is used in questions and negatives, and the verb goes back to V1. Use simple A1 vocabulary. Upbeat rock-n-roll style, 120 bpm."
   },
   "sectors": [
     {

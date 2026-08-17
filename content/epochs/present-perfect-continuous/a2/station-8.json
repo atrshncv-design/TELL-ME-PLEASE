@@ -1,0 +1,31 @@
+{
+  "id": "a2_station_8",
+  "title": "Новенький в классе (Промпт)",
+  "description": "Скопируй промпт в чат с ИИ и познакомься с новеньким в классе. Станция засчитывается, когда ты реально поговорил.",
+  "category": "speaking",
+  "type": "prompt-card",
+  "promptCard": {
+    "prompt": "Ты — мой сверстник из англоговорящей страны. Мне ___ лет. Давай познакомимся поближе, как будто ты новенький в классе. Отвечай на мои вопросы и задавай свои на эту тему. Используй Present Perfect Continuous. Исправь меня, если я ошибусь, но только в конце нашего диалога и в очень дружеской форме)",
+    "extra": [
+      {
+        "title": "Примерный диалог",
+        "lines": [
+          "Anna: Hi, Max! How long have you been at this school?",
+          "Max: Hi, Anna! I've been at this school for two years. How about you?",
+          "Anna: I've been here for three years. How long have you been in this class?",
+          "Max: I've been in this class since September.",
+          "Anna: Nice! How long have you been learning English?",
+          "Max: I've been learning English for five years. And you?",
+          "Anna: I've been learning English for six years. How long have you been playing football?",
+          "Max: I've been playing football for three years. Do you play any sport?",
+          "Anna: Yes, I've been dancing for four years.",
+          "Max: Wow! That's cool. How long have you been living in this city?",
+          "Anna: I've been living here since 2018.",
+          "Max: Me too! I've been living here since 2018 as well.",
+          "Anna: Great! See you in class!",
+          "Max: See you!"
+        ]
+      }
+    ]
+  }
+}

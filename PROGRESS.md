@@ -1,9 +1,11 @@
-# Progress — ПАК 150826
+# Пакет правок «Вопросы по игре (3)» — прогресс
 
-- [x] 01 — Проверка системы эпохи 1 и `have got/has got` — done
-- [x] 02 — Present Continuous: инструктаж и станции — done (14 TTS-safe theory slides; A1 «Выход в космос»; A2 smart house; B1 stations 3/5 `alwaysPass`; JSON/index/mirror audit PASS)
-- [x] 03 — Past Simple: инструктаж и станции — done (теория разбита на 8 непустых слайдов без изменения текста; A2 interview/blog placement + prompt-card; B1 comic flags; B2 OGE title + inventions prompt; mirrors/verify PASS)
-- [x] 04 — Past Continuous: инструктаж и станции — done-with-blocker (JSON/индексы/mirrors PASS; «Комикс Катастрофа» BLOCKED: точный клиентский блок не извлечён)
-- [x] 05 — Общие механики `alwaysPass`, `instantCheck` и TTS — done (`npx tsc --noEmit` exit 0; `node scripts/verify-epoch.mjs` `✅ ALL PASSED`; JSON/mirror audit `JSON=358 bad=0`; comic content blocker remains ticket 04)
-- [x] 06 — Финальная проверка пакета — done (`JSON=358 mirrors=358 errors=0`; duplicate/index audit PASS; `node scripts/verify-epoch.mjs` `✅ ALL PASSED`; `npx tsc --noEmit` exit 0; `npm run build` exit 0, 10/10 static pages; SSR smoke 4 representative routes HTTP 200; `git diff --check` PASS; existing Turbopack NFT-tracing warning only; ticket 04 content blocker remains documented)
-- [x] 07 — Добить правки по PDF-версии документа — done (10 правок: PS A1 фильтр 15/15 вопросов; PS B1 Комикс Ошибка alwaysPass; PCt B1 Комикс Катастрофа alwaysPass; PC A2 Описание Ситуации alwaysPass; PC A1 Выход в космос — документный промпт + банк «Жизнь внутри компьютера» (6 вопросов), title → «Выход в космос (Проблемы вселенной)»; PCt B1 Перевод-Ловушка 2 бланка; PCt B1 Контраст Маркеров when-he-came в обеих колонках (хвостовой пробел); PCt B2 клон station-5 убран из индекса; PS B2 station-4 → «Диалог с Экзаменатором (ОГЭ Task 2)»; PCt B2 Дебаты — чтение текста про Гагарина + монолог-образец (one-minute). Факт-чек 6 пунктов PASS. `node scripts/verify-epoch.mjs` `✅ ALL PASSED`; `npx tsc --noEmit` exit 0; python-аудит 12 файлов JSON-валидны + зеркала побайтово идентичны; `diff -rq` чист; без коммита)
+01 — Починить cloze-станции Present Perfect (краш на «Проверить») — done
+02 — Исправить неверные ключи cloze Future Continuous — done
+03 — Present Perfect: порядок станций, отрицания, инструкции — done
+04 — Present Perfect Continuous: инструктаж-сплит, «статичные», alwaysPass, примеры — done
+05 — Future Simple: инструктаж-сплит, подписи типов, примеры — done
+06 — Future Continuous: отрицания, «статичные», образцы — done
+07 — Новые prompt-card станции (PPC ×3, FS ×2) — done
+08 — Музыкальные промпты EN во всех 12 эпохах — done
+09 — Финальная верификация — done
