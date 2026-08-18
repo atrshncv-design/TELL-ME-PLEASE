@@ -1,60 +1,74 @@
 #!/bin/bash
 set -e
 
-# z.ai build script — standalone Next.js + tarball under 50MB
-# Platform: space.z-ai (Alibaba Cloud FC, 50MB inline code limit)
+# z.ai build script — standalone Next.js for space.z-ai platform
+# Platform passes BUILD_ID env var and expects tarball at /tmp/build_fullstack_${BUILD_ID}.tar.gz
+# Platform expects structure: ./start.sh, ./next-service-dist/, ./Caddyfile
 
 cd frontend
 
-# Install dependencies (no postinstall — it's removed from package.json)
+# Install dependencies
 npm ci --loglevel=error 2>&1
 
 # Build standalone
 npm run build 2>&1
 
-# Copy static assets into standalone
-cp -r .next/standalone/.next/static .next/standalone/.next/static 2>/dev/null || true
-cp -r public .next/standalone/public 2>/dev/null || true
+# Create staging directory
+STAGING="/tmp/build_staging"
+rm -rf "$STAGING"
+mkdir -p "$STAGING/next-service-dist"
 
-# ── Trim INSIDE standalone (this is what gets tarballed) ──
-STANDALONE_NM=".next/standalone/node_modules"
+# Copy standalone output into next-service-dist/
+cp -r .next/standalone/* "$STAGING/next-service-dist/"
+cp -r .next/standalone/.next "$STAGING/next-service-dist/.next" 2>/dev/null || true
 
-# 1) sharp musl binaries — 17MB, not needed on glibc server
+# Copy static assets
+cp -r .next/standalone/.next/static "$STAGING/next-service-dist/.next/static" 2>/dev/null || true
+cp -r public "$STAGING/next-service-dist/public" 2>/dev/null || true
+
+# Trim musl binaries (17MB, not needed on glibc)
+STANDALONE_NM="$STAGING/next-service-dist/node_modules"
 rm -rf "$STANDALONE_NM/@img/sharp-libvips-linuxmusl-x64" 2>/dev/null || true
 rm -rf "$STANDALONE_NM/@img/sharp-libvips-linux-x64" 2>/dev/null || true
 rm -rf "$STANDALONE_NM/sharp/build" 2>/dev/null || true
 
-# 2) Next.js build cache + source maps
-rm -rf .next/cache 2>/dev/null || true
-rm -rf .next/standalone/.next/cache 2>/dev/null || true
-
-# 3) node_modules caches
+# Trim caches + docs + type definitions
+rm -rf "$STAGING/next-service-dist/.next/cache" 2>/dev/null || true
 rm -rf "$STANDALONE_NM/.cache" 2>/dev/null || true
-
-# 4) TypeScript type definitions (not needed at runtime)
 find "$STANDALONE_NM" -name "*.d.ts" -delete 2>/dev/null || true
 find "$STANDALONE_NM" -name "*.d.mts" -delete 2>/dev/null || true
-
-# 5) Documentation
 find "$STANDALONE_NM" -type d \( -name "doc" -o -name "docs" -o -name "example" -o -name "examples" \) -exec rm -rf {} + 2>/dev/null || true
-
-# 6) License/readme files
 find "$STANDALONE_NM" -maxdepth 2 -name "*.md" -delete 2>/dev/null || true
 
-# Create tarball from standalone output
-cd .next/standalone
-tar -czf /tmp/next-standalone.tar.gz .
-cd ../..
+# Copy Caddyfile to staging root
+cp ../Caddyfile "$STAGING/Caddyfile" 2>/dev/null || true
 
-# Check size
-SIZE=$(du -m /tmp/next-standalone.tar.gz | cut -f1)
-echo "Tarball size: ${SIZE}MB"
+# Copy start.sh to staging root
+cat > "$STAGING/start.sh" << 'STARTEOF'
+#!/bin/bash
+set -e
+cd /home/z/my-project/next-service-dist
+if [ -f .env ]; then
+  set -a; source .env; set +a
+fi
+PORT=3000 HOSTNAME=0.0.0.0 exec node server.js
+STARTEOF
+chmod +x "$STAGING/start.sh"
+
+# Create tarball at platform-expected path
+TARBALL="/tmp/build_fullstack_${BUILD_ID}.tar.gz"
+cd "$STAGING"
+tar -czf "$TARBALL" .
+cd /tmp
+rm -rf "$STAGING"
+
+# Verify
+SIZE=$(du -m "$TARBALL" | cut -f1)
+echo "Tarball: $TARBALL (${SIZE}MB)"
 
 if [ "$SIZE" -gt 50 ]; then
   echo "ERROR: Tarball exceeds 50MB limit!"
-  echo "Largest packages:"
-  du -h "$STANDALONE_NM"/* 2>/dev/null | sort -rh | head -10
   exit 1
 fi
 
-echo "Build complete. Tarball ready at /tmp/next-standalone.tar.gz"
+echo "Build complete."
