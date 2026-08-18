@@ -85,18 +85,12 @@ _Уроки прошлых попыток учтены: см. «КРИТИЧЕС
      разберись почему и адаптируй (не удаляй вслепую).
    - В итоговом отчёте перечисли: какие файлы были взяты с сервера, что
      адаптировано, что осталось как было.
-3. `cd frontend && npm ci` (не npm install).
-4. Собери прод-версию: `npm run build`.
-   ⚠️ Если падает с ошибкой «Could not find a production build» / про
-   `experimental-webpack-build-worker` — Node 22: запускай так:
-   `NODE_OPTIONS=--experimental-webpack-build-worker npm run build`.
-   Если ошибка про размер чанков/память — `NODE_OPTIONS="--max-old-space-size=4096" npm run build`.
-5. **Проверь ворона-сигнатуру** (build id новой сборки) — запиши и сообщи в
-   итоговом отчёте. Для проверки, что выкатилась НОВАЯ сборка, сравни с
-   предыдущим build id. Посмотреть: открыть любую страницу (например
-   `https://<твой-subdomain>.space.z-ai.ru/mission`) и в исходном коде найти
-   `self.__next_f.push` / id сборки, либо сравнить hash `_next/static/chunks/...`.
-6. **Выставь переменные окружения** (секреты НЕ в репозитории — задай в консоли
+3. `cd frontend && npm ci --ignore-scripts` (⚠️ **обязательно** `--ignore-scripts`:
+   в `package.json` стоит `"postinstall": "next build"`, который запускает сборку
+   во время установки зависимостей. Это ломает деплой, потому что build идёт
+   до того, как выставлены переменные окружения. Флаг `--ignore-scripts`
+   отключает postinstall, и мы запускаем build вручную на шаге 4).
+4. **Выставь переменные окружения** (секреты НЕ в репозитории — задай в консоли
    space.z-ai перед стартом; шаблон в `frontend/.env.example`):
    - `LLM_API_KEYS` — **обязательно** (ключи LLM-провайдера через запятую,
      формат `provider:key` или голый ключ — см. `frontend/src/server/chat/
@@ -116,6 +110,16 @@ _Уроки прошлых попыток учтены: см. «КРИТИЧЕС
    не живёт. Проверка голоса: открыть голосовую станцию → бот задаёт вопрос
    вслух (иконка 🔊, кнопка «Нажми, чтобы говорить» — распознавание через
    SpeechRecognition; в Chrome/Edge работает, в Firefox — текстовый фолбэк).
+5. Собери прод-версию: `npm run build`.
+   ⚠️ Если падает с ошибкой «Could not find a production build» / про
+   `experimental-webpack-build-worker` — Node 22: запускай так:
+   `NODE_OPTIONS=--experimental-webpack-build-worker npm run build`.
+   Если ошибка про размер чанков/память — `NODE_OPTIONS="--max-old-space-size=4096" npm run build`.
+6. **Проверь ворона-сигнатуру** (build id новой сборки) — запиши и сообщи в
+   итоговом отчёте. Для проверки, что выкатилась НОВАЯ сборка, сравни с
+   предыдущим build id. Посмотреть: открыть любую страницу (например
+   `https://<твой-subdomain>.space.z-ai.ru/mission`) и в исходном коде найти
+   `self.__next_f.push` / id сборки, либо сравнить hash `_next/static/chunks/...`.
 7. Следуй процессу деплоя space.z-ai: опубликуй `frontend/` как Next.js-приложение
    на новом subdomain. Сообщи итоговый URL.
 8. **Дымовой тест после деплоя** (каждый URL должен вернуть HTTP 200; затем
