@@ -2,6 +2,10 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "allowScripts": {
+    "sharp": true,
+    "unrs-resolver": true
+  },
   "scripts": {
     "dev": "next start -p 3000",
     "dev:local": "next dev --turbopack",
