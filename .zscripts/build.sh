@@ -7,10 +7,10 @@ set -e
 cd frontend
 
 # Install dependencies (no postinstall — it's removed from package.json)
-npm ci 2>/dev/null
+npm ci --loglevel=error 2>&1
 
 # Build standalone
-NODE_OPTIONS="--experimental-webpack-build-worker" npm run build 2>/dev/null
+npm run build 2>&1
 
 # Copy static assets into standalone
 cp -r .next/standalone/.next/static .next/standalone/.next/static 2>/dev/null || true
