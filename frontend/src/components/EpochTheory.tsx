@@ -74,6 +74,43 @@ function theoryTextToLines(text: string): string {
     .replace(/([.!?…)])\s+(?=ИЛИ\s)/g, "$1\n")
 }
 
+/** Проверяет, является ли строка примером (английское предложение). */
+function isExampleLine(line: string): boolean {
+  const trimmed = line.trim()
+  if (!trimmed) return false
+  // Маркеры примеров
+  if (/^[❌✅]/.test(trimmed)) return true
+  // Английское предложение: начинается с заглавной, содержит глагол/точку, souvent с переводом в скобках
+  if (/^[A-Z]/.test(trimmed) && /[.!?]/.test(trimmed) && /[()]/.test(trimmed)) return true
+  // Строка с формулой (Подлежащее + WILL + ...)
+  if (/^Подлежащее\s/i.test(trimmed)) return true
+  return false
+}
+
+/** Разбивает текст слайда на сегменты: обычный текст и примеры. */
+function parseSlideSegments(text: string): Array<{ type: "text" | "example"; content: string }> {
+  const lines = text.split("\n")
+  const segments: Array<{ type: "text" | "example"; content: string }> = []
+  let buffer = ""
+
+  for (const line of lines) {
+    if (isExampleLine(line)) {
+      // Сохраняем накопленный текст
+      if (buffer.trim()) {
+        segments.push({ type: "text", content: buffer.trim() })
+        buffer = ""
+      }
+      segments.push({ type: "example", content: line.trim() })
+    } else {
+      buffer += (buffer ? "\n" : "") + line
+    }
+  }
+  if (buffer.trim()) {
+    segments.push({ type: "text", content: buffer.trim() })
+  }
+  return segments
+}
+
 export default function EpochTheory({
   theory,
   theoryQuiz,
@@ -467,9 +504,29 @@ export default function EpochTheory({
                                   </p>
                                 </div>
                               </div>
-                              <p className="whitespace-pre-line text-base font-medium leading-relaxed text-slate-600">
-                                {theoryTextToLines(slides[slide - 1].text)}
-                              </p>
+                              {/* Сегментированный рендеринг: обычный текст + примеры */}
+                              <div className="space-y-3">
+                                {parseSlideSegments(slides[slide - 1].text).map(
+                                  (seg, si) =>
+                                    seg.type === "text" ? (
+                                      <p
+                                        key={si}
+                                        className="whitespace-pre-line text-base font-medium leading-relaxed text-slate-600"
+                                      >
+                                        {seg.content}
+                                      </p>
+                                    ) : (
+                                      <div
+                                        key={si}
+                                        className="rounded-xl border border-amber-200 bg-amber-50/80 px-4 py-3 text-center shadow-sm"
+                                      >
+                                        <p className="whitespace-pre-line text-base font-semibold italic leading-relaxed text-amber-900">
+                                          {seg.content}
+                                        </p>
+                                      </div>
+                                    ),
+                                )}
+                              </div>
                             </div>
                           </div>
                         )}
