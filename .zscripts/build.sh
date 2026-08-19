@@ -43,6 +43,10 @@ find "$STANDALONE_NM" -maxdepth 2 -name "*.md" -delete 2>/dev/null || true
 # Copy Caddyfile to staging root
 cp ../Caddyfile "$STAGING/Caddyfile" 2>/dev/null || true
 
+# Copy .env if exists (platform expects it in tarball)
+cp ../.env "$STAGING/next-service-dist/.env" 2>/dev/null || true
+cp ../.env "$STAGING/.env" 2>/dev/null || true
+
 # Copy start.sh to staging root
 cat > "$STAGING/start.sh" << 'STARTEOF'
 #!/bin/bash
