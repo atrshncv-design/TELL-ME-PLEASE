@@ -96,7 +96,11 @@ export function OneMinuteTask({
   )
 
   // Push-to-talk (как в VoiceChatTask): распознанная фраза добавляется в текст.
+  // pravki-240826 (тикет 02): autoRestart — в минутном монологе микрофон не
+  // глохнет после каждой фразы («синтезатор отключается»), слушает до «Готово»
+  // или конца таймера (они вызывают stop() и гасят флаг желания слушать).
   const { listening, supported, error, start, stop } = useSpeechRecognition({
+    autoRestart: true,
     onResult: (text) => {
       if (phase !== "speaking") return
       setTranscript((prev) => (prev ? `${prev} ${text}` : text))

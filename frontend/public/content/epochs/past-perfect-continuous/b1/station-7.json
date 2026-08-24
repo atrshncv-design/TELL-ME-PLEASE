@@ -38,5 +38,15 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Образцы — Мини-Проект «Мой Трудный День»:",
+    "sentences": [
+      "I had been studying for my exams for four hours before I finally took a break, and I was completely exhausted.",
+      "I had been working on my project since morning before I finished it in the evening, so I felt very relieved.",
+      "I had been cleaning my room for two hours before my friends arrived, and I was sweaty but happy.",
+      "I had been cooking dinner for an hour before my family came home, and I was really hungry.",
+      "I had been walking my dog for thirty minutes before it started raining, so I was wet and cold."
+    ]
+  }
 }

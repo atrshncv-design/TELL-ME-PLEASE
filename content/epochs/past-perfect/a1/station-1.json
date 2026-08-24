@@ -6,43 +6,43 @@
   "type": "fill-in",
   "items": [
     {
-      "sentence": "I ___ (finish) my homework before dinner.",
+      "sentence": "I ___ (finish) my homework before dinner came.",
       "answer": "had finished"
     },
     {
-      "sentence": "She ___ (clean) her room.",
+      "sentence": "She ___ (clean) her room before her friends arrived.",
       "answer": "had cleaned"
     },
     {
-      "sentence": "We ___ (play) tennis.",
+      "sentence": "We ___ (play) tennis before it started to rain.",
       "answer": "had played"
     },
     {
-      "sentence": "He ___ (wash) the car.",
+      "sentence": "He ___ (wash) the car before his dad asked him to do it.",
       "answer": "had washed"
     },
     {
-      "sentence": "They ___ (visit) the museum.",
+      "sentence": "They ___ (visit) the museum before it closed for the day.",
       "answer": "had visited"
     },
     {
-      "sentence": "My mum ___ (cook) dinner.",
+      "sentence": "My mum ___ (cook) dinner before we got home.",
       "answer": "had cooked"
     },
     {
-      "sentence": "You ___ (watch) the film.",
+      "sentence": "You ___ (watch) the film before we talked about it.",
       "answer": "had watched"
     },
     {
-      "sentence": "Tom ___ (paint) the wall.",
+      "sentence": "Tom ___ (paint) the wall before his mum saw it.",
       "answer": "had painted"
     },
     {
-      "sentence": "The dog ___ (eat) its food.",
+      "sentence": "The dog ___ (eat) its food before we called it.",
       "answer": "had eaten"
     },
     {
-      "sentence": "It ___ (stop) raining.",
+      "sentence": "It ___ (stop) raining before we left the house.",
       "answer": "had stopped"
     }
   ]

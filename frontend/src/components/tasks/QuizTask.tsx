@@ -19,6 +19,10 @@ interface QuizItem {
   wrongExplanation?: string
   explanation?: string
   hint?: string
+  // pravki-240826 (тикет 04): полное правильное предложение — показывается
+  // после ответа («чтобы ученик сам себя смог проверить», Финальный Босс).
+  // Если поле есть — авто-переход 900 мс заменяется баннером + кнопкой «Далее».
+  answerSentence?: string
 }
 
 interface QuizTaskProps {
@@ -89,6 +93,25 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
   // Очистка таймера авто-перехода при размонтировании (уход со страницы).
   useEffect(() => clearTimer, [])
 
+  /** Переход к следующему вопросу (или финал) — общий для авто-перехода и
+   *  кнопки «Далее» в reveal-режиме (тикет 04, pravki-240826). */
+  const advance = (finalScore: number) => {
+    timerRef.current = null
+    if (current + 1 < items.length) {
+      const nextIndex = current + 1
+      setCurrent(nextIndex)
+      // Restore any previously-saved state for the next question, or reset.
+      const nextEntry = history[nextIndex]
+      setSelected(nextEntry ? nextEntry.selected : null)
+      setShowResult(nextEntry ? nextEntry.showResult : false)
+    } else {
+      setFinished(true)
+      onComplete?.(finalScore, items.length)
+      say("finish")
+      play("fanfare")
+    }
+  }
+
   const handleSelect = (option: string) => {
     if (showResult || finished) return
     clearTimer()
@@ -109,24 +132,13 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
     })
     setShowResult(true)
 
+    // pravki-240826 (тикет 04): у item с answerSentence авто-перехода нет —
+    // ученик читает правильное предложение и жмёт «Далее» (advance).
+    if (item.answerSentence) return
+
     // Авто-переход: вердикт виден ~900 мс, затем следующий вопрос (или
     // ResultScreen в конце — onComplete(score, total) вызывается ровно один раз).
-    timerRef.current = setTimeout(() => {
-      timerRef.current = null
-      if (current + 1 < items.length) {
-        const nextIndex = current + 1
-        setCurrent(nextIndex)
-        // Restore any previously-saved state for the next question, or reset.
-        const nextEntry = history[nextIndex]
-        setSelected(nextEntry ? nextEntry.selected : null)
-        setShowResult(nextEntry ? nextEntry.showResult : false)
-      } else {
-        setFinished(true)
-        onComplete?.(nextScore, items.length)
-        say("finish")
-        play("fanfare")
-      }
-    }, 900)
+    timerRef.current = setTimeout(() => advance(nextScore), 900)
   }
 
   // Read-only navigation: jump to a question index and restore its saved state.
@@ -311,8 +323,46 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
         )}
       </AnimatePresence>
 
+      {/* pravki-240826 (тикет 04): reveal-режим — у item есть answerSentence.
+          После ответа показываем полное правильное предложение (самопроверка,
+          запрос клиентки для «Финального Босса») и кнопку «Далее» вместо
+          авто-перехода. */}
+      <AnimatePresence>
+        {showResult && item.answerSentence && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="mt-3 flex flex-col gap-3"
+          >
+            <div
+              className={`rounded-2xl px-4 py-3 text-center ${
+                selected === item.answer
+                  ? "bg-success/10 border-2 border-success"
+                  : "bg-primary-50 border-2 border-primary-200"
+              }`}
+            >
+              <div className="text-[11px] font-bold uppercase tracking-wide text-slate-400">
+                Правильное предложение
+              </div>
+              <p className="mt-1 font-display text-lg font-extrabold leading-snug text-slate-800">
+                {item.answerSentence}
+              </p>
+            </div>
+            <motion.button
+              whileTap={{ scale: 0.97 }}
+              onClick={() => advance(score)}
+              className="min-h-[44px] rounded-2xl bg-primary-600 px-6 py-2.5 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
+            >
+              {current + 1 < items.length ? "Далее →" : "Завершить →"}
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Мгновенная проверка (Q5): кнопок «Проверить»/«Далее» у quiz больше нет —
-          клик по варианту сразу даёт вердикт и авто-переход через ~900 мс. */}
+          клик по варианту сразу даёт вердикт и авто-переход через ~900 мс.
+          Исключение — reveal-режим выше (answerSentence): там «Далее» явная. */}
     </div>
   )
 }

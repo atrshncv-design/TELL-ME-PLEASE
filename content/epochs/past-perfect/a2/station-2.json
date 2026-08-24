@@ -1,45 +1,127 @@
 {
   "id": "past_perfect_a2_station_2",
-  "title": "Сборка Сцены (Синтаксис)",
-  "description": "Собери предложения из слов (Past Perfect + Past Simple, союзы before / by the time).",
+  "title": "Собери утвердительное предложение из слов",
+  "description": "Собери утвердительное предложение из слов (Past Perfect + Past Simple, союзы before / by the time). Нажимай на части — они встанут в строку.",
   "category": "grammar",
-  "type": "quiz",
-  "items": [
-    {
-      "question": "left / had / before / I / arrived / They",
-      "options": [
-        "They had left before I arrived",
-        "They left had before I arrived",
-        "Had they left before I arrived?"
-      ],
-      "answer": "They had left before I arrived"
-    },
-    {
-      "question": "finished / had / We / time / By / the / he / came",
-      "options": [
-        "We had finished by the time he came",
-        "We finished had by the time he came",
-        "Had we finished by the time he came?"
-      ],
-      "answer": "We had finished by the time he came"
-    },
-    {
-      "question": "eaten / before / dinner / had / We / went / we / out",
-      "options": [
-        "We had eaten dinner before we went out",
-        "We eaten had dinner before we went out",
-        "Had we eaten dinner before we went out?"
-      ],
-      "answer": "We had eaten dinner before we went out"
-    },
-    {
-      "question": "started / had / The / film / arrived / we / before",
-      "options": [
-        "The film had started before we arrived",
-        "The film started had before we arrived",
-        "Had the film started before we arrived?"
-      ],
-      "answer": "The film had started before we arrived"
-    }
-  ]
+  "type": "sentence-builder",
+  "sentenceBuilder": {
+    "items": [
+      {
+        "columns": [
+          {
+            "role": "subject",
+            "label": "Подлежащее",
+            "hint": "кто/что?",
+            "words": [
+              "They"
+            ]
+          },
+          {
+            "role": "verb",
+            "label": "Сказуемое",
+            "hint": "что делал сначала? (had + V3)",
+            "words": [
+              "had left"
+            ]
+          },
+          {
+            "role": "adverbial",
+            "label": "Обстоятельство",
+            "hint": "до какого момента? (before / by the time)",
+            "words": [
+              "before I arrived"
+            ]
+          }
+        ],
+        "answer": "They had left before I arrived."
+      },
+      {
+        "columns": [
+          {
+            "role": "subject",
+            "label": "Подлежащее",
+            "hint": "кто/что?",
+            "words": [
+              "We"
+            ]
+          },
+          {
+            "role": "verb",
+            "label": "Сказуемое",
+            "hint": "что делал сначала? (had + V3)",
+            "words": [
+              "had finished"
+            ]
+          },
+          {
+            "role": "adverbial",
+            "label": "Обстоятельство",
+            "hint": "до какого момента? (before / by the time)",
+            "words": [
+              "by the time he came"
+            ]
+          }
+        ],
+        "answer": "We had finished by the time he came."
+      },
+      {
+        "columns": [
+          {
+            "role": "subject",
+            "label": "Подлежащее",
+            "hint": "кто/что?",
+            "words": [
+              "We"
+            ]
+          },
+          {
+            "role": "verb",
+            "label": "Сказуемое",
+            "hint": "что делал сначала? (had + V3)",
+            "words": [
+              "had eaten dinner"
+            ]
+          },
+          {
+            "role": "adverbial",
+            "label": "Обстоятельство",
+            "hint": "до какого момента? (before / by the time)",
+            "words": [
+              "before we went out"
+            ]
+          }
+        ],
+        "answer": "We had eaten dinner before we went out."
+      },
+      {
+        "columns": [
+          {
+            "role": "subject",
+            "label": "Подлежащее",
+            "hint": "кто/что?",
+            "words": [
+              "The film"
+            ]
+          },
+          {
+            "role": "verb",
+            "label": "Сказуемое",
+            "hint": "что делал сначала? (had + V3)",
+            "words": [
+              "had started"
+            ]
+          },
+          {
+            "role": "adverbial",
+            "label": "Обстоятельство",
+            "hint": "до какого момента? (before / by the time)",
+            "words": [
+              "before we arrived"
+            ]
+          }
+        ],
+        "answer": "The film had started before we arrived."
+      }
+    ]
+  }
 }

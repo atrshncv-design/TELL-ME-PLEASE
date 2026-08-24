@@ -34,5 +34,15 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Пример monologue: My Goals for the Next 5 Years",
+    "sentences": [
+      "Today I would like to talk about my goals for the next five years. I have many plans, and I believe I will achieve them.",
+      "First of all, I want to continue my education. By the time I am 20, I will have entered a good university. I will probably study computer science because I am interested in technology. This time next year, I will be studying hard for my exams and preparing all my documents.",
+      "In the future, I think I will become a programmer. By the end of these five years, I will have learned several programming languages and completed some important projects. I also want to improve my English. By 2030, I will have reached a C1 level, and I will be able to work in international companies.",
+      "Of course, I will not only study. I think I will visit at least three different countries. While I am travelling, I will be learning about different cultures and making new friends.",
+      "I know that life will not always be easy, but I will try my best. I believe that in five years I will be a more confident and successful person."
+    ]
+  }
 }

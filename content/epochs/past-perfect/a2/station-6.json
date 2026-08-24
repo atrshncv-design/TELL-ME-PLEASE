@@ -9,7 +9,7 @@
   "conditions": [
     {
       "label": "Используй Past Perfect (had + V3) — 3 предложения о том, что ты сделал ДО сна",
-      "hint": "I had finished my homework before I went to bed. / I had brushed my teeth.",
+      "hint": "I had finished my homework before I went to bed. / I had brushed my teeth before I switched off the light. / I had read two chapters of my book when my mum came home.",
       "markers": [
         "had",
         "finished",
@@ -25,13 +25,15 @@
         "said",
         "met",
         "bought",
-        "took"
+        "took",
+        "switched",
+        "chapters"
       ],
       "min": 3
     },
     {
       "label": "Покажи второе действие (Past Simple): before / when",
-      "hint": "...before I went to bed. / ...when my mum came home.",
+      "hint": "I had packed my school bag before I fell asleep. / I had checked my phone when my friend called me.",
       "markers": [
         "before",
         "went",
@@ -40,7 +42,10 @@
         "came",
         "watched",
         "played",
-        "read"
+        "read",
+        "packed",
+        "checked",
+        "phone"
       ],
       "min": 1
     }

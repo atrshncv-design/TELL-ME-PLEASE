@@ -28,5 +28,13 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Примеры описания фотографии + Future Perfect:",
+    "sentences": [
+      "Вариант 1 — люди в офисе. In the photo I can see people in an office. They are sitting around a big table and discussing a new project. Some of them are looking at their laptops, and one man is writing notes. Everyone looks focused and serious. I think they are planning something important. By the end of the week, they will have finished all the preparations. By Friday, they will have signed the contract with their new partner. At this time next week, they will probably be celebrating their success.",
+      "Вариант 2 — люди на конференции. In the photo I can see people at a business conference. They are listening to a speaker and asking questions. Some participants are taking photos of the presentation, and others are talking to each other during a break. I think they are learning about new technologies. By the end of the conference, they will have attended many useful workshops. By tomorrow evening, they will have met several new business partners. I'm sure they will have got a lot of new ideas by the time they go home.",
+      "Вариант 3 — команда за работой. In the photo I can see a team of young professionals. They are standing near a whiteboard and brainstorming ideas. One woman is pointing at a diagram, and two men are writing something on the board. They are clearly working on an important task. By the end of the day, they will have created a detailed plan. By next Monday, they will have presented their idea to the boss. I think they will have solved most of the problems by the end of the week."
+    ]
+  }
 }

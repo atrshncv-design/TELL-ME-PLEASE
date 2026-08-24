@@ -6,7 +6,7 @@
   "type": "quiz",
   "items": [
     {
-      "question": "At 5 PM I ___ football.",
+      "question": "At 5 PM I (was playing / had been playing) football.",
       "options": [
         "was playing",
         "had been playing"
@@ -14,7 +14,7 @@
       "answer": "was playing"
     },
     {
-      "question": "I ___ football for an hour when it started to rain.",
+      "question": "I (was playing / had been playing) football for an hour when it started to rain.",
       "options": [
         "was playing",
         "had been playing"
@@ -22,15 +22,15 @@
       "answer": "had been playing"
     },
     {
-      "question": "When she came, we ___ TV.",
+      "question": "When she came, we (were watching / had been watching) TV.",
       "options": [
         "were watching",
         "had been watching"
       ],
-      "answer": "had been watching"
+      "answer": "were watching"
     },
     {
-      "question": "She ___ a book at 5 PM.",
+      "question": "She (was reading / had been reading) a book at 5 PM.",
       "options": [
         "was reading",
         "had been reading"
@@ -38,7 +38,7 @@
       "answer": "was reading"
     },
     {
-      "question": "They ___ for 3 hours before the exam.",
+      "question": "They (were studying / had been studying) for 3 hours before the exam.",
       "options": [
         "were studying",
         "had been studying"

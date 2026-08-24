@@ -6,7 +6,7 @@
   "type": "cloze",
   "rounds": [
     {
-      "text": "Yesterday was a big day. I ___ for my exams for months. I ___ two tests. Right now, I ___ for the results. I ___ in the hall for 2 hours when the teacher finally called my name. Usually, I ___ nervous, but yesterday I was stressed. I ___ 3 books to get ready. My friend ___ me all week. He ___ a great support.",
+      "text": "Yesterday was a big day. I ___ for my exams for months. I ___ two tests. Well, at 3 o'clock I ___ for the results. I ___ in the hall for 2 hours when the teacher finally called my name. Usually, I ___ nervous, but yesterday I was stressed. I ___ 3 books to get ready. My friend ___ me all week. He ___ a great support.",
       "answers": [
         [
           "had been preparing"
@@ -21,6 +21,7 @@
           "had been sitting"
         ],
         [
+          "don't get",
           "do not get"
         ],
         [

@@ -17,11 +17,21 @@
     },
     {
       "label": "Маркер времени BY",
-      "hint": "We will have started the campaign by 5 PM.",
+      "hint": "We will have started the campaign by 5 p.m. / He will have left the office by noon. / They will have built the new school by next year. / She will have saved enough money by December. / I will have finished my homework by bedtime.",
       "markers": [
         "by"
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Примеры (результат к моменту — will have + V3):",
+    "sentences": [
+      "By 5 p.m. tomorrow, we will have signed the contract.",
+      "By next week, they will have finished the project.",
+      "By the end of the month, she will have passed all her exams.",
+      "By Monday morning, I will have read the whole book.",
+      "By the time you arrive, we will have prepared everything."
+    ]
+  }
 }

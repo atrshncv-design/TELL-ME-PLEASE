@@ -1,51 +1,49 @@
 {
   "id": "past_perfect_a1_station_2",
   "title": "Две Точки (До / После)",
-  "description": "Соедини первую часть (Точка 1 - Past Perfect) со второй частью (Точка 2 - Past Simple).",
+  "description": "Прочитай пару событий и выбери, какое произошло ПЕРВЫМ (Past Perfect — точка 1).",
   "category": "grammar",
-  "type": "drag-and-drop",
-  "columns": [
-    {
-      "id": "p1",
-      "label": "when she called."
-    },
-    {
-      "id": "p2",
-      "label": "before we arrived."
-    },
-    {
-      "id": "p3",
-      "label": "by the time he came."
-    },
-    {
-      "id": "p4",
-      "label": "before it started to rain."
-    },
-    {
-      "id": "p5",
-      "label": "when I woke up."
-    }
-  ],
+  "type": "quiz",
   "items": [
     {
-      "verb": "I had done my homework",
-      "answer": "p1"
+      "question": "I had done my homework before she called. Что было ПЕРВЫМ?",
+      "options": [
+        "I had done my homework",
+        "She called"
+      ],
+      "answer": "I had done my homework"
     },
     {
-      "verb": "She had cleaned the room",
-      "answer": "p2"
+      "question": "She had cleaned the room before we arrived. Что было ПЕРВЫМ?",
+      "options": [
+        "She had cleaned the room",
+        "We arrived"
+      ],
+      "answer": "She had cleaned the room"
     },
     {
-      "verb": "We had eaten dinner",
-      "answer": "p3"
+      "question": "We had eaten dinner by the time he came. Что было ПЕРВЫМ?",
+      "options": [
+        "We had eaten dinner",
+        "He came"
+      ],
+      "answer": "We had eaten dinner"
     },
     {
-      "verb": "He had washed the car",
-      "answer": "p4"
+      "question": "He had washed the car before it started to rain. Что было ПЕРВЫМ?",
+      "options": [
+        "He had washed the car",
+        "It started to rain"
+      ],
+      "answer": "He had washed the car"
     },
     {
-      "verb": "They had left",
-      "answer": "p5"
+      "question": "They had left when I woke up. Что было ПЕРВЫМ?",
+      "options": [
+        "They had left",
+        "I woke up"
+      ],
+      "answer": "They had left"
     }
   ]
 }

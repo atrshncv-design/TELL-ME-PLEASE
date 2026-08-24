@@ -1,48 +1,56 @@
 {
   "id": "future_perfect_a1_station_3",
   "title": "Магия Слова \"BY\" (Маркеры)",
-  "description": "Распредели маркеры в две корзины: \"BY\" (к моменту - Future Perfect) или \"AT\" (в момент - Future Continuous).",
+  "description": "Распредели маркеры в две корзины: \"BY\" (к моменту - Future Perfect) или \"AT\" (в момент - Future Continuous).\n\nВажно: некоторые слова (5 p.m., noon) могут быть и с by, и с at, но смысл меняется: by 5 p.m. = не позже 5 (к 5 уже сделаю) → Future Perfect; at 5 p.m. = ровно в 5 (в этот момент буду делать) → Future Continuous.",
   "category": "grammar",
   "type": "drag-and-drop",
   "items": [
     {
-      "verb": "5 PM",
+      "verb": "by 5 p.m.",
       "answer": "by"
     },
     {
-      "verb": "tomorrow",
+      "verb": "by tomorrow",
       "answer": "by"
     },
     {
-      "verb": "evening",
+      "verb": "by evening",
       "answer": "by"
     },
     {
-      "verb": "Sunday",
+      "verb": "by Sunday",
       "answer": "by"
     },
     {
-      "verb": "morning",
+      "verb": "by morning",
       "answer": "by"
     },
     {
-      "verb": "noon",
+      "verb": "by noon",
       "answer": "by"
     },
     {
-      "verb": "this time tomorrow",
+      "verb": "at 5 p.m.",
       "answer": "at"
     },
     {
-      "verb": "midnight",
+      "verb": "at this time tomorrow",
       "answer": "at"
     },
     {
-      "verb": "8 AM",
+      "verb": "at midnight",
       "answer": "at"
     },
     {
-      "verb": "the moment",
+      "verb": "at noon",
+      "answer": "at"
+    },
+    {
+      "verb": "at 8 a.m.",
+      "answer": "at"
+    },
+    {
+      "verb": "at the moment",
       "answer": "at"
     }
   ],

@@ -49,5 +49,20 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Примерные варианты (выбери один и объясни по образцу):",
+    "sentences": [
+      "I was tired because I hadn't slept well the night before.",
+      "She was upset because she had lost her favourite pen.",
+      "They were late because they had missed the bus.",
+      "He was happy because he had passed his exam.",
+      "We were excited because we had bought tickets for the concert.",
+      "The room was dark because someone had turned off the lights.",
+      "The streets were empty because it had snowed heavily.",
+      "My phone was dead because I had forgotten to charge it.",
+      "The teacher was angry because the students hadn't done their homework.",
+      "I was nervous because I hadn't prepared for the test."
+    ]
+  }
 }

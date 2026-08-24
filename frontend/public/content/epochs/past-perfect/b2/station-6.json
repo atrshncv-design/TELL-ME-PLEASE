@@ -52,5 +52,14 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Пример выступления — «The Invention That Changed the World»:",
+    "sentences": [
+      "In my opinion, one of the most important inventions in history is the car. Before cars were invented, people had used horses and carriages for transport. Life was slower, and long journeys took many days or even weeks.",
+      "Cars were invented in the 19th century, and this moment changed everything. Before this invention, people were traveling by horse, and cities were smaller because it was difficult to move quickly between places. Roads were not very good, and most people never went far from their hometowns.",
+      "When cars appeared, everything started to change. Factories were built, new jobs were created, and people could live further from their work. Cities grew, and trade became faster and easier.",
+      "Of course, there were problems too. Pollution increased, and accidents became more common. But overall, the car had a huge positive impact on society. It gave people freedom, speed and new opportunities. That's why I believe the car is one of the inventions that truly changed the world."
+    ]
+  }
 }

@@ -6,40 +6,112 @@
   "type": "quiz",
   "items": [
     {
-      "question": "left / will / by / 5 PM / have / They",
+      "question": "I ___ my homework by 6 p.m. (finish)",
       "options": [
-        "They will have left by 5 PM.",
-        "Will they have left by 5 PM?",
-        "They have will left by 5 PM."
+        "will have finished",
+        "will finished",
+        "have will finished"
       ],
-      "answer": "They will have left by 5 PM."
+      "answer": "will have finished"
     },
     {
-      "question": "finished / will / We / time / By / the / he / have / comes",
+      "question": "___ you ___ by tomorrow morning? (arrive)",
       "options": [
-        "By the time he comes we will have finished.",
-        "By the time he will comes we have finished.",
-        "By the time comes he we will have finished."
+        "Will you have arrived",
+        "Will you arrived",
+        "Do you have arrived"
       ],
-      "answer": "By the time he comes we will have finished."
+      "answer": "Will you have arrived"
     },
     {
-      "question": "eaten / by / dinner / have / will / We / 7 PM",
+      "question": "She ___ the project by Friday. (not complete)",
       "options": [
-        "We will have eaten dinner by 7 PM.",
-        "Will we have eaten dinner by 7 PM?",
-        "We have will eaten dinner by 7 PM."
+        "won't have completed",
+        "won't completed",
+        "doesn't have completed"
       ],
-      "answer": "We will have eaten dinner by 7 PM."
+      "answer": "won't have completed"
     },
     {
-      "question": "started / will / The / film / have / we / before / arrive",
+      "question": "How many books ___ they ___ by the end of the year? (read)",
       "options": [
-        "The film will have started before we arrive.",
-        "Will the film have started before we arrive?",
-        "The film have will started before we arrive."
+        "will they have read",
+        "will they readed",
+        "do they have read"
       ],
-      "answer": "The film will have started before we arrive."
+      "answer": "will they have read"
+    },
+    {
+      "question": "We ___ enough money by December. (save)",
+      "options": [
+        "will have saved",
+        "will saved",
+        "have will saved"
+      ],
+      "answer": "will have saved"
+    },
+    {
+      "question": "___ he ___ his exams by summer? (pass)",
+      "options": [
+        "Will he have passed",
+        "Will he passed",
+        "Does he have passed"
+      ],
+      "answer": "Will he have passed"
+    },
+    {
+      "question": "They ___ the new school by next year. (not build)",
+      "options": [
+        "won't have built",
+        "won't builded",
+        "don't have built"
+      ],
+      "answer": "won't have built"
+    },
+    {
+      "question": "What ___ you ___ by the time you are 30? (achieve)",
+      "options": [
+        "will you have achieved",
+        "will you achieved",
+        "do you have achieved"
+      ],
+      "answer": "will you have achieved"
+    },
+    {
+      "question": "My parents ___ home by dinner time. (return)",
+      "options": [
+        "will have returned",
+        "will returned",
+        "have will returned"
+      ],
+      "answer": "will have returned"
+    },
+    {
+      "question": "___ your friends ___ by the time we come? (leave)",
+      "options": [
+        "Will your friends have left",
+        "Will your friends left",
+        "Do your friends have left"
+      ],
+      "answer": "Will your friends have left"
+    },
+    {
+      "question": "I ___ all the episodes by tonight. (not watch)",
+      "options": [
+        "won't have watched",
+        "won't watched",
+        "don't have watched"
+      ],
+      "answer": "won't have watched"
+    },
+    {
+      "question": "Why ___ she ___ everything before us? (finish)",
+      "options": [
+        "will she have finished",
+        "will she finished",
+        "does she have finished"
+      ],
+      "answer": "will she have finished"
     }
   ]
 }

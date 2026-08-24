@@ -124,6 +124,108 @@ function validateStationFile(slug, dir, st) {
     }
   }
 
+  // --- Тип click-mistake (pravki-240826: краш «Дебаггинга» был именно здесь)
+  // Контракт: items[] непустой; у каждого item: text — непустая строка (поле
+  // `sentence` НЕ допускается — компонент читает item.text, иначе TypeError и
+  // белая страница); wrong — строка или null (ловушка); если wrong задан, он
+  // обязан встречаться в text как слово (сравнение без пунктуации/регистра,
+  // как normalizeWord в ClickMistakeTask).
+  if (norm.type === "click-mistake") {
+    const items = Array.isArray(norm.items) ? norm.items : null
+    if (!items || items.length === 0) {
+      fail(`${slug}: Станция ${st.sector}/${st.file}: click-mistake.items — непустой массив обязателен`)
+    } else {
+      const normalizeWord = (word) => String(word).replace(/^[^\p{L}\p{N}'-]+|[^\p{L}\p{N}'-]+$/gu, "").toLowerCase()
+      items.forEach((it, i) => {
+        const where = `${slug}: Станция ${st.sector}/${st.file}: click-mistake.items[${i}]`
+        if (!it || typeof it !== "object") {
+          fail(`${where} — объект {text, wrong} обязателен`)
+          return
+        }
+        if ("sentence" in it) {
+          fail(`${where}.sentence — недопустимое поле, компонент читает "text" (краш страницы)`)
+        }
+        if (typeof it.text !== "string" || it.text.trim() === "") {
+          fail(`${where}.text — непустая строка обязательна`)
+          return
+        }
+        if (it.wrong !== null && (typeof it.wrong !== "string" || it.wrong.trim() === "")) {
+          fail(`${where}.wrong — строка или null (ловушка)`)
+        } else if (typeof it.wrong === "string") {
+          const tokens = it.text.split(/\s+/).filter(Boolean)
+          if (!tokens.some((w) => normalizeWord(w) === normalizeWord(it.wrong))) {
+            fail(`${where}.wrong (${JSON.stringify(it.wrong)}) — слово не найдено в text`)
+          }
+        }
+      })
+    }
+  }
+
+  // --- Тип quiz (pravki-240826: контракт QuizTask) ----------------------------
+  // Контракт: items[] непустой; у каждого item хотя бы одно из question /
+  // sentence / subject — непустая строка (иначе компонент показывает пустой
+  // вопрос); options — >= 2 уникальных строк; answer — строка среди options;
+  // answerSentence (если есть) — непустая строка (reveal-режим).
+  if (norm.type === "quiz") {
+    const items = Array.isArray(norm.items) ? norm.items : null
+    if (!items || items.length === 0) {
+      fail(`${slug}: Станция ${st.sector}/${st.file}: quiz.items — непустой массив обязателен`)
+    } else {
+      items.forEach((it, i) => {
+        const where = `${slug}: Станция ${st.sector}/${st.file}: quiz.items[${i}]`
+        if (!it || typeof it !== "object") {
+          fail(`${where} — объект {question|sentence|subject, options, answer} обязателен`)
+          return
+        }
+        const display = [it.question, it.sentence, it.subject].find(
+          (v) => typeof v === "string" && v.trim() !== ""
+        )
+        if (display === undefined) {
+          fail(`${where} — question/sentence/subject: непустая строка обязательна (компонент покажет пустой вопрос)`)
+        }
+        if (!Array.isArray(it.options) || it.options.length < 2) {
+          fail(`${where}.options — минимум 2 варианта`)
+        } else if (new Set(it.options).size !== it.options.length) {
+          fail(`${where}.options — варианты не должны повторяться`)
+        }
+        if (typeof it.answer !== "string" || !Array.isArray(it.options) || !it.options.includes(it.answer)) {
+          fail(`${where}.answer — обязан быть строкой среди options`)
+        }
+        if (it.answerSentence !== undefined && (typeof it.answerSentence !== "string" || it.answerSentence.trim() === "")) {
+          fail(`${where}.answerSentence — если указано, непустая строка`)
+        }
+      })
+    }
+  }
+
+  // --- Тип fill-in (pravki-240826: контракт FillInTask) -----------------------
+  // Контракт: items[] непустой; sentence — непустая строка; answer — непустая
+  // строка ИЛИ непустой массив непустых строк (предложение с несколькими
+  // пропусками — по ответу на каждый пропуск).
+  if (norm.type === "fill-in") {
+    const items = Array.isArray(norm.items) ? norm.items : null
+    if (!items || items.length === 0) {
+      fail(`${slug}: Станция ${st.sector}/${st.file}: fill-in.items — непустой массив обязателен`)
+    } else {
+      const answerOk = (a) =>
+        (typeof a === "string" && a.trim() !== "") ||
+        (Array.isArray(a) && a.length > 0 && a.every((x) => typeof x === "string" && x.trim() !== ""))
+      items.forEach((it, i) => {
+        const where = `${slug}: Станция ${st.sector}/${st.file}: fill-in.items[${i}]`
+        if (!it || typeof it !== "object") {
+          fail(`${where} — объект {sentence, answer} обязателен`)
+          return
+        }
+        if (typeof it.sentence !== "string" || it.sentence.trim() === "") {
+          fail(`${where}.sentence — непустая строка обязательна`)
+        }
+        if (!answerOk(it.answer)) {
+          fail(`${where}.answer — непустая строка или непустой массив строк обязательны`)
+        }
+      })
+    }
+  }
+
   // --- Тип voice-chat/role-play с checklist (T07, станции Речи) ---------------
   // Контракт: checklist (если есть) — непустой массив {question, markers[],
   // min?, hint?}: question непустая строка; markers непустой string[] без

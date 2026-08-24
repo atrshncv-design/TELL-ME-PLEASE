@@ -33,5 +33,13 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Пример: My Plans for the Week (Future Perfect + Future Continuous)",
+    "sentences": [
+      "This week I have a lot of plans. By Monday evening, I will have finished all my homework for the week. On Tuesday at 4 p.m., I will be playing football with my friends at the school stadium.",
+      "By Wednesday afternoon, I will have cleaned my room and organised my desk. At 6 p.m. on Thursday, I will be helping my mum cook dinner for the family.",
+      "By Friday, I will have completed my big English project, so I will be free in the evening. At 5 p.m. on Saturday, I will be watching a new film with my sister. By Sunday night, I will have prepared everything for the next week, and I will be relaxing before Monday."
+    ]
+  }
 }

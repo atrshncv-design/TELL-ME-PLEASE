@@ -6,23 +6,23 @@
   "type": "click-mistake",
   "items": [
     {
-      "sentence": "I had went to the park.",
+      "text": "I had went to the park.",
       "wrong": "went"
     },
     {
-      "sentence": "She had cleaned the room before we arrive.",
+      "text": "She had cleaned the room before we arrive.",
       "wrong": "arrive"
     },
     {
-      "sentence": "We had ate dinner by 7 PM.",
+      "text": "We had ate dinner by 7 PM.",
       "wrong": "ate"
     },
     {
-      "sentence": "He didn't had washed the car.",
+      "text": "He didn't had washed the car.",
       "wrong": "didn't"
     },
     {
-      "sentence": "Had you finished your homework before you went?",
+      "text": "Had you finished your homework before you went?",
       "wrong": null
     }
   ]

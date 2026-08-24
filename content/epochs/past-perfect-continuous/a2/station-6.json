@@ -44,5 +44,13 @@
       ],
       "min": 2
     }
-  ]
+  ],
+  "script": {
+    "description": "Примеры:",
+    "sentences": [
+      "I had been playing the guitar for six months before I could play my first full song.",
+      "I had been learning English for three years before I finally passed my B2 exam.",
+      "I had been drawing pictures for two years before I showed my artwork to other people."
+    ]
+  }
 }

@@ -6,49 +6,94 @@
   "type": "quiz",
   "items": [
     {
-      "question": "finished / Will / you / have / your homework",
+      "question": "___ you ___ your project by tomorrow? (finish)",
       "options": [
-        "Will you have finished your homework?",
-        "Will you have your homework finished?",
-        "You will have finished your homework?"
+        "Will you have finished",
+        "Will you finished",
+        "Do you have finished"
       ],
-      "answer": "Will you have finished your homework?"
+      "answer": "Will you have finished"
     },
     {
-      "question": "she / Will / room / cleaned / have / the",
+      "question": "She ___ by 6 p.m. (not arrive)",
       "options": [
-        "Will she have cleaned the room?",
-        "Will she have the room cleaned?",
-        "She will have cleaned the room?"
+        "won't have arrived",
+        "won't arrived",
+        "doesn't have arrived"
       ],
-      "answer": "Will she have cleaned the room?"
+      "answer": "won't have arrived"
     },
     {
-      "question": "eaten / Will / they / have / dinner",
+      "question": "___ they ___ the room before the guests come? (clean)",
       "options": [
-        "Will they have eaten dinner?",
-        "Will they have dinner eaten?",
-        "They will have eaten dinner?"
+        "Will they have cleaned",
+        "Will they cleaned",
+        "Do they have cleaned"
       ],
-      "answer": "Will they have eaten dinner?"
+      "answer": "Will they have cleaned"
     },
     {
-      "question": "car / he / washed / Will / have / the",
+      "question": "He ___ his homework by bedtime. (not do)",
       "options": [
-        "Will he have washed the car?",
-        "Will he have the car washed?",
-        "He will have washed the car?"
+        "won't have done",
+        "won't did",
+        "doesn't have done"
       ],
-      "answer": "Will he have washed the car?"
+      "answer": "won't have done"
     },
     {
-      "question": "left / will / have / They / by / 5 PM",
+      "question": "___ we ___ all the museums by the end of the trip? (visit)",
       "options": [
-        "They will have left by 5 PM.",
-        "Will they have left by 5 PM?",
-        "They have will left by 5 PM."
+        "Will we have visited",
+        "Will we visited",
+        "Do we have visited"
       ],
-      "answer": "They will have left by 5 PM."
+      "answer": "Will we have visited"
+    },
+    {
+      "question": "I ___ the whole book by Monday. (not read)",
+      "options": [
+        "won't have read",
+        "won't readed",
+        "don't have read"
+      ],
+      "answer": "won't have read"
+    },
+    {
+      "question": "___ your parents ___ back before dinner? (come)",
+      "options": [
+        "Will your parents have come",
+        "Will your parents came",
+        "Do your parents have come"
+      ],
+      "answer": "Will your parents have come"
+    },
+    {
+      "question": "They ___ the new school by next year. (not build)",
+      "options": [
+        "won't have built",
+        "won't builded",
+        "don't have built"
+      ],
+      "answer": "won't have built"
+    },
+    {
+      "question": "___ she ___ her exams by summer? (pass)",
+      "options": [
+        "Will she have passed",
+        "Will she passed",
+        "Does she have passed"
+      ],
+      "answer": "Will she have passed"
+    },
+    {
+      "question": "We ___ enough money by December. (not save)",
+      "options": [
+        "won't have saved",
+        "won't saved",
+        "don't have saved"
+      ],
+      "answer": "won't have saved"
     }
   ]
 }

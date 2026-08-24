@@ -13,7 +13,8 @@
         "Past Perfect",
         "Present Perfect"
       ],
-      "answer": "Past Simple"
+      "answer": "Past Simple",
+      "answerSentence": "I lost my keys yesterday."
     },
     {
       "question": "I ___ my keys! I can't find them. (lose)",
@@ -23,7 +24,8 @@
         "Past Perfect",
         "Present Perfect"
       ],
-      "answer": "Present Perfect"
+      "answer": "Present Perfect",
+      "answerSentence": "I have lost my keys! I can't find them."
     },
     {
       "question": "I ___ my keys before I left home. (lose)",
@@ -33,7 +35,8 @@
         "Past Perfect",
         "Present Perfect"
       ],
-      "answer": "Past Perfect"
+      "answer": "Past Perfect",
+      "answerSentence": "I had lost my keys before I left home."
     },
     {
       "question": "I ___ for my keys when the phone rang. (look)",
@@ -43,7 +46,8 @@
         "Past Perfect",
         "Present Perfect"
       ],
-      "answer": "Past Continuous"
+      "answer": "Past Continuous",
+      "answerSentence": "I was looking for my keys when the phone rang."
     },
     {
       "question": "By the time the police ___ , the thief (escape).",
@@ -53,7 +57,8 @@
         "Past Perfect",
         "Present Perfect"
       ],
-      "answer": "Past Simple"
+      "answer": "Past Simple",
+      "answerSentence": "By the time the police arrived, the thief had escaped."
     },
     {
       "question": "By the time the police (arrive), the thief ___.",
@@ -63,7 +68,8 @@
         "Past Perfect",
         "Present Perfect"
       ],
-      "answer": "Past Perfect"
+      "answer": "Past Perfect",
+      "answerSentence": "By the time the police arrived, the thief had escaped."
     },
     {
       "question": "I ___ never ___ such a beautiful place before I visited Paris. (see)",
@@ -73,7 +79,8 @@
         "Past Perfect",
         "Present Perfect"
       ],
-      "answer": "Past Perfect"
+      "answer": "Past Perfect",
+      "answerSentence": "I had never seen such a beautiful place before I visited Paris."
     },
     {
       "question": "While I ___ home, it started to rain. (walk)",
@@ -83,7 +90,8 @@
         "Past Perfect",
         "Present Perfect"
       ],
-      "answer": "Past Continuous"
+      "answer": "Past Continuous",
+      "answerSentence": "While I was walking home, it started to rain."
     }
   ]
 }

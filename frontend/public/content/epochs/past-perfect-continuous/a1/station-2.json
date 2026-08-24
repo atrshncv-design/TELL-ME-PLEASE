@@ -6,49 +6,94 @@
   "type": "quiz",
   "items": [
     {
-      "question": "playing / Had / you / been / tennis",
+      "question": "___ you ___ for two hours? (study)",
       "options": [
-        "Had you been playing tennis?",
-        "Had you playing been tennis?",
-        "You had been playing tennis?"
+        "Had you been studying",
+        "Had you studying",
+        "Did you been studying"
       ],
-      "answer": "Had you been playing tennis?"
+      "answer": "Had you been studying"
     },
     {
-      "question": "reading / she / been / Had / a book",
+      "question": "She ___ at that company for long. (not work)",
       "options": [
-        "Had she been reading a book?",
-        "Had she reading been a book?",
-        "She had been reading a book?"
+        "hadn't been working",
+        "hadn't worked been",
+        "didn't been working"
       ],
-      "answer": "Had she been reading a book?"
+      "answer": "hadn't been working"
     },
     {
-      "question": "TV / they / watching / been / Had",
+      "question": "___ they ___ for the bus since morning? (wait)",
       "options": [
-        "Had they been watching TV?",
-        "Had they watching been TV?",
-        "They had been watching TV?"
+        "Had they been waiting",
+        "Had they waited been",
+        "Did they been waiting"
       ],
-      "answer": "Had they been watching TV?"
+      "answer": "Had they been waiting"
     },
     {
-      "question": "sleeping / been / Had / he",
+      "question": "He ___ well. (not sleep)",
       "options": [
-        "Had he been sleeping?",
-        "Had he sleeping been?",
-        "He had been sleeping?"
+        "hadn't been sleeping",
+        "hadn't slept been",
+        "didn't been sleeping"
       ],
-      "answer": "Had he been sleeping?"
+      "answer": "hadn't been sleeping"
     },
     {
-      "question": "studying / been / they / Had",
+      "question": "___ your mum ___ all afternoon? (cook)",
       "options": [
-        "Had they been studying?",
-        "Had they studying been?",
-        "They had been studying?"
+        "Had your mum been cooking",
+        "Had your mum cooked been",
+        "Did your mum been cooking"
       ],
-      "answer": "Had they been studying?"
+      "answer": "Had your mum been cooking"
+    },
+    {
+      "question": "We ___ for a week. (not travel)",
+      "options": [
+        "hadn't been travelling",
+        "hadn't travelled been",
+        "didn't been travelling"
+      ],
+      "answer": "hadn't been travelling"
+    },
+    {
+      "question": "___ Tom ___ his bike since 6 o'clock? (ride)",
+      "options": [
+        "Had Tom been riding",
+        "Had Tom ridden been",
+        "Did Tom been riding"
+      ],
+      "answer": "Had Tom been riding"
+    },
+    {
+      "question": "The dog ___ all night. (not bark)",
+      "options": [
+        "hadn't been barking",
+        "hadn't barked been",
+        "didn't been barking"
+      ],
+      "answer": "hadn't been barking"
+    },
+    {
+      "question": "___ it ___ for hours? (rain)",
+      "options": [
+        "Had it been raining",
+        "Had it rained been",
+        "Did it been raining"
+      ],
+      "answer": "Had it been raining"
+    },
+    {
+      "question": "I ___ tennis for long. (not play)",
+      "options": [
+        "hadn't been playing",
+        "hadn't played been",
+        "didn't been playing"
+      ],
+      "answer": "hadn't been playing"
     }
   ]
 }

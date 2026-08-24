@@ -546,6 +546,17 @@ function VoiceChatInner({
                       💡 {checklistItems[listIndex]?.hint}
                     </p>
                   )}
+                  {/* pravki-240826 (тикет 03): «Повторить» — переслушать вопрос
+                      бота (клиентка: «не всегда ученик может разобрать с первого
+                      раза»). Авто-озвучку нового вопроса не трогаем. */}
+                  <motion.button
+                    whileTap={{ scale: 0.97 }}
+                    onClick={() => say(checklistItems[listIndex]?.question ?? "")}
+                    disabled={ttsSpeaking}
+                    className="mt-3 inline-flex min-h-[40px] items-center gap-1.5 rounded-xl border-2 border-indigo-200 bg-white px-4 py-2 text-sm font-bold text-indigo-700 transition-colors hover:bg-indigo-50 disabled:opacity-50"
+                  >
+                    🔊 Повторить вопрос
+                  </motion.button>
                 </div>
 
                 {listAnswer && (
