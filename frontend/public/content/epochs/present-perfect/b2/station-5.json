@@ -47,5 +47,14 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Пример описания фотографии:",
+    "sentences": [
+      "In the photo, I can see a group of teenagers in a city park. They are cleaning the park and collecting rubbish near the trees. Some of them are putting plastic bottles and paper into large rubbish bags, while others are wearing gloves and picking up litter from the grass. The weather is warm and sunny, and the teenagers look busy but happy.",
+      "They have collected a lot of rubbish, so the park looks much cleaner now.",
+      "They started cleaning two hours ago because they wanted to help the environment.",
+      "I think they are doing a useful job and setting a good example for other people."
+    ]
+  }
 }

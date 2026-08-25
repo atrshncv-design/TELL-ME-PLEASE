@@ -30,6 +30,71 @@
         "play"
       ],
       "hint": "(play — вопрос)"
+    },
+    {
+      "sentence": "Он не смотрел фильм вчера. He ___ a film yesterday.",
+      "answer": "didn’t watch",
+      "hint": "(watch — отрицание)"
+    },
+    {
+      "sentence": "Ты видел своего друга после школы? ___ you ___ your friend after school?",
+      "answer": [
+        "Did",
+        "see"
+      ],
+      "hint": "(see — вопрос)"
+    },
+    {
+      "sentence": "Мы не сделали домашнее задание. We ___ our homework.",
+      "answer": "didn’t do",
+      "hint": "(do — отрицание)"
+    },
+    {
+      "sentence": "Когда она приехала домой? When ___ she ___ home?",
+      "answer": [
+        "did",
+        "arrive"
+      ],
+      "hint": "(arrive — вопрос)"
+    },
+    {
+      "sentence": "Они не играли в футбол в прошлое воскресенье. They ___ football last Sunday.",
+      "answer": "didn’t play",
+      "hint": "(play — отрицание)"
+    },
+    {
+      "sentence": "Что ты ел на завтрак? What ___ you ___ for breakfast?",
+      "answer": [
+        "did",
+        "eat"
+      ],
+      "hint": "(eat — вопрос)"
+    },
+    {
+      "sentence": "Моя сестра не написала письмо. My sister ___ a letter.",
+      "answer": "didn’t write",
+      "hint": "(write — отрицание)"
+    },
+    {
+      "sentence": "Где вы встретили учителя? Where ___ you ___ your teacher?",
+      "answer": [
+        "did",
+        "meet"
+      ],
+      "hint": "(meet — вопрос)"
+    },
+    {
+      "sentence": "Я не ходил в магазин утром. I ___ to the shop in the morning.",
+      "answer": "didn’t go",
+      "hint": "(go — отрицание)"
+    },
+    {
+      "sentence": "Почему он позвонил тебе? Why ___ he ___ you?",
+      "answer": [
+        "did",
+        "call"
+      ],
+      "hint": "(call — вопрос)"
     }
   ]
 }

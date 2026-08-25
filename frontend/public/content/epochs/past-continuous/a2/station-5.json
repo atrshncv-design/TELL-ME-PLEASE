@@ -40,6 +40,51 @@
         "Was he how feeling?"
       ],
       "answer": "How was he feeling?"
+    },
+    {
+      "question": "What / were / you / doing / at 7 p.m. / yesterday?",
+      "options": [
+        "What were you doing at 7 p.m. yesterday?",
+        "What you were doing at 7 p.m. yesterday?",
+        "Were what you doing at 7 p.m. yesterday?"
+      ],
+      "answer": "What were you doing at 7 p.m. yesterday?"
+    },
+    {
+      "question": "Where / was / she / going / when / you / saw / her?",
+      "options": [
+        "Where was she going when you saw her?",
+        "Where she was going when you saw her?",
+        "Was where she going when you saw her?"
+      ],
+      "answer": "Where was she going when you saw her?"
+    },
+    {
+      "question": "Why / were / they / laughing / so / loudly?",
+      "options": [
+        "Why were they laughing so loudly?",
+        "Why they were laughing so loudly?",
+        "Were why they laughing so loudly?"
+      ],
+      "answer": "Why were they laughing so loudly?"
+    },
+    {
+      "question": "Who / was / he / talking / to / on / the / phone?",
+      "options": [
+        "Who was he talking to on the phone?",
+        "Who he was talking to on the phone?",
+        "Was who he talking to on the phone?"
+      ],
+      "answer": "Who was he talking to on the phone?"
+    },
+    {
+      "question": "What / were / we / waiting / for / at / the / bus / stop?",
+      "options": [
+        "What were we waiting for at the bus stop?",
+        "What we were waiting for at the bus stop?",
+        "Were what we waiting for at the bus stop?"
+      ],
+      "answer": "What were we waiting for at the bus stop?"
     }
   ]
 }

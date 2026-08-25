@@ -4,51 +4,82 @@
   "description": "Симуляция устной части ОГЭ Task 2: ответь экзаменатору на вопросы о своём прошлом (готовый ответ — на экране).",
   "category": "speaking",
   "type": "voice-chat",
-  "task_context": "Act like an examiner for the Russian OGE exam (Task 2). Ask me questions about my past weekend.",
+  "task_context": "Промпт для бота: \"Act like an examiner for the Russian OGE exam (Task 2). Ask me questions about my past and my experience.\" Задай ученику вопросы из списка checklist по одному и оцени ответы.",
   "checklist": [
-    {
-      "question": "What were you doing at 5 PM yesterday?",
-      "markers": [
-        "was",
-        "homework"
-      ],
-      "min": 1,
-      "hint": "I was doing my homework at 5 pm yesterday."
-    },
     {
       "question": "What did you do last weekend?",
       "markers": [
-        "nothing",
-        "special",
-        "chatted",
-        "friend",
-        "watched",
-        "film"
+        "last",
+        "weekend",
+        "went",
+        "did"
       ],
       "min": 1,
-      "hint": "I did nothing special. I chatted with my friend and watched a new film."
+      "hint": "I went to the park last weekend."
     },
     {
-      "question": "Were you studying when I called you?",
+      "question": "Have you ever travelled abroad?",
       "markers": [
-        "yes",
-        "was",
-        "preparing",
-        "test",
-        "english"
+        "travelled",
+        "abroad",
+        "been",
+        "visited"
       ],
       "min": 1,
-      "hint": "Yes, I was preparing for my test in English."
+      "hint": "Yes, I have travelled abroad. I have been to Turkey."
     },
     {
-      "question": "What were you doing when the electricity went out?",
+      "question": "When did you start learning English?",
       "markers": [
-        "was",
-        "surfing",
-        "net"
+        "started",
+        "learning",
+        "english",
+        "ago"
       ],
       "min": 1,
-      "hint": "When the electricity went out, I was surfing the net."
+      "hint": "I started learning English six years ago."
+    },
+    {
+      "question": "What was the most interesting place you have ever visited?",
+      "markers": [
+        "most interesting",
+        "visited",
+        "place"
+      ],
+      "min": 1,
+      "hint": "The most interesting place I have ever visited is London."
+    },
+    {
+      "question": "Have you ever taken part in a school competition?",
+      "markers": [
+        "taken part",
+        "competition",
+        "school"
+      ],
+      "min": 1,
+      "hint": "Yes, I have taken part in a school competition."
+    },
+    {
+      "question": "What did you enjoy doing when you were younger?",
+      "markers": [
+        "enjoy",
+        "younger",
+        "playing",
+        "doing"
+      ],
+      "min": 1,
+      "hint": "When I was younger, I enjoyed playing football."
+    },
+    {
+      "question": "What important thing have you learnt from your experience?",
+      "markers": [
+        "learnt",
+        "learned",
+        "experience",
+        "important"
+      ],
+      "min": 1,
+      "hint": "I have learnt that practice is very important."
     }
   ]
 }

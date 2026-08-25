@@ -79,5 +79,14 @@
       "min": 1
     }
   ],
-  "alwaysPass": true
+  "alwaysPass": true,
+  "script": {
+    "description": "Сценарий комикса «Catastrophe: Flood» — прочитай и расскажи свой вариант:",
+    "sentences": [
+      "Кадр 1: People were walking in the park near the river.",
+      "Кадр 2: It was raining heavily, and the water was rising quickly.",
+      "Кадр 3: Suddenly, the river overflowed and flooded the streets.",
+      "Кадр 4: People left their homes, and firefighters rescued them."
+    ]
+  }
 }

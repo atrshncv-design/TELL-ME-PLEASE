@@ -6,25 +6,61 @@
   "type": "fill-in",
   "items": [
     {
-      "sentence": "He ___ his phone.",
+      "sentence": "He ___ (dropped) his phone.",
       "answer": [
         "has dropped"
       ],
       "hint": "разбитый телефон"
     },
     {
-      "sentence": "Someone ___ all the milk.",
+      "sentence": "Someone ___ (drunk) all the milk.",
       "answer": [
         "has drunk"
       ],
       "hint": "пустой пакет молока"
     },
     {
-      "sentence": "He ___ his knee.",
+      "sentence": "He ___ (cut) his knee.",
       "answer": [
         "has cut"
       ],
       "hint": "мальчик плачет"
+    },
+    {
+      "sentence": "She ___ (break) her glasses. Не видит ничего.",
+      "answer": [
+        "has broken"
+      ]
+    },
+    {
+      "sentence": "He ___ (lose) his keys. Не может открыть дверь.",
+      "answer": [
+        "has lost"
+      ]
+    },
+    {
+      "sentence": "Someone ___ (eat) all the cake. Ничего не осталось.",
+      "answer": [
+        "has eaten"
+      ]
+    },
+    {
+      "sentence": "They ___ (spill) the juice. Стол липкий.",
+      "answer": [
+        "have spilled"
+      ]
+    },
+    {
+      "sentence": "The dog ___ (tear) the book. Страниц не хватает.",
+      "answer": [
+        "has torn"
+      ]
+    },
+    {
+      "sentence": "I ___ (forget) my password. Не могу загрузить аккаунт.",
+      "answer": [
+        "have forgotten"
+      ]
     }
   ]
 }

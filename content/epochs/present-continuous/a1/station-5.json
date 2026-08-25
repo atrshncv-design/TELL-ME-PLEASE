@@ -1,7 +1,7 @@
 {
   "id": "present_continuous_a1_station_5",
   "title": "Рефлекс Ответа (Короткие ответы)",
-  "description": "Автоматизм коротких ответов в диалоге.",
+  "description": "Автоматизм коротких ответов в диалоге.\n\nПравило: в Present Simple общий вопрос начинается с Do/Does — и в ответе он же; в Present Continuous — с Am/Is/Are — и в ответе он же.",
   "category": "grammar",
   "type": "quiz",
   "items": [
@@ -44,6 +44,126 @@
         "Yes, it does"
       ],
       "answer": "Yes, it is"
+    },
+    {
+      "question": "Does your brother usually walk to school?",
+      "options": [
+        "Yes, he does. / No, he doesn’t.",
+        "Yes, he does. / No, he isn’t"
+      ],
+      "answer": "Yes, he does. / No, he doesn’t."
+    },
+    {
+      "question": "Is the dog chasing a cat now?",
+      "options": [
+        "Yes, it is. / No, it isn’t.",
+        "Yes, it is. / No, it doesn’t"
+      ],
+      "answer": "Yes, it is. / No, it isn’t."
+    },
+    {
+      "question": "Do you have English lessons every Monday?",
+      "options": [
+        "Yes, I do. / No, I don’t.",
+        "Yes, I do. / No, am not"
+      ],
+      "answer": "Yes, I do. / No, I don’t."
+    },
+    {
+      "question": "Does Kate often help her mother after school?",
+      "options": [
+        "Yes, she does. / No, she doesn’t.",
+        "Yes, she does. / No, she isn’t"
+      ],
+      "answer": "Yes, she does. / No, she doesn’t."
+    },
+    {
+      "question": "Are they doing a science project right now?",
+      "options": [
+        "Yes, they are. / No, they aren’t.",
+        "Yes, they are. / No, they don’t"
+      ],
+      "answer": "Yes, they are. / No, they aren’t."
+    },
+    {
+      "question": "Do you always drink tea for breakfast?",
+      "options": [
+        "Yes, I do. / No, I don’t.",
+        "Yes, I do. / No, I am not"
+      ],
+      "answer": "Yes, I do. / No, I don’t."
+    },
+    {
+      "question": "Is the baby sleeping now?",
+      "options": [
+        "Yes, it is. / No, it isn’t.",
+        "Yes, it is. / No, it doesn’t"
+      ],
+      "answer": "Yes, it is. / No, it isn’t."
+    },
+    {
+      "question": "Does your teacher sometimes give you interesting projects?",
+      "options": [
+        "Yes, she does. / No, she doesn’t.",
+        "Yes, she does. / No, she doesn’t"
+      ],
+      "answer": "Yes, she does. / No, she doesn’t."
+    },
+    {
+      "question": "Are your friends waiting for the bus at the moment?",
+      "options": [
+        "Yes, they are. / No, they aren’t.",
+        "Yes, they are. / No, they don’t"
+      ],
+      "answer": "Yes, they are. / No, they aren’t."
+    },
+    {
+      "question": "Does your dad work on Sundays?",
+      "options": [
+        "Yes, he does. / No, he doesn’t.",
+        "Yes, he does. / No, he isn’t"
+      ],
+      "answer": "Yes, he does. / No, he doesn’t."
+    },
+    {
+      "question": "Are you preparing for a school concert today?",
+      "options": [
+        "Yes, I am. / No, I’m not.",
+        "Yes, I am. / No, I’m not"
+      ],
+      "answer": "Yes, I am. / No, I’m not."
+    },
+    {
+      "question": "Does the school bus usually arrive at eight o’clock?",
+      "options": [
+        "Yes, it does. / No, it doesn’t.",
+        "Yes, it does. / No, it isn’t"
+      ],
+      "answer": "Yes, it does. / No, it doesn’t."
+    },
+    {
+      "question": "Are the students writing a test now?",
+      "options": [
+        "Yes, they are. / No, they aren’t.",
+        "Yes, they are. / No, they don’t"
+      ],
+      "answer": "Yes, they are. / No, they aren’t."
+    },
+    {
+      "question": "Does your cousin regularly visit you in summer?",
+      "options": [
+        "Yes, he/she does. / No, he/she doesn’t.",
+        "Yes, he / No, he/she isn’t"
+      ],
+      "answer": "Yes, he/she does. / No, he/she doesn’t."
+    },
+    {
+      "question": "Are you reading an adventure book this week?",
+      "options": [
+        "Yes, I am. / No, I’m not.",
+        "Yes, I am. / No, don’t"
+      ],
+      "answer": "Yes, I am. / No, I’m not."
     }
   ]
 }

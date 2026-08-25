@@ -1,6 +1,7 @@
 import fs from "fs/promises"
 import path from "path"
 import { TaskRenderer } from "./TaskRenderer"
+import { ResultNextContext } from "@/components/ResultScreen"
 import { normalize } from "@/lib/normalize-task"
 import type { TaskData } from "@/types/task"
 import { sectorGradeKey, type EpochSector } from "@/lib/epoch"
@@ -113,5 +114,16 @@ export default async function EpochStationPage({
   const grade = sectorGradeKey(sectorMeta)
   const backHref = `/epoch/${slug}/${sector}`
 
-  return <TaskRenderer task={task} grade={grade} backHref={backHref} />
+  // pravki-250826 (PP1): следующая станция сектора — кнопка «Дальше →» на
+  // экране результата (ResultScreen читает её из контекста).
+  const stations = sectorMeta.stations ?? []
+  const pos = stations.findIndex((s) => s.id === stationId)
+  const next = pos >= 0 && pos + 1 < stations.length ? stations[pos + 1] : null
+  const nextHref = next ? `/epoch/${slug}/${sector}/${next.id}` : null
+
+  return (
+    <ResultNextContext.Provider value={nextHref}>
+      <TaskRenderer task={task} grade={grade} backHref={backHref} />
+    </ResultNextContext.Provider>
+  )
 }

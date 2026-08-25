@@ -11,7 +11,7 @@ import AdminLoginModal from "@/components/AdminLoginModal"
  * (не кнопки): главный CTA — «Начать играть →».
  */
 const WHATS_AHEAD: { name: string; emoji: string; chip: string }[] = [
-  { name: "Инструктаж", emoji: "🎓", chip: "bg-grammar-100 text-grammar-800 border-grammar-200" },
+  { name: "Обучение", emoji: "🎓", chip: "bg-grammar-100 text-grammar-800 border-grammar-200" },
   { name: "Миссии", emoji: "🚀", chip: "bg-primary-100 text-primary-800 border-primary-200" },
   { name: "Общение", emoji: "💬", chip: "bg-speaking-100 text-speaking-800 border-speaking-200" },
   { name: "Квесты", emoji: "🧩", chip: "bg-vocabulary-100 text-vocabulary-800 border-vocabulary-200" },
@@ -69,7 +69,7 @@ export default function Home() {
           variants={item}
           className="font-display-alt text-5xl font-black leading-[1.05] tracking-tight text-primary-900 text-balance"
         >
-          Time travel mission
+          TIME TRAVEL MISSION
         </motion.h1>
 
         <motion.p variants={item} className="max-w-sm text-lg font-medium text-slate-600">

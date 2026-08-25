@@ -171,7 +171,7 @@ export function SentenceBuilderTask({ title, description, items, onComplete }: S
             </p>
           ) : (
             <>
-              <div className="flex flex-wrap items-center justify-center gap-1.5">
+              <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-1.5">
                 {ordered.map((c, i) => {
                   const word = builtWords[i]
                   return (
@@ -180,7 +180,7 @@ export function SentenceBuilderTask({ title, description, items, onComplete }: S
                       layout
                       initial={{ scale: 0.8, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
-                      className={`rounded-xl border-2 px-2.5 py-1 text-base font-bold ${
+                      className={`rounded-xl border-2 px-1.5 py-1 text-sm sm:text-base font-bold whitespace-nowrap ${
                         word
                           ? "border-primary-300 bg-primary-50 text-primary-800"
                           : "border-dashed border-slate-200 bg-slate-50 text-slate-300"

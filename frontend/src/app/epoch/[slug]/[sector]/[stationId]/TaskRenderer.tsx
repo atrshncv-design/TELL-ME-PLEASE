@@ -177,10 +177,14 @@ export function TaskRenderer({
   task,
   grade,
   backHref,
+  nextHref,
 }: {
   task: TaskData
   grade: string
   backHref: string
+  /** pravki-250826 (PP1): ссылка на следующую станцию сектора — попадает в
+   *  ResultScreen через контекст (кнопка «Дальше →» на экране результата). */
+  nextHref?: string
 }) {
   const { saveTask } = useProgress(grade)
   const { track } = useAnalytics()

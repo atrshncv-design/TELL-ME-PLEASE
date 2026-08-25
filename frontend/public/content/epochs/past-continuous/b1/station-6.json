@@ -23,7 +23,7 @@
         "waiting"
       ],
       "min": 1,
-      "hint": "Спроси, что свидетель делал в 3 часа: What were you doing at 3 PM?"
+      "hint": "At 3 p.m., I was having coffee in a nearby café. I was not entering the bank or taking part in the robbery."
     },
     {
       "question": "What were the robbers wearing?",
@@ -41,7 +41,7 @@
         "jacket"
       ],
       "min": 1,
-      "hint": "Спроси, во что были одеты грабители: What were the robbers wearing?"
+      "hint": "The robbers were wearing dark jackets, gloves, and hats. Their faces were partly covered, so I couldn’t see them clearly."
     },
     {
       "question": "Did anyone try to stop them?",
@@ -58,7 +58,7 @@
         "police"
       ],
       "min": 1,
-      "hint": "Спроси, пытался ли кто-то их остановить: Did anyone try to stop them?"
+      "hint": "No one tried to stop them because they moved very quickly. I was standing far away and did not approach them."
     },
     {
       "question": "Were people scared?",
@@ -75,7 +75,7 @@
         "frightened"
       ],
       "min": 1,
-      "hint": "Спроси, испугались ли люди: Were people scared?"
+      "hint": "Yes, people were scared and were hiding behind the tables. I stayed calm, called the police, and waited outside."
     }
   ],
   "dialogue": [

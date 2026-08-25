@@ -44,6 +44,78 @@
         "had"
       ],
       "answer": "had"
+    },
+    {
+      "question": "She ___ his story because it sounded strange.",
+      "options": [
+        "was doubting",
+        "doubted"
+      ],
+      "answer": "doubted"
+    },
+    {
+      "question": "We ___ our teacher’s help before the exam.",
+      "options": [
+        "was appreciating",
+        "appreciated"
+      ],
+      "answer": "appreciated"
+    },
+    {
+      "question": "He ___ a small flat near the city centre.",
+      "options": [
+        "was owning",
+        "owned"
+      ],
+      "answer": "owned"
+    },
+    {
+      "question": "They ___ the bus to arrive at eight o’clock.",
+      "options": [
+        "were expecting",
+        "expected"
+      ],
+      "answer": "expected"
+    },
+    {
+      "question": "I ___ her voice on the phone immediately.",
+      "options": [
+        "was recognizing",
+        "recognized"
+      ],
+      "answer": "recognized"
+    },
+    {
+      "question": "She ___ worried after the meeting.",
+      "options": [
+        "was seeming",
+        "seemed"
+      ],
+      "answer": "seemed"
+    },
+    {
+      "question": "We ___ travelling by train because it was more comfortable.",
+      "options": [
+        "were preferring",
+        "preferred"
+      ],
+      "answer": "preferred"
+    },
+    {
+      "question": "He ___ to upset his friend.",
+      "options": [
+        "wasn’t meaning",
+        "didn’t mean"
+      ],
+      "answer": "didn’t mean"
+    },
+    {
+      "question": "The students ___ why the project was important.",
+      "options": [
+        "were understanding",
+        "understood"
+      ],
+      "answer": "understood"
     }
   ]
 }

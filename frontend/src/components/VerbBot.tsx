@@ -266,7 +266,7 @@ function VerbBotFloating({
             initial={{ opacity: 0, y: 10, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.9 }}
-            className="max-w-[200px] bg-white rounded-2xl rounded-br-md px-3 py-2 text-sm font-medium text-slate-700 shadow-lg border border-primary-100"
+            className="max-w-[150px] sm:max-w-[200px] bg-white rounded-2xl rounded-br-md px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 shadow-lg border border-primary-100"
           >
             {phrase}
           </motion.div>
@@ -276,10 +276,10 @@ function VerbBotFloating({
           ring-primary-300), подпись «Verb Bot» + цветной индикатор эмоции
           (точка по mood). Покачивание y [0,-4,0] и fallback 🤖 сохранены;
           пузырь речи и позиционирование флоата не менялись. */}
-      <div className="flex w-[90px] flex-col items-center">
+      <div className="flex w-[68px] sm:w-[90px] flex-col items-center">
         {imgFailed ? (
           <div
-            className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white bg-white text-2xl shadow-lg ring-2 ring-primary-300"
+            className="flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-full border-2 border-white bg-white text-2xl shadow-lg ring-2 ring-primary-300"
             role="img"
             aria-label="Verb Bot"
           >
@@ -289,7 +289,7 @@ function VerbBotFloating({
           <motion.img
             src={`/mascot/${mood}.jpg`}
             alt="Verb Bot"
-            className="h-16 w-16 rounded-full border-2 border-white bg-white object-cover shadow-lg ring-2 ring-primary-300"
+            className="h-12 w-12 sm:h-16 sm:w-16 rounded-full border-2 border-white bg-white object-cover shadow-lg ring-2 ring-primary-300"
             animate={{ y: [0, -4, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             onError={() => setImgFailed(true)}

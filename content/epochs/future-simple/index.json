@@ -196,6 +196,11 @@
           "id": "a2_station_8",
           "file": "a2/station-8.json",
           "title": "Планы на компьютер (Промпт)"
+        },
+        {
+          "id": "station-8",
+          "file": "a2/station-8.json",
+          "title": "Планы на компьютер (Промпт)"
         }
       ],
       "story": "Введение TO BE GOING TO. Сравнение планов (going to) и спонтанности (will)."
@@ -287,6 +292,11 @@
         },
         {
           "id": "b2_station_8",
+          "file": "b2/station-8.json",
+          "title": "Наше будущее (Промпт)"
+        },
+        {
+          "id": "station-8",
           "file": "b2/station-8.json",
           "title": "Наше будущее (Промпт)"
         }

@@ -272,7 +272,7 @@ export default function EpochPage({
           className="h-8 w-8 rounded-full object-cover"
         />
         <p className="text-sm font-medium leading-snug text-slate-600">
-          Что тебя ждёт: Инструктаж, Миссии, Общение, Квесты, Уровни сложности. Все
+          Что тебя ждёт: Обучение, Миссии, Общение, Квесты, Уровни сложности. Все
           секторы открыты — проходи станции в любом порядке!
         </p>
       </div>
@@ -404,7 +404,7 @@ export default function EpochPage({
           >
             {/* T01: бейдж уровня сложности в правом верхнем углу (A1/A2/B1/B2). */}
             <span className="absolute right-3 top-3 rounded-full bg-primary-600 px-3 py-1 text-xs font-black text-white shadow-soft">
-              {sector.level}
+              Level {sector.level}
             </span>
             <div className="mb-3 flex items-start gap-3">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-primary-200 bg-primary-50 text-2xl shadow-soft">

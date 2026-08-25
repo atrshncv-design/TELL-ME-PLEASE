@@ -1,6 +1,6 @@
 {
   "id": "past_simple_a2_station_3",
-  "title": "Виктория Времен (Past vs Perfect)",
+  "title": "Викторина Времен (Past vs Perfect)",
   "description": "Выбери правильную форму: Past Simple или Present Perfect.",
   "category": "grammar",
   "type": "quiz",
@@ -52,6 +52,78 @@
         "took"
       ],
       "answer": "has taken"
+    },
+    {
+      "question": "I have just finished my homework.",
+      "options": [
+        "have just finished",
+        "finished"
+      ],
+      "answer": "have just finished"
+    },
+    {
+      "question": "We visited our grandparents last Sunday.",
+      "options": [
+        "visited",
+        "have visited"
+      ],
+      "answer": "visited"
+    },
+    {
+      "question": "She has never seen this film.",
+      "options": [
+        "has never seen",
+        "saw"
+      ],
+      "answer": "has never seen"
+    },
+    {
+      "question": "They went to the zoo yesterday.",
+      "options": [
+        "went",
+        "have gone"
+      ],
+      "answer": "went"
+    },
+    {
+      "question": "My brother has already cleaned his room.",
+      "options": [
+        "has already cleaned",
+        "cleaned"
+      ],
+      "answer": "has already cleaned"
+    },
+    {
+      "question": "I lost my keys two days ago.",
+      "options": [
+        "lost",
+        "have lost"
+      ],
+      "answer": "lost"
+    },
+    {
+      "question": "Have you ever tried sushi?",
+      "options": [
+        "tried",
+        "have tried"
+      ],
+      "answer": "have tried"
+    },
+    {
+      "question": "He didn’t come to school last Friday.",
+      "options": [
+        "didn’t come",
+        "haven’t come"
+      ],
+      "answer": "didn’t come"
+    },
+    {
+      "question": "Our teacher has given us a new project this week.",
+      "options": [
+        "has given",
+        "gave"
+      ],
+      "answer": "has given"
     }
   ]
 }

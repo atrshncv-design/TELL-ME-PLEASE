@@ -1,7 +1,7 @@
 {
   "id": "present_continuous_a1_station_4",
   "title": "Битва Времен (Simple vs Continuous)",
-  "description": "Выработать рефлекс на МАРКЕРЫ ВРЕМЕНИ. \"Now\" -> Continuous. \"Every day\" -> Simple.",
+  "description": "Выработать рефлекс на МАРКЕРЫ ВРЕМЕНИ. \"Now\" -> Continuous. \"Every day\" -> Simple.\n\nМаркеры: Present Simple — usually, every Monday, often, always, sometimes, never, regularly. Present Continuous — look, listen, right now, at the moment, be quiet, today, now, this week.",
   "category": "grammar",
   "type": "quiz",
   "items": [
@@ -52,6 +52,134 @@
         "are playing"
       ],
       "answer": "play"
+    },
+    {
+      "question": "My brother usually ___ to school.",
+      "options": [
+        "walks",
+        "is walking"
+      ],
+      "answer": "walks"
+    },
+    {
+      "question": "Look! The dog ___ a cat.",
+      "options": [
+        "chase",
+        "is chasing"
+      ],
+      "answer": "is chasing"
+    },
+    {
+      "question": "We ___ English lessons every Monday.",
+      "options": [
+        "have",
+        "are having"
+      ],
+      "answer": "have"
+    },
+    {
+      "question": "Listen! Someone ___ the piano.",
+      "options": [
+        "plays",
+        "is playing"
+      ],
+      "answer": "is playing"
+    },
+    {
+      "question": "Kate often ___ her mother after school.",
+      "options": [
+        "helps",
+        "is helping"
+      ],
+      "answer": "helps"
+    },
+    {
+      "question": "They ___ a science project right now.",
+      "options": [
+        "do",
+        "are doing"
+      ],
+      "answer": "are doing"
+    },
+    {
+      "question": "I always ___ tea for breakfast.",
+      "options": [
+        "drink",
+        "am drinking"
+      ],
+      "answer": "drink"
+    },
+    {
+      "question": "Be quiet! The baby ___.",
+      "options": [
+        "sleep",
+        "is sleeping"
+      ],
+      "answer": "is sleeping"
+    },
+    {
+      "question": "Our teacher sometimes ___ us interesting projects.",
+      "options": [
+        "gives",
+        "is giving"
+      ],
+      "answer": "gives"
+    },
+    {
+      "question": "At the moment, my friends ___ for the bus.",
+      "options": [
+        "wait",
+        "are waiting"
+      ],
+      "answer": "are waiting"
+    },
+    {
+      "question": "Dad never ___ on Sundays.",
+      "options": [
+        "works",
+        "isn’t working"
+      ],
+      "answer": "works"
+    },
+    {
+      "question": "Today, we ___ for a school concert.",
+      "options": [
+        "prepare",
+        "are preparing"
+      ],
+      "answer": "are preparing"
+    },
+    {
+      "question": "The school bus usually ___ at eight o’clock.",
+      "options": [
+        "arrives",
+        "is arriving"
+      ],
+      "answer": "arrives"
+    },
+    {
+      "question": "Now, the students ___ a test.",
+      "options": [
+        "write",
+        "are writing"
+      ],
+      "answer": "are writing"
+    },
+    {
+      "question": "My cousin regularly ___ us in summer.",
+      "options": [
+        "visits",
+        "is visiting"
+      ],
+      "answer": "visits"
+    },
+    {
+      "question": "This week, I ___ a new adventure book.",
+      "options": [
+        "read",
+        "am reading"
+      ],
+      "answer": "am reading"
     }
   ]
 }

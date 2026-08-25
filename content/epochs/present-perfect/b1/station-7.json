@@ -57,5 +57,14 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Пример комикса «An Accident» — по образцу составь свой:",
+    "sentences": [
+      "Кадр 1 — Past Simple: I fell into a bush in the park.",
+      "Кадр 2 — Past Continuous: I was trying to take a funny selfie when I stepped on a small stone.",
+      "Кадр 3 — Present Perfect: I have broken my sunglasses, and my hair has become full of leaves.",
+      "Кадр 4 — Present Simple: I usually walk carefully, but I always look at the camera when I take selfies."
+    ]
+  }
 }

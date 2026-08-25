@@ -6,13 +6,22 @@
   "type": "cloze",
   "rounds": [
     {
-      "text": "Technology ___ a lot recently. People ___ smartphones every day now. Yesterday, I ___ a new app. I ___ it to my friends. When I ___ home, my brother ___ video games. He ___ his homework yet. Last week, we ___ a modern factory.",
+      "text": "Technology in Our Lives. Technology has changed a lot recently. People use smartphones every day, and many of them download useful apps for studying and communication. Last week, we visited a modern factory and saw how new machines worked. Yesterday, I downloaded a new app and have already shown it to my friends. When I came home, my brother was playing video games. He hadn’t done his homework yet, so our parents asked him to turn off the computer and study.",
       "answers": [
         [
           "has changed"
         ],
         [
           "use"
+        ],
+        [
+          "download"
+        ],
+        [
+          "visited"
+        ],
+        [
+          "saw"
         ],
         [
           "downloaded"
@@ -27,21 +36,24 @@
           "was playing"
         ],
         [
-          "hasn't done"
+          "hadn’t done"
         ],
         [
-          "visited"
+          "asked"
         ]
       ],
       "hints": [
-        "(change)",
+        "(changed)",
         "(use)",
         "(download)",
-        "(already / show)",
-        "(come)",
-        "(play)",
-        "(not / do)",
-        "(visit)"
+        "(visited)",
+        "(saw)",
+        "(downloaded)",
+        "(shown)",
+        "(came)",
+        "(playing)",
+        "(done)",
+        "(asked)"
       ],
       "word_bank": [
         "has changed",

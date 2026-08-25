@@ -1,7 +1,7 @@
 {
   "id": "past_simple_a1_station_6",
   "title": "Сборка Контекста (Текст)",
-  "description": "Вставь глаголы в нужной форме в текст о дне в Лондоне.",
+  "description": "Вставь глаголы в нужной форме в текст о дне в Лондоне.\n\nВнимание: в списке есть лишние слова — выбирай только подходящие!",
   "category": "grammar",
   "type": "cloze",
   "text": "Hi! I am in London now, but yesterday ___ a crazy day! I ___ at 6 AM. We ___ the British Museum. My dad ___ a funny souvenir. Last night we ___ fish and chips. I ___ such a big city before this trip! I ___ 100 photos today.",
@@ -35,7 +35,14 @@
     "bought",
     "ate",
     "have never seen",
-    "have already taken"
+    "have already taken",
+    "Is",
+    "wake up",
+    "visit",
+    "buy",
+    "eat",
+    "saw",
+    "took"
   ],
   "hints": [
     "(be)",

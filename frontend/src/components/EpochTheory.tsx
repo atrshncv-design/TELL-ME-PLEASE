@@ -404,7 +404,7 @@ export default function EpochTheory({
             className="fixed inset-0 z-50 flex items-stretch justify-center bg-slate-900/70 backdrop-blur-sm sm:items-center sm:p-4"
             role="dialog"
             aria-modal="true"
-            aria-label="Инструктаж эпохи"
+            aria-label="Обучение эпохи"
           >
             <motion.div
               initial={{ opacity: 0, y: 24, scale: 0.98 }}
@@ -418,7 +418,7 @@ export default function EpochTheory({
                 <div className="min-w-0">
                   <p className="font-display truncate text-base font-extrabold tracking-tight text-primary-900">
                     {phase === "slides"
-                      ? "Инструктаж"
+                      ? "Обучение"
                       : phase === "quiz"
                         ? "Проверь себя"
                         : "Музыкальная пауза"}
@@ -427,7 +427,7 @@ export default function EpochTheory({
                     {phase === "slides"
                       ? "Теория эпохи"
                       : phase === "quiz"
-                        ? "Мини-тест по инструктажу"
+                        ? "Мини-тест по обучению"
                         : "Песни и Suno-промпт"}
                   </p>
                 </div>

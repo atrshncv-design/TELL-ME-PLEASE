@@ -1,0 +1,99 @@
+{
+  "id": "ps_a1_station_0",
+  "title": "Тренажёр Неправильных Глаголов (Разминка)",
+  "description": "Разминка перед полётом: выбери вторую форму (Past Simple) для каждого неправильного глагола. 2 уровня сложности — Beginner и Elementary.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "go → ___ (Past Simple)",
+      "options": [
+        "went",
+        "goed",
+        "gone"
+      ],
+      "answer": "went"
+    },
+    {
+      "question": "eat → ___ (Past Simple)",
+      "options": [
+        "ate",
+        "eated",
+        "eaten"
+      ],
+      "answer": "ate"
+    },
+    {
+      "question": "see → ___ (Past Simple)",
+      "options": [
+        "saw",
+        "seed",
+        "seen"
+      ],
+      "answer": "saw"
+    },
+    {
+      "question": "take → ___ (Past Simple)",
+      "options": [
+        "taked",
+        "took",
+        "taken"
+      ],
+      "answer": "took"
+    },
+    {
+      "question": "buy → ___ (Past Simple)",
+      "options": [
+        "buyed",
+        "bought",
+        "boughten"
+      ],
+      "answer": "bought"
+    },
+    {
+      "question": "drink → ___ (Past Simple)",
+      "options": [
+        "drinked",
+        "drank",
+        "drunk"
+      ],
+      "answer": "drank"
+    },
+    {
+      "question": "run → ___ (Past Simple)",
+      "options": [
+        "runned",
+        "ran",
+        "run"
+      ],
+      "answer": "ran"
+    },
+    {
+      "question": "sleep → ___ (Past Simple)",
+      "options": [
+        "slept",
+        "sleeped",
+        "slepted"
+      ],
+      "answer": "slept"
+    },
+    {
+      "question": "fly → ___ (Past Simple)",
+      "options": [
+        "flied",
+        "flew",
+        "flown"
+      ],
+      "answer": "flew"
+    },
+    {
+      "question": "swim → ___ (Past Simple)",
+      "options": [
+        "swam",
+        "swimmed",
+        "swum"
+      ],
+      "answer": "swam"
+    }
+  ]
+}

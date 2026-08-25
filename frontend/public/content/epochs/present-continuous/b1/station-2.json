@@ -1,7 +1,7 @@
 {
   "id": "present_continuous_b1_station_2",
   "title": "Ловушка Состояния (Stative Verbs)",
-  "description": "Внутренний тормоз: глаголы чувств и мышления (know, love, understand) НЕ используются в Continuous.",
+  "description": "Внутренний тормоз: глаголы чувств и мышления (know, love, understand) НЕ используются в Continuous.\n\nStative verbs: Present Simple, not Present Continuous. Эти глаголы обозначают состояния — мысли, чувства, принадлежность или восприятие органами чувств, — поэтому они обычно употребляются в Present Simple, даже если действие относится к настоящему моменту.",
   "category": "grammar",
   "type": "quiz",
   "items": [
@@ -44,6 +44,126 @@
         "are having"
       ],
       "answer": "are having"
+    },
+    {
+      "question": "I ___ the answer now.",
+      "options": [
+        "know",
+        "am knowing"
+      ],
+      "answer": "know"
+    },
+    {
+      "question": "She ___ this rule at the moment.",
+      "options": [
+        "is understanding",
+        "understands"
+      ],
+      "answer": "understands"
+    },
+    {
+      "question": "We ___ your story.",
+      "options": [
+        "believe",
+        "are believing"
+      ],
+      "answer": "believe"
+    },
+    {
+      "question": "They ___ their first teacher.",
+      "options": [
+        "are remembering",
+        "remember"
+      ],
+      "answer": "remember"
+    },
+    {
+      "question": "I ___ a new phone.",
+      "options": [
+        "am wanting",
+        "want"
+      ],
+      "answer": "want"
+    },
+    {
+      "question": "He ___ some help now.",
+      "options": [
+        "is needing",
+        "needs"
+      ],
+      "answer": "needs"
+    },
+    {
+      "question": "She ___ this song.",
+      "options": [
+        "likes",
+        "is liking"
+      ],
+      "answer": "likes"
+    },
+    {
+      "question": "We ___ our new classroom.",
+      "options": [
+        "are loving",
+        "love"
+      ],
+      "answer": "love"
+    },
+    {
+      "question": "I ___ rainy weather.",
+      "options": [
+        "am hating",
+        "hate"
+      ],
+      "answer": "hate"
+    },
+    {
+      "question": "This book ___ to my friend.",
+      "options": [
+        "belongs",
+        "is belonging"
+      ],
+      "answer": "belongs"
+    },
+    {
+      "question": "The soup ___ delicious.",
+      "options": [
+        "tastes",
+        "is tasting"
+      ],
+      "answer": "tastes"
+    },
+    {
+      "question": "I ___ music from the next room.",
+      "options": [
+        "am hearing",
+        "hear"
+      ],
+      "answer": "hear"
+    },
+    {
+      "question": "I ___ tea to coffee.",
+      "options": [
+        "am preferring",
+        "prefer"
+      ],
+      "answer": "prefer"
+    },
+    {
+      "question": "She ___ tired today.",
+      "options": [
+        "is seeming",
+        "seems"
+      ],
+      "answer": "seems"
+    },
+    {
+      "question": "This bag ___ 50 dollars.",
+      "options": [
+        "costs",
+        "is costing"
+      ],
+      "answer": "costs"
     }
   ]
 }

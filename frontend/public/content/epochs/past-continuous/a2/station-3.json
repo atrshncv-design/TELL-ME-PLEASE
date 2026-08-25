@@ -1,7 +1,7 @@
 {
   "id": "past_continuous_a2_station_3",
   "title": "Параллельные Миры (Союз WHILE)",
-  "description": "Вставь глаголы в Past Continuous.",
+  "description": "Вставь глаголы в Past Continuous.\n\nС while обе части могут быть в Past Continuous, если два действия происходили одновременно в прошлом: was/were + verb-ing.",
   "category": "grammar",
   "type": "fill-in",
   "items": [
@@ -38,6 +38,41 @@
       "answer": [
         "was driving",
         "was barking"
+      ]
+    },
+    {
+      "sentence": "While I ___ (use) my laptop, my brother ___ (play) an online game.",
+      "answer": [
+        "was using",
+        "was playing"
+      ]
+    },
+    {
+      "sentence": "While she ___ (talk) to her friend on a video call, her phone ___ (charge).",
+      "answer": [
+        "was talking",
+        "was charging"
+      ]
+    },
+    {
+      "sentence": "While we ___ (watch) a film online, our smart TV ___ (download) an update.",
+      "answer": [
+        "was watching",
+        "was downloading"
+      ]
+    },
+    {
+      "sentence": "While they ___ (create) a presentation, the printer ___ (print) some documents.",
+      "answer": [
+        "were creating",
+        "was printing"
+      ]
+    },
+    {
+      "sentence": "While I ___ (look) for information on the Internet, my tablet ___ (update) its apps.",
+      "answer": [
+        "was looking",
+        "was updating"
       ]
     }
   ]

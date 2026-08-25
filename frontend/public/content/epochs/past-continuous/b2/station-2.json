@@ -1,45 +1,49 @@
 {
   "id": "past_continuous_b2_station_2",
   "title": "Тонкие Смыслы (Перевод-Ловушка)",
-  "description": "Переведи, выбрав Past Cont или Past Simple.",
+  "description": "Переведи, выбрав Past Continuous или Past Simple.",
   "category": "grammar",
   "type": "fill-in",
   "items": [
     {
-      "sentence": "I ___ (read) a book.",
-      "answer": "was reading",
-      "hint": "Я читал книгу (процесс)."
+      "sentence": "Я читал книгу (процесс). I ___ (read) a book.",
+      "answer": [
+        "was reading"
+      ],
+      "hint": "(read — процесс)"
     },
     {
-      "sentence": "I ___ (read) a book.",
-      "answer": "have read",
-      "hint": "Я прочитал книгу (результат)."
+      "sentence": "Я прочитал книгу вчера (факт). I ___ (read) a book.",
+      "answer": [
+        "read"
+      ],
+      "hint": "(read — факт)"
     },
     {
-      "sentence": "I ___ (walk) when it ___ (start) to rain.",
+      "sentence": "Я гулял, когда пошёл дождь. I ___ (walk) when it ___ (start) to rain.",
       "answer": [
         "was walking",
         "started"
-      ],
-      "hint": "Я гулял, когда пошёл дождь."
+      ]
     },
     {
-      "sentence": "I ___ (walk) and went home.",
-      "answer": "walked",
-      "hint": "Я погулял и пошёл домой."
+      "sentence": "Я погулял и пошёл домой. I ___ (walk) and went home.",
+      "answer": [
+        "walked"
+      ]
     },
     {
-      "sentence": "She ___ (cook) dinner when I ___ (come).",
+      "sentence": "Она готовила ужин, когда я пришёл. She ___ (cook) dinner when I ___.",
       "answer": [
         "was cooking",
         "came"
-      ],
-      "hint": "Она готовила ужин, когда я пришёл."
+      ]
     },
     {
-      "sentence": "She ___ (cook) dinner and we ate.",
-      "answer": "cooked",
-      "hint": "Она приготовила ужин, и мы поели."
+      "sentence": "Она приготовила ужин, и мы поели. She ___ (cook) dinner and we ate.",
+      "answer": [
+        "cooked"
+      ]
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "past_simple_b2_station_3",
   "title": "Текст ОГЭ: История Города (Чтение)",
-  "description": "Вставь глаголы в нужной форме в текст о городе.",
+  "description": "Вставь глаголы в нужной форме в текст о городе.\n\nВнимание: в списке есть лишние слова — выбирай только подходящие!",
   "category": "grammar",
   "type": "cloze",
   "text": "Our town ___ a lot in the last 10 years. In 2010, they ___ a new shopping mall. Since then, many small shops ___. Last year, the mayor ___ to plant trees in the center. Volunteers ___ 500 trees already. Right now, they ___ more near the park. I ___ here since I was born. I ___ away in 2020, but I came back.",
@@ -39,7 +39,12 @@
     "have planted",
     "are planting",
     "have lived",
-    "moved"
+    "moved",
+    "changed",
+    "lived",
+    "move away",
+    "planted",
+    "decide"
   ],
   "hints": [
     "(change)",

@@ -27,7 +27,7 @@ const unbounded = Unbounded({
 })
 
 export const metadata: Metadata = {
-  title: "Time travel mission",
+  title: "TIME TRAVEL MISSION",
   description: "Интерактивная платформа для изучения английского языка",
 }
 

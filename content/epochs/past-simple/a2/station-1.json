@@ -49,6 +49,51 @@
         "How did play you tennis?"
       ],
       "answer": "How did you play tennis?"
+    },
+    {
+      "question": "Where / did / you / go / yesterday?",
+      "options": [
+        "Where did you go yesterday?",
+        "Where you did go yesterday?",
+        "Where did you went yesterday?"
+      ],
+      "answer": "Where did you go yesterday?"
+    },
+    {
+      "question": "What / did / she / buy / at the shop?",
+      "options": [
+        "What did she buy at the shop?",
+        "What she did buy at the shop?",
+        "What did she bought at the shop?"
+      ],
+      "answer": "What did she buy at the shop?"
+    },
+    {
+      "question": "When / did / they / arrive / home?",
+      "options": [
+        "When did they arrive home?",
+        "When they did arrive home?",
+        "When did they arrived home?"
+      ],
+      "answer": "When did they arrive home?"
+    },
+    {
+      "question": "Why / did / he / call / his friend?",
+      "options": [
+        "Why did he call his friend?",
+        "Why he did call his friend?",
+        "Why did he called his friend?"
+      ],
+      "answer": "Why did he call his friend?"
+    },
+    {
+      "question": "How / did / you / spend / your weekend?",
+      "options": [
+        "How did you spend your weekend?",
+        "How you did spend your weekend?",
+        "How did you spent your weekend?"
+      ],
+      "answer": "How did you spend your weekend?"
     }
   ]
 }

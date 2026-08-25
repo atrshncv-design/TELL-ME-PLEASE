@@ -4,7 +4,7 @@
   "description": "Вставь глаголы в нужной форме в историю о создании приложения.",
   "category": "grammar",
   "type": "cloze",
-  "text": "Two years ago, a young programmer ___ a new app. At first, nobody ___ about it. But last month, he ___ it. Since then, millions of people ___ it. Yesterday, a famous blogger ___ the app. He ___ it was brilliant. The programmer ___ a lot of money. He ___ very happy now.",
+  "text": "Two years ago, a young programmer (1) ___ (create) a new app. At first, nobody (2) ___ (know) about it. But last month, he (3) ___ (update) it. Since then, millions of people (4) ___ (download) it. Yesterday, a famous blogger (5) ___ (review) the app. He (6) ___ (say) it was brilliant. The programmer (7) ___ (already / earn) a lot of money. He (8) ___ (be) very happy now.",
   "answers": [
     [
       "created"
@@ -39,7 +39,12 @@
     "reviewed",
     "said",
     "has already earned",
-    "is"
+    "is",
+    "create",
+    "know",
+    "earned",
+    "was",
+    "has been"
   ],
   "hints": [
     "(create)",

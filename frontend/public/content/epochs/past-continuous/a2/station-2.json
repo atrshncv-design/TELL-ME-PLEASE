@@ -1,7 +1,7 @@
 {
   "id": "past_continuous_a2_station_2",
   "title": "Сборка Сцены (Синтаксис с WHEN)",
-  "description": "Собери предложения о сцене: длинный процесс (Past Continuous) прерывается внезапным действием (Past Simple) с союзом when.",
+  "description": "Собери предложения о сцене: длинный процесс (Past Continuous) прерывается внезапным действием (Past Simple) с союзом when.\n\nСхема: Past Continuous показывает длительное действие, а Past Simple — короткое событие, которое его прервало: was doing … when … called.",
   "category": "grammar",
   "type": "quiz",
   "items": [
@@ -40,6 +40,60 @@
         "They having were dinner when I came."
       ],
       "answer": "They were having dinner when I came."
+    },
+    {
+      "question": "doing / I / was / my / homework / when / my / friend / called / me",
+      "options": [
+        "I was doing my homework when my friend called me.",
+        "I was doing my homework when my friend call.",
+        "Doing I was my homework when my friend called me."
+      ],
+      "answer": "I was doing my homework when my friend called me."
+    },
+    {
+      "question": "cooking / She / was / dinner / when / the / lights / went / out",
+      "options": [
+        "She was cooking dinner when the lights went out.",
+        "She was cook dinner when the lights went out.",
+        "Cooking she was dinner when the lights went out."
+      ],
+      "answer": "She was cooking dinner when the lights went out."
+    },
+    {
+      "question": "playing / They / were / football / when / it / started / to / rain",
+      "options": [
+        "They were playing football when it started to rain.",
+        "They were play football when it started to rain.",
+        "Playing they were football when it started to rain."
+      ],
+      "answer": "They were playing football when it started to rain."
+    },
+    {
+      "question": "walking / We / were / home / when / we / saw / a / strange / dog",
+      "options": [
+        "We were walking home when we saw a strange dog.",
+        "We were walk home when we saw a strange dog.",
+        "Walking we were home when we saw a strange dog."
+      ],
+      "answer": "We were walking home when we saw a strange dog."
+    },
+    {
+      "question": "sleeping / He / was / when / his / alarm / rang",
+      "options": [
+        "He was sleeping when his alarm rang.",
+        "He was sleep when his alarm rang.",
+        "Sleeping he was when his alarm rang."
+      ],
+      "answer": "He was sleeping when his alarm rang."
+    },
+    {
+      "question": "were / My / parents / watching / TV / when / I / came / home",
+      "options": [
+        "My parents were watching TV when I came home.",
+        "My parents were watch TV when I came home.",
+        "Watching my parents were TV when I came home."
+      ],
+      "answer": "My parents were watching TV when I came home."
     }
   ]
 }

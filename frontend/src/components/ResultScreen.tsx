@@ -1,7 +1,13 @@
 "use client"
 
+import { createContext, useContext } from "react"
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Confetti } from "./Confetti"
+
+/** pravki-250826 (PP1): href следующей станции — задаёт TaskRenderer страницы
+ *  эпохи; вне эпохального флоу контекст пуст и кнопка «Дальше» не рисуется. */
+export const ResultNextContext = createContext<string | null>(null)
 import { SPEAKING_TASK_TYPES } from "@/lib/useProgress"
 
 /**
@@ -23,6 +29,7 @@ interface ResultScreenProps {
 }
 
 export function ResultScreen({ title, score, total, onRetry, taskType }: ResultScreenProps) {
+  const nextHref = useContext(ResultNextContext)
   const pct = total > 0 ? score / total : 0
   const perfect = pct === 1
   const good = pct >= 0.7
@@ -96,6 +103,14 @@ export function ResultScreen({ title, score, total, onRetry, taskType }: ResultS
         >
           ↻ Ещё раз
         </motion.button>
+      )}
+      {nextHref && (
+        <Link
+          href={nextHref}
+          className="mt-2 min-h-[44px] rounded-2xl bg-primary-600 px-8 py-3 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
+        >
+          Дальше →
+        </Link>
       )}
     </div>
   )

@@ -22,7 +22,7 @@
       "hint": "Мы еще не решили эту проблему."
     },
     {
-      "sentence": "He ___ an article.",
+      "sentence": "He ___ (has just published) an article.",
       "answer": [
         "has just published"
       ],
@@ -43,6 +43,36 @@
         "left"
       ],
       "hint": "Они уже ушли."
+    },
+    {
+      "sentence": "Я уже закончила домашнее задание. I have already ___ (finish) my homework.",
+      "answer": [
+        "finished"
+      ]
+    },
+    {
+      "sentence": "Она никогда не была в Лондоне. She has never ___ (be) to London.",
+      "answer": [
+        "been"
+      ]
+    },
+    {
+      "sentence": "Мы только что посмотрели этот фильм. We have just ___ (watch) this film.",
+      "answer": [
+        "watched"
+      ]
+    },
+    {
+      "sentence": "Ты когда-нибудь пробовал японскую еду? Have you ever ___ (try) Japanese food?",
+      "answer": [
+        "tried"
+      ]
+    },
+    {
+      "sentence": "Они ещё не нашли свои ключи. They haven’t ___ (find) their keys yet.",
+      "answer": [
+        "found"
+      ]
     }
   ]
 }

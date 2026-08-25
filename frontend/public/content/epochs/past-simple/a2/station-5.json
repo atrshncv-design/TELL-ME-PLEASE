@@ -1,7 +1,7 @@
 {
   "id": "past_simple_a2_station_5",
   "title": "Текст: Мой Отпуск (Чтение)",
-  "description": "Вставь глаголы в нужной форме в текст об отпуске.",
+  "description": "Вставь глаголы в нужной форме в текст об отпуске.\n\nВнимание: в списке есть лишние слова — выбирай только подходящие!",
   "category": "grammar",
   "type": "cloze",
   "text": "Last summer, my family and I ___ to Spain. We ___ at a beautiful hotel. Every morning, we ___ in the pool. One day, my dad ___ us to a water park. It ___ amazing! I ___ to a water park before. We ___ a lot of ice cream. I ___ Spain!",
@@ -39,7 +39,11 @@
     "was",
     "have never been",
     "ate",
-    "already miss"
+    "already miss",
+    "go",
+    "swim",
+    "take",
+    "have been"
   ],
   "hints": [
     "(go)",

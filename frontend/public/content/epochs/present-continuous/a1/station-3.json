@@ -49,6 +49,114 @@
         "Am reading I?"
       ],
       "answer": "Am I reading?"
+    },
+    {
+      "question": "isn’t / She / doing / her / homework / now",
+      "options": [
+        "She isn’t doing her homework now.",
+        "She doing isn’t her homework now.",
+        "She doing her homework now isn’t."
+      ],
+      "answer": "She isn’t doing her homework now."
+    },
+    {
+      "question": "Are / they / playing / football / in / the / yard?",
+      "options": [
+        "Are they playing football in the yard?",
+        "They are playing football in the yard?",
+        "They playing football in the yard are?"
+      ],
+      "answer": "Are they playing football in the yard?"
+    },
+    {
+      "question": "aren’t / We / watching / TV / at / the / moment",
+      "options": [
+        "We aren’t watching TV at the moment.",
+        "We watching aren’t TV at the moment.",
+        "We watching TV at the moment aren’t."
+      ],
+      "answer": "We aren’t watching TV at the moment."
+    },
+    {
+      "question": "Is / he / talking / to / his / teacher?",
+      "options": [
+        "Is he talking to his teacher?",
+        "He is talking to his teacher?",
+        "He talking to his teacher is?"
+      ],
+      "answer": "Is he talking to his teacher?"
+    },
+    {
+      "question": "not / I’m / wearing / my / school / uniform / today",
+      "options": [
+        "I’m not wearing my school uniform today.",
+        "I’m wearing not my school uniform today.",
+        "I’m wearing my school uniform today not."
+      ],
+      "answer": "I’m not wearing my school uniform today."
+    },
+    {
+      "question": "Are / you / listening / to / music / now?",
+      "options": [
+        "Are you listening to music now?",
+        "You are listening to music now?",
+        "You listening to music now are?"
+      ],
+      "answer": "Are you listening to music now?"
+    },
+    {
+      "question": "aren’t / The / children / sleeping",
+      "options": [
+        "The children aren’t sleeping.",
+        "The children sleeping aren’t.",
+        "The sleeping children aren’t."
+      ],
+      "answer": "The children aren’t sleeping."
+    },
+    {
+      "question": "Is / your / friend / waiting / for / the / bus?",
+      "options": [
+        "Is your friend waiting for the bus?",
+        "Your friend is waiting for the bus?",
+        "Your friend waiting for the bus is?"
+      ],
+      "answer": "Is your friend waiting for the bus?"
+    },
+    {
+      "question": "aren’t / My / parents / working / today",
+      "options": [
+        "My parents aren’t working today.",
+        "My parents working aren’t today.",
+        "My parents working today aren’t."
+      ],
+      "answer": "My parents aren’t working today."
+    },
+    {
+      "question": "Are / you / writing / an / email / to / your / cousin?",
+      "options": [
+        "Are you writing an email to your cousin?",
+        "You are writing an email to your cousin?",
+        "You writing an email to your cousin are?"
+      ],
+      "answer": "Are you writing an email to your cousin?"
+    },
+    {
+      "question": "isn’t / Tom / having / lunch / now",
+      "options": [
+        "Tom isn’t having lunch now.",
+        "Tom having isn’t lunch now.",
+        "Tom having lunch now isn’t."
+      ],
+      "answer": "Tom isn’t having lunch now."
+    },
+    {
+      "question": "Is / it / raining / outside?",
+      "options": [
+        "Is it raining outside?",
+        "It is raining outside?",
+        "It raining outside is?"
+      ],
+      "answer": "Is it raining outside?"
     }
   ]
 }

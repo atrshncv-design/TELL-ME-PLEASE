@@ -192,6 +192,11 @@
           "id": "a2_station_8",
           "file": "a2/station-8.json",
           "title": "Новенький в классе (Промпт)"
+        },
+        {
+          "id": "station-8",
+          "file": "a2/station-8.json",
+          "title": "Новенький в классе (Промпт)"
         }
       ],
       "story": "Лексика хобби и рутины. Сравнение с Present Continuous."
@@ -241,6 +246,11 @@
           "id": "b1_station_8",
           "file": "b1/station-8.json",
           "title": "Компьютерные игры (Промпт)"
+        },
+        {
+          "id": "station-8",
+          "file": "b1/station-8.json",
+          "title": "Компьютерные игры (Промпт)"
         }
       ],
       "story": "Лексика технологий, медиа. Глубокое сравнение Present Perfect vs Present Perfect Continuous."
@@ -288,6 +298,11 @@
         },
         {
           "id": "b2_station_8",
+          "file": "b2/station-8.json",
+          "title": "Жизнь тогда и сейчас (Промпт)"
+        },
+        {
+          "id": "station-8",
           "file": "b2/station-8.json",
           "title": "Жизнь тогда и сейчас (Промпт)"
         }

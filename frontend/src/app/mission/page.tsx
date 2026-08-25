@@ -195,7 +195,7 @@ export default function MissionPage() {
               🤖
             </span>
             <span className="pt-0.5 text-base font-medium leading-snug text-slate-700">
-              Verb Bot — твой ИИ-навигатор (как JARVIS). Что тебя ждёт: Инструктаж,
+              Verb Bot — твой ИИ-навигатор (как JARVIS). Что тебя ждёт: Обучение,
               Миссии, Общение, Квесты, Уровни сложности.
             </span>
           </li>

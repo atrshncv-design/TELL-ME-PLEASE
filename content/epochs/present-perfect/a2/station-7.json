@@ -7,19 +7,19 @@
   "task_context": "Ты — весёлый сверстник ученика 6 класса. Общайся по-английски (уровень A2). Задавай вопросы из списка checklist по одному, жди ответ, реагируй дружелюбно и коротко, мягко поправляй ошибки во временах (Simple, Continuous, Perfect, Past). Никогда не говори, что ты ИИ.",
   "checklist": [
     {
-      "question": "Do you like traveling?",
+      "question": "Do you like travelling?",
       "markers": [
         "yes",
         "no",
         "like",
-        "traveling",
+        "travelling",
         "travel"
       ],
       "min": 1,
-      "hint": "Ответь: Yes, I like traveling / No, I don't."
+      "hint": "Ответь: Yes, I like travelling / No, I don't."
     },
     {
-      "question": "Are you traveling right now?",
+      "question": "Are you travelling right now?",
       "markers": [
         "am",
         "is",
@@ -28,7 +28,7 @@
         "right"
       ],
       "min": 1,
-      "hint": "Ответь: I am not traveling right now."
+      "hint": "Ответь: I am not travelling right now."
     },
     {
       "question": "Where are you going this summer?",

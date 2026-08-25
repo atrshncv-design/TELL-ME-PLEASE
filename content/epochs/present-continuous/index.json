@@ -171,6 +171,11 @@
           "file": "a1/station-8.json",
           "title": "Выход в космос (Проблемы вселенной)",
           "type": "prompt-card"
+        },
+        {
+          "id": "station-10",
+          "file": "a1/station-10.json",
+          "title": "Свободное Общение (Промпт)"
         }
       ]
     },

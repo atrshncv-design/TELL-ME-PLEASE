@@ -149,7 +149,7 @@ function VoiceChatInner({
 
   /** «Следующий вопрос →» / «К результатам →» после вердикта. */
   const advanceChecklist = () => {
-    if (listVerdict === null) return
+    if (listVerdict === null || listFinished) return
     if (listIndex + 1 >= checklistItems.length) {
       setListFinished(true)
       if (!completedRef.current) {
@@ -476,7 +476,7 @@ function VoiceChatInner({
             <div className="font-bold text-indigo-900 text-sm">{title}</div>
             <div className="text-xs text-slate-500 flex items-center gap-2">
               {checklistMode
-                ? `вопрос ${listIndex + 1} из ${checklistItems.length}`
+                ? `вопрос ${Math.min(listIndex + 1, checklistItems.length)} из ${checklistItems.length}`
                 : sessionEnded
                   ? "сессия завершена"
                   : connected
