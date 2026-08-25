@@ -40,6 +40,13 @@ find "$STANDALONE_NM" -name "*.d.mts" -delete 2>/dev/null || true
 find "$STANDALONE_NM" -type d \( -name "doc" -o -name "docs" -o -name "example" -o -name "examples" \) -exec rm -rf {} + 2>/dev/null || true
 find "$STANDALONE_NM" -maxdepth 2 -name "*.md" -delete 2>/dev/null || true
 
+# Trim platform-template dirs that file-tracing may sweep in (деплой 24.08:
+# тарболл 61MB > лимита 50MB — skills/ 61MB + вложенный клон репо 8.9MB).
+# Приложение их не использует; страховка поверх outputFileTracingExcludes.
+rm -rf "$STAGING/next-service-dist/skills" 2>/dev/null || true
+rm -rf "$STAGING/next-service-dist/tell-me-please" 2>/dev/null || true
+rm -rf "$STAGING/next-service-dist/examples" 2>/dev/null || true
+
 # Copy Caddyfile to staging root
 cp ../Caddyfile "$STAGING/Caddyfile" 2>/dev/null || true
 
