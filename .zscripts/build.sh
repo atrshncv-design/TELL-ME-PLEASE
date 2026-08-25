@@ -58,7 +58,9 @@ cp ../.env "$STAGING/.env" 2>/dev/null || true
 cat > "$STAGING/start.sh" << 'STARTEOF'
 #!/bin/bash
 set -e
-cd /home/z/my-project/next-service-dist
+# Путь — относительно самого скрипта: платформа может распаковать тарболл
+# не в /home/z/my-project (абсолютный путь давал тихий fallback до заглушки Z).
+cd "$(cd "$(dirname "$0")" && pwd)/next-service-dist"
 if [ -f .env ]; then
   set -a; source .env; set +a
 fi
