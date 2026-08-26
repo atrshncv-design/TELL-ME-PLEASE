@@ -8,6 +8,12 @@ import { ResultScreen } from "@/components/ResultScreen"
 import { StickerReaction } from "@/components/StickerReaction"
 import { hintFor } from "@/lib/hints"
 import { hashString, seededShuffle } from "@/lib/shuffle"
+import {
+  advanceDelayMs,
+  CALM_ANSWER_LINE_CLASS,
+  CORRECT_ANSWER_PREFIX,
+  optionVerdictStyle,
+} from "./verdict"
 
 interface QuizItem {
   question?: string
@@ -78,9 +84,11 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
   )
 
   // Мгновенная проверка (Q5, пакет «Все Эпохи»): клик по варианту СРАЗУ даёт
-  // вердикт (✓/✗ подсветка + звук + say + стикер-реакция) и через ~900 мс
-  // авто-переход к следующему вопросу. Кнопки «Проверить»/«Далее» для quiz
-  // убраны; review-навигация (история, ←/→, goTo) остаётся READ-ONLY.
+  // вердикт (✓/✗ подсветка + звук + say + стикер-реакция) и авто-переход к
+  // следующему вопросу: ~900 мс при верном ответе, ~1.8 c при неверном
+  // (тикет 03, pravki-150826 — время разглядеть красный вердикт). Кнопки
+  // «Проверить»/«Далее» для quiz убраны; review-навигация (история, ←/→,
+  // goTo) остаётся READ-ONLY.
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const clearTimer = () => {
@@ -136,9 +144,10 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
     // ученик читает правильное предложение и жмёт «Далее» (advance).
     if (item.answerSentence) return
 
-    // Авто-переход: вердикт виден ~900 мс, затем следующий вопрос (или
-    // ResultScreen в конце — onComplete(score, total) вызывается ровно один раз).
-    timerRef.current = setTimeout(() => advance(nextScore), 900)
+    // Авто-переход: вердикт виден ~900 мс (верно) или ~1.8 c (неверно —
+    // тикет 03), затем следующий вопрос (или ResultScreen в конце —
+    // onComplete(score, total) вызывается ровно один раз).
+    timerRef.current = setTimeout(() => advance(nextScore), advanceDelayMs(correct))
   }
 
   // Read-only navigation: jump to a question index and restore its saved state.
@@ -247,19 +256,16 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
         {options.map((opt, oi) => {
           const isCorrect = opt === item.answer
           const isSelected = opt === selected
-          let bg = "bg-white border-2 border-primary-200 hover:border-primary-400"
-          let chip = "bg-primary-100 text-primary-700"
-          if (showResult && isCorrect) {
-            bg = "bg-success/10 border-2 border-success"
-            chip = "bg-success text-white"
-          } else if (showResult && isSelected && !isCorrect) {
-            bg = "bg-danger/10 border-2 border-danger"
-            chip = "bg-danger text-white"
-          } else if (!showResult && isSelected) {
-            // Выбранный вариант подсвечивается до нажатия «Проверить».
-            bg = "bg-primary-100 border-2 border-primary-600"
-            chip = "bg-primary-600 text-white"
-          }
+          // Тикет 03 (pravki-150826): единый хелпер вердикта. Неверный выбор —
+          // сильный красный (сплошная заливка danger + крупный ✗); награда
+          // (пульсация + ✓) только на своём верном выборе; правильный вариант
+          // при ошибке — спокойная подсветка без анимаций.
+          const v = optionVerdictStyle({
+            checked: showResult,
+            isCorrect,
+            isSelected,
+            answeredCorrectly: selected === item.answer,
+          })
 
           return (
             <motion.button
@@ -268,46 +274,59 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
               onClick={() => handleSelect(opt)}
               disabled={showResult}
               animate={
-                showResult && isCorrect
+                v.celebrate
                   ? { scale: [1, 1.07, 1] }
-                  : showResult && isSelected && !isCorrect
+                  : v.shake
                     ? { x: [0, -8, 8, -5, 5, 0] }
                     : {}
               }
               transition={
-                showResult && isCorrect
+                v.celebrate
                   ? { duration: 0.5, ease: "easeOut" }
-                  : showResult && isSelected && !isCorrect
+                  : v.shake
                     ? { duration: 0.45 }
                     : {}
               }
-              className={`flex min-h-[56px] items-center gap-2.5 rounded-2xl px-3 py-3 text-left transition-colors ${bg}`}
+              className={`flex min-h-[56px] items-center gap-2.5 rounded-2xl px-3 py-3 text-left transition-colors ${v.box}`}
             >
               <span
-                className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-black ${chip}`}
+                className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-black ${v.chip}`}
               >
                 {LETTERS[oi] ?? oi + 1}
               </span>
-              <span className="flex-1 text-lg font-bold leading-snug text-slate-800">
+              <span className={`flex-1 text-lg font-bold leading-snug ${v.label}`}>
                 {opt}
               </span>
-              {showResult && isCorrect && (
+              {v.mark && (
                 <motion.span
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ type: "spring", stiffness: 500, damping: 15 }}
-                  className="text-xl text-success"
+                  className={v.markWrapClass}
                 >
-                  ✓
+                  <span className={v.markClass}>{v.mark}</span>
                 </motion.span>
-              )}
-              {showResult && isSelected && !isCorrect && (
-                <span className="text-xl text-danger">✗</span>
               )}
             </motion.button>
           )
         })}
       </div>
+
+      {/* Тикет 03: при неверном ответе правильный вариант показывается
+          спокойной строкой БЕЗ праздничной пульсации и зелёной галочки. */}
+      <AnimatePresence>
+        {showResult && selected !== null && selected !== item.answer && (
+          <motion.div
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className={CALM_ANSWER_LINE_CLASS}
+          >
+            {CORRECT_ANSWER_PREFIX}{" "}
+            <span className="font-bold">{item.answer}</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Тикет W1-T3: подсказка под вердиктом неверного ответа (danger-soft). */}
       <AnimatePresence>
@@ -361,8 +380,9 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
       </AnimatePresence>
 
       {/* Мгновенная проверка (Q5): кнопок «Проверить»/«Далее» у quiz больше нет —
-          клик по варианту сразу даёт вердикт и авто-переход через ~900 мс.
-          Исключение — reveal-режим выше (answerSentence): там «Далее» явная. */}
+          клик по варианту сразу даёт вердикт и авто-переход (верно ~900 мс,
+          неверно ~1.8 c — тикет 03). Исключение — reveal-режим выше
+          (answerSentence): там «Далее» явная. */}
     </div>
   )
 }
