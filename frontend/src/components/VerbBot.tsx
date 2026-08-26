@@ -4,6 +4,7 @@ import { createContext, useCallback, useContext, useEffect, useRef, useState } f
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { pluralTasks } from "@/lib/portal"
+import { BotChatModal } from "@/components/BotChatModal"
 
 /**
  * Verb Bot — floating mascot (decision Q7/Q15b).
@@ -129,6 +130,28 @@ export function VerbBotProvider({ children }: { children: React.ReactNode }) {
   // everywhere else it stays in the bottom-right corner.
   const isTaskPage = /\/class\/\d+\/sections\/[^/]+\/[^/]+/.test(pathname)
 
+  // R02.1: полноэкранная сцена (VoiceChatTask на /class, /epoch, /exam) сама
+  // резервирует место под бота ИЗНУТРИ своих точных h-[100dvh] и помечает
+  // корень data-immersive — внешний спейсер там дал бы лишний скролл страницы.
+  // Эффект срабатывает после монтирования детей (внутрь фолбэков Suspense в
+  // том числе), поэтому атрибут уже в DOM к этому моменту.
+  const [fullscreenScene, setFullscreenScene] = useState(false)
+  useEffect(() => {
+    // Маркер ставит полноэкранная сцена на своём корне. Сцена может попасть
+    // в DOM ПОЗЖЕ первого коммита (Suspense-фолбэк useSearchParams внутри
+    // VoiceChatTask) — поэтому не только разовая проверка после монтирования,
+    // но и дослеживание MutationObserver'ом до смены маршрута.
+    const check = () => {
+      const found = document.querySelector('[data-immersive="true"]') !== null
+      setFullscreenScene((prev) => (prev === found ? prev : found))
+    }
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    check()
+    const observer = new MutationObserver(check)
+    observer.observe(document.body, { childList: true, subtree: true })
+    return () => observer.disconnect()
+  }, [pathname])
+
   // Показ реплики с таймером скрытия (общий для say и сюжета портала).
   const speak = useCallback((text: string, mood: BotMood, duration = 3000) => {
     setPhrase(text)
@@ -234,6 +257,10 @@ export function VerbBotProvider({ children }: { children: React.ReactNode }) {
   return (
     <VerbBotContext.Provider value={{ say, speakText }}>
       {children}
+      {/* R02.1: резерв снизу под флоат-бота на узких экранах — контент страниц
+          больше не заезжает под аватар (h-24 ≈ высота бота с подписью).
+          На полноэкранных сценах резерв делает сама сцена (data-immersive). */}
+      <div aria-hidden className={fullscreenScene ? "hidden" : "h-24 shrink-0 md:h-0"} />
       <VerbBotFloating
         phrase={phrase}
         mood={mood}
@@ -258,53 +285,95 @@ function VerbBotFloating({
       : "fixed bottom-4 right-4 z-50 flex flex-col items-end gap-2 pointer-events-none"
   // W1-T01: фото битое/недоступное → скрыть и показать 🤖 (fallback сохранён).
   const [imgFailed, setImgFailed] = useState(false)
+  // R01: аватар кликабелен — открывает модалку голосового чата.
+  const [chatOpen, setChatOpen] = useState(false)
+  const triggerRef = useRef<HTMLButtonElement | null>(null)
+  // R02.2: пузырь речи скрывается при скролле (не накрывает текст/кнопки),
+  // через паузу после скролла возвращается.
+  const [scrollHidden, setScrollHidden] = useState(false)
+  useEffect(() => {
+    let resume: ReturnType<typeof setTimeout> | null = null
+    const onScroll = () => {
+      setScrollHidden(true)
+      if (resume) clearTimeout(resume)
+      resume = setTimeout(() => setScrollHidden(false), 250)
+    }
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+      if (resume) clearTimeout(resume)
+    }
+  }, [])
+
+  const closeChat = useCallback(() => {
+    setChatOpen(false)
+    // Возврат фокуса на кнопку-аватар (доступность клавиатуры)
+    requestAnimationFrame(() => triggerRef.current?.focus())
+  }, [])
+
   return (
-    <div className={containerClass}>
-      <AnimatePresence>
-        {phrase && (
-          <motion.div
-            initial={{ opacity: 0, y: 10, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 10, scale: 0.9 }}
-            className="max-w-[150px] sm:max-w-[200px] bg-white rounded-2xl rounded-br-md px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 shadow-lg border border-primary-100"
-          >
-            {phrase}
-          </motion.div>
-        )}
-      </AnimatePresence>
-      {/* W1-T01 «Verb Bot — карточка-бейдж»: фото с ореолом акцента (ring-2
-          ring-primary-300), подпись «Verb Bot» + цветной индикатор эмоции
-          (точка по mood). Покачивание y [0,-4,0] и fallback 🤖 сохранены;
-          пузырь речи и позиционирование флоата не менялись. */}
-      <div className="flex w-[68px] sm:w-[90px] flex-col items-center">
-        {imgFailed ? (
-          <div
-            className="flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-full border-2 border-white bg-white text-2xl shadow-lg ring-2 ring-primary-300"
-            role="img"
-            aria-label="Verb Bot"
-          >
-            🤖
-          </div>
-        ) : (
-          <motion.img
-            src={`/mascot/${mood}.jpg`}
-            alt="Verb Bot"
-            className="h-12 w-12 sm:h-16 sm:w-16 rounded-full border-2 border-white bg-white object-cover shadow-lg ring-2 ring-primary-300"
-            animate={{ y: [0, -4, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            onError={() => setImgFailed(true)}
-          />
-        )}
-        <div className="mt-0.5 inline-flex items-center gap-1">
-          <span
-            className={`h-2 w-2 animate-pulse rounded-full ${MOOD_DOT[mood] ?? "bg-sky-400"}`}
-            aria-hidden="true"
-          />
-          <span className="whitespace-nowrap text-[10px] font-bold text-primary-900">
-            Verb Bot
+    <>
+      <div className={containerClass}>
+        <AnimatePresence>
+          {phrase && !scrollHidden && (
+            <motion.div
+              initial={{ opacity: 0, y: 10, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 10, scale: 0.9 }}
+              className="max-w-[150px] sm:max-w-[200px] bg-white rounded-2xl rounded-br-md px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 shadow-lg border border-primary-100"
+            >
+              {phrase}
+            </motion.div>
+          )}
+        </AnimatePresence>
+        {/* W1-T01 «Verb Bot — карточка-бейдж»: фото с ореолом акцента (ring-2
+            ring-primary-300), подпись «Verb Bot» + цветной индикатор эмоции
+            (точка по mood). Покачивание y [0,-4,0] и fallback 🤖 сохранены.
+            R01: вся карточка — кнопка (pointer-events-auto) с фокус-кольцом;
+            пузырь остаётся pointer-events-none и клики не перехватывает. */}
+        <button
+          ref={triggerRef}
+          type="button"
+          onClick={() => setChatOpen(true)}
+          aria-haspopup="dialog"
+          aria-expanded={chatOpen}
+          aria-label="Открыть голосовой чат с Verb Bot"
+          className="pointer-events-auto flex w-[68px] sm:w-[90px] cursor-pointer flex-col items-center rounded-2xl outline-none focus-visible:ring-4 focus-visible:ring-primary-300"
+        >
+          <span className="flex flex-col items-center">
+            {imgFailed ? (
+              <span
+                className="flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-full border-2 border-white bg-white text-2xl shadow-lg ring-2 ring-primary-300"
+                role="img"
+                aria-label="Verb Bot"
+              >
+                🤖
+              </span>
+            ) : (
+              <motion.img
+                src={`/mascot/${mood}.jpg`}
+                alt="Verb Bot"
+                className="h-12 w-12 sm:h-16 sm:w-16 rounded-full border-2 border-white bg-white object-cover shadow-lg ring-2 ring-primary-300"
+                animate={{ y: [0, -4, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                onError={() => setImgFailed(true)}
+              />
+            )}
+            <span className="mt-0.5 inline-flex items-center gap-1">
+              <span
+                className={`h-2 w-2 animate-pulse rounded-full ${MOOD_DOT[mood] ?? "bg-sky-400"}`}
+                aria-hidden="true"
+              />
+              <span className="whitespace-nowrap text-[10px] font-bold text-primary-900">
+                Verb Bot
+              </span>
+            </span>
           </span>
-        </div>
+        </button>
       </div>
-    </div>
+      {/* Модалка рендерится ВНЕ fixed-контейнера: transform (-translate-x-1/2)
+          на предке сломал бы её position:fixed. */}
+      {chatOpen && <BotChatModal onClose={closeChat} />}
+    </>
   )
 }

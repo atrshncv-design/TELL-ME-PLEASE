@@ -370,7 +370,10 @@ function VoiceChatInner({
 
   if (sessionEnded && lastAudioPlayed) {
     return (
-      <div className="relative flex flex-col h-[100dvh] items-center justify-center px-6 gap-5 overflow-hidden">
+      <div
+        data-immersive="true"
+        className="relative flex flex-col h-[100dvh] items-center justify-center px-6 gap-5 overflow-hidden pb-24"
+      >
         {/* Праздничный финал: конфетти всегда (сигнал «сессия прошла») */}
         <Confetti count={40} />
         <motion.div
@@ -422,7 +425,14 @@ function VoiceChatInner({
     // wrapper provides the gradient page background via min-h-screen; this
     // screen manages its own height within that. max-w-lg keeps it mobile-width
     // on desktop (consistent with other task components).
-    <div className="relative flex flex-col h-[100dvh] max-w-lg mx-auto overflow-hidden">
+    // R02 (дозапрос тикета 01): pb-24 резервирует место под флоат-бота ВНУТРИ
+    // точной высоты 100dvh (микрофон и статус поднимаются выше бота, лишнего
+    // скролла нет); data-immersive — маркер для VerbBotProvider: внешний
+    // спейсер на этой странице не нужен.
+    <div
+      data-immersive="true"
+      className="relative flex flex-col h-[100dvh] max-w-lg mx-auto overflow-hidden pb-24"
+    >
       {/* Театральная сцена: софиты, звёздочки и мягкое свечение (чистый декор под чатом, pointer-events-none) */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <svg className="absolute inset-0 h-full w-full" viewBox="0 0 512 900" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
