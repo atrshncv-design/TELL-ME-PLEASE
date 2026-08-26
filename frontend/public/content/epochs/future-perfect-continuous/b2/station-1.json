@@ -15,7 +15,7 @@
           "starts"
         ],
         [
-          "is speaking"
+          "will be speaking"
         ],
         [
           "will be listening"
@@ -24,7 +24,7 @@
           "finishes"
         ],
         [
-          "will have learned"
+          "will have learnt"
         ],
         [
           "will have been studying"
@@ -57,7 +57,8 @@
         "will listen",
         "will study",
         "becomes",
-        "will have been learning"
+        "will have been learning",
+        "will have learnt"
       ]
     }
   ]

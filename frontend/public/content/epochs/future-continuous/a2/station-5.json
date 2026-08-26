@@ -15,7 +15,7 @@
           "will be eating"
         ],
         [
-          "will be eating"
+          "will be having fun"
         ],
         [
           "will be taking"
@@ -30,7 +30,7 @@
       "hints": [
         "(come)",
         "(eat)",
-        "(eat)",
+        "(have fun)",
         "(take)",
         "(dance)",
         "(have)"
@@ -47,7 +47,8 @@
         "are taking",
         "will dance",
         "has",
-        "will be have"
+        "will be have",
+        "will be having fun"
       ]
     }
   ]

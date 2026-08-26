@@ -1,10 +1,10 @@
 {
   "id": "future_perfect_continuous_a2_station_6",
   "title": "Блог: Мои Достижения (Продукт)",
-  "description": "Напиши 3 предложения о том, как долго ты будешь заниматься каким-то делом к определенному моменту в будущем. (By next year I will have been learning English for 5 years...).",
+  "description": "Напиши 3 предложения о том, как долго ты будешь заниматься каким-то делом к определенному моменту в будущем.",
   "category": "speaking",
   "type": "one-minute",
-  "topic": "Напиши 3 предложения о том, как долго ты будешь заниматься каким-то делом к определенному моменту в будущем. (By next year I will have been learning English for 5 years...).",
+  "topic": "Напиши 3 предложения о том, как долго ты будешь заниматься каким-то делом к определенному моменту в будущем.",
   "duration": 60,
   "conditions": [
     {
@@ -43,5 +43,13 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Примеры:",
+    "sentences": [
+      "By the age of 25, I will have been studying at university for four years.",
+      "By 2035, I will have been working as a graphic designer for five years.",
+      "By the time I am 30, I will have been living in my own apartment for several years."
+    ]
+  }
 }

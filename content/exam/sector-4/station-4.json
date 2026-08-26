@@ -41,5 +41,15 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Photo description:",
+    "sentences": [
+      "In the photo, a group of friends are having a picnic in a sunny park.",
+      "Some people are sitting on a blanket and eating sandwiches, while others are playing football.",
+      "A girl is taking photos, and two children are running near the trees. Everyone is smiling and enjoying the warm weather.",
+      "Before they came to the park, they had planned this trip and prepared food together.",
+      "Later, they will be having fun, talking, and playing more games in the park."
+    ]
+  }
 }

@@ -71,5 +71,16 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Пример — «My Life in Different Tenses»:",
+    "sentences": [
+      "I have been studying English since Year 2, and I enjoy learning new words and practising speaking.",
+      "Yesterday, I passed my English test and felt very happy.",
+      "While I was writing the test, my phone rang, but I did not answer it.",
+      "Next year, I will travel to London and practise English with local people.",
+      "By the summer, I will have finished this English course.",
+      "I think I will speak English fluently in the future because I study regularly and do my best."
+    ]
+  }
 }

@@ -1,10 +1,10 @@
 {
   "id": "future_perfect_continuous_b1_station_7",
   "title": "Мини-Проект: \"Мой Долгий Путь\" (Продукт)",
-  "description": "Напиши 5 предложений о том, как долго ты будешь идти к своей цели к определенному моменту в будущем. (By next year I will have been learning English for 5 years. By the end of the month I will have been attending this course for 2 weeks...).",
+  "description": "Напиши 5 предложений о том, как долго ты будешь идти к своей цели к определенному моменту в будущем.",
   "category": "speaking",
   "type": "one-minute",
-  "topic": "Напиши 5 предложений о том, как долго ты будешь идти к своей цели к определенному моменту в будущем. (By next year I will have been learning English for 5 years. By the end of the month I will have been attending this course for 2 weeks...).",
+  "topic": "Напиши 5 предложений о том, как долго ты будешь идти к своей цели к определенному моменту в будущем.",
   "duration": 60,
   "conditions": [
     {
@@ -44,5 +44,16 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Пример — «My Long Journey»:",
+    "sentences": [
+      "My goal is to become a successful doctor.",
+      "By the end of this month, I will have been attending extra biology classes for two weeks.",
+      "By next summer, I will have been studying English for six years.",
+      "By the time I finish school, I will have been preparing for my exams for three years.",
+      "By 2032, I will have been studying at medical university for five years.",
+      "By then, I will be ready to start my career and help people."
+    ]
+  }
 }

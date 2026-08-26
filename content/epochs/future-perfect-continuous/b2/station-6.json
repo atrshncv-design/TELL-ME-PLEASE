@@ -49,5 +49,15 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Примерный вариант — «My Path to Becoming an Engineer»:",
+    "sentences": [
+      "My dream is to become an engineer because I enjoy solving problems and creating useful things.",
+      "This time next year, I will be studying Maths, Physics, and Computer science at school.",
+      "By next year, I will have been preparing for an engineering career for two years.",
+      "By the time I finish school, I will have finished my final exams and chosen a university.",
+      "In the future, I will work on new technologies and help make people’s lives easier."
+    ]
+  }
 }

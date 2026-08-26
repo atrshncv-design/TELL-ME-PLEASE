@@ -9,13 +9,13 @@
       "text": "Tomorrow is Saturday. I ___ to the cinema with my friends. We ___ a new superhero movie. My mum ___ with us. She ___ at home. On Sunday, I think I ___ my homework. If I have time, I promise I ___ my dad in the garden.",
       "answers": [
         [
-          "am going to go"
+          "am going"
         ],
         [
           "are going to watch"
         ],
         [
-          "isn't going to go"
+          "isn't going"
         ],
         [
           "is going to stay"
@@ -45,7 +45,9 @@
         "goes",
         "will watch",
         "is going",
-        "helped"
+        "helped",
+        "am going",
+        "isn't going"
       ]
     }
   ]

@@ -15,7 +15,7 @@
           "will be playing"
         ],
         [
-          "will be playing"
+          "will be presenting"
         ],
         [
           "will go"
@@ -36,7 +36,7 @@
       "hints": [
         "(stream)",
         "(play)",
-        "(play)",
+        "(present)",
         "(go)",
         "(not / understand)",
         "(happen)",
@@ -59,7 +59,10 @@
         "won't understand",
         "is happen",
         "tries",
-        "will wait"
+        "will wait",
+        "will be presenting",
+        "will happen",
+        "will be trying"
       ]
     }
   ]

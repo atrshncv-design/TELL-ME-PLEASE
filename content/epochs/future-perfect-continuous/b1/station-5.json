@@ -44,5 +44,13 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Example answers:",
+    "sentences": [
+      "By 5 p.m., he will have been coding all day, so he will look tired.",
+      "By the end of the match, she will have been running in the rain for two hours, so she will be wet and cold.",
+      "By Saturday evening, they will have been planting flowers in the garden all day, so they will look dirty and exhausted."
+    ]
+  }
 }
