@@ -1,28 +1,34 @@
 import type { Metadata, Viewport } from "next"
-import { Nunito, Nunito_Sans, Unbounded } from "next/font/google"
+import localFont from "next/font/local"
 import "./globals.css"
 import { VerbBotProvider } from "@/components/VerbBot"
 import { SoundToggle } from "@/components/SoundToggle"
 
 // Playful rounded pairing (design/opendesign): Nunito for display/headings,
 // Nunito Sans for body. Both ship full Cyrillic — the whole UI is in Russian.
-const nunito = Nunito({
+// Шрифты захостены локально (src/fonts, OFL): next/font/google качал их с
+// fonts.gstatic.com НА ЭТАПЕ СБОРКИ, и деплой-контейнер z.ai без внешней
+// сети падал на этом каждый второй раз (деплой 26.08).
+const nunito = localFont({
+  src: "../fonts/Nunito.ttf",
+  weight: "200 1000",
   variable: "--font-nunito",
-  subsets: ["latin", "cyrillic"],
   display: "swap",
 })
 
-const nunitoSans = Nunito_Sans({
+const nunitoSans = localFont({
+  src: "../fonts/NunitoSans.ttf",
+  weight: "200 1000",
   variable: "--font-nunito-sans",
-  subsets: ["latin", "cyrillic"],
   display: "swap",
 })
 
 // Accent display face (design-boost, реш. 8): Unbounded — wide, playful,
 // full Cyrillic. Rule «2–3 места на экран»: world names, XP digits only.
-const unbounded = Unbounded({
+const unbounded = localFont({
+  src: "../fonts/Unbounded.ttf",
+  weight: "200 900",
   variable: "--font-unbounded",
-  subsets: ["latin", "cyrillic"],
   display: "swap",
 })
 

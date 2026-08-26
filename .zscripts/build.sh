@@ -61,11 +61,30 @@ rm -rf "$STAGING/next-service-dist/examples" 2>/dev/null || true
 # Copy Caddyfile to staging root
 cp ../Caddyfile "$STAGING/Caddyfile" 2>/dev/null || true
 
-# Copy .env if exists (platform expects it in tarball)
-cp ../.env "$STAGING/next-service-dist/.env" 2>/dev/null || true
-cp ../.env "$STAGING/.env" 2>/dev/null || true
+# БД платформы: их start.sh завершается с exit 1, если DATABASE_URL указывает
+# на packaged-путь, а файла нет (деплой 26.08: «Sorry, there was a problem
+# deploying»). Приложение саму БД не использует — кладём пустой файл и
+# ПРИНУДИТЕЛЬНО относительный путь в .env, чтобы проверка проходила в /app/.
+mkdir -p "$STAGING/db" "$STAGING/next-service-dist/db"
+touch "$STAGING/db/custom.db"
+cp "$STAGING/db/custom.db" "$STAGING/next-service-dist/db/custom.db"
 
-# Copy start.sh to staging root
+# Copy .env if exists (platform expects it in tarball);
+# DATABASE_URL делаем относительным — абсолютный /home/z/... в /app не существует.
+# Если ../.env нет вовсе — пишем минимальный: без него платформенный start.sh
+# может не найти БД, а LLM-переменные всё равно пробрасываются окружением.
+if [ -f ../.env ]; then
+  sed '/^DATABASE_URL=/d' ../.env > "$STAGING/.env"
+else
+  : > "$STAGING/.env"
+fi
+grep -q '^DATABASE_URL=' "$STAGING/.env" || echo "DATABASE_URL=file:./db/custom.db" >> "$STAGING/.env"
+cp "$STAGING/.env" "$STAGING/next-service-dist/.env"
+
+# Copy start.sh to staging root.
+# bun — рантайм платформы (проверено запуском 26.08), node — fallback;
+# HOSTNAME=0.0.0.0 обязателен явно: без него server.js слушает на hostname
+# контейнера, и системный Caddy :81 получает 502 → превью показывает Z.
 cat > "$STAGING/start.sh" << 'STARTEOF'
 #!/bin/bash
 set -e
@@ -75,7 +94,13 @@ cd "$(cd "$(dirname "$0")" && pwd)/next-service-dist"
 if [ -f .env ]; then
   set -a; source .env; set +a
 fi
-PORT=3000 HOSTNAME=0.0.0.0 exec node server.js
+export PORT="${PORT:-3000}"
+export HOSTNAME="0.0.0.0"
+echo "Starting on ${HOSTNAME}:${PORT}..."
+if command -v bun >/dev/null 2>&1; then
+  exec bun server.js
+fi
+exec node server.js
 STARTEOF
 chmod +x "$STAGING/start.sh"
 
