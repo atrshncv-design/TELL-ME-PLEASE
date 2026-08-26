@@ -7,9 +7,10 @@ cd frontend
 npm ci --loglevel=error 2>&1
 npm run build 2>&1
 
-# Copy static assets into standalone
-cp -r .next/standalone/.next/static .next/standalone/.next/static 2>/dev/null || true
-cp -r public .next/standalone/public 2>/dev/null || true
+# Copy static assets into standalone (из исходной сборки — standalone их не содержит)
+cp -r .next/static .next/standalone/.next/static
+cp -r public .next/standalone/public
+[ -d .next/standalone/.next/static/chunks ] || { echo "FATAL: chunks отсутствуют"; exit 1; }
 
 # Trim musl binaries
 STANDALONE_NM=".next/standalone/node_modules"

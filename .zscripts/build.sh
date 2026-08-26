@@ -19,12 +19,23 @@ rm -rf "$STAGING"
 mkdir -p "$STAGING/next-service-dist"
 
 # Copy standalone output into next-service-dist/
+# ВАЖНО: `*` не захватывает доткаталог `.next` — серверные файлы .next копируем
+# отдельно, а статику берём из ИСХОДНОЙ сборки (.next/static), НЕ из standalone:
+# next build не кладёт .next/static и public в standalone (деплой 25–26.08:
+# тихий `|| true` на несуществующем пути давал тарболлы 6MB без чанков →
+# пустой экран после Publish).
 cp -r .next/standalone/* "$STAGING/next-service-dist/"
-cp -r .next/standalone/.next "$STAGING/next-service-dist/.next" 2>/dev/null || true
+cp -r .next/standalone/.next "$STAGING/next-service-dist/.next"
 
-# Copy static assets
-cp -r .next/standalone/.next/static "$STAGING/next-service-dist/.next/static" 2>/dev/null || true
-cp -r public "$STAGING/next-service-dist/public" 2>/dev/null || true
+# Copy static assets from the project build output (NOT from standalone)
+mkdir -p "$STAGING/next-service-dist/.next"
+cp -r .next/static "$STAGING/next-service-dist/.next/static"
+cp -r public "$STAGING/next-service-dist/public"
+
+# Жёсткая проверка: без чанков тарболл бессмыслен — падаем громко, а не тихо.
+[ -d "$STAGING/next-service-dist/.next/static/chunks" ] || {
+  echo "FATAL: .next/static/chunks отсутствует в staging — сборка неполна"; exit 1
+}
 
 # Trim musl binaries (17MB, not needed on glibc)
 STANDALONE_NM="$STAGING/next-service-dist/node_modules"
