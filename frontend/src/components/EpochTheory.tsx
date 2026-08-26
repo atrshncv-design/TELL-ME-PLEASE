@@ -33,6 +33,8 @@ import { useCallback, useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useSpeechSynthesis } from "@/lib/useSpeechSynthesis"
 import { useServerTts } from "@/lib/useServerTts"
+import { SpeakerOffIcon, SpeakerOnIcon } from "@/components/SoundToggle"
+import { reportEpochTheoryOpen, useSoundToggle } from "@/lib/useSound"
 
 interface TheoryStep {
   title: string
@@ -212,6 +214,22 @@ export default function EpochTheory({
 
   // Стоп озвучки при размонтировании (уход со страницы эпохи).
   useEffect(() => () => stopAll(), [stopAll])
+
+  // §R06: сообщаем глобальному SoundToggle, что модалка открыта/закрыта —
+  // включая размонтирование с открытой модалкой (уход со страницы). Счётчик
+  // и событие живут в lib/useSound (reportEpochTheoryOpen).
+  useEffect(() => {
+    if (!open) return
+    reportEpochTheoryOpen(true)
+    return () => reportEpochTheoryOpen(false)
+  }, [open])
+
+  // §R06: компактный тумблер в шапке модалки управляет ТЕМ ЖЕ состоянием,
+  // что и глобальный тумблер, — общий хук useSoundToggle (SOUND_STORAGE_KEY).
+  const {
+    enabled: soundEnabled,
+    toggle: toggleSound,
+  } = useSoundToggle()
 
   const slides = Array.isArray(theory) ? theory : []
   const quiz = Array.isArray(theoryQuiz) ? theoryQuiz : []
@@ -431,14 +449,35 @@ export default function EpochTheory({
                         : "Песни и Suno-промпт"}
                   </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={closePresentation}
-                  aria-label="Закрыть инструктаж"
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white text-xl font-black text-primary-700 shadow-soft transition-colors hover:bg-primary-100"
-                >
-                  ✕
-                </button>
+                {/* §R06: свой компактный тумблер звука рядом с «✕» — глобальный
+                    на время модалки скрыт, ничего не перекрыто. */}
+                <div className="flex shrink-0 items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={toggleSound}
+                    aria-label="Звук вкл/выкл"
+                    aria-pressed={soundEnabled}
+                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full border shadow-md transition-colors active:scale-95 ${
+                      soundEnabled
+                        ? "border-primary-200 bg-white/90 text-primary-700 hover:bg-white"
+                        : "border-slate-200 bg-white/70 text-slate-400 hover:bg-white"
+                    }`}
+                  >
+                    {soundEnabled ? (
+                      <SpeakerOnIcon className="h-5 w-5" />
+                    ) : (
+                      <SpeakerOffIcon className="h-5 w-5" />
+                    )}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={closePresentation}
+                    aria-label="Закрыть инструктаж"
+                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white text-xl font-black text-primary-700 shadow-soft transition-colors hover:bg-primary-100"
+                  >
+                    ✕
+                  </button>
+                </div>
               </div>
 
               {/* ——— Фаза 1: слайды (0 — обложка, 1..N — теория) ——— */}

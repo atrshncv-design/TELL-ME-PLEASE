@@ -1,34 +1,45 @@
 "use client"
 
-import { useCallback, useEffect, useState } from "react"
-import { SOUND_STORAGE_KEY } from "@/lib/useSound"
+import { useEffect, useState } from "react"
+import {
+  EPOCH_THEORY_OPEN_EVENT,
+  isEpochTheoryOpen,
+  useSoundToggle,
+} from "@/lib/useSound"
 
 /**
  * Global sound-effects toggle (correct/wrong/fanfare) — fixed top-right
- * corner on every screen. State persists to localStorage under
- * SOUND_STORAGE_KEY (default: enabled); useSound() reads the same key per
- * play() call, so toggling takes effect immediately.
+ * corner on every screen. All state lives in useSoundToggle() so this button
+ * and the compact EpochTheory-header toggle cannot drift apart.
  *
  * SVG icons (NOT emoji — macOS renders emoji monochrome). Volume-2 / volume-x
  * style speaker glyphs, stroke = currentColor so they follow the button tint.
+ *
+ * §R06: пока открыт полноэкранный инструктаж EpochTheory, эта кнопка
+ * скрывается — модалка показывает собственный компактный тумблер на том же
+ * ключе, и фиксированная кнопка накрывала бы её «✕». Координация — событие
+ * EPOCH_THEORY_OPEN_EVENT из lib/useSound; app/layout.tsx не трогаем.
  */
-
 export function SoundToggle() {
-  const [enabled, setEnabled] = useState(true)
+  const { enabled, toggle } = useSoundToggle()
+  const [coveredByEpochTheory, setCoveredByEpochTheory] = useState(false)
 
-  // Read persisted state on mount only (avoids hydration mismatch; the flash
-  // is one frame at most, and sound itself is already gated by localStorage).
+  // §R06: hide while the fullscreen epoch-theory modal is open. Effects of
+  // page children run BEFORE this sibling-of-layout effect, so the modal's
+  // open event can fire pre-subscription — sync from the counter snapshot.
   useEffect(() => {
-    setEnabled(window.localStorage.getItem(SOUND_STORAGE_KEY) !== "false")
+    const onEpochTheoryOpen = (e: Event) => {
+      setCoveredByEpochTheory(
+        (e as CustomEvent<{ open?: boolean }>).detail?.open === true
+      )
+    }
+    setCoveredByEpochTheory(isEpochTheoryOpen())
+    window.addEventListener(EPOCH_THEORY_OPEN_EVENT, onEpochTheoryOpen)
+    return () =>
+      window.removeEventListener(EPOCH_THEORY_OPEN_EVENT, onEpochTheoryOpen)
   }, [])
 
-  const toggle = useCallback(() => {
-    setEnabled((prev) => {
-      const next = !prev
-      window.localStorage.setItem(SOUND_STORAGE_KEY, String(next))
-      return next
-    })
-  }, [])
+  if (coveredByEpochTheory) return null
 
   return (
     <button
@@ -47,7 +58,8 @@ export function SoundToggle() {
   )
 }
 
-function SpeakerOnIcon() {
+/** Compact variant used inside the EpochTheory header (§R06). */
+export function SpeakerOnIcon({ className = "h-6 w-6" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -56,7 +68,7 @@ function SpeakerOnIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-6 w-6"
+      className={className}
       aria-hidden="true"
     >
       <path d="M11 5 6 9H2v6h4l5 4V5z" />
@@ -66,7 +78,7 @@ function SpeakerOnIcon() {
   )
 }
 
-function SpeakerOffIcon() {
+export function SpeakerOffIcon({ className = "h-6 w-6" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -75,7 +87,7 @@ function SpeakerOffIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-6 w-6"
+      className={className}
       aria-hidden="true"
     >
       <path d="M11 5 6 9H2v6h4l5 4V5z" />
