@@ -1,6 +1,7 @@
 "use client"
 
 import { useCallback, useEffect, useRef, useState } from "react"
+import { isSpeechAllowed, useStopSpeechOnGate } from "@/lib/useSound"
 
 /**
  * Браузерный TTS через speechSynthesis (замена useAudioPlayer + Kokoro,
@@ -154,6 +155,14 @@ export function useSpeechSynthesis() {
   /** Произнести следующее предложение из очереди (или завершить). */
   const speakNext = useCallback(() => {
     if (typeof window === "undefined") return
+    // Речевой гейт (R04): сюда приходим и по цепочке onend, и из отложенных
+    // повторов — выключенный звук глушит остаток очереди немедленно.
+    if (!isSpeechAllowed()) {
+      queueRef.current = []
+      speakingRef.current = false
+      setSpeaking(false)
+      return
+    }
     if (queueRef.current.length === 0) {
       speakingRef.current = false
       setSpeaking(false)
@@ -191,7 +200,9 @@ export function useSpeechSynthesis() {
     }
     synth.speak(utterance)
     setTimeout(() => {
-      if (!started && !retried) {
+      // speakingRef=false после stop() (в т.ч. по выключению звука) — повтор
+      // не должен воскрешать отменённую фразу.
+      if (!started && !retried && speakingRef.current) {
         retried = true
         try {
           synth.cancel()
@@ -208,6 +219,9 @@ export function useSpeechSynthesis() {
     (text: string) => {
       if (typeof window === "undefined") return
       if (!text.trim()) return
+      // Центральный речевой гейт (R04): звук выключен — речи нет ни в одном
+      // канале. Молчаливый no-op, текст остаётся виден на экране.
+      if (!isSpeechAllowed()) return
       const synth = window.speechSynthesis
       // API нет/сломан (Яндекс, приватный режим) — молча сдаёмся, клиент
       // уходит на серверный TTS (useServerTts /api/tts)
@@ -253,6 +267,11 @@ export function useSpeechSynthesis() {
     speakingRef.current = false
     setSpeaking(false)
   }, [])
+
+  // R04: выключение звука во время звучащей фразы останавливает её сразу;
+  // повторное включение ничего не ломает — следующий speak() пройдёт гейт.
+  // (Дозапрос тикета 01: общий хелпер вместо дубля эффекта в двух каналах.)
+  useStopSpeechOnGate(stop)
 
   // iOS Safari замирает после ~15с непрерывной речи — периодический
   // pause+resume сбрасывает внутренний таймер (стандартный фикс).
