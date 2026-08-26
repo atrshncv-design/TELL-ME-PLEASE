@@ -39,6 +39,7 @@ import type { SentenceBuilderItem } from "@/types/task"
 import { PromptCardTask } from "@/components/tasks/PromptCardTask"
 import { TaskHeader } from "@/components/tasks/TaskHeader"
 import { RulesPanel } from "@/components/RulesPanel"
+import { ResultNextContext } from "@/components/ResultScreen"
 import { useProgress } from "@/lib/useProgress"
 import { useAnalytics } from "@/lib/useAnalytics"
 
@@ -173,6 +174,13 @@ Follow the script structure but respond naturally as the character.`)
 
 const BG = "min-h-screen bg-gradient-to-br from-violet-100 via-sky-50 to-amber-50"
 
+/**
+ * pravki-250826 (PP1, правки регрессии): серверная страница не может рендерить
+ * ResultNextContext.Provider из "use client"-модуля (SSR-краш «Element type is
+ * invalid»), поэтому провайдер поднят сюда — TaskRenderer клиентский и уже
+ * принимал nextHref пропом. Вне эпохального флоу (классы/экзамен) контекст
+ * не предоставляется, ResultScreen работает как раньше.
+ */
 export function TaskRenderer({
   task,
   grade,
@@ -186,6 +194,14 @@ export function TaskRenderer({
    *  ResultScreen через контекст (кнопка «Дальше →» на экране результата). */
   nextHref?: string
 }) {
+  return (
+    <ResultNextContext.Provider value={nextHref ?? null}>
+      <TaskView task={task} grade={grade} backHref={backHref} />
+    </ResultNextContext.Provider>
+  )
+}
+
+function TaskView({ task, grade, backHref }: { task: TaskData; grade: string; backHref: string }) {
   const { saveTask } = useProgress(grade)
   const { track } = useAnalytics()
   // Тикет P6: панель-шпаргалка «Правила» (открывается кнопкой на voice-заданиях)

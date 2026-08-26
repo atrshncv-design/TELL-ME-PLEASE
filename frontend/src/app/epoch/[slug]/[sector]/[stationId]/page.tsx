@@ -1,7 +1,6 @@
 import fs from "fs/promises"
 import path from "path"
 import { TaskRenderer } from "./TaskRenderer"
-import { ResultNextContext } from "@/components/ResultScreen"
 import { normalize } from "@/lib/normalize-task"
 import type { TaskData } from "@/types/task"
 import { sectorGradeKey, type EpochSector } from "@/lib/epoch"
@@ -115,15 +114,13 @@ export default async function EpochStationPage({
   const backHref = `/epoch/${slug}/${sector}`
 
   // pravki-250826 (PP1): следующая станция сектора — кнопка «Дальше →» на
-  // экране результата (ResultScreen читает её из контекста).
+  // экране результата. Провайдер контекста живёт внутри клиентского
+  // TaskRenderer: серверный компонент не может рендерить Provider из
+  // "use client"-модуля (SSR-краш «Element type is invalid»).
   const stations = sectorMeta.stations ?? []
   const pos = stations.findIndex((s) => s.id === stationId)
   const next = pos >= 0 && pos + 1 < stations.length ? stations[pos + 1] : null
   const nextHref = next ? `/epoch/${slug}/${sector}/${next.id}` : null
 
-  return (
-    <ResultNextContext.Provider value={nextHref}>
-      <TaskRenderer task={task} grade={grade} backHref={backHref} />
-    </ResultNextContext.Provider>
-  )
+  return <TaskRenderer task={task} grade={grade} backHref={backHref} nextHref={nextHref ?? undefined} />
 }
