@@ -4,6 +4,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { motion } from "framer-motion"
 import AdminLoginModal from "@/components/AdminLoginModal"
+import RightsFooter from "@/components/RightsFooter"
 
 /**
  * «Что тебя ждёт» (клиентские правки 08.08.2026, G3) — 5 опций клиентки:
@@ -133,6 +134,10 @@ export default function Home() {
           </motion.button>
         </motion.div>
       </motion.div>
+
+      <div className="relative z-10 mt-8 w-full max-w-md">
+        <RightsFooter />
+      </div>
 
       {/* Незаметная кнопка входа в админ-панель (T05, решение 14 SPEC).
           Левый нижний угол — правый занят Verb Bot'ом. Мелкая, серая,

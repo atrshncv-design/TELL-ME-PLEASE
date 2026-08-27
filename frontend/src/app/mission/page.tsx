@@ -1,157 +1,152 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
+import { EPOCH_META } from "@/lib/epochs-meta"
+import type { EpochProgress, StationProgress } from "@/lib/epoch"
+import EpochMapPoster from "@/components/EpochMapPoster"
+import RightsFooter from "@/components/RightsFooter"
 
 /**
- * Карта 12 Эпох — названия, уровни и фокусы СТРОГО из документа
+ * Карта 12 Эпох — названия, уровни и фокусы из документа
  * «АНГЛ КОНТЕКСТ.md», раздел 4.2 «Карта 12-ти Эпох». Slug и иконка — из
- * пакета «Все Эпохи» (пак 070826): /epoch/<slug> читает index.json эпохи.
+ * пакета «Все Эпохи». Мобильный список берёт каркас из EPOCH_META,
+ * фокус/и сюжет — из локального мапа (визуал не меняется). Десктоп
+ * (≥1024px) — плакат EpochMapPoster, фолбэк — список.
  * Q2: ВСЕ эпохи активны сразу — никаких замков.
  */
-const EPOCHS: {
-  number: number
-  slug: string
-  title: string
-  level: string
-  tagline: string
-  icon: string
-  focus: string
-  story: string
-}[] = [
-  {
-    number: 1,
-    slug: "present-simple",
-    title: "Present Simple",
-    level: "A1",
-    tagline: "База рутины",
-    icon: "📸",
+
+// Фокус и сюжет — только для карточек списка (не едут в плакат).
+const EPOCH_EXTRA: Record<string, { focus: string; story: string }> = {
+  "present-simple": {
     focus: "Habits, facts. Окончание -s. Do/Does.",
     story: "Катастрофа на космической станции. Нужно восстановить протоколы ежедневной проверки.",
   },
-  {
-    number: 2,
-    slug: "present-continuous",
-    title: "Present Continuous",
-    level: "A1+",
-    tagline: "Прямой эфир",
-    icon: "🎥",
+  "present-continuous": {
     focus: "Now, at the moment. To be + V-ing. Орфография -ing.",
     story:
       "Агент подключается к камерам наблюдения в реальном времени. Нужно описать, что происходит прямо сейчас, чтобы координаторы могли спасти людей.",
   },
-  {
-    number: 3,
-    slug: "past-simple",
-    title: "Past Simple",
-    level: "A2",
-    tagline: "Архивы истории",
-    icon: "📜",
+  "past-simple": {
     focus: "V2, правильные/неправильные глаголы, Did/Didn't.",
     story:
       "База данных прошлого повреждена. Агент должен расшифровать логи того, что произошло вчера, чтобы найти виновника аварии.",
   },
-  {
-    number: 4,
-    slug: "past-continuous",
-    title: "Past Continuous",
-    level: "A2+",
-    tagline: "Петля времени",
-    icon: "📼",
+  "past-continuous": {
     focus: "Was/Were + V-ing. Contrast with Past Simple.",
     story:
       "Игрок застревает в моменте прошлого. Нужно описать процесс, который тянулся в тот момент, когда случился сбой.",
   },
-  {
-    number: 5,
-    slug: "present-perfect",
-    title: "Present Perfect",
-    level: "B1",
-    tagline: "Сейсмическая активность",
-    icon: "🎒",
+  "present-perfect": {
     focus: "Have/Has + V3. Just, already, yet, ever, never. Сравнение с Past Simple.",
     story: "Аномалия настоящего. Результат прошлых действий угрожает базе прямо сейчас.",
   },
-  {
-    number: 6,
-    slug: "present-perfect-continuous",
-    title: "Present Perfect Continuous",
-    level: "B1+",
-    tagline: "Тлеющий провод",
-    icon: "⏱️",
+  "present-perfect-continuous": {
     focus: "Have/has been + V-ing. Since/for. Акцент на длительность.",
     story: "Процесс начался в прошлом и всё ещё тлеет, угрожая взрывом.",
   },
-  {
-    number: 7,
-    slug: "future-simple",
-    title: "Future Simple",
-    level: "A2",
-    tagline: "Прогноз катастрофы",
-    icon: "🔮",
+  "future-simple": {
     focus: "Will / Won't. Predictions, sudden decisions.",
     story: "ИИ предсказывает несколько вариантов развития будущего. Агент должен выбрать правильный сценарий.",
   },
-  {
-    number: 8,
-    slug: "future-continuous",
-    title: "Future Continuous",
-    level: "B1",
-    tagline: "Заселение Марса",
-    icon: "⏭️",
+  "future-continuous": {
     focus: "Will be + V-ing.",
     story:
       "Агент попадает в будущее, где люди уже летят на Марс. Нужно описать процесс, который будет происходить в определенный момент в будущем.",
   },
-  {
-    number: 9,
-    slug: "past-perfect",
-    title: "Past Perfect",
-    level: "B1+",
-    tagline: "Эффект бабочки",
-    icon: "🎬",
+  "past-perfect": {
     focus: 'Had + V3. "Past before past".',
     story:
       "Агент расследует преступление во времени. Нужно понять, что произошло до того, как сработала сигнализация.",
   },
-  {
-    number: 10,
-    slug: "future-perfect",
-    title: "Future Perfect",
-    level: "B2",
-    tagline: "Точка невозврата",
-    icon: "🏁",
+  "future-perfect": {
     focus: "Will have + V3. К концу этого года/к завтрашнему дню.",
     story: "Агент должен запустить протокол спасения до прибытия метеорита.",
   },
-  {
-    number: 11,
-    slug: "past-perfect-continuous",
-    title: "Past Perfect Continuous",
-    level: "B2",
-    tagline: "Скрытый мотив",
-    icon: "🏃",
+  "past-perfect-continuous": {
     focus: "Had been + V-ing.",
     story:
       "Расследование заговора. Выясняется, что шпион вел двойную жизнь задолго до того, как его раскрыли.",
   },
-  {
-    number: 12,
-    slug: "future-perfect-continuous",
-    title: "Future Perfect Continuous",
-    level: "C1",
-    tagline: "Вечный двигатель",
-    icon: "⏱️⏭️",
+  "future-perfect-continuous": {
     focus: "Will have been + V-ing.",
     story:
       "Финальная битва. Агент должен описать, как долго Машина Времени будет работать к определенному моменту в будущем, чтобы не взорваться.",
   },
-]
+}
+
+function EpochList({ onNavigate }: { onNavigate: (slug: string) => void }) {
+  return (
+    <section className="flex flex-col gap-3">
+      <h2 className="font-display text-xl font-black tracking-tight text-primary-900">
+        Карта 12 Эпох
+      </h2>
+      {EPOCH_META.map((epoch) => {
+        const extra = EPOCH_EXTRA[epoch.slug] ?? { focus: "", story: "" }
+        return (
+          <article
+            key={epoch.number}
+            className="flex flex-col gap-3 rounded-2xl border-2 border-primary-300 bg-white p-4 shadow-pop"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <span className="mt-0.5 text-3xl" aria-hidden="true">
+                  {epoch.icon}
+                </span>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wide text-primary-500">
+                    Эпоха {epoch.number}
+                  </p>
+                  <h3 className="font-display text-lg font-extrabold leading-tight tracking-tight text-primary-900">
+                    {epoch.title}
+                  </h3>
+                  <p className="text-sm font-bold text-slate-700">{epoch.tagline}</p>
+                </div>
+              </div>
+            </div>
+            <p className="text-sm font-medium leading-snug text-slate-600">
+              <span className="font-bold text-slate-700">Фокус:</span> {extra.focus}
+            </p>
+            <p className="text-sm font-medium leading-snug text-slate-600">
+              <span className="font-bold text-slate-700">Сюжет:</span> {extra.story}
+            </p>
+            <button
+              type="button"
+              onClick={() => onNavigate(epoch.slug)}
+              className="min-h-[44px] w-full rounded-2xl bg-primary-600 px-4 py-2 text-base font-bold text-white transition-colors hover:bg-primary-700"
+            >
+              Войти в эпоху →
+            </button>
+          </article>
+        )
+      })}
+    </section>
+  )
+}
 
 export default function MissionPage() {
   const router = useRouter()
+  const [progress, setProgress] = useState<EpochProgress>({})
+  const [posterFailed, setPosterFailed] = useState(false)
+
+  useEffect(() => {
+    const grades = ["5", "6", "7", "8", "9"]
+    const out: EpochProgress = {}
+    for (const g of grades) {
+      try {
+        const raw = localStorage.getItem(`tmp_progress_grade_${g}`)
+        out[g] = raw ? (JSON.parse(raw) as Record<string, StationProgress>) : {}
+      } catch {
+        out[g] = {}
+      }
+    }
+    setProgress(out)
+  }, [])
+
+  const goEpoch = (slug: string) => router.push(`/epoch/${slug}`)
 
   return (
-    <div className="mx-auto flex min-h-[100dvh] w-full max-w-lg flex-col gap-5 px-4 py-4">
+    <div className="mx-auto flex min-h-[100dvh] w-full max-w-lg flex-col gap-5 px-4 py-4 lg:max-w-6xl">
       {/* ← Назад — на лендинг */}
       <button
         type="button"
@@ -210,84 +205,23 @@ export default function MissionPage() {
         </ul>
       </section>
 
-      {/* Карта 12 Эпох — все активны (Q2, без замков) */}
-      <section className="flex flex-col gap-3">
-        <h2 className="font-display text-xl font-black tracking-tight text-primary-900">
-          Карта 12 Эпох
-        </h2>
-        {EPOCHS.map((epoch) => (
-          <article
-            key={epoch.number}
-            className="flex flex-col gap-3 rounded-2xl border-2 border-primary-300 bg-white p-4 shadow-pop"
-          >
-            <div className="flex items-start justify-between gap-3">
-              <div className="flex items-start gap-3">
-                <span className="mt-0.5 text-3xl" aria-hidden="true">
-                  {epoch.icon}
-                </span>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-wide text-primary-500">
-                    Эпоха {epoch.number}
-                  </p>
-                  <h3 className="font-display text-lg font-extrabold leading-tight tracking-tight text-primary-900">
-                    {epoch.title}
-                  </h3>
-                  <p className="text-sm font-bold text-slate-700">{epoch.tagline}</p>
-                </div>
-              </div>
-            </div>
-            <p className="text-sm font-medium leading-snug text-slate-600">
-              <span className="font-bold text-slate-700">Фокус:</span> {epoch.focus}
-            </p>
-            <p className="text-sm font-medium leading-snug text-slate-600">
-              <span className="font-bold text-slate-700">Сюжет:</span> {epoch.story}
-            </p>
-            <button
-              type="button"
-              onClick={() => router.push(`/epoch/${epoch.slug}`)}
-              className="min-h-[44px] w-full rounded-2xl bg-primary-600 px-4 py-2 text-base font-bold text-white transition-colors hover:bg-primary-700"
-            >
-              Войти в эпоху →
-            </button>
-          </article>
-        ))}
-      </section>
+      {/* Десктоп: плакат; фолбэк — список */}
+      {!posterFailed ? (
+        <div className="hidden lg:block">
+          <EpochMapPoster progress={progress} onFallback={() => setPosterFailed(true)} />
+        </div>
+      ) : (
+        <div className="hidden lg:block">
+          <EpochList onNavigate={goEpoch} />
+        </div>
+      )}
 
-      {/* «Великий Экзамен Времен» (Q9) — карточка ведёт на /exam; страницу
-          создаёт тикет T14, до него маршрут просто ссылка. */}
-      <section className="flex flex-col gap-3">
-        <article className="flex flex-col gap-3 rounded-2xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-white p-4 shadow-pop">
-          <div className="flex items-start justify-between gap-3">
-            <div className="flex items-start gap-3">
-              <span className="mt-0.5 text-3xl" aria-hidden="true">
-                🏆
-              </span>
-              <div>
-                <p className="text-xs font-bold uppercase tracking-wide text-amber-600">
-                  Финальное испытание
-                </p>
-                <h3 className="font-display text-lg font-extrabold leading-tight tracking-tight text-amber-900">
-                  Великий Экзамен Времен
-                </h3>
-                <p className="text-sm font-bold text-slate-700">
-                  12 времён. 4 сектора. Твоя проверка.
-                </p>
-              </div>
-            </div>
-          </div>
-          <p className="text-sm font-medium leading-snug text-slate-600">
-            <span className="font-bold text-slate-700">Испытание:</span> собери все 12
-            времён в единую систему и докажи, что ты владеешь временем!
-          </p>
-          <button
-            type="button"
-            onClick={() => router.push("/exam")}
-            className="min-h-[44px] w-full rounded-2xl bg-amber-500 px-4 py-2 text-base font-bold text-white transition-colors hover:bg-amber-600"
-          >
-            К Экзамену →
-          </button>
-        </article>
-      </section>
+      {/* Мобильный: прежний вертикальный список без визуальных изменений */}
+      <div className="block lg:hidden">
+        <EpochList onNavigate={goEpoch} />
+      </div>
+
+      <RightsFooter />
     </div>
   )
 }
