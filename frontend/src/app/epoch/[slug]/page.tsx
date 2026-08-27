@@ -27,6 +27,7 @@ import {
 import { useVerbBot } from "@/components/VerbBot"
 import { Confetti } from "@/components/Confetti"
 import EpochTheory from "@/components/EpochTheory"
+import ExamEntryCard from "@/components/ExamEntryCard"
 
 /** Иконка-эмодзи по уровню сектора (детерминированно, без Math.random). */
 const LEVEL_EMOJI: Record<string, string> = {
@@ -448,6 +449,14 @@ export default function EpochPage({
           </motion.div>
         )
       })}
+
+      {/* G03: вход на «Великий Экзамен Времен» — только на странице последнего
+          времени (FPC); активен, когда пройдены все 4 сектора эпохи. */}
+      {slug === "future-perfect-continuous" && data && (
+        <ExamEntryCard
+          unlocked={totalStations > 0 && doneStations >= totalStations}
+        />
+      )}
 
       {/* T12: финальная сцена при 100% эпохи — оверлей «Портал открыт!». */}
       {showPortalCelebration && (
