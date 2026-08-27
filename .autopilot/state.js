@@ -1,190 +1,86 @@
 window.STATE =
 {
-  "slug": "tester-ux-fixes",
-  "title": "Правки UX по обратной связи тестировщика (Verb Bot, шапка, звук, фидбек ответов)",
-  "mode": "semi",
+  "slug": "epoch-map-redesign",
+  "dir": "2026-08-27-epoch-map-redesign",
+  "title": "Карта эпох: визуальный редизайн по плакату клиентки",
+  "mode": "interview",
   "depth": "normal",
   "polish": null,
-  "tier": "T2",
-  "briefFile": "2026-08-26-brief.md",
+  "tier": "T1",
+  "briefFile": "2026-08-27-brief.md",
   "memoryFile": "AGENTS.md",
-  "startedAt": "2026-08-26T14:46:18+04:00",
-  "updatedAt": "2026-08-26T17:40:00+04:00",
-  "finishedAt": "2026-08-26T17:40:00+04:00",
+  "skillDir": "/Users/aleksandrtrisenkov/.agents/skills/autopilot",
+  "startedAt": "2026-08-27T11:18:30+04:00",
+  "updatedAt": "2026-08-27T16:15:00+04:00",
+  "finishedAt": "2026-08-27T16:15:00+04:00",
   "stages": [
     {
       "id": "preflight",
       "status": "done",
-      "startedAt": "2026-08-26T14:46:18+04:00",
-      "finishedAt": "2026-08-26T14:55:00+04:00"
+      "startedAt": "2026-08-27T11:18:30+04:00",
+      "finishedAt": "2026-08-27T11:19:20+04:00"
     },
     {
       "id": "manifest",
       "status": "done",
-      "startedAt": "2026-08-26T14:47:00+04:00",
-      "finishedAt": "2026-08-26T14:55:00+04:00"
+      "startedAt": "2026-08-27T11:19:20+04:00",
+      "finishedAt": "2026-08-27T14:15:00+04:00"
     },
     {
       "id": "briefing",
       "status": "done",
-      "startedAt": "2026-08-26T14:55:00+04:00",
-      "finishedAt": "2026-08-26T15:05:00+04:00"
+      "startedAt": "2026-08-27T11:19:20+04:00",
+      "finishedAt": "2026-08-27T14:15:00+04:00"
     },
     {
       "id": "spec",
-      "status": "done",
-      "startedAt": "2026-08-26T15:05:00+04:00",
-      "finishedAt": "2026-08-26T15:12:00+04:00"
+      "status": "active",
+      "startedAt": "2026-08-27T14:15:00+04:00"
     },
     {
       "id": "plan",
-      "status": "done",
-      "startedAt": "2026-08-26T15:12:00+04:00",
-      "finishedAt": "2026-08-26T15:20:00+04:00",
-      "note": "ярус T2 — 4 таска, одна волна"
+      "status": "pending"
     },
     {
       "id": "build",
-      "status": "done",
-      "startedAt": "2026-08-26T15:20:00+04:00",
-      "finishedAt": "2026-08-26T16:50:00+04:00",
-      "note": "4 из 4 тасков готовы"
+      "status": "pending"
     },
     {
       "id": "review",
-      "status": "done",
-      "finishedAt": "2026-08-26T16:50:00+04:00"
+      "status": "pending"
     },
     {
       "id": "final",
-      "status": "done",
-      "startedAt": "2026-08-26T16:55:00+04:00",
-      "finishedAt": "2026-08-26T17:40:00+04:00"
+      "status": "pending"
     }
   ],
   "requirements": {
-    "total": 6,
-    "done": 6,
+    "total": 11,
+    "done": 2,
     "inTicket": 0,
-    "inSpec": 0,
+    "inSpec": 9,
     "placeholder": 0,
     "deferred": 0,
     "dropped": 0
   },
   "tickets": [
-    {
-      "id": "01",
-      "title": "Verb Bot: голосовой чат по клику + место под бота",
-      "requirements": [
-        "R01",
-        "R02"
-      ],
-      "blockedBy": [],
-      "wave": 1,
-      "zone": [
-        "components/VerbBot.tsx",
-        "components/BotChatModal.tsx",
-        "app/layout.tsx"
-      ],
-      "status": "done",
-      "retries": 1,
-      "startedAt": "2026-08-26T15:26:00+04:00",
-      "finishedAt": "2026-08-26T16:55:00+04:00",
-      "commit": "fdbfd28",
-      "tests": {
-        "tsc": "0 errors",
-        "build": "success"
-      }
-    },
-    {
-      "id": "02",
-      "title": "Звук: единый речевой гейт",
-      "requirements": [
-        "R04"
-      ],
-      "blockedBy": [],
-      "wave": 1,
-      "zone": [
-        "lib/useSound.ts",
-        "lib/useSpeechSynthesis.ts",
-        "lib/useServerTts.ts"
-      ],
-      "status": "done",
-      "retries": 0,
-      "startedAt": "2026-08-26T15:26:00+04:00",
-      "finishedAt": "2026-08-26T16:55:00+04:00",
-      "commit": "1c4249b",
-      "tests": {
-        "tsc": "0 errors",
-        "build": "success"
-      }
-    },
-    {
-      "id": "03",
-      "title": "Вердикт мгновенной проверки",
-      "requirements": [
-        "R05"
-      ],
-      "blockedBy": [],
-      "wave": 1,
-      "zone": [
-        "components/tasks/QuizTask.tsx",
-        "components/tasks/verdict.ts",
-        "instant-check siblings"
-      ],
-      "status": "done",
-      "retries": 1,
-      "startedAt": "2026-08-26T15:26:00+04:00",
-      "finishedAt": "2026-08-26T16:55:00+04:00",
-      "commit": "c23d9df",
-      "tests": {
-        "tsc": "0 errors",
-        "build": "success"
-      }
-    },
-    {
-      "id": "04",
-      "title": "Мелкие коллизии UI: шапка + обучение",
-      "requirements": [
-        "R03",
-        "R06"
-      ],
-      "blockedBy": [],
-      "wave": 1,
-      "zone": [
-        "components/tasks/TaskHeader.tsx",
-        "components/EpochTheory.tsx",
-        "components/SoundToggle.tsx"
-      ],
-      "status": "done",
-      "retries": 0,
-      "startedAt": "2026-08-26T15:52:00+04:00",
-      "finishedAt": "2026-08-26T16:55:00+04:00",
-      "commit": "535dacb",
-      "tests": {
-        "tsc": "0 errors",
-        "build": "success"
-      }
-    }
+    { "id": "01", "title": "Плакат-ассет, метаданные эпох, компонент карты", "requirements": ["R01","R02","R02.1","R05i","R06i","G01","G04"], "blockedBy": [], "wave": 1, "zone": ["frontend/src/lib/epochs-meta.ts","frontend/src/components/EpochMapPoster.tsx","frontend/public/map/"], "status": "done", "startedAt": "2026-08-27T14:24:00+04:00", "finishedAt": "2026-08-27T14:50:00+04:00", "commit": "5dfc845", "tests": {"passed": 2, "failed": 0}, "startedAt": "2026-08-27T14:24:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0 },
+    { "id": "02", "title": "/mission: плакат на ПК, список на телефоне, подвал, без экзамена", "requirements": ["R01","R07i","G02","G03.1"], "blockedBy": ["01"], "wave": 2, "zone": ["frontend/src/app/mission/page.tsx","frontend/src/app/page.tsx","frontend/src/components/RightsFooter.tsx"], "status": "done", "startedAt": "2026-08-27T14:26:00+04:00", "finishedAt": "2026-08-27T14:50:00+04:00", "commit": "4c51b05", "tests": {"passed": 2, "failed": 0}, "startedAt": "2026-08-27T14:26:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0 },
+    { "id": "03", "title": "Вход на экзамен со страницы FPC", "requirements": ["G03","G03.1"], "blockedBy": [], "wave": 1, "zone": ["frontend/src/app/epoch/"], "status": "done", "startedAt": "2026-08-27T14:24:00+04:00", "finishedAt": "2026-08-27T14:50:00+04:00", "commit": "bb4a1cd", "tests": {"passed": 2, "failed": 0}, "startedAt": "2026-08-27T14:24:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0 }
   ],
   "singlePass": null,
-  "tests": {
-    "tsc": "0 errors",
-    "build": "success"
-  },
+  "tests": {"passed": 6, "failed": 0},
   "debt": {
     "placeholders": [],
-    "assumptions": [
-      "craft: возможное дублирование механики чата с VoiceChatTask и подписки на гейт в двух хуках — вынесено в отчёт, рефакторинг вне тасков"
-    ],
+    "assumptions": [],
     "emptyEnv": []
   },
   "additions": [],
-  "coverage": {
-    "findings": 2,
-    "resolved": "half-covered(форма чата)=решение брифинга G01; лишнего в спеке=углубления R##.n по правилам глубины; поправлена ссылка §R02"
+  "coverage": {"findings": 10, "halfCovered": 3, "specOnly": 7, "action": "порог пройдено уточнён у пользователя (все 4 сектора); видимость подвала сделана проверяемой; галочка только на ПК; остальные — осознанные R##.n"},
+  "concerns": ["EpochMapPoster без AbortController (T01 craft)", "mission outer max-w-6xl — craft-стилистика"],
+  "reviewers": {
+    "manifestSpec": null,
+    "craft": null
   },
-  "blind": {
-    "verdict": "6/6 пунктов жалобы реализованы; найден и исправлен критичный drift — 500 на всех станциях эпох (клиентский контекст в серверном компоненте); пункт про зелёную галочку в отложенно-проверяемых заданиях — осознанный скоуп спеки (только instant-check)"
-  }
+  "blind": {"by": "brief-only", "status": "pass", "note": "все 10 требований реализованы (см. отчёт), tsc 0, build ok"}
 }
