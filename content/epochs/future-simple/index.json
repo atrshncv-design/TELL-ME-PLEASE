@@ -191,6 +191,11 @@
           "id": "station-7",
           "file": "a2/station-7.json",
           "title": "Интервью о Планах (Диалог)"
+        },
+        {
+          "id": "station-8",
+          "file": "a2/station-8.json",
+          "title": "Планы на компьютер (Промпт)"
         }
       ],
       "story": "Введение TO BE GOING TO. Сравнение планов (going to) и спонтанности (will)."
@@ -279,11 +284,6 @@
           "id": "station-4",
           "file": "b2/station-4.json",
           "title": "Симуляция ОГЭ (Устная часть Task 2)"
-        },
-        {
-          "id": "b2_station_8",
-          "file": "b2/station-8.json",
-          "title": "Наше будущее (Промпт)"
         },
         {
           "id": "station-8",
