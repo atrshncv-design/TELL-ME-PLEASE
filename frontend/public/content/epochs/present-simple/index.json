@@ -17,6 +17,12 @@
           "type": "quiz"
         },
         {
+          "id": "station-filter",
+          "file": "a1/station-filter.json",
+          "title": "Дифференцировочное торможение",
+          "type": "quiz"
+        },
+        {
           "id": "station-2",
           "file": "a1/station-2.json",
           "title": "Сканирование Формы (Механика)",
@@ -241,7 +247,7 @@
   "theory": [
     {
       "title": "📸 Шаг 1: Суть времени (Что это такое?)",
-      "text": "Привет, ребята! 👋 Мы начинаем покорение английской грамматики, и наш фундамент — Present Simple (Настоящее простое время).\nPresent Simple — это «Фотоаппарат» 📸. Он делает четкий снимок того, как устроен ваш мир: ваши привычки, факты, расписание и законы природы. Это время не про то, что вы делаете прямо сейчас в эту секунду, а про то, как устроена ваша жизнь в целом.\nФормула (Базовый каркас):\nПодлежащее + Смысловой глагол (V1)\nI play tennis. (Я играю в теннис — это факт/мое хобби).\nWe live in Russia. (Мы живем в России — постоянный факт).\n⚠️ ГЛАВНЫЙ БОСС Present Simple: Окончание -S / -ES для He, She, It (3-е лицо, единственное число). Как только в предложении появляется Он, Она, Оно (или конкретное имя: Tom, My mum, The cat), к глаголу приклеивается хвостик!\nI play ➡️ Но: He plays\nThey sleep ➡️ Но: My cat sleeps\nWe, You, They ➡️ are (They are happy) Лайфхак: Если подлежащее можно заменить на He/She/It, смело лепим окончание! 🐈"
+      "text": "Привет, ребята! 👋 Мы начинаем покорение английской грамматики, и наш фундамент — Present Simple (Настоящее простое время).\nPresent Simple — это «Фотоаппарат» 📸. Он делает четкий снимок того, как устроен ваш мир: ваши привычки, факты, расписание и законы природы. Это время не про то, что вы делаете прямо сейчас в эту секунду, а про то, как устроена ваша жизнь в целом.\nФормула (Базовый каркас):\nПодлежащее + Смысловой глагол (V1)\nI play tennis. (Я играю в теннис — это факт/мое хобби).\nWe live in Russia. (Мы живем в России — постоянный факт).\n⚠️ ГЛАВНЫЙ БОСС Present Simple: Окончание -S / -ES для He, She, It (3-е лицо, единственное число). Как только в предложении появляется Он, Она, Оно (или конкретное имя: Tom, My mum, The cat), к глаголу приклеивается хвостик!\nI play ➡️ Но: He plays\nThey sleep ➡️ Но: My cat sleeps\nЛайфхак: Если подлежащее можно заменить на He/She/It, смело лепим окончание! 🐈"
     },
     {
       "title": "🎭 Шаг 2: Все 5 жизней Present Simple (Когда использовать?)",
@@ -257,7 +263,7 @@
     },
     {
       "title": "⚙️ Шаг 5: Механика Отрицания и Вопроса (Магия Do/Does)",
-      "text": "А теперь про обычные глаголы (play, run, sleep). В Present Simple, чтобы задать вопрос или сказать «нет», нам нужны помощники: DO и DOES.\nДля I, You, We, They: используем DO.\nВопрос: Do you play tennis?\nОтрицание: I don't play tennis. (do not)\nДля He, She, It: используем DOES. ⚠️ ВНИМАНИЕ, ЛОВУШКА! Как только появился помощник DOES, он забирает окончание -S у смыслового глагола! Смысловой глагол остается в начальной форме (V1).\nВопрос: Does he play tennis? (НЕ plays!)\nОтрицание: He doesn't play tennis. (НЕ doesn't plays!)\n💡 Мнемоническое правило: DOES — жадина. Он забирает -S у смыслового глагола себе!"
+      "text": "А теперь про обычные глаголы (play, run, sleep). В Present Simple, чтобы задать вопрос или сказать «нет», нам нужны помощники: DO и DOES.\nДля I, You, We, They: используем DO.\nВопрос: Do you play tennis?\nОтрицание: I don't play tennis. (do not)\nДля He, She, It: используем DOES. ⚠️ ВНИМАНИЕ, ЛОВУШКА! Как только появился помощник DOES, он забирает окончание -S у смыслового глагола! Смысловой глагол остается в начальной форме (V1).\nВопрос: Does he play tennis? (НЕ plays!)\nОтрицание: He doesn't play tennis. (НЕ doesn't plays!)\n💡 Мнемоническое правило: DOES — жадина. Он забирает -S у смыслового глагола себе!\nI play / He plays\nWe, You, They are happy"
     },
     {
       "title": "🚨 Шаг 6: Топ-3 ошибки, которые нужно уничтожить навсегда",
@@ -333,6 +339,40 @@
       "https://rutube.ru/video/248335e1a0922b48fc4111c513eecf19/",
       "https://rutube.ru/video/19721fd0281a910775ce4a97a845b55c/"
     ],
-    "sunoPrompt": "Write a fun, catchy song for kids that teaches Present Simple (habits and facts). ALL lyrics MUST be in English. Explain that we use V1 for I/you/we/they and add -s/-es for he/she/it, and use Do/Does for questions and negatives. Mention time markers: every day, usually, always. Include the words every day, usually, he/she/it, Do/Does in the chorus. Use simple A1 vocabulary. Upbeat children pop, cheerful claps, 120 bpm."
+    "sunoPrompt": "Write a fun, catchy song for kids that teaches Present Simple (habits and facts). ALL lyrics MUST be in English. Explain that we use V1 for I/you/we/they and add -s/-es for he/she/it, and use Do/Does for questions and negatives. Mention time markers: every day, usually, always. Include the words every day, usually, he/she/it, Do/Does in the chorus. Use simple A1 vocabulary. Upbeat children pop, cheerful claps, 120 bpm.",
+    "tracks": [
+      {
+        "title": "Spotlight 5 Present Simple Song",
+        "url": "https://rutube.ru/video/7bb23590e287b1ba09eff35857572503/"
+      },
+      {
+        "title": "Present Simple Song AI (наречия)",
+        "url": "https://yandex.ru/video/preview/8418537712335806877"
+      },
+      {
+        "title": "Tea Rap Song",
+        "url": "https://yandex.ru/video/preview/17764916693209110830"
+      },
+      {
+        "title": "Daily Routine Song",
+        "url": "https://rutube.ru/video/8b8cb17eb9f9a8b6d8d4cee33713b515/"
+      },
+      {
+        "title": "Rockin English Song",
+        "url": "https://rutube.ru/video/248335e1a0922b48fc4111c513eecf19/"
+      },
+      {
+        "title": "Kid’s Box Present Simple Song",
+        "url": "https://rutube.ru/video/19721fd0281a910775ce4a97a845b55c/"
+      }
+    ],
+    "linkTitles": [
+      "Spotlight 5 Present Simple Song",
+      "Present Simple Song AI (наречия)",
+      "Tea Rap Song",
+      "Daily Routine Song",
+      "Rockin English Song",
+      "Kid’s Box Present Simple Song"
+    ]
   }
 }

@@ -30,7 +30,7 @@ interface EpochMusicData {
   epoch: string
   title: string
   icon?: string
-  music?: { title: string; links: string[]; sunoPrompt: string }
+  music?: { title: string; links: string[]; sunoPrompt: string; tracks?: { title: string; url: string }[]; linkTitles?: string[] }
 }
 
 export default function MusicPage() {
@@ -117,25 +117,32 @@ export default function MusicPage() {
               </div>
             </div>
 
-            {Array.isArray(epoch.music?.links) && epoch.music!.links.length > 0 && (
+            {((Array.isArray(epoch.music?.tracks) && epoch.music!.tracks!.length > 0) ||
+              (Array.isArray(epoch.music?.links) && epoch.music!.links.length > 0)) && (
               <div className="flex flex-wrap gap-2">
-                {epoch.music!.links.map((link, li) =>
-                  /^https?:\/\//i.test(link) ? (
+                {(Array.isArray(epoch.music?.tracks) && epoch.music!.tracks!.length > 0
+                  ? epoch.music!.tracks!
+                  : epoch.music!.links.map((link, i) => ({
+                      title: epoch.music!.linkTitles?.[i] || "Слушать песни",
+                      url: link,
+                    }))
+                ).map((track, li) =>
+                  /^https?:\/\//i.test(track.url) ? (
                     <a
                       key={li}
-                      href={link}
+                      href={track.url}
                       target="_blank"
                       rel="noreferrer"
                       className="flex min-h-[44px] items-center gap-1.5 rounded-full border-2 border-violet-200 bg-white px-4 py-2 text-sm font-bold text-violet-700 shadow-soft transition-colors hover:bg-violet-50"
                     >
-                      🎵 Слушать песни
+                      🎵 {track.title}
                     </a>
                   ) : (
                     <span
                       key={li}
                       className="flex min-h-[44px] items-center rounded-full border-2 border-dashed border-violet-200 bg-white/70 px-4 py-2 text-sm font-semibold text-slate-500"
                     >
-                      🎵 {link.replace(/^\[|\]$/g, "")}
+                      🎵 {(track.title || track.url).replace(/^\[|\]$/g, "")}
                     </span>
                   )
                 )}

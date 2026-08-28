@@ -1,0 +1,129 @@
+{
+  "id": "a1_station_filter",
+  "title": "Дифференцировочное торможение",
+  "description": "Выработать внутренний тормоз — если есть смысловой глагол, to be не нужен! Выбери правильный вариант.",
+  "category": "grammar",
+  "type": "quiz",
+  "items": [
+    {
+      "question": "She ___ a clever girl.",
+      "options": [
+        "is",
+        "plays"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "She ___ chess every day.",
+      "options": [
+        "is",
+        "plays"
+      ],
+      "answer": "plays"
+    },
+    {
+      "question": "The water ___ cold.",
+      "options": [
+        "is",
+        "drink"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "I ___ cold water in the morning.",
+      "options": [
+        "am",
+        "drink"
+      ],
+      "answer": "drink"
+    },
+    {
+      "question": "They ___ in London now.",
+      "options": [
+        "are",
+        "go"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "They ___ to London every summer.",
+      "options": [
+        "are",
+        "go"
+      ],
+      "answer": "go"
+    },
+    {
+      "question": "We ___ students.",
+      "options": [
+        "are",
+        "do"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "We ___ our homework in the evening.",
+      "options": [
+        "are",
+        "do"
+      ],
+      "answer": "do"
+    },
+    {
+      "question": "The ruler ___ in the bag.",
+      "options": [
+        "is",
+        "use"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "I ___ the ruler every day.",
+      "options": [
+        "am",
+        "use"
+      ],
+      "answer": "use"
+    },
+    {
+      "question": "He ___ a pilot.",
+      "options": [
+        "is",
+        "flies"
+      ],
+      "answer": "is"
+    },
+    {
+      "question": "He ___ planes.",
+      "options": [
+        "is",
+        "flies"
+      ],
+      "answer": "flies"
+    },
+    {
+      "question": "You ___ hungry.",
+      "options": [
+        "are",
+        "eat"
+      ],
+      "answer": "are"
+    },
+    {
+      "question": "You ___ a sandwich for breakfast.",
+      "options": [
+        "are",
+        "eat"
+      ],
+      "answer": "eat"
+    },
+    {
+      "question": "The dog ___ funny.",
+      "options": [
+        "is",
+        "barks"
+      ],
+      "answer": "is"
+    }
+  ]
+}

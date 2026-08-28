@@ -1,7 +1,7 @@
 {
   "id": "a1_station_1",
   "title": "Проверка Системы (To be & Have got)",
-  "description": "Автоматизировать базовый рефлекс выбора форм глагола to be (am/is/are) и have got/has got. В конце — фильтр «To be или смысловой глагол?»: если есть смысловой глагол, to be не нужен!",
+  "description": "Автоматизировать базовый рефлекс выбора форм глагола to be (am/is/are) и have got/has got.",
   "category": "to-be",
   "type": "quiz",
   "items": [
