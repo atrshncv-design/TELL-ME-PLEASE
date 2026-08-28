@@ -6,7 +6,7 @@
   "type": "quiz",
   "items": [
     {
-      "question": "I (was walking / walked) when I ___ a cat.",
+      "question": "I was walking when I ___ a cat.",
       "options": [
         "was seeing",
         "saw"
@@ -14,7 +14,7 @@
       "answer": "saw"
     },
     {
-      "question": "I ___ when I (was seeing / saw) a cat.",
+      "question": "I ___ when I saw a cat.",
       "options": [
         "was walking",
         "walked"
@@ -22,7 +22,7 @@
       "answer": "was walking"
     },
     {
-      "question": "She ___ when the phone (was ringing / rang).",
+      "question": "She ___ when the phone rang.",
       "options": [
         "was reading",
         "read"
@@ -30,7 +30,7 @@
       "answer": "was reading"
     },
     {
-      "question": "She (was reading / read) when the phone ___.",
+      "question": "She was reading when the phone ___.",
       "options": [
         "was ringing",
         "rang"
@@ -38,7 +38,7 @@
       "answer": "rang"
     },
     {
-      "question": "We ___ when it (was starting / started) to rain.",
+      "question": "We ___ when it started to rain.",
       "options": [
         "were playing",
         "played"
@@ -46,7 +46,7 @@
       "answer": "were playing"
     },
     {
-      "question": "We (were playing / played) when it ___ to rain.",
+      "question": "We were playing when it ___ to rain.",
       "options": [
         "was starting",
         "started"
@@ -54,7 +54,7 @@
       "answer": "started"
     },
     {
-      "question": "He ___ while he (was running / ran).",
+      "question": "He ___ while he was running.",
       "options": [
         "was falling",
         "fell"
@@ -62,7 +62,7 @@
       "answer": "fell"
     },
     {
-      "question": "He (was falling / fell) while he ___.",
+      "question": "He fell while he ___.",
       "options": [
         "was running",
         "ran"
@@ -70,7 +70,7 @@
       "answer": "was running"
     },
     {
-      "question": "They ___ dinner when I (was coming / came).",
+      "question": "They ___ dinner when I came.",
       "options": [
         "were having",
         "had"
@@ -78,7 +78,7 @@
       "answer": "were having"
     },
     {
-      "question": "They (were having / had) dinner when I ___.",
+      "question": "They were having dinner when I ___.",
       "options": [
         "was coming",
         "came"
