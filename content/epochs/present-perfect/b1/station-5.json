@@ -6,14 +6,14 @@
   "type": "fill-in",
   "items": [
     {
-      "sentence": "He ___ (dropped) his phone.",
+      "sentence": "He ___ (drop) his phone.",
       "answer": [
         "has dropped"
       ],
       "hint": "разбитый телефон"
     },
     {
-      "sentence": "Someone ___ (drunk) all the milk.",
+      "sentence": "Someone ___ (drink) all the milk.",
       "answer": [
         "has drunk"
       ],
@@ -47,7 +47,8 @@
     {
       "sentence": "They ___ (spill) the juice. Стол липкий.",
       "answer": [
-        "have spilled"
+        "have spilled",
+        "have spilt"
       ]
     },
     {

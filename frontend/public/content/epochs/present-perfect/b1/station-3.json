@@ -6,42 +6,81 @@
   "type": "fill-in",
   "items": [
     {
-      "sentence": "I ___ my project.",
+      "sentence": "I ___ never ___ (see) such a beautiful city.",
       "answer": [
-        "have just finished"
-      ],
-      "hint": "Я только что закончил проект."
-    },
-    {
-      "sentence": "We ___ the tickets.",
-      "answer": [
-        "have already bought"
-      ],
-      "hint": "Мы уже купили билеты."
-    },
-    {
-      "sentence": "She ___ the article ___.",
-      "answer": [
-        "hasn't read",
-        "yet"
-      ],
-      "hint": "Она еще не прочитала статью."
-    },
-    {
-      "sentence": "___ you ever ___ by plane?",
-      "answer": [
-        "Have",
-        "flown"
-      ],
-      "hint": "Ты когда-нибудь летал на самолете?"
-    },
-    {
-      "sentence": "He ___ never ___ this film.",
-      "answer": [
-        "has",
+        "have",
         "seen"
       ],
-      "hint": "Он никогда не видел этого фильма."
+      "hint": "Я никогда не видел такого красивого города."
+    },
+    {
+      "sentence": "We ___ (solve) this problem.",
+      "answer": [
+        "have already solved"
+      ],
+      "hint": "Мы уже решили эту проблему."
+    },
+    {
+      "sentence": "He ___ (publish) an article.",
+      "answer": [
+        "has published"
+      ],
+      "hint": "Он опубликовал статью."
+    },
+    {
+      "sentence": "___ you ever ___ (be) to Moscow?",
+      "answer": [
+        "Have",
+        "been"
+      ],
+      "hint": "Ты когда-нибудь был в Москве?"
+    },
+    {
+      "sentence": "They ___ already ___ (leave).",
+      "answer": [
+        "have",
+        "left"
+      ],
+      "hint": "Они уже ушли."
+    },
+    {
+      "sentence": "I ___ (finish) my homework.",
+      "answer": [
+        "have already finished"
+      ],
+      "hint": "Я уже закончила домашнее задание."
+    },
+    {
+      "sentence": "She ___ never ___ (be) to London.",
+      "answer": [
+        "has",
+        "been"
+      ],
+      "hint": "Она никогда не была в Лондоне."
+    },
+    {
+      "sentence": "We ___ just ___ (watch) this film.",
+      "answer": [
+        "have",
+        "watched"
+      ],
+      "hint": "Мы только что посмотрели этот фильм."
+    },
+    {
+      "sentence": "___ you ever ___ (try) Japanese food?",
+      "answer": [
+        "Have",
+        "tried"
+      ],
+      "hint": "Ты когда-нибудь пробовал японскую еду?"
+    },
+    {
+      "sentence": "They ___ (find) their keys ___ .",
+      "answer": [
+        "haven't found",
+        "yet"
+      ],
+      "hint": "Они еще не нашли свои ключи."
     }
   ]
 }
