@@ -1,21 +1,75 @@
 {
   "id": "ps_a1_station_0",
   "title": "Тренажёр Неправильных Глаголов (Разминка)",
-  "description": "Разминка перед полётом: выбери вторую форму (Past Simple) для каждого неправильного глагола. 2 уровня сложности — Beginner и Elementary.",
+  "description": "Разминка перед полётом: выбери вторую форму (Past Simple) для каждого неправильного глагола. Для дальнейшего изучения форм обратитесь в приложение IVERBS.\n\nТаблица неправильных глаголов — V1 / V2 / V3 и перевод: be — was/were — been — быть, become — became — become — становиться, begin — began — begun — начинать, buy — bought — bought — покупать, come — came — come — приходить, do — did — done — делать, drink — drank — drunk — пить, eat — ate — eaten — есть, find — found — found — находить, get — got — got — получать; становиться, give — gave — given — давать, go — went — gone — идти; ехать, have — had — had — иметь, know — knew — known — знать, make — made — made — делать; создавать, meet — met — met — встречать, read — read — read — читать, run — ran — run — бегать, say — said — said — говорить, see — saw — seen — видеть, sing — sang — sung — петь, sit — sat — sat — сидеть, speak — spoke — spoken — говорить, swim — swam — swum — плавать, take — took — taken — брать, tell — told — told — рассказывать; говорить, think — thought — thought — думать, write — wrote — written — писать.",
   "category": "grammar",
   "type": "quiz",
   "items": [
     {
-      "question": "go → ___ (Past Simple)",
+      "question": "be (быть) → ___ (Past Simple)",
       "options": [
-        "went",
-        "goed",
-        "gone"
+        "was/were",
+        "beed",
+        "been"
       ],
-      "answer": "went"
+      "answer": "was/were"
     },
     {
-      "question": "eat → ___ (Past Simple)",
+      "question": "become (становиться) → ___ (Past Simple)",
+      "options": [
+        "became",
+        "becomed",
+        "become"
+      ],
+      "answer": "became"
+    },
+    {
+      "question": "begin (начинать) → ___ (Past Simple)",
+      "options": [
+        "began",
+        "begined",
+        "begun"
+      ],
+      "answer": "began"
+    },
+    {
+      "question": "buy (покупать) → ___ (Past Simple)",
+      "options": [
+        "bought",
+        "buyed",
+        "boughten"
+      ],
+      "answer": "bought"
+    },
+    {
+      "question": "come (приходить) → ___ (Past Simple)",
+      "options": [
+        "came",
+        "comed",
+        "come"
+      ],
+      "answer": "came"
+    },
+    {
+      "question": "do (делать) → ___ (Past Simple)",
+      "options": [
+        "did",
+        "doed",
+        "done"
+      ],
+      "answer": "did"
+    },
+    {
+      "question": "drink (пить) → ___ (Past Simple)",
+      "options": [
+        "drank",
+        "drinked",
+        "drunk"
+      ],
+      "answer": "drank"
+    },
+    {
+      "question": "eat (есть) → ___ (Past Simple)",
       "options": [
         "ate",
         "eated",
@@ -24,7 +78,106 @@
       "answer": "ate"
     },
     {
-      "question": "see → ___ (Past Simple)",
+      "question": "find (находить) → ___ (Past Simple)",
+      "options": [
+        "found",
+        "finded",
+        "founded"
+      ],
+      "answer": "found"
+    },
+    {
+      "question": "get (получать; становиться) → ___ (Past Simple)",
+      "options": [
+        "got",
+        "geted",
+        "gotten"
+      ],
+      "answer": "got"
+    },
+    {
+      "question": "give (давать) → ___ (Past Simple)",
+      "options": [
+        "gave",
+        "gived",
+        "given"
+      ],
+      "answer": "gave"
+    },
+    {
+      "question": "go (идти; ехать) → ___ (Past Simple)",
+      "options": [
+        "went",
+        "goed",
+        "gone"
+      ],
+      "answer": "went"
+    },
+    {
+      "question": "have (иметь) → ___ (Past Simple)",
+      "options": [
+        "had",
+        "haved",
+        "has"
+      ],
+      "answer": "had"
+    },
+    {
+      "question": "know (знать) → ___ (Past Simple)",
+      "options": [
+        "knew",
+        "knowed",
+        "known"
+      ],
+      "answer": "knew"
+    },
+    {
+      "question": "make (делать; создавать) → ___ (Past Simple)",
+      "options": [
+        "made",
+        "maked",
+        "make"
+      ],
+      "answer": "made"
+    },
+    {
+      "question": "meet (встречать) → ___ (Past Simple)",
+      "options": [
+        "met",
+        "meeted",
+        "meet"
+      ],
+      "answer": "met"
+    },
+    {
+      "question": "read (читать) → ___ (Past Simple)",
+      "options": [
+        "read",
+        "readed",
+        "red"
+      ],
+      "answer": "read"
+    },
+    {
+      "question": "run (бегать) → ___ (Past Simple)",
+      "options": [
+        "ran",
+        "runned",
+        "run"
+      ],
+      "answer": "ran"
+    },
+    {
+      "question": "say (говорить) → ___ (Past Simple)",
+      "options": [
+        "said",
+        "sayed",
+        "says"
+      ],
+      "answer": "said"
+    },
+    {
+      "question": "see (видеть) → ___ (Past Simple)",
       "options": [
         "saw",
         "seed",
@@ -33,67 +186,76 @@
       "answer": "saw"
     },
     {
-      "question": "take → ___ (Past Simple)",
+      "question": "sing (петь) → ___ (Past Simple)",
       "options": [
-        "taked",
-        "took",
-        "taken"
+        "sang",
+        "singed",
+        "sung"
       ],
-      "answer": "took"
+      "answer": "sang"
     },
     {
-      "question": "buy → ___ (Past Simple)",
+      "question": "sit (сидеть) → ___ (Past Simple)",
       "options": [
-        "buyed",
-        "bought",
-        "boughten"
+        "sat",
+        "sitted",
+        "sit"
       ],
-      "answer": "bought"
+      "answer": "sat"
     },
     {
-      "question": "drink → ___ (Past Simple)",
+      "question": "speak (говорить) → ___ (Past Simple)",
       "options": [
-        "drinked",
-        "drank",
-        "drunk"
+        "spoke",
+        "speaked",
+        "spoken"
       ],
-      "answer": "drank"
+      "answer": "spoke"
     },
     {
-      "question": "run → ___ (Past Simple)",
-      "options": [
-        "runned",
-        "ran",
-        "run"
-      ],
-      "answer": "ran"
-    },
-    {
-      "question": "sleep → ___ (Past Simple)",
-      "options": [
-        "slept",
-        "sleeped",
-        "slepted"
-      ],
-      "answer": "slept"
-    },
-    {
-      "question": "fly → ___ (Past Simple)",
-      "options": [
-        "flied",
-        "flew",
-        "flown"
-      ],
-      "answer": "flew"
-    },
-    {
-      "question": "swim → ___ (Past Simple)",
+      "question": "swim (плавать) → ___ (Past Simple)",
       "options": [
         "swam",
         "swimmed",
         "swum"
       ],
       "answer": "swam"
+    },
+    {
+      "question": "take (брать) → ___ (Past Simple)",
+      "options": [
+        "took",
+        "taked",
+        "taken"
+      ],
+      "answer": "took"
+    },
+    {
+      "question": "tell (рассказывать; говорить) → ___ (Past Simple)",
+      "options": [
+        "told",
+        "telled",
+        "tell"
+      ],
+      "answer": "told"
+    },
+    {
+      "question": "think (думать) → ___ (Past Simple)",
+      "options": [
+        "thought",
+        "thinked",
+        "think"
+      ],
+      "answer": "thought"
+    },
+    {
+      "question": "write (писать) → ___ (Past Simple)",
+      "options": [
+        "wrote",
+        "writed",
+        "written"
+      ],
+      "answer": "wrote"
     }
   ]
 }

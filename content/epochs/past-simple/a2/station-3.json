@@ -54,7 +54,7 @@
       "answer": "has taken"
     },
     {
-      "question": "I have just finished my homework.",
+      "question": "I ___ my homework.",
       "options": [
         "have just finished",
         "finished"
@@ -62,7 +62,7 @@
       "answer": "have just finished"
     },
     {
-      "question": "We visited our grandparents last Sunday.",
+      "question": "We ___ our grandparents last Sunday.",
       "options": [
         "visited",
         "have visited"
@@ -70,7 +70,7 @@
       "answer": "visited"
     },
     {
-      "question": "She has never seen this film.",
+      "question": "She ___ this film before.",
       "options": [
         "has never seen",
         "saw"
@@ -78,7 +78,7 @@
       "answer": "has never seen"
     },
     {
-      "question": "They went to the zoo yesterday.",
+      "question": "They ___ to the zoo yesterday.",
       "options": [
         "went",
         "have gone"
@@ -86,7 +86,7 @@
       "answer": "went"
     },
     {
-      "question": "My brother has already cleaned his room.",
+      "question": "My brother ___ his room already.",
       "options": [
         "has already cleaned",
         "cleaned"
@@ -94,7 +94,7 @@
       "answer": "has already cleaned"
     },
     {
-      "question": "I lost my keys two days ago.",
+      "question": "I ___ my keys two days ago.",
       "options": [
         "lost",
         "have lost"
@@ -102,15 +102,15 @@
       "answer": "lost"
     },
     {
-      "question": "Have you ever tried sushi?",
+      "question": "You ___ sushi before?",
       "options": [
-        "tried",
-        "have tried"
+        "have tried",
+        "tried"
       ],
       "answer": "have tried"
     },
     {
-      "question": "He didn’t come to school last Friday.",
+      "question": "He ___ to school last Friday.",
       "options": [
         "didn’t come",
         "haven’t come"
@@ -118,7 +118,7 @@
       "answer": "didn’t come"
     },
     {
-      "question": "Our teacher has given us a new project this week.",
+      "question": "Our teacher ___ us a new project this week.",
       "options": [
         "has given",
         "gave"
