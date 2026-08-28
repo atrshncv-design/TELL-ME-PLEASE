@@ -4,7 +4,7 @@
   "description": "Вставь пропущенные формы глаголов в текст «Мой Сумасшедший День»: интеграция 4 настоящих времён.",
   "category": "grammar",
   "type": "cloze",
-  "text": "Hi! I ___ this email to you right now. I ___ so tired. I ___ for my exams for 3 weeks! Usually, I ___ nervous, but today I am stressed. I ___ my Math test, but I still have History tomorrow. Right now, my brother ___ guitar. He always ___ so loudly! I ___ how I will survive this week.",
+  "text": "Hi! I ___ this email to you right now. I ___ so tired. I ___ for my exams for 3 weeks! Usually, I ___ nervous, but today I am stressed. I ___ my Math test, but I still have History tomorrow. Right now, my brother ___ the guitar. He always ___ so loudly! I ___ how I will survive this week.",
   "answers": [
     [
       "am writing"
@@ -43,7 +43,11 @@
     "plays",
     "do not know",
     "don't get",
-    "don't know"
+    "don't know",
+    "write",
+    "am studying",
+    "passed",
+    "play"
   ],
   "hints": [
     "(write)",
