@@ -6,51 +6,51 @@
   "type": "drag-and-drop",
   "items": [
     {
-      "verb": "by 5 p.m.",
+      "verb": "5 p.m.",
       "answer": "by"
     },
     {
-      "verb": "by tomorrow",
+      "verb": "tomorrow",
       "answer": "by"
     },
     {
-      "verb": "by evening",
+      "verb": "evening",
       "answer": "by"
     },
     {
-      "verb": "by Sunday",
+      "verb": "Sunday",
       "answer": "by"
     },
     {
-      "verb": "by morning",
+      "verb": "morning",
       "answer": "by"
     },
     {
-      "verb": "by noon",
+      "verb": "noon",
       "answer": "by"
     },
     {
-      "verb": "at 5 p.m.",
+      "verb": "5 p.m.",
       "answer": "at"
     },
     {
-      "verb": "at this time tomorrow",
+      "verb": "this time tomorrow",
       "answer": "at"
     },
     {
-      "verb": "at midnight",
+      "verb": "midnight",
       "answer": "at"
     },
     {
-      "verb": "at noon",
+      "verb": "noon",
       "answer": "at"
     },
     {
-      "verb": "at 8 a.m.",
+      "verb": "8 a.m.",
       "answer": "at"
     },
     {
-      "verb": "at the moment",
+      "verb": "the moment",
       "answer": "at"
     }
   ],
