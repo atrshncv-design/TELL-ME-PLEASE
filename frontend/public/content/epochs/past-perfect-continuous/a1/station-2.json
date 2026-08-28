@@ -94,46 +94,6 @@
         "didn't been playing"
       ],
       "answer": "hadn't been playing"
-    },
-    {
-      "question": "I ___ been sleeping well recently.",
-      "options": [
-        "haven’t",
-        "hasn’t"
-      ],
-      "answer": "haven’t"
-    },
-    {
-      "question": "She ___ been studying English for long.",
-      "options": [
-        "hasn’t",
-        "haven’t"
-      ],
-      "answer": "hasn’t"
-    },
-    {
-      "question": "We ___ been playing outside today.",
-      "options": [
-        "haven’t",
-        "hasn’t"
-      ],
-      "answer": "haven’t"
-    },
-    {
-      "question": "He ___ been feeling well this week.",
-      "options": [
-        "hasn’t",
-        "haven’t"
-      ],
-      "answer": "hasn’t"
-    },
-    {
-      "question": "They ___ been watching TV all evening.",
-      "options": [
-        "haven’t",
-        "hasn’t"
-      ],
-      "answer": "haven’t"
     }
   ]
 }

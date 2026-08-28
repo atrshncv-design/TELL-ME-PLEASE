@@ -16,7 +16,7 @@
         "next month"
       ],
       "min": 1,
-      "hint": "Спроси его: How long will you have been working on this game by next month? — Примерный ответ: By next month, I will have been working on this game for six months."
+      "hint": "Примерный ответ: By next month, I will have been working on this game for six months."
     },
     {
       "question": "How many levels will you have created by Friday?",
@@ -28,7 +28,7 @@
         "Friday"
       ],
       "min": 1,
-      "hint": "Спроси его: How many levels will you have created by Friday? — Примерный ответ: By Friday, I will have created ten levels."
+      "hint": "Примерный ответ: By Friday, I will have created ten levels."
     },
     {
       "question": "Will you be tired? Why?",
@@ -38,7 +38,7 @@
         "Why"
       ],
       "min": 1,
-      "hint": "Спроси его: Will you be tired? Why? — Примерный ответ: Yes, I will be tired because I will have been testing the game for many hours."
+      "hint": "Примерный ответ: Yes, I will be tired because I will have been testing the game for many hours."
     },
     {
       "question": "What will you be doing at 5 PM tomorrow?",
@@ -49,7 +49,7 @@
         "tomorrow"
       ],
       "min": 1,
-      "hint": "Спроси его: What will you be doing at 5 PM tomorrow? — Примерный ответ: At 5 p.m. tomorrow, I will be meeting with my team and discussing new ideas for the game."
+      "hint": "Примерный ответ: At 5 p.m. tomorrow, I will be meeting with my team and discussing new ideas for the game."
     }
   ]
 }

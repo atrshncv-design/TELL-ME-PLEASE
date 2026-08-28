@@ -187,16 +187,6 @@
           "id": "station-7",
           "file": "a2/station-7.json",
           "title": "Скоростное Свидание (Диалог)"
-        },
-        {
-          "id": "a2_station_8",
-          "file": "a2/station-8.json",
-          "title": "Новенький в классе (Промпт)"
-        },
-        {
-          "id": "station-8",
-          "file": "a2/station-8.json",
-          "title": "Новенький в классе (Промпт)"
         }
       ],
       "story": "Лексика хобби и рутины. Сравнение с Present Continuous."
@@ -241,16 +231,6 @@
           "id": "station-6",
           "file": "b1/station-6.json",
           "title": "Интервью с Геймером (Диалог с ИИ)"
-        },
-        {
-          "id": "b1_station_8",
-          "file": "b1/station-8.json",
-          "title": "Компьютерные игры (Промпт)"
-        },
-        {
-          "id": "station-8",
-          "file": "b1/station-8.json",
-          "title": "Компьютерные игры (Промпт)"
         }
       ],
       "story": "Лексика технологий, медиа. Глубокое сравнение Present Perfect vs Present Perfect Continuous."

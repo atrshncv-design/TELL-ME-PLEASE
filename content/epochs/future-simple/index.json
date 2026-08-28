@@ -191,16 +191,6 @@
           "id": "station-7",
           "file": "a2/station-7.json",
           "title": "Интервью о Планах (Диалог)"
-        },
-        {
-          "id": "a2_station_8",
-          "file": "a2/station-8.json",
-          "title": "Планы на компьютер (Промпт)"
-        },
-        {
-          "id": "station-8",
-          "file": "a2/station-8.json",
-          "title": "Планы на компьютер (Промпт)"
         }
       ],
       "story": "Введение TO BE GOING TO. Сравнение планов (going to) и спонтанности (will)."
