@@ -584,7 +584,7 @@ function VoiceChatInner({
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0 }}
-                      className={`rounded-2xl border-2 p-4 ${listVerdict === "correct" ? "border-emerald-200 bg-emerald-50" : "border-rose-200 bg-rose-50"}`}
+                      className={`sticky bottom-0 z-10 rounded-2xl border-2 p-4 shadow-lg ${listVerdict === "correct" ? "border-emerald-200 bg-emerald-50" : "border-rose-200 bg-rose-50"}`}
                     >
                       <div className="flex items-center gap-2">
                         <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-base font-black text-white ${listVerdict === "correct" ? "bg-emerald-500" : "bg-rose-500"}`}>

@@ -51,6 +51,8 @@ interface EpochMusic {
   title: string
   links: string[]
   sunoPrompt: string
+  tracks?: { title: string; url: string }[]
+  linkTitles?: string[]
 }
 
 type Phase = "slides" | "quiz" | "music"
@@ -111,6 +113,9 @@ function isExampleLine(line: string): boolean {
 
   // 4) Английское предложение: начинается с заглавной английской буквы
   if (!/^[A-Z]/.test(t)) return false
+
+  // 4.1) Короткий английский пример с разделителем « / » или «➡️» (R03: I play / He plays)
+  if (/(\s\/\s|➡️|->)/.test(t) && t.length < 80 && /^[A-Z]/.test(t) && /[a-z]{2,}/i.test(t)) return true
 
   // 5) Содержит хотя бы один «английский» глагол / модаль / вспомогательный
   if (!/\b(will|would|can|could|may|might|shall|should|must|do|does|did|have|has|had|is|are|was|were|be|been|being|am|not|don't|doesn't|didn't|won't|wouldn't|can't|couldn't|shouldn't|isn't|aren't|wasn't|weren't|haven't|hasn't|hadn't)\b/i.test(t))
@@ -398,7 +403,7 @@ export default function EpochTheory({
           onClick={openPresentation}
           className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-2xl bg-primary-600 px-4 py-3 text-base font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
         >
-          <span aria-hidden="true">▶</span> Смотреть инструктаж
+          <span aria-hidden="true">▶</span> Смотреть Обучение
         </button>
         {hasMusic && (
           <button
@@ -778,25 +783,39 @@ export default function EpochTheory({
                     Включи аудиальную память — спой песню по теме эпохи как в
                     караоке!
                   </p>
-                  {Array.isArray(music.links) && music.links.length > 0 && (
+                  {(Array.isArray(music.tracks) && music.tracks.length > 0
+                    ? music.tracks
+                    : Array.isArray(music.links)
+                      ? music.links.map((link, i) => ({
+                          title: music.linkTitles?.[i] || "Слушать песни",
+                          url: link,
+                        }))
+                      : []
+                  ).length > 0 && (
                     <div className="mb-3 flex flex-wrap gap-2">
-                      {music.links.map((link, i) =>
-                        /^https?:\/\//i.test(link) ? (
+                      {(Array.isArray(music.tracks) && music.tracks.length > 0
+                        ? music.tracks
+                        : music.links.map((link, i) => ({
+                            title: music.linkTitles?.[i] || "Слушать песни",
+                            url: link,
+                          }))
+                      ).map((track, i) =>
+                        /^https?:\/\//i.test(track.url) ? (
                           <a
                             key={i}
-                            href={link}
+                            href={track.url}
                             target="_blank"
                             rel="noreferrer"
                             className="flex min-h-[44px] items-center gap-1.5 rounded-full border-2 border-violet-200 bg-white px-4 py-2 text-sm font-bold text-violet-700 shadow-soft transition-colors hover:bg-violet-50"
                           >
-                            🎵 Слушать песни
+                            🎵 {track.title}
                           </a>
                         ) : (
                           <span
                             key={i}
                             className="flex min-h-[44px] items-center rounded-full border-2 border-dashed border-violet-200 bg-white/70 px-4 py-2 text-sm font-semibold text-slate-500"
                           >
-                            🎵 {link.replace(/^\[|\]$/g, "")}
+                            🎵 {track.title || track.url.replace(/^\[|\]$/g, "")}
                           </span>
                         )
                       )}
