@@ -102,12 +102,12 @@
       "answer": "lost"
     },
     {
-      "question": "You ___ sushi before?",
+      "question": "___ sushi before?",
       "options": [
-        "have tried",
-        "tried"
+        "Have you tried",
+        "Did you try"
       ],
-      "answer": "have tried"
+      "answer": "Have you tried"
     },
     {
       "question": "He ___ to school last Friday.",

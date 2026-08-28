@@ -1,7 +1,7 @@
 {
   "id": "ps_a1_station_0",
   "title": "Тренажёр Неправильных Глаголов (Разминка)",
-  "description": "Разминка перед полётом: выбери вторую форму (Past Simple) для каждого неправильного глагола. Для дальнейшего изучения форм обратитесь в приложение IVERBS.\n\nТаблица неправильных глаголов — V1 / V2 / V3 и перевод: be — was/were — been — быть, become — became — become — становиться, begin — began — begun — начинать, buy — bought — bought — покупать, come — came — come — приходить, do — did — done — делать, drink — drank — drunk — пить, eat — ate — eaten — есть, find — found — found — находить, get — got — got — получать; становиться, give — gave — given — давать, go — went — gone — идти; ехать, have — had — had — иметь, know — knew — known — знать, make — made — made — делать; создавать, meet — met — met — встречать, read — read — read — читать, run — ran — run — бегать, say — said — said — говорить, see — saw — seen — видеть, sing — sang — sung — петь, sit — sat — sat — сидеть, speak — spoke — spoken — говорить, swim — swam — swum — плавать, take — took — taken — брать, tell — told — told — рассказывать; говорить, think — thought — thought — думать, write — wrote — written — писать.",
+  "description": "Разминка перед полётом: выбери вторую форму (Past Simple) для каждого неправильного глагола. Для дальнейшего изучения форм обратитесь в приложение IVERBS.",
   "category": "grammar",
   "type": "quiz",
   "items": [
@@ -12,7 +12,8 @@
         "beed",
         "been"
       ],
-      "answer": "was/were"
+      "answer": "was/were",
+      "explanation": "be — was/were — been — быть"
     },
     {
       "question": "become (становиться) → ___ (Past Simple)",
@@ -21,7 +22,8 @@
         "becomed",
         "become"
       ],
-      "answer": "became"
+      "answer": "became",
+      "explanation": "become — became — become — становиться"
     },
     {
       "question": "begin (начинать) → ___ (Past Simple)",
@@ -30,7 +32,8 @@
         "begined",
         "begun"
       ],
-      "answer": "began"
+      "answer": "began",
+      "explanation": "begin — began — begun — начинать"
     },
     {
       "question": "buy (покупать) → ___ (Past Simple)",
@@ -39,7 +42,8 @@
         "buyed",
         "boughten"
       ],
-      "answer": "bought"
+      "answer": "bought",
+      "explanation": "buy — bought — bought — покупать"
     },
     {
       "question": "come (приходить) → ___ (Past Simple)",
@@ -48,7 +52,8 @@
         "comed",
         "come"
       ],
-      "answer": "came"
+      "answer": "came",
+      "explanation": "come — came — come — приходить"
     },
     {
       "question": "do (делать) → ___ (Past Simple)",
@@ -57,7 +62,8 @@
         "doed",
         "done"
       ],
-      "answer": "did"
+      "answer": "did",
+      "explanation": "do — did — done — делать"
     },
     {
       "question": "drink (пить) → ___ (Past Simple)",
@@ -66,7 +72,8 @@
         "drinked",
         "drunk"
       ],
-      "answer": "drank"
+      "answer": "drank",
+      "explanation": "drink — drank — drunk — пить"
     },
     {
       "question": "eat (есть) → ___ (Past Simple)",
@@ -75,7 +82,8 @@
         "eated",
         "eaten"
       ],
-      "answer": "ate"
+      "answer": "ate",
+      "explanation": "eat — ate — eaten — есть"
     },
     {
       "question": "find (находить) → ___ (Past Simple)",
@@ -84,7 +92,8 @@
         "finded",
         "founded"
       ],
-      "answer": "found"
+      "answer": "found",
+      "explanation": "find — found — found — находить"
     },
     {
       "question": "get (получать; становиться) → ___ (Past Simple)",
@@ -93,7 +102,8 @@
         "geted",
         "gotten"
       ],
-      "answer": "got"
+      "answer": "got",
+      "explanation": "get — got — got — получать; становиться"
     },
     {
       "question": "give (давать) → ___ (Past Simple)",
@@ -102,7 +112,8 @@
         "gived",
         "given"
       ],
-      "answer": "gave"
+      "answer": "gave",
+      "explanation": "give — gave — given — давать"
     },
     {
       "question": "go (идти; ехать) → ___ (Past Simple)",
@@ -111,7 +122,8 @@
         "goed",
         "gone"
       ],
-      "answer": "went"
+      "answer": "went",
+      "explanation": "go — went — gone — идти; ехать"
     },
     {
       "question": "have (иметь) → ___ (Past Simple)",
@@ -120,7 +132,8 @@
         "haved",
         "has"
       ],
-      "answer": "had"
+      "answer": "had",
+      "explanation": "have — had — had — иметь"
     },
     {
       "question": "know (знать) → ___ (Past Simple)",
@@ -129,7 +142,8 @@
         "knowed",
         "known"
       ],
-      "answer": "knew"
+      "answer": "knew",
+      "explanation": "know — knew — known — знать"
     },
     {
       "question": "make (делать; создавать) → ___ (Past Simple)",
@@ -138,7 +152,8 @@
         "maked",
         "make"
       ],
-      "answer": "made"
+      "answer": "made",
+      "explanation": "make — made — made — делать; создавать"
     },
     {
       "question": "meet (встречать) → ___ (Past Simple)",
@@ -147,7 +162,8 @@
         "meeted",
         "meet"
       ],
-      "answer": "met"
+      "answer": "met",
+      "explanation": "meet — met — met — встречать"
     },
     {
       "question": "read (читать) → ___ (Past Simple)",
@@ -156,7 +172,8 @@
         "readed",
         "red"
       ],
-      "answer": "read"
+      "answer": "read",
+      "explanation": "read — read — read — читать"
     },
     {
       "question": "run (бегать) → ___ (Past Simple)",
@@ -165,7 +182,8 @@
         "runned",
         "run"
       ],
-      "answer": "ran"
+      "answer": "ran",
+      "explanation": "run — ran — run — бегать"
     },
     {
       "question": "say (говорить) → ___ (Past Simple)",
@@ -174,7 +192,8 @@
         "sayed",
         "says"
       ],
-      "answer": "said"
+      "answer": "said",
+      "explanation": "say — said — said — говорить"
     },
     {
       "question": "see (видеть) → ___ (Past Simple)",
@@ -183,7 +202,8 @@
         "seed",
         "seen"
       ],
-      "answer": "saw"
+      "answer": "saw",
+      "explanation": "see — saw — seen — видеть"
     },
     {
       "question": "sing (петь) → ___ (Past Simple)",
@@ -192,7 +212,8 @@
         "singed",
         "sung"
       ],
-      "answer": "sang"
+      "answer": "sang",
+      "explanation": "sing — sang — sung — петь"
     },
     {
       "question": "sit (сидеть) → ___ (Past Simple)",
@@ -201,7 +222,8 @@
         "sitted",
         "sit"
       ],
-      "answer": "sat"
+      "answer": "sat",
+      "explanation": "sit — sat — sat — сидеть"
     },
     {
       "question": "speak (говорить) → ___ (Past Simple)",
@@ -210,7 +232,8 @@
         "speaked",
         "spoken"
       ],
-      "answer": "spoke"
+      "answer": "spoke",
+      "explanation": "speak — spoke — spoken — говорить"
     },
     {
       "question": "swim (плавать) → ___ (Past Simple)",
@@ -219,7 +242,8 @@
         "swimmed",
         "swum"
       ],
-      "answer": "swam"
+      "answer": "swam",
+      "explanation": "swim — swam — swum — плавать"
     },
     {
       "question": "take (брать) → ___ (Past Simple)",
@@ -228,7 +252,8 @@
         "taked",
         "taken"
       ],
-      "answer": "took"
+      "answer": "took",
+      "explanation": "take — took — taken — брать"
     },
     {
       "question": "tell (рассказывать; говорить) → ___ (Past Simple)",
@@ -237,7 +262,8 @@
         "telled",
         "tell"
       ],
-      "answer": "told"
+      "answer": "told",
+      "explanation": "tell — told — told — рассказывать; говорить"
     },
     {
       "question": "think (думать) → ___ (Past Simple)",
@@ -246,7 +272,8 @@
         "thinked",
         "think"
       ],
-      "answer": "thought"
+      "answer": "thought",
+      "explanation": "think — thought — thought — думать"
     },
     {
       "question": "write (писать) → ___ (Past Simple)",
@@ -255,7 +282,8 @@
         "writed",
         "written"
       ],
-      "answer": "wrote"
+      "answer": "wrote",
+      "explanation": "write — wrote — written — писать"
     }
   ]
 }
