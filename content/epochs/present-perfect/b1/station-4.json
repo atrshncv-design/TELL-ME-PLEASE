@@ -27,7 +27,7 @@
           "downloaded"
         ],
         [
-          "have already shown"
+          "showed"
         ],
         [
           "came"
@@ -43,41 +43,47 @@
         ]
       ],
       "hints": [
-        "(changed)",
+        "(change)",
         "(use)",
         "(download)",
-        "(visited)",
-        "(saw)",
-        "(downloaded)",
-        "(shown)",
-        "(came)",
-        "(playing)",
-        "(done)",
-        "(asked)"
+        "(visit)",
+        "(see)",
+        "(download)",
+        "(show)",
+        "(come)",
+        "(play)",
+        "(do)",
+        "(ask)"
       ],
       "word_bank": [
         "has changed",
         "use",
+        "download",
+        "visited",
+        "saw",
         "downloaded",
-        "have already shown",
+        "showed",
         "came",
         "was playing",
-        "hasn't done",
-        "visited",
+        "hadn’t done",
+        "asked",
+        "change",
+        "visit",
+        "see",
+        "show",
+        "come",
+        "play",
+        "do",
+        "ask",
         "changed",
         "uses",
         "downloads",
-        "show",
-        "comes",
-        "plays",
-        "has done",
-        "visits",
+        "shown",
+        "have shown",
         "is playing",
         "are using",
-        "download",
-        "saw",
-        "hadn’t done",
-        "asked"
+        "has done",
+        "hasn't done"
       ]
     }
   ]

@@ -95,6 +95,9 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
   const parts = item.sentence.split("___")
   const answers = Array.isArray(item.answer) ? item.answer : [item.answer]
   const blankCount = parts.length - 1
+  // R08: альтернативные ответы для одного пропуска (have spilled / have spilt)
+  // — answers.length > blankCount при blankCount===1 — засчитывать любой из них
+  const isAlternativeSingleBlank = blankCount === 1 && answers.length > 1
   // «Проверить» доступно, когда заполнены все пропуски.
   const allFilled =
     blankCount === 0 ||
@@ -103,8 +106,13 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
     )
 
   // Вердикт по конкретному пропуску: зелёный (верно) или красный (неверно).
-  const blankCorrect = (i: number) =>
-    normalizeFill(inputs[i] ?? "") === normalizeFill(answers[i] ?? "")
+  const blankCorrect = (i: number) => {
+    const input = normalizeFill(inputs[i] ?? "")
+    if (isAlternativeSingleBlank) {
+      return answers.some((a) => normalizeFill(a) === input)
+    }
+    return input === normalizeFill(answers[i] ?? "")
+  }
 
   const updateInput = (index: number, value: string) => {
     if (showResult) return
@@ -120,9 +128,11 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
   // дальше ученик идёт кнопкой «Далее».
   const handleCheck = () => {
     if (showResult) return
-    const correct = answers.every(
-      (ans, i) => normalizeFill(inputs[i] ?? "") === normalizeFill(ans)
-    )
+    const correct = isAlternativeSingleBlank
+      ? answers.some((a) => normalizeFill(inputs[0] ?? "") === normalizeFill(a))
+      : answers.every(
+          (ans, i) => normalizeFill(inputs[i] ?? "") === normalizeFill(ans)
+        )
     setIsCorrect(correct)
     if (correct) setScore((s) => s + 1)
     setShowResult(true)
@@ -288,13 +298,13 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
                   >
                     {blankCorrect(i) ? (
                       <>
-                        {answers[i]} <span aria-hidden>✓</span>
+                        {isAlternativeSingleBlank ? answers.join(" / ") : answers[i]} <span aria-hidden>✓</span>
                       </>
                     ) : (
                       <>
                         <s className="font-normal opacity-60">{inputs[i] || "…"}</s>
                         <span className="whitespace-nowrap">
-                          {" "}→ {answers[i]} <span aria-hidden>✗</span>
+                          {" "}→ {isAlternativeSingleBlank ? answers.join(" / ") : answers[i]} <span aria-hidden>✗</span>
                         </span>
                       </>
                     )}
