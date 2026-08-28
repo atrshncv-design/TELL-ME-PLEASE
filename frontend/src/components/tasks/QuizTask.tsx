@@ -138,6 +138,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
       next[current] = { selected: option, showResult: true }
       return next
     })
+    setSelected(option)
     setShowResult(true)
 
     // pravki-240826 (тикет 04): у item с answerSentence авто-перехода нет —
@@ -180,10 +181,14 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
   const canGoBack = current > 0
   // Forward is allowed when this question is checked and a later question exists.
   const canGoForward = showResult && current < items.length - 1
+  // R03: формы глагола (past-simple A1) показываются после проверки
+  // при любом ответе — отдельной плашкой, а не только как wrongHint.
+  const hasVerbForms = typeof item.explanation === "string" && item.explanation.trim() !== ""
   // Тикет W1-T3: умная обратная связь — подсказка под вердиктом неверного
   // ответа (wrongExplanation из JSON или фолбэк по типу задания).
+  // Для станций с verbForms подсказка уже покрыта плашкой форм — не дублируем.
   const wrongHint =
-    showResult && selected !== null && selected !== item.answer
+    showResult && selected !== null && selected !== item.answer && !hasVerbForms
       ? hintFor("quiz", item, selected)
       : null
 
@@ -338,6 +343,26 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
             className="mt-3 rounded-2xl bg-danger/10 px-4 py-3 text-center text-base font-semibold text-danger"
           >
             💡 {wrongHint}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* R03 (yolypaly-final 02): после проверки показываем V1/V2/V3×перевод
+          выбранного глагола — отдельной плашкой, при верном и неверном ответе. */}
+      <AnimatePresence>
+        {showResult && hasVerbForms && (
+          <motion.div
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="mt-3 rounded-2xl bg-primary-50 border-2 border-primary-200 px-4 py-3 text-center"
+          >
+            <div className="text-[11px] font-bold uppercase tracking-wide text-primary-600">
+              Формы глагола
+            </div>
+            <p className="mt-1 text-base font-semibold text-slate-700">
+              {item.explanation}
+            </p>
           </motion.div>
         )}
       </AnimatePresence>

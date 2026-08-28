@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"
 import { EPOCH_META } from "@/lib/epochs-meta"
 import type { EpochProgress, StationProgress } from "@/lib/epoch"
 import EpochMapPoster from "@/components/EpochMapPoster"
+import ExamEntryCard from "@/components/ExamEntryCard"
 import RightsFooter from "@/components/RightsFooter"
 
 /**
@@ -220,6 +221,17 @@ export default function MissionPage() {
       <div className="block lg:hidden">
         <EpochList onNavigate={goEpoch} />
       </div>
+
+      {/* Великий экзамен — логическое продолжение: прошёл карту — финал */}
+      <section className="flex flex-col gap-3">
+        <h2 className="font-display text-xl font-black tracking-tight text-primary-900">
+          Великий экзамен — логическое продолжение: прошёл карту — финал
+        </h2>
+        <p className="text-sm font-medium leading-snug text-slate-600">
+          Прошёл карту — финал. Собери все 12 времён в единую систему!
+        </p>
+        <ExamEntryCard />
+      </section>
 
       <RightsFooter />
     </div>
