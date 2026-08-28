@@ -106,23 +106,28 @@ export async function* streamChatCompletion(
     try {
       attempt = await keyManager.sendStream(`${LLM_API_BASE}/chat/completions`, payload, LLM_TIMEOUT_MS)
     } catch (err) {
-      // Сетевая ошибка / таймаут до заголовков — ротацией не лечим (1:1 с backend)
       console.error(`[chat/stream] LLM fetch error (${model}):`, err)
+      if (i + 1 < models.length) {
+        console.warn(`Fetch failed for ${model}, falling back to ${models[i + 1]}`)
+        continue
+      }
       yield { type: "error", content: "Сервис временно недоступен. Попробуйте позже." }
       return
     }
 
     if (attempt.response.status !== 200) {
-      // Не-200 (все ключи 429/403): проблема ключей/квоты, НЕ пустого контента —
-      // на другую модель НЕ падаем (1:1 из _stream_response в main.py)
       let detail = ""
       try {
         detail = (await attempt.response.text()).slice(0, 200)
       } catch {
         // тело недоступно — не критично
       }
-      console.error(`LLM service error: ${attempt.response.status} - ${detail}`)
+      console.error(`LLM service error (${model}): ${attempt.response.status} - ${detail}`)
       attempt.cancelTimeout()
+      if (i + 1 < models.length) {
+        console.warn(`Model ${model} error ${attempt.response.status}, falling back to ${models[i + 1]}`)
+        continue
+      }
       yield { type: "error", content: "Сервис временно недоступен. Попробуйте позже." }
       return
     }
@@ -184,9 +189,12 @@ export async function* streamChatCompletion(
         }
       }
     } catch (err) {
-      // Таймаут 60с (AbortError) или обрыв соединения с LLM
       console.error(`[chat/stream] stream error (${model}):`, err)
       attempt.cancelTimeout()
+      if (i + 1 < models.length) {
+        console.warn(`Stream failed for ${model}, falling back to ${models[i + 1]}`)
+        continue
+      }
       yield { type: "error", content: "Сервис временно недоступен. Попробуйте позже." }
       return
     }
