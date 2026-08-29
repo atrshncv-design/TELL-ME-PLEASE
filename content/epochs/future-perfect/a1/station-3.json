@@ -4,6 +4,7 @@
   "description": "Распредели маркеры в две корзины: \"BY\" (к моменту - Future Perfect) или \"AT\" (в момент - Future Continuous).\n\nВажно: некоторые слова (5 p.m., noon) могут быть и с by, и с at, но смысл меняется: by 5 p.m. = не позже 5 (к 5 уже сделаю) → Future Perfect; at 5 p.m. = ровно в 5 (в этот момент буду делать) → Future Continuous.",
   "category": "grammar",
   "type": "drag-and-drop",
+  "review": true,
   "items": [
     {
       "id": "5pm-1",
