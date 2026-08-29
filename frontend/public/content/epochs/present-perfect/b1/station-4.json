@@ -1,7 +1,7 @@
 {
   "id": "present_perfect_b1_station_4",
   "title": "Рекордер Событий (Текст с пропусками)",
-  "description": "Интеграция 4 времен (Simple, Cont, Perfect, Past) в текст о технологиях.",
+  "description": "Интеграция 4 времен (Pr.Simple, Pr.Continuous, Pr. Perfect, Past Simple) в текст о технологиях.",
   "category": "grammar",
   "type": "cloze",
   "rounds": [
