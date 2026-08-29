@@ -14,10 +14,15 @@ interface Column {
 }
 
 interface DragItem {
+  id?: string
   verb: string
   answer: string
   form2?: string
   form3?: string
+}
+
+function getItemId(item: DragItem): string {
+  return item.id ?? item.verb
 }
 
 interface DragAndDropTaskProps {
@@ -68,19 +73,19 @@ export function DragAndDropTask({
 
   const handleTap = (item: DragItem, from: string | null) => {
     if (checked) return
-    // tap-to-move для телефонов: повторный тап снимает выбор
-    if (dragging?.item.verb === item.verb) setDragging(null)
+    // tap-to-move для телефонов: повторный тап снимает выбор — сравнение по id (или verb fallback)
+    if (dragging && getItemId(dragging.item) === getItemId(item)) setDragging(null)
     else setDragging({ item, from })
   }
 
   // Убирает чип из пула И из всех столбиков — так drag поддерживает перенос
   // между столбиками и возврат в пул (аддитивно, старые задания не ломаются).
-  const removeEverywhere = (verb: string) => {
-    setPool((p) => p.filter((i) => i.verb !== verb))
+  const removeEverywhere = (id: string) => {
+    setPool((p) => p.filter((i) => getItemId(i) !== id))
     setPlaced((prev) => {
       const next = { ...prev }
       for (const c of columns) {
-        next[c.id] = next[c.id].filter((i) => i.verb !== verb)
+        next[c.id] = next[c.id].filter((i) => getItemId(i) !== id)
       }
       return next
     })
@@ -89,11 +94,11 @@ export function DragAndDropTask({
   const handleDrop = (colId: string) => {
     if (!dragging) return
     const { item } = dragging
-    removeEverywhere(item.verb)
+    removeEverywhere(getItemId(item))
     setPlaced((prev) => ({ ...prev, [colId]: [...prev[colId], item] }))
     if (instantCheck) {
       const correct = item.answer === colId
-      setInstantVerdicts((prev) => ({ ...prev, [item.verb]: correct }))
+      setInstantVerdicts((prev) => ({ ...prev, [getItemId(item)]: correct }))
       play(correct ? "correct" : "wrong")
     }
     setDragging(null)
@@ -102,7 +107,7 @@ export function DragAndDropTask({
   const handleDropToPool = () => {
     if (!dragging) return
     const { item } = dragging
-    removeEverywhere(item.verb)
+    removeEverywhere(getItemId(item))
     setPool((p) => [...p, item])
     setDragging(null)
   }
@@ -168,10 +173,10 @@ export function DragAndDropTask({
       >
         <AnimatePresence>
           {pool.map((item) => {
-            const isSelected = dragging?.item.verb === item.verb && dragging?.from === null
+            const isSelected = dragging ? getItemId(dragging.item) === getItemId(item) && dragging.from === null : false
             return (
             <motion.div
-              key={item.verb}
+              key={getItemId(item)}
               layout
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
@@ -228,12 +233,12 @@ export function DragAndDropTask({
                 {placed[col.id].map((item, idx) => {
                   let border = "border-slate-200"
                   if (checked || instantCheck) {
-                    const correct = instantCheck ? instantVerdicts[item.verb] : item.answer === col.id
+                    const correct = instantCheck ? instantVerdicts[getItemId(item)] : item.answer === col.id
                     if (correct !== undefined) border = correct ? "border-green-500 bg-green-50" : "border-red-500 bg-red-50"
                   }
                   return (
                     <motion.div
-                      key={item.verb}
+                      key={getItemId(item)}
                       layout
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -242,7 +247,7 @@ export function DragAndDropTask({
                       onDragStart={() => handleDragStart(item, col.id)}
                       onDragEnd={() => setDragging(null)}
                       onClick={() => {
-                        if (dragging && dragging.item.verb !== item.verb) {
+                        if (dragging && getItemId(dragging.item) !== getItemId(item)) {
                           handleDrop(col.id)
                         } else {
                           handleReturn(col.id, idx)

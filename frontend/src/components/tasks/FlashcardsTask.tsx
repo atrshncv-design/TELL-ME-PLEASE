@@ -62,11 +62,21 @@ export function FlashcardsTask({ title, description, cards, onComplete }: Flashc
   // Счётчик переходов — уникальный key для AnimatePresence (карточка может
   // вернуться в колоду после «Ещё раз», поэтому key по индексу не подойдёт).
   const [transition, setTransition] = useState(0)
+  // R12: индекс текущей карточки внутри deck для стрелок ←/→ без засчитывания
+  const [browseIndex, setBrowseIndex] = useState(0)
   const { play } = useSound()
 
   const total = cards.length
   // Карточки, уже вынутые из колоды (прогресс и счётчик «X из N»).
   const done = total - deck.length
+
+  // Кламп browseIndex при изменении длины колоды
+  useEffect(() => {
+    if (browseIndex >= deck.length && deck.length > 0) {
+      setBrowseIndex(deck.length - 1)
+    }
+    if (deck.length === 0) setBrowseIndex(0)
+  }, [deck.length, browseIndex])
 
   // Таймер тикает, пока задание не завершено.
   useEffect(() => {
@@ -83,18 +93,38 @@ export function FlashcardsTask({ title, description, cards, onComplete }: Flashc
     )
   }
 
-  const current = deck[0]
+  const current = deck[browseIndex] ?? deck[0]
 
-  // «✅ Знаю»: убираем карточку; если она была с первой попытки — плюс к итогу.
+  // R12: стрелки — листание без засчитывания
+  const canGoBack = browseIndex > 0
+  const canGoForward = browseIndex < deck.length - 1
+  const goPrev = () => {
+    if (!canGoBack) return
+    setBrowseIndex((i) => i - 1)
+    setFlipped(false)
+    setTransition((t) => t + 1)
+  }
+  const goNext = () => {
+    if (!canGoForward) return
+    setBrowseIndex((i) => i + 1)
+    setFlipped(false)
+    setTransition((t) => t + 1)
+  }
+
+  // «✅ Знаю»: убираем карточку на browseIndex; если была с первой попытки — плюс к итогу.
   const handleKnown = () => {
     if (!current || finished) return
     const firstTry = !current.retried
     const finalKnown = firstTry ? known + 1 : known
-    const nextDeck = deck.slice(1)
+    const nextDeck = deck.filter((_, idx) => idx !== browseIndex)
     setDeck(nextDeck)
     setKnown(finalKnown)
     setFlipped(false)
     setTransition((t) => t + 1)
+    // browseIndex остаётся на той же позиции — теперь там следующая карточка; если удалили последнюю — откат
+    if (browseIndex >= nextDeck.length && nextDeck.length > 0) {
+      setBrowseIndex(nextDeck.length - 1)
+    }
     play("correct")
     if (nextDeck.length === 0) {
       setFinished(true)
@@ -106,23 +136,28 @@ export function FlashcardsTask({ title, description, cards, onComplete }: Flashc
   // «🔄 Ещё раз»: помечаем карточку «повторной» и возвращаем в конец колоды.
   const handleRepeat = () => {
     if (!current || finished) return
-    const [head, ...rest] = deck
-    setDeck([...rest, { ...head, retried: true }])
+    const nextDeck = [...deck]
+    const [moved] = nextDeck.splice(browseIndex, 1)
+    nextDeck.push({ ...moved, retried: true })
+    setDeck(nextDeck)
     setRepeats((r) => r + 1)
     setFlipped(false)
     setTransition((t) => t + 1)
+    if (browseIndex >= nextDeck.length) setBrowseIndex(nextDeck.length - 1)
     play("wrong")
   }
 
   // «🔀 Перемешать»: тасуем всю оставшуюся колоду.
   const handleShuffle = () => {
     setDeck((d) => shuffle(d))
+    setBrowseIndex(0)
     setFlipped(false)
   }
 
   // Полный сброс для «Ещё раз» на экране результата.
   const retry = () => {
     setDeck(cards.map((card) => ({ card, retried: false })))
+    setBrowseIndex(0)
     setFlipped(false)
     setKnown(0)
     setRepeats(0)
@@ -167,6 +202,33 @@ export function FlashcardsTask({ title, description, cards, onComplete }: Flashc
           animate={{ width: `${total > 0 ? (done / total) * 100 : 0}%` }}
           transition={{ type: "spring", stiffness: 150, damping: 22 }}
         />
+      </div>
+
+      {/* R12: стрелки ←/→ для листания без засчитывания */}
+      <div className="flex items-center justify-between gap-2">
+        {canGoBack ? (
+          <button
+            onClick={goPrev}
+            className="min-h-[44px] text-sm font-semibold text-slate-500 hover:text-slate-700"
+          >
+            ← Назад
+          </button>
+        ) : (
+          <span className="text-sm text-transparent select-none">← Назад</span>
+        )}
+        <div className="text-xs font-semibold text-slate-400">
+          Карточка {deck.length > 0 ? browseIndex + 1 : 0} из {deck.length}
+        </div>
+        {canGoForward ? (
+          <button
+            onClick={goNext}
+            className="min-h-[44px] text-sm font-semibold text-slate-500 hover:text-slate-700"
+          >
+            Вперёд →
+          </button>
+        ) : (
+          <span className="text-sm text-transparent select-none">Вперёд →</span>
+        )}
       </div>
 
       {/* Карточка: front → клик → 3D-переворот → back */}

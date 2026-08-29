@@ -179,8 +179,8 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
   }
 
   const canGoBack = current > 0
-  // Forward is allowed when this question is checked and a later question exists.
-  const canGoForward = showResult && current < items.length - 1
+  // R12: стрелки работают без засчитывания — листание свободно, onComplete только по «Проверить»/авто-переходу
+  const canGoForward = current < items.length - 1
   // R03: формы глагола (past-simple A1) показываются после проверки
   // при любом ответе — отдельной плашкой, а не только как wrongHint.
   const hasVerbForms = typeof item.explanation === "string" && item.explanation.trim() !== ""

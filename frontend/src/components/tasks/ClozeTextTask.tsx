@@ -124,6 +124,14 @@ export function ClozeTextTask({
     setResetToken((t) => t + 1)
   }
 
+  // R12: стрелки ←/→ для листания без засчитывания — свободная навигация по раундам
+  const canGoBack = current > 0
+  const canGoForward = current < totalRounds - 1
+  const goTo = (idx: number) => {
+    if (idx < 0 || idx >= totalRounds) return
+    setCurrent(idx)
+  }
+
   if (finished) {
     const totalBlanks = effectiveRounds.reduce((sum, r) => sum + r.answers.length, 0)
     return <ResultScreen title={title} score={score} total={totalBlanks} onRetry={retry} />
@@ -132,18 +140,47 @@ export function ClozeTextTask({
   const round = effectiveRounds[current]
 
   return (
-    <RoundView
-      key={`${resetToken}-${current}`}
-      round={round}
-      roundIndex={current}
-      title={title}
-      description={description}
-      underlineWords={underlineWords}
-      isMulti={isMulti}
-      current={current}
-      totalRounds={totalRounds}
-      onScored={handleRoundScored}
-    />
+    <div className="flex flex-col gap-2">
+      {isMulti && (
+        <div className="flex items-center justify-between gap-2 max-w-lg mx-auto w-full px-4">
+          {canGoBack ? (
+            <button
+              onClick={() => goTo(current - 1)}
+              className="min-h-[44px] text-sm font-semibold text-slate-500 hover:text-slate-700"
+            >
+              ← Назад
+            </button>
+          ) : (
+            <span className="text-sm text-transparent select-none">← Назад</span>
+          )}
+          <div className="text-xs font-semibold text-slate-400">
+            Предложение {current + 1} из {totalRounds}
+          </div>
+          {canGoForward ? (
+            <button
+              onClick={() => goTo(current + 1)}
+              className="min-h-[44px] text-sm font-semibold text-slate-500 hover:text-slate-700"
+            >
+              Вперёд →
+            </button>
+          ) : (
+            <span className="text-sm text-transparent select-none">Вперёд →</span>
+          )}
+        </div>
+      )}
+      <RoundView
+        key={`${resetToken}-${current}`}
+        round={round}
+        roundIndex={current}
+        title={title}
+        description={description}
+        underlineWords={underlineWords}
+        isMulti={isMulti}
+        current={current}
+        totalRounds={totalRounds}
+        onScored={handleRoundScored}
+      />
+    </div>
   )
 }
 
@@ -273,17 +310,12 @@ function RoundView({
       <p className="text-sm text-slate-500">{description}</p>
 
       {isMulti && (
-        <>
-          <div className="text-xs text-slate-400 text-center">
-            Предложение {current + 1} из {totalRounds}
-          </div>
-          <div className="w-full bg-slate-100 rounded-full h-2">
-            <motion.div
-              className="bg-indigo-500 h-2 rounded-full"
-              animate={{ width: `${((current + 1) / totalRounds) * 100}%` }}
-            />
-          </div>
-        </>
+        <div className="w-full bg-slate-100 rounded-full h-2">
+          <motion.div
+            className="bg-indigo-500 h-2 rounded-full"
+            animate={{ width: `${((current + 1) / totalRounds) * 100}%` }}
+          />
+        </div>
       )}
 
       <AnimatePresence mode="wait">
