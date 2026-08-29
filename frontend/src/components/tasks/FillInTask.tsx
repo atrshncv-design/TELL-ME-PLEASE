@@ -176,16 +176,19 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
     }
   }
 
-  // Read-only navigation: jump to a question index and restore its saved state.
+  // Read-only navigation: free browsing ←/→ without scoring (R04/R12).
   const goTo = (index: number) => {
+    // Save draft of current before leaving so free browsing preserves typed text.
+    const snapshot = [...history]
+    snapshot[current] = { inputs: [...inputs], showResult, isCorrect }
+    setHistory(snapshot)
     setCurrent(index)
-    const entry = history[index]
+    const entry = snapshot[index] ?? history[index]
     if (entry) {
       setInputs(entry.inputs)
       setShowResult(entry.showResult)
       setIsCorrect(entry.isCorrect)
     } else {
-      // Should not happen (we only navigate to answered questions), but be safe.
       const it = items[index]
       const blanks = it ? Math.max(it.sentence.split("___").length - 1, 1) : 1
       setInputs(Array.from({ length: blanks }, () => ""))
@@ -213,8 +216,8 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
   }
 
   const canGoBack = current > 0
-  // Forward is allowed when this question is checked and a later question exists.
-  const canGoForward = showResult && current < items.length - 1
+  // R12: стрелки работают без засчитывания — листание свободно, onComplete только по «Проверить»/«Далее»
+  const canGoForward = current < items.length - 1
 
   return (
     <div className="flex flex-col gap-4 p-4 max-w-lg mx-auto">
