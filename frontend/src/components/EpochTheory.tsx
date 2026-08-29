@@ -78,6 +78,33 @@ function theoryTextToLines(text: string): string {
     .replace(/([.!?…)])\s+(?=ИЛИ\s)/g, "$1\n")
 }
 
+/** Визуал-системно (R01): предобработка текста теории — устраняет склейку
+ *  inline-нумерации `:1.` / `!).2.` и переводит одиночный `\n` перед `1.` в `\n\n`,
+ *  чтобы `EpochTheory` рендерил `\n\n` как `<p>` с `mb-4/6`, `1.` как карточку
+ *  `bg-amber-50`, а заголовки `Шаг 2:`/`Шаг 3:` как `h3` с `mt-6`. */
+function preprocessTheoryText(text: string): string {
+  let s = theoryTextToLines(text)
+  // `: 1.` → `:\n\n1.` (заголовок категории перед списком)
+  s = s.replace(/:\s+([1-7]\.\s)/g, ":\n\n$1")
+  // `). 2.` / `!. 2.` / `?. 2.` → `).\n\n2.` с отступом
+  s = s.replace(/([.!?…)])\s+([1-7]\.\s)/g, "$1\n\n$2")
+  // `) 2.` без точки (на случай `… happy) 2.`) — защита
+  s = s.replace(/\)\s+([1-7]\.\s)/g, ")\n\n$1")
+  // одиночный `\n` перед номером → `\n\n` (системный воздух)
+  s = s.replace(/\n([1-7]\.\s)/g, "\n\n$1")
+  // ответный блок `Ответы для самопроверки: 1.` уже покрыт `: 1.`, но на случай `) 2.` внутри строки
+  s = s.replace(/\n{3,}/g, "\n\n")
+  return s
+}
+
+function isHeadingBlock(block: string): boolean {
+  return /^Шаг\s*[23]:/.test(block.trim())
+}
+
+function isNumberedBlock(block: string): boolean {
+  return /^[1-7]\.\s/.test(block.trim())
+}
+
 /**
  * Проверяет, является ли строка примером (английское предложение / формула).
  *
@@ -152,6 +179,43 @@ function parseSlideSegments(text: string): Array<{ type: "text" | "example"; con
     segments.push({ type: "text", content: buffer.trim() })
   }
   return segments
+}
+
+/** Системный визуал R01: `\n\n` → `<p>` с `mb-4/6`, `1.`–`7.` → карточка `bg-amber-50`, `Шаг 2:`/`Шаг 3:` → `h3` с `mt-6`. */
+function parseTheoryBlocks(
+  text: string
+): Array<{ type: "heading" | "numbered" | "text" | "example"; content: string }> {
+  const pre = preprocessTheoryText(text)
+  const rawBlocks = pre.split(/\n{2,}/).map((b) => b.trim()).filter(Boolean)
+  const out: Array<{ type: "heading" | "numbered" | "text" | "example"; content: string }> = []
+
+  for (const block of rawBlocks) {
+    if (isHeadingBlock(block)) {
+      out.push({ type: "heading", content: block })
+      continue
+    }
+    if (isNumberedBlock(block)) {
+      out.push({ type: "numbered", content: block })
+      continue
+    }
+    // Блок без явного префикса — разбиваем по строкам для примеров/заголовков внутри
+    // Каждая непримерная строка — отдельный `<p>` с `mb-4` (системный воздух между абзацами)
+    const lines = block.split("\n")
+    for (const line of lines) {
+      const t = line.trim()
+      if (!t) continue
+      if (isHeadingBlock(t)) {
+        out.push({ type: "heading", content: t })
+      } else if (isNumberedBlock(t)) {
+        out.push({ type: "numbered", content: t })
+      } else if (isExampleLine(line)) {
+        out.push({ type: "example", content: t })
+      } else {
+        out.push({ type: "text", content: t })
+      }
+    }
+  }
+  return out
 }
 
 export default function EpochTheory({
@@ -584,28 +648,53 @@ export default function EpochTheory({
                                   </p>
                                 </div>
                               </div>
-                              {/* Сегментированный рендеринг: обычный текст + примеры */}
-                              <div className="space-y-3">
-                                {parseSlideSegments(slides[slide - 1].text).map(
-                                  (seg, si) =>
-                                    seg.type === "text" ? (
-                                      <p
+                              {/* Системный визуал R01: `\n\n` → `<p>` mb-4/6, `1.` → карточка `bg-amber-50`, `Шаг 2:` → `h3` mt-6 + TO BE рамка сохранена */}
+                              <div className="space-y-4">
+                                {parseTheoryBlocks(slides[slide - 1].text).map((seg, si) => {
+                                  if (seg.type === "heading") {
+                                    return (
+                                      <h3
                                         key={si}
-                                        className="whitespace-pre-line text-base font-medium leading-relaxed text-slate-600"
+                                        className="mt-6 mb-2 font-bold text-base leading-snug text-slate-800"
                                       >
                                         {seg.content}
-                                      </p>
-                                    ) : (
+                                      </h3>
+                                    )
+                                  }
+                                  if (seg.type === "numbered") {
+                                    return (
                                       <div
                                         key={si}
-                                        className="rounded-xl border border-amber-200 bg-amber-50/80 px-4 py-3 text-center shadow-sm"
+                                        className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 shadow-sm"
                                       >
-                                        <p className="whitespace-pre-line text-base font-semibold italic leading-relaxed text-amber-900">
+                                        <p className="whitespace-pre-line text-base font-medium leading-relaxed text-amber-900">
                                           {seg.content}
                                         </p>
                                       </div>
-                                    ),
-                                )}
+                                    )
+                                  }
+                                  if (seg.type === "text") {
+                                    return (
+                                      <p
+                                        key={si}
+                                        className="mb-4 whitespace-pre-line text-base font-medium leading-relaxed text-slate-600 last:mb-0"
+                                      >
+                                        {seg.content}
+                                      </p>
+                                    )
+                                  }
+                                  // example — сохранена TO BE рамка `bg-amber-50`
+                                  return (
+                                    <div
+                                      key={si}
+                                      className="rounded-xl border border-amber-200 bg-amber-50/80 px-4 py-3 text-center shadow-sm"
+                                    >
+                                      <p className="whitespace-pre-line text-base font-semibold italic leading-relaxed text-amber-900">
+                                        {seg.content}
+                                      </p>
+                                    </div>
+                                  )
+                                })}
                               </div>
                             </div>
                           </div>
