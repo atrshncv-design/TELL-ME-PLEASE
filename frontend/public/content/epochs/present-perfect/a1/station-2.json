@@ -74,6 +74,58 @@
     {
       "verb": "fly",
       "answer": "irregular"
+    },
+    {
+      "verb": "be",
+      "answer": "irregular"
+    },
+    {
+      "verb": "become",
+      "answer": "irregular"
+    },
+    {
+      "verb": "begin",
+      "answer": "irregular"
+    },
+    {
+      "verb": "come",
+      "answer": "irregular"
+    },
+    {
+      "verb": "do",
+      "answer": "irregular"
+    },
+    {
+      "verb": "find",
+      "answer": "irregular"
+    },
+    {
+      "verb": "get",
+      "answer": "irregular"
+    },
+    {
+      "verb": "give",
+      "answer": "irregular"
+    },
+    {
+      "verb": "have",
+      "answer": "irregular"
+    },
+    {
+      "verb": "know",
+      "answer": "irregular"
+    },
+    {
+      "verb": "make",
+      "answer": "irregular"
+    },
+    {
+      "verb": "meet",
+      "answer": "irregular"
+    },
+    {
+      "verb": "read",
+      "answer": "irregular"
     }
   ]
 }

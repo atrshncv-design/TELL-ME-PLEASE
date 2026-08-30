@@ -129,7 +129,7 @@
       "question": "Are you preparing for a school concert today?",
       "options": [
         "Yes, I am. / No, I’m not.",
-        "Yes, I am. / No, I’m not"
+        "Yes, I do. / No, I don’t."
       ],
       "answer": "Yes, I am. / No, I’m not."
     },
@@ -153,7 +153,7 @@
       "question": "Does your cousin regularly visit you in summer?",
       "options": [
         "Yes, he/she does. / No, he/she doesn’t.",
-        "Yes, he / No, he/she isn’t"
+        "Yes, he/she is. / No, he/she isn’t."
       ],
       "answer": "Yes, he/she does. / No, he/she doesn’t."
     },
