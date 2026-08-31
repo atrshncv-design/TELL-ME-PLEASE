@@ -1,131 +1,61 @@
 {
   "id": "present_perfect_a1_station_2",
-  "title": "Орфографический Щит и Детектор (Формы V3)",
-  "description": "Визуальный рефлекс: правильный (add -ed) или неправильный (Irregular V3).",
+  "title": "Тренажёр Неправильных Глаголов (Формы V3)",
+  "description": "Выбери третью форму (V3) для Present Perfect каждого неправильного глагола.",
   "category": "grammar",
-  "type": "drag-and-drop",
-  "columns": [
-    {
-      "id": "add",
-      "label": "Add -ed (Правильные)"
-    },
-    {
-      "id": "irregular",
-      "label": "Irregular (Неправильные)"
-    }
-  ],
+  "type": "quiz",
   "items": [
-    {
-      "verb": "play",
-      "answer": "add"
-    },
-    {
-      "verb": "visit",
-      "answer": "add"
-    },
-    {
-      "verb": "travel",
-      "answer": "add"
-    },
-    {
-      "verb": "watch",
-      "answer": "add"
-    },
-    {
-      "verb": "stay",
-      "answer": "add"
-    },
-    {
-      "verb": "walk",
-      "answer": "add"
-    },
-    {
-      "verb": "rent",
-      "answer": "add"
-    },
-    {
-      "verb": "go",
-      "answer": "irregular"
-    },
-    {
-      "verb": "see",
-      "answer": "irregular"
-    },
-    {
-      "verb": "eat",
-      "answer": "irregular"
-    },
-    {
-      "verb": "buy",
-      "answer": "irregular"
-    },
-    {
-      "verb": "take",
-      "answer": "irregular"
-    },
-    {
-      "verb": "swim",
-      "answer": "irregular"
-    },
-    {
-      "verb": "drink",
-      "answer": "irregular"
-    },
-    {
-      "verb": "fly",
-      "answer": "irregular"
-    },
-    {
-      "verb": "be",
-      "answer": "irregular"
-    },
-    {
-      "verb": "become",
-      "answer": "irregular"
-    },
-    {
-      "verb": "begin",
-      "answer": "irregular"
-    },
-    {
-      "verb": "come",
-      "answer": "irregular"
-    },
-    {
-      "verb": "do",
-      "answer": "irregular"
-    },
-    {
-      "verb": "find",
-      "answer": "irregular"
-    },
-    {
-      "verb": "get",
-      "answer": "irregular"
-    },
-    {
-      "verb": "give",
-      "answer": "irregular"
-    },
-    {
-      "verb": "have",
-      "answer": "irregular"
-    },
-    {
-      "verb": "know",
-      "answer": "irregular"
-    },
-    {
-      "verb": "make",
-      "answer": "irregular"
-    },
-    {
-      "verb": "meet",
-      "answer": "irregular"
-    },
-    {
-      "verb": "read",
-      "answer": "irregular"
-    }
+    {"question":"be (быть) → ___ (V3 / Present Perfect)","options":["been","was/were","beed"],"answer":"been","explanation":"be — was/were — been — быть"},
+    {"question":"become (становиться) → ___ (V3 / Present Perfect)","options":["become","became","becomed"],"answer":"become","explanation":"become — became — become — становиться"},
+    {"question":"begin (начинать(ся)) → ___ (V3 / Present Perfect)","options":["begun","began","begined"],"answer":"begun","explanation":"begin — began — begun — начинать(ся)"},
+    {"question":"break (ломать(ся)) → ___ (V3 / Present Perfect)","options":["broken","broke","breaked"],"answer":"broken","explanation":"break — broke — broken — ломать(ся)"},
+    {"question":"bring (приносить) → ___ (V3 / Present Perfect)","options":["brought","bring","brang"],"answer":"brought","explanation":"bring — brought — brought — приносить"},
+    {"question":"build (строить) → ___ (V3 / Present Perfect)","options":["built","build","builded"],"answer":"built","explanation":"build — built — built — строить"},
+    {"question":"buy (покупать) → ___ (V3 / Present Perfect)","options":["bought","buy","buyed"],"answer":"bought","explanation":"buy — bought — bought — покупать"},
+    {"question":"catch (ловить) → ___ (V3 / Present Perfect)","options":["caught","catch","catched"],"answer":"caught","explanation":"catch — caught — caught — ловить"},
+    {"question":"choose (выбирать) → ___ (V3 / Present Perfect)","options":["chosen","chose","choosed"],"answer":"chosen","explanation":"choose — chose — chosen — выбирать"},
+    {"question":"come (приходить) → ___ (V3 / Present Perfect)","options":["come","came","comed"],"answer":"come","explanation":"come — came — come — приходить"},
+    {"question":"cost (стоить) → ___ (V3 / Present Perfect)","options":["cost","costed","costs"],"answer":"cost","explanation":"cost — cost — cost — стоить"},
+    {"question":"cut (резать) → ___ (V3 / Present Perfect)","options":["cut","cutted","cuts"],"answer":"cut","explanation":"cut — cut — cut — резать"},
+    {"question":"do (делать) → ___ (V3 / Present Perfect)","options":["done","did","doed"],"answer":"done","explanation":"do — did — done — делать"},
+    {"question":"drink (пить) → ___ (V3 / Present Perfect)","options":["drunk","drank","drinked"],"answer":"drunk","explanation":"drink — drank — drunk — пить"},
+    {"question":"drive (водить машину) → ___ (V3 / Present Perfect)","options":["driven","drove","drived"],"answer":"driven","explanation":"drive — drove — driven — водить машину"},
+    {"question":"eat (есть) → ___ (V3 / Present Perfect)","options":["eaten","ate","eated"],"answer":"eaten","explanation":"eat — ate — eaten — есть"},
+    {"question":"fall (падать) → ___ (V3 / Present Perfect)","options":["fallen","fell","falled"],"answer":"fallen","explanation":"fall — fell — fallen — падать"},
+    {"question":"feel (чувствовать) → ___ (V3 / Present Perfect)","options":["felt","feel","feeled"],"answer":"felt","explanation":"feel — felt — felt — чувствовать"},
+    {"question":"find (находить) → ___ (V3 / Present Perfect)","options":["found","find","founded"],"answer":"found","explanation":"find — found — found — находить"},
+    {"question":"forget (забывать) → ___ (V3 / Present Perfect)","options":["forgotten","forgot","forgetted"],"answer":"forgotten","explanation":"forget — forgot — forgotten — забывать"},
+    {"question":"get (получать, становиться) → ___ (V3 / Present Perfect)","options":["got","get","getted"],"answer":"got","explanation":"get — got — got — получать, становиться"},
+    {"question":"give (давать) → ___ (V3 / Present Perfect)","options":["given","gave","gived"],"answer":"given","explanation":"give — gave — given — давать"},
+    {"question":"go (идти, ехать) → ___ (V3 / Present Perfect)","options":["gone","went","goed"],"answer":"gone","explanation":"go — went — gone — идти, ехать"},
+    {"question":"have (иметь) → ___ (V3 / Present Perfect)","options":["had","have","haved"],"answer":"had","explanation":"have — had — had — иметь"},
+    {"question":"hear (слышать) → ___ (V3 / Present Perfect)","options":["heard","hear","heared"],"answer":"heard","explanation":"hear — heard — heard — слышать"},
+    {"question":"hide (прятать(ся)) → ___ (V3 / Present Perfect)","options":["hidden","hid","hided"],"answer":"hidden","explanation":"hide — hid — hidden — прятать(ся)"},
+    {"question":"hold (держать) → ___ (V3 / Present Perfect)","options":["held","hold","holded"],"answer":"held","explanation":"hold — held — held — держать"},
+    {"question":"keep (хранить, держать) → ___ (V3 / Present Perfect)","options":["kept","keep","keeped"],"answer":"kept","explanation":"keep — kept — kept — хранить, держать"},
+    {"question":"know (знать) → ___ (V3 / Present Perfect)","options":["known","knew","knowed"],"answer":"known","explanation":"know — knew — known — знать"},
+    {"question":"leave (покидать, уходить) → ___ (V3 / Present Perfect)","options":["left","leave","leaved"],"answer":"left","explanation":"leave — left — left — покидать, уходить"},
+    {"question":"lose (терять) → ___ (V3 / Present Perfect)","options":["lost","lose","losed"],"answer":"lost","explanation":"lose — lost — lost — терять"},
+    {"question":"make (делать, создавать) → ___ (V3 / Present Perfect)","options":["made","make","maked"],"answer":"made","explanation":"make — made — made — делать, создавать"},
+    {"question":"meet (встречать(ся)) → ___ (V3 / Present Perfect)","options":["met","meet","meeted"],"answer":"met","explanation":"meet — met — met — встречать(ся)"},
+    {"question":"pay (платить) → ___ (V3 / Present Perfect)","options":["paid","pay","payed"],"answer":"paid","explanation":"pay — paid — paid — платить"},
+    {"question":"put (класть, ставить) → ___ (V3 / Present Perfect)","options":["put","putted","puts"],"answer":"put","explanation":"put — put — put — класть, ставить"},
+    {"question":"read (читать) → ___ (V3 / Present Perfect)","options":["read","readed","reads"],"answer":"read","explanation":"read — read — read — читать"},
+    {"question":"run (бежать) → ___ (V3 / Present Perfect)","options":["run","ran","runned"],"answer":"run","explanation":"run — ran — run — бежать"},
+    {"question":"say (говорить) → ___ (V3 / Present Perfect)","options":["said","say","sayed"],"answer":"said","explanation":"say — said — said — говорить"},
+    {"question":"see (видеть) → ___ (V3 / Present Perfect)","options":["seen","saw","seed"],"answer":"seen","explanation":"see — saw — seen — видеть"},
+    {"question":"sell (продавать) → ___ (V3 / Present Perfect)","options":["sold","sell","selled"],"answer":"sold","explanation":"sell — sold — sold — продавать"},
+    {"question":"send (посылать) → ___ (V3 / Present Perfect)","options":["sent","send","sended"],"answer":"sent","explanation":"send — sent — sent — посылать"},
+    {"question":"sit (сидеть) → ___ (V3 / Present Perfect)","options":["sat","sit","sitted"],"answer":"sat","explanation":"sit — sat — sat — сидеть"},
+    {"question":"sleep (спать) → ___ (V3 / Present Perfect)","options":["slept","sleep","sleeped"],"answer":"slept","explanation":"sleep — slept — slept — спать"},
+    {"question":"speak (говорить) → ___ (V3 / Present Perfect)","options":["spoken","spoke","speaked"],"answer":"spoken","explanation":"speak — spoke — spoken — говорить"},
+    {"question":"spend (тратить) → ___ (V3 / Present Perfect)","options":["spent","spend","spended"],"answer":"spent","explanation":"spend — spent — spent — тратить"},
+    {"question":"stand (стоять) → ___ (V3 / Present Perfect)","options":["stood","stand","standed"],"answer":"stood","explanation":"stand — stood — stood — стоять"},
+    {"question":"take (брать) → ___ (V3 / Present Perfect)","options":["taken","took","taked"],"answer":"taken","explanation":"take — took — taken — брать"},
+    {"question":"teach (учить, преподавать) → ___ (V3 / Present Perfect)","options":["taught","teach","teached"],"answer":"taught","explanation":"teach — taught — taught — учить, преподавать"},
+    {"question":"think (думать) → ___ (V3 / Present Perfect)","options":["thought","think","thinked"],"answer":"thought","explanation":"think — thought — thought — думать"},
+    {"question":"wear (носить) → ___ (V3 / Present Perfect)","options":["worn","wore","weared"],"answer":"worn","explanation":"wear — wore — worn — носить"},
+    {"question":"win (выигрывать) → ___ (V3 / Present Perfect)","options":["won","win","winned"],"answer":"won","explanation":"win — won — won — выигрывать"},
+    {"question":"write (писать) → ___ (V3 / Present Perfect)","options":["written","wrote","writed"],"answer":"written","explanation":"write — wrote — written — писать"}
   ]
 }

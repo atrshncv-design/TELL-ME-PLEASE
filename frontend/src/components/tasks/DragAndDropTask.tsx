@@ -47,7 +47,6 @@ export function DragAndDropTask({
   description,
   columns,
   items,
-  review,
   instantCheck,
   onComplete,
 }: DragAndDropTaskProps) {
@@ -134,15 +133,7 @@ export function DragAndDropTask({
     setScore(score)
     // One-shot task: the check IS the finish — fanfare on perfect, else wrong.
     play(score === items.length ? "fanfare" : "wrong")
-    // W3-T03 (client-fixes-0808): review-режим (разбор ошибок) — НЕ завершаем
-    // автоматически: остаёмся на экране с зелёными/красными рамками, ученик
-    // смотрит ошибки и идёт дальше кнопкой «Далее». Без review — как раньше:
-    // короткая пауза, затем ResultScreen.
-    if (review) return
-    setTimeout(() => {
-      setFinished(true)
-      onComplete?.(score, items.length)
-    }, 1200)
+    // Остаёмся на разборе ответов, пока ученик явно не нажмёт «Далее».
   }
 
   const retry = () => {
@@ -303,10 +294,7 @@ export function DragAndDropTask({
           >
             Проверить
           </motion.button>
-        ) : review ? (
-          /* W3-T03 (client-fixes-0808): review-режим — после «Проверить» не
-              завершаем упражнение, а даём посмотреть ошибки и идём кнопкой
-              «Далее» → ResultScreen (onComplete при этом срабатывает один раз). */
+        ) : (
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => {
@@ -318,7 +306,7 @@ export function DragAndDropTask({
           >
             Далее
           </motion.button>
-        ) : null}
+        )}
       </div>
     </div>
   )

@@ -649,7 +649,13 @@ export default function EpochTheory({
                                 </div>
                               </div>
                               {/* Системный визуал R01: `\n\n` → `<p>` mb-4/6, `1.` → карточка `bg-amber-50`, `Шаг 2:` → `h3` mt-6 + TO BE рамка сохранена */}
-                              <div className="space-y-4">
+                              <div
+                                className={`space-y-4 ${
+                                  /\bto be\b/i.test(slides[slide - 1].title)
+                                    ? "rounded-2xl border-2 border-amber-300 bg-amber-50/40 p-4 shadow-sm"
+                                    : ""
+                                }`}
+                              >
                                 {parseTheoryBlocks(slides[slide - 1].text).map((seg, si) => {
                                   if (seg.type === "heading") {
                                     return (

@@ -12,7 +12,7 @@ import { ResultScreen } from "@/components/ResultScreen"
  * Flow: click a blank → click a word from the bank to fill it. Click a filled
  * blank to return its word to the bank. One-shot "Проверить" checks every blank
  * (case-insensitive trim), shows green ✓ / red ✗ with the correct answer, then
- * either advances to the next round (multi-round) or shows the finished screen.
+ * waits for the learner to continue.
  *
  * Two shapes:
  *   - single round: pass `text`, `answers`, `wordBank` (+ optional hints/underlineWords)
@@ -298,10 +298,6 @@ function RoundView({
     say(roundCorrect ? "correct" : "wrong")
     play(roundCorrect ? "correct" : "wrong")
 
-    // Auto-finish: for single-round this is the whole task; for multi, advance.
-    setTimeout(() => {
-      onScored(correctCount)
-    }, 1600)
   }
 
   return (
@@ -366,6 +362,16 @@ function RoundView({
               </motion.div>
             )}
           </AnimatePresence>
+
+          {checked && (
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => onScored(results.filter((r) => r.correct).length)}
+              className="px-6 py-2 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-colors"
+            >
+              {current + 1 < totalRounds ? "Далее →" : "Завершить →"}
+            </motion.button>
+          )}
 
           {/* Word bank + check button (hidden after check). */}
           {!checked && (

@@ -6,7 +6,7 @@
   "type": "fill-in",
   "items": [
     {
-      "sentence": "I ___ never ___ such a beautiful city.",
+      "sentence": "I ___ never ___ (see) such a beautiful city.",
       "answer": [
         "have",
         "seen"
@@ -14,7 +14,7 @@
       "hint": "Я никогда не видел такого красивого города."
     },
     {
-      "sentence": "We ___ this problem ___.",
+      "sentence": "We ___ this problem ___ (solve).",
       "answer": [
         "haven't solved",
         "yet"
@@ -22,14 +22,14 @@
       "hint": "Мы еще не решили эту проблему."
     },
     {
-      "sentence": "He ___ (has just published) an article.",
+      "sentence": "He ___ (publish) an article.",
       "answer": [
         "has just published"
       ],
       "hint": "Он только что опубликовал статью."
     },
     {
-      "sentence": "___ you ever ___ to Moscow?",
+      "sentence": "___ you ever ___ (be) to Moscow?",
       "answer": [
         "Have",
         "been"
@@ -37,7 +37,7 @@
       "hint": "Ты когда-нибудь бывал в Москве?"
     },
     {
-      "sentence": "They ___ already ___.",
+      "sentence": "They ___ already ___ (leave).",
       "answer": [
         "have",
         "left"
@@ -45,32 +45,37 @@
       "hint": "Они уже ушли."
     },
     {
-      "sentence": "Я уже закончила домашнее задание. I have already ___ (finish) my homework.",
+      "sentence": "Я уже закончила домашнее задание. I ___ already ___ (finish) my homework.",
       "answer": [
+        "have",
         "finished"
       ]
     },
     {
-      "sentence": "Она никогда не была в Лондоне. She has never ___ (be) to London.",
+      "sentence": "Она никогда не была в Лондоне. She ___ never ___ (be) to London.",
       "answer": [
+        "has",
         "been"
       ]
     },
     {
-      "sentence": "Мы только что посмотрели этот фильм. We have just ___ (watch) this film.",
+      "sentence": "Мы только что посмотрели этот фильм. We ___ just ___ (watch) this film.",
       "answer": [
+        "have",
         "watched"
       ]
     },
     {
-      "sentence": "Ты когда-нибудь пробовал японскую еду? Have you ever ___ (try) Japanese food?",
+      "sentence": "Ты когда-нибудь пробовал японскую еду? ___ you ever ___ (try) Japanese food?",
       "answer": [
+        "Have",
         "tried"
       ]
     },
     {
-      "sentence": "Они ещё не нашли свои ключи. They haven’t ___ (find) their keys yet.",
+      "sentence": "Они ещё не нашли свои ключи. They ___ ___ (find) their keys yet.",
       "answer": [
+        "haven't",
         "found"
       ]
     }

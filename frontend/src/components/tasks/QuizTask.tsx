@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useVerbBot } from "@/components/VerbBot"
 import { useSound } from "@/lib/useSound"
@@ -9,7 +9,6 @@ import { StickerReaction } from "@/components/StickerReaction"
 import { hintFor } from "@/lib/hints"
 import { hashString, seededShuffle } from "@/lib/shuffle"
 import {
-  advanceDelayMs,
   CALM_ANSWER_LINE_CLASS,
   CORRECT_ANSWER_PREFIX,
   optionVerdictStyle,
@@ -27,7 +26,7 @@ interface QuizItem {
   hint?: string
   // pravki-240826 (тикет 04): полное правильное предложение — показывается
   // после ответа («чтобы ученик сам себя смог проверить», Финальный Босс).
-  // Если поле есть — авто-переход 900 мс заменяется баннером + кнопкой «Далее».
+   // Если поле есть — после ответа показывается полное правильное предложение.
   answerSentence?: string
 }
 
@@ -83,28 +82,8 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
     hashString(`${title}|${current}|${display}`)
   )
 
-  // Мгновенная проверка (Q5, пакет «Все Эпохи»): клик по варианту СРАЗУ даёт
-  // вердикт (✓/✗ подсветка + звук + say + стикер-реакция) и авто-переход к
-  // следующему вопросу: ~900 мс при верном ответе, ~1.8 c при неверном
-  // (тикет 03, pravki-150826 — время разглядеть красный вердикт). Кнопки
-  // «Проверить»/«Далее» для quiz убраны; review-навигация (история, ←/→,
-  // goTo) остаётся READ-ONLY.
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-
-  const clearTimer = () => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current)
-      timerRef.current = null
-    }
-  }
-
-  // Очистка таймера авто-перехода при размонтировании (уход со страницы).
-  useEffect(() => clearTimer, [])
-
-  /** Переход к следующему вопросу (или финал) — общий для авто-перехода и
-   *  кнопки «Далее» в reveal-режиме (тикет 04, pravki-240826). */
+  /** Переход к следующему вопросу (или финал) только по явному действию ученика. */
   const advance = (finalScore: number) => {
-    timerRef.current = null
     if (current + 1 < items.length) {
       const nextIndex = current + 1
       setCurrent(nextIndex)
@@ -122,7 +101,6 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
 
   const handleSelect = (option: string) => {
     if (showResult || finished) return
-    clearTimer()
     const correct = option === item.answer
     const nextScore = score + (correct ? 1 : 0)
     setScore(nextScore)
@@ -141,19 +119,10 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
     setSelected(option)
     setShowResult(true)
 
-    // pravki-240826 (тикет 04): у item с answerSentence авто-перехода нет —
-    // ученик читает правильное предложение и жмёт «Далее» (advance).
-    if (item.answerSentence) return
-
-    // Авто-переход: вердикт виден ~900 мс (верно) или ~1.8 c (неверно —
-    // тикет 03), затем следующий вопрос (или ResultScreen в конце —
-    // onComplete(score, total) вызывается ровно один раз).
-    timerRef.current = setTimeout(() => advance(nextScore), advanceDelayMs(correct))
   }
 
   // Read-only navigation: jump to a question index and restore its saved state.
   const goTo = (index: number) => {
-    clearTimer()
     setCurrent(index)
     setReaction(null)
     const entry = history[index]
@@ -162,7 +131,6 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
   }
 
   const retry = () => {
-    clearTimer()
     setCurrent(0)
     setScore(0)
     setSelected(null)
@@ -367,10 +335,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
         )}
       </AnimatePresence>
 
-      {/* pravki-240826 (тикет 04): reveal-режим — у item есть answerSentence.
-          После ответа показываем полное правильное предложение (самопроверка,
-          запрос клиентки для «Финального Босса») и кнопку «Далее» вместо
-          авто-перехода. */}
+       {/* После ответа показываем полное правильное предложение, если оно есть. */}
       <AnimatePresence>
         {showResult && item.answerSentence && (
           <motion.div
@@ -404,10 +369,15 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
         )}
       </AnimatePresence>
 
-      {/* Мгновенная проверка (Q5): кнопок «Проверить»/«Далее» у quiz больше нет —
-          клик по варианту сразу даёт вердикт и авто-переход (верно ~900 мс,
-          неверно ~1.8 c — тикет 03). Исключение — reveal-режим выше
-          (answerSentence): там «Далее» явная. */}
+       {showResult && !item.answerSentence && (
+         <motion.button
+           whileTap={{ scale: 0.97 }}
+           onClick={() => advance(score)}
+           className="min-h-[44px] rounded-2xl bg-primary-600 px-6 py-2.5 font-bold text-white shadow-glow-primary transition-colors hover:bg-primary-700"
+         >
+           {current + 1 < items.length ? "Далее →" : "Завершить →"}
+         </motion.button>
+       )}
     </div>
   )
 }
