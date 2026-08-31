@@ -116,6 +116,22 @@ export default function EpochPage({
   const [toastAch, setToastAch] = useState<string | null>(null)
   const [classTypeById, setClassTypeById] = useState<Record<string, Record<string, string>>>({})
 
+  // PDF для печати — проверяем наличие /pdfs/<slug>.pdf (placeholder пока «Скоро»)
+  const [pdfExists, setPdfExists] = useState<boolean | null>(null)
+  useEffect(() => {
+    let cancelled = false
+    fetch(`/pdfs/${slug}.pdf`, { method: "HEAD" })
+      .then((res) => {
+        if (!cancelled) setPdfExists(res.ok)
+      })
+      .catch(() => {
+        if (!cancelled) setPdfExists(false)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [slug])
+
   const { speakText } = useVerbBot()
 
   const sectors = data?.sectors ?? []
@@ -305,6 +321,32 @@ export default function EpochPage({
             title={data.title}
             subtitle={data.subtitle}
           />
+        </div>
+      )}
+
+      {/* Материалы для печати — PDF каждой эпохи (ФИНАЛ 4) */}
+      {data && (
+        <div className="mb-6 w-full rounded-2xl border border-slate-200 bg-white/80 px-3 py-3 text-center shadow-soft">
+          <p className="text-sm font-bold text-slate-700">Материалы для печати</p>
+          <p className="mt-1 text-xs text-slate-500">Теория эпохи в PDF — возьми на дом</p>
+          {pdfExists ? (
+            <a
+              href={`/pdfs/${slug}.pdf`}
+              download
+              className="mt-3 inline-flex min-h-[44px] items-center justify-center rounded-2xl bg-primary-600 px-4 py-2 text-sm font-bold text-white hover:bg-primary-700"
+            >
+              Скачать PDF
+            </a>
+          ) : (
+            <button
+              type="button"
+              disabled
+              title="Скоро — файлы готовятся"
+              className="mt-3 inline-flex min-h-[44px] items-center justify-center rounded-2xl bg-slate-200 px-4 py-2 text-sm font-bold text-slate-500 cursor-not-allowed"
+            >
+              Скоро
+            </button>
+          )}
         </div>
       )}
 
