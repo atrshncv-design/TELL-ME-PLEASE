@@ -22,7 +22,7 @@
       "answer": "arrive"
     },
     {
-      "question": "If you ___ ice, it (will melt / melts).",
+      "question": "If you ___ ice, it will melt.",
       "options": [
         "will heat",
         "heat"
@@ -30,7 +30,7 @@
       "answer": "heat"
     },
     {
-      "question": "If you (will heat / heat) ice, it ___.",
+      "question": "If you heat ice, it ___.",
       "options": [
         "will melt",
         "melts"

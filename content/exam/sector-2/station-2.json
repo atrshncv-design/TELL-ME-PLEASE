@@ -6,7 +6,7 @@
   "type": "quiz",
   "items": [
     {
-      "question": "I ___ when I (saw / was seeing) a dog.",
+      "question": "I ___ when I saw a dog.",
       "options": [
         "walked",
         "was walking"
@@ -14,7 +14,7 @@
       "answer": "was walking"
     },
     {
-      "question": "I (walked / was walking) when I ___ a dog.",
+      "question": "I was walking when I ___ a dog.",
       "options": [
         "saw",
         "was seeing"
@@ -22,7 +22,7 @@
       "answer": "saw"
     },
     {
-      "question": "While she ___, the phone (rang / was ringing).",
+      "question": "While she ___, the phone rang.",
       "options": [
         "read",
         "was reading"
@@ -30,7 +30,7 @@
       "answer": "was reading"
     },
     {
-      "question": "While she (read / was reading), the phone ___.",
+      "question": "While she was reading, the phone ___.",
       "options": [
         "rang",
         "was ringing"
@@ -38,7 +38,7 @@
       "answer": "rang"
     },
     {
-      "question": "We ___ dinner when the lights (went / were going) out.",
+      "question": "We ___ dinner when the lights went out.",
       "options": [
         "had",
         "were having"
@@ -46,7 +46,7 @@
       "answer": "were having"
     },
     {
-      "question": "We (had / were having) dinner when the lights ___ out.",
+      "question": "We were having dinner when the lights ___ out.",
       "options": [
         "went",
         "were going"
@@ -54,7 +54,7 @@
       "answer": "went"
     },
     {
-      "question": "He ___ while he (ran / was running).",
+      "question": "He ___ while he was running.",
       "options": [
         "fell",
         "was falling"
@@ -62,7 +62,7 @@
       "answer": "fell"
     },
     {
-      "question": "He (fell / was falling) while he ___.",
+      "question": "He fell while he ___.",
       "options": [
         "ran",
         "was running"
