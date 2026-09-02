@@ -1,10 +1,10 @@
 {
   "id": "pc9_photo_oge",
-  "title": "📸 Задание 3 ОГЭ: опиши фото",
+  "title": "📸 Описание фотографии",
   "category": "speaking",
   "type": "fill-in-and-speak",
-  "description": "Опиши фотографию по плану ОГЭ: место, люди, действия (Present Continuous!), чувства. Заполни пропуски и расскажи вслух.",
-  "task_context": "You ARE an examiner for the OGE (Russian school-leaving exam), speaking task 3. The student is describing a photo: place, people, actions and feelings. Listen carefully and encourage the student to use Present Continuous for the actions in the photo. After the description, ask one short follow-up question and give brief feedback like a real examiner. Stay in character ALWAYS. Speak simple English (B1, 9th grade). Keep answers to 1-2 short sentences. Never break character, never say you are an AI.",
+  "description": "Опиши фотографию: место, люди, действия (Present Continuous!) и чувства. Заполни пропуски и расскажи вслух.",
+  "task_context": "You are a supportive English conversation assistant. The student is describing a photo: place, people, actions and feelings. Listen carefully and encourage the student to use Present Continuous for the actions in the photo. After the description, ask one short follow-up question and give brief feedback. Speak simple English (B1, 9th grade). Keep answers to 1-2 short sentences. Never say you are an AI.",
   "sections": [
     {
       "name": "📍 Место (place)",

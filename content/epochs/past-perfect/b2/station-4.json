@@ -1,10 +1,10 @@
 {
   "id": "past_perfect_b2_station_4",
-  "title": "Симуляция ОГЭ (Устная часть Task 2)",
-  "description": "Ответь на вопросы экзаменатора (ОГЭ Task 2).",
+  "title": "Разговор с ассистентом",
+  "description": "Ответь на вопросы ассистента (учебной практике ).",
   "category": "speaking",
   "type": "voice-chat",
-  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль экзаменатора на устной части ОГЭ. Act like an examiner for the Russian OGE exam (Task 2). Ask me questions about my past experiences and events. Задавай вопросы из списка checklist по одному, строго по порядку, и жди ответа ученика. Реагируй нейтрально, как экзаменатор: хвали за полные ответы, мягко проси сказать полным предложением, если ответ слишком короткий. Говори простыми английскими фразами уровня B1, на русский не переходи.",
+  "task_context": "Ты — Verb Bot, голосовой ассистент. Ты играешь роль ассистента на устной практике. Act as a supportive English practice assistant. Ask me questions about my past experiences and events. Задавай вопросы из списка checklist по одному, строго по порядку, и жди ответа ученика. Реагируй нейтрально, как ассистент: хвали за полные ответы, мягко проси сказать полным предложением, если ответ слишком короткий. Говори простыми английскими фразами уровня B1, на русский не переходи.",
   "checklist": [
     {
       "question": "What had you done by the time you went to school yesterday?",

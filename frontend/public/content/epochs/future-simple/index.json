@@ -253,12 +253,12 @@
         {
           "id": "station-1",
           "file": "b2/station-1.json",
-          "title": "ОГЭ-Тренажер (Task 19: 4 Способа + Conditionals)"
+          "title": "Тренажер грамматики"
         },
         {
           "id": "station-2",
           "file": "b2/station-2.json",
-          "title": "Ловушки ОГЭ (Первое условное / First Conditional)"
+          "title": "Ловушки (Первое условное / First Conditional)"
         },
         {
           "id": "station-3",
@@ -268,7 +268,7 @@
         {
           "id": "station-5",
           "file": "b2/station-5.json",
-          "title": "Описание Фотографии (ОГЭ Task 3)"
+          "title": "Описание фотографии"
         },
         {
           "id": "station-6",
@@ -283,7 +283,7 @@
         {
           "id": "station-4",
           "file": "b2/station-4.json",
-          "title": "Симуляция ОГЭ (Устная часть Task 2)"
+          "title": "Разговор с ассистентом"
         },
         {
           "id": "station-8",
@@ -291,7 +291,7 @@
           "title": "Наше будущее (Промпт)"
         }
       ],
-      "story": "Все 4 способа + Conditionals (Условные предложения). Безупречное владение для ОГЭ."
+      "story": "Все 4 способа + Conditionals (Условные предложения). Безупречное владение для учебной практике."
     }
   ]
 }

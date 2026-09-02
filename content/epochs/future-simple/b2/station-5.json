@@ -1,12 +1,12 @@
 {
   "id": "future_simple_b2_station_5",
-  "title": "Описание Фотографии (ОГЭ Task 3)",
+  "title": "Описание фотографии",
   "description": "Опиши фото: люди в аэропорту (Present Continuous) + будущее для контекста (will).",
   "category": "speaking",
   "type": "one-minute",
   "topic": "Опиши фотографию: люди в аэропорту (Present Continuous для фото + будущее для контекста)",
   "duration": 60,
-  "script": {"description": "Примерный образец описания фотографии (ОГЭ Task 3):", "sentences": ["This photo shows a busy airport terminal.", "In the picture, people are waiting for their flights.", "Some passengers are sitting on chairs and looking at their phones.", "A family is standing near the check-in desk, and the children are playing with their toys.", "A woman is talking to an airport worker, and a man is checking his watch.", "Everyone looks a bit tired but excited.", "They are probably going on holiday or visiting relatives.", "I think they will soon board their plane.", "They will probably arrive in the evening or at night, depending on their destination.", "In general, the atmosphere in the photo is calm and organised."]},
+  "script": {"description": "Примерный образец описания фотографии (учебной практике ):", "sentences": ["This photo shows a busy airport terminal.", "In the picture, people are waiting for their flights.", "Some passengers are sitting on chairs and looking at their phones.", "A family is standing near the check-in desk, and the children are playing with their toys.", "A woman is talking to an airport worker, and a man is checking his watch.", "Everyone looks a bit tired but excited.", "They are probably going on holiday or visiting relatives.", "I think they will soon board their plane.", "They will probably arrive in the evening or at night, depending on their destination.", "In general, the atmosphere in the photo is calm and organised."]},
   "conditions": [
     {
       "label": "Опиши фото (Present Continuous)",

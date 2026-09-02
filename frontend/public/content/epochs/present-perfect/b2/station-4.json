@@ -1,10 +1,10 @@
 {
   "id": "present_perfect_b2_station_4",
-  "title": "Симуляция ОГЭ (Устная часть Task 2)",
-  "description": "Спонтанные ответы на вопросы экзаменатора с использованием Perfect и Past.",
+  "title": "Разговор с ассистентом",
+  "description": "Спонтанные ответы на вопросы ассистента с использованием Perfect и Past.",
   "category": "speaking",
   "type": "voice-chat",
-  "task_context": "Ты — экзаменатор на устной части ОГЭ (Task 2). Задавай вопросы из списка checklist по одному, жди полный ответ ученика, проверяй, правильно ли он использует Present Perfect и Past Simple, в конце мягко укажи на ошибки. Системный промпт: Act like an examiner for the Russian OGE exam (Task 2). Ask me these questions one by one. Wait for my answer. Check if I use Present Perfect and Past Simple correctly.",
+  "task_context": "Ты — ассистент на устной практике (). Задавай вопросы из списка checklist по одному, жди полный ответ ученика, проверяй, правильно ли он использует Present Perfect и Past Simple, в конце мягко укажи на ошибки. Системный промпт: Act as a supportive English practice assistant. Ask me these questions one by one. Wait for my answer. Check if I use Present Perfect and Past Simple correctly.",
   "checklist": [
     {
       "question": "What is your favorite subject and how long have you been studying it?",

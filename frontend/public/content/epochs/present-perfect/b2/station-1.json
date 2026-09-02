@@ -1,7 +1,7 @@
 {
   "id": "present_perfect_b2_station_1",
-  "title": "ОГЭ-Тренажер (Task 19)",
-  "description": "Автоматическое раскрытие скобок в экзаменационном формате.",
+  "title": "Тренажер грамматики",
+  "description": "Автоматическое раскрытие скобок в практическом формате.",
   "category": "grammar",
   "type": "cloze",
   "rounds": [

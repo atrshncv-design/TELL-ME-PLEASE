@@ -207,7 +207,7 @@
     },
     {
       "file": "ps9_tobe_invention_cloze.json",
-      "title": "Текст ОГЭ: история изобретения",
+      "title": "Текст: история изобретения",
       "category": "grammar",
       "type": "cloze"
     },
@@ -231,7 +231,7 @@
     },
     {
       "file": "pc9_svetofor.json",
-      "title": "Светофор: лексика ОГЭ",
+      "title": "Светофор: лексика",
       "category": "grammar",
       "type": "flashcards"
     },
@@ -243,7 +243,7 @@
     },
     {
       "file": "pc9_ing_trainer.json",
-      "title": "⌨ Тренажёр ОГЭ: орфография -ing",
+      "title": "⌨ Тренажёр: орфография -ing",
       "category": "grammar",
       "type": "fill-in"
     },
@@ -285,13 +285,13 @@
     },
     {
       "file": "pc9_oge19_cloze.json",
-      "title": "Задание 19 ОГЭ: тренажёр",
+      "title": "Тренажёр грамматики",
       "category": "grammar",
       "type": "cloze"
     },
     {
       "file": "pc9_photo_oge.json",
-      "title": "Задание 3 ОГЭ: опиши фото",
+      "title": "Описание фотографии",
       "category": "speaking",
       "type": "fill-in-and-speak"
     },
@@ -309,7 +309,7 @@
     },
     {
       "file": "pc9_ai_examiner.json",
-      "title": "Экзаменатор-AI: симуляция ОГЭ",
+      "title": "Разговор с ассистентом",
       "category": "speaking",
       "type": "voice-chat"
     }

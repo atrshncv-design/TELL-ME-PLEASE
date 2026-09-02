@@ -1,10 +1,10 @@
 {
   "id": "future_continuous_b2_station_4",
-  "title": "Симуляция ОГЭ (Устная часть Task 2)",
-  "description": "Ответь экзаменатору на вопросы ОГЭ Task 2 о планах и учёбе.",
+  "title": "Разговор с ассистентом",
+  "description": "Ответь ассистенту на вопросы учебной практике о планах и учёбе.",
   "category": "speaking",
   "type": "voice-chat",
-  "task_context": "Ты — экзаменатор на устной части ОГЭ (Task 2). Промпт: \"Act like an examiner for the Russian OGE exam (Task 2). Ask me questions about my future plans and studies.\" Общайся по-английски (уровень B1-B2), строго по сценарию экзамена: задавай вопросы из checklist по одному и жди ответа. Оценивай ответы как на экзамене: за полный развёрнутый ответ — похвала, за короткий — вежливая просьба ответить подробнее.",
+  "task_context": "Ты — ассистент на устной практике (). Промпт: \"Act as a supportive English practice assistant. Ask me questions about my future plans and studies.\" Общайся по-английски (уровень B1-B2), строго по сценарию занятия: задавай вопросы из checklist по одному и жди ответа. Оценивай ответы во время практики: за полный развёрнутый ответ — похвала, за короткий — вежливая просьба ответить подробнее.",
   "checklist": [
     {
       "question": "What will you be doing at 5 PM tomorrow?",

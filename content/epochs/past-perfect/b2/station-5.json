@@ -1,10 +1,10 @@
 {
   "id": "past_perfect_b2_station_5",
-  "title": "Описание Фотографии (ОГЭ Task 3)",
-  "description": "Опиши фото по плану ОГЭ. В контексте скажи 1 предложение в Past Perfect (что люди сделали ДО того, как фото было сделано). Пример: In the photo, people are having a picnic. They had walked 5 miles before they stopped to rest.",
+  "title": "Описание фотографии",
+  "description": "Опиши фото по плану учебной практике. В контексте скажи 1 предложение в Past Perfect (что люди сделали ДО того, как фото было сделано). Пример: In the photo, people are having a picnic. They had walked 5 miles before they stopped to rest.",
   "category": "speaking",
   "type": "one-minute",
-  "topic": "Опиши фотографию (ОГЭ Task 3)",
+  "topic": "Опиши фотографию (учебной практике )",
   "duration": 60,
   "conditions": [
     {
@@ -40,7 +40,7 @@
       "min": 1
     },
     {
-      "label": "План ОГЭ: где / кто / что / почему",
+      "label": "План учебной практике: где / кто / что / почему",
       "hint": "They are in the park because the weather is nice.",
       "markers": [
         "in",

@@ -14,7 +14,7 @@
     },
     {
       "title": "⚔️ Шаг 3: Битва Будущих (Simple vs Continuous vs Perfect)",
-      "text": "Как не запутаться на ОГЭ/ЕГЭ? Задайте себе вопрос: «Что меня интересует?»\nFuture Simple (Факт 🔮): Что случится?\nI will do my homework tomorrow. (Я сделаю домашку завтра — просто факт).\nFuture Continuous (Процесс 🎥): Что будет в процессе?\nAt 5 PM tomorrow I will be doing my homework. (Завтра в 5 вечера я буду в процессе).\nFuture Perfect (Результат 🏁): Что будет УЖЕ сделано?\nBy 5 PM tomorrow I will have done my homework. (К 5 вечера домашка будет УЖЕ готова).\n💡 Лайфхак для ОГЭ: Если видите маркеры by (к какому-то времени), by the time (к тому времени как) — это 99% сигнал, что нужно использовать Future Perfect (will have + V3)."
+      "text": "Как не запутаться на учебной практике? Задайте себе вопрос: «Что меня интересует?»\nFuture Simple (Факт 🔮): Что случится?\nI will do my homework tomorrow. (Я сделаю домашку завтра — просто факт).\nFuture Continuous (Процесс 🎥): Что будет в процессе?\nAt 5 PM tomorrow I will be doing my homework. (Завтра в 5 вечера я буду в процессе).\nFuture Perfect (Результат 🏁): Что будет УЖЕ сделано?\nBy 5 PM tomorrow I will have done my homework. (К 5 вечера домашка будет УЖЕ готова).\n💡 Лайфхак для учебной практике: Если видите маркеры by (к какому-то времени), by the time (к тому времени как) — это 99% сигнал, что нужно использовать Future Perfect (will have + V3)."
     },
     {
       "title": "🚨 Шаг 4: Топ-3 ошибки, которые нужно уничтожить",
@@ -212,22 +212,22 @@
         {
           "id": "station-1",
           "file": "b2/station-1.json",
-          "title": "ОГЭ-Тренажер (Task 19: 5 Будущих)"
+          "title": "Тренажер грамматики"
         },
         {
           "id": "station-2",
           "file": "b2/station-2.json",
-          "title": "Ловушки ОГЭ (Смешанные Времена)"
+          "title": "Ловушки (Смешанные Времена)"
         },
         {
           "id": "station-3",
           "file": "b2/station-3.json",
-          "title": "Текст ОГЭ: Космическое Будущее (Чтение)"
+          "title": "Текст: Космическое Будущее (Чтение)"
         },
         {
           "id": "station-5",
           "file": "b2/station-5.json",
-          "title": "Описание Фотографии (ОГЭ Task 3)"
+          "title": "Описание фотографии"
         },
         {
           "id": "station-6",
@@ -242,7 +242,7 @@
         {
           "id": "station-4",
           "file": "b2/station-4.json",
-          "title": "Симуляция ОГЭ (Устная часть Task 2)"
+          "title": "Разговор с ассистентом"
         }
       ],
       "story": "Безупречное владение всеми 5 способами выражения будущего + смешанные тексты."

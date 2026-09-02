@@ -1,10 +1,10 @@
 {
   "id": "past_simple_b2_station_5",
-  "title": "Симуляция ОГЭ (Устная часть Task 2)",
-  "description": "Симуляция устной части ОГЭ Task 2: ответь экзаменатору на вопросы о своём прошлом (готовый ответ — на экране).",
+  "title": "Разговор с ассистентом",
+  "description": "Симуляция устной практике ответь ассистенту на вопросы о своём прошлом (готовый ответ — на экране).",
   "category": "speaking",
   "type": "voice-chat",
-  "task_context": "Промпт для бота: \"Act like an examiner for the Russian OGE exam (Task 2). Ask me questions about my past and my experience.\" Задай ученику вопросы из списка checklist по одному и оцени ответы.",
+  "task_context": "Промпт для бота: \"Act as a supportive English practice assistant. Ask me questions about my past and my experience.\" Задай ученику вопросы из списка checklist по одному и оцени ответы.",
   "checklist": [
     {
       "question": "What did you do last weekend?",

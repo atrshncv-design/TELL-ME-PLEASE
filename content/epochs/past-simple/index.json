@@ -29,12 +29,12 @@
       "text": "Отрицание: I didn't (did not) go to the park. (НЕ didn't went)\nИсключение: Глагол to be (was/were) не нуждается в did. (Was he there? He wasn't there.)"
     },
     {
-      "title": "⚔️ Шаг 4: Битва Past Simple vs Present Perfect (Главное правило ОГЭ)",
+      "title": "⚔️ Шаг 4: Битва Past Simple vs Present Perfect (Главное правило учебной практике)",
       "text": "Это самая частая ошибка на экзаменах. Как не перепутать?\nPast Simple = «Историк» 📜. Период времени ЗАКОНЧЕН. Можно спросить «КОГДА ИМЕННО?».\nI lost my keys yesterday. (Я потерял ключи ВЧЕРА. Когда? — Вчера. Past Simple)."
     },
     {
-      "title": "⚔️ Шаг 4: Битва Past Simple vs Present Perfect (Главное правило ОГЭ)",
-      "text": "Present Perfect = «Детектив» 🕵️‍♂️. Период времени НЕ ЗАКОНЧЕН (today) или точное время неважно, важен СЕЙЧАС результат.\nI have lost my keys. (Я потерял ключи. Когда — неважно. Результат: я сейчас не могу открыть дверь. Present Perfect).\n💡 Лайфхак для ОГЭ: Видите yesterday, last, ago — смело пишите Past Simple (V2). Видите just, already, yet, ever, never — пишите Present Perfect (have/has + V3)."
+      "title": "⚔️ Шаг 4: Битва Past Simple vs Present Perfect (Главное правило учебной практике)",
+      "text": "Present Perfect = «Детектив» 🕵️‍♂️. Период времени НЕ ЗАКОНЧЕН (today) или точное время неважно, важен СЕЙЧАС результат.\nI have lost my keys. (Я потерял ключи. Когда — неважно. Результат: я сейчас не могу открыть дверь. Present Perfect).\n💡 Лайфхак для учебной практике: Видите yesterday, last, ago — смело пишите Past Simple (V2). Видите just, already, yet, ever, never — пишите Present Perfect (have/has + V3)."
     }
   ],
   "theoryQuiz": [
@@ -251,7 +251,7 @@
         {
           "id": "station-1",
           "file": "b2/station-1.json",
-          "title": "ОГЭ-Тренажер (Task 19: 5 Времени)"
+          "title": "Тренажер грамматики"
         },
         {
           "id": "station-2",
@@ -261,12 +261,12 @@
         {
           "id": "station-3",
           "file": "b2/station-3.json",
-          "title": "Текст ОГЭ: История Города (Чтение)"
+          "title": "Текст: История Города (Чтение)"
         },
         {
           "id": "station-5",
           "file": "b2/station-5.json",
-          "title": "Симуляция ОГЭ (Устная часть Task 2)",
+          "title": "Разговор с ассистентом",
           "type": "voice-chat"
         },
         {
@@ -286,7 +286,7 @@
           "title": "Вчерашний День (Промпт)"
         }
       ],
-      "story": "Лексика общества, безупречное владение всеми 5 временами для ОГЭ."
+      "story": "Лексика общества, безупречное владение всеми 5 временами для учебной практике."
     }
   ]
 }
