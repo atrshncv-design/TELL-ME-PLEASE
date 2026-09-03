@@ -243,7 +243,7 @@
     },
     {
       "file": "pc9_ing_trainer.json",
-      "title": "⌨ Тренажёр: орфография -ing",
+      "title": "⌨ ОГЭ-Тренажёр: орфография -ing",
       "category": "grammar",
       "type": "fill-in"
     },
@@ -285,7 +285,7 @@
     },
     {
       "file": "pc9_oge19_cloze.json",
-      "title": "Тренажёр грамматики",
+      "title": "ОГЭ-Тренажёр",
       "category": "grammar",
       "type": "cloze"
     },
