@@ -116,12 +116,15 @@ export default function EpochPage({
   const [toastAch, setToastAch] = useState<string | null>(null)
   const [classTypeById, setClassTypeById] = useState<Record<string, Record<string, string>>>({})
 
-  // Таблица времени для печати — проверяем наличие /pdfs/<slug>.pdf («Скоро», если файла нет)
+  // Таблица времени для печати — проверяем наличие /pdfs/<slug>.pdf («Скоро», если файла нет).
+  // Шлюз платформы не пропускает HEAD — проверяем лёгким GET с Range (200/206 = файл есть).
   const [pdfExists, setPdfExists] = useState<boolean | null>(null)
   useEffect(() => {
     let cancelled = false
-    fetch(`/pdfs/${slug}.pdf`, { method: "HEAD" })
+    fetch(`/pdfs/${slug}.pdf`, { headers: { Range: "bytes=0-0" } })
       .then((res) => {
+        // Тело для проверки не нужно — отменяем докачку (файлы ~1.3MB).
+        res.body?.cancel().catch(() => {})
         if (!cancelled) setPdfExists(res.ok)
       })
       .catch(() => {
