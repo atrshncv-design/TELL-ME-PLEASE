@@ -23,8 +23,8 @@ function validate(task: TaskData, stationId: string): boolean {
   return true
 }
 
-/** Читаем index.json эпохи и находим сектор (для grade-ключа и «← Назад»). */
-async function loadSector(slug: string, sectorId: string): Promise<EpochSector | null> {
+/** Читаем index.json эпохи целиком (сектор + порядок секторов для «Дальше»). */
+async function loadIndex(slug: string): Promise<EpochIndexJson | null> {
   const indexPath = path.join(
     process.cwd(),
     "public",
@@ -35,8 +35,7 @@ async function loadSector(slug: string, sectorId: string): Promise<EpochSector |
   )
   try {
     const raw = await fs.readFile(indexPath, "utf-8")
-    const index = JSON.parse(raw) as EpochIndexJson
-    return index.sectors.find((s) => s.id === sectorId) ?? null
+    return JSON.parse(raw) as EpochIndexJson
   } catch (err) {
     console.error("[EpochStationPage] Failed to load epoch index.json", err)
     return null
@@ -100,7 +99,8 @@ export default async function EpochStationPage({
 }) {
   const { slug, sector, stationId } = await params
 
-  const sectorMeta = await loadSector(slug, sector)
+  const index = await loadIndex(slug)
+  const sectorMeta = index?.sectors.find((s) => s.id === sector) ?? null
   const task = await loadStation(slug, sector, stationId)
 
   if (!task || !sectorMeta) {
@@ -113,14 +113,24 @@ export default async function EpochStationPage({
   const grade = sectorGradeKey(sectorMeta)
   const backHref = `/epoch/${slug}/${sector}`
 
-  // pravki-250826 (PP1): следующая станция сектора — кнопка «Дальше →» на
-  // экране результата. Провайдер контекста живёт внутри клиентского
+  // R01: «Дальше →» на экране результата — следующий stationId сектора;
+  // с последней станции сектора — первая станция СЛЕДУЮЩЕГО сектора эпохи
+  // (порядок — index.json; на последней станции эпохи кнопки нет).
+  // Провайдер контекста живёт внутри клиентского
   // TaskRenderer: серверный компонент не может рендерить Provider из
   // "use client"-модуля (SSR-краш «Element type is invalid»).
-  const stations = sectorMeta.stations ?? []
+  const sectors = index?.sectors ?? []
+  const sectorPos = sectors.findIndex((s) => s.id === sector)
+  const stations = sectorMeta?.stations ?? []
   const pos = stations.findIndex((s) => s.id === stationId)
-  const next = pos >= 0 && pos + 1 < stations.length ? stations[pos + 1] : null
-  const nextHref = next ? `/epoch/${slug}/${sector}/${next.id}` : null
+  let nextHref: string | null = null
+  if (sectorMeta && pos >= 0 && pos + 1 < stations.length) {
+    nextHref = `/epoch/${slug}/${sector}/${stations[pos + 1].id}`
+  } else if (sectorPos >= 0 && sectorPos + 1 < sectors.length) {
+    const nextSector = sectors[sectorPos + 1]
+    const first = nextSector.stations[0]
+    if (first) nextHref = `/epoch/${slug}/${nextSector.id}/${first.id}`
+  }
 
   return <TaskRenderer task={task} grade={grade} backHref={backHref} nextHref={nextHref ?? undefined} />
 }

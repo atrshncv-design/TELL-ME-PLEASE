@@ -84,31 +84,34 @@ export function getAchievements(grade: string): UnlockedAchievement[] {
   }
 }
 
-/** Сколько пройденных заданий относится к одному из типов (пересечение
- *  ключей progress с маппингом taskId → тип). */
+/** Сколько ПРОЙДЕННЫХ (score > 0) заданий относится к одному из типов
+ *  (пересечение ключей progress с маппингом taskId → тип). R02: нулевой
+ *  score не разблокирует значки. */
 function countCompletedByType(
   progress: AchievementProgressMap,
   typeById: Record<string, string>,
   types: readonly string[]
 ): number {
   let n = 0
-  for (const taskId of Object.keys(progress)) {
+  for (const [taskId, entry] of Object.entries(progress)) {
+    if (!entry || entry.score <= 0) continue
     const t = typeById[taskId]
     if (t && types.includes(t)) n += 1
   }
   return n
 }
 
-/** «3 голосовых задания подряд»: самые свежие выполненные задания (по ts) —
- *  все голосовые (флаг speaking проставляет saveTask по SPEAKING_TASK_TYPES).
- *  Записи без ts трактуются как самые старые и серию не обрывают. */
+/** «3 голосовых задания подряд»: самые свежие ПРОЙДЕННЫЕ (score > 0)
+ *  выполненные задания (по ts) — все голосовые (флаг speaking проставляет
+ *  saveTask по SPEAKING_TASK_TYPES). Записи без ts трактуются как самые
+ *  старые и серию не обрывают. */
 function speakingStreakCount(progress: AchievementProgressMap): number {
   const byTsDesc = Object.values(progress).sort((a, b) =>
     (b.ts || "").localeCompare(a.ts || "")
   )
   let streak = 0
   for (const e of byTsDesc) {
-    if (e.speaking === true) streak += 1
+    if (e.speaking === true && e.score > 0) streak += 1
     else break
   }
   return streak

@@ -91,7 +91,9 @@ export default function SectorStationsPage({
     return () => clearTimeout(t)
   }, [current, speakText])
 
-  const backToMap = () => router.push(`/epoch/${slug}`)
+  // A01: возврат на страницу эпохи — к якорю своего сектора
+  // (#sector-<id>), а не в начало страницы.
+  const backToMap = () => router.push(`/epoch/${slug}#sector-${sector}`)
 
   return (
     <div className="flex flex-col items-center px-4 py-8 max-w-2xl mx-auto">

@@ -16,6 +16,7 @@ import {
   sectorGradeKey,
   sectorPercent,
   sectorStationsDone,
+  stationPassed,
 } from "@/lib/epoch"
 import {
   ACHIEVEMENTS,
@@ -29,6 +30,15 @@ import { Confetti } from "@/components/Confetti"
 import EpochTheory from "@/components/EpochTheory"
 import ExamEntryCard from "@/components/ExamEntryCard"
 
+/** R05–R07: варианты печати таблицы времени. Цветной А4 уже лежит в
+ *  /pdfs/<slug>.pdf; ЧБ/А5 подхватятся автоматически, когда файлы появятся
+ *  по тем же именам — недостающее рисуется disabled «Скоро» (R05.1, без 404). */
+const PRINT_VARIANTS: { id: string; label: string; file: (slug: string) => string }[] = [
+  { id: "color-a4", label: "Цвет · А4", file: (slug) => `/pdfs/${slug}.pdf` },
+  { id: "bw-a4", label: "Ч/Б · А4", file: (slug) => `/pdfs/${slug}-bw-a4.pdf` },
+  { id: "color-a5", label: "Цвет · А5", file: (slug) => `/pdfs/${slug}-a5.pdf` },
+  { id: "bw-a5", label: "Ч/Б · А5", file: (slug) => `/pdfs/${slug}-bw-a5.pdf` },
+]
 /** Иконка-эмодзи по уровню сектора (детерминированно, без Math.random). */
 const LEVEL_EMOJI: Record<string, string> = {
   A1: "🚀",
@@ -116,20 +126,25 @@ export default function EpochPage({
   const [toastAch, setToastAch] = useState<string | null>(null)
   const [classTypeById, setClassTypeById] = useState<Record<string, Record<string, string>>>({})
 
-  // Таблица времени для печати — проверяем наличие /pdfs/<slug>.pdf («Скоро», если файла нет).
-  // Шлюз платформы не пропускает HEAD — проверяем лёгким GET с Range (200/206 = файл есть).
-  const [pdfExists, setPdfExists] = useState<boolean | null>(null)
+  // Таблица времени для печати — проверяем наличие каждого варианта
+  // (цвет/ЧБ × А4/А5). Шлюз платформы не пропускает HEAD — проверяем лёгким
+  // GET с Range (200/206 = файл есть). null = ещё проверяется.
+  const [pdfState, setPdfState] = useState<Record<string, boolean | null>>({})
+  const [printOpen, setPrintOpen] = useState(false)
   useEffect(() => {
     let cancelled = false
-    fetch(`/pdfs/${slug}.pdf`, { headers: { Range: "bytes=0-0" } })
-      .then((res) => {
-        // Тело для проверки не нужно — отменяем докачку (файлы ~1.3MB).
-        res.body?.cancel().catch(() => {})
-        if (!cancelled) setPdfExists(res.ok)
-      })
-      .catch(() => {
-        if (!cancelled) setPdfExists(false)
-      })
+    setPdfState(Object.fromEntries(PRINT_VARIANTS.map((v) => [v.id, null])))
+    for (const v of PRINT_VARIANTS) {
+      fetch(v.file(slug), { headers: { Range: "bytes=0-0" } })
+        .then((res) => {
+          // Тело для проверки не нужно — отменяем докачку (файлы ~1.3MB).
+          res.body?.cancel().catch(() => {})
+          if (!cancelled) setPdfState((prev) => ({ ...prev, [v.id]: res.ok }))
+        })
+        .catch(() => {
+          if (!cancelled) setPdfState((prev) => ({ ...prev, [v.id]: false }))
+        })
+    }
     return () => {
       cancelled = true
     }
@@ -181,7 +196,13 @@ export default function EpochPage({
     setShowPortalCelebration(false)
   }
 
-  // T12: классовые index.json по grade-ключам эпохи — типы для достижений.
+  // T12: типы для достижений по grade-ключам эпохи (R02): классовые
+  // index.json (file→type) + файлы станций эпохи (task.id→type).
+  // Evidence: прогресс пишет saveTask(task.id) изнутри JSON станции
+  // (напр. "a1_station_1"), а epochTypeById давал station.id ("station-1")
+  // + часть станций без type в index.json — typeById[taskId] был undefined
+  // и счётчики всегда были 0. Чиним маппингом по файлам станций, серые
+  // значки/тултипы/тост не трогаем.
   useEffect(() => {
     if (!data) return
     const grades = [...new Set(data.sectors.map((s) => sectorGradeKey(s)))]
@@ -190,10 +211,37 @@ export default function EpochPage({
       fetch(`/content/tasks/grade_${g}/index.json`)
         .then(async (res) => (res.ok ? res.json() : null))
         .then((j) => {
-          if (cancelled || !j || !Array.isArray(j.exercises)) return
+          if (cancelled) return
           const map: Record<string, string> = {}
-          for (const ex of j.exercises) map[ex.file.replace(/\.json$/, "")] = ex.type
-          setClassTypeById((prev) => ({ ...prev, [g]: map }))
+          if (j && Array.isArray(j.exercises)) {
+            for (const ex of j.exercises) {
+              const id = String(ex.file ?? "").replace(/\.json$/, "")
+              if (id && ex.type) map[id] = ex.type
+            }
+          }
+          // Fallback index.json эпохи (station.id→type) — для старых записей.
+          Object.assign(map, epochTypeById(data.sectors, g))
+          setClassTypeById((prev) => ({ ...prev, [g]: { ...(prev[g] ?? {}), ...map } }))
+          // Точные типы станций: task.id→type из файлов станций
+          // (saveTask пишет task.id, а не station.id).
+          for (const s of data.sectors.filter((x) => sectorGradeKey(x) === g)) {
+            for (const st of s.stations) {
+              if (!st.file) continue
+              fetch(`/content/epochs/${slug}/${st.file}`)
+                .then(async (res) => (res.ok ? res.json() : null))
+                .then((tj) => {
+                  if (cancelled || !tj || typeof tj.id !== "string" || typeof tj.type !== "string")
+                    return
+                  setClassTypeById((prev) => ({
+                    ...prev,
+                    [g]: { ...(prev[g] ?? {}), [tj.id]: tj.type, [st.id]: tj.type },
+                  }))
+                })
+                .catch(() => {
+                  /* станция без файла — остаются индексные типы */
+                })
+            }
+          }
         })
         .catch(() => {
           /* grade index.json может отсутствовать — эпоха-типы остаются */
@@ -202,7 +250,7 @@ export default function EpochPage({
     return () => {
       cancelled = true
     }
-  }, [data])
+  }, [data, slug])
 
   // T12: гидрация разблокированных достижений по grade-ключам.
   useEffect(() => {
@@ -257,6 +305,29 @@ export default function EpochPage({
           epochStationsDoneForGrade(progress, sectors, a)
       )[0] ?? "5"
   const activeUnlocked = unlockedByGrade[activeGrade] ?? []
+
+  // R03.1 «Продолжить»: первый сектор с pct<100 и первая непройденная
+  // станция в нём (прогресс ещё грузится — первый сектор/станция).
+  let continueTarget: { sectorId: string; stationId: string } | null = null
+  for (const s of sectors) {
+    if (sectorPercent(progress, s) >= 100) continue
+    const next = s.stations.find((st) => !stationPassed(progress, s, st)) ?? s.stations[0]
+    if (next) {
+      continueTarget = { sectorId: s.id, stationId: next.id }
+      break
+    }
+  }
+
+  // A01: возврат по якорю #sector-<id> (из списка сектора). Контент эпохи
+  // грузится асинхронно — элемента нет в момент навигации, поэтому после
+  // появления данных докручиваем к якорю вручную.
+  useEffect(() => {
+    if (!data) return
+    const hash = window.location.hash
+    if (!hash.startsWith("#sector-")) return
+    const el = document.getElementById(hash.slice(1))
+    if (el) el.scrollIntoView({ block: "start" })
+  }, [data])
 
   return (
     <div className="flex flex-col items-center px-4 py-8 max-w-2xl mx-auto">
@@ -327,28 +398,47 @@ export default function EpochPage({
         </div>
       )}
 
-      {/* Материалы для печати — таблица времени каждой эпохи (скачивание PDF) */}
+      {/* Материалы для печати (R05, R08): компактная кнопка-строка с
+          дословной подписью; пикер цвет/ЧБ × А4/А5 (R06, R07).
+          Недостающее — disabled «Скоро», без 404 (R05.1). */}
       {data && (
-        <div className="mb-6 w-full rounded-2xl border border-slate-200 bg-white/80 px-3 py-3 text-center shadow-soft">
-          <p className="text-sm font-bold text-slate-700">Материалы для печати</p>
-          <p className="mt-1 text-xs text-slate-500">Таблица для запоминания правил данного времени — скачай и возьми на дом</p>
-          {pdfExists ? (
-            <a
-              href={`/pdfs/${slug}.pdf`}
-              download
-              className="mt-3 inline-flex min-h-[44px] items-center justify-center rounded-2xl bg-primary-600 px-4 py-2 text-sm font-bold text-white hover:bg-primary-700"
-            >
-              📥 Скачать таблицу времени
-            </a>
-          ) : (
-            <button
-              type="button"
-              disabled
-              title="Скоро — файлы готовятся"
-              className="mt-3 inline-flex min-h-[44px] items-center justify-center rounded-2xl bg-slate-200 px-4 py-2 text-sm font-bold text-slate-500 cursor-not-allowed"
-            >
-              Скоро
-            </button>
+        <div className="mb-6 w-full rounded-2xl border border-slate-200 bg-white/80 px-3 py-2 text-center shadow-soft">
+          <button
+            type="button"
+            onClick={() => setPrintOpen((o) => !o)}
+            aria-expanded={printOpen}
+            className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-2xl px-3 py-2 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-100"
+          >
+            <span aria-hidden="true">🖨️</span>
+            Материалы Эпохи для печати (скачай и возьми на дом)
+            <span aria-hidden="true">{printOpen ? "▾" : "▸"}</span>
+          </button>
+          {printOpen && (
+            <div className="grid grid-cols-2 gap-2 pb-1 pt-1">
+              {PRINT_VARIANTS.map((v) => {
+                const state = pdfState[v.id]
+                return state ? (
+                  <a
+                    key={v.id}
+                    href={v.file(slug)}
+                    download
+                    className="flex min-h-[44px] items-center justify-center rounded-2xl bg-primary-600 px-3 py-2 text-sm font-bold text-white hover:bg-primary-700"
+                  >
+                    📥 {v.label}
+                  </a>
+                ) : (
+                  <button
+                    key={v.id}
+                    type="button"
+                    disabled
+                    title={state === null ? "Проверяем наличие файла…" : "Скоро — файлы готовятся"}
+                    className="flex min-h-[44px] cursor-not-allowed items-center justify-center rounded-2xl bg-slate-200 px-3 py-2 text-sm font-bold text-slate-500"
+                  >
+                    {state === null ? "…" : "Скоро"} · {v.label}
+                  </button>
+                )
+              })}
+            </div>
           )}
         </div>
       )}
@@ -432,21 +522,47 @@ export default function EpochPage({
         </div>
       </div>
 
-      {/* 4 сектора: ВСЕ открыты (Q2 — без sectorUnlocked-блокировки). */}
-      <h2 className="font-display mb-3 w-full text-xl font-black tracking-tight text-primary-900">
-        Секторы
-      </h2>
+      {/* 4 сектора: ВСЕ открыты (Q2 — без sectorUnlocked-блокировки).
+          R03.1: «Продолжить» — к первому месту с pct<100. */}
+      <div className="mb-3 flex w-full items-center justify-between gap-2">
+        <h2 className="font-display text-xl font-black tracking-tight text-primary-900">
+          Секторы
+        </h2>
+        {continueTarget && (
+          <button
+            onClick={() =>
+              router.push(
+                `/epoch/${slug}/${continueTarget.sectorId}/${continueTarget.stationId}`
+              )
+            }
+            className="min-h-[44px] shrink-0 rounded-2xl bg-success px-4 py-2 text-sm font-bold text-white transition-colors hover:brightness-95"
+          >
+            ▶ Продолжить →
+          </button>
+        )}
+      </div>
       {sectors.map((sector, si) => {
         const done = sectorStationsDone(progress, sector)
         const pct = sectorPercent(progress, sector)
         const emoji = LEVEL_EMOJI[sector.level] ?? "🛸"
+        // R03: пройденный сектор (100%) визуально отличен от непройденного;
+        // частичный — промежуточный вид.
+        const isDone = pct >= 100
+        const isStarted = done > 0
         return (
           <motion.div
             key={sector.id}
+            id={`sector-${sector.id}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: si * 0.08 }}
-            className="relative mb-4 w-full overflow-hidden rounded-3xl border border-primary-200 bg-gradient-to-br from-primary-50/80 via-white to-white px-4 py-4 shadow-sm"
+            className={`relative mb-4 w-full scroll-mt-24 overflow-hidden rounded-3xl border px-4 py-4 shadow-sm ${
+              isDone
+                ? "border-success/50 bg-gradient-to-br from-success/10 via-white to-white"
+                : isStarted
+                  ? "border-amber-300 bg-gradient-to-br from-amber-50/80 via-white to-white"
+                  : "border-primary-200 bg-gradient-to-br from-primary-50/80 via-white to-white"
+            }`}
           >
             {/* T01: бейдж уровня сложности в правом верхнем углу (A1/A2/B1/B2). */}
             <span className="absolute right-3 top-3 rounded-full bg-primary-600 px-3 py-1 text-xs font-black text-white shadow-soft">
@@ -470,11 +586,17 @@ export default function EpochPage({
             </div>
 
             {/* Прогресс сектора: N из M станций ✓ + полоса. */}
-            <div className="mb-2 flex items-center justify-between text-xs font-bold">
+            <div className="mb-2 flex items-center justify-between gap-2 text-xs font-bold">
               <span className="text-slate-500">
                 {done} из {sector.stations.length} станций ✓
               </span>
-              <span className="text-primary-600">{pct}%</span>
+              {isDone ? (
+                <span className="rounded-full bg-success/10 px-2.5 py-0.5 text-success">
+                  ✓ Пройдено
+                </span>
+              ) : (
+                <span className="text-primary-600">{pct}%</span>
+              )}
             </div>
             <div className="mb-4 h-2 w-full overflow-hidden rounded-full bg-primary-100">
               <motion.div
