@@ -269,7 +269,7 @@ export function SurvivalIslandTask({
           {/* Пример реплики */}
           <div className="mt-3 rounded-xl bg-primary-50 px-4 py-3">
             <div className="text-[11px] font-bold uppercase tracking-wide text-primary-500">Скажи</div>
-            <div className="font-display text-xl font-extrabold text-primary-900">{step.example}</div>
+            <div className="font-display text-xl font-extrabold break-words text-primary-900">{step.example}</div>
           </div>
 
           {/* Опоры: шаблон + словарик (scaffold=full, 5–6 кл.) */}
@@ -345,7 +345,7 @@ export function SurvivalIslandTask({
                     value={textInput}
                     onChange={(e) => setTextInput(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && handleAddText()}
-                    placeholder="We have a tent..."
+                    placeholder="Напиши реплику по-английски..."
                     className="min-h-[48px] flex-1 rounded-xl border-2 border-primary-200 px-4 py-3 text-base outline-none focus:border-primary-500"
                   />
                   <motion.button
@@ -497,6 +497,11 @@ export function SurvivalIslandTask({
         )}
       </AnimatePresence>
 
+      {phase === "ready" && (
+        <p className="rounded-2xl border-2 border-speaking-200 bg-speaking-50 px-4 py-3 text-center text-sm font-bold break-words text-primary-900">
+          🎤 Нажми микрофон и произнеси реплику от лица команды, в конце нажми «Готово 🏝️»
+        </p>
+      )}
       {/* CTA: старт миссии */}
       {phase === "ready" && (
         <motion.button

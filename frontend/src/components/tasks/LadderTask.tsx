@@ -104,7 +104,7 @@ export function LadderTask({ title, description, ladders, onComplete }: LadderTa
               key={i}
               layout
               onClick={() => setCurrentStep(ladder.direction === "up" ? i : ladder.steps.length - 1 - i)}
-              className={`w-full max-w-md px-4 py-2 rounded-lg cursor-pointer text-sm transition-all border-2 ${
+              className={`w-full max-w-md px-4 py-2 rounded-lg cursor-pointer text-sm break-words transition-all border-2 ${
                 isActive
                   ? "bg-indigo-100 border-indigo-500 text-indigo-900 font-semibold"
                   : isPast

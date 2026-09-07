@@ -51,6 +51,11 @@ export function SentenceBuilderTask({ title, description, items, onComplete }: S
   // Стикер-реакция на последний ответ. Ключ = номер item'а, чтобы
   // AnimatePresence перезапускал анимацию на каждом ответе.
   const [reaction, setReaction] = useState<{ key: number; correct: boolean } | null>(null)
+  // R14 (pravki-070926, тикет 03): read-only история ответов для свободной
+  // листалки ←/→ без засчитывания (паттерн QuizTask/FillInTask).
+  const [history, setHistory] = useState<
+    { selected: Record<string, string | null>; showResult: boolean }[]
+  >([])
 
   if (!items || items.length === 0) {
     return (
@@ -97,6 +102,12 @@ export function SentenceBuilderTask({ title, description, items, onComplete }: S
     play(correct ? "correct" : "wrong")
     setReaction({ key: current, correct })
     setShowResult(true)
+    // R14: сохраняем ответ для read-only review при листании.
+    setHistory((prev) => {
+      const next = [...prev]
+      next[current] = { selected: { ...selected }, showResult: true }
+      return next
+    })
   }
 
   /** «Далее»: следующее предложение, после последнего — ResultScreen
@@ -104,14 +115,39 @@ export function SentenceBuilderTask({ title, description, items, onComplete }: S
   const advance = () => {
     setReaction(null)
     if (current + 1 < items.length) {
-      setCurrent(current + 1)
-      setSelected({})
-      setShowResult(false)
+      const nextIndex = current + 1
+      setCurrent(nextIndex)
+      // R14: восстанавливаем сохранённое состояние или сбрасываем.
+      const nextEntry = history[nextIndex]
+      setSelected(nextEntry ? { ...nextEntry.selected } : {})
+      setShowResult(nextEntry ? nextEntry.showResult : false)
     } else {
       setFinished(true)
       onComplete?.(score, items.length)
       say("finish")
       play("fanfare")
+    }
+  }
+
+  // R14: свободная листалка ←/→ без засчитывания и без требования ответа.
+  // Черновик текущего предложения сохраняется, отвеченные показываются
+  // read-only (showResult блокирует toggleWord).
+  const goTo = (index: number) => {
+    if (index < 0 || index >= items.length || index === current) return
+    setHistory((prev) => {
+      const snapshot = [...prev]
+      snapshot[current] = { selected: { ...selected }, showResult }
+      return snapshot
+    })
+    const entry = history[index]
+    setCurrent(index)
+    setReaction(null)
+    if (entry) {
+      setSelected({ ...entry.selected })
+      setShowResult(entry.showResult)
+    } else {
+      setSelected({})
+      setShowResult(false)
     }
   }
 
@@ -122,6 +158,7 @@ export function SentenceBuilderTask({ title, description, items, onComplete }: S
     setShowResult(false)
     setFinished(false)
     setReaction(null)
+    setHistory([])
   }
 
   if (finished) {
@@ -139,8 +176,30 @@ export function SentenceBuilderTask({ title, description, items, onComplete }: S
       </h2>
       <p className="text-sm text-slate-500">{description}</p>
 
-      <div className="text-xs font-semibold text-slate-400">
-        Предложение {current + 1} из {items.length}
+      <div className="flex items-center justify-between gap-2">
+        {current > 0 ? (
+          <button
+            onClick={() => goTo(current - 1)}
+            className="min-h-[44px] text-sm font-semibold text-slate-500 hover:text-slate-700"
+          >
+            ← Назад
+          </button>
+        ) : (
+          <span className="text-sm text-transparent select-none">← Назад</span>
+        )}
+        <div className="text-xs font-semibold text-slate-400">
+          Предложение {current + 1} из {items.length}
+        </div>
+        {current < items.length - 1 ? (
+          <button
+            onClick={() => goTo(current + 1)}
+            className="min-h-[44px] text-sm font-semibold text-slate-500 hover:text-slate-700"
+          >
+            Вперёд →
+          </button>
+        ) : (
+          <span className="text-sm text-transparent select-none">Вперёд →</span>
+        )}
       </div>
       <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-100">
         <motion.div
@@ -191,7 +250,7 @@ export function SentenceBuilderTask({ title, description, items, onComplete }: S
                   )
                 })}
               </div>
-              <p className={`mt-2 text-center text-lg font-bold ${correct ? "text-success" : "text-slate-800"}`}>
+              <p className={`mt-2 text-center text-lg font-bold break-words ${correct ? "text-success" : "text-slate-800"}`}>
                 {built}
                 {correct ? " ✓" : ""}
               </p>

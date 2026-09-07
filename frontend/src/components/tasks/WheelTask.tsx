@@ -269,7 +269,7 @@ export function WheelTask({ title, description, items }: WheelTaskProps) {
               exit={{ opacity: 0 }}
               className="rounded-2xl border-2 border-amber-300 bg-white p-4 text-center shadow-soft"
             >
-              <p className="text-lg font-bold text-slate-800">
+              <p className="text-lg font-bold break-words text-slate-800">
                 🎯 Выпало: <span className="text-primary-700">{winnerItem.label}</span>
               </p>
               <p className="mt-1 text-sm text-slate-500">

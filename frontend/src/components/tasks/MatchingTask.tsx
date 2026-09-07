@@ -195,7 +195,7 @@ export function MatchingTask({ title, description, items, columns, onComplete }:
           exit={{ x: -30, opacity: 0 }}
           className="rounded-2xl bg-white px-4 py-5 text-center shadow-soft"
         >
-          <p className="text-xl font-semibold leading-snug text-slate-800">{item.text}</p>
+          <p className="text-xl font-semibold leading-snug break-words text-slate-800">{item.text}</p>
         </motion.div>
       </AnimatePresence>
 

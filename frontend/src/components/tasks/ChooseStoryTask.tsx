@@ -309,7 +309,7 @@ export function ChooseStoryTask({
                   {sentencePatterns.map((pattern, pi) => (
                     <div
                       key={pi}
-                      className="rounded-2xl border-2 border-primary-200 bg-white px-4 py-3 text-lg font-bold leading-relaxed text-slate-800"
+                      className="rounded-2xl border-2 border-primary-200 bg-white px-4 py-3 text-lg font-bold leading-relaxed break-words text-slate-800"
                     >
                       {pattern.split(/(\{char\}|\{place\}|\{problem\})/g).map((part, i) => {
                         if (part === "{char}") {
@@ -367,7 +367,7 @@ export function ChooseStoryTask({
                       })}
                     </div>
                   ))}
-                  <p className="rounded-2xl bg-primary-50 px-4 py-3 text-base font-semibold text-primary-900">
+                  <p className="rounded-2xl bg-primary-50 px-4 py-3 text-base font-semibold break-words text-primary-900">
                     {composeStory()}
                   </p>
                 </div>
@@ -377,7 +377,7 @@ export function ChooseStoryTask({
                     value={storyText}
                     onChange={(e) => setStoryText(e.target.value)}
                     placeholder="Напиши рассказ по-английски…"
-                    className="min-h-[160px] w-full rounded-2xl border-2 border-primary-200 bg-white p-3 text-base leading-relaxed text-slate-800 placeholder:text-slate-400 focus:border-primary-500 focus:outline-none"
+                    className="min-h-[160px] w-full rounded-2xl border-2 border-primary-200 bg-white p-3 text-base leading-relaxed break-words text-slate-800 placeholder:text-slate-400 focus:border-primary-500 focus:outline-none"
                   />
                   {keywords && keywords.length > 0 && (
                     <div className="flex flex-wrap gap-2">
@@ -399,7 +399,7 @@ export function ChooseStoryTask({
           {step === 3 && (
             <>
               <p className="text-base font-semibold text-slate-700">Твой рассказ:</p>
-              <p className="rounded-2xl border-2 border-primary-200 bg-white px-4 py-3 text-lg font-semibold leading-relaxed text-slate-800">
+              <p className="rounded-2xl border-2 border-primary-200 bg-white px-4 py-3 text-lg font-semibold leading-relaxed break-words text-slate-800">
                 {storyForCheck || "…"}
               </p>
 

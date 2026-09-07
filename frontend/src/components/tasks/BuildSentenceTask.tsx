@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useSound } from "@/lib/useSound"
 import { ResultScreen } from "@/components/ResultScreen"
@@ -68,6 +68,19 @@ export function BuildSentenceTask({
   const [isCorrect, setIsCorrect] = useState(false)
   const [finished, setFinished] = useState(false)
   const { play } = useSound()
+  // R14 (pravki-070926, тикет 03): read-only история + свободная листалка ←/→
+  // без засчитывания (паттерн QuizTask/FillInTask). Реф авто-перехода — чтобы
+  // листалка во время вердикта не уходила в гонку с setTimeout.
+  const [history, setHistory] = useState<
+    { adverb: string | null; time: string | null; showResult: boolean; isCorrect: boolean }[]
+  >([])
+  const advanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  useEffect(
+    () => () => {
+      if (advanceTimer.current) clearTimeout(advanceTimer.current)
+    },
+    []
+  )
 
   // Grammar Minecraft (тикет W3-T1): режим блоков-категорий. Полностью
   // отдельный путь — старый комбинатор (adverbs × time_phrases) ниже остаётся
@@ -117,13 +130,23 @@ export function BuildSentenceTask({
     if (correct) setScore((s) => s + 1)
     setShowResult(true)
     play(correct ? "correct" : "wrong")
+    // R14: ответ сохраняется для read-only review при листании.
+    setHistory((prev) => {
+      const next = [...prev]
+      next[current] = { adverb: placedAdverb, time: placedTime, showResult: true, isCorrect: correct }
+      return next
+    })
 
-    setTimeout(() => {
+    advanceTimer.current = setTimeout(() => {
       if (current + 1 < rounds.length) {
-        setCurrent((c) => c + 1)
-        setPlacedAdverb(null)
-        setPlacedTime(null)
-        setShowResult(false)
+        const nextIndex = current + 1
+        setCurrent(nextIndex)
+        // R14: восстанавливаем сохранённое состояние или сбрасываем.
+        const nextEntry = history[nextIndex]
+        setPlacedAdverb(nextEntry ? nextEntry.adverb : null)
+        setPlacedTime(nextEntry ? nextEntry.time : null)
+        setShowResult(nextEntry ? nextEntry.showResult : false)
+        setIsCorrect(nextEntry ? nextEntry.isCorrect : false)
       } else {
         setFinished(true)
         play("fanfare")
@@ -132,7 +155,25 @@ export function BuildSentenceTask({
     }, 1400)
   }
 
+  // R14: свободная листалка ←/→ без засчитывания. Во время показа вердикта
+  // (1.4с до авто-перехода) навигация заблокирована, чтобы не было гонки.
+  const goTo = (index: number) => {
+    if (showResult || index < 0 || index >= rounds.length || index === current) return
+    setHistory((prev) => {
+      const snapshot = [...prev]
+      snapshot[current] = { adverb: placedAdverb, time: placedTime, showResult: false, isCorrect: false }
+      return snapshot
+    })
+    const entry = history[index]
+    setCurrent(index)
+    setPlacedAdverb(entry ? entry.adverb : null)
+    setPlacedTime(entry ? entry.time : null)
+    setShowResult(entry ? entry.showResult : false)
+    setIsCorrect(entry ? entry.isCorrect : false)
+  }
+
   const retry = () => {
+    if (advanceTimer.current) clearTimeout(advanceTimer.current)
     setCurrent(0)
     setScore(0)
     setPlacedAdverb(null)
@@ -140,6 +181,7 @@ export function BuildSentenceTask({
     setShowResult(false)
     setIsCorrect(false)
     setFinished(false)
+    setHistory([])
   }
 
   if (finished) {
@@ -153,8 +195,32 @@ export function BuildSentenceTask({
       <h2 className="text-xl font-bold text-indigo-900">{title}</h2>
       <p className="text-sm text-slate-500">{description}</p>
 
-      <div className="text-xs text-slate-400">
-        Предложение {current + 1} из {rounds.length}
+      <div className="flex items-center justify-between gap-2">
+        {current > 0 ? (
+          <button
+            onClick={() => goTo(current - 1)}
+            disabled={showResult}
+            className="min-h-[44px] text-sm font-semibold text-slate-500 hover:text-slate-700 disabled:opacity-40"
+          >
+            ← Назад
+          </button>
+        ) : (
+          <span className="text-sm text-transparent select-none">← Назад</span>
+        )}
+        <div className="text-xs text-slate-400">
+          Предложение {current + 1} из {rounds.length}
+        </div>
+        {current < rounds.length - 1 ? (
+          <button
+            onClick={() => goTo(current + 1)}
+            disabled={showResult}
+            className="min-h-[44px] text-sm font-semibold text-slate-500 hover:text-slate-700 disabled:opacity-40"
+          >
+            Вперёд →
+          </button>
+        ) : (
+          <span className="text-sm text-transparent select-none">Вперёд →</span>
+        )}
       </div>
       <div className="w-full bg-slate-100 rounded-full h-2">
         <motion.div
@@ -207,7 +273,7 @@ export function BuildSentenceTask({
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className={`text-center py-3 rounded-xl text-base font-semibold ${
+                className={`text-center py-3 rounded-xl text-base font-semibold break-words ${
                   isCorrect
                     ? "bg-green-100 text-green-700"
                     : "bg-red-100 text-red-700"
@@ -422,8 +488,13 @@ function MinecraftBlocksMode({
   }
 
   // «Сменить время»: блоки перестраиваются сами, изменённые подсвечиваются.
+  // R14 (pravki-070926, тикет 03): переключение доступно всегда — свободный
+  // просмотр времён без ответа. Очко за новое время — только если прошлое
+  // время было проверено («Проверить»); превью очков не даёт и сбрасывает
+  // черновик сборки, чтобы stale-вердикт не прилипал к новому времени.
   const switchTense = (idx: number) => {
-    if (idx === current || checked === false || finished) return
+    if (idx === current || finished) return
+    const preview = !checked
     const from = blocks[current]
     const to = blocks[idx]
     const fromMap = new Map(from.blocks.map((b) => [b.category, b.word]))
@@ -446,13 +517,20 @@ function MinecraftBlocksMode({
         bits.push(`исчезло ${BLOCK_CATEGORY_LABELS[cat].toLowerCase()}`)
       }
     }
-    setDiff({
-      keys,
-      caption: bits.length > 0 ? bits.join("; ") : "ничего",
-      fromLabel: from.label,
-    })
+    setDiff(
+      preview
+        ? null
+        : {
+            keys,
+            caption: bits.length > 0 ? bits.join("; ") : "ничего",
+            fromLabel: from.label,
+          }
+    )
     setCurrent(idx)
-    if (!visited.has(idx)) {
+    if (preview) {
+      setPlaced({})
+      setIsCorrect(false)
+    } else if (!visited.has(idx)) {
       setVisited((prev) => new Set(prev).add(idx))
       setScore((s) => s + 1)
     }
@@ -560,7 +638,7 @@ function MinecraftBlocksMode({
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ opacity: 0 }}
-            className={`text-center py-3 rounded-xl text-base font-semibold ${
+            className={`text-center py-3 rounded-xl text-base font-semibold break-words ${
               isCorrect
                 ? "bg-green-100 text-green-700"
                 : "bg-red-100 text-red-700"
@@ -622,29 +700,30 @@ function MinecraftBlocksMode({
         </div>
       )}
 
-      {/* «Сменить время» + «Завершить» — после вердикта сборки. */}
-      {checked && (
-        <div className="flex flex-col gap-3">
-          <div className="text-center text-sm font-semibold text-slate-500">
-            Сменить время:
-          </div>
-          <div className="flex flex-wrap justify-center gap-2">
-            {blocks.map((t, idx) => (
-              <button
-                key={t.tense}
-                onClick={() => switchTense(idx)}
-                disabled={idx === current}
-                className={`min-h-[44px] rounded-xl px-4 py-2 font-bold transition-colors ${
-                  idx === current
-                    ? "bg-primary-600 text-white shadow-glow-primary"
-                    : "bg-white border-2 border-primary-200 text-primary-700 hover:border-primary-400"
-                }`}
-              >
-                {t.label}
-              </button>
-            ))}
-          </div>
+      {/* «Сменить время» — всегда (R14: свободный просмотр времён без ответа,
+          превью очков не даёт); «Завершить» — после вердикта сборки. */}
+      <div className="flex flex-col gap-3">
+        <div className="text-center text-sm font-semibold text-slate-500">
+          Сменить время:
+        </div>
+        <div className="flex flex-wrap justify-center gap-2">
+          {blocks.map((t, idx) => (
+            <button
+              key={t.tense}
+              onClick={() => switchTense(idx)}
+              disabled={idx === current}
+              className={`min-h-[44px] rounded-xl px-4 py-2 font-bold transition-colors ${
+                idx === current
+                  ? "bg-primary-600 text-white shadow-glow-primary"
+                  : "bg-white border-2 border-primary-200 text-primary-700 hover:border-primary-400"
+              }`}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
 
+        {checked && (
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={finish}
@@ -652,8 +731,8 @@ function MinecraftBlocksMode({
           >
             Завершить
           </motion.button>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   )
 }

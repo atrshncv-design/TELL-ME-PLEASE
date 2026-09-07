@@ -257,7 +257,7 @@ export function FlashcardsTask({ title, description, cards, onComplete }: Flashc
                 style={{ backfaceVisibility: "hidden" }}
                 className="absolute inset-0 flex flex-col items-center justify-center gap-5 rounded-3xl border-2 border-primary-200 bg-white px-6 shadow-soft"
               >
-                <span className="text-center text-4xl font-black text-slate-800 sm:text-5xl">
+                <span className="text-center text-4xl font-black break-words max-h-full overflow-y-auto text-slate-800 sm:text-5xl">
                   {current.card.front}
                 </span>
                 <span className="text-xs font-semibold text-slate-400">
@@ -269,7 +269,7 @@ export function FlashcardsTask({ title, description, cards, onComplete }: Flashc
                 style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
                 className="absolute inset-0 flex items-center justify-center rounded-3xl bg-gradient-to-br from-primary-500 to-grammar-400 px-6 shadow-glow-primary"
               >
-                <span className="text-center text-3xl font-black text-white sm:text-4xl">
+                <span className="text-center text-3xl font-black break-words max-h-full overflow-y-auto text-white sm:text-4xl">
                   {current.card.back}
                 </span>
               </div>

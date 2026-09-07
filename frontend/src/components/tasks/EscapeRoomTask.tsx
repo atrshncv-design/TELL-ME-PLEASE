@@ -326,7 +326,7 @@ export function EscapeRoomTask({ title, description, stations, onComplete, level
             <div className="mb-1 text-[11px] font-bold uppercase tracking-wide text-primary-500">
               Кодовая фраза
             </div>
-            <div className="font-display text-2xl font-extrabold tracking-wide text-primary-900">
+            <div className="font-display text-2xl font-extrabold tracking-wide break-words text-primary-900">
               {d.phrase}
             </div>
             {(d.keywords || []).length > 0 && (
@@ -406,7 +406,7 @@ export function EscapeRoomTask({ title, description, stations, onComplete, level
         {/* Текст станции: пропуск fill-gap / ошибка fix-mistake / слова и вопрос */}
         <div className="rounded-2xl border-2 border-primary-100 bg-white p-4 shadow-soft">
           {station.type === "fill-gap" && d.sentence && (
-            <p className="text-center text-xl font-semibold leading-relaxed text-slate-800">
+            <p className="text-center text-xl font-semibold leading-relaxed break-words text-slate-800">
               {d.sentence.split("___").map((part, pi, arr) => (
                 <span key={pi}>
                   {part}
@@ -420,7 +420,7 @@ export function EscapeRoomTask({ title, description, stations, onComplete, level
             </p>
           )}
           {station.type === "fix-mistake" && (
-            <p className="text-center text-xl font-semibold leading-relaxed text-slate-800">
+            <p className="text-center text-xl font-semibold leading-relaxed break-words text-slate-800">
               {renderMistakeSentence()}
             </p>
           )}
@@ -435,7 +435,7 @@ export function EscapeRoomTask({ title, description, stations, onComplete, level
           {station.type === "full-answer" && d.question && (
             <div className="text-center">
               <p className="mb-1 text-[11px] font-bold uppercase tracking-wide text-slate-400">Вопрос</p>
-              <p className="text-lg font-semibold leading-relaxed text-slate-800">{d.question}</p>
+              <p className="text-lg font-semibold leading-relaxed text-slate-800 break-words">{d.question}</p>
             </div>
           )}
         </div>

@@ -97,6 +97,9 @@ function VoiceChatInner({
   const [listFinished, setListFinished] = useState(false)
   // onComplete должен сработать ровно один раз за прохождение списка
   const completedRef = useRef(false)
+  // R14 (pravki-070926, тикет 03): read-only история ответов для свободной
+  // листалки ←/→ без засчитывания (паттерн QuizTask).
+  const [listHistory, setListHistory] = useState<{ answer: string; verdict: "correct" | "wrong" | null }[]>([])
   // Какой вопрос уже озвучен ботом (TTS) — не повторять на ре-рендерах
   const spokenIndexRef = useRef(-1)
 
@@ -145,6 +148,12 @@ function VoiceChatInner({
     setListAnswer(text)
     setListVerdict(ok ? "correct" : "wrong")
     if (ok) setListScore((s) => s + 1)
+    // R14: ответ сохраняется для read-only review при листании.
+    setListHistory((prev) => {
+      const next = [...prev]
+      next[listIndex] = { answer: text, verdict: ok ? "correct" : "wrong" }
+      return next
+    })
   }
 
   /** «Следующий вопрос →» / «К результатам →» после вердикта. */
@@ -157,10 +166,30 @@ function VoiceChatInner({
         onComplete?.(alwaysPass ? checklistItems.length : listScore, checklistItems.length)
       }
     } else {
-      setListIndex((i) => i + 1)
-      setListAnswer("")
-      setListVerdict(null)
+      const nextIndex = listIndex + 1
+      setListIndex(nextIndex)
+      // R14: восстанавливаем сохранённый ответ или чистый вопрос.
+      const entry = listHistory[nextIndex]
+      setListAnswer(entry ? entry.answer : "")
+      setListVerdict(entry ? entry.verdict : null)
     }
+  }
+
+  // R14: свободная листалка вопросов ←/→ без засчитывания и без требования
+  // ответа. Черновик не теряется, отвеченные показываются read-only
+  // (verdict !== null блокирует микрофон/ввод — см. enabled распознавания).
+  const goChecklist = (index: number) => {
+    if (!checklistMode || listFinished || index < 0 || index >= checklistItems.length || index === listIndex) return
+    stopAll()
+    setListHistory((prev) => {
+      const snapshot = [...prev]
+      snapshot[listIndex] = { answer: listAnswer, verdict: listVerdict }
+      return snapshot
+    })
+    const entry = listHistory[index]
+    setListIndex(index)
+    setListAnswer(entry ? entry.answer : "")
+    setListVerdict(entry ? entry.verdict : null)
   }
 
   /** Retry с ResultScreen — сброс к первому вопросу (onComplete снова один раз). */
@@ -168,6 +197,7 @@ function VoiceChatInner({
     stopAll()
     spokenIndexRef.current = -1
     completedRef.current = false
+    setListHistory([])
     setListIndex(0)
     setListScore(0)
     setListAnswer("")
@@ -545,14 +575,14 @@ function VoiceChatInner({
                       ✓ {listScore}
                     </span>
                   </div>
-                  <p className="font-display text-lg font-extrabold text-slate-800 leading-snug">
+                  <p className="font-display text-lg font-extrabold text-slate-800 leading-snug break-words">
                     {checklistItems[listIndex]?.question}
                   </p>
                   {/* G6 (правки 12.08): «что сказать ученику» (hint/примерный
                       ответ) — КРУПНЫЙ и ЖИРНЫЙ, тёмный (контраст для доски),
                       чтобы ученику было легко прочитать фразу для озвучки. */}
                   {checklistItems[listIndex]?.hint && (
-                    <p className="mt-3 rounded-xl border-2 border-primary-100 bg-primary-50 px-3 py-2.5 text-lg font-bold leading-snug text-slate-800">
+                    <p className="mt-3 rounded-xl border-2 border-primary-100 bg-primary-50 px-3 py-2.5 text-lg font-bold leading-snug text-slate-800 break-words">
                       💡 {checklistItems[listIndex]?.hint}
                     </p>
                   )}
@@ -567,11 +597,38 @@ function VoiceChatInner({
                   >
                     🔊 Повторить вопрос
                   </motion.button>
+                  <p className="mt-2 rounded-xl bg-indigo-50 px-3 py-2 text-center text-xs font-bold break-words text-indigo-900">
+                    🎤 Нажми микрофон, ответь на вопрос, затем нажми «Следующий вопрос»
+                  </p>
+                  {/* R14: свободная листалка вопросов ←/→ без засчитывания —
+                      можно просмотреть все вопросы заранее, не отвечая. */}
+                  <div className="mt-2 flex items-center justify-between gap-2">
+                    {listIndex > 0 ? (
+                      <button
+                        onClick={() => goChecklist(listIndex - 1)}
+                        className="min-h-[44px] text-sm font-semibold text-slate-500 hover:text-slate-700"
+                      >
+                        ← Назад
+                      </button>
+                    ) : (
+                      <span className="text-sm text-transparent select-none">← Назад</span>
+                    )}
+                    {listIndex < checklistItems.length - 1 ? (
+                      <button
+                        onClick={() => goChecklist(listIndex + 1)}
+                        className="min-h-[44px] text-sm font-semibold text-slate-500 hover:text-slate-700"
+                      >
+                        Вперёд →
+                      </button>
+                    ) : (
+                      <span className="text-sm text-transparent select-none">Вперёд →</span>
+                    )}
+                  </div>
                 </div>
 
                 {listAnswer && (
                   <motion.div initial={{ y: 8, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="flex justify-end">
-                    <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm bg-indigo-600 text-white">
+                    <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm break-words bg-indigo-600 text-white">
                       {listAnswer}
                     </div>
                   </motion.div>
@@ -584,7 +641,7 @@ function VoiceChatInner({
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0 }}
-                      className={`sticky bottom-0 z-10 rounded-2xl border-2 p-4 shadow-lg ${listVerdict === "correct" ? "border-emerald-200 bg-emerald-50" : "border-rose-200 bg-rose-50"}`}
+                      className={`rounded-2xl border-2 p-4 shadow-lg ${listVerdict === "correct" ? "border-emerald-200 bg-emerald-50" : "border-rose-200 bg-rose-50"}`}
                     >
                       <div className="flex items-center gap-2">
                         <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-base font-black text-white ${listVerdict === "correct" ? "bg-emerald-500" : "bg-rose-500"}`}>
@@ -616,7 +673,7 @@ function VoiceChatInner({
             {/* Мем-реплика Verb Bot при старте: чистый рендер, в стрим не уходит (только свободный диалог) */}
             {!checklistMode && !sessionEnded && messages.length === 0 && (
               <motion.div initial={{ y: 8, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="flex justify-start">
-                <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm bg-white text-slate-800 shadow border border-slate-100">
+                <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm break-words bg-white text-slate-800 shadow border border-slate-100">
                   {pickGreeting(taskId)}
                 </div>
               </motion.div>
@@ -625,7 +682,7 @@ function VoiceChatInner({
               {messages.map((m, i) => (
                 <motion.div key={i} initial={{ y: 8, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
                   className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-                  <div className={`max-w-[80%] rounded-xl px-3 py-2 text-sm ${m.role === "user" ? "bg-indigo-600 text-white" : "bg-white text-slate-800 shadow border border-slate-100"}`}>
+                  <div className={`max-w-[80%] rounded-xl px-3 py-2 text-sm break-words ${m.role === "user" ? "bg-indigo-600 text-white" : "bg-white text-slate-800 shadow border border-slate-100"}`}>
                     {m.text}
                   </div>
                 </motion.div>
@@ -633,7 +690,7 @@ function VoiceChatInner({
             </AnimatePresence>
             {aiText && (
               <div className="flex justify-start">
-                <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm bg-white text-slate-800 shadow border border-slate-100">
+                <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm break-words bg-white text-slate-800 shadow border border-slate-100">
                   {aiText}<span className="inline-block w-1 h-3 bg-indigo-400 ml-0.5 animate-pulse rounded" />
                 </div>
               </div>
@@ -641,7 +698,7 @@ function VoiceChatInner({
             {/* T03: запрос ждёт слот в очереди — реплика персонажа */}
             {queued && (
               <div className="flex justify-start">
-                <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm bg-white text-slate-400 shadow border border-slate-100 italic">
+                <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm break-words bg-white text-slate-400 shadow border border-slate-100 italic">
                   {queued}
                   <span className="inline-flex gap-1 ml-1 align-middle">
                     <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" />
@@ -654,7 +711,7 @@ function VoiceChatInner({
             {/* Ждём первый токен от LLM (до начала стрима) */}
             {sending && !aiText && !muted && (
               <div className="flex justify-start">
-                <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm bg-white text-slate-400 shadow border border-slate-100">
+                <div className="max-w-[80%] rounded-xl px-3 py-2 text-sm break-words bg-white text-slate-400 shadow border border-slate-100">
                   <span className="inline-flex gap-1">
                     <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" />
                     <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:150ms]" />

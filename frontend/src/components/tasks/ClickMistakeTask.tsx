@@ -344,7 +344,7 @@ export function ClickMistakeTask({ title, description, items, onComplete }: Clic
                   {STEP_TITLES[step.kind]}
                 </p>
                 {step.kind === "fix" && (
-                  <p className="mt-1.5 text-center text-sm text-slate-600">
+                  <p className="mt-1.5 text-center text-sm break-words text-slate-600">
                     {words.map((word, wi) =>
                       wi === wrongIndex ? (
                         <span key={wi} className="font-bold text-danger line-through decoration-2">

@@ -297,7 +297,7 @@ function RoundView({
         <div className="mb-1 text-[11px] font-bold uppercase tracking-wide text-grammar-500">
           Собери предложение
         </div>
-        <div className="font-display text-2xl font-extrabold tracking-wide text-primary-900">
+        <div className="font-display text-2xl font-extrabold tracking-wide break-words text-primary-900">
           {round.stimulus}
         </div>
       </div>

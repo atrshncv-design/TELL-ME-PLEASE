@@ -268,7 +268,7 @@ export function FillInTask({ title, description, items, onComplete }: FillInTask
               предложении), НЕ отдельной «портянкой» внизу. После «Проверить»
               пропуск превращается в вердикт (G1): верно — зелёный с ответом,
               неверно — красный: зачёркнутый ввод ученика → правильный ответ. */}
-          <p className="text-lg leading-relaxed text-slate-800">
+          <p className="text-lg leading-relaxed text-slate-800 break-words">
             {parts.map((part, i) => (
               <span key={i}>
                 {part}

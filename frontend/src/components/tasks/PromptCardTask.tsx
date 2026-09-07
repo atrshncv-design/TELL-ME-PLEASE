@@ -67,7 +67,7 @@ export function PromptCardTask({ title, description, prompt, extra, onComplete }
       {/* Карточка промпта: текст дословно (whitespace-pre-line сохраняет
           переносы и пробелы) + кнопка копирования. */}
       <div className="rounded-2xl border-2 border-violet-100 bg-white p-4 shadow-soft">
-        <p className="whitespace-pre-line text-base font-medium leading-relaxed text-slate-800">{prompt}</p>
+        <p className="whitespace-pre-line text-base font-medium leading-relaxed break-words text-slate-800">{prompt}</p>
         <button
           type="button"
           onClick={copyPrompt}
@@ -89,7 +89,7 @@ export function PromptCardTask({ title, description, prompt, extra, onComplete }
               <h3 className="font-display text-lg font-bold text-primary-900">{block.title}</h3>
               <ul className="mt-2 flex flex-col gap-1.5">
                 {block.lines.map((line, i) => (
-                  <li key={i} className="text-sm leading-relaxed text-slate-700">
+                  <li key={i} className="text-sm leading-relaxed break-words text-slate-700">
                     {line}
                   </li>
                 ))}

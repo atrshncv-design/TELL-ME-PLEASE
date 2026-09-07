@@ -558,7 +558,7 @@ export function BossBattleTask({
                   Вопрос
                 </p>
               )}
-              <p className="text-lg font-semibold leading-relaxed text-slate-800">
+              <p className="text-lg font-semibold leading-relaxed text-slate-800 break-words">
                 {renderChallengeText()}
               </p>
               {challenge.type === "answer-partner" && (

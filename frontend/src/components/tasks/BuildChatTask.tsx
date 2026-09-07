@@ -309,7 +309,7 @@ export function BuildChatTask({ title, description, chat, event, onComplete }: B
                       >
                         {LETTERS[oi] ?? oi + 1}
                       </span>
-                      <span className="flex-1 text-lg font-bold leading-snug text-slate-800">
+                      <span className="flex-1 text-lg font-bold leading-snug break-words text-slate-800">
                         {opt}
                       </span>
                       {showResult && isCorrect && (
@@ -338,8 +338,8 @@ export function BuildChatTask({ title, description, chat, event, onComplete }: B
                 <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wide text-speaking-700">
                   <span aria-hidden="true">🎯</span> Неожиданное событие!
                 </div>
-                <p className="mt-2 text-xl font-extrabold text-slate-800">{event.title}</p>
-                <p className="mt-1 text-base font-semibold leading-snug text-slate-600">
+                <p className="mt-2 text-xl font-extrabold break-words text-slate-800">{event.title}</p>
+                <p className="mt-1 text-base font-semibold leading-snug break-words text-slate-600">
                   {event.text}
                 </p>
               </div>
@@ -407,7 +407,7 @@ export function BuildChatTask({ title, description, chat, event, onComplete }: B
                       >
                         {LETTERS[oi] ?? oi + 1}
                       </span>
-                      <span className="flex-1 text-lg font-bold leading-snug text-slate-800">
+                      <span className="flex-1 text-lg font-bold leading-snug break-words text-slate-800">
                         {opt}
                       </span>
                       {showResult && isCorrect && (
@@ -485,7 +485,7 @@ function Bubble({ from, children }: { from: "A" | "B"; children: ReactNode }) {
         {from}
       </span>
       <div
-        className={`max-w-[80%] rounded-2xl border-2 px-4 py-2.5 text-base font-semibold leading-snug ${
+        className={`max-w-[80%] rounded-2xl border-2 px-4 py-2.5 text-base font-semibold leading-snug break-words ${
           isMe
             ? "rounded-br-md border-primary-200 bg-primary-50 text-primary-900"
             : "rounded-bl-md border-slate-200 bg-white text-slate-800"

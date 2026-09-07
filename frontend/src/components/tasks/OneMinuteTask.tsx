@@ -222,7 +222,7 @@ export function OneMinuteTask({
           {script.sentences && script.sentences.length > 0 && (
             <ul className="flex flex-col gap-1.5">
               {script.sentences.map((s, i) => (
-                <li key={i} className="font-display text-lg font-bold leading-snug text-primary-900">
+                <li key={i} className="font-display text-lg font-bold leading-snug break-words text-primary-900">
                   {s}
                 </li>
               ))}
@@ -239,11 +239,16 @@ export function OneMinuteTask({
           </span>
           <div>
             <div className="text-[11px] font-bold uppercase tracking-wide text-primary-500">Тема</div>
-            <div className="font-display text-lg font-extrabold text-primary-900">{topic}</div>
+            <div className="font-display text-lg font-extrabold break-words text-primary-900">{topic}</div>
           </div>
         </div>
       )}
 
+      {phase === "ready" && (
+        <p className="rounded-2xl border-2 border-primary-200 bg-primary-50 px-4 py-3 text-center text-sm font-bold break-words text-primary-900">
+          🎤 Нажми кнопку микрофона и успей рассказать за {duration} секунд, затем нажми «Готово»
+        </p>
+      )}
       {/* Таймер 60 секунд */}
       <div className="rounded-2xl bg-white border-2 border-primary-100 p-4 text-center shadow-soft">
         <div className="mb-1 text-[11px] font-bold uppercase tracking-wide text-slate-400">

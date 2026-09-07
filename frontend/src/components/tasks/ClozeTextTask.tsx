@@ -324,7 +324,7 @@ function RoundView({
         >
           {/* The cloze text with inline blanks. */}
           <div className="bg-white/70 rounded-2xl px-4 py-5 border-2 border-indigo-100">
-            <p className="text-base sm:text-lg leading-relaxed text-slate-800">
+            <p className="text-base sm:text-lg leading-relaxed break-words text-slate-800">
               {segments.map((seg, i) => (
                 <span key={i}>
                   <Segment text={seg} underlineWords={underlineWords} />

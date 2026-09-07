@@ -218,7 +218,7 @@ export function DragAndDropTask({
             className={`flex flex-col gap-2 p-3 bg-white rounded-xl border-2 min-h-[120px] touch-manipulation cursor-pointer ${isTarget ? "border-indigo-300 bg-indigo-50/30" : "border-indigo-100"}`}
           >
             <div className="text-center font-bold text-indigo-700 text-sm">{col.label}</div>
-            {col.rule && <div className="text-xs text-slate-400 text-center">{col.rule}</div>}
+            {col.rule && <div className="text-xs break-words text-slate-400 text-center">{col.rule}</div>}
             <div className="flex flex-wrap gap-1">
               <AnimatePresence>
                 {placed[col.id].map((item, idx) => {

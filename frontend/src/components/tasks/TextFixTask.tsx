@@ -233,7 +233,7 @@ export function TextFixTask({ title, description, data, onComplete }: TextFixTas
       }
     })
     return (
-      <p key={si} className="mb-3 flex flex-wrap gap-x-1.5 gap-y-1 text-lg leading-relaxed text-slate-800 last:mb-0">
+      <p key={si} className="mb-3 flex flex-wrap gap-x-1.5 gap-y-1 text-lg leading-relaxed break-words text-slate-800 last:mb-0">
         {tokens.map((tok, ti) => {
           const hit = errByIndex.get(ti)
           return hit ? renderErrorToken(si, hit.ei, hit.error, tok) : <span key={ti}>{tok}</span>

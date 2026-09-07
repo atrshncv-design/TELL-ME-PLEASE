@@ -208,7 +208,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
           exit={{ x: -30, opacity: 0 }}
           className="text-center py-6"
         >
-          <p className="text-2xl font-semibold text-slate-800">{display}</p>
+          <p className="text-2xl font-semibold text-slate-800 break-words">{display}</p>
         </motion.div>
       </AnimatePresence>
 
@@ -267,7 +267,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
               >
                 {LETTERS[oi] ?? oi + 1}
               </span>
-              <span className={`flex-1 text-lg font-bold leading-snug ${v.label}`}>
+              <span className={`flex-1 text-lg font-bold leading-snug break-words ${v.label}`}>
                 {opt}
               </span>
               {v.mark && (
@@ -354,7 +354,7 @@ export function QuizTask({ title, description, items, onComplete }: QuizTaskProp
               <div className="text-[11px] font-bold uppercase tracking-wide text-slate-400">
                 Правильное предложение
               </div>
-              <p className="mt-1 font-display text-lg font-extrabold leading-snug text-slate-800">
+              <p className="mt-1 font-display text-lg font-extrabold leading-snug break-words text-slate-800">
                 {item.answerSentence}
               </p>
             </div>
