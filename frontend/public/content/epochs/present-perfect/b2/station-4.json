@@ -1,7 +1,7 @@
 {
   "id": "present_perfect_b2_station_4",
   "title": "Разговор с ассистентом",
-  "description": "Спонтанные ответы на вопросы ассистента с использованием Perfect и Past.",
+  "description": "Поговори с ассистентом и отвечай полными предложениями.",
   "category": "speaking",
   "type": "voice-chat",
   "task_context": "Ты — ассистент на устной практике (). Задавай вопросы из списка checklist по одному, жди полный ответ ученика, проверяй, правильно ли он использует Present Perfect и Past Simple, в конце мягко укажи на ошибки. Системный промпт: Act as a supportive English practice assistant. Ask me these questions one by one. Wait for my answer. Check if I use Present Perfect and Past Simple correctly.",

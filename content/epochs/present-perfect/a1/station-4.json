@@ -1,7 +1,7 @@
 {
   "id": "present_perfect_a1_station_4",
   "title": "Ловушка V2 или V3? (Дебаггинг)",
-  "description": "Торможение типичной ошибки: использование 2-й формы вместо 3-й в Perfect.",
+  "description": "Найди типичные ошибки: использование 2-й формы вместо 3-й в Perfect.",
   "category": "grammar",
   "type": "quiz",
   "items": [

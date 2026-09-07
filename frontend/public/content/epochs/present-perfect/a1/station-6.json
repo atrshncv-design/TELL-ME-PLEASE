@@ -1,7 +1,7 @@
 {
   "id": "present_perfect_a1_station_6",
   "title": "Письмо из Отпуска (Интеграция в текст)",
-  "description": "Автоматический выбор между Past Simple и Present Perfect в связном тексте.",
+  "description": "Выбери между Past Simple и Present Perfect в связном тексте.",
   "category": "grammar",
   "type": "cloze",
   "rounds": [

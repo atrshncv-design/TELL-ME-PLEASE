@@ -1,10 +1,9 @@
 {
   "id": "present_perfect_continuous_b1_station_5",
   "title": "Объясни Ситуацию (Речь)",
-  "description": "Объясни, почему люди выглядят так, используя Present Perfect Continuous.",
+  "description": "Объясни, почему люди выглядят так, используя Present Perfect Continuous. Пример перед тобой. Теперь составь свои предложения, используя подсказки ниже и успей рассказать их за 60 сек.",
   "category": "speaking",
   "type": "one-minute",
-  "topic": "Объясни, почему люди выглядят так (используй Present Perfect Continuous)",
   "duration": 60,
   "conditions": [
     {
@@ -44,5 +43,15 @@
       ],
       "min": 1
     }
-  ]
+  ],
+  "script": {
+    "description": "Пример:",
+    "sentences": [
+      "He looks exhausted because he has been coding all night.",
+      "She is dirty and happy because she has been planting flowers in the school garden since morning.",
+      "They are soaked and cold because they have been running in the rain for half an hour.",
+      "The reporter is breathless because she has been talking non-stop to witnesses after the accident.",
+      "We are tired but satisfied because we have been working on this project together all week."
+    ]
+  }
 }

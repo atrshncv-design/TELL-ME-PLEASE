@@ -1,10 +1,9 @@
 {
   "id": "present_perfect_b2_station_7",
   "title": "Дебаты \"Старое vs Новое\" (Финальный Босс)",
-  "description": "Аргументированная речь с использованием всех изученных времен.",
+  "description": "Подумай и напиши «Как изменился мир за последние 10 лет», используя подсказки ниже (Present Perfect для изменений, Past Simple для примеров, Present Simple для текущей ситуации). Успей рассказать это за 60 сек.",
   "category": "speaking",
   "type": "one-minute",
-  "topic": "Как изменился мир за последние 10 лет (Present Perfect для изменений, Past Simple для примеров, Present Simple для текущей ситуации)",
   "duration": 60,
   "conditions": [
     {

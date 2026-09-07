@@ -1,10 +1,9 @@
 {
   "id": "present_perfect_continuous_b2_station_6",
   "title": "Дебаты: \"Жизнь сегодня\" (Монолог)",
-  "description": "Мини-выступление «Как изменилась жизнь подростков», минимум 2 раза Present Perfect Continuous.",
+  "description": "Посмотри на пример. Теперь самостоятельно составь мини-выступление «Как изменилась жизнь подростков», используя подсказки ниже, а затем успей рассказать за 60 сек.",
   "category": "speaking",
   "type": "one-minute",
-  "topic": "Мини-выступление: «Как изменилась жизнь подростков»",
   "duration": 60,
   "conditions": [
     {
@@ -49,5 +48,5 @@
       "min": 1
     }
   ],
-  "monologue": "Now teenagers live in a very different world. They have been using smartphones every day for many years, and they have been spending a lot of time on social media. Because of this, they communicate online more than before.\n\nBefore, teenagers met friends in the streets, talked face to face and played outside. Now they often chat, play games and watch videos online. The Internet has changed how they study, relax and make friends.\n\nTeenagers have been getting information from the Internet instead of books, and they have been learning new skills from online courses. Life is faster and more connected now. Before, it was slower and simpler. Now, teenagers are always online, but they also have more opportunities."
+  "monologue": "Now teenagers have been using smartphones and social media more than before. They have been spending many hours online, chatting and watching videos, scrolling through their phones, instead of meeting friends in person. Now teenagers are doing homework on the Internet and learning from short clips, while before they used books and talked with classmates face to face. Many teens feel more connected but also more distracted because notifications are interrupting them. Life for teenagers today is more digital and faster than it used to be."
 }

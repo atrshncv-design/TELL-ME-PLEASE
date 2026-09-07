@@ -1,7 +1,7 @@
 {
   "id": "present_perfect_b2_station_1",
   "title": "ОГЭ-Тренажёр",
-  "description": "Автоматическое раскрытие скобок в практическом формате.",
+  "description": "Раскрой скобки и поставь глагол в нужной форме.",
   "category": "grammar",
   "type": "cloze",
   "rounds": [

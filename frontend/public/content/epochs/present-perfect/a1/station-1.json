@@ -1,7 +1,7 @@
 {
   "id": "present_perfect_a1_station_1",
   "title": "Запуск Реактора (Механика have/has + V3)",
-  "description": "Автоматизировать выбор have/has и форму V3.",
+  "description": "Автоматизируй выбор have/has и формы V3 и напечатай их в предложения.",
   "category": "grammar",
   "type": "fill-in",
   "items": [
