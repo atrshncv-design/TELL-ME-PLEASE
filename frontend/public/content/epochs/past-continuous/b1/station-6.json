@@ -1,7 +1,7 @@
 {
   "id": "past_continuous_b1_station_6",
   "title": "Интервью с Очевидцем (Диалог с ИИ)",
-  "description": "Спроси его: 1. What were you doing at 3 PM? 2. What were the robbers wearing? 3. Did anyone try to stop them? 4. Were people scared?",
+  "description": "Ты — очевидец ограбления банка. Расскажи все, что ты видел.",
   "category": "speaking",
   "type": "voice-chat",
   "task_context": "You are a witness of a bank robbery. Use B1 English. Answer the student's questions about the robbery: what you were doing at 3 PM, what the robbers were wearing, whether anyone tried to stop them, whether people were scared. Answer in full sentences with details. If the student's question is not clear, ask them to repeat it. Stay in character always: you are the witness, not an AI. Speak clear English at B1 level, do not switch to Russian.",
