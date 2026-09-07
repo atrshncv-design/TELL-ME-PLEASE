@@ -11,7 +11,7 @@ window.STATE =
   "memoryFile": "AGENTS.md",
   "skillDir": "/Users/aleksandrtrisenkov/.agents/skills/autopilot",
   "startedAt": "2026-09-07T07:55:00+04:00",
-  "updatedAt": "2026-09-07T11:35:00+04:00",
+  "updatedAt": "2026-09-07T12:00:00+04:00",
   "finishedAt": null,
   "stages": [
     { "id": "preflight", "status": "done", "startedAt": "2026-09-07T07:54:00+04:00", "finishedAt": "2026-09-07T07:55:00+04:00" },
@@ -24,8 +24,8 @@ window.STATE =
     { "id": "final", "status": "pending" }
   ],
   "requirements": {
-    "total": 112, "done": 107, "inTicket": 0, "inSpec": 0,
-    "placeholder": 2, "deferred": 2, "dropped": 1
+    "total": 113, "done": 108, "inTicket": 0, "inSpec": 0,
+    "placeholder": 0, "deferred": 2, "dropped": 3
   },
   "tickets": [
     { "id": "01", "title": "Страница эпохи: навигация, портал, печать, таблица", "requirements": ["R01","R03","R04","R05","R06","R07","R08","R09","R10","R11","R111","R112","A01"], "blockedBy": [], "wave": 1, "zone": ["epoch-page"], "status": "done", "startedAt": "2026-09-07T08:35:00+04:00", "finishedAt": "2026-09-07T09:10:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0, "tests": {"passed": 2, "failed": 0}, "commit": "31d0df7", "concerns": ["R10/R11 placeholder — таблица внутри PDF"] },
@@ -39,6 +39,8 @@ window.STATE =
     { "id": "07", "title": "Тексты Future", "requirements": ["R96-R102"], "blockedBy": [], "wave": 5, "zone": ["content-future"], "status": "done", "finishedAt": "2026-09-07T10:40:00+04:00", "commit": "c53e0e0", "startedAt": "2026-09-07T10:15:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0, "tests": {"passed": 3, "failed": 0} },
     { "id": "10", "title": "Финальная проверка пакета", "requirements": ["all"], "blockedBy": ["01","02","03","04","05","06","07","08","09"], "wave": 6, "zone": ["repo"], "status": "done", "startedAt": "2026-09-07T10:40:00+04:00", "finishedAt": "2026-09-07T11:00:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0, "tests": {"passed": 5, "failed": 0}, "commit": "02166f7", "concerns": ["eslint без baseline; 1 новое того же семейства", "pc9_photo_oge пустое — до нас"] },
     { "id": "11", "title": "Синяя таблица в PDF", "requirements": ["R10","R11"], "blockedBy": [], "wave": 6, "zone": ["pdfs"], "status": "done", "startedAt": "2026-09-07T11:10:00+04:00", "finishedAt": "2026-09-07T11:30:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0, "commit": null, "note": "ё BLOCKED — нет глифа в сабсете; Continuous уже ок; ряда ФАКТ в PDF нет" },
+    { "id": "13", "title": "Пример PPC заменить", "requirements": ["R76"], "blockedBy": [], "wave": 7, "zone": ["content-ppc"], "status": "done", "startedAt": "2026-09-07T11:45:00+04:00", "finishedAt": "2026-09-07T12:00:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0, "commit": null },
+    { "id": "14", "title": "pc9 починить тип", "requirements": ["G01"], "blockedBy": [], "wave": 7, "zone": ["content-tasks"], "status": "done", "startedAt": "2026-09-07T11:45:00+04:00", "finishedAt": "2026-09-07T12:00:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0, "commit": null },
     { "id": "12", "title": "Опечатки брифа в текстах", "requirements": ["R24","R36","R45"], "blockedBy": [], "wave": 6, "zone": ["content-present"], "status": "done", "startedAt": "2026-09-07T11:10:00+04:00", "finishedAt": "2026-09-07T11:30:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0, "commit": "843a5bf" }
   ],
   "singlePass": null,

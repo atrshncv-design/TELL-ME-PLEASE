@@ -39,5 +39,59 @@
         "I think they are ..."
       ]
     }
+  ],
+  "items": [
+    {
+      "prompt": "The photo was taken in ...",
+      "section": "📍 Место (place)"
+    },
+    {
+      "prompt": "It was taken ... (in a park / on the street / at a stadium)",
+      "section": "📍 Место (place)"
+    },
+    {
+      "prompt": "I can see ... in the background",
+      "section": "📍 Место (place)"
+    },
+    {
+      "prompt": "There is / are ... in the photo",
+      "section": "👥 Люди (people)"
+    },
+    {
+      "prompt": "I can see a group of ...",
+      "section": "👥 Люди (people)"
+    },
+    {
+      "prompt": "They look like ...",
+      "section": "👥 Люди (people)"
+    },
+    {
+      "prompt": "They are ... (Present Continuous!)",
+      "section": "🎬 Действия (actions)"
+    },
+    {
+      "prompt": "One boy is ...",
+      "section": "🎬 Действия (actions)"
+    },
+    {
+      "prompt": "A girl is ...",
+      "section": "🎬 Действия (actions)"
+    },
+    {
+      "prompt": "They are wearing ...",
+      "section": "🎬 Действия (actions)"
+    },
+    {
+      "prompt": "They look ... (happy / proud)",
+      "section": "😊 Чувства (feelings)"
+    },
+    {
+      "prompt": "They seem ...",
+      "section": "😊 Чувства (feelings)"
+    },
+    {
+      "prompt": "I think they are ...",
+      "section": "😊 Чувства (feelings)"
+    }
   ]
 }
