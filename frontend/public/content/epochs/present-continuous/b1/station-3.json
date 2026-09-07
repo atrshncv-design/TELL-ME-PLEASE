@@ -1,10 +1,10 @@
 {
   "id": "present_continuous_b1_station_3",
   "title": "Планы на Будущее (Future Arrangements)",
-  "description": "Отработка функции Present Continuous для запланированных действий.",
+  "description": "Подумай и напиши о своих планах на выходные, используя подсказки. Нажми кнопку микрофона 🎙️ и успей рассказать за 60 секунд, затем нажми «Готово».",
   "category": "speaking",
   "type": "one-minute",
-  "topic": "Мои планы на выходные: пост из 5 предложений Present Continuous для будущих планов",
+  "topic": "Вот примерный рассказ: Tomorrow I am visiting my grandparents in the afternoon. This weekend we are going to the park on Saturday. On Sunday evening I am having dinner with my friend. In the evening next week I am watching a new film with my family. Tomorrow I am meeting my classmate to practice English.",
   "duration": 60,
   "conditions": [
     {

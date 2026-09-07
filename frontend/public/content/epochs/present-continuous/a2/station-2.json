@@ -1,7 +1,7 @@
 {
   "id": "present_continuous_a2_station_2",
   "title": "Визуальный Фильтр (Поиск ошибок)",
-  "description": "Торможение типичных орфографических иллюзий (runing, makeing).",
+  "description": "Найди орфографическую ошибку и удали ее из программы.",
   "category": "grammar",
   "type": "click-mistake",
   "items": [

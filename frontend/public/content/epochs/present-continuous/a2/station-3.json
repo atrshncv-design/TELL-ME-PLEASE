@@ -1,7 +1,7 @@
 {
   "id": "present_continuous_a2_station_3",
   "title": "Сортировка Маркеров (Дифференцировка)",
-  "description": "Жесткая привязка маркера к времени.",
+  "description": "Привяжи жестко маркер ко времени.",
   "category": "grammar",
   "type": "drag-and-drop",
   "columns": [

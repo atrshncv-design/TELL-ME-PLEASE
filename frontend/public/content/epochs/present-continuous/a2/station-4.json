@@ -1,7 +1,7 @@
 {
   "id": "present_continuous_a2_station_4",
   "title": "Детектор Лжи (Смешанные ошибки)",
-  "description": "Поиск грамматических ошибок (пропуск to be, отсутствие -ing, путаница времен).",
+  "description": "Найди грамматические ошибки (пропуск to be, отсутствие -ing, путаница времен).",
   "category": "grammar",
   "type": "click-mistake",
   "items": [
