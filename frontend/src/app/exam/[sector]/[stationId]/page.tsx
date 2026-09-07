@@ -69,6 +69,8 @@ function StationStub({ sector }: { sector: string }) {
  * Читает JSON станции из content/exam/<sector>/<stationId>.json, рендерит
  * ЛОКАЛЬНЫЙ TaskRenderer (копия эпохального, backHref пропом). grade = "exam" —
  * прогресс всех станций экзамена пишется в tmp_progress_grade_exam (lib/exam.ts).
+ * R103: «← Назад» ведёт к якорю своего сектора /exam#sector-<id> (подход
+ * таска 01), а не в начало списка.
  */
 export default async function ExamStationPage({
   params,
@@ -83,5 +85,13 @@ export default async function ExamStationPage({
     return <StationStub sector={sector} />
   }
 
-  return <TaskRenderer task={task} grade={EXAM_PROGRESS_GRADE} backHref="/exam" />
+  return (
+    <TaskRenderer
+      task={task}
+      grade={EXAM_PROGRESS_GRADE}
+      backHref={`/exam#sector-${sector}`}
+      sectorId={sector}
+      stationId={stationId}
+    />
+  )
 }

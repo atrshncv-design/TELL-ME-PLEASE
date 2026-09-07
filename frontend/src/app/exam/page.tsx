@@ -16,6 +16,7 @@ import {
   examStationsDone,
   examStationsTotal,
 } from "@/lib/exam"
+import { examSessionKey, readExamSessionVisited } from "@/lib/exam-session"
 
 interface MiniTestItem {
   sentence: string
@@ -153,6 +154,7 @@ export default function ExamPage() {
   const [data, setData] = useState<ExamIndexJson | null>(null)
   const [error, setError] = useState(false)
   const [progress, setProgress] = useState<ExamProgress>({})
+  const [visited, setVisited] = useState<string[]>([])
   const [showVictory, setShowVictory] = useState(false)
 
   useEffect(() => {
@@ -174,10 +176,22 @@ export default function ExamPage() {
     }
   }, [])
 
-  // Гидрация прогресса после монтирования (SSR-safe).
+  // Гидрация прогресса и меток сессии после монтирования (SSR-safe).
   useEffect(() => {
     setProgress(readExamProgress())
+    setVisited(readExamSessionVisited())
   }, [])
+
+  // R103: возврат по якорю #sector-<id> (подход таска 01 — переиспользуем,
+  // второй не изобретаем). Контент грузится асинхронно — элемента нет в момент
+  // навигации, поэтому после появления данных докручиваем к якорю вручную.
+  useEffect(() => {
+    if (!data) return
+    const hash = window.location.hash
+    if (!hash.startsWith("#sector-")) return
+    const el = document.getElementById(hash.slice(1))
+    if (el) el.scrollIntoView({ block: "start" })
+  }, [data])
 
   const sectors = data?.sectors ?? []
   const totalStations = examStationsTotal(sectors)
@@ -318,10 +332,11 @@ export default function ExamPage() {
         return (
           <motion.div
             key={sector.id}
+            id={`sector-${sector.id}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: si * 0.08 }}
-            className="relative mb-4 w-full overflow-hidden rounded-3xl border border-primary-200 bg-gradient-to-br from-primary-50/80 via-white to-white px-4 py-4 shadow-sm"
+            className="relative mb-4 w-full scroll-mt-24 overflow-hidden rounded-3xl border border-primary-200 bg-gradient-to-br from-primary-50/80 via-white to-white px-4 py-4 shadow-sm"
           >
             <div className="mb-3 flex items-start gap-3">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-primary-200 bg-primary-50 text-2xl shadow-soft">
@@ -359,6 +374,10 @@ export default function ExamPage() {
                 const taskId = `exam_s${si + 1}_station_${sti + 1}`
                 const entry = progress[taskId]
                 const passed = Boolean(entry && entry.score > 0)
+                // R104: посещено в текущей сессии (sessionStorage), но ещё не
+                // пройдено со score > 0 — помечаем, чтобы не заходить повторно.
+                const seenThisSession =
+                  !passed && visited.includes(examSessionKey(sector.id, station.id))
                 return (
                   <motion.button
                     key={station.id}
@@ -381,6 +400,11 @@ export default function ExamPage() {
                     {passed && entry && (
                       <span className="shrink-0 rounded-full bg-success/10 px-2 py-0.5 text-xs font-black text-success">
                         {entry.score}/{entry.total}
+                      </span>
+                    )}
+                    {seenThisSession && (
+                      <span className="shrink-0 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-black text-amber-700">
+                        👁 в этой сессии
                       </span>
                     )}
                   </motion.button>

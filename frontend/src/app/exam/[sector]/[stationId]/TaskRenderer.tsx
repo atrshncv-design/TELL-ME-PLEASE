@@ -14,7 +14,7 @@
  * уже зарегистрированы там; сюда зеркалим новые case при необходимости).
  */
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { QuizTask } from "@/components/tasks/QuizTask"
 import { DragAndDropTask } from "@/components/tasks/DragAndDropTask"
 import { FillInTask } from "@/components/tasks/FillInTask"
@@ -38,6 +38,7 @@ import { TaskHeader } from "@/components/tasks/TaskHeader"
 import { RulesPanel } from "@/components/RulesPanel"
 import { useProgress } from "@/lib/useProgress"
 import { useAnalytics } from "@/lib/useAnalytics"
+import { markExamStationVisited } from "@/lib/exam-session"
 
 interface TaskData {
   id: string
@@ -156,13 +157,22 @@ export function TaskRenderer({
   task,
   grade,
   backHref,
+  sectorId,
+  stationId,
 }: {
   task: TaskData
   grade: string
   backHref: string
+  sectorId: string
+  stationId: string
 }) {
   const { saveTask } = useProgress(grade)
   const { track } = useAnalytics()
+  // R104: визит в станцию помечаем в метках сессии (lib/exam-session.ts) —
+  // список /exam покажет «👁 в этой сессии», чтобы не заходить повторно.
+  useEffect(() => {
+    markExamStationVisited(sectorId, stationId)
+  }, [sectorId, stationId])
   // Тикет P6: панель-шпаргалка «Правила» (открывается кнопкой на voice-заданиях)
   const [rulesOpen, setRulesOpen] = useState(false)
   // onComplete was previously dead — never passed by TaskRenderer. Now wired
