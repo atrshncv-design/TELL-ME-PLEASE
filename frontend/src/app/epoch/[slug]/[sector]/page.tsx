@@ -81,6 +81,14 @@ export default function SectorStationsPage({
   const sectorIndex = sectors.findIndex((s) => s.id === sector)
   const current = sectorIndex >= 0 ? sectors[sectorIndex] : null
   const done = current ? sectorStationsDone(progress, current) : 0
+  // 01-sector-next (R02): следующий сектор из индекса эпохи; край — карта эпохи.
+  const nextSector = sectorIndex >= 0 ? (sectors[sectorIndex + 1] ?? null) : null
+  const nextFirstStation = nextSector?.stations[0] ?? null
+  const isLastSector = sectorIndex >= 0 && sectorIndex === sectors.length - 1
+  const goNext =
+    !isLastSector && nextSector && nextFirstStation
+      ? () => router.push(`/epoch/${slug}/${nextSector.id}/${nextFirstStation.id}`)
+      : () => router.push(`/epoch/${slug}`)
 
   // T12 «Геймификация эпохи»: Verb Bot произносит брифинг сектора при входе
   // (легенда = story из index.json эпохи).
@@ -211,6 +219,16 @@ export default function SectorStationsPage({
               )
             })}
           </div>
+
+          {/* 01-sector-next (R02/R03): синяя навигация дальше; зелёный — только «пройдено». */}
+          <button
+            onClick={goNext}
+            className="mt-6 min-h-[44px] w-full rounded-2xl bg-primary-600 px-4 py-2 text-base font-bold text-white transition-colors hover:bg-primary-700"
+          >
+            {isLastSector || !nextSector || !nextFirstStation
+              ? "К карте эпохи →"
+              : "К следующему сектору →"}
+          </button>
         </>
       )}
     </div>
