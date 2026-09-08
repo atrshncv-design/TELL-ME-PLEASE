@@ -306,14 +306,14 @@ export default function EpochPage({
       )[0] ?? "5"
   const activeUnlocked = unlockedByGrade[activeGrade] ?? []
 
-  // R03.1 «Продолжить»: первый сектор с pct<100 и первая непройденная
-  // станция в нём (прогресс ещё грузится — первый сектор/станция).
-  let continueTarget: { sectorId: string; stationId: string } | null = null
+  // 01-sector-target (R03): «Продолжить: <название>» — название станции из
+  // уже загруженного индекса; ведёт туда же, куда раньше (станция).
+  let continueTarget: { sectorId: string; stationId: string; label: string } | null = null
   for (const s of sectors) {
     if (sectorPercent(progress, s) >= 100) continue
     const next = s.stations.find((st) => !stationPassed(progress, s, st)) ?? s.stations[0]
     if (next) {
-      continueTarget = { sectorId: s.id, stationId: next.id }
+      continueTarget = { sectorId: s.id, stationId: next.id, label: next.title }
       break
     }
   }
@@ -535,9 +535,10 @@ export default function EpochPage({
                 `/epoch/${slug}/${continueTarget.sectorId}/${continueTarget.stationId}`
               )
             }
+            title={continueTarget.label}
             className="min-h-[44px] shrink-0 rounded-2xl bg-success px-4 py-2 text-sm font-bold text-white transition-colors hover:brightness-95"
           >
-            ▶ Продолжить →
+            ▶ Продолжить: {continueTarget.label} →
           </button>
         )}
       </div>
