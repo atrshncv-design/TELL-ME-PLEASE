@@ -1,41 +1,6 @@
 "use client"
 
-import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { motion, AnimatePresence } from "framer-motion"
-import { MEMES, type Meme } from "@/lib/memes"
-
-/**
- * Карточка-мем: setup жирным, punchline раскрывается по клику (W3-T5).
- */
-function MemeCard({ meme }: { meme: Meme }) {
-  const [open, setOpen] = useState(false)
-
-  return (
-    <motion.button
-      type="button"
-      whileTap={{ scale: 0.98 }}
-      onClick={() => setOpen((v) => !v)}
-      aria-expanded={open}
-      className="rounded-2xl border-2 border-primary-200 bg-white p-4 text-left shadow-soft transition-colors hover:bg-primary-50"
-    >
-      <p className="font-bold text-primary-900">{meme.setup}</p>
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="overflow-hidden"
-          >
-            <p className="pt-2 text-slate-600">{meme.punchline}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.button>
-  )
-}
 
 export default function MemesPage() {
   const router = useRouter()
@@ -57,12 +22,13 @@ export default function MemesPage() {
         </h1>
       </div>
 
-      {/* Сетка карточек-шуток (mobile-first: одна колонка) */}
-      <div className="grid grid-cols-1 gap-3">
-        {MEMES.map((meme) => (
-          <MemeCard key={meme.id} meme={meme} />
-        ))}
-      </div>
+      {/* Постер из 12 мемов про английские времена — во всю ширину колонки */}
+      <img
+        src="/memes/poster.jpg"
+        alt="Постер из 12 смешных мемов про английские времена: Present, Past и Future"
+        draggable={false}
+        className="block w-full rounded-2xl shadow-soft"
+      />
     </div>
   )
 }

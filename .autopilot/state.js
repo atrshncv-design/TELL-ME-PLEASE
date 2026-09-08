@@ -1,8 +1,8 @@
 window.STATE =
 {
-  "slug": "pravki-080926",
-  "dir": "2026-09-08-pravki-080926--wip",
-  "title": "Правки 080926 — маркеры, кнопка сектора, фильтр",
+  "slug": "pravki-080926-memy",
+  "dir": "2026-09-08-pravki-080926-memy--wip",
+  "title": "Мемы-постер на /memes",
   "mode": "semi",
   "depth": "normal",
   "polish": null,
@@ -10,34 +10,32 @@ window.STATE =
   "briefFile": "2026-09-08-brief.md",
   "memoryFile": "AGENTS.md",
   "skillDir": "/Users/aleksandrtrisenkov/.agents/skills/autopilot",
-  "startedAt": "2026-09-08T07:56:00+04:00",
-  "updatedAt": "2026-09-08T08:30:00+04:00",
+  "startedAt": "2026-09-08T08:40:00+04:00",
+  "updatedAt": "2026-09-08T09:05:00+04:00",
   "finishedAt": null,
   "stages": [
-    { "id": "preflight", "status": "done", "startedAt": "2026-09-08T07:56:00+04:00", "finishedAt": "2026-09-08T07:56:00+04:00" },
-    { "id": "manifest", "status": "done", "startedAt": "2026-09-08T07:56:00+04:00", "finishedAt": "2026-09-08T07:56:00+04:00" },
-    { "id": "briefing", "status": "done", "startedAt": "2026-09-08T07:56:00+04:00", "finishedAt": "2026-09-08T08:00:00+04:00", "note": "3 вопроса" },
-    { "id": "spec", "status": "done", "startedAt": "2026-09-08T08:00:00+04:00", "finishedAt": "2026-09-08T08:05:00+04:00" },
-    { "id": "plan", "status": "done", "startedAt": "2026-09-08T08:05:00+04:00", "finishedAt": "2026-09-08T08:08:00+04:00", "note": "3 таска, ярус T1" },
-    { "id": "build", "status": "done", "startedAt": "2026-09-08T08:10:00+04:00", "finishedAt": "2026-09-08T08:30:00+04:00", "note": "3 из 3 тасков готовы" },
-    { "id": "review", "status": "done", "startedAt": "2026-09-08T08:20:00+04:00", "finishedAt": "2026-09-08T08:30:00+04:00", "note": "проверено 3 из 3" },
+    { "id": "preflight", "status": "done", "startedAt": "2026-09-08T08:40:00+04:00", "finishedAt": "2026-09-08T08:40:00+04:00" },
+    { "id": "manifest", "status": "done", "startedAt": "2026-09-08T08:40:00+04:00", "finishedAt": "2026-09-08T08:40:00+04:00" },
+    { "id": "briefing", "status": "done", "startedAt": "2026-09-08T08:40:00+04:00", "finishedAt": "2026-09-08T08:45:00+04:00", "note": "2 вопроса" },
+    { "id": "spec", "status": "done", "startedAt": "2026-09-08T08:45:00+04:00", "finishedAt": "2026-09-08T08:50:00+04:00" },
+    { "id": "plan", "status": "done", "startedAt": "2026-09-08T08:50:00+04:00", "finishedAt": "2026-09-08T08:52:00+04:00", "note": "1 таск" },
+    { "id": "build", "status": "done", "startedAt": "2026-09-08T08:55:00+04:00", "finishedAt": "2026-09-08T09:05:00+04:00", "note": "1 из 1 тасков готовы" },
+    { "id": "review", "status": "done", "startedAt": "2026-09-08T09:00:00+04:00", "finishedAt": "2026-09-08T09:05:00+04:00", "note": "проверено 1 из 1" },
     { "id": "final", "status": "pending" }
   ],
   "requirements": {
-    "total": 6, "done": 6, "inTicket": 0, "inSpec": 0,
+    "total": 4, "done": 4, "inTicket": 0, "inSpec": 0,
     "placeholder": 0, "deferred": 0, "dropped": 0
   },
   "tickets": [
-    { "id": "01", "title": "Кнопка перехода в конце сектора", "requirements": ["R02","R03"], "blockedBy": [], "wave": 1, "zone": ["sector-page"], "status": "done", "startedAt": "2026-09-08T08:10:00+04:00", "finishedAt": "2026-09-08T08:30:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0, "commit": null },
-    { "id": "02", "title": "Маркеры и фильтр to be", "requirements": ["R01","R05","R06"], "blockedBy": [], "wave": 1, "zone": ["content"], "status": "done", "startedAt": "2026-09-08T08:10:00+04:00", "finishedAt": "2026-09-08T08:30:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0, "commit": null },
-    { "id": "03", "title": "Список правок анкет", "requirements": ["R04"], "blockedBy": [], "wave": 1, "zone": ["docs"], "status": "done", "startedAt": "2026-09-08T08:10:00+04:00", "finishedAt": "2026-09-08T08:30:00+04:00", "retries": 0, "repairs": 0, "handoffs": 0, "commit": null }
+    { "id": "01", "title": "Постер мемов на /memes", "requirements": ["R01","R02","R03","R04i"], "blockedBy": [], "wave": 1, "zone": ["memes-page"], "status": "done", "startedAt": "2026-09-08T08:55:00+04:00", "finishedAt": "2026-09-08T09:05:00+04:00", "commit": null, "retries": 0, "repairs": 0, "handoffs": 0 }
   ],
   "singlePass": null,
   "tests": null,
   "debt": { "placeholders": [], "assumptions": [], "emptyEnv": [] },
   "additions": [],
   "coverage": { "found": 0, "fixed": 0, "deferred": 0, "note": "G2: пропусков нет" },
-  "concerns": ["крафт: крайнее условие дублируется в goNext и label кнопки сектора"],
+  "concerns": [],
   "reviewers": { "manifestSpec": null, "craft": null },
   "blind": null
 }
