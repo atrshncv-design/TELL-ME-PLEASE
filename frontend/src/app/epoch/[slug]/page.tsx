@@ -385,6 +385,21 @@ export default function EpochPage({
         </div>
       )}
 
+      {/* Мем эпохи — только Present Simple (мемы остальных времён придут позже). */}
+      {slug === "present-simple" && (
+        <div className="mb-6 w-full rounded-2xl border border-primary-200 bg-white/80 px-4 py-3 text-center shadow-soft">
+          <h2 className="font-display mb-2 text-xl font-black tracking-tight text-primary-900">
+            Мем эпохи
+          </h2>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/memes/present-simple.webp"
+            alt="Мем про Present Simple: привычки и ежедневные действия"
+            className="mx-auto h-auto w-full max-w-md rounded-2xl"
+          />
+        </div>
+      )}
+
       {/* Материалы для печати (R05, R08): компактная кнопка-строка с
           дословной подписью; пикер цвет/ЧБ × А4/А5 (R06, R07).
           Недостающее — disabled «Скоро», без 404 (R05.1). */}
