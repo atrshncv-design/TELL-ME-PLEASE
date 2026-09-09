@@ -16,7 +16,6 @@ import {
   sectorGradeKey,
   sectorPercent,
   sectorStationsDone,
-  stationPassed,
 } from "@/lib/epoch"
 import {
   ACHIEVEMENTS,
@@ -306,18 +305,6 @@ export default function EpochPage({
       )[0] ?? "5"
   const activeUnlocked = unlockedByGrade[activeGrade] ?? []
 
-  // 01-sector-target (R03): «Продолжить: <название>» — название станции из
-  // уже загруженного индекса; ведёт туда же, куда раньше (станция).
-  let continueTarget: { sectorId: string; stationId: string; label: string } | null = null
-  for (const s of sectors) {
-    if (sectorPercent(progress, s) >= 100) continue
-    const next = s.stations.find((st) => !stationPassed(progress, s, st)) ?? s.stations[0]
-    if (next) {
-      continueTarget = { sectorId: s.id, stationId: next.id, label: next.title }
-      break
-    }
-  }
-
   // A01: возврат по якорю #sector-<id> (из списка сектора). Контент эпохи
   // грузится асинхронно — элемента нет в момент навигации, поэтому после
   // появления данных докручиваем к якорю вручную.
@@ -522,25 +509,11 @@ export default function EpochPage({
         </div>
       </div>
 
-      {/* 4 сектора: ВСЕ открыты (Q2 — без sectorUnlocked-блокировки).
-          R03.1: «Продолжить» — к первому месту с pct<100. */}
+      {/* 4 сектора: ВСЕ открыты (Q2 — без sectorUnlocked-блокировки). */}
       <div className="mb-3 flex w-full items-center justify-between gap-2">
         <h2 className="font-display text-xl font-black tracking-tight text-primary-900">
           Секторы
         </h2>
-        {continueTarget && (
-          <button
-            onClick={() =>
-              router.push(
-                `/epoch/${slug}/${continueTarget.sectorId}/${continueTarget.stationId}`
-              )
-            }
-            title={continueTarget.label}
-            className="min-h-[44px] shrink-0 rounded-2xl bg-success px-4 py-2 text-sm font-bold text-white transition-colors hover:brightness-95"
-          >
-            ▶ Продолжить: {continueTarget.label} →
-          </button>
-        )}
       </div>
       {sectors.map((sector, si) => {
         const done = sectorStationsDone(progress, sector)
