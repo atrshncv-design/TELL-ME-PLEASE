@@ -1,7 +1,7 @@
 # Таблицы времени для скачивания
 
-Файлы `present-simple.pdf`, `present-continuous.pdf`, `past-simple.pdf`, `past-continuous.pdf`, `present-perfect.pdf`, `present-perfect-continuous.pdf`, `past-perfect.pdf`, `past-perfect-continuous.pdf`, `future-simple.pdf`, `future-continuous.pdf`, `future-perfect.pdf`, `future-perfect-continuous.pdf` — таблицы для запоминания правил каждого времени (источник: `Таблицы для скачивания/` в корне репозитория).
+Файлы `<slug>-bw-a5.pdf` (12 шт.: `present-simple-bw-a5.pdf`, `present-continuous-bw-a5.pdf`, `past-simple-bw-a5.pdf`, `past-continuous-bw-a5.pdf`, `present-perfect-bw-a5.pdf`, `present-perfect-continuous-bw-a5.pdf`, `past-perfect-bw-a5.pdf`, `past-perfect-continuous-bw-a5.pdf`, `future-simple-bw-a5.pdf`, `future-continuous-bw-a5.pdf`, `future-perfect-bw-a5.pdf`, `future-perfect-continuous-bw-a5.pdf`) — таблицы для запоминания правил каждого времени, формат Ч/Б · А5 (источник: `Исправленные таблицы 2/` в корне репозитория).
 
-Кнопка «Скачать таблицу времени» на странице эпохи (`frontend/src/app/epoch/[slug]/page.tsx`) ссылается на `/pdfs/<slug>.pdf`. Если файла нет — кнопка показывает «Скоро» (disabled).
+Блок «Материалы Эпохи для печати» на странице эпохи (`frontend/src/app/epoch/[slug]/page.tsx`) проверяет 4 варианта (Цвет/ЧБ × А4/А5); сейчас файл есть только у варианта Ч/Б · А5 — остальные кнопки показывают «Скоро» (disabled).
 
-Каждый PDF ~1.3 MB, всего ~16 MB — деплой `standalone` (лимит тарболла 50 MB) не ломается: `public` копируется в `next-service-dist/public` целиком, `outputFileTracingExcludes` не трогает `public`.
+Каждый PDF ~2.3 MB, всего ~26 MB — следить за лимитом тарболла 50 MB: `public` копируется в `next-service-dist/public` целиком, `outputFileTracingExcludes` не трогает `public`.

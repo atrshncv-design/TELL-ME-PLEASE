@@ -29,9 +29,10 @@ import { Confetti } from "@/components/Confetti"
 import EpochTheory from "@/components/EpochTheory"
 import ExamEntryCard from "@/components/ExamEntryCard"
 
-/** R05–R07: варианты печати таблицы времени. Цветной А4 уже лежит в
- *  /pdfs/<slug>.pdf; ЧБ/А5 подхватятся автоматически, когда файлы появятся
- *  по тем же именам — недостающее рисуется disabled «Скоро» (R05.1, без 404). */
+/** R05–R07: варианты печати таблицы времени. Сейчас файлы есть только
+ *  для Ч/Б · А5 (/pdfs/<slug>-bw-a5.pdf); остальные варианты подхватятся
+ *  автоматически, когда файлы появятся по тем же именам — недостающее
+ *  рисуется disabled «Скоро» (R05.1, без 404). */
 const PRINT_VARIANTS: { id: string; label: string; file: (slug: string) => string }[] = [
   { id: "color-a4", label: "Цвет · А4", file: (slug) => `/pdfs/${slug}.pdf` },
   { id: "bw-a4", label: "Ч/Б · А4", file: (slug) => `/pdfs/${slug}-bw-a4.pdf` },
